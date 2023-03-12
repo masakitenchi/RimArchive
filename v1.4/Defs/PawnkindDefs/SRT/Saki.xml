@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AK_Dll.OperatorDef>
+		<name>Saki</name>
+		<surname>Sorai</surname>
+		<nickname>Saki</nickname>
+		<childHood>Club_RABBIT</childHood>
+		<adultHood/>
+		<abilities/>
+		<age>15</age>
+		<isMale>false</isMale>
+		<hediffInate/>
+		<voicePackDef/>
+		<relations/>
+		<traits/>
+		<weapon>BAW_Saki</weapon>
+		<apparels>
+			
+		</apparels>
+		<items/>
+		<bodyTypeDef>Female</bodyTypeDef>
+		<skinColor/>
+		<hairColor/>
+		<hair/>
+		<beard/>
+		<operatorType>RA_OperatorClass_SRT</operatorType>
+		<stand>Portraits/Portrait_Saki</stand>
+		<standOffset/>
+		<standRatio/>
+		<headPortrait>Icons/Student_Portrait_Saki_Collection</headPortrait>
+		<headPortraitOffset/>
+		<defName>RA_Saki</defName>
+		<label>Saki</label>
+		<description>Saki</description>
+		<descriptionHyperlinks/>
+		<ignoreConfigErrors>false</ignoreConfigErrors>
+		<skills>
+			<li>
+				<skill>Animals</skill>
+				<level>3</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Artistic</skill>
+				<level>1</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Cooking</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<level>12</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<level>9</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Medicine</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<level>15</level>
+				<fireLevel>1</fireLevel>
+			</li>
+			<li>
+				<skill>Mining</skill>
+				<level>0</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Plants</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<level>20</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<level>8</level>
+				<fireLevel>0</fireLevel>
+			</li>
+		</skills>
+	</AK_Dll.OperatorDef>
+	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
+		<defName>SRT_Saki</defName>
+		<label>咲</label>
+		<description>SRT特殊学院RABBIT的核心人物。\n\n虽然她进入SRT特殊学院是为了寻求严格的生活，但学院却突然关闭。目前在公园，和小队的其他成员一起生活着。\n\n总是遵循着SRT战术规范，总是强调按照原则行事。她的爱好是采摘野菜和收集废品。这在当前资源趋于稀缺的公园生活中起到了很大的用途。\n\n呼号是“RABBIT2”。</description>
+		<alienRace>
+			<graphicPaths>
+				<body>Pawns/SRT/Saki/Body/Saki</body>
+				<head>Pawns/SRT/Saki/Head/</head>
+				<skinColor>(0,0,0,1)</skinColor>
+			</graphicPaths>
+
+
+			<!--光环-->
+			<generalSettings>
+				<alienPartGenerator>
+					<customDrawSize>(1.04, 1.04)</customDrawSize>
+					<bodyAddons>
+						<li>
+							<path>Pawns/SRT/Saki/Halo/halo</path>
+							<drawSize>0.39</drawSize>
+							<bodyPart>halo</bodyPart>
+							<drawnInBed>false</drawnInBed>
+							<drawnDesiccated>false</drawnDesiccated>
+							<offsets>
+								<north>
+									<offset>(-0.01,0.54)</offset>
+								</north>
+								<south>
+									<offset>(-0.01,0.54)</offset>
+								</south>
+								<east>
+									<offset>(0.09,0.48)</offset>
+								</east>
+
+							</offsets>
+						</li>
+					</bodyAddons>
+				</alienPartGenerator>
+			</generalSettings>
+
+		</alienRace>
+		<race>
+			<nameGenerator>NamerSaki</nameGenerator>
+		</race>
+
+
+	</AlienRace.ThingDef_AlienRace>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>BA_Saki</defName>
+		<label>咲</label>
+		<race>SRT_Saki</race>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<initialResistanceRange>10~11</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RimArchive_Adult</li>
+					<li>RimArchive_RABBIT</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>9999~9999</weaponMoney>
+		<minGenerationAge>15</minGenerationAge>
+		<maxGenerationAge>16</maxGenerationAge>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<canStrip>false</canStrip>
+		<weaponTags>
+			<li>BAW_Saki</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="RimArchive.SchoolNameModExtension">
+				<SchoolName>SRT</SchoolName>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+
+</Defs>

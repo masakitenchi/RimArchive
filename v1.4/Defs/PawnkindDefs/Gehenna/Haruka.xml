@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AK_Dll.OperatorDef ParentName="RA_OperatorDefBase">
+		<name>Haruka</name>
+		<surname>Igusa</surname>
+		<nickname>Haruka</nickname>
+		<childHood>Club_PS68</childHood>
+		<adultHood/>
+		<abilities/>
+		<age>15</age>
+		<isMale>false</isMale>
+		<hediffInate/>
+		<voicePackDef/>
+		<relations/>
+		<traits/>
+		<weapon>BAW_Haruka</weapon>
+		<apparels>
+			<li>BAA_Body_Haruka</li>
+		</apparels>
+		<items/>
+		<bodyTypeDef>Thin</bodyTypeDef>
+		<headTypeDef>BA_HeadTypeDef_Haruka</headTypeDef>
+		<skinColor/>
+		<hairColor/>
+		<hair>BA_Hair_Haruka</hair>
+		<beard/>
+		<operatorType>RA_OperatorClass_Gehenna</operatorType>
+		<stand>Portraits/Portrait_Haruka</stand>
+		<standOffset/>
+		<standRatio/>
+		<headPortrait>Icons/Student_Portrait_Haruka_Collection</headPortrait>
+		<headPortraitOffset/>
+		<defName>RA_Haruka</defName>
+		<label>Haruka</label>
+		<description>Haruka</description>
+		<descriptionHyperlinks/>
+		<ignoreConfigErrors>false</ignoreConfigErrors>
+		<skills>
+			<li>
+				<skill>Animals</skill>
+				<level>3</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Artistic</skill>
+				<level>1</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Cooking</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<level>12</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<level>9</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Medicine</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<level>15</level>
+				<fireLevel>1</fireLevel>
+			</li>
+			<li>
+				<skill>Mining</skill>
+				<level>0</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Plants</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<level>20</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<level>8</level>
+				<fireLevel>0</fireLevel>
+			</li>
+		</skills>
+		<!--<modExtensions>
+			<li Class="AK_DLL.Def.RendererOffsetExtension">
+				<xOffset>20.0</xOffset>
+				<yOffset>10.0</yOffset>
+			</li>
+		</modExtensions>-->
+	</AK_Dll.OperatorDef>
+	
+	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
+		<defName>Gehenna_Haruka</defName>
+		<label>春香</label>
+		<description>所属格赫纳学园的便利屋68的正式社员。\n\n因为阴沉懦弱的性格，从小就被人欺负，最近因为阿露的帮忙终于不再受人欺负了。此后作为便利屋68老幺活动着。\n\n虽然因为腼腆而缺乏自信，但是出的主意可能是便利屋中最恐怖的？</description>
+		<alienRace>
+			<graphicPaths>
+				<body>Pawns/Gehenna/Haruka/Body/Haruka</body>
+				<head>Pawns/Gehenna/Haruka/Head/Haruka</head>
+				<skinColor>(0,0,0,1)</skinColor>
+			</graphicPaths>
+
+			
+			<generalSettings>
+				<alienPartGenerator>
+					<customDrawSize>(1.03, 1.03)</customDrawSize>
+				</alienPartGenerator>
+			</generalSettings>
+
+
+		</alienRace>
+		<race>
+			<nameGenerator>NamerHaruka</nameGenerator>
+		</race>
+		<statBases>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+		</statBases>
+
+
+	</AlienRace.ThingDef_AlienRace>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>BA_Haruka</defName>
+		<label>春香</label>
+		<race>Gehenna_Haruka</race>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<initialResistanceRange>10~11</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RimArchive_Adult</li>
+					<li>RimArchive_PS68</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>9999~9999</weaponMoney>
+		<minGenerationAge>16</minGenerationAge>
+		<maxGenerationAge>17</maxGenerationAge>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<canStrip>false</canStrip>
+		<weaponTags>
+			<li>BAW_Haruka</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="RimArchive.SchoolNameModExtension">
+				<SchoolName>Gehenna</SchoolName>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+
+</Defs>

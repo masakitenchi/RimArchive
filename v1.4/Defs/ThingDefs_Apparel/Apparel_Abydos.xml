@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ThingDef Name="BA_ApparelBase" ParentName="ApparelBase" Abstract="True">
+        <smeltable/>
+        <statBases>
+            <Mass>1.0</Mass>
+        </statBases>
+    </ThingDef>
+
+    <ThingDef ParentName="BA_ApparelBase">
+        <defName>BAA_Head_Haruka</defName>
+        <label>Haruka_Head</label>
+        <description>Haruka_Head</description>
+        <graphicData>
+            <texPath>Things/AK_Agents/GApparel</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <apparel Inherit="False">
+            <bodyPartGroups>
+                <li>UpperHead</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+            <hatRenderedAboveBody>true</hatRenderedAboveBody>
+            <coversHeadMiddle>true</coversHeadMiddle>
+            <wornGraphicPath>Pawns/Gehenna/Haruka/Head/Haruka</wornGraphicPath>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="BA_ApparelBase">
+        <defName>BAA_Body_Haruka</defName>
+        <label>Haruka_Body</label>
+        <description>Haruka_Body</description>
+        <graphicData>
+            <texPath>Things/AK_Agents/GApparel</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <apparel>
+            <wornGraphicPath>Pawns/Gehenna/Haruka/Body/HarukaNaked</wornGraphicPath>
+            <bodyPartGroups>
+                <li>Torso</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Middle</li>
+            </layers>
+        </apparel>
+    </ThingDef>
+</Defs>

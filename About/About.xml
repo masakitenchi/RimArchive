@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+  <name>RimArchive-In Progress</name>
+  <author>Auxia</author>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <packageId>Auxia.Weaponpack.BlueArchive</packageId>
+  <description>
+    Before All:This mod is now still in progress.Some contents are not actually installed in this mod.Current status does not represent the final quality.
+	须知:本模组仍在制作当中，部分内容暂未实装进模组中，目前状态不代表最终品质。
+	
+	Waring:Data unblanced(yet).
+	警告：模组大量元素仍未做平衡处理。
+	This mod includes serveral weapons from Blue Archive.
+	All the game textures are hand-painted.In the future,I will introduce more Blue Archive weapons and more interesting element into the games.Have fun.;)
+	
+	本模组包含了许多来自碧蓝档案的武器
+	模组中的所有贴图均是手绘，在未来，我会制作更多的碧蓝档案武器与有趣的元素;)
+	Till 2023/1/17 Mod published
+	We got these students weapon:
+	目前已实装的学生武器：
+	Abydos:
+	Hoshino 星野
+	Serika 芹香
+	Shiroko 白子
+	
+    Gehenna:
+	Hina 日奈
+	
+	Hyakkiyako:
+	Izuna 泉奈
+	
+	Millennium:
+	Aris 爱丽丝
+	Hibiki 响
+	Karin 花凛
+	Midori 小绿
+	Momoi 桃井
+	Neru 尼禄
+	Yuzu 柚子
+	
+	Trinity:
+	Hifumi 日富美
+	Koharu 小春
+	Tsurugi 鹤城
+	（only weapon contained）
+	（以上学生仅包含武器）
+	QnA:
+	Q:Will there be more students weapons appear in this mod?
+	A:Sure.Most weapons will appear in the game,and the priority of pistols is low.
+	Q:未来会有更多学生的武器出现在模组中吗？
+	A：是的，大多数学生的武器都会陆陆续续地加入到模组中，并且手枪的优先度要低于其他武器。
+	
+	Q：CE？
+	A:Not yet.I'm not a CE player and i have no assistant（Im a new one）.I have to focus on weapons but I'm sure it will be soon.
+	Q：CE?
+	A：暂不支持，原因是我很少玩CE而且所有工作全由我一个人完成（我是新手）.我得将大多精力集中在制作有趣的武器上，但我相信很快它就会支持了！
+	
+	Q:Will we got students apparel for our pawns?
+	A:Yes,But it takes a lot of time to paint beautiful textures.
+	Q：以后会有学生服饰加入当中吗？
+	A：是的，但是绘制且保证贴图质量需要大量时间。
+	
+	Q:Many weapons data is imbalanced.Will this change?
+	A:Unfortunately,i am not a RimworldPro.Most data changes could depend on players feedback.Post ur advise in comment area,i will fix the unreasonable place and thx.:D
+	Q：很多武器的武器不是太强就是太弱，未来会改吗？
+	A：糟糕的是我玩Rimworld玩的比较懒，对数值这方面拿捏的不是很好，所以许多数值需要依赖玩家的反馈，把改动建议发在讨论区，感谢所有提供建议的好兄弟！
+	
+	Q:Any place required attention?
+	A:This mod support Chinese language only(so far).The English support should be coming soon.
+	Q：还有什么其它需要注意的吗？
+	A：玩的开心;)
+	
+	写在最后：本模组未来可能会发展为综合性拓展包，这个模组是娱乐向的，所以有些武器可能会不适合某些游戏环境。
+	我会尽可能地将这个模组完善并做好。国内的碧蓝档案爱好者想要提建议的话可以百度贴吧：@普通的机车族战士。
+	
+	干杯！
+	Cheers！
+  </description>
+  <modDependencies>
+		<li>
+			<packageId>erdelf.humanoidalienraces</packageId>
+			<displayName>Humanoid Alien Races</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=839005762</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>erdelf.humanoidalienraces</li>
+		<li>ceteam.combatextended</li>
+	</loadAfter>
+</ModMetaData>

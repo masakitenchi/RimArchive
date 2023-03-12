@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AK_Dll.OperatorDef>
+		<name>Azusa</name>
+		<surname>Shirasu</surname>
+		<nickname>Azusa</nickname>
+		<childHood>Club_MWC</childHood>
+		<adultHood/>
+		<abilities/>
+		<age>16</age>
+		<isMale>false</isMale>
+		<hediffInate/>
+		<voicePackDef/>
+		<relations/>
+		<traits/>
+		<weapon>BAW_Azusa</weapon>
+		<apparels/>
+		<items/>
+		<bodyTypeDef>Female</bodyTypeDef>
+		<skinColor/>
+		<hairColor/>
+		<hair/>
+		<beard/>
+		<operatorType>RA_OperatorClass_Trinity</operatorType>
+		<stand>Portraits/Portrait_Azusa</stand>
+		<standOffset/>
+		<standRatio/>
+		<headPortrait>Icons/Student_Portrait_Azusa_Collection</headPortrait>
+		<headPortraitOffset/>
+		<defName>RA_Azusa</defName>
+		<label>Azusa</label>
+		<description>Azusa</description>
+		<descriptionHyperlinks/>
+		<ignoreConfigErrors>false</ignoreConfigErrors>
+		<skills>
+			<li>
+				<skill>Animals</skill>
+				<level>3</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Artistic</skill>
+				<level>1</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Cooking</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<level>12</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<level>9</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Medicine</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<level>15</level>
+				<fireLevel>1</fireLevel>
+			</li>
+			<li>
+				<skill>Mining</skill>
+				<level>0</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Plants</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<level>20</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<level>8</level>
+				<fireLevel>0</fireLevel>
+			</li>
+		</skills>
+	</AK_Dll.OperatorDef>
+	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
+		<defName>Trinity_Azusa</defName>
+		<label>梓</label>
+		<description>三一综合学院所属，补习授课部的冰之魔女。\n\n本来是从某所学校退学的身份，但因为某些原因转学至三一综合学院，再度拾起了学业。\n\n虽然性格上有些孤僻，怕给别人添麻烦而主动拉开距离，但因此被补习授课部的其他学生们担心着。\n\n"一切都是枉然，人生一点意义都没有。 但是……我想相信你说的话。"</description>
+		<alienRace>
+			<graphicPaths>
+				<body>Pawns/Trinity/Azusa/Body/Azusa</body>
+				<head>Pawns/Trinity/Azusa/Head/</head>
+				<skinColor>(0,0,0,1)</skinColor>
+			</graphicPaths>
+			<generalSettings>
+				<alienPartGenerator>
+					<bodyTypes Inherit="False">
+						<li>Female</li>
+						<li>Thin</li>
+					</bodyTypes>
+				</alienPartGenerator>
+			</generalSettings>
+			
+
+
+			<!--光环-->
+			
+
+		</alienRace>
+		<race>
+			<nameGenerator>NamerAzusa</nameGenerator>
+		</race>
+
+
+	</AlienRace.ThingDef_AlienRace>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>BA_Azusa</defName>
+		<label>梓</label>
+		<race>Trinity_Azusa</race>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<initialResistanceRange>10~11</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RimArchive_Adult</li>
+					<li>RimArchive_MWC</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>9999~9999</weaponMoney>
+		<minGenerationAge>15</minGenerationAge>
+		<maxGenerationAge>16</maxGenerationAge>
+		<destroyGearOnDrop>false</destroyGearOnDrop>
+		<canStrip>true</canStrip>
+		<weaponTags>
+			<li>BAW_Azusa</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="RimArchive.SchoolNameModExtension">
+				<SchoolName>Trinity</SchoolName>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+
+</Defs>

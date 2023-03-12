@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<!--心奈-->
+	<BAW_Kokona.label>淑女的气质</BAW_Kokona.label>
+	<BAW_Kokona.description>无论是在展现淑女的品味的时候，还是在履行作为教官的职责的时候都非常实用的突击步枪。</BAW_Kokona.description>
+	<BAW_Kokona.tools.0.label>枪托</BAW_Kokona.tools.0.label>
+	<BAW_Kokona.tools.1.label>枪管</BAW_Kokona.tools.1.label>
+
+	<!--瞬-->
+	<BAW_Shun.label>爱之鞭</BAW_Shun.label>
+	<BAW_Shun.description>瞬使用的狙击步枪。\n\n无论是怎样的问题儿童，只要瞬拿出这把枪就立马会变成乖孩子。\n\n当然，没有对幼儿园的孩子们这样使用过。</BAW_Shun.description>
+	<BAW_Shun.tools.0.label>枪托</BAW_Shun.tools.0.label>
+	<BAW_Shun.tools.1.label>枪管</BAW_Shun.tools.1.label>
+
+  
+
+
+
+
+
+
+
+
+
+
+</LanguageData>

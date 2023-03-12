@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AK_Dll.OperatorDef>
+		<name>Midori</name>
+		<surname>Saiba</surname>
+		<nickname>Midori</nickname>
+		<childHood>Club_GDD</childHood>
+		<adultHood/>
+		<abilities/>
+		<age>15</age>
+		<isMale>false</isMale>
+		<hediffInate/>
+		<voicePackDef/>
+		<relations/>
+		<traits/>
+		<weapon>BAW_Midori</weapon>
+		<apparels/>
+		<items/>
+		<bodyTypeDef>Female</bodyTypeDef>
+		<skinColor/>
+		<hairColor/>
+		<hair/>
+		<beard/>
+		<operatorType>RA_OperatorClass_Millennium</operatorType>
+		<stand>Portraits/Portrait_Midori</stand>
+		<standOffset/>
+		<standRatio/>
+		<headPortrait>Icons/Student_Portrait_Midori_Collection</headPortrait>
+		<headPortraitOffset/>
+		<defName>RA_Midori</defName>
+		<label>Midori</label>
+		<description>Midori</description>
+		<descriptionHyperlinks/>
+		<ignoreConfigErrors>false</ignoreConfigErrors>
+		<skills>
+			<li>
+				<skill>Animals</skill>
+				<level>3</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Artistic</skill>
+				<level>1</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Cooking</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<level>12</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<level>9</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Medicine</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<level>15</level>
+				<fireLevel>1</fireLevel>
+			</li>
+			<li>
+				<skill>Mining</skill>
+				<level>0</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Plants</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<level>20</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<level>8</level>
+				<fireLevel>0</fireLevel>
+			</li>
+		</skills>
+	</AK_Dll.OperatorDef>
+	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
+		<defName>Millennium_Midori</defName>
+		<label>绿</label>
+		<description>千年科学学园游戏开发部的脚本作者。\n\n和双胞胎姐姐桃井一同在游戏开发部开发真正的游戏，虽然性格腼腆的她与开朗的姐姐相性不好，但对游戏热情的意气相投使她们现在的关系变得非常好。</description>
+		<alienRace>
+			<graphicPaths>
+				<body>Pawns/Millennium/Midori/Body/Midori</body>
+				<head>Pawns/Millennium/Midori/Head/</head>
+				<skinColor>(0,0,0,1)</skinColor>
+			</graphicPaths>
+
+
+			<!--光环-->
+			<generalSettings>
+				<alienPartGenerator>
+					<customDrawSize>(0.94, 0.94)</customDrawSize>
+				</alienPartGenerator>
+			</generalSettings>
+			
+
+		</alienRace>
+		<race>
+			<nameGenerator>NamerMidori</nameGenerator>
+		</race>
+
+
+	</AlienRace.ThingDef_AlienRace>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>BA_Midori</defName>
+		<label>绿</label>
+		<race>Millennium_Midori</race>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<initialResistanceRange>10~11</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RimArchive_Adult</li>
+					<li>RimArchive_GDD</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>9999~9999</weaponMoney>
+		<minGenerationAge>15</minGenerationAge>
+		<maxGenerationAge>16</maxGenerationAge>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<canStrip>false</canStrip>
+		<weaponTags>
+			<li>BAW_Midori</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="RimArchive.SchoolNameModExtension">
+				<SchoolName>Millennium</SchoolName>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+
+</Defs>

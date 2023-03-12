@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "0zH7I40stveWuYNlXx91J6Es5z0Dw2HFECbw2o/m2OP1pqcxHtkcJ+Fei6seOf0V4yd1gk4/2erRV4I4pFinlw==",
+  "success": true,
+  "projectFilePath": "D:\\RW_BA\\Mods\\RimArchive\\v1.4\\Source\\RimArchive\\RimArchive\\RimArchive.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fucon\\.nuget\\packages\\krafs.rimworld.ref\\1.4.3641\\krafs.rimworld.ref.1.4.3641.nupkg.sha512",
+    "C:\\Users\\fucon\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512"
+  ],
+  "logs": []
+}

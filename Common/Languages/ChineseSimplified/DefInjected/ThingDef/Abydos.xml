@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<!--星野-->
+	<BAW_Hoshino.label>荷鲁斯之眼</BAW_Hoshino.label>
+	<BAW_Hoshino.description>星野爱用的简洁造型的霰弹枪。\n\n基本上懒洋洋的她，但在枪的整备上绝不会懈怠。</BAW_Hoshino.description>
+	<BAW_Hoshino.tools.0.label>枪托</BAW_Hoshino.tools.0.label>
+	<BAW_Hoshino.tools.1.label>枪管</BAW_Hoshino.tools.1.label>
+
+	<!--白子-->
+	<BAW_Shiroko.label>白牙 465</BAW_Shiroko.label>
+	<BAW_Shiroko.description>白子的爱用突击步枪。\n\n一直都在好好地进行整备，所以无论何时都是没有问题的状态。</BAW_Shiroko.description>
+	<BAW_Shiroko.tools.0.label>枪托</BAW_Shiroko.tools.0.label>
+	<BAW_Shiroko.tools.1.label>枪管</BAW_Shiroko.tools.1.label>
+
+	<!--芹香-->
+	<BAW_Serika.label>诚意</BAW_Serika.label>
+	<BAW_Serika.description>芹香外出打工时携带的突击步枪。\n\n芹香一直都很仔细地整备它，从这点也可以看出她认真诚实的一面。</BAW_Serika.description>
+	<BAW_Serika.tools.0.label>枪托</BAW_Serika.tools.0.label>
+	<BAW_Serika.tools.1.label>枪管</BAW_Serika.tools.1.label>
+
+	<!--野宫-->
+	<BAW_Nonomi.label>小型机关枪Ⅴ</BAW_Nonomi.label>
+	<BAW_Nonomi.description>野宫使用的机关枪。虽然名字里有“小型”，可里面容量却很大。</BAW_Nonomi.description>
+	<BAW_Nonomi.tools.0.label>枪托</BAW_Nonomi.tools.0.label>
+	<BAW_Nonomi.tools.1.label>枪管</BAW_Nonomi.tools.1.label>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LanguageData>

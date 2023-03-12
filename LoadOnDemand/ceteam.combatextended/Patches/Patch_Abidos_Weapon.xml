@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Abidos -->
+		<Operation Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[
+					defName="BAW_Hoshino" or
+					defName="BAW_Shiroko" or
+					defName="BAW_Serika"
+				  ]/recipeMaker/researchPrerequisite[text()="ReserchAbydos"]
+			</xpath>
+			<nomatch Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[
+						defName="BAW_Hoshino" or
+						defName="BAW_Shiroko" or
+						defName="BAW_Serika"
+					  ]/recipeMaker/researchPrerequisite
+				</xpath>
+				<value>
+					<researchPrerequisite>ReserchAbydos</researchPrerequisite>
+				</value>
+			</nomatch>
+		</Operation>
+		
+		
+		<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+			<defName>BAW_Hoshino</defName>
+			<statBases>
+				<Mass>3.00</Mass>
+				<RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+				<ShotSpread>0.14</ShotSpread>
+				<SwayFactor>1.20</SwayFactor>
+				<Bulk>9.0</Bulk>
+				<SightsEfficiency>1</SightsEfficiency>
+				<WorkToMake>9500</WorkToMake>
+			</statBases>
+			<costList>
+				<Steel>45</Steel>
+				<WoodLog>10</WoodLog>
+				<ComponentIndustrial>1</ComponentIndustrial>
+			</costList>
+			<Properties>
+				<recoilAmount>2.75</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+				<warmupTime>0.6</warmupTime>
+				<range>16</range>
+				<soundCast>Shot_Shotgun</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</Properties>
+			<!-- <AmmoUser>
+				<magazineSize>8</magazineSize>
+				<reloadOneAtATime>false</reloadOneAtATime>
+				<reloadTime>0.85</reloadTime>
+				<ammoSet>AmmoSet_12Gauge</ammoSet>
+			</AmmoUser> -->
+			<FireModes>
+				<aiAimMode>Snapshot</aiAimMode>
+			</FireModes>
+			<weaponTags>
+				<li>SimpleGun</li>
+				<li>CE_AI_BROOM</li>
+			</weaponTags>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+		</Operation>
+		
+		<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+			<defName>BAW_Shiroko</defName>
+			<statBases>
+				<Mass>3.26</Mass>
+				<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+				<SightsEfficiency>1</SightsEfficiency>
+				<ShotSpread>0.07</ShotSpread>
+				<SwayFactor>1.33</SwayFactor>
+				<Bulk>10.03</Bulk>
+				<WorkToMake>30000</WorkToMake>
+			</statBases>
+			<costList>
+				<Steel>50</Steel>
+				<ComponentIndustrial>5</ComponentIndustrial>
+				<Chemfuel>10</Chemfuel>
+			</costList>
+			<Properties>
+				<recoilAmount>1.50</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+				<warmupTime>1.1</warmupTime>
+				<range>55</range>
+				<burstShotCount>6</burstShotCount>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</Properties>
+			<!-- <AmmoUser>
+				<magazineSize>30</magazineSize>
+				<reloadTime>4</reloadTime>
+				<ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+			</AmmoUser> -->
+			<FireModes>
+				<aimedBurstShotCount>3</aimedBurstShotCount>
+				<aiUseBurstMode>TRUE</aiUseBurstMode>
+				<aiAimMode>AimedShot</aiAimMode>
+			</FireModes>
+			<weaponTags>
+				<li>CE_AI_AR</li>
+			</weaponTags>
+			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
+		</Operation>
+		
+		<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+			<defName>BAW_Serika</defName>
+			<statBases>
+				<Mass>3.26</Mass>
+				<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+				<SightsEfficiency>1</SightsEfficiency>
+				<ShotSpread>0.07</ShotSpread>
+				<SwayFactor>1.33</SwayFactor>
+				<Bulk>10.03</Bulk>
+				<WorkToMake>30000</WorkToMake>
+			</statBases>
+			<costList>
+				<Steel>50</Steel>
+				<ComponentIndustrial>5</ComponentIndustrial>
+				<Chemfuel>10</Chemfuel>
+			</costList>
+			<Properties>
+				<recoilAmount>1.50</recoilAmount>
+				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+				<warmupTime>1.1</warmupTime>
+				<range>55</range>
+				<burstShotCount>6</burstShotCount>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</Properties>
+			<!-- <AmmoUser>
+				<magazineSize>30</magazineSize>
+				<reloadTime>4</reloadTime>
+				<ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+			</AmmoUser> -->
+			<FireModes>
+				<aimedBurstShotCount>3</aimedBurstShotCount>
+				<aiUseBurstMode>TRUE</aiUseBurstMode>
+				<aiAimMode>AimedShot</aiAimMode>
+			</FireModes>
+			<weaponTags>
+				<li>CE_AI_AR</li>
+			</weaponTags>
+			<researchPrerequisite>PrecisionRifling</researchPrerequisite>
+		</Operation>
+		
+		<Operation Class="PatchOperationAddModExtension">
+			<xpath>Defs/ThingDef[
+				defName="BAW_Shiroko" or
+				defName="BAW_Serika"
+				]
+			</xpath>
+			<value>
+				<li Class="CombatExtended.GunDrawExtension">
+					<DrawSize>1.16,1.25</DrawSize>
+					<DrawOffset>0.05,-0.07</DrawOffset>
+				</li>
+			</value>
+		</Operation>
+		
+		<Operation Class="PatchOperationAddModExtension">
+			<xpath>Defs/ThingDef[defName="BAW_Hoshino"]</xpath>
+			<value>
+				<li Class="CombatExtended.GunDrawExtension">
+					<DrawSize>1.03,1.25</DrawSize>
+					<DrawOffset>0.05,0.0</DrawOffset>
+				</li>
+			</value>
+		</Operation>
+		
+		<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>BAW_Nonomi</defName>
+				<statBases>
+					<Bulk>10.02</Bulk>
+					<Mass>39.0</Mass>
+					<SwayFactor>4.7</SwayFactor>
+					<ShotSpread>0.06</ShotSpread>
+					<SightsEfficiency>1.0</SightsEfficiency>
+					<RangedWeapon_Cooldown>0.35</RangedWeapon_Cooldown>
+					<WorkToMake>51000</WorkToMake>
+				</statBases>
+				<costList>
+					<Steel>180</Steel>
+					<ComponentIndustrial>6</ComponentIndustrial>
+				</costList>
+				<Properties>
+					<recoilAmount>0.69</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_762x51mmNATO_FMJ</defaultProjectile>
+					<warmupTime>2.1</warmupTime>
+					<range>86</range>
+					<burstShotCount>300</burstShotCount>
+					<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+					<soundCast>Shot_HeavySMG</soundCast>
+					<muzzleFlashScale>9</muzzleFlashScale>
+				</Properties>
+				<!-- <AmmoUser>
+					<magazineSize>500</magazineSize>
+					<reloadTime>7.8</reloadTime>
+					<ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+				</AmmoUser> -->
+				<FireModes>
+					<aiAimMode>SuppressFire</aiAimMode>
+					<aimedBurstShotCount>150</aimedBurstShotCount>
+				</FireModes>
+				<researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+				<weaponTags>
+					<li>CE_AI_AssaultWeapon</li>
+				</weaponTags>
+			</Operation>
+			<Operation Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="BAW_Nonomi"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>barrel</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.118</armorPenetration>
+							<linkedBodyPartsGroup>Barrels</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</Operation>
+</Patch>

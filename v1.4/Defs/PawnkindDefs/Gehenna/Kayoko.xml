@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AK_Dll.OperatorDef>
+		<name>Kayoko</name>
+		<surname>Onikata</surname>
+		<nickname>Kayoko</nickname>
+		<childHood>Club_PS68</childHood>
+		<adultHood/>
+		<abilities/>
+		<age>18</age>
+		<isMale>false</isMale>
+		<hediffInate/>
+		<voicePackDef/>
+		<relations/>
+		<traits/>
+		<weapon>BAW_Kayoko</weapon>
+		<apparels/>
+		<items/>
+		<bodyTypeDef>Female</bodyTypeDef>
+		<skinColor/>
+		<hairColor/>
+		<hair/>
+		<beard/>
+		<operatorType>RA_OperatorClass_Gehenna</operatorType>
+		<stand>Portraits/Portrait_Kayoko</stand>
+		<standOffset/>
+		<standRatio/>
+		<headPortrait>Icons/Student_Portrait_Kayoko_Collection</headPortrait>
+		<headPortraitOffset/>
+		<defName>RA_Kayoko</defName>
+		<label>Kayoko</label>
+		<description>Kayoko</description>
+		<descriptionHyperlinks/>
+		<ignoreConfigErrors>false</ignoreConfigErrors>
+		<skills>
+			<li>
+				<skill>Animals</skill>
+				<level>3</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Artistic</skill>
+				<level>1</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Cooking</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<level>12</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<level>9</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Medicine</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<level>15</level>
+				<fireLevel>1</fireLevel>
+			</li>
+			<li>
+				<skill>Mining</skill>
+				<level>0</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Plants</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<level>20</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<level>8</level>
+				<fireLevel>0</fireLevel>
+			</li>
+		</skills>
+	</AK_Dll.OperatorDef>
+	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
+		<defName>Gehenna_Kayoko</defName>
+		<label>佳世子</label>
+		<description>格黑娜学园所属，便利屋68的课长。\n\n与其它成员不同的是，并未心怀恶意，仅仅天生长相可怖，冷若冰霜，而经常被误解成不良少女。\n\n对于这样的误解，本人却是保持沉默，反而让人感到更加害怕，形成恶性循环。</description>
+		<alienRace>
+			<graphicPaths>
+				<body>Pawns/Gehenna/Kayoko/Body/Kayoko</body>
+				<head>Pawns/Gehenna/Kayoko/Head/</head>
+				<skinColor>(0,0,0,1)</skinColor>
+			</graphicPaths>
+
+
+			<!--光环-->
+			<generalSettings>
+				<alienPartGenerator>
+					<customDrawSize>(1.06, 1.06)</customDrawSize>
+				</alienPartGenerator>
+			</generalSettings>
+
+		</alienRace>
+		<race>
+			<nameGenerator>NamerKayoko</nameGenerator>
+		</race>
+
+
+	</AlienRace.ThingDef_AlienRace>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>BA_Kayoko</defName>
+		<label>佳世子</label>
+		<race>Gehenna_Kayoko</race>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<initialResistanceRange>10~11</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RimArchive_Adult</li>
+					<li>RimArchive_PS68</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>9999~9999</weaponMoney>
+		<minGenerationAge>15</minGenerationAge>
+		<maxGenerationAge>16</maxGenerationAge>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<canStrip>false</canStrip>
+		<weaponTags>
+			<li>BAW_Kayoko</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="RimArchive.SchoolNameModExtension">
+				<SchoolName>Gehenna</SchoolName>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+
+</Defs>

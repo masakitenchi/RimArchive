@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<SoundDef>
+		<defName>Moe_Fire</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapon/Moe_Fire</clipPath>
+					</li>
+				</grains>
+				<pitchRange>0.95~1.05</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+</Defs>
+

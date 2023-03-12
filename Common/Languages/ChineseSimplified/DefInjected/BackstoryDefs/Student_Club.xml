@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+
+
+	<!--格黑娜分界线-->
+	<Club_PS68.title>便利屋68的社员</Club_PS68.title>
+	<Club_PS68.titleShort>便利屋68</Club_PS68.titleShort>
+	<Club_PS68.baseDesc>[PAWN_nameDef]是便利屋68的一名社员。</Club_PS68.baseDesc>
+
+	<!--阿拜多斯分界线-->
+	<Club_ACC.title>对策委员会的成员</Club_ACC.title>
+	<Club_ACC.titleShort>对策委员会</Club_ACC.titleShort>
+	<Club_ACC.baseDesc>[PAWN_nameDef]是阿拜多斯对策委员会的一名成员。</Club_ACC.baseDesc>
+	
+	<!--三一分界线-->
+	<Club_MWC.title>补课部成员</Club_MWC.title>
+	<Club_MWC.titleShort>补课部</Club_MWC.titleShort>
+	<Club_MWC.baseDesc>[PAWN_nameDef]是三一补课部的一名成员。</Club_MWC.baseDesc>
+
+	<!--千年分界线-->
+	<Club_GDD.title>游戏开发部成员</Club_GDD.title>
+	<Club_GDD.titleShort>游戏开发部</Club_GDD.titleShort>
+	<Club_GDD.baseDesc>[PAWN_nameDef]是千年学园游戏开发部的一名成员。</Club_GDD.baseDesc>
+	
+
+	<!--SRT分界线-->
+	<Club_RABBIT.title>RABBIT小队队员</Club_RABBIT.title>
+	<Club_RABBIT.titleShort>RABBIT小队</Club_RABBIT.titleShort>
+	<Club_RABBIT.baseDesc>[PAWN_nameDef]是SRT学校闭校后，分离出来的RABBIT小队的队员。</Club_RABBIT.baseDesc>
+
+	<!--山海经分界线-->
+	<Club_PBG.title>梅花园的教官</Club_PBG.title>
+	<Club_PBG.titleShort>梅花园</Club_PBG.titleShort>
+	<Club_PBG.baseDesc>[PAWN_nameDef]是山海经高级中学-梅花园的一名教官。</Club_PBG.baseDesc>
+	
+
+
+
+</LanguageData>

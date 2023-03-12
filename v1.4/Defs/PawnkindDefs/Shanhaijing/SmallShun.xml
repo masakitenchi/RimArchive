@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AK_Dll.OperatorDef>
+		<name>Shun</name>
+		<surname>Saiba</surname>
+		<nickname>Shun</nickname>
+		<childHood>Club_PBG</childHood>
+		<adultHood/>
+		<abilities/>
+		<age>16</age>
+		<isMale>false</isMale>
+		<hediffInate/>
+		<voicePackDef/>
+		<relations/>
+		<traits/>
+		<weapon>BAW_Shun</weapon>
+		<apparels/>
+		<items/>
+		<bodyTypeDef>Female</bodyTypeDef>
+		<skinColor/>
+		<hairColor/>
+		<hair/>
+		<beard/>
+		<operatorType>RA_OperatorClass_Shanhaijing</operatorType>
+		<stand>Portraits/Portrait_Shun_Youjyo</stand>
+		<standOffset/>
+		<standRatio/>
+		<headPortrait>Icons/Student_Portrait_Shun_Youjyo_Collection</headPortrait>
+		<headPortraitOffset/>
+		<defName>RA_Shun_Youjyo</defName>
+		<label>Shun</label>
+		<description>Shun</description>
+		<descriptionHyperlinks/>
+		<ignoreConfigErrors>false</ignoreConfigErrors>
+		<skills>
+			<li>
+				<skill>Animals</skill>
+				<level>3</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Artistic</skill>
+				<level>1</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Cooking</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<level>12</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<level>9</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Medicine</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<level>15</level>
+				<fireLevel>1</fireLevel>
+			</li>
+			<li>
+				<skill>Mining</skill>
+				<level>0</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Plants</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<level>20</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<level>8</level>
+				<fireLevel>0</fireLevel>
+			</li>
+		</skills>
+	</AK_Dll.OperatorDef>
+	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
+		<defName>Shanhaijing_SmallShun</defName>
+		<label>瞬</label>
+		<description>山海经高级中学所属，喝下纱绫的药，身体变回到了小时候的样子，训育支援部“梅花园”的教官。\n\n因为只有身体变小了，所以也不能像以前那样照顾孩子们。\n\n似乎被幼小的身体牵引着，她的精神本能地向往着教育。</description>
+		<alienRace>
+			<graphicPaths>
+				<body>Pawns/Shanhaijing/SmallShun/Body/SmallShun</body>
+				<head>Pawns/Shanhaijing/SmallShun/Head/</head>
+				<skinColor>(0,0,0,1)</skinColor>
+			</graphicPaths>
+
+
+			<!--光环-->
+			<generalSettings>
+				<alienPartGenerator>
+					<customDrawSize>(0.83, 0.83)</customDrawSize>
+				</alienPartGenerator>
+			</generalSettings>
+
+
+		</alienRace>
+		<race>
+			<nameGenerator>NamerYoujyoShun</nameGenerator>
+		</race>
+
+
+	</AlienRace.ThingDef_AlienRace>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>BA_SmallShun</defName>
+		<label>瞬</label>
+		<race>Shanhaijing_SmallShun</race>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<initialResistanceRange>10~11</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RimArchive_Adult</li>
+					<li>RimArchive_PBG</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>9999~9999</weaponMoney>
+		<minGenerationAge>15</minGenerationAge>
+		<maxGenerationAge>16</maxGenerationAge>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<canStrip>false</canStrip>
+		<weaponTags>
+			<li>BAW_SmallShun</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="RimArchive.SchoolNameModExtension">
+				<SchoolName>Shanhanjing</SchoolName>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+
+</Defs>

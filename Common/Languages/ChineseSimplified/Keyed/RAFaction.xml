@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- School Names-->
+  <Abydos>阿拜多斯高中</Abydos>
+  <Gehenna>格黑娜学园</Gehenna>
+  <Shanhaijing>山海经高级中学</Shanhaijing>
+  <SRT>SRT 特殊学园</SRT>
+
+
+
+
+
+  <!-- Keyed String-->
+  <HostileFail>与{0}敌对，无法交易</HostileFail>
+  <RAExchangeOpenOption>开始交易</RAExchangeOpenOption>
+  <RAExchangeRoot>交易界面</RAExchangeRoot>
+  <RAStudentRecruitMenu>学生招募</RAStudentRecruitMenu>
+  <RABack>返回上级菜单</RABack>
+  <StudentGacha>抽卡</StudentGacha>
+  <NotEnoughMoney>我们需要更多的晶体矿</NotEnoughMoney>
+  <StudentGachaRandom>随机抽取\n花费：{0}银</StudentGachaRandom>
+  <StudentGachaCertainSchool>选择学校进行抽取（未实装）\n花费：{0}银</StudentGachaCertainSchool>
+  <StudentArrived>{0}已到达。</StudentArrived>
+  <ChooseSchool>选择学校</ChooseSchool>
+  <NoAvailableStudentInSchool>该学校目前没有可招募的学生。</NoAvailableStudentInSchool>
+</LanguageData>

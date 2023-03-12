@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<loadFolders>
+  <v1.4>
+    <li>Common</li>
+	  <li>v1.4</li>
+	  <li IfModActive="ceteam.combatextended">LoadOnDemand/ceteam.combatextended</li>
+    <li IfModActive="erdelf.humanoidalienraces">LoadOnDemand/erdelf.humanoidalienraces</li>
+  </v1.4>
+</loadFolders>

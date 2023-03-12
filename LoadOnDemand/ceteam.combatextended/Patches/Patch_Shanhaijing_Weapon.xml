@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Shoot Sound missing -->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>BAW_Kokona</defName>
+		<statBases>
+			<Mass>3.35</Mass>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+			<SightsEfficiency>1.00</SightsEfficiency>
+			<ShotSpread>0.07</ShotSpread>
+			<SwayFactor>1.09</SwayFactor>
+			<Bulk>7.58</Bulk>
+			<WorkToMake>36500</WorkToMake>
+		</statBases>
+		<costList>
+			<Chemfuel>10</Chemfuel>
+			<Steel>40</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+		</costList>
+		<Properties>
+			<recoilAmount>1.49</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+			<warmupTime>1.1</warmupTime>
+			<range>48</range>
+			<burstShotCount>6</burstShotCount>
+			<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+			<soundCast>Shot_HeavySMG</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<FireModes>
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<aiAimMode>AimedShot</aiAimMode>
+			<aimedBurstShotCount>3</aimedBurstShotCount>
+		</FireModes>
+
+		<!-- No additional CE weaponTags needed -->
+	</Operation>
+	
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>BAW_Shun</defName>
+		<statBases>
+			<Mass>4.10</Mass>
+			<RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+			<SightsEfficiency>2.54</SightsEfficiency>
+			<ShotSpread>0.04</ShotSpread>
+			<SwayFactor>0.99</SwayFactor>
+			<Bulk>10.20</Bulk>
+			<WorkToMake>39000</WorkToMake>
+		</statBases>
+		<costList>
+			<Chemfuel>10</Chemfuel>
+			<Steel>55</Steel>
+			<ComponentIndustrial>7</ComponentIndustrial>
+		</costList>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_58x42mmDBP10_FMJ</defaultProjectile>
+			<warmupTime>1.75</warmupTime>
+			<range>75</range>
+			<soundCast>Shot_SniperRifle</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<FireModes>
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<aiAimMode>AimedShot</aiAimMode>
+		</FireModes>
+		<weaponTags>
+			<li>CE_AI_Rifle</li>
+		</weaponTags>
+		<AllowWithRunAndGun>false</AllowWithRunAndGun>
+	</Operation>
+
+</Patch>

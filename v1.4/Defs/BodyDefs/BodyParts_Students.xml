@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<BodyPartDef>
+		<defName>halo</defName>
+		<label>halo</label>
+		<hitPoints>10</hitPoints>
+		<tags>
+			<li>BloodPumpingSource</li>
+			<li>BreathingSource</li>
+			<li>ConsciousnessSource</li>
+			<li>BloodFiltrationLiver</li>
+			<li>MetabolismSource</li>
+		</tags>
+		<canSuggestAmputation>false</canSuggestAmputation>
+		<destroyableByDamage>true</destroyableByDamage>
+		<beautyRelated>true</beautyRelated>
+	</BodyPartDef>
+
+
+</Defs>

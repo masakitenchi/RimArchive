@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AK_Dll.OperatorDef>
+		<name>Mutsuki</name>
+		<surname>Asagi</surname>
+		<nickname>Mutsuki</nickname>
+		<childHood>Club_PS68</childHood>
+		<adultHood/>
+		<abilities/>
+		<age>16</age>
+		<isMale>false</isMale>
+		<hediffInate/>
+		<voicePackDef/>
+		<relations/>
+		<traits/>
+		<weapon>BAW_Mutsuki</weapon>
+		<apparels/>
+		<items/>
+		<bodyTypeDef>Female</bodyTypeDef>
+		<skinColor/>
+		<hairColor/>
+		<hair/>
+		<beard/>
+		<operatorType>RA_OperatorClass_Gehenna</operatorType>
+		<stand>Portraits/Portrait_Mutsuki</stand>
+		<standOffset/>
+		<standRatio/>
+		<headPortrait>Icons/Student_Portrait_Mutsuki_Collection</headPortrait>
+		<headPortraitOffset/>
+		<defName>RA_Mutsuki</defName>
+		<label>Mutsuki</label>
+		<description>Mutsuki</description>
+		<descriptionHyperlinks/>
+		<ignoreConfigErrors>false</ignoreConfigErrors>
+		<skills>
+			<li>
+				<skill>Animals</skill>
+				<level>3</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Artistic</skill>
+				<level>1</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Cooking</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<level>12</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<level>9</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Medicine</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<level>15</level>
+				<fireLevel>1</fireLevel>
+			</li>
+			<li>
+				<skill>Mining</skill>
+				<level>0</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Plants</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<level>20</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<level>8</level>
+				<fireLevel>0</fireLevel>
+			</li>
+		</skills>
+	</AK_Dll.OperatorDef>
+	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
+		<defName>Gehenna_Mutsuki</defName>
+		<label>睦月</label>
+		<description>格黑娜学园所属的便利屋68里的行动派。\n\n与被罪恶感困扰的阿露不同的是，她是能毫不犹豫的作恶并享受其中的小恶魔般的少女。\n\n因为是阿露的青梅竹马，所以比谁都理解阿露，但一般都不会特别做些什么。</description>
+		<alienRace>
+			<graphicPaths>
+				<body>Pawns/Gehenna/Mutsuki/Body/Mutsuki</body>
+				<head>Pawns/Gehenna/Mutsuki/Head/</head>
+				<skinColor>(0,0,0,1)</skinColor>
+			</graphicPaths>
+
+
+			<!--光环-->
+			<generalSettings>
+				<alienPartGenerator>
+					<customDrawSize>(1, 1)</customDrawSize>
+					<bodyAddons>
+						<li>
+							<path>Pawns/Gehenna/Mutsuki/Halo/halo</path>
+							<drawSize>0.45</drawSize>
+							<bodyPart>halo</bodyPart>
+							<drawnInBed>false</drawnInBed>
+							<drawnDesiccated>false</drawnDesiccated>
+							<offsets>
+								<north>
+									<offset>(-0.01,0.54)</offset>
+								</north>
+								<south>
+									<offset>(-0.01,0.54)</offset>
+								</south>
+								<east>
+									<offset>(0.09,0.48)</offset>
+								</east>
+
+							</offsets>
+						</li>
+					</bodyAddons>
+				</alienPartGenerator>
+			</generalSettings>
+
+		</alienRace>
+		<race>
+			<nameGenerator>NamerMutsuki</nameGenerator>
+		</race>
+
+
+	</AlienRace.ThingDef_AlienRace>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>BA_Mutsuki</defName>
+		<label>睦月</label>
+		<race>Gehenna_Mutsuki</race>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<initialResistanceRange>10~11</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RimArchive_Adult</li>
+					<li>RimArchive_PS68</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>9999~9999</weaponMoney>
+		<minGenerationAge>15</minGenerationAge>
+		<maxGenerationAge>16</maxGenerationAge>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<canStrip>false</canStrip>
+		<weaponTags>
+			<li>BAW_Mutsuki</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="RimArchive.SchoolNameModExtension">
+				<SchoolName>Gehenna</SchoolName>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+
+</Defs>

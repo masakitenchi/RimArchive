@@ -1,0 +1,4 @@
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\RimArchive\v1.4\Source\RimArchive\RimArchive\obj\Release\RimArchive.csproj.AssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\RimArchive\v1.4\Source\RimArchive\RimArchive\obj\Release\RimArchive.csproj.CoreCompileInputs.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\RimArchive\v1.4\Assemblies\RimArchive.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\RimArchive\v1.4\Source\RimArchive\RimArchive\obj\Release\RimArchive.dll

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>BAW_Hifumi</defName>
+		<statBases>
+			<Mass>3.82</Mass>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+			<SightsEfficiency>1.5</SightsEfficiency>
+			<ShotSpread>0.07</ShotSpread>
+			<SwayFactor>1.29</SwayFactor>
+			<Bulk>7.85</Bulk>
+			<WorkToMake>35000</WorkToMake>
+		</statBases>
+		<costList>
+			<Chemfuel>5</Chemfuel>
+			<Steel>50</Steel>
+			<ComponentIndustrial>7</ComponentIndustrial>
+		</costList>
+		<Properties>
+			<recoilAmount>1.41</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+			<warmupTime>1.2</warmupTime>
+			<range>48</range>
+			<burstShotCount>6</burstShotCount>
+			<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+			<soundCast>Shot_HeavySMG</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<FireModes>
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<aiAimMode>AimedShot</aiAimMode>
+			<aimedBurstShotCount>3</aimedBurstShotCount>
+		</FireModes>
+		<!-- No additional CE weaponTags needed -->
+	</Operation>
+	
+	
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>BAW_Koharu</defName>
+		<statBases>
+			<Mass>4.19</Mass>
+			<RangedWeapon_Cooldown>1.17</RangedWeapon_Cooldown>
+			<SightsEfficiency>1.00</SightsEfficiency>
+			<ShotSpread>0.05</ShotSpread>
+			<SwayFactor>1.63</SwayFactor>
+			<Bulk>12.60</Bulk>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<costList>
+			<WoodLog>15</WoodLog>
+			<Steel>55</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_3006Springfield_FMJ</defaultProjectile>
+			<warmupTime>1.1</warmupTime>
+			<range>55</range>
+			<soundCast>Shot_BoltActionRifle</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<FireModes>
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<aiAimMode>AimedShot</aiAimMode>
+		</FireModes>
+		<!-- No additional CE weaponTags needed -->
+	</Operation>
+	
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>BAW_Tsurugi</defName>
+		<statBases>
+			<Mass>3.60</Mass>
+			<RangedWeapon_Cooldown>0.79</RangedWeapon_Cooldown>
+			<SightsEfficiency>1</SightsEfficiency>
+			<ShotSpread>0.11</ShotSpread>
+			<SwayFactor>1.36</SwayFactor>
+			<Bulk>9.97</Bulk>
+			<WorkToMake>10000</WorkToMake>
+		</statBases>
+		<costList>
+			<WoodLog>10</WoodLog>
+			<Steel>50</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</costList>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+			<warmupTime>0.6</warmupTime>
+			<range>16</range>
+			<soundCast>Shot_Shotgun</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<FireModes>
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<aiAimMode>Snapshot</aiAimMode>
+		</FireModes>
+		<weaponTags>
+			<li>CE_AI_AssaultWeapon</li>
+		</weaponTags>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="BAW_Tsurugi"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>stock</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>22</power>
+					<cooldownTime>5</cooldownTime>
+					<armorPenetration>0.2</armorPenetration>
+					<linkedBodyPartsGroup>Barrels</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>BAW_Azusa</defName>
+		<statBases>
+			<Mass>2.90</Mass>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+			<SightsEfficiency>1.00</SightsEfficiency>
+			<ShotSpread>0.1</ShotSpread>
+			<SwayFactor>1.13</SwayFactor>
+			<Bulk>7.56</Bulk>
+			<WorkToMake>32000</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>40</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<Chemfuel>10</Chemfuel>
+		</costList>
+		<Properties>
+			<recoilAmount>1.58</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+			<warmupTime>1.1</warmupTime>
+			<range>55</range>
+			<burstShotCount>6</burstShotCount>
+			<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+			<soundCast>ShotM4A1</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<recoilPattern>Regular</recoilPattern>
+		</Properties>
+
+		<FireModes>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+			<aiAimMode>AimedShot</aiAimMode>
+			<aimedBurstShotCount>3</aimedBurstShotCount>
+		</FireModes>
+
+		<weaponTags>
+			<li>CE_AI_Rifle</li>
+		</weaponTags>
+	</Operation>
+</Patch>

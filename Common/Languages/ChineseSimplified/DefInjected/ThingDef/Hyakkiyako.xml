@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<!--泉奈-->
+    <BAW_Izuna.label>泉奈流的超级忍具</BAW_Izuna.label>
+	<BAW_Izuna.description>泉奈爱用的冲锋枪。\n\n一种最先进的忍具，和泉奈流忍法相结合使用的话，用途就无限广泛了，\n\n比如说射击投掷烟雾弹、按摩主公的肩膀等等。</BAW_Izuna.description>
+	<BAW_Izuna.tools.0.label>枪托</BAW_Izuna.tools.0.label>
+	<BAW_Izuna.tools.1.label>枪管</BAW_Izuna.tools.1.label>
+
+	<!--若藻-->
+	<BAW_Wakamo.label>深红灾厄</BAW_Wakamo.label>
+	<BAW_Wakamo.description>若藻爱用的来福枪。\n\n与其古朴的外观相反，它总是散发着火焰与火药的味道。\n\n如今，它经常被用来对付老师身边“碍事的东西”。</BAW_Wakamo.description>
+	<BAW_Wakamo.tools.0.label>枪托</BAW_Wakamo.tools.0.label>
+	<BAW_Wakamo.tools.1.label>枪管</BAW_Wakamo.tools.1.label>
+	<BAW_Wakamo.tools.2.label>刺刀</BAW_Wakamo.tools.2.label>
+
+	
+  
+
+
+
+
+</LanguageData>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<!--日富美-->
+	<BAW_Hifumi.label>我的必需品</BAW_Hifumi.label>
+	<BAW_Hifumi.description>日富美随身携带的粉色突击步枪。\n\n和其他喜欢的物品一样，是她外出无论怎样都要带着的必需品。</BAW_Hifumi.description>
+	<BAW_Hifumi.tools.0.label>枪托</BAW_Hifumi.tools.0.label>
+	<BAW_Hifumi.tools.1.label>枪管</BAW_Hifumi.tools.1.label>
+
+	<!--小春-->
+	<BAW_Koharu.label>正义之黑</BAW_Koharu.label>
+	<BAW_Koharu.description>小春使用的狙击步枪。\n\n这个名字是小春在正义实现委员会的时候取的。</BAW_Koharu.description>
+	<BAW_Koharu.tools.0.label>枪托</BAW_Koharu.tools.0.label>
+	<BAW_Koharu.tools.1.label>枪管</BAW_Koharu.tools.1.label>
+
+	<!--鹤城-->
+	<BAW_Tsurugi.label>血与火药</BAW_Tsurugi.label>
+    <BAW_Tsurugi.description>鹤城使用的双持霰弹枪。\n\n两把枪分别名叫“血（Blood）”和“火药（Gunpowder）”，从外观来看没有区别。</BAW_Tsurugi.description>
+	<BAW_Tsurugi.tools.0.label>枪托</BAW_Tsurugi.tools.0.label>
+	<BAW_Tsurugi.tools.1.label>枪管</BAW_Tsurugi.tools.1.label>
+
+	<!--梓-->
+	<BAW_Azusa.label>万事皆虚</BAW_Azusa.label>
+	<BAW_Azusa.description>梓经常拿着的枪。\n\n枪身刻着文字“一切皆是虚空。无论行至何处，一切皆虚”。</BAW_Azusa.description>
+	<BAW_Azusa.tools.0.label>枪托</BAW_Azusa.tools.0.label>
+	<BAW_Azusa.tools.1.label>枪管</BAW_Azusa.tools.1.label>
+  
+
+
+
+
+
+</LanguageData>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <HairDef Name="BA_HairBase" Abstract="True">
+        <hairGender>Female</hairGender>
+        <category>BA_Hair</category>
+    </HairDef>
+
+    <HeadTypeDef Name="BA_HeadTypeBase" ParentName="NarrowBase" Abstract="True"/>
+
+    <HairDef Name="BA_HarukaHair">
+        <defName>BA_Hair_Haruka</defName>
+        <label>Hair_Haruka</label>
+        <texPath>Pawns/Gehenna/Haruka/Hair/Haruka</texPath>
+    </HairDef>
+
+    <HeadTypeDef ParentName="BA_HeadTypeBase">
+        <defName>BA_HeadTypeDef_Haruka</defName>
+        <label>HarukaHead</label>
+        <graphicPath>Pawns/Gehenna/Haruka/Head/Haruka</graphicPath>
+        <gender>Female</gender>
+    </HeadTypeDef>
+</Defs>

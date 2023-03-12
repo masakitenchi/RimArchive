@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<BackstoryDef>
+		<defName>KivotosStudent</defName>
+		<title>KivotosStudent</title>
+		<titleShort>Student</titleShort>
+		<baseDesc>[PAWN_nameDef] was born in Kivotos.\n\nNow she is ready to fight</baseDesc>
+		<bodyTypeGlobal>Female</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>RimArchive_Adult</li>
+		</spawnCategories>
+	</BackstoryDef>
+
+
+</Defs>

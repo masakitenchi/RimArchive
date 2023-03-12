@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AK_Dll.OperatorDef>
+		<name>Aru</name>
+		<surname>Rikuhachima</surname>
+		<nickname>Aru</nickname>
+		<childHood>Club_PS68</childHood>
+		<adultHood/>
+		<abilities/>
+		<age>16</age>
+		<isMale>false</isMale>
+		<hediffInate/>
+		<voicePackDef/>
+		<relations/>
+		<traits/>
+		<weapon>BAW_Aru</weapon>
+		<apparels/>
+		<items/>
+		<bodyTypeDef>Female</bodyTypeDef>
+		<skinColor/>
+		<hairColor/>
+		<hair/>
+		<beard/>
+		<operatorType>RA_OperatorClass_Gehenna</operatorType>
+		<stand>Portraits/Portrait_Aru</stand>
+		<standOffset/>
+		<standRatio/>
+		<headPortrait>Icons/Student_Portrait_Aru_Collection</headPortrait>
+		<headPortraitOffset/>
+		<defName>RA_Aru</defName>
+		<label>Aru</label>
+		<description>Aru</description>
+		<descriptionHyperlinks/>
+		<ignoreConfigErrors>false</ignoreConfigErrors>
+		<skills>
+			<li>
+				<skill>Animals</skill>
+				<level>3</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Artistic</skill>
+				<level>1</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Construction</skill>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Cooking</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Crafting</skill>
+				<level>12</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Intellectual</skill>
+				<level>9</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Medicine</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<level>15</level>
+				<fireLevel>1</fireLevel>
+			</li>
+			<li>
+				<skill>Mining</skill>
+				<level>0</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Plants</skill>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</li>
+			<li>
+				<skill>Shooting</skill>
+				<level>20</level>
+				<fireLevel>2</fireLevel>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<level>8</level>
+				<fireLevel>0</fireLevel>
+			</li>
+		</skills>
+	</AK_Dll.OperatorDef>
+
+	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
+		<defName>Gehenna_Aru</defName>
+		<label>阿露</label>
+		<description>格黑娜学园所属，自称便利屋68社长。\n\n作为格黑娜学园的社团活动，阿露喜欢以便利屋68为据点，从事一些不法行当。\n\n阿露虽然十分向往成为一位帅气的黑帮分子，但因为经常做事错漏百出，所以总是很快就暴露无遗</description>
+		<alienRace>
+			<graphicPaths>
+				<body>Pawns/Gehenna/Aru/Body/Aru</body>
+				<head>Pawns/Gehenna/Aru/Head/</head>
+				<skinColor>(0,0,0,1)</skinColor>
+			</graphicPaths>
+
+			<!--光环-->
+			<generalSettings>
+				<alienPartGenerator>
+							<customDrawSize>(1.09, 1.09)</customDrawSize>
+					<bodyAddons>
+						<li>
+							<path>Pawns/Gehenna/Aru/Halo/halo</path>
+							<drawSize>0.75</drawSize>
+							<bodyPart>halo</bodyPart>
+							<drawnInBed>false</drawnInBed>
+							<drawnDesiccated>false</drawnDesiccated>
+							<offsets>
+								<north>
+									<offset>(0.06,0.45)</offset>
+								</north>
+								<south>
+									<offset>(-0.06,0.45)</offset>
+								</south>
+								<east>
+									<offset>(0.12,0.48)</offset>
+								</east>
+
+							</offsets>
+						</li>
+					</bodyAddons>
+				</alienPartGenerator>
+			</generalSettings>
+
+
+		</alienRace>
+		<race>
+			<nameGenerator>NamerAru</nameGenerator>
+		</race>
+
+
+	</AlienRace.ThingDef_AlienRace>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>BA_Aru</defName>
+		<label>阿露</label>
+		<race>Gehenna_Aru</race>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<initialResistanceRange>10~11</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RimArchive_Adult</li>
+					<li>RimArchive_PS68</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>9999~9999</weaponMoney>
+		<minGenerationAge>16</minGenerationAge>
+		<maxGenerationAge>17</maxGenerationAge>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<canStrip>false</canStrip>
+		<weaponTags>
+			<li>BAW_Aru</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="RimArchive.SchoolNameModExtension">
+				<SchoolName>Gehenna</SchoolName>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+
+</Defs>
