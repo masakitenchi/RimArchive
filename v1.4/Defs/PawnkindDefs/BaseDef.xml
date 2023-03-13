@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-	<!-- <AK.DLL_OperatorDef Name="RA_OperatorDefBase" Abstract="True">
+	<AK.DLL_OperatorDef Name="RA_OperatorDefBase" Abstract="True">
         <skinColor>
 			<r>1</r>
 			<g>1</g>
@@ -13,7 +13,7 @@
 			<b>1</b>
 			<a>1</a>
 		</hairColor>
-    </AK.DLL_OperatorDef> -->
+    </AK.DLL_OperatorDef>
 
 	<PawnKindDef Name = "RA_BasePawn" ParentName = "BasePlayerPawnKind" Abstract = "True">
 		<defName>KivotosStudent</defName>

@@ -147,7 +147,7 @@
 		</weaponTags>
 		<modExtensions>
 			<li Class="RimArchive.SchoolNameModExtension">
-				<SchoolName>Shanhanjing</SchoolName>
+				<Shanhaijing/>
 			</li>
 		</modExtensions>
 	</PawnKindDef>

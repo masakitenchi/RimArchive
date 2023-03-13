@@ -167,7 +167,7 @@
 		</weaponTags>
 		<modExtensions>
 			<li Class="RimArchive.SchoolNameModExtension">
-				<SchoolName>Gehenna</SchoolName>
+				<Gehenna/>
 			</li>
 		</modExtensions>
 	</PawnKindDef>
