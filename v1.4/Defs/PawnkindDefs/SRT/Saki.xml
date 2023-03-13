@@ -169,7 +169,7 @@
 		</weaponTags>
 		<modExtensions>
 			<li Class="RimArchive.SchoolNameModExtension">
-				<SRT/>
+				<School>SRT</School>
 			</li>
 		</modExtensions>
 	</PawnKindDef>

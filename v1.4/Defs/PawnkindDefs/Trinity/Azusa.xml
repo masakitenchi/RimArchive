@@ -151,7 +151,7 @@
 		</weaponTags>
 		<modExtensions>
 			<li Class="RimArchive.SchoolNameModExtension">
-				<Azusa/>
+				<School>Trinity</School>
 			</li>
 		</modExtensions>
 	</PawnKindDef>
