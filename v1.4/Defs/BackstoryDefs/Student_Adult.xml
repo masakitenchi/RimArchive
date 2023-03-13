@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<BackstoryDef>
+	<AlienRace.AlienBackstoryDef>
 		<defName>KivotosStudent</defName>
 		<title>KivotosStudent</title>
 		<titleShort>Student</titleShort>
@@ -11,7 +11,7 @@
 		<spawnCategories>
 			<li>RimArchive_Adult</li>
 		</spawnCategories>
-	</BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 
 
 </Defs>

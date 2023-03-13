@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<AlienRace.BackstoryDef Abstract="True" Name="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef Abstract="True" Name="BAW_Backstory">
 		<spawnCategories>
 			<li>RimArchive_Child</li>
 		</spawnCategories>
@@ -11,13 +11,12 @@
 				<value>5</value>
 			</li>
 		</skillGains>
-		<forcedTraits>
+		<forcedTraitsChance>
 			<li>
 				<defName>Beauty</defName>
 				<degree>2</degree>
-				<chance>100</chance>
 			</li>
-		</forcedTraits>
+		</forcedTraitsChance>
 		<disallowedTraitsChance/>
 		<femaleCommonality>100</femaleCommonality>
 		<forcedHediffs/>
@@ -29,10 +28,10 @@
 			<min>10</min>
 			<max>18</max>
 		</chronoAgeRange>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--课后甜品部-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_ASSC</defName>
 		<title>Member of After-School Sweets Club</title>
 		<titleShort>After-School Sweets Club</titleShort>
@@ -42,10 +41,10 @@
 		<spawnCategories>
 			<li>RimArchive_ASSC</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--阿里乌斯小队-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_Arius</defName>
 		<title>Member of Arius Squad</title>
 		<titleShort>Arius Squad</titleShort>
@@ -55,10 +54,10 @@
 		<spawnCategories>
 			<li>RimArchive_Arius</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--CC-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_CC</defName>
 		<title>Maid of Cleaning N Clearing</title>
 		<titleShort>Maid in CC</titleShort>
@@ -68,10 +67,10 @@
 		<spawnCategories>
 			<li>RimArchive_CC</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--对策委员会-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_ACC</defName>
 		<title>Member of Countermeasures Council</title>
 		<titleShort>Countermeasures Council</titleShort>
@@ -81,10 +80,10 @@
 		<spawnCategories>
 			<li>RimArchive_ACC</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--风纪委员会-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_DC</defName>
 		<title>Member of Disciplinary Committee</title>
 		<titleShort>Disciplinary Committee</titleShort>
@@ -94,10 +93,10 @@
 		<spawnCategories>
 			<li>RimArchive_DC</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--工程部-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_EC</defName>
 		<title>Member of Engineering Club</title>
 		<titleShort>Engineering Club</titleShort>
@@ -107,10 +106,10 @@
 		<spawnCategories>
 			<li>RimArchive_EC</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--征信社68-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_PS68</defName>
 		<title>Member of Problem Solver 68</title>
 		<titleShort>Problem Solver 68</titleShort>
@@ -120,10 +119,10 @@
 		<spawnCategories>
 			<li>RimArchive_PS68</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--游戏开发部-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_GDD</defName>
 		<title>Member of Game Development Department</title>
 		<titleShort>Game Development Department</titleShort>
@@ -133,10 +132,10 @@
 		<spawnCategories>
 			<li>RimArchive_GDD</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--美食研究社-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_GRS</defName>
 		<title>Member of Gourmet Reserch Society</title>
 		<titleShort>Gourmet Reserch Society</titleShort>
@@ -146,10 +145,10 @@
 		<spawnCategories>
 			<li>RimArchive_GRS</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--正义实现委员会-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_JTF</defName>
 		<title>Member of Justice Task Force</title>
 		<titleShort>Justice Task Force</titleShort>
@@ -159,10 +158,10 @@
 		<spawnCategories>
 			<li>RimArchive_JTF</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--补课部-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_MWC</defName>
 		<title>Member of Makeup Work Club</title>
 		<titleShort>Makeup Work Club</titleShort>
@@ -172,10 +171,10 @@
 		<spawnCategories>
 			<li>RimArchive_MWC</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--忍术研究部-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_NRD</defName>
 		<title>Member of Ninjutsu Research Department</title>
 		<titleShort>Ninjutsu Research Department</titleShort>
@@ -185,10 +184,10 @@
 		<spawnCategories>
 			<li>RimArchive_NRD</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--兔子队-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_RABBIT</defName>
 		<title>Member of RABBIT Platoon</title>
 		<titleShort>RABBIT Platoon</titleShort>
@@ -198,10 +197,10 @@
 		<spawnCategories>
 			<li>RimArchive_RABBIT</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--研讨会-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_Seminar</defName>
 		<title>Member of Seminar</title>
 		<titleShort>Seminar</titleShort>
@@ -211,10 +210,10 @@
 		<spawnCategories>
 			<li>RimArchive_Seminar</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	<!--梅花园-->
-	<AlienRace.BackstoryDef ParentName="BAW_Backstory">
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Club_PBG</defName>
 		<title>Member of Plum Blossom Garden</title>
 		<titleShort>Plum Blossom Garden</titleShort>
@@ -224,7 +223,7 @@
 		<spawnCategories>
 			<li>RimArchive_PBG</li>
 		</spawnCategories>
-	</AlienRace.BackstoryDef>
+	</AlienRace.AlienBackstoryDef>
 	
 	
 
