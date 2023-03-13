@@ -5,20 +5,20 @@ using System.Text.RegularExpressions;
 
 namespace RimArchive
 {
-    internal class SchoolDef : Def
+    internal class IconDef : Def
     {
-        private Regex fileNameRegex = new Regex(@"(?<modName>\w*?)_(?<category>\w*?)_(?<Name>\w*)");
 #pragma warning disable CS0649
+        public string name;
         private string textureFolder;
 #pragma warning restore CS0649
         public Texture2D tex;
 
-        public void ResolveTex()
+        public void ResoleFields()
         {
-            Match match = fileNameRegex.Match(this.defName);
+            Match match = RimArchive.fileNameRegex.Match(this.defName);
             if (!match.Success)
             {
-                Log.Error($"Error when parsing {this.defName}: invalid pattern");
+                Log.Error($"Error when parsing {this.defName}: Regex cannot match");
                 return;
             }
             //Example:
@@ -26,6 +26,7 @@ namespace RimArchive
             //So resolvedTexPath will be SchoolIcon/Shanhaijing
 
             string resolvedTexPath = this.textureFolder + "/" + match.Groups["Name"].Value;
+            this.name = match.Groups["Name"].Value;
             this.tex = ContentFinder<Texture2D>.Get(resolvedTexPath, false);
             if (this.tex == null)
             {

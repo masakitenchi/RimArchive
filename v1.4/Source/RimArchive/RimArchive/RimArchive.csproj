@@ -37,7 +37,7 @@
     <Compile Include="Components\RimArchiveGameComponent.cs" />
     <Compile Include="Components\RimArchiveWorldComponent.cs" />
     <Compile Include="Debug.cs" />
-    <Compile Include="Defs\SchoolDef.cs" />
+    <Compile Include="Defs\IconDef.cs" />
     <Compile Include="HotSwap.cs" />
     <Compile Include="Patch\HarmonyPatch.cs" />
     <Compile Include="RAPawnKindDef.cs" />

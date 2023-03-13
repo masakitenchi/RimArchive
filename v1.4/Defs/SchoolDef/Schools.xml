@@ -49,45 +49,69 @@
         <textureFolder>SchoolIcon</textureFolder>
     </AK_DLL.OperatorClassDef>
 
-    <RimArchive.SchoolDef>
+    <RimArchive.IconDef>
         <defName>RA_School_Gehenna</defName>
         <label>Gehenna</label>
         <textureFolder>SchoolIcon</textureFolder>
-    </RimArchive.SchoolDef>
+    </RimArchive.IconDef>
 
-    <RimArchive.SchoolDef>
+    <RimArchive.IconDef>
         <defName>RA_School_Millennium</defName>
         <label>Millennium</label>
         <textureFolder>SchoolIcon</textureFolder>
-    </RimArchive.SchoolDef>
+    </RimArchive.IconDef>
 
-    <RimArchive.SchoolDef>
+    <RimArchive.IconDef>
         <defName>RA_School_Shanhaijing</defName>
         <label>Shanhaijing</label>
         <textureFolder>SchoolIcon</textureFolder>
-    </RimArchive.SchoolDef>
+    </RimArchive.IconDef>
 
-    <RimArchive.SchoolDef>
+    <RimArchive.IconDef>
         <defName>RA_School_SRT</defName>
         <label>SRT</label>
         <textureFolder>SchoolIcon</textureFolder>
-    </RimArchive.SchoolDef>
+    </RimArchive.IconDef>
 
-    <RimArchive.SchoolDef>
+    <RimArchive.IconDef>
         <defName>RA_School_Hyakkiyako</defName>
         <label>Hyakkiyako</label>
         <textureFolder>SchoolIcon</textureFolder>
-    </RimArchive.SchoolDef>
+    </RimArchive.IconDef>
 
-    <RimArchive.SchoolDef>
+    <RimArchive.IconDef>
         <defName>RA_School_Abydos</defName>
         <label>Abydos</label>
         <textureFolder>SchoolIcon</textureFolder>
-    </RimArchive.SchoolDef>
+    </RimArchive.IconDef>
 
-    <RimArchive.SchoolDef>
+    <RimArchive.IconDef>
         <defName>RA_School_Trinity</defName>
         <label>Trinity</label>
         <textureFolder>SchoolIcon</textureFolder>
-    </RimArchive.SchoolDef>
+    </RimArchive.IconDef>
+
+    <RimArchive.IconDef>
+        <defName>RA_School_Valkyrie</defName>
+        <label>Valkyrie</label>
+        <textureFolder>SchoolIcon</textureFolder>
+    </RimArchive.IconDef>
+
+    <RimArchive.IconDef>
+        <defName>RA_School_Redwinter</defName>
+        <label>Redwinter</label>
+        <textureFolder>SchoolIcon</textureFolder>
+    </RimArchive.IconDef>
+
+    <RimArchive.IconDef>
+        <defName>RA_School_ETC</defName>
+        <label>ETC</label>
+        <textureFolder>SchoolIcon</textureFolder>
+    </RimArchive.IconDef>
+
+    <RimArchive.IconDef>
+        <defName>RA_School_Arius</defName>
+        <label>Arius</label>
+        <textureFolder>SchoolIcon</textureFolder>
+    </RimArchive.IconDef>
 </Defs>

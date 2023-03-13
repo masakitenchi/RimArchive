@@ -6,6 +6,7 @@ using UnityEngine;
 using Verse;
 using static RimArchive.RimArchive;
 using static Verse.Widgets;
+using System.Text;
 
 namespace RimArchive.Window
 {
@@ -50,15 +51,15 @@ namespace RimArchive.Window
             Rect outRect = new Rect(inRect);
             //GUI.DrawTexture(outRect, BaseContent.BlackTex);
             //Sensei头像
-            Rect sensei = new Rect(inRect.position, new Vector2(120f,120f));
-            GUI.DrawTexture(sensei, Sensei,ScaleMode.ScaleAndCrop);
+            Rect sensei = new Rect(inRect.position, _iconSize);
+            GUI.DrawTexture(sensei, Sensei, ScaleMode.ScaleAndCrop);
             //右侧的对话……栏?
             outRect.x += sensei.width;
             outRect.height = sensei.height;
             outRect.width -= sensei.width;
             DrawDialog(outRect);
             //最右侧列出所有学校
-            Rect schoolList = new Rect(inRect.width - _iconSize.x, inRect.y, 120f, inRect.height);
+            Rect schoolList = new Rect(inRect.width - _iconSize.x, inRect.y, _iconSize.x + 2 * _xMargin, inRect.height);
             DrawSchoolList(schoolList);
             //根据当前选择的学校绘制可用学生
             Rect studentsRect = new Rect(sensei.x, sensei.yMax, inRect.width - schoolList.width, inRect.height - sensei.height);
@@ -66,7 +67,7 @@ namespace RimArchive.Window
             studentsRect.x += _xMargin;
             studentsRect.y += _yMargin;
             DrawStudentList(studentsRect, cachedAllStudentsBySchool[_currentSchool]);
-            
+
         }
         static void DrawDialog(Rect outRect)
         {
@@ -102,7 +103,7 @@ namespace RimArchive.Window
                     Widgets.LabelFit(row, cachedSchools[i].label.Translate());
                 }
                 Widgets.DrawHighlightIfMouseover(row);
-                if (Widgets.ButtonInvisible(row)) _currentSchool = cachedSchools[i].defName;
+                if (Widgets.ButtonInvisible(row)) _currentSchool = cachedSchools[i].name;
                 //Text.WordWrap = true;
             }
             Widgets.EndScrollView();
@@ -110,6 +111,7 @@ namespace RimArchive.Window
 
         static void DrawStudentList(Rect outRect, List<PawnKindDef> students)
         {
+            if (students.NullOrEmpty()) return;
             Rect viewRect = new Rect(outRect);
             ResolveTotalHeightAndReturnRowCount(ref viewRect, out int rowCount, out int columnCount);
             Widgets.BeginScrollView(outRect, ref _stdscrbr, viewRect);
@@ -118,16 +120,21 @@ namespace RimArchive.Window
             //+iconSize.y平滑滚动条
             int endRow = startRow + (int)(Math.Ceiling((decimal)((outRect.height + _iconSize.y) / (_iconSize.y + _lblSize.y))));
             endRow = (endRow > rowCount) ? rowCount : endRow;
-            for(int i = startRow; i< endRow; i++)
+            Rect rect = new Rect(viewRect.x, viewRect.y, _iconSize.x, _iconSize.y + _lblSize.y);
+            for (int i = startRow; i < endRow; i++)
             {
-                Rect rect = new Rect(viewRect.x, viewRect.y + i * _iconSize.y, _iconSize.x , _iconSize.y + _lblSize.y);
-                DrawHighlightIfMouseover(rect);
-                TooltipHandler.TipRegion(rect, students[i].description);
-                GUI.DrawTexture(rect, BaseContent.BlackTex);
-                BeginGroup(rect);
-                Rect icon = new Rect(0f, 0f, _iconSize.x, _iconSize.y);
-                DrawTextureFitted(icon, BaseContent.WhiteTex, 1f);
-                EndGroup();
+                for (int j = 0; j < columnCount; j++)
+                {
+                    DrawHighlightIfMouseover(rect);
+                    TooltipHandler.TipRegion(rect, students[i].description);
+                    GUI.DrawTexture(rect, BaseContent.BlackTex);
+                    BeginGroup(rect);
+                    Rect icon = new Rect(0f, 0f, _iconSize.x, _iconSize.y);
+                    DrawTextureFitted(icon, BaseContent.WhiteTex, 1f);
+                    EndGroup();
+                    rect.x += _iconSize.x + _xMargin;
+                }
+                rect.y += _iconSize.y + _yMargin;
             }
             Widgets.EndScrollView();
         }
@@ -136,6 +143,8 @@ namespace RimArchive.Window
         {
             int studentCount = cachedAllStudentsBySchool[_currentSchool].Count;
             columnCount = (int)(viewRect.width / (_iconSize.x + _xMargin));
+            if (columnCount > studentCount)
+                columnCount = studentCount;
             rowCount = Mathf.CeilToInt((float)studentCount / columnCount);
             viewRect.height = (rowCount + _yMargin) * _iconSize.y;
         }

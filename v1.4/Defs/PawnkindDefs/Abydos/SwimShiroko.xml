@@ -100,14 +100,6 @@
 		<label>白子(泳装)</label>
 		<description>阿拜多斯高等学校所属，是热爱运动的阿拜多斯对策委员会的突击队长。\n\n虽然给人一种沉默寡言，冷若冰霜的印象，但实际上比谁都重视阿比多斯高等学院。\n\n为了学院的复兴可以不择手段，所以偶尔会提出一些荒唐的提案。</description>
 		<alienRace>
-			<styleSettings>
-				<li>
-					<key>HairDef</key>
-					<value>
-
-					</value>
-				</li>
-			</styleSettings>
 			<graphicPaths>
 				<body>Pawns/Abydos/SwimShiroko/Body/Shiroko</body>
 				<head>Pawns/Abydos/SwimShiroko/Head/</head>
