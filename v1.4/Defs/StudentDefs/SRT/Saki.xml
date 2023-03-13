@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<AK_Dll.OperatorDef>
-		<name>Aru</name>
-		<surname>Rikuhachima</surname>
-		<nickname>Aru</nickname>
-		<childHood>Club_PS68</childHood>
+		<name>Saki</name>
+		<surname>Sorai</surname>
+		<nickname>Saki</nickname>
+		<childHood>Club_RABBIT</childHood>
 		<adultHood/>
 		<abilities/>
-		<age>16</age>
+		<age>15</age>
 		<isMale>false</isMale>
 		<hediffInate/>
 		<voicePackDef/>
 		<relations/>
 		<traits/>
-		<weapon>BAW_Aru</weapon>
-		<apparels/>
+		<weapon>BAW_Saki</weapon>
+		<apparels>
+			
+		</apparels>
 		<items/>
 		<bodyTypeDef>Female</bodyTypeDef>
 		<skinColor/>
 		<hairColor/>
 		<hair/>
 		<beard/>
-		<operatorType>RA_OperatorClass_Gehenna</operatorType>
-		<stand>Portraits/Portrait_Aru</stand>
+		<operatorType>RA_OperatorClass_SRT</operatorType>
+		<stand>Portraits/Portrait_Saki</stand>
 		<standOffset/>
 		<standRatio/>
-		<headPortrait>Icons/Student_Portrait_Aru_Collection</headPortrait>
+		<headPortrait>Icons/Student_Portrait_Saki_Collection</headPortrait>
 		<headPortraitOffset/>
-		<defName>RA_Aru</defName>
-		<label>Aru</label>
-		<description>Aru</description>
+		<defName>RA_Saki</defName>
+		<label>Saki</label>
+		<description>Saki</description>
 		<descriptionHyperlinks/>
 		<ignoreConfigErrors>false</ignoreConfigErrors>
 		<skills>
@@ -95,38 +97,38 @@
 			</li>
 		</skills>
 	</AK_Dll.OperatorDef>
-
 	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
-		<defName>Gehenna_Aru</defName>
-		<label>阿露</label>
-		<description>格黑娜学园所属，自称便利屋68社长。\n\n作为格黑娜学园的社团活动，阿露喜欢以便利屋68为据点，从事一些不法行当。\n\n阿露虽然十分向往成为一位帅气的黑帮分子，但因为经常做事错漏百出，所以总是很快就暴露无遗</description>
+		<defName>SRT_Saki</defName>
+		<label>咲</label>
+		<description>SRT特殊学院RABBIT的核心人物。\n\n虽然她进入SRT特殊学院是为了寻求严格的生活，但学院却突然关闭。目前在公园，和小队的其他成员一起生活着。\n\n总是遵循着SRT战术规范，总是强调按照原则行事。她的爱好是采摘野菜和收集废品。这在当前资源趋于稀缺的公园生活中起到了很大的用途。\n\n呼号是“RABBIT2”。</description>
 		<alienRace>
 			<graphicPaths>
-				<body>Pawns/Gehenna/Aru/Body/Aru</body>
-				<head>Pawns/Gehenna/Aru/Head/</head>
+				<body>Pawns/SRT/Saki/Body/Saki</body>
+				<head>Pawns/SRT/Saki/Head/</head>
 				<skinColor>(0,0,0,1)</skinColor>
 			</graphicPaths>
+
 
 			<!--光环-->
 			<generalSettings>
 				<alienPartGenerator>
-							<customDrawSize>(1.09, 1.09)</customDrawSize>
+					<customDrawSize>(1.04, 1.04)</customDrawSize>
 					<bodyAddons>
 						<li>
-							<path>Pawns/Gehenna/Aru/Halo/halo</path>
-							<drawSize>0.75</drawSize>
+							<path>Pawns/SRT/Saki/Halo/halo</path>
+							<drawSize>0.39</drawSize>
 							<bodyPart>halo</bodyPart>
 							<drawnInBed>false</drawnInBed>
 							<drawnDesiccated>false</drawnDesiccated>
 							<offsets>
 								<north>
-									<offset>(0.06,0.45)</offset>
+									<offset>(-0.01,0.54)</offset>
 								</north>
 								<south>
-									<offset>(-0.06,0.45)</offset>
+									<offset>(-0.01,0.54)</offset>
 								</south>
 								<east>
-									<offset>(0.12,0.48)</offset>
+									<offset>(0.09,0.48)</offset>
 								</east>
 
 							</offsets>
@@ -135,43 +137,42 @@
 				</alienPartGenerator>
 			</generalSettings>
 
-
 		</alienRace>
 		<race>
-			<nameGenerator>NamerAru</nameGenerator>
+			<nameGenerator>NamerSaki</nameGenerator>
 		</race>
 
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<defName>BA_Aru</defName>
-		<label>阿露</label>
-		<race>Gehenna_Aru</race>
+	<RimArchive.Defs.StudentDef ParentName="BasePlayerPawnKind">
+		<defName>BA_Saki</defName>
+		<label>咲</label>
+		<race>BA_Student</race>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
 		<backstoryFiltersOverride>
 			<li>
 				<categories>
 					<li>RimArchive_Adult</li>
-					<li>RimArchive_PS68</li>
+					<li>RimArchive_RABBIT</li>
 				</categories>
 			</li>
 		</backstoryFiltersOverride>
 		<weaponMoney>9999~9999</weaponMoney>
-		<minGenerationAge>16</minGenerationAge>
-		<maxGenerationAge>17</maxGenerationAge>
+		<minGenerationAge>15</minGenerationAge>
+		<maxGenerationAge>16</maxGenerationAge>
 		<destroyGearOnDrop>true</destroyGearOnDrop>
 		<canStrip>false</canStrip>
 		<weaponTags>
-			<li>BAW_Aru</li>
+			<li>BAW_Saki</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="RimArchive.SchoolNameModExtension">
-				<School>Gehenna</School>
+			<li Class="RimArchive.RA_StudentModExtension">
+				<School>SRT</School>
 			</li>
 		</modExtensions>
-	</PawnKindDef>
+	</RimArchive.Defs.StudentDef>
 
 
 </Defs>

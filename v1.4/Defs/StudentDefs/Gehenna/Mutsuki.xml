@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!--<AK_Dll.OperatorDef>
-		<name>Shiroko</name>                                  
-		<surname>Sunaookami</surname>
-		<nickname>Shiroko</nickname>
-		<childHood>Club_ACC</childHood>
+	<AK_Dll.OperatorDef>
+		<name>Mutsuki</name>
+		<surname>Asagi</surname>
+		<nickname>Mutsuki</nickname>
+		<childHood>Club_PS68</childHood>
 		<adultHood/>
 		<abilities/>
 		<age>16</age>
@@ -13,7 +13,7 @@
 		<voicePackDef/>
 		<relations/>
 		<traits/>
-		<weapon>BAW_Shiroko</weapon>
+		<weapon>BAW_Mutsuki</weapon>
 		<apparels/>
 		<items/>
 		<bodyTypeDef>Female</bodyTypeDef>
@@ -21,15 +21,15 @@
 		<hairColor/>
 		<hair/>
 		<beard/>
-		<operatorType>RA_OperatorClass_Abydos</operatorType>
-		<stand>Portraits/Portrait_Shiroko_RidingSuit</stand>
+		<operatorType>RA_OperatorClass_Gehenna</operatorType>
+		<stand>Portraits/Portrait_Mutsuki</stand>
 		<standOffset/>
 		<standRatio/>
-		<headPortrait>Icons/Student_Portrait_Shiroko_ridingsuit_Collection</headPortrait>
+		<headPortrait>Icons/Student_Portrait_Mutsuki_Collection</headPortrait>
 		<headPortraitOffset/>
-		<defName>RA_Shiroko_RidingSuit</defName>
-		<label>Shiroko_RidingSuit</label>
-		<description>Shiroko</description>
+		<defName>RA_Mutsuki</defName>
+		<label>Mutsuki</label>
+		<description>Mutsuki</description>
 		<descriptionHyperlinks/>
 		<ignoreConfigErrors>false</ignoreConfigErrors>
 		<skills>
@@ -94,24 +94,27 @@
 				<fireLevel>0</fireLevel>
 			</li>
 		</skills>
-	</AK_Dll.OperatorDef>-->
+	</AK_Dll.OperatorDef>
 	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
-		<defName>Abydos_SwimShiroko</defName>
-		<label>白子(泳装)</label>
-		<description>阿拜多斯高等学校所属，是热爱运动的阿拜多斯对策委员会的突击队长。\n\n虽然给人一种沉默寡言，冷若冰霜的印象，但实际上比谁都重视阿比多斯高等学院。\n\n为了学院的复兴可以不择手段，所以偶尔会提出一些荒唐的提案。</description>
+		<defName>Gehenna_Mutsuki</defName>
+		<label>睦月</label>
+		<description>格黑娜学园所属的便利屋68里的行动派。\n\n与被罪恶感困扰的阿露不同的是，她是能毫不犹豫的作恶并享受其中的小恶魔般的少女。\n\n因为是阿露的青梅竹马，所以比谁都理解阿露，但一般都不会特别做些什么。</description>
 		<alienRace>
 			<graphicPaths>
-				<body>Pawns/Abydos/SwimShiroko/Body/Shiroko</body>
-				<head>Pawns/Abydos/SwimShiroko/Head/</head>
+				<body>Pawns/Gehenna/Mutsuki/Body/Mutsuki</body>
+				<head>Pawns/Gehenna/Mutsuki/Head/</head>
 				<skinColor>(0,0,0,1)</skinColor>
 			</graphicPaths>
+
+
 			<!--光环-->
 			<generalSettings>
 				<alienPartGenerator>
+					<customDrawSize>(1, 1)</customDrawSize>
 					<bodyAddons>
 						<li>
-							<path>Pawns/Abydos/SwimShiroko/Halo/halo</path>
-							<drawSize>0.36</drawSize>
+							<path>Pawns/Gehenna/Mutsuki/Halo/halo</path>
+							<drawSize>0.45</drawSize>
 							<bodyPart>halo</bodyPart>
 							<drawnInBed>false</drawnInBed>
 							<drawnDesiccated>false</drawnDesiccated>
@@ -134,40 +137,40 @@
 
 		</alienRace>
 		<race>
-			<nameGenerator>NamerShiroko</nameGenerator>
+			<nameGenerator>NamerMutsuki</nameGenerator>
 		</race>
 
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<defName>BA_SwimShiroko</defName>
-		<label>白子(泳装)</label>
-		<race>Abydos_SwimShiroko</race>
+	<RimArchive.Defs.StudentDef ParentName="BasePlayerPawnKind">
+		<defName>BA_Mutsuki</defName>
+		<label>睦月</label>
+		<race>BA_Student</race>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
 		<backstoryFiltersOverride>
 			<li>
 				<categories>
 					<li>RimArchive_Adult</li>
-					<li>RimArchive_ACC</li>
+					<li>RimArchive_PS68</li>
 				</categories>
 			</li>
 		</backstoryFiltersOverride>
 		<weaponMoney>9999~9999</weaponMoney>
-		<minGenerationAge>16</minGenerationAge>
-		<maxGenerationAge>17</maxGenerationAge>
+		<minGenerationAge>15</minGenerationAge>
+		<maxGenerationAge>16</maxGenerationAge>
 		<destroyGearOnDrop>true</destroyGearOnDrop>
 		<canStrip>false</canStrip>
 		<weaponTags>
-			<li>BAW_Shiroko</li>
+			<li>BAW_Mutsuki</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="RimArchive.SchoolNameModExtension">
-				<School>Abydos</School>
+			<li Class="RimArchive.RA_StudentModExtension">
+				<School>Gehenna</School>
 			</li>
 		</modExtensions>
-	</PawnKindDef>
+	</RimArchive.Defs.StudentDef>
 
 
 </Defs>

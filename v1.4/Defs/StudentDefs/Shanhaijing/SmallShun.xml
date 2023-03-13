@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<AK_Dll.OperatorDef>
-		<name>Azusa</name>
-		<surname>Shirasu</surname>
-		<nickname>Azusa</nickname>
-		<childHood>Club_MWC</childHood>
+		<name>Shun</name>
+		<surname>Saiba</surname>
+		<nickname>Shun</nickname>
+		<childHood>Club_PBG</childHood>
 		<adultHood/>
 		<abilities/>
 		<age>16</age>
@@ -13,7 +13,7 @@
 		<voicePackDef/>
 		<relations/>
 		<traits/>
-		<weapon>BAW_Azusa</weapon>
+		<weapon>BAW_Shun</weapon>
 		<apparels/>
 		<items/>
 		<bodyTypeDef>Female</bodyTypeDef>
@@ -21,15 +21,15 @@
 		<hairColor/>
 		<hair/>
 		<beard/>
-		<operatorType>RA_OperatorClass_Trinity</operatorType>
-		<stand>Portraits/Portrait_Azusa</stand>
+		<operatorType>RA_OperatorClass_Shanhaijing</operatorType>
+		<stand>Portraits/Portrait_Shun_Youjyo</stand>
 		<standOffset/>
 		<standRatio/>
-		<headPortrait>Icons/Student_Portrait_Azusa_Collection</headPortrait>
+		<headPortrait>Icons/Student_Portrait_Shun_Youjyo_Collection</headPortrait>
 		<headPortraitOffset/>
-		<defName>RA_Azusa</defName>
-		<label>Azusa</label>
-		<description>Azusa</description>
+		<defName>RA_Shun_Youjyo</defName>
+		<label>Shun</label>
+		<description>Shun</description>
 		<descriptionHyperlinks/>
 		<ignoreConfigErrors>false</ignoreConfigErrors>
 		<skills>
@@ -96,65 +96,61 @@
 		</skills>
 	</AK_Dll.OperatorDef>
 	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
-		<defName>Trinity_Azusa</defName>
-		<label>梓</label>
-		<description>三一综合学院所属，补习授课部的冰之魔女。\n\n本来是从某所学校退学的身份，但因为某些原因转学至三一综合学院，再度拾起了学业。\n\n虽然性格上有些孤僻，怕给别人添麻烦而主动拉开距离，但因此被补习授课部的其他学生们担心着。\n\n"一切都是枉然，人生一点意义都没有。 但是……我想相信你说的话。"</description>
+		<defName>Shanhaijing_SmallShun</defName>
+		<label>瞬</label>
+		<description>山海经高级中学所属，喝下纱绫的药，身体变回到了小时候的样子，训育支援部“梅花园”的教官。\n\n因为只有身体变小了，所以也不能像以前那样照顾孩子们。\n\n似乎被幼小的身体牵引着，她的精神本能地向往着教育。</description>
 		<alienRace>
 			<graphicPaths>
-				<body>Pawns/Trinity/Azusa/Body/Azusa</body>
-				<head>Pawns/Trinity/Azusa/Head/</head>
+				<body>Pawns/Shanhaijing/SmallShun/Body/SmallShun</body>
+				<head>Pawns/Shanhaijing/SmallShun/Head/</head>
 				<skinColor>(0,0,0,1)</skinColor>
 			</graphicPaths>
-			<generalSettings>
-				<alienPartGenerator>
-					<bodyTypes Inherit="False">
-						<li>Female</li>
-						<li>Thin</li>
-					</bodyTypes>
-				</alienPartGenerator>
-			</generalSettings>
-			
 
 
 			<!--光环-->
-			
+			<generalSettings>
+				<alienPartGenerator>
+					<customDrawSize>(0.83, 0.83)</customDrawSize>
+				</alienPartGenerator>
+			</generalSettings>
+
 
 		</alienRace>
 		<race>
-			<nameGenerator>NamerAzusa</nameGenerator>
+			<nameGenerator>NamerYoujyoShun</nameGenerator>
 		</race>
 
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<defName>BA_Azusa</defName>
-		<label>梓</label>
-		<race>Trinity_Azusa</race>
+	<RimArchive.Defs.StudentDef ParentName="BasePlayerPawnKind">
+		<defName>BA_SmallShun</defName>
+		<label>瞬</label>
+		<race>BA_Student</race>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
 		<backstoryFiltersOverride>
 			<li>
 				<categories>
 					<li>RimArchive_Adult</li>
-					<li>RimArchive_MWC</li>
+					<li>RimArchive_PBG</li>
 				</categories>
 			</li>
 		</backstoryFiltersOverride>
 		<weaponMoney>9999~9999</weaponMoney>
 		<minGenerationAge>15</minGenerationAge>
 		<maxGenerationAge>16</maxGenerationAge>
-		<destroyGearOnDrop>false</destroyGearOnDrop>
-		<canStrip>true</canStrip>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<canStrip>false</canStrip>
 		<weaponTags>
-			<li>BAW_Azusa</li>
+			<li>BAW_SmallShun</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="RimArchive.SchoolNameModExtension">
-				<School>Trinity</School>
+			<li Class="RimArchive.RA_StudentModExtension">
+				<School>Shanhaijing</School>
 			</li>
 		</modExtensions>
-	</PawnKindDef>
+	</RimArchive.Defs.StudentDef>
 
 
 </Defs>

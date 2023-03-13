@@ -1,37 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<AK_Dll.OperatorDef>
-		<name>Saki</name>
-		<surname>Sorai</surname>
-		<nickname>Saki</nickname>
-		<childHood>Club_RABBIT</childHood>
+		<name>Kayoko</name>
+		<surname>Onikata</surname>
+		<nickname>Kayoko</nickname>
+		<childHood>Club_PS68</childHood>
 		<adultHood/>
 		<abilities/>
-		<age>15</age>
+		<age>18</age>
 		<isMale>false</isMale>
 		<hediffInate/>
 		<voicePackDef/>
 		<relations/>
 		<traits/>
-		<weapon>BAW_Saki</weapon>
-		<apparels>
-			
-		</apparels>
+		<weapon>BAW_Kayoko</weapon>
+		<apparels/>
 		<items/>
 		<bodyTypeDef>Female</bodyTypeDef>
 		<skinColor/>
 		<hairColor/>
 		<hair/>
 		<beard/>
-		<operatorType>RA_OperatorClass_SRT</operatorType>
-		<stand>Portraits/Portrait_Saki</stand>
+		<operatorType>RA_OperatorClass_Gehenna</operatorType>
+		<stand>Portraits/Portrait_Kayoko</stand>
 		<standOffset/>
 		<standRatio/>
-		<headPortrait>Icons/Student_Portrait_Saki_Collection</headPortrait>
+		<headPortrait>Icons/Student_Portrait_Kayoko_Collection</headPortrait>
 		<headPortraitOffset/>
-		<defName>RA_Saki</defName>
-		<label>Saki</label>
-		<description>Saki</description>
+		<defName>RA_Kayoko</defName>
+		<label>Kayoko</label>
+		<description>Kayoko</description>
 		<descriptionHyperlinks/>
 		<ignoreConfigErrors>false</ignoreConfigErrors>
 		<skills>
@@ -98,13 +96,13 @@
 		</skills>
 	</AK_Dll.OperatorDef>
 	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
-		<defName>SRT_Saki</defName>
-		<label>咲</label>
-		<description>SRT特殊学院RABBIT的核心人物。\n\n虽然她进入SRT特殊学院是为了寻求严格的生活，但学院却突然关闭。目前在公园，和小队的其他成员一起生活着。\n\n总是遵循着SRT战术规范，总是强调按照原则行事。她的爱好是采摘野菜和收集废品。这在当前资源趋于稀缺的公园生活中起到了很大的用途。\n\n呼号是“RABBIT2”。</description>
+		<defName>Gehenna_Kayoko</defName>
+		<label>佳世子</label>
+		<description>格黑娜学园所属，便利屋68的课长。\n\n与其它成员不同的是，并未心怀恶意，仅仅天生长相可怖，冷若冰霜，而经常被误解成不良少女。\n\n对于这样的误解，本人却是保持沉默，反而让人感到更加害怕，形成恶性循环。</description>
 		<alienRace>
 			<graphicPaths>
-				<body>Pawns/SRT/Saki/Body/Saki</body>
-				<head>Pawns/SRT/Saki/Head/</head>
+				<body>Pawns/Gehenna/Kayoko/Body/Kayoko</body>
+				<head>Pawns/Gehenna/Kayoko/Head/</head>
 				<skinColor>(0,0,0,1)</skinColor>
 			</graphicPaths>
 
@@ -112,50 +110,29 @@
 			<!--光环-->
 			<generalSettings>
 				<alienPartGenerator>
-					<customDrawSize>(1.04, 1.04)</customDrawSize>
-					<bodyAddons>
-						<li>
-							<path>Pawns/SRT/Saki/Halo/halo</path>
-							<drawSize>0.39</drawSize>
-							<bodyPart>halo</bodyPart>
-							<drawnInBed>false</drawnInBed>
-							<drawnDesiccated>false</drawnDesiccated>
-							<offsets>
-								<north>
-									<offset>(-0.01,0.54)</offset>
-								</north>
-								<south>
-									<offset>(-0.01,0.54)</offset>
-								</south>
-								<east>
-									<offset>(0.09,0.48)</offset>
-								</east>
-
-							</offsets>
-						</li>
-					</bodyAddons>
+					<customDrawSize>(1.06, 1.06)</customDrawSize>
 				</alienPartGenerator>
 			</generalSettings>
 
 		</alienRace>
 		<race>
-			<nameGenerator>NamerSaki</nameGenerator>
+			<nameGenerator>NamerKayoko</nameGenerator>
 		</race>
 
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<defName>BA_Saki</defName>
-		<label>咲</label>
-		<race>SRT_Saki</race>
+	<RimArchive.Defs.StudentDef ParentName="BasePlayerPawnKind">
+		<defName>BA_Kayoko</defName>
+		<label>佳世子</label>
+		<race>BA_Student</race>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
 		<backstoryFiltersOverride>
 			<li>
 				<categories>
 					<li>RimArchive_Adult</li>
-					<li>RimArchive_RABBIT</li>
+					<li>RimArchive_PS68</li>
 				</categories>
 			</li>
 		</backstoryFiltersOverride>
@@ -165,14 +142,14 @@
 		<destroyGearOnDrop>true</destroyGearOnDrop>
 		<canStrip>false</canStrip>
 		<weaponTags>
-			<li>BAW_Saki</li>
+			<li>BAW_Kayoko</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="RimArchive.SchoolNameModExtension">
-				<School>SRT</School>
+			<li Class="RimArchive.RA_StudentModExtension">
+				<School>Gehenna</School>
 			</li>
 		</modExtensions>
-	</PawnKindDef>
+	</RimArchive.Defs.StudentDef>
 
 
 </Defs>

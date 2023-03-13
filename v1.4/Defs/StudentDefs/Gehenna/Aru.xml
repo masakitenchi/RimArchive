@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<AK_Dll.OperatorDef>
-		<name>Kayoko</name>
-		<surname>Onikata</surname>
-		<nickname>Kayoko</nickname>
+		<name>Aru</name>
+		<surname>Rikuhachima</surname>
+		<nickname>Aru</nickname>
 		<childHood>Club_PS68</childHood>
 		<adultHood/>
 		<abilities/>
-		<age>18</age>
+		<age>16</age>
 		<isMale>false</isMale>
 		<hediffInate/>
 		<voicePackDef/>
 		<relations/>
 		<traits/>
-		<weapon>BAW_Kayoko</weapon>
+		<weapon>BAW_Aru</weapon>
 		<apparels/>
 		<items/>
 		<bodyTypeDef>Female</bodyTypeDef>
@@ -22,14 +22,14 @@
 		<hair/>
 		<beard/>
 		<operatorType>RA_OperatorClass_Gehenna</operatorType>
-		<stand>Portraits/Portrait_Kayoko</stand>
+		<stand>Portraits/Portrait_Aru</stand>
 		<standOffset/>
 		<standRatio/>
-		<headPortrait>Icons/Student_Portrait_Kayoko_Collection</headPortrait>
+		<headPortrait>Icons/Student_Portrait_Aru_Collection</headPortrait>
 		<headPortraitOffset/>
-		<defName>RA_Kayoko</defName>
-		<label>Kayoko</label>
-		<description>Kayoko</description>
+		<defName>RA_Aru</defName>
+		<label>Aru</label>
+		<description>Aru</description>
 		<descriptionHyperlinks/>
 		<ignoreConfigErrors>false</ignoreConfigErrors>
 		<skills>
@@ -95,37 +95,59 @@
 			</li>
 		</skills>
 	</AK_Dll.OperatorDef>
+
 	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
-		<defName>Gehenna_Kayoko</defName>
-		<label>佳世子</label>
-		<description>格黑娜学园所属，便利屋68的课长。\n\n与其它成员不同的是，并未心怀恶意，仅仅天生长相可怖，冷若冰霜，而经常被误解成不良少女。\n\n对于这样的误解，本人却是保持沉默，反而让人感到更加害怕，形成恶性循环。</description>
+		<defName>Gehenna_Aru</defName>
+		<label>阿露</label>
+		<description>格黑娜学园所属，自称便利屋68社长。\n\n作为格黑娜学园的社团活动，阿露喜欢以便利屋68为据点，从事一些不法行当。\n\n阿露虽然十分向往成为一位帅气的黑帮分子，但因为经常做事错漏百出，所以总是很快就暴露无遗</description>
 		<alienRace>
 			<graphicPaths>
-				<body>Pawns/Gehenna/Kayoko/Body/Kayoko</body>
-				<head>Pawns/Gehenna/Kayoko/Head/</head>
+				<body>Pawns/Gehenna/Aru/Body/Aru</body>
+				<head>Pawns/Gehenna/Aru/Head/</head>
 				<skinColor>(0,0,0,1)</skinColor>
 			</graphicPaths>
-
 
 			<!--光环-->
 			<generalSettings>
 				<alienPartGenerator>
-					<customDrawSize>(1.06, 1.06)</customDrawSize>
+							<customDrawSize>(1.09, 1.09)</customDrawSize>
+					<bodyAddons>
+						<li>
+							<path>Pawns/Gehenna/Aru/Halo/halo</path>
+							<drawSize>0.75</drawSize>
+							<bodyPart>halo</bodyPart>
+							<drawnInBed>false</drawnInBed>
+							<drawnDesiccated>false</drawnDesiccated>
+							<offsets>
+								<north>
+									<offset>(0.06,0.45)</offset>
+								</north>
+								<south>
+									<offset>(-0.06,0.45)</offset>
+								</south>
+								<east>
+									<offset>(0.12,0.48)</offset>
+								</east>
+
+							</offsets>
+						</li>
+					</bodyAddons>
 				</alienPartGenerator>
 			</generalSettings>
 
+
 		</alienRace>
 		<race>
-			<nameGenerator>NamerKayoko</nameGenerator>
+			<nameGenerator>NamerAru</nameGenerator>
 		</race>
 
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<defName>BA_Kayoko</defName>
-		<label>佳世子</label>
-		<race>Gehenna_Kayoko</race>
+	<RimArchive.Defs.StudentDef ParentName="BasePlayerPawnKind">
+		<defName>BA_Aru</defName>
+		<label>阿露</label>
+		<race>BA_Student</race>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
 		<backstoryFiltersOverride>
@@ -137,19 +159,19 @@
 			</li>
 		</backstoryFiltersOverride>
 		<weaponMoney>9999~9999</weaponMoney>
-		<minGenerationAge>15</minGenerationAge>
-		<maxGenerationAge>16</maxGenerationAge>
+		<minGenerationAge>16</minGenerationAge>
+		<maxGenerationAge>17</maxGenerationAge>
 		<destroyGearOnDrop>true</destroyGearOnDrop>
 		<canStrip>false</canStrip>
 		<weaponTags>
-			<li>BAW_Kayoko</li>
+			<li>BAW_Aru</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="RimArchive.SchoolNameModExtension">
+			<li Class="RimArchive.RA_StudentModExtension">
 				<School>Gehenna</School>
 			</li>
 		</modExtensions>
-	</PawnKindDef>
+	</RimArchive.Defs.StudentDef>
 
 
 </Defs>

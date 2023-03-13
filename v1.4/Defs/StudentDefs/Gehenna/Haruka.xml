@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<AK_Dll.OperatorDef>
-		<name>Midori</name>
-		<surname>Saiba</surname>
-		<nickname>Midori</nickname>
-		<childHood>Club_GDD</childHood>
+	<AK_Dll.OperatorDef ParentName="RA_OperatorDefBase">
+		<name>Haruka</name>
+		<surname>Igusa</surname>
+		<nickname>Haruka</nickname>
+		<childHood>Club_PS68</childHood>
 		<adultHood/>
 		<abilities/>
 		<age>15</age>
@@ -13,23 +13,26 @@
 		<voicePackDef/>
 		<relations/>
 		<traits/>
-		<weapon>BAW_Midori</weapon>
-		<apparels/>
+		<weapon>BAW_Haruka</weapon>
+		<apparels>
+			<li>BAA_Body_Haruka</li>
+		</apparels>
 		<items/>
-		<bodyTypeDef>Female</bodyTypeDef>
+		<bodyTypeDef>Thin</bodyTypeDef>
+		<headTypeDef>BA_HeadTypeDef_Haruka</headTypeDef>
 		<skinColor/>
 		<hairColor/>
-		<hair/>
+		<hair>BA_Hair_Haruka</hair>
 		<beard/>
-		<operatorType>RA_OperatorClass_Millennium</operatorType>
-		<stand>Portraits/Portrait_Midori</stand>
+		<operatorType>RA_OperatorClass_Gehenna</operatorType>
+		<stand>Portraits/Portrait_Haruka</stand>
 		<standOffset/>
 		<standRatio/>
-		<headPortrait>Icons/Student_Portrait_Midori_Collection</headPortrait>
+		<headPortrait>Icons/Student_Portrait_Haruka_Collection</headPortrait>
 		<headPortraitOffset/>
-		<defName>RA_Midori</defName>
-		<label>Midori</label>
-		<description>Midori</description>
+		<defName>RA_Haruka</defName>
+		<label>Haruka</label>
+		<description>Haruka</description>
 		<descriptionHyperlinks/>
 		<ignoreConfigErrors>false</ignoreConfigErrors>
 		<skills>
@@ -94,63 +97,73 @@
 				<fireLevel>0</fireLevel>
 			</li>
 		</skills>
+		<!--<modExtensions>
+			<li Class="AK_DLL.Def.RendererOffsetExtension">
+				<xOffset>20.0</xOffset>
+				<yOffset>10.0</yOffset>
+			</li>
+		</modExtensions>-->
 	</AK_Dll.OperatorDef>
+	
 	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
-		<defName>Millennium_Midori</defName>
-		<label>绿</label>
-		<description>千年科学学园游戏开发部的脚本作者。\n\n和双胞胎姐姐桃井一同在游戏开发部开发真正的游戏，虽然性格腼腆的她与开朗的姐姐相性不好，但对游戏热情的意气相投使她们现在的关系变得非常好。</description>
+		<defName>Gehenna_Haruka</defName>
+		<label>春香</label>
+		<description>所属格赫纳学园的便利屋68的正式社员。\n\n因为阴沉懦弱的性格，从小就被人欺负，最近因为阿露的帮忙终于不再受人欺负了。此后作为便利屋68老幺活动着。\n\n虽然因为腼腆而缺乏自信，但是出的主意可能是便利屋中最恐怖的？</description>
 		<alienRace>
 			<graphicPaths>
-				<body>Pawns/Millennium/Midori/Body/Midori</body>
-				<head>Pawns/Millennium/Midori/Head/</head>
+				<body>Pawns/Gehenna/Haruka/Body/Haruka</body>
+				<head>Pawns/Gehenna/Haruka/Head/Haruka</head>
 				<skinColor>(0,0,0,1)</skinColor>
 			</graphicPaths>
 
-
-			<!--光环-->
+			
 			<generalSettings>
 				<alienPartGenerator>
-					<customDrawSize>(0.94, 0.94)</customDrawSize>
+					<customDrawSize>(1.03, 1.03)</customDrawSize>
 				</alienPartGenerator>
 			</generalSettings>
-			
+
 
 		</alienRace>
 		<race>
-			<nameGenerator>NamerMidori</nameGenerator>
+			<nameGenerator>NamerHaruka</nameGenerator>
 		</race>
+		<statBases>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+		</statBases>
 
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<defName>BA_Midori</defName>
-		<label>绿</label>
-		<race>Millennium_Midori</race>
+	<RimArchive.Defs.StudentDef ParentName="BasePlayerPawnKind">
+		<defName>BA_Haruka</defName>
+		<label>春香</label>
+		<race>BA_Student</race>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
 		<backstoryFiltersOverride>
 			<li>
 				<categories>
 					<li>RimArchive_Adult</li>
-					<li>RimArchive_GDD</li>
+					<li>RimArchive_PS68</li>
 				</categories>
 			</li>
 		</backstoryFiltersOverride>
 		<weaponMoney>9999~9999</weaponMoney>
-		<minGenerationAge>15</minGenerationAge>
-		<maxGenerationAge>16</maxGenerationAge>
+		<minGenerationAge>16</minGenerationAge>
+		<maxGenerationAge>17</maxGenerationAge>
 		<destroyGearOnDrop>true</destroyGearOnDrop>
 		<canStrip>false</canStrip>
 		<weaponTags>
-			<li>BAW_Midori</li>
+			<li>BAW_Haruka</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="RimArchive.SchoolNameModExtension">
-				<School>Millennium</School>
+			<li Class="RimArchive.RA_StudentModExtension">
+				<School>Gehenna</School>
 			</li>
 		</modExtensions>
-	</PawnKindDef>
+	</RimArchive.Defs.StudentDef>
 
 
 </Defs>

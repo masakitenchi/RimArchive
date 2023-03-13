@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<AK_Dll.OperatorDef>
-		<name>Mutsuki</name>
-		<surname>Asagi</surname>
-		<nickname>Mutsuki</nickname>
-		<childHood>Club_PS68</childHood>
+		<name>Midori</name>
+		<surname>Saiba</surname>
+		<nickname>Midori</nickname>
+		<childHood>Club_GDD</childHood>
 		<adultHood/>
 		<abilities/>
-		<age>16</age>
+		<age>15</age>
 		<isMale>false</isMale>
 		<hediffInate/>
 		<voicePackDef/>
 		<relations/>
 		<traits/>
-		<weapon>BAW_Mutsuki</weapon>
+		<weapon>BAW_Midori</weapon>
 		<apparels/>
 		<items/>
 		<bodyTypeDef>Female</bodyTypeDef>
@@ -21,15 +21,15 @@
 		<hairColor/>
 		<hair/>
 		<beard/>
-		<operatorType>RA_OperatorClass_Gehenna</operatorType>
-		<stand>Portraits/Portrait_Mutsuki</stand>
+		<operatorType>RA_OperatorClass_Millennium</operatorType>
+		<stand>Portraits/Portrait_Midori</stand>
 		<standOffset/>
 		<standRatio/>
-		<headPortrait>Icons/Student_Portrait_Mutsuki_Collection</headPortrait>
+		<headPortrait>Icons/Student_Portrait_Midori_Collection</headPortrait>
 		<headPortraitOffset/>
-		<defName>RA_Mutsuki</defName>
-		<label>Mutsuki</label>
-		<description>Mutsuki</description>
+		<defName>RA_Midori</defName>
+		<label>Midori</label>
+		<description>Midori</description>
 		<descriptionHyperlinks/>
 		<ignoreConfigErrors>false</ignoreConfigErrors>
 		<skills>
@@ -96,13 +96,13 @@
 		</skills>
 	</AK_Dll.OperatorDef>
 	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
-		<defName>Gehenna_Mutsuki</defName>
-		<label>睦月</label>
-		<description>格黑娜学园所属的便利屋68里的行动派。\n\n与被罪恶感困扰的阿露不同的是，她是能毫不犹豫的作恶并享受其中的小恶魔般的少女。\n\n因为是阿露的青梅竹马，所以比谁都理解阿露，但一般都不会特别做些什么。</description>
+		<defName>Millennium_Midori</defName>
+		<label>绿</label>
+		<description>千年科学学园游戏开发部的脚本作者。\n\n和双胞胎姐姐桃井一同在游戏开发部开发真正的游戏，虽然性格腼腆的她与开朗的姐姐相性不好，但对游戏热情的意气相投使她们现在的关系变得非常好。</description>
 		<alienRace>
 			<graphicPaths>
-				<body>Pawns/Gehenna/Mutsuki/Body/Mutsuki</body>
-				<head>Pawns/Gehenna/Mutsuki/Head/</head>
+				<body>Pawns/Millennium/Midori/Body/Midori</body>
+				<head>Pawns/Millennium/Midori/Head/</head>
 				<skinColor>(0,0,0,1)</skinColor>
 			</graphicPaths>
 
@@ -110,50 +110,30 @@
 			<!--光环-->
 			<generalSettings>
 				<alienPartGenerator>
-					<customDrawSize>(1, 1)</customDrawSize>
-					<bodyAddons>
-						<li>
-							<path>Pawns/Gehenna/Mutsuki/Halo/halo</path>
-							<drawSize>0.45</drawSize>
-							<bodyPart>halo</bodyPart>
-							<drawnInBed>false</drawnInBed>
-							<drawnDesiccated>false</drawnDesiccated>
-							<offsets>
-								<north>
-									<offset>(-0.01,0.54)</offset>
-								</north>
-								<south>
-									<offset>(-0.01,0.54)</offset>
-								</south>
-								<east>
-									<offset>(0.09,0.48)</offset>
-								</east>
-
-							</offsets>
-						</li>
-					</bodyAddons>
+					<customDrawSize>(0.94, 0.94)</customDrawSize>
 				</alienPartGenerator>
 			</generalSettings>
+			
 
 		</alienRace>
 		<race>
-			<nameGenerator>NamerMutsuki</nameGenerator>
+			<nameGenerator>NamerMidori</nameGenerator>
 		</race>
 
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<defName>BA_Mutsuki</defName>
-		<label>睦月</label>
-		<race>Gehenna_Mutsuki</race>
+	<RimArchive.Defs.StudentDef ParentName="BasePlayerPawnKind">
+		<defName>BA_Midori</defName>
+		<label>绿</label>
+		<race>BA_Student</race>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
 		<backstoryFiltersOverride>
 			<li>
 				<categories>
 					<li>RimArchive_Adult</li>
-					<li>RimArchive_PS68</li>
+					<li>RimArchive_GDD</li>
 				</categories>
 			</li>
 		</backstoryFiltersOverride>
@@ -163,14 +143,14 @@
 		<destroyGearOnDrop>true</destroyGearOnDrop>
 		<canStrip>false</canStrip>
 		<weaponTags>
-			<li>BAW_Mutsuki</li>
+			<li>BAW_Midori</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="RimArchive.SchoolNameModExtension">
-				<School>Gehenna</School>
+			<li Class="RimArchive.RA_StudentModExtension">
+				<School>Millennium</School>
 			</li>
 		</modExtensions>
-	</PawnKindDef>
+	</RimArchive.Defs.StudentDef>
 
 
 </Defs>

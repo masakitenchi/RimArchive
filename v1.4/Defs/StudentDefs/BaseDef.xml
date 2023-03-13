@@ -15,7 +15,7 @@
 		</hairColor>
     </AK.DLL_OperatorDef>
 
-	<PawnKindDef Name = "RA_BasePawn" ParentName = "BasePlayerPawnKind" Abstract = "True">
+	<RimArchive.Defs.StudentDef Name = "RA_BasePawn" ParentName = "BasePlayerPawnKind" Abstract = "True">
 		<defName>KivotosStudent</defName>
-	</PawnKindDef>
+	</RimArchive.Defs.StudentDef>
 </Defs>

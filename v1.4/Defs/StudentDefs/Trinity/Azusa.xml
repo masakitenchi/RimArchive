@@ -1,38 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<AK_Dll.OperatorDef ParentName="RA_OperatorDefBase">
-		<name>Haruka</name>
-		<surname>Igusa</surname>
-		<nickname>Haruka</nickname>
-		<childHood>Club_PS68</childHood>
+	<AK_Dll.OperatorDef>
+		<name>Azusa</name>
+		<surname>Shirasu</surname>
+		<nickname>Azusa</nickname>
+		<childHood>Club_MWC</childHood>
 		<adultHood/>
 		<abilities/>
-		<age>15</age>
+		<age>16</age>
 		<isMale>false</isMale>
 		<hediffInate/>
 		<voicePackDef/>
 		<relations/>
 		<traits/>
-		<weapon>BAW_Haruka</weapon>
-		<apparels>
-			<li>BAA_Body_Haruka</li>
-		</apparels>
+		<weapon>BAW_Azusa</weapon>
+		<apparels/>
 		<items/>
-		<bodyTypeDef>Thin</bodyTypeDef>
-		<headTypeDef>BA_HeadTypeDef_Haruka</headTypeDef>
+		<bodyTypeDef>Female</bodyTypeDef>
 		<skinColor/>
 		<hairColor/>
-		<hair>BA_Hair_Haruka</hair>
+		<hair/>
 		<beard/>
-		<operatorType>RA_OperatorClass_Gehenna</operatorType>
-		<stand>Portraits/Portrait_Haruka</stand>
+		<operatorType>RA_OperatorClass_Trinity</operatorType>
+		<stand>Portraits/Portrait_Azusa</stand>
 		<standOffset/>
 		<standRatio/>
-		<headPortrait>Icons/Student_Portrait_Haruka_Collection</headPortrait>
+		<headPortrait>Icons/Student_Portrait_Azusa_Collection</headPortrait>
 		<headPortraitOffset/>
-		<defName>RA_Haruka</defName>
-		<label>Haruka</label>
-		<description>Haruka</description>
+		<defName>RA_Azusa</defName>
+		<label>Azusa</label>
+		<description>Azusa</description>
 		<descriptionHyperlinks/>
 		<ignoreConfigErrors>false</ignoreConfigErrors>
 		<skills>
@@ -97,73 +94,67 @@
 				<fireLevel>0</fireLevel>
 			</li>
 		</skills>
-		<!--<modExtensions>
-			<li Class="AK_DLL.Def.RendererOffsetExtension">
-				<xOffset>20.0</xOffset>
-				<yOffset>10.0</yOffset>
-			</li>
-		</modExtensions>-->
 	</AK_Dll.OperatorDef>
-	
 	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
-		<defName>Gehenna_Haruka</defName>
-		<label>春香</label>
-		<description>所属格赫纳学园的便利屋68的正式社员。\n\n因为阴沉懦弱的性格，从小就被人欺负，最近因为阿露的帮忙终于不再受人欺负了。此后作为便利屋68老幺活动着。\n\n虽然因为腼腆而缺乏自信，但是出的主意可能是便利屋中最恐怖的？</description>
+		<defName>Trinity_Azusa</defName>
+		<label>梓</label>
+		<description>三一综合学院所属，补习授课部的冰之魔女。\n\n本来是从某所学校退学的身份，但因为某些原因转学至三一综合学院，再度拾起了学业。\n\n虽然性格上有些孤僻，怕给别人添麻烦而主动拉开距离，但因此被补习授课部的其他学生们担心着。\n\n"一切都是枉然，人生一点意义都没有。 但是……我想相信你说的话。"</description>
 		<alienRace>
 			<graphicPaths>
-				<body>Pawns/Gehenna/Haruka/Body/Haruka</body>
-				<head>Pawns/Gehenna/Haruka/Head/Haruka</head>
+				<body>Pawns/Trinity/Azusa/Body/Azusa</body>
+				<head>Pawns/Trinity/Azusa/Head/</head>
 				<skinColor>(0,0,0,1)</skinColor>
 			</graphicPaths>
-
-			
 			<generalSettings>
 				<alienPartGenerator>
-					<customDrawSize>(1.03, 1.03)</customDrawSize>
+					<bodyTypes Inherit="False">
+						<li>Female</li>
+						<li>Thin</li>
+					</bodyTypes>
 				</alienPartGenerator>
 			</generalSettings>
+			
 
+
+			<!--光环-->
+			
 
 		</alienRace>
 		<race>
-			<nameGenerator>NamerHaruka</nameGenerator>
+			<nameGenerator>NamerAzusa</nameGenerator>
 		</race>
-		<statBases>
-			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
-		</statBases>
 
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<defName>BA_Haruka</defName>
-		<label>春香</label>
-		<race>Gehenna_Haruka</race>
+	<RimArchive.Defs.StudentDef ParentName="BasePlayerPawnKind">
+		<defName>BA_Azusa</defName>
+		<label>梓</label>
+		<race>BA_Student</race>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
 		<backstoryFiltersOverride>
 			<li>
 				<categories>
 					<li>RimArchive_Adult</li>
-					<li>RimArchive_PS68</li>
+					<li>RimArchive_MWC</li>
 				</categories>
 			</li>
 		</backstoryFiltersOverride>
 		<weaponMoney>9999~9999</weaponMoney>
-		<minGenerationAge>16</minGenerationAge>
-		<maxGenerationAge>17</maxGenerationAge>
-		<destroyGearOnDrop>true</destroyGearOnDrop>
-		<canStrip>false</canStrip>
+		<minGenerationAge>15</minGenerationAge>
+		<maxGenerationAge>16</maxGenerationAge>
+		<destroyGearOnDrop>false</destroyGearOnDrop>
+		<canStrip>true</canStrip>
 		<weaponTags>
-			<li>BAW_Haruka</li>
+			<li>BAW_Azusa</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="RimArchive.SchoolNameModExtension">
-				<School>Gehenna</School>
+			<li Class="RimArchive.RA_StudentModExtension">
+				<School>Trinity</School>
 			</li>
 		</modExtensions>
-	</PawnKindDef>
+	</RimArchive.Defs.StudentDef>
 
 
 </Defs>

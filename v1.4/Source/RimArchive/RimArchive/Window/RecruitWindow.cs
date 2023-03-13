@@ -68,7 +68,7 @@ namespace RimArchive.Window
             studentsRect.x += _xMargin;
             studentsRect.y += _yMargin;
             DrawStudentList(studentsRect, cachedAllStudentsBySchool[_currentSchool]);
-
+            
         }
         static void DrawDialog(Rect outRect)
         {
@@ -131,17 +131,19 @@ namespace RimArchive.Window
                     //TooltipHandler.TipRegion(rect, students[i].description);
                     BeginGroup(rect);
                     Rect icon = new Rect(0f, 0f, _iconSize.x, _iconSize.y);
-                    DrawTextureFitted(icon, BaseContent.GreyTex, 1f);
+                    DrawTextureFitted(icon, students[i].GetModExtension<RA_StudentModExtension>().Icon, 1f);
                     DrawHighlightIfMouseover(icon);
+                    //Label Tex
                     icon.y += icon.height;
                     GUI.DrawTexture(icon, BaseContent.BlackTex);
 
                     //Log.Message($"x:{rect.x}, y:{rect.y}, width:{rect.width}, height:{rect.height}");
                     rect.x += _iconSize.x + _xMargin;
-                    if (rect.xMax  > viewRect.width)
-                        rect.x = viewRect.x;
+                    /*if (rect.xMax  > viewRect.width)
+                        rect.x = viewRect.x;*/
                     EndGroup();
                 }
+                rect.x = viewRect.x;
                 rect.y += _iconSize.y + _yMargin + _lblSize.y;
             }
             EndScrollView();
