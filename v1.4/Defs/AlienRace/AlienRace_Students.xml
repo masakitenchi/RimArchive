@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-    <AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+    <!-- <AlienRace.ThingDef_AlienRace ParentName="HumanRace">
         <defName>Students</defName>
         <label>Student</label>
         <description>Students come from Kivotos, an academy city.</description>
         <alienRace>
             <generalSettings>
+                <corpseCategory>CorpsesHumanlike</corpseCategory>
                 <maleGenderProbability>0</maleGenderProbability>
                 <growthAges>
                     <li>7</li>
@@ -56,10 +57,7 @@
                         </li>
                     </colorChannels>
                     <getsGreyAt>50</getsGreyAt>
-                    <corpseCategory>CorpsesHumanlike</corpseCategory>
-                    <!--没准需要一个通用的光环？-->
-                    <bodyAddons>
-                    </bodyAddons>
+                    <bodyAddons/>
                 </alienPartGenerator>
                 <reproduction>
                     <femaleFertilityAgeFactor>
@@ -76,9 +74,7 @@
                 </reproduction>
             </generalSettings>
             <graphicPaths/>
-            <styleSettings>
-                <genderRespected>false</genderRespected>
-            </styleSettings>
+            <styleSettings/>
             <thoughtSettings/>
             <relationSettings>
                 <relationChanceModifierLover>0</relationChanceModifierLover>
@@ -104,5 +100,5 @@
             </raceRestriction>
             <compatibility></compatibility>
         </alienRace>
-    </AlienRace.ThingDef_AlienRace>
+    </AlienRace.ThingDef_AlienRace> -->
 </Defs>

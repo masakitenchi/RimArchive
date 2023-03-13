@@ -4,6 +4,7 @@ using System.Linq;
 using System.Collections.Generic;
 using static RimWorld.TradeUtility;
 using static RimArchive.RimArchive;
+using RimArchive.Window;
 
 namespace RimArchive
 {
@@ -17,10 +18,11 @@ namespace RimArchive
             DefOfHelper.EnsureInitializedInCtor(typeof(RAFactionDefOf));
         }
     }
+    [HotSwappable]
     public class RAFaction
     {
-        private static readonly int RandomGatchaCost = 1000;
-        private static readonly int ChooseSchoolGatchaCost = 1500;
+        //private static readonly int RandomGatchaCost = 1000;
+        //private static readonly int ChooseSchoolGatchaCost = 1500;
         private readonly Pawn requestor;
         private readonly Faction faction;
         private readonly DiaNode root;
@@ -49,7 +51,12 @@ namespace RimArchive
             DiaNode node = new DiaNode("RAExchangeRoot".Translate());
             node.options.Add(new DiaOption("RAStudentRecruitMenu".Translate())
             {
-                link = StudentRecruitment(node)
+                resolveTree = true,
+                action = () =>
+                {
+                    Find.TickManager.Pause();
+                    Find.WindowStack.Add(new RecruitWindow(node));
+                }
             });
             node.options.Add(new DiaOption("RABack".Translate())
             {
@@ -58,12 +65,12 @@ namespace RimArchive
             return node;
         }
 
-        private DiaNode StudentRecruitment(DiaNode parent)
+        /*private DiaNode StudentRecruitment(DiaNode parent)
         {
             DiaNode node = new DiaNode("RAStudentRecruitment".Translate());
             node.options.Add(new DiaOption("StudentGachaRandom".Translate(RandomGatchaCost.ToString()))
             {
-                disabled = !DebugSettings.godMode && !ColonyHasEnoughSilver(requestor.Map, RandomGatchaCost),
+                disabled = !(DebugSettings.godMode || ColonyHasEnoughSilver(requestor.Map, RandomGatchaCost)),
                 disabledReason = "NotEnoughMoney".Translate(),
                 action = delegate
                 {
@@ -88,9 +95,9 @@ namespace RimArchive
                 linkLateBind = () => parent
             });
             return node;
-        }
+        }*/
 
-        private DiaNode SelectSchool(DiaNode parent)
+        /*private DiaNode SelectSchool(DiaNode parent)
         {
             DiaNode node = new DiaNode("ChooseSchool".Translate());
             foreach (string school in cachedSchools)
@@ -118,7 +125,7 @@ namespace RimArchive
                 linkLateBind = () => parent
             });
             return node;
-        }
+        }*/
 
         private Pawn ChooseRandomStudentFrom(List<PawnKindDef> students)
         {

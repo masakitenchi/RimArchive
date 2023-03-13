@@ -10,7 +10,7 @@
     <LangVersion>preview</LangVersion>
     <RootNamespace>RimArchive</RootNamespace>
     <AssemblyName>RimArchive</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -34,19 +34,22 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Components\RimArchiveGameComponent.cs" />
+    <Compile Include="Components\RimArchiveWorldComponent.cs" />
     <Compile Include="Debug.cs" />
+    <Compile Include="Defs\SchoolDef.cs" />
+    <Compile Include="HotSwap.cs" />
     <Compile Include="Patch\HarmonyPatch.cs" />
     <Compile Include="RAPawnKindDef.cs" />
     <Compile Include="RimArchive.cs" />
     <Compile Include="SchoolNameModExtension.cs" />
     <Compile Include="StudentDefOf.cs" />
     <Compile Include="RAFaction.cs" />
-    <Compile Include="RimArchiveWorldComponent.cs" />
     <Compile Include="moe_bombardment.cs" />
     <Compile Include="BA.cs" />
-    <Compile Include="Patch\FactionDialogPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolDefOf.cs" />
+    <Compile Include="Window\RecruitWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
@@ -54,6 +57,7 @@
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
       <Version>2.2.2</Version>
+      <ExcludeAssets>Runtime</ExcludeAssets>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -62,8 +66,6 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Window\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
