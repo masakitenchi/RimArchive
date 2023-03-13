@@ -3,6 +3,9 @@ using HarmonyLib;
 
 namespace RimArchive
 {
+    /// <summary>
+    /// Not what I had done. Maybe will be of use sometime later?
+    /// </summary>
     public class BA_RaceProperties
     {
         public bool BA_Student

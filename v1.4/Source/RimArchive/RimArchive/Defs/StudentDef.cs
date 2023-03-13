@@ -2,6 +2,7 @@
 using System.Text.RegularExpressions;
 using UnityEngine;
 using Verse;
+using System.Collections.Generic;
 
 namespace RimArchive.Defs
 {
@@ -10,11 +11,20 @@ namespace RimArchive.Defs
     /// </summary>
     public class StudentDef : PawnKindDef
     {
+        /// <summary>
+        /// The School where this student is belong to;
+        /// </summary>
         public string School;
+        /// <summary>
+        /// Icon texture.
+        /// </summary>
         public Texture2D Icon;
+        /// <summary>
+        /// Portrait texture.
+        /// </summary>
         public Texture2D Portrait;
 
-        public void Init()
+        internal void Init()
         {
             Match match = RimArchive.studentNameRegex.Match(this.defName);
             if (!match.Success)

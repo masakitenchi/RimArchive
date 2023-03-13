@@ -3,6 +3,7 @@ using RimArchive.Components;
 using RimWorld;
 using System.Reflection;
 using Verse;
+#pragma warning disable CS1591
 
 namespace RimArchive
 {
@@ -13,7 +14,7 @@ namespace RimArchive
         {
             Harmony rimarchive = new Harmony("com.regex.RimArchive");
             rimarchive.Patch(AccessTools.Method(typeof(FactionDialogMaker), "FactionDialogFor"), postfix: new HarmonyMethod(typeof(HarmonyPatches), "FactionDialogPostfix"));
-            rimarchive.PatchAll();
+            //rimarchive.PatchAll();
             //FactionDialogPatch.Patch();
         }
 

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RimArchive</name>
+    </assembly>
+    <members>
+        <member name="T:RimArchive.Defs.StudentDef">
+            <summary>
+            Extends from PawnKindDef. This should give it more editable field.
+            </summary>
+        </member>
+        <member name="F:RimArchive.Defs.StudentDef.School">
+            <summary>
+            The School where this student is belong to;
+            </summary>
+        </member>
+        <member name="F:RimArchive.Defs.StudentDef.Icon">
+            <summary>
+            Icon texture.
+            </summary>
+        </member>
+        <member name="F:RimArchive.Defs.StudentDef.Portrait">
+            <summary>
+            Portrait texture.
+            </summary>
+        </member>
+        <member name="T:RimArchive.RimArchive">
+            <summary>
+            Loads all assets before GC.
+            </summary>
+        </member>
+        <member name="T:RimArchive.RimArchive.RASettings">
+            <summary>
+            Will add settings later.
+            </summary>
+        </member>
+        <member name="F:RimArchive.RimArchive.studentNameRegex">
+            <summary>
+            Regex for StudentDef
+            </summary>
+        </member>
+        <member name="F:RimArchive.RimArchive.fileNameRegex">
+            <summary>
+            The Regex for all Defs. Group Name should explain everything
+            </summary>
+        </member>
+        <member name="F:RimArchive.RimArchive.Sensei">
+            <summary>
+            Sensei's icon
+            </summary>
+        </member>
+        <member name="F:RimArchive.RimArchive.cachedAllStudentsBySchool">
+            <summary>
+            This should help for searching students from a certain school
+            </summary>
+        </member>
+        <member name="T:RimArchive.RA_StudentModExtension">
+            <summary>
+            Currently not used.
+            </summary>
+        </member>
+        <member name="T:RimArchive.RAFaction">
+            <summary>
+            Here process the faction dialog menu. Will move to elsewhere
+            </summary>
+        </member>
+        <member name="T:RimArchive.BA_RaceProperties">
+            <summary>
+            Not what I had done. Maybe will be of use sometime later?
+            </summary>
+        </member>
+        <member name="T:RimArchive.Window.RecruitWindow">
+            <summary>
+            This is the class that shows the recruit window. Might be more complicated once the main feature is finished. (e.g. Handle all the faction dialog here rather than using vanilla method)
+            </summary>
+        </member>
+    </members>
+</doc>

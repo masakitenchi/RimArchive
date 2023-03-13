@@ -32,6 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DocumentationFile>..\..\..\About\RimArchive.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Components\RimArchiveGameComponent.cs" />
@@ -41,7 +42,6 @@
     <Compile Include="Defs\StudentDef.cs" />
     <Compile Include="HotSwap.cs" />
     <Compile Include="Patch\HarmonyPatch.cs" />
-    <Compile Include="RAPawnKindDef.cs" />
     <Compile Include="RimArchive.cs" />
     <Compile Include="SchoolNameModExtension.cs" />
     <Compile Include="StudentDefOf.cs" />

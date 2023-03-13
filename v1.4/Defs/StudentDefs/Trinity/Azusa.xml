@@ -157,6 +157,10 @@
 				<School>Trinity</School>
 			</li>
 		</modExtensions>
+
+		<!-- Until here is inherited from PawnKindDef -->
+		<!-- Below is new field added in StudentDef-->
+		<School>Trinity</School>
 	</RimArchive.Defs.StudentDef>
 
 

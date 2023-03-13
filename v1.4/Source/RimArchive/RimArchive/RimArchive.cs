@@ -12,13 +12,17 @@ using static RimArchive.Defs.StudentDef;
 
 namespace RimArchive
 {
+    /// <summary>
+    /// Loads all assets before GC.
+    /// </summary>
     [StaticConstructorOnStartup]
     public class RimArchive
     {
+        /// <summary>
+        /// Will add settings later.
+        /// </summary>
         public class RASettings
         {
-            
-
         }
         /// <summary>
         /// Regex for StudentDef
@@ -42,7 +46,7 @@ namespace RimArchive
         /// <summary>
         /// This should help for searching students from a certain school
         /// </summary>
-        public static readonly Dictionary<string, List<StudentDef>>? cachedAllStudentsBySchool = new Dictionary<string, List<StudentDef>>();
+        public static readonly Dictionary<string, List<StudentDef>> cachedAllStudentsBySchool = new Dictionary<string, List<StudentDef>>();
 #nullable disable
 
         static RimArchive()
@@ -59,8 +63,8 @@ namespace RimArchive
             foreach(var school in DefDatabase<IconDef>.AllDefsListForReading)
             {
                 cachedSchools.Add(school);
-                school.ResoleFields();
-                cachedAllStudentsBySchool.Add(school.name, (from x in AllStudents where x.GetModExtension<RA_StudentModExtension>().School == school.name select x).ToList());
+                school.ResolveFields();
+                cachedAllStudentsBySchool.Add(school.name, (from x in AllStudents where x.School == school.name select x).ToList());
             }
             RecruitWindow.Init();
 

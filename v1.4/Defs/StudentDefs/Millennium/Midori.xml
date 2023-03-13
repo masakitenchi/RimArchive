@@ -148,11 +148,10 @@
 		<weaponTags>
 			<li>BAW_Midori</li>
 		</weaponTags>
-		<modExtensions>
-			<li Class="RimArchive.RA_StudentModExtension">
-				<School>Millennium</School>
-			</li>
-		</modExtensions>
+
+		<!-- Until here is inherited from PawnKindDef -->
+		<!-- Below is new field added in StudentDef-->
+		<School>Millennium</School>
 	</RimArchive.Defs.StudentDef>
 
 

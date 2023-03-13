@@ -13,7 +13,7 @@ namespace RimArchive
 #pragma warning restore CS0649
         public Texture2D tex;
 
-        public void ResoleFields()
+        public void ResolveFields()
         {
             Match match = RimArchive.fileNameRegex.Match(this.defName);
             if (!match.Success)

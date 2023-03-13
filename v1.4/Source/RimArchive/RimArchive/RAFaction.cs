@@ -8,6 +8,8 @@ using RimArchive.Window;
 
 namespace RimArchive
 {
+
+#pragma warning disable CS1591
     [DefOf]
     public static class RAFactionDefOf
     {
@@ -18,6 +20,11 @@ namespace RimArchive
             DefOfHelper.EnsureInitializedInCtor(typeof(RAFactionDefOf));
         }
     }
+#pragma warning restore CS1591
+
+    /// <summary>
+    /// Here process the faction dialog menu. Will move to elsewhere
+    /// </summary>
     [HotSwappable]
     public class RAFaction
     {
@@ -27,6 +34,12 @@ namespace RimArchive
         private readonly Faction faction;
         private readonly DiaNode root;
 
+        /// <summary>
+        /// Looks like a ctor. But maybe I should change that.
+        /// </summary>
+        /// <param name="requestor"></param>
+        /// <param name="faction"></param>
+        /// <param name="root"></param>
         public RAFaction(Pawn requestor, Faction faction, DiaNode root)
         {
             this.requestor = requestor;

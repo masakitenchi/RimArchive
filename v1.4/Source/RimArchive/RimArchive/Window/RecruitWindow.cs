@@ -11,6 +11,9 @@ using RimArchive.Defs;
 
 namespace RimArchive.Window
 {
+    /// <summary>
+    /// This is the class that shows the recruit window. Might be more complicated once the main feature is finished. (e.g. Handle all the faction dialog here rather than using vanilla method)
+    /// </summary>
     [HotSwappable]
     public class RecruitWindow : Verse.Window
     {

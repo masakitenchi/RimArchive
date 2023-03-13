@@ -153,6 +153,7 @@
 				</categories>
 			</li>
 		</backstoryFiltersOverride>
+		<forcedHair>BA_Hair_Haruka</forcedHair>
 		<weaponMoney>9999~9999</weaponMoney>
 		<minGenerationAge>16</minGenerationAge>
 		<maxGenerationAge>17</maxGenerationAge>
@@ -164,6 +165,10 @@
 				<School>Gehenna</School>
 			</li>
 		</modExtensions>
+
+		<!-- Until here is inherited from PawnKindDef -->
+		<!-- Below is new field added in StudentDef-->
+		<School>Gehenna</School>
 	</RimArchive.Defs.StudentDef>
 
 

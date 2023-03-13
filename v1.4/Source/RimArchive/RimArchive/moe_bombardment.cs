@@ -6,6 +6,8 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 
+#pragma warning disable CS1591
+
 namespace RimArchive
 {
     public class Textures : DefModExtension
