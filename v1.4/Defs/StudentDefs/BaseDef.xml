@@ -17,5 +17,6 @@
 
 	<RimArchive.Defs.StudentDef Name = "RA_BasePawn" ParentName = "BasePlayerPawnKind" Abstract = "True">
 		<defName>KivotosStudent</defName>
+		<race>BA_Student</race>
 	</RimArchive.Defs.StudentDef>
 </Defs>

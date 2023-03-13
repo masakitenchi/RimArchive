@@ -22,10 +22,10 @@
 		<hair/>
 		<beard/>
 		<operatorType>RA_OperatorClass_Gehenna</operatorType>
-		<stand>Portraits/Portrait_Mutsuki</stand>
+		<stand>Portraits/Mutsuki</stand>
 		<standOffset/>
 		<standRatio/>
-		<headPortrait>Icons/Student_Portrait_Mutsuki_Collection</headPortrait>
+		<headPortrait>Icons/Mutsuki</headPortrait>
 		<headPortraitOffset/>
 		<defName>RA_Mutsuki</defName>
 		<label>Mutsuki</label>
@@ -143,10 +143,13 @@
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<RimArchive.Defs.StudentDef ParentName="BasePlayerPawnKind">
+	<RimArchive.Defs.StudentDef ParentName="RA_BasePawn">
 		<defName>BA_Mutsuki</defName>
 		<label>睦月</label>
-		<race>BA_Student</race>
+		<description>ゲヘナ学園所属、便利屋68の行動派。
+
+			つい罪悪感に悩まされがちなアルとは違って躊躇いなく悪事を犯し、トラブルを楽しむ小悪魔のような少女。
+			アルとは幼馴染なので彼女のハッタリを誰よりも理解しているが、特に配慮してあげたりはしない。</description>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
 		<backstoryFiltersOverride>
@@ -160,8 +163,6 @@
 		<weaponMoney>9999~9999</weaponMoney>
 		<minGenerationAge>15</minGenerationAge>
 		<maxGenerationAge>16</maxGenerationAge>
-		<destroyGearOnDrop>true</destroyGearOnDrop>
-		<canStrip>false</canStrip>
 		<weaponTags>
 			<li>BAW_Mutsuki</li>
 		</weaponTags>

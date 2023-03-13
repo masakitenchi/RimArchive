@@ -22,10 +22,10 @@
 		<hair/>
 		<beard/>
 		<operatorType>RA_OperatorClass_Millennium</operatorType>
-		<stand>Portraits/Portrait_Midori</stand>
+		<stand>Portraits/Midori</stand>
 		<standOffset/>
 		<standRatio/>
-		<headPortrait>Icons/Student_Portrait_Midori_Collection</headPortrait>
+		<headPortrait>Icons/Midori</headPortrait>
 		<headPortraitOffset/>
 		<defName>RA_Midori</defName>
 		<label>Midori</label>
@@ -123,10 +123,15 @@
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<RimArchive.Defs.StudentDef ParentName="BasePlayerPawnKind">
+	<RimArchive.Defs.StudentDef ParentName="RA_BasePawn">
 		<defName>BA_Midori</defName>
 		<label>绿</label>
-		<race>BA_Student</race>
+		<description>ミレニアムサイエンススクール所属、ゲーム開発部のイラストレーター。
+
+			双子の姉、モモイと共にゲーム開発部で文字通りゲームを開発している少女。
+			内気な性格もあって、もともと陽気な姉とは相性が良くない方だったが、ゲームに対する情熱で意気投合し、今では大の仲良しになった。
+			
+			"&lt;i&gt;今回のイラストは自信作です！&lt;/i&gt;"</description>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
 		<backstoryFiltersOverride>
@@ -140,8 +145,6 @@
 		<weaponMoney>9999~9999</weaponMoney>
 		<minGenerationAge>15</minGenerationAge>
 		<maxGenerationAge>16</maxGenerationAge>
-		<destroyGearOnDrop>true</destroyGearOnDrop>
-		<canStrip>false</canStrip>
 		<weaponTags>
 			<li>BAW_Midori</li>
 		</weaponTags>

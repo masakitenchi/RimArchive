@@ -7,6 +7,7 @@ using Verse;
 using static RimArchive.RimArchive;
 using static Verse.Widgets;
 using System.Text;
+using RimArchive.Defs;
 
 namespace RimArchive.Window
 {
@@ -17,7 +18,7 @@ namespace RimArchive.Window
         private static readonly float _xMargin = 5f;
         private static readonly float _yMargin = 5f;
         private static readonly Vector2 _iconSize = new Vector2(120f, 120f);
-        private static readonly Vector2 _lblSize = new Vector2(80f, 15f);
+        private static readonly Vector2 _lblSize = new Vector2(80f, 20f);
         private static Vector2 _dlgscrbr = Vector2.zero;
         private static Vector2 _icnscrbr = Vector2.zero;
         private static Vector2 _stdscrbr = Vector2.zero;
@@ -49,31 +50,39 @@ namespace RimArchive.Window
 
         public override void DoWindowContents(Rect inRect)
         {
-            Rect outRect = new Rect(inRect);
-            //GUI.DrawTexture(outRect, BaseContent.BlackTex);
-            //Sensei头像
-            Rect sensei = new Rect(inRect.position, _iconSize);
-            GUI.DrawTexture(sensei, Sensei, ScaleMode.ScaleAndCrop);
-            //右侧的对话……栏?
-            outRect.x += sensei.width;
-            outRect.height = sensei.height;
-            outRect.width -= sensei.width;
-            DrawDialog(outRect);
-            //最右侧列出所有学校
-            Rect schoolList = new Rect(inRect.width - _iconSize.x - 6 * _xMargin, inRect.y, _iconSize.x + 4 * _xMargin, inRect.height);
-            DrawSchoolList(schoolList);
-            //根据当前选择的学校绘制可用学生
-            Rect studentsRect = new Rect(sensei.x, sensei.yMax, inRect.xMax - schoolList.width - 4 * _xMargin, inRect.height - sensei.height);
-            DrawBox(studentsRect, 1, BaseContent.WhiteTex);
-            studentsRect.x += _xMargin;
-            studentsRect.y += _yMargin;
-            DrawStudentList(studentsRect, cachedAllStudentsBySchool[_currentSchool]);
+            try
+            {
+
+                Rect outRect = new Rect(inRect);
+                //GUI.DrawTexture(outRect, BaseContent.BlackTex);
+                //Sensei头像
+                Rect sensei = new Rect(inRect.position, _iconSize);
+                GUI.DrawTexture(sensei, Sensei, ScaleMode.ScaleAndCrop);
+                //最右侧列出所有学校
+                Rect schoolList = new Rect(inRect.width - _iconSize.x - 6 * _xMargin, inRect.y, _iconSize.x + 4 * _xMargin, inRect.height);
+                //右侧的对话……栏?
+                outRect.x += sensei.width;
+                outRect.height = sensei.height;
+                outRect.xMax = schoolList.x - 2 * _xMargin;
+                DrawDialog(outRect);
+                DrawSchoolList(schoolList);
+                //根据当前选择的学校绘制可用学生
+                Rect studentsRect = new Rect(sensei.x, sensei.yMax, inRect.xMax - schoolList.width - 4 * _xMargin, inRect.height - sensei.height);
+                DrawBox(studentsRect, 1, BaseContent.WhiteTex);
+                studentsRect.x += _xMargin;
+                studentsRect.y += _yMargin;
+                DrawStudentList(studentsRect, cachedAllStudentsBySchool[_currentSchool]);
+            }
+            catch (Exception ex)
+            {
+                this.Close();
+            }
             
         }
         static void DrawDialog(Rect outRect)
         {
-            outRect.width -= 1050f;
-            outRect.height -= 70f;
+            //outRect.width -= 1050f;
+            //outRect.height -= 70f;
             GUI.DrawTexture(outRect, BaseContent.GreyTex);
             Widgets.LabelScrollable(outRect, "吃了吗您内今天也是好天气你是一个个什么啊漂亮得很呐人生路漫漫而修远兮吾将上下而求索关关雎鸠在河之洲窈窕淑女君子好逑".Translate(), ref _dlgscrbr);
         }
@@ -112,41 +121,62 @@ namespace RimArchive.Window
             EndScrollView();
         }
 
-        static void DrawStudentList(Rect outRect, List<PawnKindDef> students)
-        {
-            if (students.NullOrEmpty()) return;
-            Rect viewRect = new Rect(outRect);
-            ResolveTotalHeightAndReturnRowCount(ref viewRect, out int rowCount, out int columnCount);
-            BeginScrollView(outRect, ref _stdscrbr, viewRect);
-            int startRow = (int)Math.Floor((decimal)(_stdscrbr.y / (_iconSize.y + _lblSize.y)));
-            startRow = (startRow < 0) ? 0 : startRow;
-            //+iconSize.y平滑滚动条
-            int endRow = startRow + (int)(Math.Ceiling((decimal)((outRect.height + _iconSize.y) / (_iconSize.y + _lblSize.y))));
-            endRow = (endRow > rowCount) ? rowCount : endRow;
-            Rect rect = new Rect(viewRect.x, viewRect.y, _iconSize.x, _iconSize.y + _lblSize.y);
-            for (int i = startRow; i < endRow; i++)
-            {
-                for (int j = 0; j < columnCount; j++)
-                {
-                    //TooltipHandler.TipRegion(rect, students[i].description);
-                    BeginGroup(rect);
-                    Rect icon = new Rect(0f, 0f, _iconSize.x, _iconSize.y);
-                    DrawTextureFitted(icon, students[i].GetModExtension<RA_StudentModExtension>().Icon, 1f);
-                    DrawHighlightIfMouseover(icon);
-                    //Label Tex
-                    icon.y += icon.height;
-                    GUI.DrawTexture(icon, BaseContent.BlackTex);
 
-                    //Log.Message($"x:{rect.x}, y:{rect.y}, width:{rect.width}, height:{rect.height}");
-                    rect.x += _iconSize.x + _xMargin;
-                    /*if (rect.xMax  > viewRect.width)
-                        rect.x = viewRect.x;*/
-                    EndGroup();
+        //目前在拉伸版的1366*768下会爆红。具体原因未知
+        void DrawStudentList(Rect outRect, List<StudentDef> students)
+        {
+            try
+            {
+                if (students.NullOrEmpty()) return;
+                Rect viewRect = new Rect(outRect);
+                ResolveTotalHeightAndReturnRowCount(ref viewRect, out int rowCount, out int columnCount);
+                BeginScrollView(outRect, ref _stdscrbr, viewRect);
+                int startRow = (int)Math.Floor((decimal)(_stdscrbr.y / (_iconSize.y + _lblSize.y)));
+                startRow = (startRow < 0) ? 0 : startRow;
+                //+iconSize.y平滑滚动条
+                int endRow = startRow + (int)(Math.Ceiling((decimal)((outRect.height + _iconSize.y) / (_iconSize.y + _lblSize.y))));
+                endRow = (endRow > rowCount) ? rowCount : endRow;
+                Rect rect = new Rect(viewRect.x, viewRect.y, _iconSize.x, _iconSize.y + _lblSize.y);
+                int studentNo = 0;
+                for (int i = startRow; i < endRow; i++)
+                {
+                    for (int j = 0; j < columnCount; j++)
+                    {
+                        BeginGroup(rect);
+                        Rect icon = new Rect(Vector2.zero, _iconSize);
+                        DrawTextureFitted(icon, students[studentNo].Icon, 1f);
+                        DrawHighlightIfMouseover(icon);
+                        if(ButtonInvisible(icon))
+                        {
+                            this.Close();
+
+                        }
+                        TooltipHandler.TipRegion(icon, students[studentNo].description);
+                        //Label Tex
+                        icon.y = icon.yMax;
+                        GUI.DrawTexture(icon, BaseContent.GreyTex);
+                        Text.Anchor = TextAnchor.UpperCenter;
+                        LabelCacheHeight(ref icon, students[studentNo].label);
+                        //Log.Message($"{students[studentNo].label}");
+                        Text.Anchor = default;
+
+                        //Log.Message($"x:{rect.x}, y:{rect.y}, width:{rect.width}, height:{rect.height}");
+                        rect.x += _iconSize.x + _xMargin;
+                        EndGroup();
+                        studentNo++;
+                    }
+                    rect.x = viewRect.x;
+                    rect.y += _iconSize.y + _yMargin + _lblSize.y;
                 }
-                rect.x = viewRect.x;
-                rect.y += _iconSize.y + _yMargin + _lblSize.y;
+                EndScrollView();
+
             }
-            EndScrollView();
+            catch
+            {
+                //Log.Error($"Current State:\nviewRect:{viewRect}")
+                this.Close();
+                Log.Error("Currently this window will throw error when using 1366*768 fullscreen. We're sorry about that and we'll investigate.");
+            }
         }
 
         static void ResolveTotalHeightAndReturnRowCount(ref Rect viewRect, out int rowCount, out int columnCount)

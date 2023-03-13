@@ -22,10 +22,10 @@
 		<hair/>
 		<beard/>
 		<operatorType>RA_OperatorClass_Gehenna</operatorType>
-		<stand>Portraits/Portrait_Aru</stand>
+		<stand>Portraits/Aru</stand>
 		<standOffset/>
 		<standRatio/>
-		<headPortrait>Icons/Student_Portrait_Aru_Collection</headPortrait>
+		<headPortrait>Icons/Aru</headPortrait>
 		<headPortraitOffset/>
 		<defName>RA_Aru</defName>
 		<label>Aru</label>
@@ -144,10 +144,16 @@
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<RimArchive.Defs.StudentDef ParentName="BasePlayerPawnKind">
+	<RimArchive.Defs.StudentDef ParentName="RA_BasePawn">
 		<defName>BA_Aru</defName>
 		<label>阿露</label>
-		<race>BA_Student</race>
+		<description>ゲヘナ学園所属、便利屋68の自称社長。
+
+			ゲヘナ学園の部活である便利屋68で、好き勝手に不法事業を行っている少女。
+			アル本人はかっこいい悪党としてふるまいたいと思っているものの、抜けているところが多いためすぐにバレてしまう。
+			
+			"&lt;i&gt;ふふふ、素晴らしい選択よ
+			先生&lt;/i&gt;"</description>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
 		<backstoryFiltersOverride>
@@ -161,8 +167,6 @@
 		<weaponMoney>9999~9999</weaponMoney>
 		<minGenerationAge>16</minGenerationAge>
 		<maxGenerationAge>17</maxGenerationAge>
-		<destroyGearOnDrop>true</destroyGearOnDrop>
-		<canStrip>false</canStrip>
 		<weaponTags>
 			<li>BAW_Aru</li>
 		</weaponTags>

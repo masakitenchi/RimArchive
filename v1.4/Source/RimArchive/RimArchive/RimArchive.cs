@@ -49,8 +49,8 @@ namespace RimArchive
         {
             //Should be of use sometime
             //But what if some other mod also add this extension? Meh
-            packageId = DefDatabase<StudentDef>.AllDefs.Where(x => x.HasModExtension<RA_StudentModExtension>()).First().modContentPack.PackageId;
-            foreach (StudentDef student in DefDatabase<StudentDef>.AllDefs.Where(x=>x.HasModExtension<RA_StudentModExtension>()))
+            packageId = DefDatabase<StudentDef>.AllDefs.First().modContentPack.PackageId;
+            foreach (StudentDef student in DefDatabase<StudentDef>.AllDefs)
             {
                 AllStudents.Add(student);
                 //One day we also need to use a new def

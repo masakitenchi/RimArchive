@@ -22,10 +22,10 @@
 		<hair/>
 		<beard/>
 		<operatorType>RA_OperatorClass_Gehenna</operatorType>
-		<stand>Portraits/Portrait_Kayoko</stand>
+		<stand>Portraits/Kayoko</stand>
 		<standOffset/>
 		<standRatio/>
-		<headPortrait>Icons/Student_Portrait_Kayoko_Collection</headPortrait>
+		<headPortrait>Icons/Kayoko</headPortrait>
 		<headPortraitOffset/>
 		<defName>RA_Kayoko</defName>
 		<label>Kayoko</label>
@@ -122,10 +122,13 @@
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<RimArchive.Defs.StudentDef ParentName="BasePlayerPawnKind">
+	<RimArchive.Defs.StudentDef ParentName="RA_BasePawn">
 		<defName>BA_Kayoko</defName>
 		<label>佳世子</label>
-		<race>BA_Student</race>
+		<description>ゲヘナ学園所属、便利屋68の課長。
+
+			他の便利屋68のメンバーとは異なり悪意がないのにも関わらず、生まれ持った顔つきが怖いという理由だけで不良と誤解される少女。
+			カヨコ本人はそんな誤解に対して沈黙を貫いているが、むしろそのせいで怖い人というイメージがより強まる悪循環である。</description>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
 		<backstoryFiltersOverride>
@@ -139,8 +142,6 @@
 		<weaponMoney>9999~9999</weaponMoney>
 		<minGenerationAge>15</minGenerationAge>
 		<maxGenerationAge>16</maxGenerationAge>
-		<destroyGearOnDrop>true</destroyGearOnDrop>
-		<canStrip>false</canStrip>
 		<weaponTags>
 			<li>BAW_Kayoko</li>
 		</weaponTags>
