@@ -48,4 +48,46 @@
         <sortingOrder>16</sortingOrder>
         <textureFolder>SchoolIcon</textureFolder>
     </AK_DLL.OperatorClassDef>
+
+    <RimArchive.SchoolDef>
+        <defName>RA_School_Gehenna</defName>
+        <label>Gehenna</label>
+        <textureFolder>SchoolIcon</textureFolder>
+    </RimArchive.SchoolDef>
+
+    <RimArchive.SchoolDef>
+        <defName>RA_School_Millennium</defName>
+        <label>Millennium</label>
+        <textureFolder>SchoolIcon</textureFolder>
+    </RimArchive.SchoolDef>
+
+    <RimArchive.SchoolDef>
+        <defName>RA_School_Shanhaijing</defName>
+        <label>Shanhaijing</label>
+        <textureFolder>SchoolIcon</textureFolder>
+    </RimArchive.SchoolDef>
+
+    <RimArchive.SchoolDef>
+        <defName>RA_School_SRT</defName>
+        <label>SRT</label>
+        <textureFolder>SchoolIcon</textureFolder>
+    </RimArchive.SchoolDef>
+
+    <RimArchive.SchoolDef>
+        <defName>RA_School_Hyakkiyako</defName>
+        <label>Hyakkiyako</label>
+        <textureFolder>SchoolIcon</textureFolder>
+    </RimArchive.SchoolDef>
+
+    <RimArchive.SchoolDef>
+        <defName>RA_School_Abydos</defName>
+        <label>Abydos</label>
+        <textureFolder>SchoolIcon</textureFolder>
+    </RimArchive.SchoolDef>
+
+    <RimArchive.SchoolDef>
+        <defName>RA_School_Trinity</defName>
+        <label>Trinity</label>
+        <textureFolder>SchoolIcon</textureFolder>
+    </RimArchive.SchoolDef>
 </Defs>
