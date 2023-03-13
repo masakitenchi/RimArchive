@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.7.2": {
+    ".NETFramework,Version=v4.8": {
       "Krafs.Rimworld.Ref/1.4.3641": {
         "type": "package",
         "compile": {
@@ -89,18 +89,18 @@
       "Lib.Harmony/2.2.2": {
         "type": "package",
         "compile": {
-          "lib/net472/0Harmony.dll": {
+          "lib/net48/0Harmony.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net472/0Harmony.dll": {
+          "lib/net48/_._": {
             "related": ".xml"
           }
         }
       }
     },
-    ".NETFramework,Version=v4.7.2/win": {
+    ".NETFramework,Version=v4.8/win": {
       "Krafs.Rimworld.Ref/1.4.3641": {
         "type": "package",
         "compile": {
@@ -188,18 +188,18 @@
       "Lib.Harmony/2.2.2": {
         "type": "package",
         "compile": {
-          "lib/net472/0Harmony.dll": {
+          "lib/net48/0Harmony.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net472/0Harmony.dll": {
+          "lib/net48/_._": {
             "related": ".xml"
           }
         }
       }
     },
-    ".NETFramework,Version=v4.7.2/win-x64": {
+    ".NETFramework,Version=v4.8/win-x64": {
       "Krafs.Rimworld.Ref/1.4.3641": {
         "type": "package",
         "compile": {
@@ -287,18 +287,18 @@
       "Lib.Harmony/2.2.2": {
         "type": "package",
         "compile": {
-          "lib/net472/0Harmony.dll": {
+          "lib/net48/0Harmony.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net472/0Harmony.dll": {
+          "lib/net48/_._": {
             "related": ".xml"
           }
         }
       }
     },
-    ".NETFramework,Version=v4.7.2/win-x86": {
+    ".NETFramework,Version=v4.8/win-x86": {
       "Krafs.Rimworld.Ref/1.4.3641": {
         "type": "package",
         "compile": {
@@ -386,12 +386,12 @@
       "Lib.Harmony/2.2.2": {
         "type": "package",
         "compile": {
-          "lib/net472/0Harmony.dll": {
+          "lib/net48/0Harmony.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net472/0Harmony.dll": {
+          "lib/net48/_._": {
             "related": ".xml"
           }
         }
@@ -523,7 +523,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.7.2": [
+    ".NETFramework,Version=v4.8": [
       "Krafs.Rimworld.Ref >= 1.4.3641",
       "Lib.Harmony >= 2.2.2"
     ]
@@ -546,26 +546,27 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net472"
+        "net48"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net472": {
+        "net48": {
           "projectReferences": {}
         }
       }
     },
     "frameworks": {
-      "net472": {
+      "net48": {
         "dependencies": {
           "Krafs.Rimworld.Ref": {
             "target": "Package",
             "version": "[1.4.3641, )"
           },
           "Lib.Harmony": {
+            "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "target": "Package",
             "version": "[2.2.2, )"
           }
