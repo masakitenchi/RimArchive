@@ -46,7 +46,7 @@ namespace RimArchive
         /// <summary>
         /// This should help for searching students from a certain school
         /// </summary>
-        public static readonly Dictionary<string, List<StudentDef>> cachedAllStudentsBySchool = new Dictionary<string, List<StudentDef>>();
+        public static readonly Dictionary<IconDef, List<StudentDef>> cachedAllStudentsBySchool = new Dictionary<IconDef, List<StudentDef>>();
 #nullable disable
 
         static RimArchive()
@@ -57,14 +57,13 @@ namespace RimArchive
             foreach (StudentDef student in DefDatabase<StudentDef>.AllDefs)
             {
                 AllStudents.Add(student);
-                //One day we also need to use a new def
                 student.Init();
             }
             foreach(var school in DefDatabase<IconDef>.AllDefsListForReading)
             {
                 cachedSchools.Add(school);
                 school.ResolveFields();
-                cachedAllStudentsBySchool.Add(school.name, (from x in AllStudents where x.School == school.name select x).ToList());
+                cachedAllStudentsBySchool.Add(school, (from x in AllStudents where x.School == school.name select x).ToList());
             }
             RecruitWindow.Init();
 

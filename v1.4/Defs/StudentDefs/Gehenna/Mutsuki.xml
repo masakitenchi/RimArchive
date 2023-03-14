@@ -150,6 +150,7 @@
 
 			つい罪悪感に悩まされがちなアルとは違って躊躇いなく悪事を犯し、トラブルを楽しむ小悪魔のような少女。
 			アルとは幼馴染なので彼女のハッタリを誰よりも理解しているが、特に配慮してあげたりはしない。</description>
+		<nameMaker>NamerMutsuki</nameMaker>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
 		<backstoryFiltersOverride>
@@ -175,6 +176,56 @@
 		<!-- Until here is inherited from PawnKindDef -->
 		<!-- Below is new field added in StudentDef-->
 		<School>Gehenna</School>
+		<skills>
+			<Animals>
+				<level>3</level>
+				<fireLevel>0</fireLevel>
+			</Animals>
+			<Artistic>
+				<level>1</level>
+				<fireLevel>0</fireLevel>
+			</Artistic>
+			<Construction>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
+			</Construction>
+			<Cooking>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Cooking>
+			<Crafting>
+				<level>12</level>
+				<fireLevel>2</fireLevel>
+			</Crafting>
+			<Intellectual>
+				<level>9</level>
+				<fireLevel>2</fireLevel>
+			</Intellectual>
+			<Medicine>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Medicine>
+			<Melee>
+				<level>15</level>
+				<fireLevel>1</fireLevel>
+			</Melee>
+			<Mining>
+				<level>0</level>
+				<fireLevel>0</fireLevel>
+			</Mining>
+			<Plants>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Plants>
+			<Shooting>
+				<level>20</level>
+				<fireLevel>2</fireLevel>
+			</Shooting>
+			<Social>
+				<level>8</level>
+				<fireLevel>0</fireLevel>
+			</Social>
+		</skills>
 	</RimArchive.Defs.StudentDef>
 
 

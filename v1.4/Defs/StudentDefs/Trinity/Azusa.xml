@@ -136,6 +136,7 @@
 			
 			"&lt;i&gt;全てのものは空しく、生に意味はない
 			だけど、信じたくなる……あなたの言葉を&lt;/i&gt;"</description>
+		<nameMaker>NamerAzusa</nameMaker>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
 		<backstoryFiltersOverride>
@@ -161,6 +162,56 @@
 		<!-- Until here is inherited from PawnKindDef -->
 		<!-- Below is new field added in StudentDef-->
 		<School>Trinity</School>
+		<skills>
+			<Animals>
+				<level>3</level>
+				<fireLevel>0</fireLevel>
+			</Animals>
+			<Artistic>
+				<level>1</level>
+				<fireLevel>0</fireLevel>
+			</Artistic>
+			<Construction>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
+			</Construction>
+			<Cooking>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Cooking>
+			<Crafting>
+				<level>12</level>
+				<fireLevel>2</fireLevel>
+			</Crafting>
+			<Intellectual>
+				<level>9</level>
+				<fireLevel>2</fireLevel>
+			</Intellectual>
+			<Medicine>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Medicine>
+			<Melee>
+				<level>15</level>
+				<fireLevel>1</fireLevel>
+			</Melee>
+			<Mining>
+				<level>0</level>
+				<fireLevel>0</fireLevel>
+			</Mining>
+			<Plants>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Plants>
+			<Shooting>
+				<level>20</level>
+				<fireLevel>2</fireLevel>
+			</Shooting>
+			<Social>
+				<level>8</level>
+				<fireLevel>0</fireLevel>
+			</Social>
+		</skills>
 	</RimArchive.Defs.StudentDef>
 
 
