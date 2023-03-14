@@ -32,7 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <DocumentationFile>..\..\..\About\RimArchive.xml</DocumentationFile>
+    <DocumentationFile>..\..\..\..\About\RimArchive.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Components\RimArchiveGameComponent.cs" />
