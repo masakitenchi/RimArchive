@@ -8,6 +8,8 @@ using static RimArchive.RimArchive;
 using static Verse.Widgets;
 using System.Text;
 using RimArchive.Defs;
+using UnityEngine.Profiling;
+using UnityEngine.UI;
 
 namespace RimArchive.Window
 {
@@ -15,17 +17,22 @@ namespace RimArchive.Window
     /// This is the class that shows the recruit window. Might be more complicated once the main feature is finished. (e.g. Handle all the faction dialog here rather than using vanilla method)
     /// </summary>
     [HotSwappable]
-    public class RecruitWindow : Verse.Window
+    //目前尚未解决esc弹出菜单的问题。只能先继续沿用DiaNodeTree了
+    public class RecruitWindow : Verse.Dialog_NodeTree
     {
+        private static float _timer = 0f;
         private static readonly float _scrollBarWidth = GenUI.ScrollBarWidth;
-        private static readonly float _xMargin = 5f;
-        private static readonly float _yMargin = 5f;
+        private static readonly Vector2 _Margin = new Vector2(5f, 5f);
         private static readonly Vector2 _iconSize = new Vector2(120f, 120f);
         private static readonly Vector2 _lblSize = new Vector2(80f, 20f);
         private static Vector2 _dlgscrbr = Vector2.zero;
         private static Vector2 _icnscrbr = Vector2.zero;
         private static Vector2 _stdscrbr = Vector2.zero;
-        private static string _currentSchool;
+        private static Vector2 _profile = Vector2.zero;
+        private static Vector2 _sclscrbr = Vector2.zero;
+        private static IconDef _currentSchool;
+        private static bool _inStudentProfile = false;
+        private static StudentDef _currentStudent;
         private DiaNode parent;
 
         private static float _cachedSchoolListHeight;
@@ -37,9 +44,23 @@ namespace RimArchive.Window
         }
 
 
-        public RecruitWindow(DiaNode nodeRoot) : base()
+        public override void OnCancelKeyPressed()
         {
-            this.parent = nodeRoot;
+            Log.Message("Cancel Key Down Event Captured");
+            if (!_inStudentProfile)
+            {
+                Close();
+            }
+            else
+                _inStudentProfile = false;
+        }
+        public RecruitWindow(DiaNode parent) :base(parent)
+        {
+            //openMenuOnCancel = false;
+            //closeOnAccept = false;
+            //closeOnCancel = false;
+            //forcePause = false;
+            //absorbInputAroundWindow = false;
         }
 
         public override Vector2 InitialSize
@@ -55,33 +76,77 @@ namespace RimArchive.Window
         {
             try
             {
-
                 Rect outRect = new Rect(inRect);
                 //GUI.DrawTexture(outRect, BaseContent.BlackTex);
                 //Sensei头像
                 Rect sensei = new Rect(inRect.position, _iconSize);
                 GUI.DrawTexture(sensei, Sensei, ScaleMode.ScaleAndCrop);
                 //最右侧列出所有学校
-                Rect schoolList = new Rect(inRect.width - _iconSize.x - 6 * _xMargin, inRect.y, _iconSize.x + 4 * _xMargin, inRect.height);
+                Rect schoolList = new Rect(inRect.xMax - _iconSize.x - 2 * _scrollBarWidth, inRect.y, _iconSize.x + 4 * _scrollBarWidth, inRect.height);
                 //右侧的对话……栏?
                 outRect.x += sensei.width;
                 outRect.height = sensei.height;
-                outRect.xMax = schoolList.x - 2 * _xMargin;
+                outRect.width = inRect.width / 3;
                 DrawDialog(outRect);
-                DrawSchoolList(schoolList);
-                //根据当前选择的学校绘制可用学生
-                Rect studentsRect = new Rect(sensei.x, sensei.yMax, inRect.xMax - schoolList.width - 4 * _xMargin, inRect.height - sensei.height);
-                DrawBox(studentsRect, 1, BaseContent.WhiteTex);
-                studentsRect.x += _xMargin;
-                studentsRect.y += _yMargin;
-                DrawStudentList(studentsRect, cachedAllStudentsBySchool[_currentSchool]);
+                Rect studentsRect = new Rect(sensei.x, sensei.yMax, inRect.width, inRect.height - sensei.height);
+                //加个if，不多画窗口了
+                if (!_inStudentProfile)
+                {
+                    studentsRect.width -= schoolList.width - 4 * _Margin.x;
+                    outRect.x += outRect.width;
+                    outRect.xMax = studentsRect.xMax;
+                    //学校介绍
+                    DrawSchoolDescription(outRect);
+                    //学校一览
+                    DrawSchoolList(schoolList);
+                    //根据当前选择的学校绘制可用学生
+                    DrawBox(studentsRect, 1, BaseContent.WhiteTex);
+                    studentsRect.x += _Margin.x;
+                    studentsRect.y += _Margin.y;
+                    DrawStudentList(studentsRect, cachedAllStudentsBySchool[_currentSchool]);
+                }
+                else
+                {
+                    //参考新Layout的话，需要分成以下几部分：
+                    //右上角：校徽、全名、所属部活、etc.
+                    //中下部：L2D大厅某一帧，左下角有一个所属校和名字的Rect；
+                    //右下：特性、不能从事、Skill
+                    //左下：技能
+                    Rect profileRect = new Rect(outRect);
+                    outRect.x += outRect.width;
+                    outRect.xMax = inRect.xMax;
+                    Rect hallRect = new Rect(studentsRect);
+                    hallRect.xMin += studentsRect.width / 4;
+                    hallRect.xMax -= studentsRect.width / 4;
+                    Rect skillRect = new Rect(studentsRect);
+                    skillRect.xMin = hallRect.xMax;
+                    skillRect.xMax = studentsRect.xMax;
+                    Rect abilityRect = new Rect(studentsRect);
+                    abilityRect.xMax = hallRect.x;
+                    /*hallRect.size = studentsRect.size / 4 * 3;
+                    hallRect = hallRect.CenteredOnXIn(studentsRect);
+                    hallRect = hallRect.CenteredOnYIn(studentsRect);*/
+                    GUI.DrawTexture(outRect, BaseContent.YellowTex);
+                    DrawProfile(outRect);
+                    //备选项：
+                    GUI.DrawTexture(hallRect, _currentStudent.Memorial, ScaleMode.ScaleToFit, true, 0, Color.white, 0, 10);
+                    //GUI.DrawTexture(hallRect, _currentStudent.Memorial);
+                    DrawMemorialHall(hallRect);
+                    GUI.DrawTexture(skillRect, BaseContent.BlackTex);
+                    DrawSkill(skillRect);
+                    GUI.DrawTexture(abilityRect, BaseContent.WhiteTex);
+                    DrawAbility(abilityRect);
+                }
             }
             catch (Exception ex)
             {
                 this.Close();
+                Log.Error($"Exception when drawing GUI: {ex}");
             }
-            
+
         }
+
+        #region GUISCHOOL
         static void DrawDialog(Rect outRect)
         {
             //outRect.width -= 1050f;
@@ -118,12 +183,19 @@ namespace RimArchive.Window
                     LabelFit(row, cachedSchools[i].label.Translate());
                 }
                 DrawHighlightIfMouseover(row);
-                if (ButtonInvisible(row)) _currentSchool = cachedSchools[i].name;
+                //可以设定成点击之后直到鼠标离开这个绘图区才允许Mouse.IsOver改写_currentSchool
+                if (Mouse.IsOver(row) || ButtonInvisible(row)) _currentSchool = cachedSchools[i];
                 //Text.WordWrap = true;
             }
             EndScrollView();
         }
 
+
+        static void DrawSchoolDescription(Rect outRect)
+        {
+            GUI.DrawTexture(outRect, BaseContent.BlackTex);
+            LabelScrollable(outRect, _currentSchool.description, ref _sclscrbr);
+        }
 
         //目前在拉伸版的1366*768下会爆红。具体原因未知
         void DrawStudentList(Rect outRect, List<StudentDef> students)
@@ -149,27 +221,27 @@ namespace RimArchive.Window
                         Rect icon = new Rect(Vector2.zero, _iconSize);
                         DrawTextureFitted(icon, students[studentNo].Icon, 1f);
                         DrawHighlightIfMouseover(icon);
-                        if(ButtonInvisible(icon))
+                        if (ButtonInvisible(icon))
                         {
-                            this.Close();
-
+                            _currentStudent = students[studentNo];
+                            _inStudentProfile = true;
                         }
                         TooltipHandler.TipRegion(icon, students[studentNo].description);
                         //Label Tex
                         icon.y = icon.yMax;
                         GUI.DrawTexture(icon, BaseContent.GreyTex);
-                        Text.Anchor = TextAnchor.UpperCenter;
+                        Verse.Text.Anchor = TextAnchor.UpperCenter;
                         LabelCacheHeight(ref icon, students[studentNo].label);
                         //Log.Message($"{students[studentNo].label}");
-                        Text.Anchor = default;
+                        Verse.Text.Anchor = default;
 
                         //Log.Message($"x:{rect.x}, y:{rect.y}, width:{rect.width}, height:{rect.height}");
-                        rect.x += _iconSize.x + _xMargin;
+                        rect.x += _iconSize.x + _Margin.x;
                         EndGroup();
                         studentNo++;
                     }
                     rect.x = viewRect.x;
-                    rect.y += _iconSize.y + _yMargin + _lblSize.y;
+                    rect.y += _iconSize.y + _Margin.y + _lblSize.y;
                 }
                 EndScrollView();
 
@@ -178,20 +250,55 @@ namespace RimArchive.Window
             {
                 //Log.Error($"Current State:\nviewRect:{viewRect}")
                 this.Close();
-                Log.Error("Currently this window will throw error when using streched 1366*768 fullscreen (When you choose 1366*768 fullscreen in screen with native resolution > 1366*768). We're sorry about that and we'll investigate.");
+                Log.Error("Currently this window will throw error when using streched 1366*768 fullscreen (When you choose 1366*768 fullscreen in screen with native resolution > 1366*768). We're sorry about that and will investigate.");
             }
         }
 
         static void ResolveTotalHeightAndReturnRowCount(ref Rect viewRect, out int rowCount, out int columnCount)
         {
             int studentCount = cachedAllStudentsBySchool[_currentSchool].Count;
-            columnCount = (int)(viewRect.width / (_iconSize.x + _xMargin));
+            columnCount = (int)(viewRect.width / (_iconSize.x + _Margin.x));
             if (columnCount > studentCount)
                 columnCount = studentCount;
             rowCount = Mathf.CeilToInt((float)studentCount / columnCount);
-            viewRect.height = (_iconSize.y + _yMargin) * rowCount;
-            viewRect.width = (_iconSize.x + _xMargin) * columnCount;
+            viewRect.height = (_iconSize.y + _Margin.y) * rowCount;
+            viewRect.width = (_iconSize.x + _Margin.x) * columnCount;
             //Log.Message($"School:{_currentSchool}, {studentCount} people, {rowCount} rows, {columnCount} columns\n viewRect: {viewRect.x}x, {viewRect.y}y, {viewRect.height} height, {viewRect.width} width");
         }
+        #endregion
+
+        #region PROFILE
+        static void DrawMemorialHall(Rect outRect)
+        {
+            
+        }
+
+        static void DrawProfile(Rect outRect)
+        {
+
+        }
+
+        static void DrawSkill(Rect outRect)
+        {
+
+        }
+
+        static void DrawAbility(Rect outRect)
+        {
+            BeginGroup(outRect);
+            Rect inRect = outRect.ContractedBy(_Margin.x);
+            Pawn p = PawnGenerator.GeneratePawn(_currentStudent as PawnKindDef);
+            //AdjustByStudentDef(ref p);
+            //Show Traits
+            /*foreach(TraitRequirement trait in _currentStudent.forcedTraits)
+            {
+
+            }*/
+        }
+        //Show WorkTags
+        static void AdjustByStudentDef(ref Pawn p)
+        {
+        }
+        #endregion
     }
 }
