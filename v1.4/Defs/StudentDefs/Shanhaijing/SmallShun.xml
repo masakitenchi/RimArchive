@@ -155,7 +155,7 @@
 
 		<!-- Until here is inherited from PawnKindDef -->
 		<!-- Below is new field added in StudentDef-->
-		<School>Gehenna</School>
+		<School>Shanhaijing</School>
 	</RimArchive.Defs.StudentDef>
 
 
