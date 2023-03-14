@@ -64,6 +64,14 @@
             Here process the faction dialog menu. Will move to elsewhere
             </summary>
         </member>
+        <member name="M:RimArchive.RAFaction.#ctor(Verse.Pawn,RimWorld.Faction,Verse.DiaNode)">
+            <summary>
+            Looks like a ctor. But maybe I should change that.
+            </summary>
+            <param name="requestor"></param>
+            <param name="faction"></param>
+            <param name="root"></param>
+        </member>
         <member name="T:RimArchive.BA_RaceProperties">
             <summary>
             Not what I had done. Maybe will be of use sometime later?
