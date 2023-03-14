@@ -31,6 +31,7 @@ namespace RimArchive.Window
         private static Vector2 _sclscrbr = Vector2.zero;
         private static int _SkillCount = DefDatabase<SkillDef>.DefCount;
         private static float _timer = 0f;
+        private static float _levelLabelWidth = -1f;
         private static bool _inStudentProfile = false;
         private static bool _clickedSchoolIcon = false;
         private static IconDef _currentSchool;
@@ -49,15 +50,19 @@ namespace RimArchive.Window
 
         public override void OnCancelKeyPressed()
         {
-            Log.Message("Cancel Key Down Event Captured");
+            //Log.Message("Cancel Key Down Event Captured");
             if (!_inStudentProfile)
             {
                 Close();
             }
             else
+            {
+                _currentStudent = null;
+                _cachedStudent = null;
                 _inStudentProfile = false;
+            }
         }
-        public RecruitWindow(DiaNode parent) :base(parent)
+        public RecruitWindow(DiaNode parent) : base(parent)
         {
             //openMenuOnCancel = false;
             //closeOnAccept = false;
@@ -93,6 +98,7 @@ namespace RimArchive.Window
                 DrawDialog(outRect);
                 Rect studentsRect = new Rect(sensei.x, sensei.yMax, inRect.width, inRect.height - sensei.height);
                 //加个if，不多画窗口了
+                //这么搞貌似会导致内存溢出？？？明天得重写一下了
                 if (!_inStudentProfile)
                 {
                     studentsRect.width -= schoolList.width - 4 * _Margin.x;
@@ -130,15 +136,16 @@ namespace RimArchive.Window
                     hallRect = hallRect.CenteredOnXIn(studentsRect);
                     hallRect = hallRect.CenteredOnYIn(studentsRect);*/
                     GUI.DrawTexture(outRect, BaseContent.YellowTex);
-                    DrawProfile(outRect);
+                    //DrawProfile(outRect);
                     //备选项：
                     GUI.DrawTexture(hallRect, _currentStudent.Memorial, ScaleMode.ScaleToFit, true, 0, Color.white, 0, 10);
                     //GUI.DrawTexture(hallRect, _currentStudent.Memorial);
-                    DrawMemorialHall(hallRect);
-                    GUI.DrawTexture(skillRect, BaseContent.BlackTex);
-                    DrawSkillAndTrait(skillRect);
-                    GUI.DrawTexture(abilityRect, BaseContent.WhiteTex);
-                    DrawAbility(abilityRect);
+                    //DrawMemorialHall(hallRect);
+                    //GUI.DrawTexture(abilityRect, BaseContent.BlackTex);
+                    DrawBox(abilityRect, 1, BaseContent.WhiteTex);
+                    DrawSkillAndTrait(abilityRect);
+                    //GUI.DrawTexture(skillRect, BaseContent.WhiteTex);
+                    DrawAbility(skillRect);
                 }
             }
             catch (Exception ex)
@@ -230,15 +237,15 @@ namespace RimArchive.Window
                         if (ButtonInvisible(icon))
                         {
                             _currentStudent = students[studentNo];
-                            _cachedStudent = PawnGenerator.GeneratePawn(new PawnGenerationRequest(_currentStudent as PawnKindDef, 
-                                canGeneratePawnRelations: false, 
-                                mustBeCapableOfViolence: true, 
-                                colonistRelationChanceFactor: 0f, 
-                                allowGay: false, 
+                            _cachedStudent = PawnGenerator.GeneratePawn(new PawnGenerationRequest(_currentStudent as PawnKindDef,
+                                canGeneratePawnRelations: false,
+                                mustBeCapableOfViolence: true,
+                                colonistRelationChanceFactor: 0f,
+                                allowGay: false,
                                 allowAddictions: false,
                                 fixedGender: Gender.Female
                                 ));
-                            AdjustByStudentDef(ref _cachedStudent);
+                            PostGen(ref _cachedStudent);
                             _inStudentProfile = true;
                         }
                         TooltipHandler.TipRegion(icon, students[studentNo].description);
@@ -286,7 +293,7 @@ namespace RimArchive.Window
         #region PROFILE
         static void DrawMemorialHall(Rect outRect)
         {
-            
+
         }
 
         static void DrawProfile(Rect outRect)
@@ -294,22 +301,82 @@ namespace RimArchive.Window
 
         }
 
+
+        private static Vector2 _traitscrbr;
+        private static Vector2 _storyscrbr;
         void DrawSkillAndTrait(Rect outRect)
         {
+            Verse.Text.Font = GameFont.Small;
             BeginGroup(outRect);
-            Rect skillRect = new Rect(outRect.AtZero());
-            skillRect.height = _SkillCount * (_lblSize.y + _Margin.y);
-            GUI.DrawTexture(skillRect, BaseContent.GreyTex);
+            Rect skillRect = new Rect(outRect.AtZero().ContractedBy(_Margin.x));
+            //GUI.DrawTexture(skillRect, BaseContent.WhiteTex);
             BeginGroup(skillRect);
-            Rect skillRectEach = new Rect(skillRect.AtZero());
-            skillRectEach.height = _lblSize.y;
+            Rect skillTab = new Rect(skillRect.AtZero());
+
+            //GUI.DrawTexture(skillTab, BaseContent.BadTex);
+            //skillTab.height = skillTab.height / _SkillCount;
+            List<SkillDef> allDefsListForReading = DefDatabase<SkillDef>.AllDefsListForReading;
+            for (int i = 0; i < allDefsListForReading.Count; i++)
+            {
+                float x = Verse.Text.CalcSize(allDefsListForReading[i].skillLabel.CapitalizeFirst()).x;
+                if (x > _levelLabelWidth)
+                {
+                    _levelLabelWidth = x;
+                }
+            }
+            //SkillUI.DrawSkillsOf(_cachedStudent, Vector2.zero, (Current.ProgramState != ProgramState.Playing) ? SkillUI.SkillDrawMode.Menu : SkillUI.SkillDrawMode.Gameplay,skillTab);
+            //Rect skillRectEach = new Rect(skillRect.ContractedBy(_Margin.x));
+            skillTab.SplitHorizontally(skillTab.height / 3 * 2, out Rect skillTabGroup, out Rect TraitsGroup);
+            #region skillTab
+            BeginGroup(skillTab);
+            skillTabGroup.position = skillTab.AtZero().position;
+            //GUI.DrawTexture(skillTabGroup, BaseContent.BadTex);
+            //平均分布技能条
+            skillTabGroup.height = skillTabGroup.height / _SkillCount;
+            Rect skillbar = new Rect(skillTabGroup);
+            skillbar.xMin += _levelLabelWidth * 2;
+            Rect passionIcon = new Rect(skillbar);
+            passionIcon.x = skillbar.x;
+            passionIcon.width = SkillUI.SkillHeight;
+            //passionIcon.xMax = skillbar.x;
+            Rect label = new Rect(skillTabGroup.AtZero());
+            
             foreach (SkillRecord skill in _cachedStudent.skills.skills)
             {
-                GUI.DrawTexture(FillableBar(skillRectEach, (float)skill.levelInt / (float)SkillRecord.MaxLevel), BaseContent.WhiteTex);
-                LabelFit(skillRectEach, skill.Level.ToString());
+                FillableBar(skillbar, (float)skill.Level / SkillRecord.MaxLevel, BaseContent.GreyTex, BaseContent.BlackTex, true);
+                DrawTextureFitted(passionIcon, getIconforPassion(skill.passion), 1f);
+                LabelFit(label, string.Concat(skill.def.LabelCap,"   ",skill.Level.ToString()));
                 //LabelCacheHeight(ref skillRectEach, skill.def.defName.Translate());
-                skillRectEach.y += _lblSize.y;
+                skillbar.y += skillTabGroup.height;
+                passionIcon.y += skillTabGroup.height;
+                label.y += skillTabGroup.height;
             }
+            EndGroup();
+            #endregion
+            //Traits & BackStory
+            #region
+            BeginGroup(TraitsGroup);
+            DrawLineHorizontal(0f, 0f, TraitsGroup.width);
+            DrawLineVertical(TraitsGroup.width / 2, 0f, TraitsGroup.height);
+            Rect outtrait = TraitsGroup.AtZero().LeftHalf().ContractedBy(2f);
+            Rect outstory = TraitsGroup.AtZero().RightHalf().ContractedBy(2f);
+            Rect viewtrait;
+            Rect viewstory;
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.AppendLine("Traits".Translate());
+            _cachedStudent.story.traits.allTraits.Select(x => stringBuilder.AppendLine(x.LabelCap));
+            LabelScrollable(outtrait, stringBuilder.ToString(), ref _traitscrbr);
+            stringBuilder.Clear();
+            stringBuilder.AppendLine("BackStories".Translate());
+            _cachedStudent.story.AllBackstories.Select(x => stringBuilder.AppendLine(x.LabelCap));
+            LabelScrollable(outstory, stringBuilder.ToString(), ref _storyscrbr);
+            stringBuilder.Clear();
+            //BeginScrollView(outtrait, ref _traitscrbr, outtrait.ContractedBy(2f), false);
+            //EndScrollView();
+            //BeginScrollView(outstory, ref _storyscrbr, outstory.ContractedBy(2f), false);
+            //EndScrollView();
+            EndGroup();
+            #endregion
             EndGroup();
             EndGroup();
         }
@@ -319,7 +386,7 @@ namespace RimArchive.Window
             BeginGroup(outRect);
             Rect inRect = outRect.ContractedBy(_Margin.x);
             //Show Traits
-            /*foreach(TraitRequirement trait in _currentStudent.forcedTraits)
+            /*foreach(TraitRequirement outtrait in _currentStudent.forcedTraits)
             {
 
             }*/
@@ -328,7 +395,7 @@ namespace RimArchive.Window
         #endregion
 
         #region Misc Methods
-        static void AdjustByStudentDef(ref Pawn p)
+        static void PostGen(ref Pawn p)
         {
             //Adjust skills
             foreach (SkillRecord record in p.skills.skills)
@@ -340,6 +407,21 @@ namespace RimArchive.Window
             p.health.hediffSet.hediffs = p.health.hediffSet.hediffs.Where(x => !(x.def.isBad || x.def.IsAddiction)).ToList();
             p.Name = _currentStudent.name;
         }
+        static Texture2D getIconforPassion(Passion passion)
+        {
+            switch (passion)
+            {
+                case Passion.None:
+                    return BaseContent.ClearTex;
+                case Passion.Minor:
+                    return SkillUI.PassionMinorIcon;
+                case Passion.Major:
+                    return SkillUI.PassionMajorIcon;
+                default:
+                    throw new NullReferenceException("No such Passion Enum");
+            }
+        }
+
 
         #endregion
     }

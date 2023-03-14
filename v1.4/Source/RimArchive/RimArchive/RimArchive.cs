@@ -66,7 +66,6 @@ namespace RimArchive
                 cachedAllStudentsBySchool.Add(school, (from x in AllStudents where x.School == school.name select x).ToList());
             }
             RecruitWindow.Init();
-
         }
     }
 }
