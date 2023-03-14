@@ -390,6 +390,7 @@ namespace RimArchive.Window
             {
 
             }*/
+            EndGroup();
         }
         //Show WorkTags
         #endregion
