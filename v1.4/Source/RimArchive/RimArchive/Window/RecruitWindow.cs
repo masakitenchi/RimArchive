@@ -178,7 +178,7 @@ namespace RimArchive.Window
             {
                 //Log.Error($"Current State:\nviewRect:{viewRect}")
                 this.Close();
-                Log.Error("Currently this window will throw error when using 1366*768 fullscreen. We're sorry about that and we'll investigate.");
+                Log.Error("Currently this window will throw error when using streched 1366*768 fullscreen (When you choose 1366*768 fullscreen in screen with native resolution > 1366*768). We're sorry about that and we'll investigate.");
             }
         }
 

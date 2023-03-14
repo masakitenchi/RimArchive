@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using HarmonyLib;
+#pragma warning disable CS1591
 
 namespace RimArchive
 {
