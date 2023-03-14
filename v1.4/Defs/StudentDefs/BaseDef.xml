@@ -19,6 +19,11 @@
 		<defName>KivotosStudent</defName>
 		<race>BA_Student</race>
 		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Kivotosian>999</Kivotosian>
+			</xenotypeChances>
+		</xenotypeSet>
 		<fixedGender>Female</fixedGender>
 		<generateInitialNonFamilyRelations>false</generateInitialNonFamilyRelations>
 		<royalTitleChance>0.0</royalTitleChance>

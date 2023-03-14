@@ -142,7 +142,7 @@
 
 	<RimArchive.Defs.StudentDef ParentName="RA_BasePawn">
 		<defName>BA_Shiroko_RidingSuit</defName>
-		<label>白子(泳装)</label>
+		<label>白子(单车)</label>
 		<description>アビドス高等学校所属、ライディング用の本格的な格好に着替えた、アビドス対策委員会の切り込み隊長。
 
 			いつもの制服を脱ぎ、気合を入れてサイクルジャージへと着替えた彼女は、心なしか普段より晴れやかな顔をしている。「キヴォトス縦断」というとんでもない目標を口にした彼女だったが、頼れるパートナーがいるからか、どうやら本人には不安も心配も無い様子。
@@ -173,6 +173,11 @@
 
 		<!-- Until here is inherited from PawnKindDef -->
 		<!-- Below is new field added in StudentDef-->
+		<name>
+			<first>Shiroko</first>
+			<nick>Shiroko</nick>
+			<last>Sunaookami</last>
+		</name>
 		<School>Abydos</School>
 		<skills>
 			<Animals>
