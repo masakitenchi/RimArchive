@@ -8,6 +8,7 @@ using static RimArchive.RimArchive;
 using static Verse.Widgets;
 using System.Text;
 using RimArchive.Defs;
+using UnityEngine;
 using UnityEngine.Profiling;
 using UnityEngine.UI;
 
@@ -98,7 +99,6 @@ namespace RimArchive.Window
                 DrawDialog(outRect);
                 Rect studentsRect = new Rect(sensei.x, sensei.yMax, inRect.width, inRect.height - sensei.height);
                 //加个if，不多画窗口了
-                //这么搞貌似会导致内存溢出？？？明天得重写一下了
                 if (!_inStudentProfile)
                 {
                     studentsRect.width -= schoolList.width - 4 * _Margin.x;
@@ -194,7 +194,20 @@ namespace RimArchive.Window
                 }
                 DrawHighlightIfMouseover(row);
                 //可以设定成点击之后直到鼠标离开这个绘图区才允许Mouse.IsOver改写_currentSchool
-                if (Mouse.IsOver(row) || ButtonInvisible(row))
+                //搞定...?
+                if (ButtonInvisible(row))
+                {
+                    _clickedSchoolIcon = true;
+                    _currentSchool = cachedSchools[i];
+                }
+                else if (_clickedSchoolIcon)
+                {
+                    if (Mouse.IsOver(outRect))
+                        continue;
+                    else
+                        _clickedSchoolIcon = false;
+                }
+                else if (Mouse.IsOver(row))
                 {
                     _currentSchool = cachedSchools[i];
                 }
@@ -343,7 +356,7 @@ namespace RimArchive.Window
             
             foreach (SkillRecord skill in _cachedStudent.skills.skills)
             {
-                FillableBar(skillbar, (float)skill.Level / SkillRecord.MaxLevel, BaseContent.GreyTex, BaseContent.BlackTex, true);
+                FillableBar(skillbar, (float)skill.Level / SkillRecord.MaxLevel, BaseContent.GreyTex, BaseContent.ClearTex, true);
                 DrawTextureFitted(passionIcon, getIconforPassion(skill.passion), 1f);
                 LabelFit(label, string.Concat(skill.def.LabelCap,"   ",skill.Level.ToString()));
                 //LabelCacheHeight(ref skillRectEach, skill.def.defName.Translate());
