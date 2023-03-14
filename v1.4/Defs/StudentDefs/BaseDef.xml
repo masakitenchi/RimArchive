@@ -24,6 +24,9 @@
 				<Kivotosian>999</Kivotosian>
 			</xenotypeChances>
 		</xenotypeSet>
+		<forcedTraits>
+			<Beauty>1</Beauty>
+		</forcedTraits>
 		<fixedGender>Female</fixedGender>
 		<generateInitialNonFamilyRelations>false</generateInitialNonFamilyRelations>
 		<royalTitleChance>0.0</royalTitleChance>
