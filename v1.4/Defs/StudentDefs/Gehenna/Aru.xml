@@ -179,6 +179,11 @@
 
 		<!-- Until here is inherited from PawnKindDef -->
 		<!-- Below is new field added in StudentDef-->
+		<name>
+			<first>Aru</first>
+			<nick>Aru</nick>
+			<last>Rikuhachima</last>
+		</name>
 		<School>Gehenna</School>
 		<skills>
 			<Animals>

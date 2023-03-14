@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <XenotypeDef>
+        <defName>Kivotosian</defName>
+        <label>Kivotosian</label>
+        <description>Students are mysterious. You cannot interprete where does their special abilities come from.</description>
+        <iconPath>UI/Icons/Xenotypes/Baseliner</iconPath>
+        <factionlessGenerationWeight>0</factionlessGenerationWeight>
+        <inheritable>true</inheritable>
+        <nameMaker>NamerNormalStudents</nameMaker>
+        <genes>
+            <li>Body_Thin</li>
+            <li>Skin_SheerWhite</li>
+        </genes>
+    </XenotypeDef>
+</Defs>

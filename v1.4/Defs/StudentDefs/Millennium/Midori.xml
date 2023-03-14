@@ -152,6 +152,11 @@
 
 		<!-- Until here is inherited from PawnKindDef -->
 		<!-- Below is new field added in StudentDef-->
+		<name>
+			<first>Midori</first>
+			<nick>Mirori</nick>
+			<last>Saiba</last>
+		</name>
 		<School>Millennium</School>
 		<skills>
 			<Animals>

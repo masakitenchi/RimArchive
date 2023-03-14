@@ -1,5 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<RulePackDef>
+		<defName>NamerNormalStudents</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[NormalStudent]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>NormalStudent</keyword>
+					<path>Names/Shiroko</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
 
 	<RulePackDef>
 		<defName>NamerShiroko</defName>

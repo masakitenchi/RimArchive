@@ -178,6 +178,11 @@
 
 		<!-- Until here is inherited from PawnKindDef -->
 		<!-- Below is new field added in StudentDef-->
+		<name>
+			<first>Saki</first>
+			<nick>Saki</nick>
+			<last>Sorai</last>
+		</name>
 		<School>SRT</School>
 		<skills>
 			<Animals>

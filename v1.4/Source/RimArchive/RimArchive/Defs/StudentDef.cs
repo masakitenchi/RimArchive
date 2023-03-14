@@ -12,6 +12,7 @@ namespace RimArchive.Defs
     /// </summary>
     public class StudentDef : PawnKindDef
     {
+        public NameTriple name;
         /// <summary>
         /// The School where this student is belong to;
         /// </summary>
@@ -64,7 +65,7 @@ namespace RimArchive.Defs
     /// <summary>
     /// Used to set skill level and passion. Must be the subnode of StudentDef.
     /// </summary>
-    public struct PassionSkill
+    public class PassionSkill
     {
         /// <summary>
         /// Skill name. Must match the defName of the SkillDef
@@ -85,18 +86,18 @@ namespace RimArchive.Defs
          *  Other types (including enums) goes to ParseHelper
          *  The arguments are also very important. Don't mess with node name
          */
-        public void LoadDataFromXmlCustom(XmlNode xmlroot)
+        public void LoadDataFromXmlCustom(XmlNode xmlRoot)
         {
-            //Log.Message($"root is : {xmlroot.Name}");
-            if (xmlroot == null)
+            //Log.Message($"root is : {xmlRoot.Name}");
+            if (xmlRoot == null)
                 return;
-            //Log.Message($"Node is: {xmlroot.Name}\n content:{xmlroot.InnerXml}\n");
-            DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "skill", xmlroot.Name);
-            this.level = ParseHelper.FromString<int>(xmlroot["level"].InnerText);
+            //Log.Message($"Node is: {xmlRoot.Name}\n content:{xmlRoot.InnerXml}\n");
+            DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "skill", xmlRoot.Name);
+            this.level = ParseHelper.FromString<int>(xmlRoot["level"].InnerText);
             //Log.Message($"level :{xmlnode["level"].InnerText}");
             //DirectXmlCrossRefLoader.TryResolveDef<SkillDef>(xmlnode["skill"].InnerText, FailMode.LogErrors);
             //Log.Message($"skill:{xmlnode["skill"].InnerText}");
-            this.passion = ParseHelper.FromString<Passion>(xmlroot["fireLevel"].InnerText);
+            this.passion = ParseHelper.FromString<Passion>(xmlRoot["fireLevel"].InnerText);
             //DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "passion", xmlnode["fireLevel"].InnerText);
             //Log.Message($"passion :{xmlnode["fireLevel"].InnerText}");
         }

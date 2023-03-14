@@ -20,7 +20,6 @@ namespace RimArchive.Window
     //目前尚未解决esc弹出菜单的问题。只能先继续沿用DiaNodeTree了
     public class RecruitWindow : Verse.Dialog_NodeTree
     {
-        private static float _timer = 0f;
         private static readonly float _scrollBarWidth = GenUI.ScrollBarWidth;
         private static readonly Vector2 _Margin = new Vector2(5f, 5f);
         private static readonly Vector2 _iconSize = new Vector2(120f, 120f);
@@ -30,9 +29,13 @@ namespace RimArchive.Window
         private static Vector2 _stdscrbr = Vector2.zero;
         private static Vector2 _profile = Vector2.zero;
         private static Vector2 _sclscrbr = Vector2.zero;
-        private static IconDef _currentSchool;
+        private static int _SkillCount = DefDatabase<SkillDef>.DefCount;
+        private static float _timer = 0f;
         private static bool _inStudentProfile = false;
+        private static bool _clickedSchoolIcon = false;
+        private static IconDef _currentSchool;
         private static StudentDef _currentStudent;
+        private static Pawn _cachedStudent;
         private DiaNode parent;
 
         private static float _cachedSchoolListHeight;
@@ -133,7 +136,7 @@ namespace RimArchive.Window
                     //GUI.DrawTexture(hallRect, _currentStudent.Memorial);
                     DrawMemorialHall(hallRect);
                     GUI.DrawTexture(skillRect, BaseContent.BlackTex);
-                    DrawSkill(skillRect);
+                    DrawSkillAndTrait(skillRect);
                     GUI.DrawTexture(abilityRect, BaseContent.WhiteTex);
                     DrawAbility(abilityRect);
                 }
@@ -184,7 +187,10 @@ namespace RimArchive.Window
                 }
                 DrawHighlightIfMouseover(row);
                 //可以设定成点击之后直到鼠标离开这个绘图区才允许Mouse.IsOver改写_currentSchool
-                if (Mouse.IsOver(row) || ButtonInvisible(row)) _currentSchool = cachedSchools[i];
+                if (Mouse.IsOver(row) || ButtonInvisible(row))
+                {
+                    _currentSchool = cachedSchools[i];
+                }
                 //Text.WordWrap = true;
             }
             EndScrollView();
@@ -224,6 +230,15 @@ namespace RimArchive.Window
                         if (ButtonInvisible(icon))
                         {
                             _currentStudent = students[studentNo];
+                            _cachedStudent = PawnGenerator.GeneratePawn(new PawnGenerationRequest(_currentStudent as PawnKindDef, 
+                                canGeneratePawnRelations: false, 
+                                mustBeCapableOfViolence: true, 
+                                colonistRelationChanceFactor: 0f, 
+                                allowGay: false, 
+                                allowAddictions: false,
+                                fixedGender: Gender.Female
+                                ));
+                            AdjustByStudentDef(ref _cachedStudent);
                             _inStudentProfile = true;
                         }
                         TooltipHandler.TipRegion(icon, students[studentNo].description);
@@ -249,6 +264,7 @@ namespace RimArchive.Window
             catch
             {
                 //Log.Error($"Current State:\nviewRect:{viewRect}")
+                _inStudentProfile = false;
                 this.Close();
                 Log.Error("Currently this window will throw error when using streched 1366*768 fullscreen (When you choose 1366*768 fullscreen in screen with native resolution > 1366*768). We're sorry about that and will investigate.");
             }
@@ -278,17 +294,30 @@ namespace RimArchive.Window
 
         }
 
-        static void DrawSkill(Rect outRect)
+        void DrawSkillAndTrait(Rect outRect)
         {
-
+            BeginGroup(outRect);
+            Rect skillRect = new Rect(outRect.AtZero());
+            skillRect.height = _SkillCount * (_lblSize.y + _Margin.y);
+            GUI.DrawTexture(skillRect, BaseContent.GreyTex);
+            BeginGroup(skillRect);
+            Rect skillRectEach = new Rect(skillRect.AtZero());
+            skillRectEach.height = _lblSize.y;
+            foreach (SkillRecord skill in _cachedStudent.skills.skills)
+            {
+                GUI.DrawTexture(FillableBar(skillRectEach, (float)skill.levelInt / (float)SkillRecord.MaxLevel), BaseContent.WhiteTex);
+                LabelFit(skillRectEach, skill.Level.ToString());
+                //LabelCacheHeight(ref skillRectEach, skill.def.defName.Translate());
+                skillRectEach.y += _lblSize.y;
+            }
+            EndGroup();
+            EndGroup();
         }
 
-        static void DrawAbility(Rect outRect)
+        void DrawAbility(Rect outRect)
         {
             BeginGroup(outRect);
             Rect inRect = outRect.ContractedBy(_Margin.x);
-            Pawn p = PawnGenerator.GeneratePawn(_currentStudent as PawnKindDef);
-            //AdjustByStudentDef(ref p);
             //Show Traits
             /*foreach(TraitRequirement trait in _currentStudent.forcedTraits)
             {
@@ -296,9 +325,22 @@ namespace RimArchive.Window
             }*/
         }
         //Show WorkTags
+        #endregion
+
+        #region Misc Methods
         static void AdjustByStudentDef(ref Pawn p)
         {
+            //Adjust skills
+            foreach (SkillRecord record in p.skills.skills)
+            {
+                record.Level = _currentStudent.skills.Where(x => x.skill == record.def).First().level;
+                record.passion = _currentStudent.skills.Where(x => x.skill == record.def).First().passion;
+            }
+            //Remove harmful hediffs or addiction
+            p.health.hediffSet.hediffs = p.health.hediffSet.hediffs.Where(x => !(x.def.isBad || x.def.IsAddiction)).ToList();
+            p.Name = _currentStudent.name;
         }
+
         #endregion
     }
 }

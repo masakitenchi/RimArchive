@@ -156,6 +156,11 @@
 
 		<!-- Until here is inherited from PawnKindDef -->
 		<!-- Below is new field added in StudentDef-->
+		<name>
+			<first>Shun</first>
+			<nick>Shun</nick>
+			<last>Sunohara</last>
+		</name>
 		<School>Shanhaijing</School>
 		<skills>
 			<Animals>

@@ -161,6 +161,11 @@
 
 		<!-- Until here is inherited from PawnKindDef -->
 		<!-- Below is new field added in StudentDef-->
+		<name>
+			<first>Azusa</first>
+			<nick>Azusa</nick>
+			<last>Shirasu</last>
+		</name>
 		<School>Trinity</School>
 		<skills>
 			<Animals>
