@@ -369,7 +369,6 @@ namespace RimArchive.Window
             passionIcon.width = SkillUI.SkillHeight;
             //passionIcon.xMax = skillbar.x;
             Rect label = new Rect(skillTabGroup.AtZero());
-
             foreach (SkillRecord skill in _cachedStudent.skills.skills)
             {
                 FillableBar(skillbar, (float)skill.Level / SkillRecord.MaxLevel, BaseContent.GreyTex, BaseContent.ClearTex, true);
