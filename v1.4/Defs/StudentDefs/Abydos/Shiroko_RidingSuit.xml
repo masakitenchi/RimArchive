@@ -140,7 +140,7 @@
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<RimArchive.Defs.StudentDef ParentName="RA_BasePawn">
+	<RimArchive.StudentDef ParentName="RA_BasePawn">
 		<defName>BA_Shiroko_RidingSuit</defName>
 		<label>白子(单车)</label>
 		<description>アビドス高等学校所属、ライディング用の本格的な格好に着替えた、アビドス対策委員会の切り込み隊長。
@@ -229,7 +229,7 @@
 				<fireLevel>0</fireLevel>
 			</Social>
 		</skills>
-	</RimArchive.Defs.StudentDef>
+	</RimArchive.StudentDef>
 
 
 </Defs>

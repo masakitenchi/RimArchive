@@ -1,4 +1,4 @@
-﻿using RimArchive.Defs;
+﻿using RimArchive.Components;
 using RimArchive.Window;
 using RimWorld;
 using System;
@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using Verse;
 using static RimArchive.Debug;
-using static RimArchive.Defs.StudentDef;
+using static RimArchive.StudentDef;
 
 namespace RimArchive
 {
@@ -40,6 +40,8 @@ namespace RimArchive
         /// The button for recruitment
         /// </summary>
         public static readonly Texture2D SSR = ContentFinder<Texture2D>.Get("Things/Gacha/SSR");
+
+        public static RimArchiveGameComponent StudentDocument => Current.Game.GetComponent<RimArchiveGameComponent>();
         //
         internal static readonly string packageId = "auxia.weaponpack.bluearchive";
 #nullable enable
@@ -51,6 +53,7 @@ namespace RimArchive
         /// This should help for searching students from a certain school
         /// </summary>
         public static readonly Dictionary<IconDef, List<StudentDef>> cachedAllStudentsBySchool = new Dictionary<IconDef, List<StudentDef>>();
+
 #nullable disable
 
         static RimArchive()

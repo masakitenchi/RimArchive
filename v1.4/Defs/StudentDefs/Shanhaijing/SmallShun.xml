@@ -123,7 +123,7 @@
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<RimArchive.Defs.StudentDef ParentName="RA_BasePawn">
+	<RimArchive.StudentDef ParentName="RA_BasePawn">
 		<defName>BA_SmallShun</defName>
 		<label>瞬</label>
 		<description>山海経高級中学校所属、サヤの薬を飲んで幼い頃の身体に戻ってしまった、訓育支援部「梅花園」の教官。
@@ -212,7 +212,7 @@
 				<fireLevel>0</fireLevel>
 			</Social>
 		</skills>
-	</RimArchive.Defs.StudentDef>
+	</RimArchive.StudentDef>
 
 
 </Defs>

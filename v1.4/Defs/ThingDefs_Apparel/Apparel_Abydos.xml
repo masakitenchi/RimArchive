@@ -13,7 +13,7 @@
         <label>Haruka_Head</label>
         <description>Haruka_Head</description>
         <graphicData>
-            <texPath>Things/AK_Agents/GApparel</texPath>
+            <texPath>Things/Apparel/Apparel_Generic</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <apparel Inherit="False">
@@ -35,7 +35,7 @@
         <label>Haruka_Body</label>
         <description>Haruka_Body</description>
         <graphicData>
-            <texPath>Things/AK_Agents/GApparel</texPath>
+            <texPath>Things/Apparel/Apparel_Generic</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <apparel>

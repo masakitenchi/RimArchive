@@ -15,7 +15,7 @@
 		</hairColor>
     </AK.DLL_OperatorDef>
 
-	<RimArchive.Defs.StudentDef Name = "RA_BasePawn" ParentName = "BasePlayerPawnKind" Abstract = "True">
+	<RimArchive.StudentDef Name = "RA_BasePawn" ParentName = "BasePlayerPawnKind" Abstract = "True">
 		<defName>KivotosStudent</defName>
 		<race>BA_Student</race>
 		<useFactionXenotypes>false</useFactionXenotypes>
@@ -42,5 +42,5 @@
 		<apparelRequired>
 			<li>BAA_Body_Haruka</li>
 		</apparelRequired>
-	</RimArchive.Defs.StudentDef>
+	</RimArchive.StudentDef>
 </Defs>

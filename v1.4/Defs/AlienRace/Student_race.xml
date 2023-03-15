@@ -14,8 +14,8 @@
 				<humanRecipeImport>true</humanRecipeImport>
 				<alienPartGenerator>
 					<headBodyPartDef>halo</headBodyPartDef>
-					<customDrawSize>(1.5, 1.5)</customDrawSize>
-					<headOffset>(0, 0.2)</headOffset>
+					<!-- <customDrawSize>(1.5, 1.5)</customDrawSize>
+					<headOffset>(0, 0.2)</headOffset> -->
 					<!-- <headOffsetDirectional>
 						<east>(-0.11, -0.02)</east>
 						<west>(0.11, -0.02)</west>

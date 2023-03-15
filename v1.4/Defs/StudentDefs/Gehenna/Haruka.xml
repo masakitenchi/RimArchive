@@ -136,7 +136,7 @@
 
 	</AlienRace.ThingDef_AlienRace> -->
 
-	<RimArchive.Defs.StudentDef ParentName="RA_BasePawn">
+	<RimArchive.StudentDef ParentName="RA_BasePawn">
 		<defName>BA_Haruka</defName>
 		<label>春香</label>
 		<description>ゲヘナ学園所属、便利屋68の平社員。
@@ -226,7 +226,7 @@
 				<fireLevel>0</fireLevel>
 			</Social>
 		</skills>
-	</RimArchive.Defs.StudentDef>
+	</RimArchive.StudentDef>
 
 
 </Defs>

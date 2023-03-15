@@ -8,18 +8,20 @@ using Verse;
 namespace RimArchive
 {
     [StaticConstructorOnStartup]
+    [HarmonyPatch]
     public static class HarmonyPatches
     {
         static HarmonyPatches()
         {
             Harmony rimarchive = new Harmony("com.regex.RimArchive");
-            rimarchive.Patch(AccessTools.Method(typeof(FactionDialogMaker), "FactionDialogFor"), postfix: new HarmonyMethod(typeof(HarmonyPatches), "FactionDialogPostfix"));
-            //rimarchive.PatchAll();
+            //rimarchive.Patch(AccessTools.Method(typeof(FactionDialogMaker), "FactionDialogFor"), postfix: new HarmonyMethod(typeof(HarmonyPatches), "FactionDialogPostfix"));
+            rimarchive.PatchAll(Assembly.GetExecutingAssembly());
             //FactionDialogPatch.Patch();
         }
 
-        [HarmonyPatch(typeof(FactionDialogMaker), "FactionDialogFor")]
         [HarmonyPostfix]
+        [HarmonyPatch(typeof(FactionDialogMaker))]
+        [HarmonyPatch("FactionDialogFor")]
         public static void FactionDialogPostfix(ref DiaNode __result, Pawn negotiator, Faction faction)
         {
             if (faction.def.defName == RimArchiveWorldComponent.Shale)
@@ -27,6 +29,18 @@ namespace RimArchive
                 RAFaction DialogRequest = new RAFaction(negotiator, faction, __result);
                 __result.options.Insert(0, DialogRequest.CreateInitialDiaMenu());
             }
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(Pawn))]
+        [HarmonyPatch("Kill")]
+        public static void KillPostfix(Pawn __instance, DamageInfo? dinfo, Hediff exactCulprit = null)
+        {
+            if(__instance.kindDef is StudentDef)
+            {
+                RimArchive.StudentDocument.Notify_StudentKilled(ref __instance);
+            }
+            return;
         }
     }
 }

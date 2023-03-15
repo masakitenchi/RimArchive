@@ -145,7 +145,7 @@
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<RimArchive.Defs.StudentDef ParentName="RA_BasePawn">
+	<RimArchive.StudentDef ParentName="RA_BasePawn">
 		<defName>BA_Saki</defName>
 		<label>咲</label>
 		<description>SRT特殊学園所属、RABBIT小隊のポイントマン。
@@ -234,7 +234,7 @@
 				<fireLevel>0</fireLevel>
 			</Social>
 		</skills>
-	</RimArchive.Defs.StudentDef>
+	</RimArchive.StudentDef>
 
 
 </Defs>

@@ -127,7 +127,7 @@
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<RimArchive.Defs.StudentDef ParentName="RA_BasePawn">
+	<RimArchive.StudentDef ParentName="RA_BasePawn">
 		<defName>BA_Azusa</defName>
 		<label>梓</label>
 		<description>トリニティ総合学園所属、補習授業部の氷の魔女。
@@ -217,7 +217,7 @@
 				<fireLevel>0</fireLevel>
 			</Social>
 		</skills>
-	</RimArchive.Defs.StudentDef>
+	</RimArchive.StudentDef>
 
 
 </Defs>

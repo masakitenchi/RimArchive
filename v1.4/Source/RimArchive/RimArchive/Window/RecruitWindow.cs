@@ -9,9 +9,9 @@ using static RimArchive.RimArchive;
 using static RimArchive.Debug;
 using static Verse.Widgets;
 using System.Text;
-using RimArchive.Defs;
 using UnityEngine.Profiling;
 using UnityEngine.UI;
+using RimArchive.Components;
 
 namespace RimArchive.Window
 {
@@ -36,12 +36,13 @@ namespace RimArchive.Window
         private static bool _inStudentProfile = false;
         private static bool _clickedSchoolIcon = false;
         private static IconDef _currentSchool;
-        private static StudentDef _currentStudent;
         private static Pawn _cachedStudent;
         private DiaNode parent;
 
         private static float _cachedSchoolListHeight;
 
+
+        internal static StudentDef _currentStudent;
         internal static void Init()
         {
             _cachedSchoolListHeight = cachedSchools.Count * _iconSize.y;
@@ -416,9 +417,17 @@ namespace RimArchive.Window
             DrawBox(inRect, 1, BaseContent.WhiteTex);
             Rect recruitBtn = outRect.AtZero().CenteredOnYIn(outRect);
             recruitBtn.size = _iconSize;
-            if(ButtonImageFitted(recruitBtn, SSR))
+            if (StudentDocument.IsRecruited(_currentStudent))
+            {
+                if (ButtonImageFitted(recruitBtn, SSR))
+                {
+                    Messages.Message("StudentAlreadyRecruited".Translate(_cachedStudent.NameFullColored), MessageTypeDefOf.NeutralEvent);
+                }
+            }
+            else if (ButtonImageFitted(recruitBtn, SSR))
             {
                 _inStudentProfile = false;
+                StudentDocument.Notify_StudentRecruited(ref _currentStudent);
                 this.Close();
                 Map currentmap = Find.CurrentMap;
                 IntVec3 intVec3 = DropCellFinder.TradeDropSpot(currentmap);
@@ -450,12 +459,14 @@ namespace RimArchive.Window
             p.story.hairDef = _currentStudent.forcedHair;
             p.story.bodyType = BodyTypeDefOf.Thin;
             p.story.traits.allTraits.Clear();
-            foreach(TraitRequirement trait in _currentStudent.forcedTraits)
+            foreach (TraitRequirement trait in _currentStudent.forcedTraits)
             {
                 p.story.traits.GainTrait(new Trait(trait.def, trait.degree ?? 0, true));
             }
+            p.apparel.WornApparel.RemoveAll(x => x.def.apparel.bodyPartGroups.Any(t => t == BodyPartGroupDefOf.FullHead || t == BodyPartGroupDefOf.UpperHead));
+            p.apparel.LockAll();
             //Debug log for backstory. Maybe vanilla cannot recognize har's backstory? but with HAR it should inject into vanilla code, doesn't it?
-            DbgMsg($"Pawn {p.Name}: \nrace:{p.kindDef.race}\n kindDef {p.kindDef},\n backstoryoverride: {string.Join("\n", p.kindDef.backstoryFiltersOverride.First().categories.Select(x => x + "\n"))}");
+            //DbgMsg($"Pawn {p.Name}: \nrace:{p.kindDef.race}\n kindDef {p.kindDef},\n backstoryoverride: {string.Join("\n", p.kindDef.backstoryFiltersOverride.First().categories.Select(x => x + "\n"))}");
         }
         static Texture2D getIconforPassion(Passion passion)
         {

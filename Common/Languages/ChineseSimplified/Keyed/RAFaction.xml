@@ -23,4 +23,6 @@
   <StudentArrived>{0}已到达。</StudentArrived>
   <ChooseSchool>选择学校</ChooseSchool>
   <NoAvailableStudentInSchool>该学校目前没有可招募的学生。</NoAvailableStudentInSchool>
+
+  <StudentAlreadyRecruited>{0} 已经被招募。</StudentAlreadyRecruited>
 </LanguageData>

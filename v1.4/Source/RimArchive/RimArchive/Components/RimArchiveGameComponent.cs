@@ -1,46 +1,58 @@
-﻿using RimArchive.Defs;
+﻿using HarmonyLib;
 using RimWorld;
+using RimWorld.Planet;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace RimArchive.Components
 {
     //Used as a document for each student.
-    internal class RimArchiveGameComponent : GameComponent
+    public class RimArchiveGameComponent : GameComponent
     {
-        //Checks all students that's been recruited
-        private Dictionary<StudentDef, bool> isAlive = new Dictionary<StudentDef, bool>();
-        private Dictionary<StudentDef, bool> isRecruited = new Dictionary<StudentDef, bool>();
+        private Dictionary<StudentDef, Pawn> documents = new Dictionary<StudentDef, Pawn>();
 
-        private List<StudentDef> recruitedStudents;
-        private List<StudentDef> studentsTmp;
-        private List<bool> aliveTmp;
-        private List<bool> recruitTmp;
+        private HashSet<StudentDef> aliveStudents = new HashSet<StudentDef>();
+        private HashSet<StudentDef> recruitedStudents = new HashSet<StudentDef>();
 
-        public List<StudentDef> RecruitedStudents
+        /*public List<StudentDef> RecruitedStudents
         {
             get
             {
-                return recruitedStudents;
+                return recruitedStudents ??= new List<StudentDef>();
             }
+        }*/
+
+        public HashSet<StudentDef> AliveStudents => aliveStudents;
+        public HashSet<StudentDef> RecruitedStudents => recruitedStudents;
+        
+
+        public bool IsRecruitedOrAlive(StudentDef student) => IsAlive(student) || IsRecruited(student);
+        public bool IsAlive(StudentDef student) => aliveStudents.Contains(student);
+        public bool IsRecruited(StudentDef student) => recruitedStudents.Contains(student);
+        public void Notify_StudentKilled(ref Pawn p)
+        {
+            Name name = p.Name;
+            documents.Add(p.kindDef as StudentDef, p);
+            //防止id重复
+            new Traverse(Find.WorldPawns).Field<HashSet<Pawn>>("pawnsDead").Value.RemoveWhere(x => x.Name == name);
         }
-
-
-        public void Notify_StudentRecruited(StudentDef student)
+        public void Notify_StudentRecruited(ref StudentDef student)
         {
             recruitedStudents.Add(student);
+            aliveStudents.Add(student);
         }
 
+        //每次存档都根据isAlive更新 documents并将documents存档
+        //去世的会通过Pawn.Kill触发更新函数所以不需要在这里更新
+        //不对，没必要保存活着的，死了再触发防止被WorldPawn清理给删掉
+        //估计还是得只保存必要的那些?
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Collections.Look<StudentDef, bool>(ref isAlive, "AliveStudents", LookMode.Def, LookMode.Value, ref studentsTmp, ref aliveTmp);
-            Scribe_Collections.Look<StudentDef, bool>(ref isRecruited, "RecruitedStudents", LookMode.Def, LookMode.Value, ref studentsTmp, ref recruitTmp);
-            if (Scribe.mode == LoadSaveMode.PostLoadInit)
-            {
-                isAlive ??= new Dictionary<StudentDef, bool>();
-                isRecruited ??= new Dictionary<StudentDef, bool>();
-            }
+            Scribe_Collections.Look<StudentDef>(ref aliveStudents, true, "AliveStudents", LookMode.Def);
+            Scribe_Collections.Look<StudentDef>(ref recruitedStudents, true, "RecruitedStudents", LookMode.Def);
+            Scribe_Collections.Look<StudentDef, Pawn>(ref documents, "document", LookMode.Def, LookMode.Deep);
         }
 
         public RimArchiveGameComponent(Game game) : base() { }

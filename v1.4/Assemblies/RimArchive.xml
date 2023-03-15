@@ -4,52 +4,52 @@
         <name>RimArchive</name>
     </assembly>
     <members>
-        <member name="T:RimArchive.Defs.StudentDef">
+        <member name="T:RimArchive.StudentDef">
             <summary>
             Extends from PawnKindDef. This should give it more editable field.
             </summary>
         </member>
-        <member name="F:RimArchive.Defs.StudentDef.School">
+        <member name="F:RimArchive.StudentDef.School">
             <summary>
             The School where this student is belong to;
             </summary>
         </member>
-        <member name="F:RimArchive.Defs.StudentDef.Icon">
+        <member name="F:RimArchive.StudentDef.Icon">
             <summary>
             Icon texture.
             </summary>
         </member>
-        <member name="F:RimArchive.Defs.StudentDef.Portrait">
+        <member name="F:RimArchive.StudentDef.Portrait">
             <summary>
             Portrait texture.
             </summary>
         </member>
-        <member name="F:RimArchive.Defs.StudentDef.Memorial">
+        <member name="F:RimArchive.StudentDef.Memorial">
             <summary>
             Memorial Hall Picture
             </summary>
         </member>
-        <member name="F:RimArchive.Defs.StudentDef.skills">
+        <member name="F:RimArchive.StudentDef.skills">
             <summary>
             Skill level and passion
             </summary>
         </member>
-        <member name="T:RimArchive.Defs.PassionSkill">
+        <member name="T:RimArchive.PassionSkill">
             <summary>
             Used to set skill level and passion. Must be the subnode of StudentDef.
             </summary>
         </member>
-        <member name="F:RimArchive.Defs.PassionSkill.skill">
+        <member name="F:RimArchive.PassionSkill.skill">
             <summary>
             Skill name. Must match the defName of the SkillDef
             </summary>
         </member>
-        <member name="F:RimArchive.Defs.PassionSkill.level">
+        <member name="F:RimArchive.PassionSkill.level">
             <summary>
             The level of this skill. Integer.
             </summary>
         </member>
-        <member name="F:RimArchive.Defs.PassionSkill.passion">
+        <member name="F:RimArchive.PassionSkill.passion">
             <summary>
             Passion level of this skill. 0 - no interest, 1 - minor interest, 2 - major interest
             </summary>
@@ -77,6 +77,11 @@
         <member name="F:RimArchive.RimArchive.Sensei">
             <summary>
             Sensei's icon
+            </summary>
+        </member>
+        <member name="F:RimArchive.RimArchive.SSR">
+            <summary>
+            The button for recruitment
             </summary>
         </member>
         <member name="F:RimArchive.RimArchive.cachedAllStudentsBySchool">

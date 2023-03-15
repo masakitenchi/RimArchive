@@ -123,7 +123,7 @@
 
 	</AlienRace.ThingDef_AlienRace>
 
-	<RimArchive.Defs.StudentDef ParentName="RA_BasePawn">
+	<RimArchive.StudentDef ParentName="RA_BasePawn">
 		<defName>BA_Midori</defName>
 		<label>绿</label>
 		<description>ミレニアムサイエンススクール所属、ゲーム開発部のイラストレーター。
@@ -208,7 +208,7 @@
 				<fireLevel>0</fireLevel>
 			</Social>
 		</skills>
-	</RimArchive.Defs.StudentDef>
+	</RimArchive.StudentDef>
 
 
 </Defs>
