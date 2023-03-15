@@ -24,7 +24,7 @@
 		<hair/>
 		<beard/>
 		<operatorType>RA_OperatorClass_SRT</operatorType>
-		<stand>Portraits/Saki</stand>
+		<stand>Portraits/Normal/Saki</stand>
 		<standOffset/>
 		<standRatio/>
 		<headPortrait>Icons/Saki</headPortrait>
@@ -37,62 +37,62 @@
 		<skills>
 			<li>
 				<skill>Animals</skill>
-				<level>3</level>
+				<level>5</level>
 				<fireLevel>0</fireLevel>
 			</li>
 			<li>
 				<skill>Artistic</skill>
-				<level>1</level>
+				<level>4</level>
 				<fireLevel>0</fireLevel>
 			</li>
 			<li>
 				<skill>Construction</skill>
-				<level>10</level>
-				<fireLevel>2</fireLevel>
+				<level>6</level>
+				<fireLevel>0</fireLevel>
 			</li>
 			<li>
 				<skill>Cooking</skill>
-				<level>2</level>
+				<level>6</level>
 				<fireLevel>0</fireLevel>
 			</li>
 			<li>
 				<skill>Crafting</skill>
-				<level>12</level>
-				<fireLevel>2</fireLevel>
+				<level>8</level>
+				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Intellectual</skill>
-				<level>9</level>
-				<fireLevel>2</fireLevel>
+				<level>8</level>
+				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Medicine</skill>
-				<level>2</level>
+				<level>7</level>
 				<fireLevel>0</fireLevel>
 			</li>
 			<li>
 				<skill>Melee</skill>
-				<level>15</level>
+				<level>6</level>
 				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Mining</skill>
 				<level>0</level>
-				<fireLevel>0</fireLevel>
+				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Plants</skill>
-				<level>2</level>
-				<fireLevel>0</fireLevel>
-			</li>
-			<li>
-				<skill>Shooting</skill>
-				<level>20</level>
+				<level>8</level>
 				<fireLevel>2</fireLevel>
 			</li>
 			<li>
-				<skill>Social</skill>
+				<skill>Shooting</skill>
 				<level>8</level>
+				<fireLevel>1</fireLevel>
+			</li>
+			<li>
+				<skill>Social</skill>
+				<level>6</level>
 				<fireLevel>0</fireLevel>
 			</li>
 		</skills>
@@ -186,51 +186,51 @@
 		<School>SRT</School>
 		<skills>
 			<Animals>
-				<level>3</level>
+				<level>5</level>
 				<fireLevel>0</fireLevel>
 			</Animals>
 			<Artistic>
-				<level>1</level>
+				<level>4</level>
 				<fireLevel>0</fireLevel>
 			</Artistic>
 			<Construction>
-				<level>10</level>
-				<fireLevel>2</fireLevel>
+				<level>6</level>
+				<fireLevel>0</fireLevel>
 			</Construction>
 			<Cooking>
-				<level>2</level>
+				<level>6</level>
 				<fireLevel>0</fireLevel>
 			</Cooking>
 			<Crafting>
-				<level>12</level>
-				<fireLevel>2</fireLevel>
+				<level>8</level>
+				<fireLevel>1</fireLevel>
 			</Crafting>
 			<Intellectual>
-				<level>9</level>
-				<fireLevel>2</fireLevel>
+				<level>8</level>
+				<fireLevel>1</fireLevel>
 			</Intellectual>
 			<Medicine>
-				<level>2</level>
+				<level>7</level>
 				<fireLevel>0</fireLevel>
 			</Medicine>
 			<Melee>
-				<level>15</level>
+				<level>6</level>
 				<fireLevel>1</fireLevel>
 			</Melee>
 			<Mining>
 				<level>0</level>
-				<fireLevel>0</fireLevel>
+				<fireLevel>1</fireLevel>
 			</Mining>
 			<Plants>
-				<level>2</level>
-				<fireLevel>0</fireLevel>
+				<level>8</level>
+				<fireLevel>2</fireLevel>
 			</Plants>
 			<Shooting>
-				<level>20</level>
-				<fireLevel>2</fireLevel>
+				<level>8</level>
+				<fireLevel>1</fireLevel>
 			</Shooting>
 			<Social>
-				<level>8</level>
+				<level>6</level>
 				<fireLevel>0</fireLevel>
 			</Social>
 		</skills>

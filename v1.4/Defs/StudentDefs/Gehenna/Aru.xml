@@ -22,7 +22,7 @@
 		<hair/>
 		<beard/>
 		<operatorType>RA_OperatorClass_Gehenna</operatorType>
-		<stand>Portraits/Aru</stand>
+		<stand>Portraits/Normal/Aru</stand>
 		<standOffset/>
 		<standRatio/>
 		<headPortrait>Icons/Aru</headPortrait>
@@ -40,7 +40,7 @@
 			</li>
 			<li>
 				<skill>Artistic</skill>
-				<level>1</level>
+				<level>5</level>
 				<fireLevel>0</fireLevel>
 			</li>
 			<li>
@@ -55,12 +55,12 @@
 			</li>
 			<li>
 				<skill>Crafting</skill>
-				<level>12</level>
-				<fireLevel>2</fireLevel>
+				<level>6</level>
+				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Intellectual</skill>
-				<level>9</level>
+				<level>10</level>
 				<fireLevel>2</fireLevel>
 			</li>
 			<li>
@@ -70,13 +70,13 @@
 			</li>
 			<li>
 				<skill>Melee</skill>
-				<level>15</level>
+				<level>4</level>
 				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Mining</skill>
 				<level>0</level>
-				<fireLevel>0</fireLevel>
+				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Plants</skill>
@@ -85,13 +85,13 @@
 			</li>
 			<li>
 				<skill>Shooting</skill>
-				<level>20</level>
+				<level>12</level>
 				<fireLevel>2</fireLevel>
 			</li>
 			<li>
 				<skill>Social</skill>
-				<level>8</level>
-				<fireLevel>0</fireLevel>
+				<level>6</level>
+				<fireLevel>1</fireLevel>
 			</li>
 		</skills>
 	</AK_Dll.OperatorDef>
@@ -191,7 +191,7 @@
 				<fireLevel>0</fireLevel>
 			</Animals>
 			<Artistic>
-				<level>1</level>
+				<level>5</level>
 				<fireLevel>0</fireLevel>
 			</Artistic>
 			<Construction>
@@ -203,11 +203,11 @@
 				<fireLevel>0</fireLevel>
 			</Cooking>
 			<Crafting>
-				<level>12</level>
-				<fireLevel>2</fireLevel>
+				<level>6</level>
+				<fireLevel>1</fireLevel>
 			</Crafting>
 			<Intellectual>
-				<level>9</level>
+				<level>10</level>
 				<fireLevel>2</fireLevel>
 			</Intellectual>
 			<Medicine>
@@ -215,24 +215,24 @@
 				<fireLevel>0</fireLevel>
 			</Medicine>
 			<Melee>
-				<level>15</level>
+				<level>4</level>
 				<fireLevel>1</fireLevel>
 			</Melee>
 			<Mining>
 				<level>0</level>
-				<fireLevel>0</fireLevel>
+				<fireLevel>1</fireLevel>
 			</Mining>
 			<Plants>
 				<level>2</level>
 				<fireLevel>0</fireLevel>
 			</Plants>
 			<Shooting>
-				<level>20</level>
+				<level>12</level>
 				<fireLevel>2</fireLevel>
 			</Shooting>
 			<Social>
-				<level>8</level>
-				<fireLevel>0</fireLevel>
+				<level>6</level>
+				<fireLevel>1</fireLevel>
 			</Social>
 		</skills>
 	</RimArchive.StudentDef>

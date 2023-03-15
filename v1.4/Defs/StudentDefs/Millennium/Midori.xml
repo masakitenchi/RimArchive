@@ -22,7 +22,7 @@
 		<hair/>
 		<beard/>
 		<operatorType>RA_OperatorClass_Millennium</operatorType>
-		<stand>Portraits/Midori</stand>
+		<stand>Portraits/Normal/Midori</stand>
 		<standOffset/>
 		<standRatio/>
 		<headPortrait>Icons/Midori</headPortrait>
@@ -40,13 +40,13 @@
 			</li>
 			<li>
 				<skill>Artistic</skill>
-				<level>1</level>
-				<fireLevel>0</fireLevel>
+				<level>5</level>
+				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Construction</skill>
-				<level>10</level>
-				<fireLevel>2</fireLevel>
+				<level>4</level>
+				<fireLevel>0</fireLevel>
 			</li>
 			<li>
 				<skill>Cooking</skill>
@@ -55,8 +55,8 @@
 			</li>
 			<li>
 				<skill>Crafting</skill>
-				<level>12</level>
-				<fireLevel>2</fireLevel>
+				<level>6</level>
+				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Intellectual</skill>
@@ -65,13 +65,13 @@
 			</li>
 			<li>
 				<skill>Medicine</skill>
-				<level>2</level>
+				<level>6</level>
 				<fireLevel>0</fireLevel>
 			</li>
 			<li>
 				<skill>Melee</skill>
-				<level>15</level>
-				<fireLevel>1</fireLevel>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
 			</li>
 			<li>
 				<skill>Mining</skill>
@@ -85,12 +85,12 @@
 			</li>
 			<li>
 				<skill>Shooting</skill>
-				<level>20</level>
-				<fireLevel>2</fireLevel>
+				<level>9</level>
+				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Social</skill>
-				<level>8</level>
+				<level>4</level>
 				<fireLevel>0</fireLevel>
 			</li>
 		</skills>
@@ -164,27 +164,27 @@
 				<fireLevel>0</fireLevel>
 			</Animals>
 			<Artistic>
-				<level>1</level>
-				<fireLevel>0</fireLevel>
+				<level>5</level>
+				<fireLevel>1</fireLevel>
 			</Artistic>
 			<Construction>
-				<level>10</level>
-				<fireLevel>2</fireLevel>
+				<level>4</level>
+				<fireLevel>0</fireLevel>
 			</Construction>
 			<Cooking>
 				<level>2</level>
 				<fireLevel>0</fireLevel>
 			</Cooking>
 			<Crafting>
-				<level>12</level>
-				<fireLevel>2</fireLevel>
+				<level>6</level>
+				<fireLevel>1</fireLevel>
 			</Crafting>
 			<Intellectual>
 				<level>9</level>
 				<fireLevel>2</fireLevel>
 			</Intellectual>
 			<Medicine>
-				<level>2</level>
+				<level>6</level>
 				<fireLevel>0</fireLevel>
 			</Medicine>
 			<Melee>
@@ -200,11 +200,11 @@
 				<fireLevel>0</fireLevel>
 			</Plants>
 			<Shooting>
-				<level>20</level>
-				<fireLevel>2</fireLevel>
+				<level>9</level>
+				<fireLevel>1</fireLevel>
 			</Shooting>
 			<Social>
-				<level>8</level>
+				<level>4</level>
 				<fireLevel>0</fireLevel>
 			</Social>
 		</skills>

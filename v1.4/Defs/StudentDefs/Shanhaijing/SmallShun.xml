@@ -22,7 +22,7 @@
 		<hair/>
 		<beard/>
 		<operatorType>RA_OperatorClass_Shanhaijing</operatorType>
-		<stand>Portraits/Shun_Youjyo</stand>
+		<stand>Portraits/Normal/Shun_Youjyo</stand>
 		<standOffset/>
 		<standRatio/>
 		<headPortrait>Icons/Shun_Youjyo</headPortrait>
@@ -36,17 +36,17 @@
 			<li>
 				<skill>Animals</skill>
 				<level>3</level>
-				<fireLevel>0</fireLevel>
+				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Artistic</skill>
-				<level>1</level>
-				<fireLevel>0</fireLevel>
+				<level>8</level>
+				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Construction</skill>
-				<level>10</level>
-				<fireLevel>2</fireLevel>
+				<level>5</level>
+				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Cooking</skill>
@@ -55,23 +55,23 @@
 			</li>
 			<li>
 				<skill>Crafting</skill>
-				<level>12</level>
-				<fireLevel>2</fireLevel>
+				<level>7</level>
+				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Intellectual</skill>
 				<level>9</level>
-				<fireLevel>2</fireLevel>
+				<fireLevel>1</fireLevel>
 			</li>
 			<li>
 				<skill>Medicine</skill>
-				<level>2</level>
+				<level>7</level>
 				<fireLevel>0</fireLevel>
 			</li>
 			<li>
 				<skill>Melee</skill>
-				<level>15</level>
-				<fireLevel>1</fireLevel>
+				<level>5</level>
+				<fireLevel>0</fireLevel>
 			</li>
 			<li>
 				<skill>Mining</skill>
@@ -80,18 +80,18 @@
 			</li>
 			<li>
 				<skill>Plants</skill>
-				<level>2</level>
+				<level>7</level>
 				<fireLevel>0</fireLevel>
 			</li>
 			<li>
 				<skill>Shooting</skill>
-				<level>20</level>
+				<level>10</level>
 				<fireLevel>2</fireLevel>
 			</li>
 			<li>
 				<skill>Social</skill>
-				<level>8</level>
-				<fireLevel>0</fireLevel>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
 			</li>
 		</skills>
 	</AK_Dll.OperatorDef>
@@ -165,51 +165,51 @@
 		<skills>
 			<Animals>
 				<level>3</level>
-				<fireLevel>0</fireLevel>
+				<fireLevel>1</fireLevel>
 			</Animals>
 			<Artistic>
-				<level>1</level>
-				<fireLevel>0</fireLevel>
+				<level>8</level>
+				<fireLevel>1</fireLevel>
 			</Artistic>
 			<Construction>
-				<level>10</level>
-				<fireLevel>2</fireLevel>
+				<level>5</level>
+				<fireLevel>1</fireLevel>
 			</Construction>
 			<Cooking>
 				<level>2</level>
 				<fireLevel>0</fireLevel>
 			</Cooking>
 			<Crafting>
-				<level>12</level>
-				<fireLevel>2</fireLevel>
+				<level>7</level>
+				<fireLevel>1</fireLevel>
 			</Crafting>
 			<Intellectual>
 				<level>9</level>
-				<fireLevel>2</fireLevel>
+				<fireLevel>1</fireLevel>
 			</Intellectual>
 			<Medicine>
-				<level>2</level>
+				<level>7</level>
 				<fireLevel>0</fireLevel>
 			</Medicine>
 			<Melee>
-				<level>15</level>
-				<fireLevel>1</fireLevel>
+				<level>5</level>
+				<fireLevel>0</fireLevel>
 			</Melee>
 			<Mining>
 				<level>0</level>
 				<fireLevel>0</fireLevel>
 			</Mining>
 			<Plants>
-				<level>2</level>
+				<level>7</level>
 				<fireLevel>0</fireLevel>
 			</Plants>
 			<Shooting>
-				<level>20</level>
+				<level>10</level>
 				<fireLevel>2</fireLevel>
 			</Shooting>
 			<Social>
-				<level>8</level>
-				<fireLevel>0</fireLevel>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
 			</Social>
 		</skills>
 	</RimArchive.StudentDef>
