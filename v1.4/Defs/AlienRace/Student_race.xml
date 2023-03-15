@@ -13,33 +13,42 @@
 				<immuneToXenophobia>false</immuneToXenophobia>
 				<humanRecipeImport>true</humanRecipeImport>
 				<alienPartGenerator>
-					<headOffset>(0.01, -0.35)</headOffset>
-					<headOffsetDirectional>
+					<headBodyPartDef>halo</headBodyPartDef>
+					<customDrawSize>(1.5, 1.5)</customDrawSize>
+					<headOffset>(0, 0.2)</headOffset>
+					<!-- <headOffsetDirectional>
 						<east>(-0.11, -0.02)</east>
 						<west>(0.11, -0.02)</west>
-					</headOffsetDirectional>
+					</headOffsetDirectional> -->
 					<bodyTypes>
 						<li>Female</li>
+						<li>Thin</li>
 					</bodyTypes>
 
 					<headTypes>
 						<li>Female_AverageNormal</li>
+						<li>BA_HeadTypeDef_Haruka</li>
 					</headTypes>
 					<colorChannels>
 						<li>
 							<name>skin</name>
-							<first Class="ColorGenerator_Options" Inherit="false">
-								<options>
-									<li>
-										<weight>10</weight>
-										<only>RGBA(1,1,1,1)</only>
-									</li>
-								</options>
+							<first Class="ColorGenerator_Single" Inherit="false">
+								<color>RGBA(255, 255, 255, 255)</color>
 							</first>
+							<second Class="ColorGenerator_Single" Inherit="false">
+								<color>RGBA(255, 255, 255, 255)</color>
+							</second>
+						</li>
+						<li>
+							<name>hair</name>
+							<first Class="ColorGenerator_Single" Inherit="false">
+								<color>RGBA(255, 255, 255, 255)</color>
+							</first>
+							<second Class="ColorGenerator_Single" Inherit="false">
+								<color>RGBA(255, 255, 255, 255)</color>
+							</second>
 						</li>
 					</colorChannels>
-
-
 				</alienPartGenerator>
 				<maxDamageForSocialfight>6</maxDamageForSocialfight>
 			</generalSettings>
@@ -70,7 +79,6 @@
 			<raceRestriction>
 				<blackEndoCategories>
 					<li>Melanin</li>
-					<li>HairColor</li>
 				</blackEndoCategories>
 			</raceRestriction>
 

@@ -11,6 +11,7 @@
         <genes>
             <li>Body_Thin</li>
             <li>Skin_SheerWhite</li>
+            <li>Hair_SnowWhite</li>
         </genes>
     </XenotypeDef>
 </Defs>

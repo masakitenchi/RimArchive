@@ -9,6 +9,7 @@
 		<bodyTypeGlobal>Female</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_Adult</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>

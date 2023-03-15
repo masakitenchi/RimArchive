@@ -36,6 +36,10 @@ namespace RimArchive
         /// Sensei's icon
         /// </summary>
         public static readonly Texture2D Sensei = ContentFinder<Texture2D>.Get("Icons/Sensei");
+        /// <summary>
+        /// The button for recruitment
+        /// </summary>
+        public static readonly Texture2D SSR = ContentFinder<Texture2D>.Get("Things/Gacha/SSR");
         //
         internal static readonly string packageId = "auxia.weaponpack.bluearchive";
 #nullable enable

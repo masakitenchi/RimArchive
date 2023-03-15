@@ -105,7 +105,7 @@
 		</modExtensions>-->
 	</AK_Dll.OperatorDef>
 	
-	<AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
+	<!-- <AlienRace.ThingDef_AlienRace ParentName="StudentThingBase">
 		<defName>Gehenna_Haruka</defName>
 		<label>春香</label>
 		<description>所属格赫纳学园的便利屋68的正式社员。\n\n因为阴沉懦弱的性格，从小就被人欺负，最近因为阿露的帮忙终于不再受人欺负了。此后作为便利屋68老幺活动着。\n\n虽然因为腼腆而缺乏自信，但是出的主意可能是便利屋中最恐怖的？</description>
@@ -134,7 +134,7 @@
 		</statBases>
 
 
-	</AlienRace.ThingDef_AlienRace>
+	</AlienRace.ThingDef_AlienRace> -->
 
 	<RimArchive.Defs.StudentDef ParentName="RA_BasePawn">
 		<defName>BA_Haruka</defName>
@@ -175,6 +175,7 @@
 			<last>Igusa</last>
 		</name>
 		<School>Gehenna</School>
+		<forcedHeadType>BA_HeadTypeDef_Haruka</forcedHeadType>
 		<skills>
 			<Animals>
 				<level>3</level>

@@ -4,11 +4,12 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
+using AlienRace;
 using static RimArchive.RimArchive;
+using static RimArchive.Debug;
 using static Verse.Widgets;
 using System.Text;
 using RimArchive.Defs;
-using UnityEngine;
 using UnityEngine.Profiling;
 using UnityEngine.UI;
 
@@ -31,7 +32,6 @@ namespace RimArchive.Window
         private static Vector2 _profile = Vector2.zero;
         private static Vector2 _sclscrbr = Vector2.zero;
         private static int _SkillCount = DefDatabase<SkillDef>.DefCount;
-        private static float _timer = 0f;
         private static float _levelLabelWidth = -1f;
         private static bool _inStudentProfile = false;
         private static bool _clickedSchoolIcon = false;
@@ -127,25 +127,23 @@ namespace RimArchive.Window
                     Rect hallRect = new Rect(studentsRect);
                     hallRect.xMin += studentsRect.width / 4;
                     hallRect.xMax -= studentsRect.width / 4;
-                    Rect skillRect = new Rect(studentsRect);
-                    skillRect.xMin = hallRect.xMax;
-                    skillRect.xMax = studentsRect.xMax;
                     Rect abilityRect = new Rect(studentsRect);
-                    abilityRect.xMax = hallRect.x;
+                    abilityRect.xMin = hallRect.xMax;
+                    abilityRect.xMax = studentsRect.xMax;
+                    Rect skillRect = new Rect(studentsRect);
+                    skillRect.xMax = hallRect.x;
                     /*hallRect.size = studentsRect.size / 4 * 3;
                     hallRect = hallRect.CenteredOnXIn(studentsRect);
                     hallRect = hallRect.CenteredOnYIn(studentsRect);*/
-                    GUI.DrawTexture(outRect, BaseContent.YellowTex);
-                    //DrawProfile(outRect);
-                    //备选项：
-                    GUI.DrawTexture(hallRect, _currentStudent.Memorial, ScaleMode.ScaleToFit, true, 0, Color.white, 0, 10);
-                    //GUI.DrawTexture(hallRect, _currentStudent.Memorial);
-                    //DrawMemorialHall(hallRect);
-                    //GUI.DrawTexture(abilityRect, BaseContent.BlackTex);
-                    DrawBox(abilityRect, 1, BaseContent.WhiteTex);
-                    DrawSkillAndTrait(abilityRect);
-                    //GUI.DrawTexture(skillRect, BaseContent.WhiteTex);
-                    DrawAbility(skillRect);
+                    //GUI.DrawTexture(outRect, BaseContent.YellowTex);
+                    DrawBox(outRect, 1, BaseContent.WhiteTex);
+                    DrawProfile(outRect);
+                    DrawMemorialHall(hallRect);
+                    //GUI.DrawTexture(skillRect, BaseContent.BlackTex);
+                    DrawBox(skillRect, 1, BaseContent.WhiteTex);
+                    DrawSkillAndTrait(skillRect);
+                    //GUI.DrawTexture(abilityRect, BaseContent.WhiteTex);
+                    DrawAbility(abilityRect);
                 }
             }
             catch (Exception ex)
@@ -251,6 +249,7 @@ namespace RimArchive.Window
                         {
                             _currentStudent = students[studentNo];
                             _cachedStudent = PawnGenerator.GeneratePawn(new PawnGenerationRequest(_currentStudent as PawnKindDef,
+                                faction: Faction.OfPlayer,
                                 canGeneratePawnRelations: false,
                                 mustBeCapableOfViolence: true,
                                 colonistRelationChanceFactor: 0f,
@@ -306,12 +305,29 @@ namespace RimArchive.Window
         #region PROFILE
         static void DrawMemorialHall(Rect outRect)
         {
+            //备选项：
+            GUI.DrawTexture(outRect.ContractedBy(_Margin.x), _currentStudent.Memorial, ScaleMode.ScaleAndCrop, true, 0, Color.white, 0, 10);
+            //GUI.DrawTexture(hallRect, _currentStudent.Memorial);
+            //Rect recruitBtn = new Rect(outRect);
+            //GUI.DrawTexture(recruitBtn, BaseContent.WhiteTex);
 
         }
 
+        private static Vector2 _descriptionscrbr;
         static void DrawProfile(Rect outRect)
         {
-
+            BeginGroup(outRect);
+            //资料部分：左上->校徽， 右侧：<description>，最右侧：部活...这样？
+            Rect schoolIcon = new Rect(outRect.AtZero());
+            Rect description = new Rect(outRect.AtZero());
+            schoolIcon.size = new Vector2(outRect.height, outRect.height);
+            description.width -= schoolIcon.width;
+            description.x += schoolIcon.width + 2f;
+            //是否可以保证_currentSchool必定为当前页面学生的学校呢...
+            DrawTextureFitted(schoolIcon, _currentSchool.tex, 1f);
+            DrawLineVertical(schoolIcon.xMax, 0f, schoolIcon.height);
+            LabelScrollable(description, _currentStudent.description, ref _descriptionscrbr, false);
+            EndGroup();
         }
 
 
@@ -322,7 +338,7 @@ namespace RimArchive.Window
             Verse.Text.Font = GameFont.Small;
             BeginGroup(outRect);
             Rect skillRect = new Rect(outRect.AtZero().ContractedBy(_Margin.x));
-            //GUI.DrawTexture(skillRect, BaseContent.WhiteTex);
+            //GUI.DrawTexture(abilityRect, BaseContent.WhiteTex);
             BeginGroup(skillRect);
             Rect skillTab = new Rect(skillRect.AtZero());
 
@@ -338,7 +354,7 @@ namespace RimArchive.Window
                 }
             }
             //SkillUI.DrawSkillsOf(_cachedStudent, Vector2.zero, (Current.ProgramState != ProgramState.Playing) ? SkillUI.SkillDrawMode.Menu : SkillUI.SkillDrawMode.Gameplay,skillTab);
-            //Rect skillRectEach = new Rect(skillRect.ContractedBy(_Margin.x));
+            //Rect skillRectEach = new Rect(abilityRect.ContractedBy(_Margin.x));
             skillTab.SplitHorizontally(skillTab.height / 3 * 2, out Rect skillTabGroup, out Rect TraitsGroup);
             #region skillTab
             BeginGroup(skillTab);
@@ -353,12 +369,12 @@ namespace RimArchive.Window
             passionIcon.width = SkillUI.SkillHeight;
             //passionIcon.xMax = skillbar.x;
             Rect label = new Rect(skillTabGroup.AtZero());
-            
+
             foreach (SkillRecord skill in _cachedStudent.skills.skills)
             {
                 FillableBar(skillbar, (float)skill.Level / SkillRecord.MaxLevel, BaseContent.GreyTex, BaseContent.ClearTex, true);
                 DrawTextureFitted(passionIcon, getIconforPassion(skill.passion), 1f);
-                LabelFit(label, string.Concat(skill.def.LabelCap,"   ",skill.Level.ToString()));
+                LabelFit(label, string.Concat(skill.def.LabelCap, "   ", skill.Level.ToString()));
                 //LabelCacheHeight(ref skillRectEach, skill.def.defName.Translate());
                 skillbar.y += skillTabGroup.height;
                 passionIcon.y += skillTabGroup.height;
@@ -397,12 +413,21 @@ namespace RimArchive.Window
         void DrawAbility(Rect outRect)
         {
             BeginGroup(outRect);
-            Rect inRect = outRect.ContractedBy(_Margin.x);
-            //Show Traits
-            /*foreach(TraitRequirement outtrait in _currentStudent.forcedTraits)
+            Rect inRect = outRect.AtZero().ContractedBy(_Margin.x);
+            DrawBox(inRect, 1, BaseContent.WhiteTex);
+            Rect recruitBtn = outRect.AtZero().CenteredOnYIn(outRect);
+            recruitBtn.size = _iconSize;
+            if(ButtonImageFitted(recruitBtn, SSR))
             {
-
-            }*/
+                _inStudentProfile = false;
+                this.Close();
+                Map currentmap = Find.CurrentMap;
+                IntVec3 intVec3 = DropCellFinder.TradeDropSpot(currentmap);
+                ActiveDropPodInfo activeDropPodInfo = new ActiveDropPodInfo();
+                activeDropPodInfo.innerContainer.TryAddOrTransfer(_cachedStudent as Thing);
+                DropPodUtility.MakeDropPodAt(intVec3, currentmap, activeDropPodInfo);
+                Messages.Message("StudentArrived".Translate(_cachedStudent.NameFullColored), new LookTargets(intVec3, currentmap), MessageTypeDefOf.PositiveEvent);
+            }
             EndGroup();
         }
         //Show WorkTags
@@ -420,6 +445,18 @@ namespace RimArchive.Window
             //Remove harmful hediffs or addiction
             p.health.hediffSet.hediffs = p.health.hediffSet.hediffs.Where(x => !(x.def.isBad || x.def.IsAddiction)).ToList();
             p.Name = _currentStudent.name;
+            PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Childhood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
+            PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Adulthood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
+            p.story.headType = _currentStudent.forcedHeadType;
+            p.story.hairDef = _currentStudent.forcedHair;
+            p.story.bodyType = BodyTypeDefOf.Thin;
+            p.story.traits.allTraits.Clear();
+            foreach(TraitRequirement trait in _currentStudent.forcedTraits)
+            {
+                p.story.traits.GainTrait(new Trait(trait.def, trait.degree ?? 0, true));
+            }
+            //Debug log for backstory. Maybe vanilla cannot recognize har's backstory? but with HAR it should inject into vanilla code, doesn't it?
+            DbgMsg($"Pawn {p.Name}: \nrace:{p.kindDef.race}\n kindDef {p.kindDef},\n backstoryoverride: {string.Join("\n", p.kindDef.backstoryFiltersOverride.First().categories.Select(x => x + "\n"))}");
         }
         static Texture2D getIconforPassion(Passion passion)
         {
@@ -435,7 +472,6 @@ namespace RimArchive.Window
                     throw new NullReferenceException("No such Passion Enum");
             }
         }
-
 
         #endregion
     }

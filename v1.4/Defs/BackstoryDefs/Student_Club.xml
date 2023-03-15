@@ -39,6 +39,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_ASSC</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
@@ -52,6 +53,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_Arius</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
@@ -65,6 +67,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_CC</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
@@ -78,6 +81,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_ACC</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
@@ -91,6 +95,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_DC</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
@@ -104,6 +109,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_EC</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
@@ -117,6 +123,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_PS68</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
@@ -130,6 +137,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_GDD</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
@@ -143,6 +151,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_GRS</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
@@ -156,6 +165,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_JTF</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
@@ -169,6 +179,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_MWC</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
@@ -182,6 +193,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_NRD</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
@@ -195,6 +207,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_RABBIT</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
@@ -208,6 +221,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_Seminar</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
@@ -221,6 +235,7 @@
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
+			<li>RimArchive_Backstory</li>
 			<li>RimArchive_PBG</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>

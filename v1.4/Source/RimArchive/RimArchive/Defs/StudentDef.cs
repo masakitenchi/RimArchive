@@ -33,6 +33,9 @@ namespace RimArchive.Defs
         /// Skill level and passion
         /// </summary>
         new public List<PassionSkill> skills;
+
+        public HeadTypeDef forcedHeadType;
+        public HairDef forcedHair;
         internal void Init()
         {
             Match match = RimArchive.studentNameRegex.Match(this.defName);
