@@ -9,6 +9,11 @@
             Extends from PawnKindDef. This should give it more editable field.
             </summary>
         </member>
+        <member name="F:RimArchive.StudentDef.name">
+            <summary>
+            The name class used in vanilla. Contains 3 fields: first, last, nick.
+            </summary>
+        </member>
         <member name="F:RimArchive.StudentDef.School">
             <summary>
             The School where this student is belong to;
@@ -82,6 +87,11 @@
         <member name="F:RimArchive.RimArchive.SSR">
             <summary>
             The button for recruitment
+            </summary>
+        </member>
+        <member name="P:RimArchive.RimArchive.StudentDocument">
+            <summary>
+            Used to access the Document system in current game
             </summary>
         </member>
         <member name="F:RimArchive.RimArchive.cachedAllStudentsBySchool">

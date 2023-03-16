@@ -12,6 +12,6 @@ namespace RimArchive
     /// </summary>
     public class RA_StudentModExtension : DefModExtension
     {
-        public string School;
+        private string School;
     }
 }

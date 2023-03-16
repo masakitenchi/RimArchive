@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace RimArchive;
 
+#pragma warning disable CS1591
 public class IconDef : Def
 {
 #pragma warning disable CS0649

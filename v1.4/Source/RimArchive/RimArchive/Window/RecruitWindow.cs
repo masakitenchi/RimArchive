@@ -373,7 +373,7 @@ namespace RimArchive.Window
             foreach (SkillRecord skill in _cachedStudent.skills.skills)
             {
                 FillableBar(skillbar, (float)skill.Level / SkillRecord.MaxLevel, BaseContent.GreyTex, BaseContent.ClearTex, true);
-                DrawTextureFitted(passionIcon, getIconforPassion(skill.passion), 1f);
+                DrawTextureFitted(passionIcon, IconforPassion(skill.passion), 1f);
                 LabelFit(label, string.Concat(skill.def.LabelCap, "   ", skill.Level.ToString()));
                 //LabelCacheHeight(ref skillRectEach, skill.def.defName.Translate());
                 skillbar.y += skillTabGroup.height;
@@ -468,21 +468,13 @@ namespace RimArchive.Window
             //Debug log for backstory. Maybe vanilla cannot recognize har's backstory? but with HAR it should inject into vanilla code, doesn't it?
             //DbgMsg($"Pawn {p.Name}: \nrace:{p.kindDef.race}\n kindDef {p.kindDef},\n backstoryoverride: {string.Join("\n", p.kindDef.backstoryFiltersOverride.First().categories.Select(x => x + "\n"))}");
         }
-        static Texture2D getIconforPassion(Passion passion)
+        static Texture2D IconforPassion(Passion passion) => passion switch
         {
-            switch (passion)
-            {
-                case Passion.None:
-                    return BaseContent.ClearTex;
-                case Passion.Minor:
-                    return SkillUI.PassionMinorIcon;
-                case Passion.Major:
-                    return SkillUI.PassionMajorIcon;
-                default:
-                    throw new NullReferenceException("No such Passion Enum");
-            }
-        }
-
+            Passion.None => BaseContent.ClearTex,
+            Passion.Minor => SkillUI.PassionMinorIcon,
+            Passion.Major => SkillUI.PassionMajorIcon,
+            _ => throw new NullReferenceException("No such Passion Enum")
+        };
         #endregion
     }
 }
