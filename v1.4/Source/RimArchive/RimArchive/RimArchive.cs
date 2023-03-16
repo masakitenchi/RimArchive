@@ -41,6 +41,9 @@ namespace RimArchive
         /// </summary>
         public static readonly Texture2D SSR = ContentFinder<Texture2D>.Get("Things/Gacha/SSR");
 
+        /// <summary>
+        /// Used to access the Document system in current game
+        /// </summary>
         public static RimArchiveGameComponent StudentDocument => Current.Game.GetComponent<RimArchiveGameComponent>();
         //
         internal static readonly string packageId = "auxia.weaponpack.bluearchive";

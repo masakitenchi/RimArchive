@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs</xpath>
+        <value>
+            <AK_DLL.OperatorClassDef>
+                <defName>RA_OperatorClass_Gehenna</defName>
+                <label>Gehenna</label>
+                <sortingOrder>10</sortingOrder>
+                <textureFolder>SchoolIcon</textureFolder>
+            </AK_DLL.OperatorClassDef>
+        
+            <AK_DLL.OperatorClassDef>
+                <defName>RA_OperatorClass_Millennium</defName>
+                <label>Millennium</label>
+                <sortingOrder>11</sortingOrder>
+                <textureFolder>SchoolIcon</textureFolder>
+            </AK_DLL.OperatorClassDef>
+        
+            <AK_DLL.OperatorClassDef>
+                <defName>RA_OperatorClass_Shanhaijing</defName>
+                <label>Shanhaijing</label>
+                <sortingOrder>12</sortingOrder>
+                <textureFolder>SchoolIcon</textureFolder>
+            </AK_DLL.OperatorClassDef>
+        
+            <AK_DLL.OperatorClassDef>
+                <defName>RA_OperatorClass_SRT</defName>
+                <label>SRT</label>
+                <sortingOrder>13</sortingOrder>
+                <textureFolder>SchoolIcon</textureFolder>
+            </AK_DLL.OperatorClassDef>
+        
+            <AK_DLL.OperatorClassDef>
+                <defName>RA_OperatorClass_Hyakkiyako</defName>
+                <label>Hyakkiyako</label>
+                <sortingOrder>14</sortingOrder>
+                <textureFolder>SchoolIcon</textureFolder>
+            </AK_DLL.OperatorClassDef>
+        
+            <AK_DLL.OperatorClassDef>
+                <defName>RA_OperatorClass_Abydos</defName>
+                <label>Abydos</label>
+                <sortingOrder>15</sortingOrder>
+                <textureFolder>SchoolIcon</textureFolder>
+            </AK_DLL.OperatorClassDef>
+        
+            <AK_DLL.OperatorClassDef>
+                <defName>RA_OperatorClass_Trinity</defName>
+                <label>Trinity</label>
+                <sortingOrder>16</sortingOrder>
+                <textureFolder>SchoolIcon</textureFolder>
+            </AK_DLL.OperatorClassDef>
+        </value>
+    </Operation>
+</Patch>

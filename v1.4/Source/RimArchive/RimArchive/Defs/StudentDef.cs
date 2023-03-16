@@ -12,6 +12,9 @@ namespace RimArchive;
 /// </summary>
 public class StudentDef : PawnKindDef
 {
+    /// <summary>
+    /// The name class used in vanilla. Contains 3 fields: first, last, nick.
+    /// </summary>
     public NameTriple name;
     /// <summary>
     /// The School where this student is belong to;
@@ -33,9 +36,10 @@ public class StudentDef : PawnKindDef
     /// Skill level and passion
     /// </summary>
     new public List<PassionSkill> skills;
-
+#pragma warning disable CS1591
     public HeadTypeDef forcedHeadType;
     new public HairDef forcedHair;
+#pragma warning restore CS1591
     internal void Init()
     {
         Match match = RimArchive.studentNameRegex.Match(this.defName);
@@ -89,6 +93,7 @@ public class PassionSkill
      *  Other types (including enums) goes to ParseHelper
      *  The arguments are also very important. Don't mess with node name
      */
+#pragma warning disable CS1591
     public void LoadDataFromXmlCustom(XmlNode xmlRoot)
     {
         //Log.Message($"root is : {xmlRoot.Name}");
