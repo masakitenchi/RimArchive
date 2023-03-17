@@ -8,6 +8,7 @@
             <xpath>Defs/ThingDef[defName="Human"]/alienRace/generalSettings/alienPartGenerator/headTypes</xpath>
             <value>
                 <li>BA_HeadTypeDef_Haruka</li>
+                <li>BA_HeadTypeDef_Azusa</li>
             </value>
         </match>
     </Operation>

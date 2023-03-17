@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <ThingDef Name="BA_ApparelBase" ParentName="ApparelBase" Abstract="True">
-        <smeltable/>
-        <statBases>
-            <Mass>1.0</Mass>
-        </statBases>
-    </ThingDef>
-
-    <ThingDef ParentName="BA_ApparelBase">
+    <!-- 换成 HeadTypeDef + HairDef 后已经没用了-->
+    <!-- <ThingDef ParentName="BA_ApparelBase">
         <defName>BAA_Head_Haruka</defName>
         <label>Haruka_Head</label>
         <description>Haruka_Head</description>
@@ -28,7 +22,7 @@
             <coversHeadMiddle>true</coversHeadMiddle>
             <wornGraphicPath>Pawns/Gehenna/Haruka/Head/Haruka</wornGraphicPath>
         </apparel>
-    </ThingDef>
+    </ThingDef> -->
 
     <ThingDef ParentName="BA_ApparelBase">
         <defName>BAA_Body_Haruka</defName>
@@ -48,4 +42,5 @@
             </layers>
         </apparel>
     </ThingDef>
+
 </Defs>
