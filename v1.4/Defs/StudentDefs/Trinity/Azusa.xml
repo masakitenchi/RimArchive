@@ -53,6 +53,7 @@
 				</categories>
 			</li>
 		</backstoryFiltersOverride>
+		<forcedHair>BA_Hair_Azusa</forcedHair>
 		<weaponMoney>9999~9999</weaponMoney>
 		<minGenerationAge>15</minGenerationAge>
 		<maxGenerationAge>16</maxGenerationAge>
@@ -64,6 +65,9 @@
 				<School>Trinity</School>
 			</li>
 		</modExtensions>
+		<apparelRequired Inherit="False">
+			<li>BAA_Body_Azusa</li>
+		</apparelRequired>
 
 		<!-- Until here is inherited from PawnKindDef -->
 		<!-- Below is new field added in StudentDef-->
@@ -73,6 +77,7 @@
 			<last>Shirasu</last>
 		</name>
 		<School>Trinity</School>
+		<forcedHeadType>BA_HeadTypeDef_Azusa</forcedHeadType>
 		<skills>
 			<Animals>
 				<level>3</level>

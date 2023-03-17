@@ -5,7 +5,9 @@
         <category>BA_Hair</category>
     </HairDef>
 
-    <HeadTypeDef Name="BA_HeadTypeBase" ParentName="NarrowBase" Abstract="True"/>
+    <HeadTypeDef Name="BA_HeadTypeBase" ParentName="AverageBase" Abstract="True">
+        <gender>Female</gender>
+    </HeadTypeDef>
 
     <HairDef Name="BA_HarukaHair">
         <defName>BA_Hair_Haruka</defName>
@@ -17,6 +19,18 @@
         <defName>BA_HeadTypeDef_Haruka</defName>
         <label>HarukaHead</label>
         <graphicPath>Pawns/Gehenna/Haruka/Head/Haruka</graphicPath>
-        <gender>Female</gender>
     </HeadTypeDef>
+
+    <HairDef Name="BA_AzusaHair">
+        <defName>BA_Hair_Azusa</defName>
+        <label>Hair_Azusa</label>
+        <texPath>Pawns/Trinity/Azusa/Hair/Azusa</texPath>
+    </HairDef>
+
+    <HeadTypeDef ParentName="BA_HeadTypeBase">
+        <defName>BA_HeadTypeDef_Azusa</defName>
+        <label>AzusaHead</label>
+        <graphicPath>Pawns/Trinity/Azusa/Head/Azusa</graphicPath>
+    </HeadTypeDef>
+
 </Defs>

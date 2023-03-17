@@ -31,12 +31,15 @@ namespace RimArchive.Components
         public bool IsRecruitedOrAlive(StudentDef student) => IsAlive(student) || IsRecruited(student);
         public bool IsAlive(StudentDef student) => aliveStudents.Contains(student);
         public bool IsRecruited(StudentDef student) => recruitedStudents.Contains(student);
-        public void Notify_StudentKilled(ref Pawn p)
+
+        //我为啥要用ref来着？
+        public void Notify_StudentKilled(Pawn p)
         {
-            Name name = p.Name;
             documents.Add(p.kindDef as StudentDef, p);
+            aliveStudents.RemoveWhere(s => p.kindDef == s);
             //防止id重复
-            new Traverse(Find.WorldPawns).Field<HashSet<Pawn>>("pawnsDead").Value.RemoveWhere(x => x.Name == name);
+            new Traverse(Find.WorldPawns).Field<HashSet<Pawn>>("pawnsDead").Value.RemoveWhere(x => x.Name == p.Name);
+            Messages.Message("StudentDeadAngry".Translate(), MessageTypeDefOf.NegativeEvent);
         }
         public void Notify_StudentRecruited(ref StudentDef student)
         {

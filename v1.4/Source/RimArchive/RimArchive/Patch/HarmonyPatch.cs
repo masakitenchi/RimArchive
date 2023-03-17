@@ -38,7 +38,8 @@ namespace RimArchive
         {
             if(__instance.kindDef is StudentDef)
             {
-                RimArchive.StudentDocument.Notify_StudentKilled(ref __instance);
+                RimArchive.StudentDocument.Notify_StudentKilled(__instance);
+                //然后应该让尸体在一阵光中消失
             }
             return;
         }

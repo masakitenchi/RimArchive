@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    
+    <ThingDef Name="BA_ApparelBase" ParentName="ApparelBase" Abstract="True">
+        <smeltable/>
+        <statBases>
+            <Mass>1.0</Mass>
+        </statBases>
+    </ThingDef>
+    
+</Defs>

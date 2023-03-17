@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ThingDef ParentName="BA_ApparelBase">
+        <defName>BAA_Body_Azusa</defName>
+        <label>Azusa_Body</label>
+        <description>Azusa_Body</description>
+        <graphicData>
+            <texPath>Things/Apparel/Apparel_Generic</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <apparel>
+            <wornGraphicPath>Pawns/Trinity/Azusa/Body/AzusaNaked</wornGraphicPath>
+            <bodyPartGroups>
+                <li>Torso</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Middle</li>
+            </layers>
+        </apparel>
+    </ThingDef>
+
+</Defs>
