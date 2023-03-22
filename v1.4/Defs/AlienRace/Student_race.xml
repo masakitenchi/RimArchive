@@ -13,7 +13,7 @@
 				<immuneToXenophobia>false</immuneToXenophobia>
 				<humanRecipeImport>true</humanRecipeImport>
 				<alienPartGenerator>
-					<!-- <bodyAddons>
+					<bodyAddons>
 						<li>
 							<path>Pawns/Trinity/Azusa/Halo/Azusa</path>
 							<bodyPart>halo</bodyPart>
@@ -24,7 +24,7 @@
 								<BA_HeadTypeDef_Haruka>Pawns/Gehenna/Haruka/Halo/Haruka</BA_HeadTypeDef_Haruka>
 							</headtypeGraphics>
 						</li>
-					</bodyAddons> -->
+					</bodyAddons>
 					<headBodyPartDef>halo</headBodyPartDef>
 					<!-- <customDrawSize>(1.5, 1.5)</customDrawSize>
 					<headOffset>(0, 0.2)</headOffset> -->
