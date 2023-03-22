@@ -13,6 +13,18 @@
 				<immuneToXenophobia>false</immuneToXenophobia>
 				<humanRecipeImport>true</humanRecipeImport>
 				<alienPartGenerator>
+					<!-- <bodyAddons>
+						<li>
+							<path>Pawns/Trinity/Azusa/Halo/Azusa</path>
+							<bodyPart>halo</bodyPart>
+							<alignWithHead>true</alignWithHead>
+							<drawnInBed>false</drawnInBed>
+							<headtypeGraphics>
+								<BA_HeadTypeDef_Azusa>Pawns/Trinity/Azusa/Halo/Azusa</BA_HeadTypeDef_Azusa>
+								<BA_HeadTypeDef_Haruka>Pawns/Gehenna/Haruka/Halo/Haruka</BA_HeadTypeDef_Haruka>
+							</headtypeGraphics>
+						</li>
+					</bodyAddons> -->
 					<headBodyPartDef>halo</headBodyPartDef>
 					<!-- <customDrawSize>(1.5, 1.5)</customDrawSize>
 					<headOffset>(0, 0.2)</headOffset> -->
@@ -21,12 +33,10 @@
 						<west>(0.11, -0.02)</west>
 					</headOffsetDirectional> -->
 					<bodyTypes>
-						<li>Female</li>
 						<li>Thin</li>
 					</bodyTypes>
 
 					<headTypes>
-						<li>Female_AverageNormal</li>
 						<li>BA_HeadTypeDef_Haruka</li>
 						<li>BA_HeadTypeDef_Azusa</li>
 					</headTypes>
