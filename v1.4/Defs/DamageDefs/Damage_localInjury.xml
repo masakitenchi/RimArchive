@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <DamageDef Name="BA_DebuffDamageBase" Abstract="True">
+        <harmsHealth>false</harmsHealth>
+        <makesBlood>false</makesBlood>
+    </DamageDef>
+
+    <DamageDef ParentName="BA_DebuffDamageBase">
+        <defName>ArmorReduction</defName>
+        <workerClass>DamageWorker_AddGlobal</workerClass>
+        <hediff>BA_ArmorReduction</hediff>
+        <canInterruptJobs>true</canInterruptJobs>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} shocked to death.</deathMessage>
+		<defaultDamage>0</defaultDamage>
+		<defaultStoppingPower>0.5</defaultStoppingPower>
+		<defaultArmorPenetration>0.0</defaultArmorPenetration>
+		<buildingDamageFactor>0</buildingDamageFactor>
+    </DamageDef>
+</Defs>

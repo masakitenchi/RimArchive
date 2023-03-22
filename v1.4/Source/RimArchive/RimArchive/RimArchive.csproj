@@ -39,8 +39,11 @@
     <Compile Include="Components\RimArchiveGameComponent.cs" />
     <Compile Include="Components\RimArchiveWorldComponent.cs" />
     <Compile Include="Debug.cs" />
+    <Compile Include="Defs\DefOfs\HediffDefOf.cs" />
     <Compile Include="Defs\IconDef.cs" />
     <Compile Include="Defs\StudentDef.cs" />
+    <Compile Include="Hediff\Comps\HediffComp_ArmorReduction.cs" />
+    <Compile Include="Hediff\HediffCompProperties_ArmorReduction.cs" />
     <Compile Include="HotSwap.cs" />
     <Compile Include="Patch\HarmonyPatch.cs" />
     <Compile Include="RimArchive.cs" />
@@ -67,6 +70,10 @@
   <ItemGroup>
     <Reference Include="AlienRace">
       <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\workshop\content\294100\839005762\1.4\Assemblies\AlienRace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CombatExtended">
+      <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\workshop\content\294100\2890901044\Assemblies\CombatExtended.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

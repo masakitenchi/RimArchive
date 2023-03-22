@@ -271,6 +271,13 @@
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>14.5</damageAmountBase>
 			<speed>70</speed>
+			<extraDamages>
+				<li>
+					<def>ArmorReduction</def>
+					<amount>1</amount>
+					<chance>100</chance>
+				</li>
+			</extraDamages>
 		</projectile>
 	</ThingDef>
 
