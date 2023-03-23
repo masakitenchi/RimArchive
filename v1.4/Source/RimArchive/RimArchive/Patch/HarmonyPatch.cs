@@ -20,7 +20,7 @@ namespace RimArchive
         {
             Harmony rimarchive = new Harmony("com.regex.RimArchive");
             rimarchive.PatchAll(Assembly.GetExecutingAssembly());
-            if (ModsConfig.IsActive("ceteam.combatextended"))
+            /*if (ModsConfig.IsActive("ceteam.combatextended"))
             {
                 MethodInfo PartialStat = AccessTools.Method(typeof(ArmorUtilityCE), "PartialStat", new System.Type[] { typeof(Pawn), typeof(StatDef), typeof(BodyPartRecord), typeof(float), typeof(float) });
                 if(PartialStat == null)
@@ -32,10 +32,10 @@ namespace RimArchive
                 Debug.DbgMsg("RimArchive successfully patched ArmorUtilityCE.TryPenetrateArmor");
                 //Debug.DbgMsg("Currently Armor Reduction is not patched for CE");
             }
-            else
+            else*/
             {
                 rimarchive.Patch(AccessTools.Method(typeof(ArmorUtility), "ApplyArmor"), transpiler: new HarmonyMethod(typeof(HarmonyPatches), "ApplyArmorTranspiler"));
-                Debug.DbgMsg("RimArchive successfully patched ArmorUtility.TryPenetrateArmor");
+                Debug.DbgMsg("RimArchive successfully patched ArmorUtility.ApplyArmor");
             }
         }
 
@@ -51,19 +51,52 @@ namespace RimArchive
             }
         }
 
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(Pawn))]
+        [HarmonyPatch("Kill")]
+        public static bool KillPrefix(Pawn __instance)
+        {
+            if(__instance.kindDef is StudentDef)
+            {
+                if(RimArchive.StudentDocument.Notify_StudentKilled(__instance))
+                {
+                    Debug.DbgMsg($"Successfully documented student\nDead? {__instance.health.Dead}");
+                    __instance.equipment.DestroyAllEquipment();
+                    __instance.apparel.DestroyAll();
+                    __instance.DeSpawn();
+                    return false;
+                }
+            }
+            return true;
+        }
+/*
         [HarmonyPostfix]
         [HarmonyPatch(typeof(Pawn))]
         [HarmonyPatch("Kill")]
-        public static void KillPostfix(Pawn __instance, DamageInfo? dinfo, Hediff exactCulprit = null)
+        public static void KillPostfix(Pawn __instance, ref bool __state)
         {
-            if (__instance.kindDef is StudentDef)
+            if (__state)
             {
-                RimArchive.StudentDocument.Notify_StudentKilled(__instance);
+                //RimArchive.StudentDocument.Notify_StudentKilled(__instance);
                 //然后应该让尸体在一阵光中消失
+                __instance.Corpse.Destroy();
             }
             return;
         }
-
+*/
+        /*[HarmonyPrefix]
+        [HarmonyPatch(typeof(Pawn))]
+        [HarmonyPatch("DropAndForbidEverything")]
+        public static bool DropAndForbidEverything_Postfix(Pawn __instance)
+        {
+            if(__instance.kindDef is StudentDef)
+            {
+                __instance.equipment.DestroyAllEquipment();
+                __instance.apparel.DestroyAll();
+                return false;
+            }
+            return true;
+        }*/
         //原版
         /*public static bool ApplyArmorPrefix(Pawn pawn,ref float armorRating)
         {

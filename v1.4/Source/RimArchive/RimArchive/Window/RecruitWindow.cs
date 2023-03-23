@@ -194,6 +194,7 @@ namespace RimArchive.Window
                 DrawHighlightIfMouseover(row);
                 //可以设定成点击之后直到鼠标离开这个绘图区才允许Mouse.IsOver改写_currentSchool
                 //搞定...?
+                //还是差一点
                 if (ButtonInvisible(row))
                 {
                     _clickedSchoolIcon = true;
@@ -417,7 +418,34 @@ namespace RimArchive.Window
             DrawBox(inRect, 1, BaseContent.WhiteTex);
             Rect recruitBtn = outRect.AtZero().CenteredOnYIn(outRect);
             recruitBtn.size = _iconSize;
-            if (StudentDocument.IsRecruited(_currentStudent))
+            if (ButtonImageFitted(recruitBtn, SSR))
+            {
+                //存活
+                if (StudentDocument.IsAlive(_currentStudent))
+                {
+                    Messages.Message("StudentAlreadyRecruited".Translate(_cachedStudent.NameFullColored), MessageTypeDefOf.NeutralEvent);
+                }
+                else
+                {
+                    //未存活但招募过
+                    if (StudentDocument.IsRecruited(_currentStudent))
+                    {
+                        StudentDocument.DocumentedStudent(_currentStudent, ref _cachedStudent);
+                        Debug.DbgMsg("Re-recruiting");
+                        DbgMsg($"Pawn name:{_cachedStudent.Name.ToStringFull}, Gender:{_cachedStudent.gender}");
+                    }
+                    _inStudentProfile = false;
+                    StudentDocument.Notify_StudentRecruited(_currentStudent);
+                    this.Close();
+                    Map currentmap = Find.CurrentMap;
+                    IntVec3 intVec3 = DropCellFinder.TradeDropSpot(currentmap);
+                    ActiveDropPodInfo activeDropPodInfo = new ActiveDropPodInfo();
+                    activeDropPodInfo.innerContainer.TryAddOrTransfer(_cachedStudent as Thing);
+                    DropPodUtility.MakeDropPodAt(intVec3, currentmap, activeDropPodInfo);
+                    Messages.Message("StudentArrived".Translate(_cachedStudent.NameFullColored), new LookTargets(intVec3, currentmap), MessageTypeDefOf.PositiveEvent);
+                }
+            }
+            /*if (StudentDocument.IsRecruited(_currentStudent))
             {
                 if (ButtonImageFitted(recruitBtn, SSR))
                 {
@@ -435,7 +463,7 @@ namespace RimArchive.Window
                 activeDropPodInfo.innerContainer.TryAddOrTransfer(_cachedStudent as Thing);
                 DropPodUtility.MakeDropPodAt(intVec3, currentmap, activeDropPodInfo);
                 Messages.Message("StudentArrived".Translate(_cachedStudent.NameFullColored), new LookTargets(intVec3, currentmap), MessageTypeDefOf.PositiveEvent);
-            }
+            }*/
             EndGroup();
         }
         //Show WorkTags

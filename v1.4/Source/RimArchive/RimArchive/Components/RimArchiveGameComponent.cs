@@ -1,8 +1,10 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using RimWorld.Planet;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using Verse;
 #pragma warning disable CS1591
 
@@ -16,6 +18,8 @@ namespace RimArchive.Components
         private HashSet<StudentDef> aliveStudents = new HashSet<StudentDef>();
         private HashSet<StudentDef> recruitedStudents = new HashSet<StudentDef>();
 
+        private int hostileDaysAsTick;
+        private bool inAngryHostile;
         /*public List<StudentDef> RecruitedStudents
         {
             get
@@ -26,26 +30,50 @@ namespace RimArchive.Components
 
         public HashSet<StudentDef> AliveStudents => aliveStudents;
         public HashSet<StudentDef> RecruitedStudents => recruitedStudents;
-        
+
+        public void DocumentedStudent(StudentDef student, ref Pawn pawn)
+        {
+            pawn = documents[student];
+        }
 
         public bool IsRecruitedOrAlive(StudentDef student) => IsAlive(student) || IsRecruited(student);
         public bool IsAlive(StudentDef student) => aliveStudents.Contains(student);
         public bool IsRecruited(StudentDef student) => recruitedStudents.Contains(student);
 
         //我为啥要用ref来着？
-        public void Notify_StudentKilled(Pawn p)
+        public bool Notify_StudentKilled(Pawn p)
         {
-            documents.Add(p.kindDef as StudentDef, p);
-            aliveStudents.RemoveWhere(s => p.kindDef == s);
-            recruitedStudents.RemoveWhere(s => p.kindDef == s);
-            //防止id重复
-            new Traverse(Find.WorldPawns).Field<HashSet<Pawn>>("pawnsDead").Value.RemoveWhere(x => x.Name == p.Name);
-            Messages.Message("StudentDeadAngry".Translate(), MessageTypeDefOf.NegativeEvent);
+            try
+            {
+                documents.Add(p.kindDef as StudentDef, p);
+                aliveStudents.RemoveWhere(s => p.kindDef == s);
+                //防止id重复
+                new Traverse(Find.WorldPawns).Field<HashSet<Pawn>>("pawnsDead").Value.RemoveWhere(x => x.Name == p.Name);
+                float hostiledays = Rand.Range(0.1f, 0.2f);
+                Messages.Message("StudentHeavilyInjuredAngry".Translate(p.Name, hostiledays), MessageTypeDefOf.NegativeEvent);
+                hostileDaysAsTick = (int)(hostiledays * GenDate.TicksPerDay);
+                Faction shale = Find.FactionManager.AllFactions.Where(x => x.def == RAFactionDefOf.Shale).First();
+                inAngryHostile = true;
+                if (shale == null)
+                {
+                    Debug.DbgErr("Cannot find Shale as faction");
+                    return false;
+                }
+                shale.TryAffectGoodwillWith(Faction.OfPlayer, shale.GoodwillToMakeHostile(Faction.OfPlayer));
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Debug.DbgErr($"Exception: {ex}");
+                return false;
+            }
         }
-        public void Notify_StudentRecruited(ref StudentDef student)
+
+        public void Notify_StudentRecruited(StudentDef student)
         {
             recruitedStudents.Add(student);
             aliveStudents.Add(student);
+            documents.Remove(student);
         }
 
         //每次存档都根据isAlive更新 documents并将documents存档
@@ -58,8 +86,25 @@ namespace RimArchive.Components
             Scribe_Collections.Look<StudentDef>(ref aliveStudents, true, "AliveStudents", LookMode.Def);
             Scribe_Collections.Look<StudentDef>(ref recruitedStudents, true, "RecruitedStudents", LookMode.Def);
             Scribe_Collections.Look<StudentDef, Pawn>(ref documents, "document", LookMode.Def, LookMode.Deep);
+            Scribe_Values.Look<int>(ref hostileDaysAsTick, "hostileDaysAsTick");
         }
 
-        public RimArchiveGameComponent(Game game) : base() { }
+        public override void GameComponentTick()
+        {
+            if (!inAngryHostile)
+                return;
+            if (hostileDaysAsTick > 0)
+                hostileDaysAsTick--;
+            if(hostileDaysAsTick == 0)
+            {
+                Faction shale = Find.FactionManager.AllFactions.Where(x => x.def == RAFactionDefOf.Shale).First();
+                shale.TryAffectGoodwillWith(Faction.OfPlayer, -shale.GoodwillWith(Faction.OfPlayer));
+                inAngryHostile = false;
+            }
+        }
+        public RimArchiveGameComponent(Game game) : base() 
+        {
+
+        }
     }
 }

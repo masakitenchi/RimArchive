@@ -35,6 +35,7 @@
 		<humanPregnancyChance>0.0</humanPregnancyChance>
 		<chemicalAddictionChance>0.0</chemicalAddictionChance>
 		<combatEnhancingDrugsChance>0.0</combatEnhancingDrugsChance>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
 
 		<!-- Test only. Below should be removed when release-->
 		<forcedHeadType>BA_HeadTypeDef_Haruka</forcedHeadType>

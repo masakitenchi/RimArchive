@@ -8,7 +8,7 @@
         <isBad>true</isBad>
         <comps>
             <li Class="HediffCompProperties_Disappears">
-                <disappearsAfterTicks>1800~3600</disappearsAfterTicks>
+                <disappearsAfterTicks>600~1200</disappearsAfterTicks>
                 <showRemainingTime>true</showRemainingTime>
             </li>
             <li Class="RimArchive.HediffCompProperties_ArmorReduction">
@@ -16,5 +16,8 @@
                 <baseAmount>0.10</baseAmount>
             </li>
         </comps>
+        <stages>
+            
+        </stages>
     </HediffDef>
 </Defs>
