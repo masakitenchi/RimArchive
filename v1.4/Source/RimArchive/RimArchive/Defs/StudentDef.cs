@@ -49,7 +49,7 @@ public class StudentDef : PawnKindDef
             return;
         }
         //Example:
-        //BA_Shiroko_RidingSuit => <Prefix>.BA, <FullName>=>Shiroko_RidingSuit
+        //BA_Shiroko_RidingSuit => <Prefix> = BA, <FullName> = Shiroko_RidingSuit
         Icon = ContentFinder<Texture2D>.Get("Icons/" + match.Groups["FullName"].Value);
         Portrait = ContentFinder<Texture2D>.Get("Portraits/Resized/" + match.Groups["FullName"].Value);
         Memorial = ContentFinder<Texture2D>.Get("Memorial/Yuuka");

@@ -37,6 +37,7 @@ namespace RimArchive.Components
         {
             documents.Add(p.kindDef as StudentDef, p);
             aliveStudents.RemoveWhere(s => p.kindDef == s);
+            recruitedStudents.RemoveWhere(s => p.kindDef == s);
             //防止id重复
             new Traverse(Find.WorldPawns).Field<HashSet<Pawn>>("pawnsDead").Value.RemoveWhere(x => x.Name == p.Name);
             Messages.Message("StudentDeadAngry".Translate(), MessageTypeDefOf.NegativeEvent);
