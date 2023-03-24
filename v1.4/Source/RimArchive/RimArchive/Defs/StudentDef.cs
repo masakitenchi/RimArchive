@@ -36,6 +36,12 @@ public class StudentDef : PawnKindDef
     /// Skill level and passion
     /// </summary>
     new public List<PassionSkill> skills;
+    /// <summary>
+    /// Having this weapon in inventory will receive a +5 mood buff
+    /// </summary>
+#nullable enable
+    public ThingDef? ownWeapon;
+#nullable disable
 #pragma warning disable CS1591
     public HeadTypeDef forcedHeadType;
     new public HairDef forcedHair;

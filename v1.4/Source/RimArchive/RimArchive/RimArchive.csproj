@@ -50,6 +50,7 @@
     <Compile Include="SchoolNameModExtension.cs" />
     <Compile Include="Defs\DefOfs\StudentDefOf.cs" />
     <Compile Include="RAFaction.cs" />
+    <Compile Include="ThoughtWorker\ThoughtWorker_OwnWeapon.cs" />
     <Compile Include="Verbs\moe_bombardment.cs" />
     <Compile Include="BA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
