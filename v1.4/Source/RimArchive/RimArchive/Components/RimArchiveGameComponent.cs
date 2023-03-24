@@ -50,7 +50,7 @@ namespace RimArchive.Components
                 //防止id重复
                 new Traverse(Find.WorldPawns).Field<HashSet<Pawn>>("pawnsDead").Value.RemoveWhere(x => x.Name == p.Name);
                 float hostiledays = Rand.Range(0.1f, 0.2f);
-                Messages.Message("StudentHeavilyInjuredAngry".Translate(p.Name, hostiledays), MessageTypeDefOf.NegativeEvent);
+                Messages.Message("StudentHeavilyInjuredAngry".Translate(p.Name, hostiledays.ToString("F1")), MessageTypeDefOf.NegativeEvent);
                 hostileDaysAsTick = (int)(hostiledays * GenDate.TicksPerDay);
                 Faction shale = Find.FactionManager.AllFactions.Where(x => x.def == RAFactionDefOf.Shale).First();
                 inAngryHostile = true;

@@ -35,7 +35,7 @@ namespace RimArchive
             else*/
             {
                 rimarchive.Patch(AccessTools.Method(typeof(ArmorUtility), "ApplyArmor"), transpiler: new HarmonyMethod(typeof(HarmonyPatches), "ApplyArmorTranspiler"));
-                Debug.DbgMsg("RimArchive successfully patched ArmorUtility.ApplyArmor");
+                Debug.DbgMsg("successfully patched ArmorUtility.ApplyArmor");
             }
         }
 
@@ -60,9 +60,7 @@ namespace RimArchive
             {
                 if(RimArchive.StudentDocument.Notify_StudentKilled(__instance))
                 {
-                    Debug.DbgMsg($"Successfully documented student\nDead? {__instance.health.Dead}");
-                    __instance.equipment.DestroyAllEquipment();
-                    __instance.apparel.DestroyAll();
+                    //Debug.DbgMsg($"Successfully documented student\nDead? {__instance.health.Dead}");
                     __instance.DeSpawn();
                     return false;
                 }
