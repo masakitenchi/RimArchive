@@ -259,7 +259,7 @@ namespace RimArchive.Window
                                 allowAddictions: false,
                                 fixedGender: Gender.Female
                                 ));
-                            PostGen(ref _cachedStudent);
+                            PostGen(_cachedStudent);
                             _inStudentProfile = true;
                         }
                         TooltipHandler.TipRegion(icon, students[studentNo].description);
@@ -470,31 +470,50 @@ namespace RimArchive.Window
         #endregion
 
         #region Misc Methods
-        static void PostGen(ref Pawn p)
+        static void PostGen(Pawn p)
         {
-            //Adjust skills
-            foreach (SkillRecord record in p.skills.skills)
+            try
             {
-                record.Level = _currentStudent.skills.Where(x => x.skill == record.def).First().level;
-                record.passion = _currentStudent.skills.Where(x => x.skill == record.def).First().passion;
+
+                //Adjust skills
+                foreach (SkillRecord record in p.skills.skills)
+                {
+                    record.Level = _currentStudent.skills.Where(x => x.skill == record.def).First().level;
+                    record.passion = _currentStudent.skills.Where(x => x.skill == record.def).First().passion;
+                }
+                //Remove harmful hediffs or addiction
+                p.health.hediffSet.hediffs = p.health.hediffSet.hediffs.Where(x => !(x.def.isBad || x.def.IsAddiction)).ToList();
+                p.Name = _currentStudent.name;
+                PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Childhood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
+                PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Adulthood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
+                p.story.headType = _currentStudent.forcedHeadType;
+                p.story.hairDef = _currentStudent.forcedHair;
+                p.story.bodyType = BodyTypeDefOf.Thin;
+                p.story.traits.allTraits.Clear();
+                foreach (TraitRequirement trait in _currentStudent.forcedTraits)
+                {
+                    p.story.traits.GainTrait(new Trait(trait.def, trait.degree ?? 0, true));
+                }
+                p.apparel.WornApparel.RemoveAll(x => x.def.apparel.bodyPartGroups.Any(t => t == BodyPartGroupDefOf.FullHead || t == BodyPartGroupDefOf.UpperHead));
+                p.apparel.LockAll();
+                //处理人际关系
+                foreach (var relation in (p.kindDef as StudentDef).relations)
+                {
+                    Debug.DbgMsg($"relation: {relation.relation.defName}");
+                    Debug.DbgMsg($"Pawns: {string.Join("\n", relation.others.Select(x => x.defName))}");
+                    foreach (Pawn other in Find.CurrentMap.mapPawns.AllPawns.Where(x => !p.relations.DirectRelationExists(relation.relation, x) && x.kindDef is StudentDef a && relation.others.Contains(a)))
+                    {
+                        p.relations.AddDirectRelation(relation.relation, other);
+                    }
+                }
+                //Debug log for backstory. Maybe vanilla cannot recognize har's backstory? but with HAR it should inject into vanilla code, doesn't it?
+                //DbgMsg($"Pawn {p.Name}: \nrace:{p.kindDef.race}\n kindDef {p.kindDef},\n backstoryoverride: {string.Join("\n", p.kindDef.backstoryFiltersOverride.First().categories.Select(x => x + "\n"))}");
+
             }
-            //Remove harmful hediffs or addiction
-            p.health.hediffSet.hediffs = p.health.hediffSet.hediffs.Where(x => !(x.def.isBad || x.def.IsAddiction)).ToList();
-            p.Name = _currentStudent.name;
-            PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Childhood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
-            PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Adulthood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
-            p.story.headType = _currentStudent.forcedHeadType;
-            p.story.hairDef = _currentStudent.forcedHair;
-            p.story.bodyType = BodyTypeDefOf.Thin;
-            p.story.traits.allTraits.Clear();
-            foreach (TraitRequirement trait in _currentStudent.forcedTraits)
+            catch (Exception ex)
             {
-                p.story.traits.GainTrait(new Trait(trait.def, trait.degree ?? 0, true));
+                Debug.DbgErr($"{ex} with {ex.Message}");
             }
-            p.apparel.WornApparel.RemoveAll(x => x.def.apparel.bodyPartGroups.Any(t => t == BodyPartGroupDefOf.FullHead || t == BodyPartGroupDefOf.UpperHead));
-            p.apparel.LockAll();
-            //Debug log for backstory. Maybe vanilla cannot recognize har's backstory? but with HAR it should inject into vanilla code, doesn't it?
-            //DbgMsg($"Pawn {p.Name}: \nrace:{p.kindDef.race}\n kindDef {p.kindDef},\n backstoryoverride: {string.Join("\n", p.kindDef.backstoryFiltersOverride.First().categories.Select(x => x + "\n"))}");
         }
         static Texture2D IconforPassion(Passion passion) => passion switch
         {
