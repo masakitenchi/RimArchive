@@ -20,14 +20,14 @@ namespace RimArchive
         {
             Harmony rimarchive = new Harmony("com.regex.RimArchive");
             rimarchive.PatchAll(Assembly.GetExecutingAssembly());
-            MethodInfo ce = AccessTools.Method("CombatExtended.ArmorUtilityCE:PartialStat", new System.Type[] { typeof(Pawn), typeof(StatDef), typeof(BodyPartRecord), typeof(float), typeof(float) });
+            MethodInfo ce = AccessTools.Method("CombatExtended.CE_Utility:PartialStat", new System.Type[] { typeof(Pawn), typeof(StatDef), typeof(BodyPartRecord), typeof(float), typeof(float) });
             MethodInfo vanilla = AccessTools.Method(typeof(ArmorUtility), "ApplyArmor");
             //Debug.DbgMsg($"ce :{ce}\n vanilla:{vanilla}");
             if (ce != null)
             {
                 //Debug.DbgErr("CE had changed ArmorUtilityCE.PartialStat. Please Contact mod Author");
                 rimarchive.Patch(ce, postfix: new HarmonyMethod(typeof(HarmonyPatches), "PartialStatPostfix_CE"));
-                Debug.DbgMsg("RimArchive successfully patched ArmorUtilityCE.TryPenetrateArmor");
+                Debug.DbgMsg("RimArchive successfully patched CombatExtended.CE_Utility:PartialStat(this Pawn pawn, StatDef stat, BodyPartRecord part, float damage = 0f, float AP = 0f)");
                 //Debug.DbgMsg("Currently Armor Reduction is not patched for CE");
             }
             else if (vanilla != null)
