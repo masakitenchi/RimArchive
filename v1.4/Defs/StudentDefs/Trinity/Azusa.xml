@@ -78,6 +78,7 @@
 		</name>
 		<School>Trinity</School>
 		<forcedHeadType>BA_HeadTypeDef_Azusa</forcedHeadType>
+		<ownWeapon>BAW_Azusa</ownWeapon>
 		<skills>
 			<Animals>
 				<level>3</level>
