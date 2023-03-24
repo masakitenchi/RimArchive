@@ -20,23 +20,22 @@ namespace RimArchive
         {
             Harmony rimarchive = new Harmony("com.regex.RimArchive");
             rimarchive.PatchAll(Assembly.GetExecutingAssembly());
-            /*if (ModsConfig.IsActive("ceteam.combatextended"))
+            MethodInfo ce = AccessTools.Method("CombatExtended.ArmorUtilityCE:PartialStat", new System.Type[] { typeof(Pawn), typeof(StatDef), typeof(BodyPartRecord), typeof(float), typeof(float) });
+            MethodInfo vanilla = AccessTools.Method(typeof(ArmorUtility), "ApplyArmor");
+            //Debug.DbgMsg($"ce :{ce}\n vanilla:{vanilla}");
+            if (ce != null)
             {
-                MethodInfo PartialStat = AccessTools.Method(typeof(ArmorUtilityCE), "PartialStat", new System.Type[] { typeof(Pawn), typeof(StatDef), typeof(BodyPartRecord), typeof(float), typeof(float) });
-                if(PartialStat == null)
-                {
-                    Debug.DbgErr("CE had changed ArmorUtilityCE.PartialStat. Please Contact mod Author");
-                    return;
-                }
-                rimarchive.Patch(PartialStat, postfix: new HarmonyMethod(typeof(HarmonyPatches), "PartialStatPostfix_CE"));
+                //Debug.DbgErr("CE had changed ArmorUtilityCE.PartialStat. Please Contact mod Author");
+                rimarchive.Patch(ce, postfix: new HarmonyMethod(typeof(HarmonyPatches), "PartialStatPostfix_CE"));
                 Debug.DbgMsg("RimArchive successfully patched ArmorUtilityCE.TryPenetrateArmor");
                 //Debug.DbgMsg("Currently Armor Reduction is not patched for CE");
             }
-            else*/
+            else if (vanilla != null)
             {
                 rimarchive.Patch(AccessTools.Method(typeof(ArmorUtility), "ApplyArmor"), transpiler: new HarmonyMethod(typeof(HarmonyPatches), "ApplyArmorTranspiler"));
                 Debug.DbgMsg("successfully patched ArmorUtility.ApplyArmor");
             }
+
         }
 
         [HarmonyPostfix]
@@ -56,9 +55,9 @@ namespace RimArchive
         [HarmonyPatch("Kill")]
         public static bool KillPrefix(Pawn __instance)
         {
-            if(__instance.kindDef is StudentDef)
+            if (__instance.kindDef is StudentDef)
             {
-                if(RimArchive.StudentDocument.Notify_StudentKilled(__instance))
+                if (RimArchive.StudentDocument.Notify_StudentKilled(__instance))
                 {
                     //Debug.DbgMsg($"Successfully documented student\nDead? {__instance.health.Dead}");
                     __instance.DeSpawn();
@@ -67,21 +66,21 @@ namespace RimArchive
             }
             return true;
         }
-/*
-        [HarmonyPostfix]
-        [HarmonyPatch(typeof(Pawn))]
-        [HarmonyPatch("Kill")]
-        public static void KillPostfix(Pawn __instance, ref bool __state)
-        {
-            if (__state)
-            {
-                //RimArchive.StudentDocument.Notify_StudentKilled(__instance);
-                //然后应该让尸体在一阵光中消失
-                __instance.Corpse.Destroy();
-            }
-            return;
-        }
-*/
+        /*
+                [HarmonyPostfix]
+                [HarmonyPatch(typeof(Pawn))]
+                [HarmonyPatch("Kill")]
+                public static void KillPostfix(Pawn __instance, ref bool __state)
+                {
+                    if (__state)
+                    {
+                        //RimArchive.StudentDocument.Notify_StudentKilled(__instance);
+                        //然后应该让尸体在一阵光中消失
+                        __instance.Corpse.Destroy();
+                    }
+                    return;
+                }
+        */
         /*[HarmonyPrefix]
         [HarmonyPatch(typeof(Pawn))]
         [HarmonyPatch("DropAndForbidEverything")]
