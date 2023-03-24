@@ -61,8 +61,6 @@ namespace RimArchive
                 if(RimArchive.StudentDocument.Notify_StudentKilled(__instance))
                 {
                     Debug.DbgMsg($"Successfully documented student\nDead? {__instance.health.Dead}");
-                    __instance.equipment.DestroyAllEquipment();
-                    __instance.apparel.DestroyAll();
                     __instance.DeSpawn();
                     return false;
                 }
