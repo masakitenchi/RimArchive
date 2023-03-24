@@ -44,6 +44,11 @@
             Having this weapon in inventory will receive a +5 mood buff
             </summary>
         </member>
+        <member name="F:RimArchive.StudentDef.relations">
+            <summary>
+            Directly set relation with other students
+            </summary>
+        </member>
         <member name="T:RimArchive.PassionSkill">
             <summary>
             Used to set skill level and passion. Must be the subnode of StudentDef.

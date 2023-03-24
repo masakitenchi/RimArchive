@@ -4,6 +4,8 @@ using UnityEngine;
 using Verse;
 using System.Xml;
 using System.Collections.Generic;
+using HarmonyLib;
+using System.Reflection;
 
 namespace RimArchive;
 
@@ -12,6 +14,26 @@ namespace RimArchive;
 /// </summary>
 public class StudentDef : PawnKindDef
 {
+    public class DirectRelationWith
+    {
+        public List<StudentDef> others = new List<StudentDef>();
+        public PawnRelationDef relation;
+
+        //另一个教程。List类型的通过在循环内调用RegisterListWantsCrossRef(this.listName, node.InnerText)读取。
+        //list需要是整个list，但每次循环的InnerText都会变化
+        public void LoadDataFromXmlCustom(XmlNode node)
+        {
+            //Debug.DbgMsg($"Node:{node.Name}");
+            DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "relation", node.Name);
+            for(int i = 0;i< node.ChildNodes.Count;i++)
+            {
+                //Debug.DbgMsg($"ChildNode:{node.ChildNodes[i].InnerText}");
+                DirectXmlCrossRefLoader.RegisterListWantsCrossRef(this.others, node.ChildNodes[i].InnerText);
+                //DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, $"others[{i}]", node.ChildNodes[i].InnerText);
+
+            }
+        }
+    }
     /// <summary>
     /// The name class used in vanilla. Contains 3 fields: first, last, nick.
     /// </summary>
@@ -36,11 +58,15 @@ public class StudentDef : PawnKindDef
     /// Skill level and passion
     /// </summary>
     new public List<PassionSkill> skills;
+#nullable enable
     /// <summary>
     /// Having this weapon in inventory will receive a +5 mood buff
     /// </summary>
-#nullable enable
     public ThingDef? ownWeapon;
+    /// <summary>
+    /// Directly set relation with other students
+    /// </summary>
+    public List<DirectRelationWith>? relations = new List<DirectRelationWith>();
 #nullable disable
 #pragma warning disable CS1591
     public HeadTypeDef forcedHeadType;

@@ -35,7 +35,7 @@
 
 	<RimArchive.StudentDef ParentName="RA_BasePawn">
 		<defName>BA_Haruka</defName>
-		<label>春香</label>
+		<label>Haruka</label>
 		<description>ゲヘナ学園所属、便利屋68の平社員。
 
 			暗くて陰気な性格のため、幼い頃からずっといじめられてきたが、アルのおかげでいじめから逃れられるようになった少女。その後、末っ子的な立ち位置で便利屋68にて活動中。
@@ -123,6 +123,13 @@
 				<fireLevel>1</fireLevel>
 			</Social>
 		</skills>
+		<relations>
+			<BA_SameClub>
+				<li>BA_Aru</li>
+				<li>BA_Kayoko</li>
+				<li>BA_Mutsuki</li>
+			</BA_SameClub>
+		</relations>
 	</RimArchive.StudentDef>
 
 

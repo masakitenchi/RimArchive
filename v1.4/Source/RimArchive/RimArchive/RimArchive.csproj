@@ -23,7 +23,8 @@
     <ErrorReport>none</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <DocumentationFile>..\..\..\..\About\RimArchive.xml</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -46,11 +47,14 @@
     <Compile Include="Hediff\HediffCompProperties_ArmorReduction.cs" />
     <Compile Include="HotSwap.cs" />
     <Compile Include="Patch\HarmonyPatch.cs" />
+    <Compile Include="PawnRelation\PawnRelationWorker_SameClub.cs" />
+    <Compile Include="PawnRelation\PawnRelationWorker_Sibling.cs" />
     <Compile Include="RimArchive.cs" />
     <Compile Include="SchoolNameModExtension.cs" />
     <Compile Include="Defs\DefOfs\StudentDefOf.cs" />
     <Compile Include="RAFaction.cs" />
-    <Compile Include="ThoughtWorker\ThoughtWorker_OwnWeapon.cs" />
+    <Compile Include="Thought\ThoughtWorker\ThoughtWorker_OpinionOfMates.cs" />
+    <Compile Include="Thought\ThoughtWorker\ThoughtWorker_OwnWeapon.cs" />
     <Compile Include="Verbs\moe_bombardment.cs" />
     <Compile Include="BA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
