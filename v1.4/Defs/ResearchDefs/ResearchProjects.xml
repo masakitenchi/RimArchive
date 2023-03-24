@@ -103,5 +103,33 @@
 		<researchViewX>2</researchViewX>
 		<researchViewY>1</researchViewY>
 	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ReserchRedwinter</defName>
+		<label>RedWinter</label>
+		<description>Now you can forge the weapons from RedWinter.</description>
+		<tab>RimArchiveTech</tab>
+		<baseCost>1000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>PrecisionRifling</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+	
+    <ResearchProjectDef>
+		<defName>ReserchArius</defName>
+		<label>Arius</label>
+		<description>Now you can forge the weapons from Arius.</description>
+		<tab>RimArchiveTech</tab>
+		<baseCost>1000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>PrecisionRifling</li>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
 	
 </Defs>

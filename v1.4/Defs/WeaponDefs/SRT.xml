@@ -212,7 +212,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<weaponTags>
-			<li>BAW_SRT</li>
+			<li>BAW_MoeBomb</li>
 		</weaponTags>
 		<soundInteract>Moe_Fire</soundInteract>
 		<recipeMaker>
@@ -296,5 +296,73 @@
 			</li>
 		</comps>
 		
+	</ThingDef>
+
+	<!--萌绘（手枪）-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_MoeHG</defName>
+		<label>Rabbit-224 type pistol</label>
+		<description>A standard pistol that Moe received from SRT Special Academy.\n\nIn spite of being a pistol, it has a high rate of fire and can empty its magazine in a blink.</description>
+		<graphicData>
+			<texPath>Weapon/SRT/Moe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.72</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Revolver</soundInteract>
+		<weaponTags>
+			<li>BAW_Moe</li>
+		</weaponTags>
+		<recipeMaker>
+			<researchPrerequisite>ReserchSRT</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>400</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>24000</WorkToMake>
+			<Mass>2.5</Mass>
+			<AccuracyTouch>0.62</AccuracyTouch>
+			<AccuracyShort>0.71</AccuracyShort>
+			<AccuracyMedium>0.46</AccuracyMedium>
+			<AccuracyLong>0.21</AccuracyLong>
+			<RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>40</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Moe</defaultProjectile>
+				<warmupTime>0.62</warmupTime>
+				<range>23</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<soundCast>Shot_Autopistol</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>4</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Moe</defName>
+		<label>Bullet of Rabbit-224 type pistol</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_blue</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>9</damageAmountBase>
+			<speed>43</speed>
+			<armorPenetrationBase>0.1</armorPenetrationBase>
+		</projectile>
 	</ThingDef>
 </Defs>

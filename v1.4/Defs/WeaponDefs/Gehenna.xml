@@ -66,6 +66,137 @@
 			<armorPenetrationBase>0.35</armorPenetrationBase>
 		</projectile>
 	</ThingDef>
+	
+	<!--伊织-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Iori</defName>
+		<label>Crack Shot</label>
+		<description>The sniper rifle used by Iori when dealing with problems caused by rulebreakers.\n\nDespite being a simple model without even a scope, according to Iori "a specialist doesn't choose their tools".</description>
+		<graphicData>
+			<texPath>Weapon/Gehenna/Iori</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.13</drawSize>
+		</graphicData>
+		<equippedAngleOffset>46</equippedAngleOffset>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>ReserchGehenna</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+			<displayPriority>420</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>40000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.45</AccuracyTouch>
+			<AccuracyShort>0.61</AccuracyShort>
+			<AccuracyMedium>0.81</AccuracyMedium>
+			<AccuracyLong>0.89</AccuracyLong>
+			<RangedWeapon_Cooldown>1.05</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Iori</defaultProjectile>
+				<warmupTime>1.55</warmupTime>
+				<range>45</range>
+				<soundCast>Shot_BoltActionRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Iori</defName>
+		<label>Bullet of Crack Shot</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_purple</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>26</damageAmountBase>
+			<armorPenetrationBase>0.44</armorPenetrationBase>
+			<speed>70</speed>
+		</projectile>
+		</ThingDef>
+		
+		<!--狗狗-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Ako</defName>
+		<label>Hotshot</label>
+		<description>A pistol carried by Ako.\n\nIt is a treasured object that was handed to Ako when she got appointed to the position of executive officer in recognition of her painstaking efforts. Ako carries it with her all the time and takes very good care of it.</description>
+		<graphicData>
+			<texPath>Weapon/Gehenna/Ako</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Revolver</soundInteract>
+		<weaponTags>
+			<li>BAW_Ako</li>
+		</weaponTags>
+		<recipeMaker>
+			<researchPrerequisite>ReserchGehenna</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>400</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>24000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.71</AccuracyShort>
+			<AccuracyMedium>0.49</AccuracyMedium>
+			<AccuracyLong>0.35</AccuracyLong>
+			<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>30</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Ako</defaultProjectile>
+				<warmupTime>0.55</warmupTime>
+				<range>25.6</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<soundCast>Shot_Autopistol</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>3</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Ako</defName>
+		<label>Bullet of HotShot</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_yellow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>9</damageAmountBase>
+			<speed>35</speed>
+			<armorPenetrationBase>0.12</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
 
 	<!--睦月-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">

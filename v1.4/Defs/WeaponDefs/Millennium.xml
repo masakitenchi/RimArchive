@@ -573,6 +573,72 @@
 		</projectile>
 	</ThingDef>
 
+	<!--邮箱-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Yuuka</defName>
+		<label>Logic n Reason</label>
+		<description>A submachine guns used by Yuuka.\n\nIt helps Yuuka make rational and intelligent decisions even under pressure at critical times.</description>
+		<graphicData>
+			<texPath>Weapon/Millennium/Yuuka</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.06</drawSize>
+		</graphicData>
+		<weaponTags>
+			<li>BAW_Yuuka</li>
+		</weaponTags>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>ReserchMillennium</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>420</displayPriority>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>35000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.58</AccuracyTouch>
+			<AccuracyShort>0.86</AccuracyShort>
+			<AccuracyMedium>0.79</AccuracyMedium>
+			<AccuracyLong>0.47</AccuracyLong>
+			<RangedWeapon_Cooldown>1.70</RangedWeapon_Cooldown>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>7</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Hifumi</defaultProjectile>
+				<warmupTime>1.0</warmupTime>
+				<range>26.8</range>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>5</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Yuuka</defName>
+		<label>Bullet of Logic n Reason</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_yellow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>13</damageAmountBase>
+			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+
 
 
 
