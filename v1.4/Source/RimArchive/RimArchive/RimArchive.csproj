@@ -43,6 +43,7 @@
     <Compile Include="Defs\DefOfs\HediffDefOf.cs" />
     <Compile Include="Defs\IconDef.cs" />
     <Compile Include="Defs\StudentDef.cs" />
+    <Compile Include="Framework\BiDirectionDic.cs" />
     <Compile Include="Hediff\Comps\HediffComp_ArmorReduction.cs" />
     <Compile Include="Hediff\HediffCompProperties_ArmorReduction.cs" />
     <Compile Include="HotSwap.cs" />

@@ -59,8 +59,8 @@ namespace RimArchive.Window
             }
             else
             {
+                _cachedStudent.Discard();
                 _currentStudent = null;
-                _cachedStudent = null;
                 _inStudentProfile = false;
             }
         }
@@ -496,16 +496,31 @@ namespace RimArchive.Window
                 }
                 p.apparel.WornApparel.RemoveAll(x => x.def.apparel.bodyPartGroups.Any(t => t == BodyPartGroupDefOf.FullHead || t == BodyPartGroupDefOf.UpperHead));
                 p.apparel.LockAll();
+                #region Relations
                 //处理人际关系
+                //逻辑有点乱，首先：
+                //这个要双向查找保证不漏，或者说保证任意顺序招募都可以确保关系
+                //那么一开始要先一对多，然后多对一
+                List<Pawn> students = Find.CurrentMap.mapPawns.AllPawns.Where(x => x.kindDef is StudentDef).ToList();
                 foreach (var relation in (p.kindDef as StudentDef).relations)
                 {
-                    Debug.DbgMsg($"relation: {relation.relation.defName}");
-                    Debug.DbgMsg($"Pawns: {string.Join("\n", relation.others.Select(x => x.defName))}");
-                    foreach (Pawn other in Find.CurrentMap.mapPawns.AllPawns.Where(x => !p.relations.DirectRelationExists(relation.relation, x) && x.kindDef is StudentDef a && relation.others.Contains(a)))
+                    //Debug.DbgMsg($"relation: {relation.relation.defName}");
+                    //Debug.DbgMsg($"Pawns: {string.Join("\n", relation.others.Select(x => x.defName))}");
+                    foreach (Pawn other in students.Where(x => !p.relations.DirectRelationExists(relation.relation, x) && relation.others.Contains(x.kindDef as StudentDef)))
                     {
                         p.relations.AddDirectRelation(relation.relation, other);
                     }
                 }
+                //查找地图上的每一个student看关系里是否包含要招募的学生
+                foreach(var student in students.Where(x => (x.kindDef as StudentDef).relations.Exists(t => t.others.Contains(p.kindDef as StudentDef))))
+                {
+                    foreach(var relation in (student.kindDef as StudentDef).relations.Where(x => x.others.Contains(p.kindDef as StudentDef)))
+                    {
+                        if(!p.relations.DirectRelationExists(relation.relation, student))
+                            p.relations.AddDirectRelation(relation.relation, student);
+                    }
+                }
+                #endregion
                 //Debug log for backstory. Maybe vanilla cannot recognize har's backstory? but with HAR it should inject into vanilla code, doesn't it?
                 //DbgMsg($"Pawn {p.Name}: \nrace:{p.kindDef.race}\n kindDef {p.kindDef},\n backstoryoverride: {string.Join("\n", p.kindDef.backstoryFiltersOverride.First().categories.Select(x => x + "\n"))}");
 
