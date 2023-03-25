@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!-- 测试用 -->
+    <GeneDef>
+        <defName>DamageReduction</defName>
+        <label>Student</label>
+        <labelShortAdj>Student</labelShortAdj>
+        <description>Students receive less damage from attack.</description>
+        <iconPath>UI/Icons/Genes/Gene_FireWeakness</iconPath>
+        <displayCategory>ResistanceAndWeakness</displayCategory>
+        <displayOrderInCategory>90</displayOrderInCategory>
+        <damageFactors>
+            <Bullet>0.5</Bullet>
+        </damageFactors>
+        <biostatMet>2</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>dry</symbol>
+                </li>
+                <li>
+                    <symbol>tinder</symbol>
+                </li>
+                <li>
+                    <symbol>kindle</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef>
+        <defName>DamageReduction_IncomingDamageFactor</defName>
+        <label>Student</label>
+        <labelShortAdj>Student</labelShortAdj>
+        <description>Students receive less damage from attack.</description>
+        <iconPath>UI/Icons/Genes/Gene_FireWeakness</iconPath>
+        <displayCategory>ResistanceAndWeakness</displayCategory>
+        <displayOrderInCategory>90</displayOrderInCategory>
+        <statFactors>
+            <IncomingDamageFactor>0.5</IncomingDamageFactor>
+        </statFactors>
+        <biostatMet>2</biostatMet>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>dry</symbol>
+                </li>
+                <li>
+                    <symbol>tinder</symbol>
+                </li>
+                <li>
+                    <symbol>kindle</symbol>
+                </li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+</Defs>
