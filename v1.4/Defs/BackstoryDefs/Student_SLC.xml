@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--补课部学生背景故事-->
+	<!--梓-->
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
+		<defName>Backstory_Azusa</defName>
+		<title>Shirasu Azusa</title>
+		<titleShort>Shirasu Azusa</titleShort>
+		<baseDesc>The ice witch of Trinity's Supplemental Lessons Club.</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>RimArchive_Azusa</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<!--小春-->
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
+		<defName>Backstory_Koharu</defName>
+		<title>Shimoe Koharu</title>
+		<titleShort>Shimoe Koharu</titleShort>
+		<baseDesc>Koharu is a member of the Supplemental Lessons Club of Trinity Integrated Academy.</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>RimArchive_Koharu</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<!--日富美-->
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
+		<defName>Backstory_Hifumi</defName>
+		<title>Ajitani Hifumi</title>
+		<titleShort>Ajitani Hifumi</titleShort>
+		<baseDesc>A sensitive girl, Hifumi is a student of Trinity Integrated Academy and a member of the Supplementary Classes Club.</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>RimArchive_Hifumi</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<!--花子-->
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
+		<defName>Backstory_Hanako</defName>
+		<title>Urawa Hanako</title>
+		<titleShort>Urawa Hanako</titleShort>
+		<baseDesc>Trinity's Supplemental Lessons Club's paragon of sensitivity.</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>RimArchive_Hanako</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	
+	
+	
+
+
+</Defs>

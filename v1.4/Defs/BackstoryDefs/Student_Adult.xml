@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>KivotosStudent</defName>
+		<title>KivotosStudent</title>
+		<titleShort>Student</titleShort>
+		<baseDesc>[PAWN_nameDef] was born in Kivotos.\n\nNow she is ready to fight</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<slot>Adulthood</slot>
+		<spawnCategories>
+			<li>RimArchive_Backstory</li>
+			<li>RimArchive_Adult</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+
+</Defs>

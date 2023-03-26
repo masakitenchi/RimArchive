@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--研讨会学生背景故事-->
+	<!--优香-->
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
+		<defName>Backstory_Yuuka</defName>
+		<title>Hayase Yuuka</title>
+		<titleShort>Hayase Yuuka</titleShort>
+		<baseDesc>Enrolled in the Millennium Science School, Yuuka is the treasurer of the student council known as "Seminar".</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>RimArchive_Yuuka</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<!--诺亚-->
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
+		<defName>Backstory_Noa</defName>
+		<title>Ushio Noa</title>
+		<titleShort>Ushio Noa</titleShort>
+		<baseDesc>Member of the Millennium Science School, secretary of the "Seminar" student council.</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>RimArchive_Noa</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	
+
+
+</Defs>
