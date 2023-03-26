@@ -149,4 +149,49 @@
 			</rulesRaw>
 		</rulePack>
 	</RulePackDef>
+
+	<RulePackDef>
+		<defName>NamerHifumi</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[Azusa]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>Azusa</keyword>
+					<path>Names/Hifumi</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>NamerKoharu</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[Azusa]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>Azusa</keyword>
+					<path>Names/Koharu</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>NamerYuuka</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[Azusa]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>Azusa</keyword>
+					<path>Names/Yuuka</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
 </Defs>
