@@ -77,6 +77,9 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>0.92</drawSize>
 		</graphicData>
+		<weaponTags>
+			<li>BAW_Koharu</li>
+		</weaponTags>
 		<equippedAngleOffset>45</equippedAngleOffset>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
