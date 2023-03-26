@@ -501,6 +501,8 @@ namespace RimArchive.Window
                 //逻辑有点乱，首先：
                 //这个要双向查找保证不漏，或者说保证任意顺序招募都可以确保关系
                 //那么一开始要先一对多，然后多对一
+                //还是需要简洁一点的代码，或者说数据结构
+                //在StudentDef.Init里加了双向添加的代码，试试看
                 List<Pawn> students = Find.CurrentMap.mapPawns.AllPawns.Where(x => x.kindDef is StudentDef).ToList();
                 foreach (var relation in (p.kindDef as StudentDef).relations)
                 {
@@ -512,14 +514,14 @@ namespace RimArchive.Window
                     }
                 }
                 //查找地图上的每一个student看关系里是否包含要招募的学生
-                foreach(var student in students.Where(x => (x.kindDef as StudentDef).relations.Exists(t => t.others.Contains(p.kindDef as StudentDef))))
+                /*foreach(var student in students.Where(x => (x.kindDef as StudentDef).relations.Exists(t => t.others.Contains(p.kindDef as StudentDef))))
                 {
                     foreach(var relation in (student.kindDef as StudentDef).relations.Where(x => x.others.Contains(p.kindDef as StudentDef)))
                     {
                         if(!p.relations.DirectRelationExists(relation.relation, student))
                             p.relations.AddDirectRelation(relation.relation, student);
                     }
-                }
+                }*/
                 #endregion
                 //Debug log for backstory. Maybe vanilla cannot recognize har's backstory? but with HAR it should inject into vanilla code, doesn't it?
                 //DbgMsg($"Pawn {p.Name}: \nrace:{p.kindDef.race}\n kindDef {p.kindDef},\n backstoryoverride: {string.Join("\n", p.kindDef.backstoryFiltersOverride.First().categories.Select(x => x + "\n"))}");

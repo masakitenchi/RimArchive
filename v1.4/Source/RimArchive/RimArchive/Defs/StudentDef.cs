@@ -6,6 +6,7 @@ using System.Xml;
 using System.Collections.Generic;
 using HarmonyLib;
 using System.Reflection;
+using System.Linq;
 
 namespace RimArchive;
 
@@ -25,7 +26,7 @@ public class StudentDef : PawnKindDef
         {
             //Debug.DbgMsg($"Node:{node.Name}");
             DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "relation", node.Name);
-            for(int i = 0;i< node.ChildNodes.Count;i++)
+            for (int i = 0; i < node.ChildNodes.Count; i++)
             {
                 //Debug.DbgMsg($"ChildNode:{node.ChildNodes[i].InnerText}");
                 DirectXmlCrossRefLoader.RegisterListWantsCrossRef(this.others, node.ChildNodes[i].InnerText);
@@ -74,6 +75,7 @@ public class StudentDef : PawnKindDef
 #pragma warning restore CS1591
     internal void Init()
     {
+        #region Graphic
         Match match = RimArchive.studentNameRegex.Match(this.defName);
         if (!match.Success)
         {
@@ -97,6 +99,24 @@ public class StudentDef : PawnKindDef
         {
             Log.Error($"Cannot find memorial hall tex named {match.Groups["Name"].Value} for {this.defName}. All Matches:\n{match.Value}");
         }
+        #endregion
+
+        #region resolve relations
+        foreach (var relationWith in relations)
+        {
+            foreach (StudentDef student in relationWith.others)
+            {
+                if(!student.relations.Any(x => x.relation ==  relationWith.relation))
+                {
+                    student.relations.Add(new DirectRelationWith() { relation = relationWith.relation, others = new List<StudentDef>() { this } });
+                }
+                else if (!student.relations.Any(x => x.others.Contains(this)))
+                {
+                    student.relations.First(x => x.relation.Equals(relationWith.relation)).others.Add(this);
+                }
+            }
+        }
+        #endregion
     }
 }
 

@@ -5,7 +5,9 @@
 		<defName>BA_Yuuka</defName>
 		<label>优香</label>
 		<race>KivotosStudent</race>
-		<description>EMPTY</description>
+		<description>ミレニアムサイエンススクール所属、生徒会「セミナー」の会計。
+
+			理系生徒の比率が高いミレニアムでも指折りの数学の鬼才で、ミレニアムの予算周りの管理を統括している。特技は算盤で、複雑なことに悩まされていたり、葛藤している時などに算盤を弾いて落ち着かせる癖がある。</description>
 		<nameMaker>NamerYuuka</nameMaker>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>

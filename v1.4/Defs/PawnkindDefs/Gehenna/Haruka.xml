@@ -5,7 +5,9 @@
 		<defName>BA_Haruka</defName>
 		<label>春香</label>
 		<race>KivotosStudent</race>
-		<description>EMPTY</description>
+		<description>ゲヘナ学園所属、便利屋68の平社員。
+
+			暗くて陰気な性格のため、幼い頃からずっといじめられてきたが、アルのおかげでいじめから逃れられるようになった少女。その後、末っ子的な立ち位置で便利屋68にて活動中。内気で自尊心が低いが、その突飛な発想は便利屋の中で一番恐ろしいと言っても過言ではない。</description>
 		<nameMaker>NamerHaruka</nameMaker>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>

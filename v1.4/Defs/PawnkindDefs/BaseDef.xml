@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<RimArchive.StudentDef Name = "RA_BasePawn" ParentName = "BasePlayerPawnKind" Abstract = "True">
+		<defName>KivotosStudent</defName>
+		<race>KivotosStudent</race>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Kivotosian>999</Kivotosian>
+			</xenotypeChances>
+		</xenotypeSet>
+		<forcedTraits>
+			<Beauty>1</Beauty>
+		</forcedTraits>
+		<fixedGender>Female</fixedGender>
+		<generateInitialNonFamilyRelations>false</generateInitialNonFamilyRelations>
+		<royalTitleChance>0.0</royalTitleChance>
+		<itemQuality>Legendary</itemQuality>
+		<biocodeWeaponChance>1.0</biocodeWeaponChance>
+		<humanPregnancyChance>0.0</humanPregnancyChance>
+		<chemicalAddictionChance>0.0</chemicalAddictionChance>
+		<combatEnhancingDrugsChance>0.0</combatEnhancingDrugsChance>
+		<destroyGearOnDrop>false</destroyGearOnDrop>
+	</RimArchive.StudentDef>
+</Defs>
