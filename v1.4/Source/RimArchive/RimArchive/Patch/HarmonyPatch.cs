@@ -60,6 +60,7 @@ namespace RimArchive
                 if (RimArchive.StudentDocument.Notify_StudentKilled(__instance))
                 {
                     //Debug.DbgMsg($"Successfully documented student\nDead? {__instance.health.Dead}");
+                    __instance.health.hediffSet.hediffs.RemoveAll(x => x.def.isBad || x.def.IsAddiction);
                     __instance.DeSpawn();
                     return false;
                 }

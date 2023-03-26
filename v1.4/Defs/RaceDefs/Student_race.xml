@@ -18,8 +18,8 @@
 					</bodyTypes>
 
 					<headTypes>
-                        <li>Female_AverageNormal</li>
-                    </headTypes>
+						<li>Female_AverageNormal</li>
+					</headTypes>
 					<colorChannels>
 						<li>
 							<name>skin</name>
@@ -34,19 +34,19 @@
 						</li>
 					</colorChannels>
 
-				
+
 				</alienPartGenerator>
 				<maxDamageForSocialfight>6</maxDamageForSocialfight>
 			</generalSettings>
-			
+
 			<styleSettings>
 				<li>
 					<key>HairDef</key>
 					<value>
 						<hasStyle>true</hasStyle>
 						<styleTagsOverride>
-                            <li>BAPlaceHolder_Style</li>
-                        </styleTagsOverride>
+							<li>BAPlaceHolder_Style</li>
+						</styleTagsOverride>
 					</value>
 				</li>
 				<li>
@@ -64,12 +64,12 @@
 			</styleSettings>
 			<raceRestriction>
 				<blackEndoCategories>
-				  <li>Melanin</li>
-				  <li>HairColor</li>
+					<li>Melanin</li>
+					<li>HairColor</li>
 				</blackEndoCategories>
 			</raceRestriction>
-			
-			
+
+
 		</alienRace>
 
 		<tools>
@@ -109,8 +109,8 @@
 			</li>
 		</tools>
 
-	
-		
+
+
 		<race>
 			<thinkTreeMain>Humanlike</thinkTreeMain>
 			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
@@ -206,5 +206,5 @@
 		</recipes>
 	</AlienRace.ThingDef_AlienRace>
 
-	
+
 </Defs>

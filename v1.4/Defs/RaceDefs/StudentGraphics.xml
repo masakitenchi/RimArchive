@@ -13,15 +13,15 @@
 			</graphicPaths>
 
 
-			
+
 			<generalSettings>
 				<alienPartGenerator>
-					<customDrawSize>(1, 1)</customDrawSize><!--小人整体大小-->
-				<bodyAddons>
-						<li><!--光环-->
+					<customDrawSize>(1, 1)</customDrawSize>					<!--小人整体大小-->
+					<bodyAddons>
+						<li>							<!--光环-->
 							<path>Pawns/General/Invisible/Inv</path>
 							<bodyPart>halo</bodyPart>
-							<drawnInBed>false</drawnInBed><!--睡觉不显示光环-->
+							<drawnInBed>false</drawnInBed>							<!--睡觉不显示光环-->
 							<drawnDesiccated>false</drawnDesiccated>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
 							<offsets>
@@ -38,15 +38,15 @@
 									<offset>(0,0.6)</offset>
 								</east>
 							</offsets>
-						  <backstoryGraphics>
-							  <Backstory_Yuuka>Pawns/Millennium/Yuuka/Halo/uka</Backstory_Yuuka>
-							  <Backstory_Hifumi>Pawns/Trinity/Hifumi/Halo/Hifumi</Backstory_Hifumi>
-							  <Backstory_Koharu>Pawns/Trinity/Koharu/Halo/Koharu</Backstory_Koharu>
-							  <Backstory_Azusa>Pawns/Trinity/Azusa/Halo/Azusa</Backstory_Azusa>
-							  <Backstory_Haruka>Pawns/Gehenna/Haruka/Halo/Haruka</Backstory_Haruka>
-                          </backstoryGraphics>
+							<backstoryGraphics>
+								<Backstory_Yuuka>Pawns/Millennium/Yuuka/Halo/uka</Backstory_Yuuka>
+								<Backstory_Hifumi>Pawns/Trinity/Hifumi/Halo/Hifumi</Backstory_Hifumi>
+								<Backstory_Koharu>Pawns/Trinity/Koharu/Halo/Koharu</Backstory_Koharu>
+								<Backstory_Azusa>Pawns/Trinity/Azusa/Halo/Azusa</Backstory_Azusa>
+								<Backstory_Haruka>Pawns/Gehenna/Haruka/Halo/Haruka</Backstory_Haruka>
+							</backstoryGraphics>
 						</li>
-				        <li><!--头-->
+						<li>							<!--头-->
 							<path>Pawns/General/Invisible/Inv</path>
 							<inFrontOfBody>true</inFrontOfBody>
 							<drawnDesiccated>false</drawnDesiccated>
@@ -65,16 +65,16 @@
 									<offset>(0,0)</offset>
 								</east>
 							</offsets>
-						  <backstoryGraphics>
-							  <Backstory_Yuuka>Pawns/Millennium/Yuuka/Head/uka</Backstory_Yuuka>
-							  <Backstory_Hifumi>Pawns/Trinity/Hifumi/Head/Hifumi</Backstory_Hifumi>
-							  <Backstory_Koharu>Pawns/Trinity/Koharu/Head/Koharu</Backstory_Koharu>
-							  <Backstory_Azusa>Pawns/Trinity/Azusa/Head/Azusa</Backstory_Azusa>
-							  <Backstory_Haruka>Pawns/Gehenna/Haruka/Head/Haruka</Backstory_Haruka>
-                          
-				  </backstoryGraphics>
+							<backstoryGraphics>
+								<Backstory_Yuuka>Pawns/Millennium/Yuuka/Head/uka</Backstory_Yuuka>
+								<Backstory_Hifumi>Pawns/Trinity/Hifumi/Head/Hifumi</Backstory_Hifumi>
+								<Backstory_Koharu>Pawns/Trinity/Koharu/Head/Koharu</Backstory_Koharu>
+								<Backstory_Azusa>Pawns/Trinity/Azusa/Head/Azusa</Backstory_Azusa>
+								<Backstory_Haruka>Pawns/Gehenna/Haruka/Head/Haruka</Backstory_Haruka>
+
+							</backstoryGraphics>
 						</li>
-				        <li><!--头发前-->
+						<li>							<!--头发前-->
 							<path>Pawns/General/Invisible/Inv</path>
 							<inFrontOfBody>true</inFrontOfBody>
 							<drawnDesiccated>false</drawnDesiccated>
@@ -93,16 +93,16 @@
 									<offset>(0,0)</offset>
 								</east>
 							</offsets>
-						  <backstoryGraphics>
-							  <Backstory_Yuuka>Pawns/Millennium/Yuuka/Hair/uka</Backstory_Yuuka>
-							  <Backstory_Hifumi>Pawns/Trinity/Hifumi/Hair/Hifumi</Backstory_Hifumi>
-							  <Backstory_Koharu>Pawns/Trinity/Koharu/Hair/Koharu</Backstory_Koharu>
-							  <Backstory_Azusa>Pawns/Trinity/Azusa/Hair/Azusa</Backstory_Azusa>
-							  <Backstory_Haruka>Pawns/Gehenna/Haruka/Hair/Haruka</Backstory_Haruka>
-                          
-				  </backstoryGraphics>
+							<backstoryGraphics>
+								<Backstory_Yuuka>Pawns/Millennium/Yuuka/Hair/uka</Backstory_Yuuka>
+								<Backstory_Hifumi>Pawns/Trinity/Hifumi/Hair/Hifumi</Backstory_Hifumi>
+								<Backstory_Koharu>Pawns/Trinity/Koharu/Hair/Koharu</Backstory_Koharu>
+								<Backstory_Azusa>Pawns/Trinity/Azusa/Hair/Azusa</Backstory_Azusa>
+								<Backstory_Haruka>Pawns/Gehenna/Haruka/Hair/Haruka</Backstory_Haruka>
+
+							</backstoryGraphics>
 						</li>
-				        <li><!--头发后-->
+						<li>							<!--头发后-->
 							<path>Pawns/General/Invisible/Inv</path>
 							<drawnDesiccated>false</drawnDesiccated>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
@@ -121,18 +121,18 @@
 								</east>
 
 							</offsets>
-						  <backstoryGraphics>
-							  <Backstory_Yuuka>Pawns/Millennium/Yuuka/Hair/uka</Backstory_Yuuka>
-							  <Backstory_Hifumi>Pawns/Trinity/Hifumi/Hair/Hifumi</Backstory_Hifumi>
-							  <Backstory_Koharu>Pawns/Trinity/Koharu/Hair/Koharu</Backstory_Koharu>
-							  <Backstory_Azusa>Pawns/Trinity/Azusa/Hair/Azusa</Backstory_Azusa>
-							  <Backstory_Haruka>Pawns/Gehenna/Haruka/Hair/Haruka</Backstory_Haruka>
-                          </backstoryGraphics>
+							<backstoryGraphics>
+								<Backstory_Yuuka>Pawns/Millennium/Yuuka/Hair/uka</Backstory_Yuuka>
+								<Backstory_Hifumi>Pawns/Trinity/Hifumi/Hair/Hifumi</Backstory_Hifumi>
+								<Backstory_Koharu>Pawns/Trinity/Koharu/Hair/Koharu</Backstory_Koharu>
+								<Backstory_Azusa>Pawns/Trinity/Azusa/Hair/Azusa</Backstory_Azusa>
+								<Backstory_Haruka>Pawns/Gehenna/Haruka/Hair/Haruka</Backstory_Haruka>
+							</backstoryGraphics>
 						</li>
 					</bodyAddons>
 				</alienPartGenerator>
 			</generalSettings>
-			
+
 
 		</alienRace>
 	</AlienRace.ThingDef_AlienRace>
