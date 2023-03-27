@@ -15,7 +15,7 @@
 			<li>BAW_Saki</li>
 		</weaponTags>
 		<recipeMaker>
-			<researchPrerequisite>ReserchSRT</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_SRT</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -83,7 +83,7 @@
 			<li>BAW_SRT</li>
 		</weaponTags>
 		<recipeMaker>
-			<researchPrerequisite>ReserchSRT</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_SRT</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -165,7 +165,7 @@
 	  <Cloth>40</Cloth>
     </costList>
     <recipeMaker>
-		<researchPrerequisite>ReserchSRT</researchPrerequisite>
+		<researchPrerequisite>BA_Weapon_SRT</researchPrerequisite>
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
@@ -218,7 +218,7 @@
 		<recipeMaker>
 				<researchPrerequisites>
 					<li>MultiAnalyzer</li>
-					<li>ReserchSRT</li>
+					<li>BA_Weapon_SRT</li>
 				</researchPrerequisites>
 			<skillRequirements>
 				<Crafting>8</Crafting>
@@ -313,7 +313,7 @@
 			<li>BAW_Moe</li>
 		</weaponTags>
 		<recipeMaker>
-			<researchPrerequisite>ReserchSRT</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_SRT</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>

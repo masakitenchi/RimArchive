@@ -17,7 +17,7 @@
 			<li>RangedHeavy</li>
 		</weaponClasses>
 		<recipeMaker>
-			<researchPrerequisite>ReserchHyakkiyako</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Hyakkiyako</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -85,7 +85,7 @@
 		<equippedAngleOffset>46</equippedAngleOffset>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ReserchHyakkiyako</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Hyakkiyako</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>7</Crafting>
 			</skillRequirements>
@@ -161,7 +161,7 @@
 			<li>ShortShots</li>
 		</weaponClasses>
 		<recipeMaker>
-			<researchPrerequisite>ReserchHyakkiyako</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Hyakkiyako</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -228,7 +228,7 @@
 			<li>BAW_Michiru</li>
 		</weaponTags>
 		<recipeMaker>
-			<researchPrerequisite>ReserchHyakkiyako</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Hyakkiyako</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>

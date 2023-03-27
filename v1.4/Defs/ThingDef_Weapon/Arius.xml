@@ -16,7 +16,7 @@
 			<li>BAW_Saori</li>
 		</weaponTags>
 		<recipeMaker>
-			<researchPrerequisite>ReserchArius</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Arius</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -85,7 +85,7 @@
 			<li>BAW_Atsuko</li>
 		</weaponTags>
 		<recipeMaker>
-			<researchPrerequisite>ReserchArius</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Arius</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -171,7 +171,7 @@
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <recipeMaker>
-		<researchPrerequisite>ReserchArius</researchPrerequisite>
+		<researchPrerequisite>BA_Weapon_Arius</researchPrerequisite>
       <skillRequirements>
         <Crafting>5</Crafting>
       </skillRequirements>
@@ -230,7 +230,7 @@
 		</weaponTags>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ReserchArius</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Arius</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>

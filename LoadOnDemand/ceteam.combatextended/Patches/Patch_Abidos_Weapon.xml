@@ -6,7 +6,7 @@
 					defName="BAW_Hoshino" or
 					defName="BAW_Shiroko" or
 					defName="BAW_Serika"
-				  ]/recipeMaker/researchPrerequisite[text()="ReserchAbydos"]
+				  ]/recipeMaker/researchPrerequisite[text()="BA_Weapon_Abydos"]
 			</xpath>
 			<nomatch Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[
@@ -16,7 +16,7 @@
 					  ]/recipeMaker/researchPrerequisite
 				</xpath>
 				<value>
-					<researchPrerequisite>ReserchAbydos</researchPrerequisite>
+					<researchPrerequisite>BA_Weapon_Abydos</researchPrerequisite>
 				</value>
 			</nomatch>
 		</Operation>

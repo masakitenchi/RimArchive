@@ -15,7 +15,7 @@
 			<li>BAW_Kokona</li>
 		</weaponTags>
 		<recipeMaker>
-			<researchPrerequisite>ReserchShanhaijing</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Shanhaijing</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -94,7 +94,7 @@
       <ComponentIndustrial>4</ComponentIndustrial>
     </costList>
     <recipeMaker>
-		<researchPrerequisite>ReserchShanhaijing</researchPrerequisite>
+		<researchPrerequisite>BA_Weapon_Shanhaijing</researchPrerequisite>
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>

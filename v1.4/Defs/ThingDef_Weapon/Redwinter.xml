@@ -15,7 +15,7 @@
 			<li>BAW_Nodoka</li>
 		</weaponTags>
 		<recipeMaker>
-			<researchPrerequisite>ReserchRedwinter</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Redwinter</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>

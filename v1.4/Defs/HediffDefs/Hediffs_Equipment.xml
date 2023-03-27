@@ -5,7 +5,7 @@
 		<defName>BA_Hediff_Badge</defName>
 		<hediffClass>Hediff_Level</hediffClass>
 		<descriptionHyperlinks>
-			<ThingDef>BA_Badge_Tier1</ThingDef>
+			<ThingDef>BA_Badge_TierI</ThingDef>
 		</descriptionHyperlinks>
 		<label>Badge</label>
 		<description>Badges</description>
@@ -67,7 +67,7 @@
 		<hediffClass>Hediff_Level</hediffClass>
 		<!-- 全部上线后记得改 -->
 		<descriptionHyperlinks>
-			<ThingDef>BA_Badge_Tier1</ThingDef>
+			<ThingDef>BA_Badge_TierI</ThingDef>
 		</descriptionHyperlinks>
 		<label>Bag</label>
 		<description>Bags</description>
@@ -141,7 +141,7 @@
 		<hediffClass>Hediff_Level</hediffClass>
 		<!-- 全部上线后记得改 -->
 		<descriptionHyperlinks>
-			<ThingDef>BA_Badge_Tier1</ThingDef>
+			<ThingDef>BA_Badge_TierI</ThingDef>
 		</descriptionHyperlinks>
 		<label>Charm</label>
 		<description>Charms</description>
@@ -216,7 +216,7 @@
 		<hediffClass>Hediff_Level</hediffClass>
 		<!-- 全部上线后记得改 -->
 		<descriptionHyperlinks>
-			<ThingDef>BA_Badge_Tier1</ThingDef>
+			<ThingDef>BA_Badge_TierI</ThingDef>
 		</descriptionHyperlinks>
 		<label>Hairpin</label>
 		<description>Haripins</description>
@@ -291,7 +291,7 @@
 		<hediffClass>Hediff_Level</hediffClass>
 		<!-- 全部上线后记得改 -->
 		<descriptionHyperlinks>
-			<ThingDef>BA_Badge_Tier1</ThingDef>
+			<ThingDef>BA_Badge_TierI</ThingDef>
 		</descriptionHyperlinks>
 		<label>Hat</label>
 		<description>Hats</description>
@@ -365,7 +365,7 @@
 		<hediffClass>Hediff_Level</hediffClass>
 		<!-- 全部上线后记得改 -->
 		<descriptionHyperlinks>
-			<ThingDef>BA_Badge_Tier1</ThingDef>
+			<ThingDef>BA_Badge_TierI</ThingDef>
 		</descriptionHyperlinks>
 		<label>Necklace</label>
 		<description>Necklaces</description>
@@ -440,7 +440,7 @@
 		<hediffClass>Hediff_Level</hediffClass>
 		<!-- 全部上线后记得改 -->
 		<descriptionHyperlinks>
-			<ThingDef>BA_Badge_Tier1</ThingDef>
+			<ThingDef>BA_Badge_TierI</ThingDef>
 		</descriptionHyperlinks>
 		<label>Shoe</label>
 		<description>Shoes</description>

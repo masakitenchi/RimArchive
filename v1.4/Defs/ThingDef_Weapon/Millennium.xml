@@ -17,7 +17,7 @@
 		<recipeMaker>
 			<researchPrerequisites>
 				<li>Mortars</li>
-				<li>ReserchMillennium</li>
+				<li>BA_Weapon_Millennium</li>
 			</researchPrerequisites>
 			<skillRequirements>
 				<Crafting>12</Crafting>
@@ -90,7 +90,7 @@
 			<li>BAW_Neru</li>
 		</weaponTags>
 		<recipeMaker>
-			<researchPrerequisite>ReserchMillennium</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Millennium</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -171,7 +171,7 @@
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <recipeMaker>
-		<researchPrerequisite>ReserchMillennium</researchPrerequisite>
+		<researchPrerequisite>BA_Weapon_Millennium</researchPrerequisite>
       <skillRequirements>
         <Crafting>5</Crafting>
       </skillRequirements>
@@ -236,7 +236,7 @@
       <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <recipeMaker>
-		<researchPrerequisite>ReserchMillennium</researchPrerequisite>
+		<researchPrerequisite>BA_Weapon_Millennium</researchPrerequisite>
       <skillRequirements>
         <Crafting>5</Crafting>
       </skillRequirements>
@@ -291,7 +291,7 @@
 		</weaponTags>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ReserchMillennium</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Millennium</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -360,7 +360,7 @@
 		</weaponTags>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ReserchMillennium</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Millennium</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -436,7 +436,7 @@
 		</weaponTags>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ReserchMillennium</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Millennium</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -520,7 +520,7 @@
 		</weaponTags>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ReserchMillennium</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Millennium</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>5</Crafting>
 			</skillRequirements>
@@ -588,7 +588,7 @@
 		</weaponTags>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ReserchMillennium</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Millennium</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>

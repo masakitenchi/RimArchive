@@ -69,10 +69,12 @@
 	</ThingDef>
 
 	<ThingDef ParentName = "BA_EquipmentLowTierBase">
-		<defName>BA_Badge_Tier1</defName>
+		<defName>BA_Badge_TierI</defName>
 		<label>Badge</label>
 		<description>Tier 1 Badge.</description>
-		<costList Inherit = "False"/>
+		<costList Inherit = "False">
+			<WoodLog>1</WoodLog>
+		</costList>
 		<comps>
 			<li Class="CompProperties_Usable">
 			  <compClass>CompUsableImplant</compClass>
@@ -91,7 +93,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName = "BA_EquipmentLowTierBase">
-		<defName>BA_Badge_Tier2</defName>
+		<defName>BA_Badge_TierII</defName>
 		<label>Badge</label>
 		<description>Tier 2 Badge.</description>
 		<comps>
@@ -114,7 +116,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName = "BA_EquipmentLowTierBase">
-		<defName>BA_Badge_Tier2</defName>
+		<defName>BA_Badge_TierIII</defName>
 		<label>Badge</label>
 		<description>Tier 3 Badge.</description>
 		<comps>
@@ -137,7 +139,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName = "BA_EquipmentLowTierBase">
-		<defName>BA_Badge_Tier4</defName>
+		<defName>BA_Badge_TierIV</defName>
 		<label>Badge</label>
 		<description>Tier 4 Badge.</description>
 		<comps>
@@ -160,7 +162,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName = "BA_EquipmentLowTierBase">
-		<defName>BA_Badge_Tier5</defName>
+		<defName>BA_Badge_TierV</defName>
 		<label>Badge</label>
 		<description>Tier 5 Badge.</description>
 		<comps>
@@ -183,7 +185,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName = "BA_EquipmentLowTierBase">
-		<defName>BA_Badge_Tier6</defName>
+		<defName>BA_Badge_TierVI</defName>
 		<label>Badge</label>
 		<description>Tier 6 Badge.</description>
 		<comps>
@@ -206,7 +208,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName = "BA_EquipmentLowTierBase">
-		<defName>BA_Badge_Tier7</defName>
+		<defName>BA_Badge_TierVII</defName>
 		<label>Badge</label>
 		<description>Tier 7 Badge.</description>
 		<comps>

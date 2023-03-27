@@ -14,7 +14,7 @@
 		<equippedAngleOffset>45</equippedAngleOffset>
 		<soundInteract>Interact_SMG</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ReserchGehenna</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Gehenna</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -80,7 +80,7 @@
 		<equippedAngleOffset>46</equippedAngleOffset>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ReserchGehenna</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Gehenna</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>7</Crafting>
 			</skillRequirements>
@@ -146,7 +146,7 @@
 			<li>BAW_Ako</li>
 		</weaponTags>
 		<recipeMaker>
-			<researchPrerequisite>ReserchGehenna</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Gehenna</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -214,7 +214,7 @@
 			<li>BAW_Mutsuki</li>
 		</weaponTags>
 		<recipeMaker>
-			<researchPrerequisite>ReserchGehenna</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Gehenna</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -296,7 +296,7 @@
 			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<recipeMaker>
-			<researchPrerequisite>ReserchGehenna</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Gehenna</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>5</Crafting>
 			</skillRequirements>
@@ -347,7 +347,7 @@
 			<li>BAW_Kayoko</li>
 		</weaponTags>
 		<recipeMaker>
-			<researchPrerequisite>ReserchGehenna</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Gehenna</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -415,7 +415,7 @@
 			<li>BAW_Haruka</li>
 		</weaponTags>
 		<recipeMaker>
-			<researchPrerequisite>ReserchGehenna</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Gehenna</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>

@@ -16,7 +16,7 @@
 		</weaponTags>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ReserchTrinity</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Trinity</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -83,7 +83,7 @@
 		<equippedAngleOffset>45</equippedAngleOffset>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ReserchTrinity</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Trinity</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -146,7 +146,7 @@
 		</graphicData>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ReserchTrinity</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Trinity</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -226,7 +226,7 @@
 		</weaponTags>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ReserchTrinity</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Trinity</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -299,7 +299,7 @@
 		</weaponTags>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
-			<researchPrerequisite>ReserchTrinity</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Trinity</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>

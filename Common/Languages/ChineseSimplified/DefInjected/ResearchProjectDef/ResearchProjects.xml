@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-    <ReserchAbydos.label>阿拜多斯高等学校</ReserchAbydos.label>
-	<ReserchGehenna.label>格黑娜学园</ReserchGehenna.label>
-	<ReserchHyakkiyako.label>百鬼夜行联合学园</ReserchHyakkiyako.label>
-	<ReserchMillennium.label>千年科学学园</ReserchMillennium.label>
-	<ReserchTrinity.label>三一综合学园</ReserchTrinity.label>
-	<ReserchSRT.label>SRT特殊学园</ReserchSRT.label>
-	<ReserchShanhaijing.label>山海经高级中学</ReserchShanhaijing.label>
+    <BA_Weapon_Abydos.label>阿拜多斯高等学校</BA_Weapon_Abydos.label>
+	<BA_Weapon_Gehenna.label>格黑娜学园</BA_Weapon_Gehenna.label>
+	<BA_Weapon_Hyakkiyako.label>百鬼夜行联合学园</BA_Weapon_Hyakkiyako.label>
+	<BA_Weapon_Millennium.label>千年科学学园</BA_Weapon_Millennium.label>
+	<BA_Weapon_Trinity.label>三一综合学园</BA_Weapon_Trinity.label>
+	<BA_Weapon_SRT.label>SRT特殊学园</BA_Weapon_SRT.label>
+	<BA_Weapon_Shanhaijing.label>山海经高级中学</BA_Weapon_Shanhaijing.label>
 
 
 </LanguageData>
