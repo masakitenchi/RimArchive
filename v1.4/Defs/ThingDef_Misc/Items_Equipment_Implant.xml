@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- 懒得复制粘贴了，直接用机械师的 -->
+	<ThingDef Name = "BA_EquipmentHediffBase" ParentName = "MechanitorImplantBase" Abstract = "True">
+		<thingCategories Inherit = "False">
+			<li>BA_HediffEquipment</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName = "BA_EquipmentHediffBase" Name = "BA_BadgeBase" Abstract = "True">
+		<label>Badge</label>
+	</ThingDef>
+
+	<ThingDef ParentName = "BA_EquipmentHediffBase" Name = "BA_BagBase" Abstract = "True">
+		<label>Bag</label>
+	</ThingDef>
+
+	<ThingDef ParentName = "BA_EquipmentHediffBase" Name = "BA_CharmBase" Abstract = "True">
+		<label>Charm</label>
+	</ThingDef>
+
+	<ThingDef ParentName = "BA_EquipmentHediffBase" Name = "BA_HairpinBase" Abstract = "True">
+		<label>Hairpin</label>
+	</ThingDef>
+
+	<ThingDef ParentName = "BA_EquipmentHediffBase" Name = "BA_HatBase" Abstract = "True">
+		<label>Hat</label>
+	</ThingDef>
+
+	<ThingDef ParentName = "BA_EquipmentHediffBase" Name = "BA_NecklaceBase" Abstract = "True">
+		<label>Necklace</label>
+	</ThingDef>
+
+	<ThingDef ParentName = "BA_EquipmentHediffBase" Name = "BA_ShoeBase" Abstract = "True">
+		<label>Shoe</label>
+	</ThingDef>
+
+	<ThingDef ParentName = "BA_BadgeBase">
+		<defName>BA_Badge_Tier1</defName>
+		<description>Tier 1 Badge.</description>
+	</ThingDef>
+	
+</Defs>
