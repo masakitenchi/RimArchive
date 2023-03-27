@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--泉奈-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Izuna</defName>
+		<label>Izuna-style Super Ninja Apparatus</label>
+		<description>Izuna's beloved submachine gun.\n\nA state-of-the-art ninja implement, when combined with Izuna-style ninja arts its uses are practically limitless, such as shooting smoke grenades that have been thrown, or massaging Master's shoulders.</description>
+		<graphicData>
+			<texPath>Weapon/Hyakkiyako/Izuna</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.15</drawSize>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+		<weaponClasses>
+			<li>ShortShots</li>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<recipeMaker>
+			<researchPrerequisite>ReserchHyakkiyako</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>440</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>24000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.79</AccuracyTouch>
+			<AccuracyShort>0.64</AccuracyShort>
+			<AccuracyMedium>0.35</AccuracyMedium>
+			<AccuracyLong>0.29</AccuracyLong>
+			<RangedWeapon_Cooldown>0.63</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>0.25</MoveSpeed>
+		</equippedStatOffsets>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Izuna</defaultProjectile>
+				<warmupTime>1.1</warmupTime>
+				<range>25.6</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+				<soundCast>Shot_HeavySMG</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Izuna</defName>
+		<label>Bullet of Izuna-style Super Ninja Apparatus</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>9</damageAmountBase>
+			<speed>48</speed>
+		</projectile>
+	</ThingDef>
+
+	
+	<!--若藻-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Wakamo</defName>
+		<label>Crimson Calamity</label>
+		<description>Wakamo's favorite rifle.Despite its old-fashioned appearance, it always smells of flames and gunpowder. \n\nNowadays, it is often used against "obstacles" around the teacher.</description>
+		<graphicData>
+			<texPath>Weapon/Hyakkiyako/Wakamo</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.03</drawSize>
+		</graphicData>
+		<equippedAngleOffset>46</equippedAngleOffset>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>ReserchHyakkiyako</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+			<displayPriority>420</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>40000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.52</AccuracyTouch>
+			<AccuracyShort>0.59</AccuracyShort>
+			<AccuracyMedium>0.79</AccuracyMedium>
+			<AccuracyLong>0.85</AccuracyLong>
+			<RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>80</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Wakamo</defaultProjectile>
+				<warmupTime>2.1</warmupTime>
+				<range>49</range>
+				<soundCast>Shot_BoltActionRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>Bayonet</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>2.5</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Wakamo</defName>
+		<label>Bullet of Crimson Calamity</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_red</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>22</damageAmountBase>
+			<armorPenetrationBase>0.90</armorPenetrationBase>
+			<speed>80</speed>
+		</projectile>
+	</ThingDef>
+
+	<!--月咏-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Tsukuyo</defName>
+		<label>Tsukuyo-style Submachine Gun</label>
+		<description>A submachine gun that Tsukuyo cherishes.\n\nTsukuyo is not good at handling guns, so Michiru and Izuna have added various decorations and modifications for her. It's irreplaceable for Tsukuyo, and at the crucial moments she holds the barrel even more tenderly.</description>
+		<graphicData>
+			<texPath>Weapon/Hyakkiyako/Tsukuyo</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.1</drawSize>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+		<weaponClasses>
+			<li>ShortShots</li>
+		</weaponClasses>
+		<recipeMaker>
+			<researchPrerequisite>ReserchHyakkiyako</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>440</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>24000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.74</AccuracyShort>
+			<AccuracyMedium>0.39</AccuracyMedium>
+			<AccuracyLong>0.31</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Tsukuyo</defaultProjectile>
+				<warmupTime>1.25</warmupTime>
+				<range>29.6</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+				<soundCast>Shot_HeavySMG</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>5</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Tsukuyo</defName>
+		<label>Bullet of Tsukuyo-style Submachine Gun</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_yellow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>10.5</damageAmountBase>
+			<speed>48</speed>
+		</projectile>
+	</ThingDef>
+
+	<!--三千留-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Michiru</defName>
+		<label>Michiru-style Overflow Shotgun</label>
+		<description>Michiru's beloved shotgun.\n\nNumerous modifications and additional parts are attached so that special ammo can be shot for use in her own ninjutsu.\n\nIt seems difficult to use, but Michiru says, "That's part of the style!"</description>
+		<graphicData>
+			<texPath>Weapon/Hyakkiyako/Michiru</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.03</drawSize>
+		</graphicData>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<soundInteract>Interact_SMG</soundInteract>
+		<weaponTags>
+			<li>BAW_Michiru</li>
+		</weaponTags>
+		<recipeMaker>
+			<researchPrerequisite>ReserchHyakkiyako</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>400</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>24000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.45</AccuracyTouch>
+			<AccuracyShort>0.61</AccuracyShort>
+			<AccuracyMedium>0.63</AccuracyMedium>
+			<AccuracyLong>0.22</AccuracyLong>
+			<RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Michiru</defaultProjectile>
+				<warmupTime>1.05</warmupTime>
+				<range>24</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>18</ticksBetweenBurstShots>
+				<soundCast>Shot_Shotgun</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Michiru</defName>
+		<label>Bullet of Michiru-style Overflow Shotgun</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Shotgun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>2</damageAmountBase>
+			<speed>45</speed>
+			<armorPenetrationBase>0.15</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+
+
+
+
+
+
+</Defs>
