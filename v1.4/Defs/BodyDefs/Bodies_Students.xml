@@ -15,14 +15,14 @@
 			</groups>
 			<parts>
 				<li>
-					<def>halo</def>
+					<def>Halo</def>
 					<customLabel>光环</customLabel>
 					<coverage>0</coverage>
 					<depth>Outside</depth>
 					<groups>
 						<li>FullHead</li>
 					</groups>
-					<!-- neck and above set to the subpart of halo-->
+					<!-- neck and above set to the subpart of Halo-->
 					<parts>
 						<li>
 							<def>Neck</def>

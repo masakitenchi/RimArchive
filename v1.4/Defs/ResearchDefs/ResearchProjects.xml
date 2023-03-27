@@ -10,7 +10,7 @@
 		<tab>RimArchiveTech</tab>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName = "BA_ReserachProjectBase">
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
 		<defName>BA_Weapon_Abydos</defName>
 		<label>Abydos</label>
 		<description>Now you can forge the weapons from Abydos.</description>
@@ -23,7 +23,7 @@
 		<researchViewY>0</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName = "BA_ReserachProjectBase">
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
 		<defName>BA_Weapon_Gehenna</defName>
 		<label>Gehenna</label>
 		<description>Now you can forge the weapons from Gehenna.</description>
@@ -36,7 +36,7 @@
 		<researchViewY>0</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName = "BA_ReserachProjectBase">
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
 		<defName>BA_Weapon_Hyakkiyako</defName>
 		<label>Hyakkiyako</label>
 		<description>Now you can forge the weapons from Hyakkiyako.</description>
@@ -49,7 +49,7 @@
 		<researchViewY>0</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName = "BA_ReserachProjectBase">
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
 		<defName>BA_Weapon_Millennium</defName>
 		<label>Millennium</label>
 		<description>Now you can forge the weapons from Millennium.</description>
@@ -62,7 +62,7 @@
 		<researchViewY>1</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName = "BA_ReserachProjectBase">
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
 		<defName>BA_Weapon_Trinity</defName>
 		<label>Trinity</label>
 		<description>Now you can forge the weapons from Trinity.</description>
@@ -75,7 +75,7 @@
 		<researchViewY>1</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName = "BA_ReserachProjectBase">
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
 		<defName>BA_Weapon_SRT</defName>
 		<label>SRT</label>
 		<description>Now you can forge the weapons from SRT.</description>
@@ -88,7 +88,7 @@
 		<researchViewY>2</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName = "BA_ReserachProjectBase">
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
 		<defName>BA_Weapon_Shanhaijing</defName>
 		<label>Shanhaijing</label>
 		<description>Now you can forge the weapons from Shanhaijing.</description>
@@ -101,7 +101,7 @@
 		<researchViewY>1</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName = "BA_ReserachProjectBase">
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
 		<defName>BA_Weapon_Redwinter</defName>
 		<label>RedWinter</label>
 		<description>Now you can forge the weapons from RedWinter.</description>
@@ -114,7 +114,7 @@
 		<researchViewY>2</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName = "BA_ReserachProjectBase">
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
 		<defName>BA_Weapon_Arius</defName>
 		<label>Arius</label>
 		<description>Now you can forge the weapons from Arius.</description>
@@ -127,7 +127,7 @@
 		<researchViewY>2</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName = "BA_ReserachProjectBase">
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
 		<defName>BA_Equipments_Tier1</defName>
 		<label>Equipment (Tier 1~3)</label>
 		<description>Unlocks recipes for crafting Tier 1 ~ Tier 3 equipment.</description>
@@ -140,7 +140,7 @@
 		<researchViewY>3</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName = "BA_ReserachProjectBase">
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
 		<defName>BA_Equipments_Tier2</defName>
 		<label>Equipment (Tier 4~6)</label>
 		<description>Unlocks recipes for crafting Tier 4 ~ Tier 6 equipment.</description>
@@ -153,7 +153,7 @@
 		<researchViewY>3</researchViewY>
 	</ResearchProjectDef>
 
-	<ResearchProjectDef ParentName = "BA_ReserachProjectBase">
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
 		<defName>BA_Equipments_Tier3</defName>
 		<label>Equipment (Tier 7)</label>
 		<description>Unlocks recipes for crafting Tier 7 equipment.</description>

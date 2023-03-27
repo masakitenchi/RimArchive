@@ -20,7 +20,7 @@
 					<bodyAddons>
 						<li>							<!--光环-->
 							<path>Pawns/General/Invisible/Inv</path>
-							<bodyPart>halo</bodyPart>
+							<bodyPart>Halo</bodyPart>
 							<drawnInBed>false</drawnInBed>							<!--睡觉不显示光环-->
 							<drawnDesiccated>false</drawnDesiccated>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
