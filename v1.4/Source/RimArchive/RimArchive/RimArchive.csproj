@@ -37,6 +37,8 @@
     <DocumentationFile>..\..\..\..\About\RimArchive.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Abilities\Comps\CompAbilityEffect_PowerBeam.cs" />
+    <Compile Include="Abilities\Verb_StraightBeam.cs" />
     <Compile Include="Components\RimArchiveGameComponent.cs" />
     <Compile Include="Components\RimArchiveWorldComponent.cs" />
     <Compile Include="Debug.cs" />
@@ -83,8 +85,6 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Abilities\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
