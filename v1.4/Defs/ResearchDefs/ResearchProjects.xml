@@ -147,7 +147,7 @@
 		<baseCost>1000</baseCost>
 		<techLevel>Spacer</techLevel>
 		<requiredStudied>
-			<li>BA_Chip_Binah</li>
+			<li>BA_Chip_HOD</li>
 		</requiredStudied>
 		<researchViewX>1</researchViewX>
 		<researchViewY>3</researchViewY>

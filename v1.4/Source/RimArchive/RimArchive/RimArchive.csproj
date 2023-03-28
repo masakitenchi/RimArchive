@@ -56,6 +56,8 @@
     <Compile Include="SchoolNameModExtension.cs" />
     <Compile Include="Defs\DefOfs\StudentDefOf.cs" />
     <Compile Include="RAFaction.cs" />
+    <Compile Include="Thing\CompProperties_StunHandler.cs" />
+    <Compile Include="Thing\Comps\CompStunHandler.cs" />
     <Compile Include="Thought\ThoughtWorker\ThoughtWorker_OpinionOfMates.cs" />
     <Compile Include="Thought\ThoughtWorker\ThoughtWorker_OwnWeapon.cs" />
     <Compile Include="Verbs\moe_bombardment.cs" />
