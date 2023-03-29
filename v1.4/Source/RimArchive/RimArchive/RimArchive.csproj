@@ -34,7 +34,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <DocumentationFile>..\..\..\..\About\RimArchive.xml</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Abilities\Comps\CompAbilityEffect_PowerBeam.cs" />
@@ -56,8 +57,13 @@
     <Compile Include="SchoolNameModExtension.cs" />
     <Compile Include="Defs\DefOfs\StudentDefOf.cs" />
     <Compile Include="RAFaction.cs" />
+    <Compile Include="Thing\CompProperties_InvadePillar.cs" />
+    <Compile Include="Thing\CompProperties_MoteEmitterIncreasingSize.cs" />
     <Compile Include="Thing\CompProperties_StunHandler.cs" />
+    <Compile Include="Thing\Comps\CompInvadePillar.cs" />
+    <Compile Include="Thing\Comps\CompMoteEmitterProximityScan.cs" />
     <Compile Include="Thing\Comps\CompStunHandler.cs" />
+    <Compile Include="Thing\Pillar.cs" />
     <Compile Include="Thought\ThoughtWorker\ThoughtWorker_OpinionOfMates.cs" />
     <Compile Include="Thought\ThoughtWorker\ThoughtWorker_OwnWeapon.cs" />
     <Compile Include="Verbs\moe_bombardment.cs" />

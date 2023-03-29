@@ -40,8 +40,7 @@
         </tools>
         <comps>
             <li Class="RimArchive.CompProperties_StunHandler">
-                <compClass>RimArchive.CompStunHandler</compClass>
-                <BaseStunThreshold>60.0</BaseStunThreshold>
+                <BaseStunThreshold>3600.0</BaseStunThreshold>
                 <BreakStunDuration>15.0</BreakStunDuration>
             </li>
             <li Class="CompProperties_TargetingBeam"></li>
@@ -62,7 +61,7 @@
 
     <PawnKindDef Name="BA_HOD" ParentName="HeavyMechanoidKind">
         <defName>BA_BOSS_HOD</defName>
-        <label>diabolus</label>
+        <label>HOD</label>
         <race>BA_MECH_HOD</race>
         <combatPower>500</combatPower>
         <maxPerGroup>3</maxPerGroup>

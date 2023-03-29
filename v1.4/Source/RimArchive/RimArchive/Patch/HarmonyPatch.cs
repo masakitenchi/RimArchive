@@ -76,30 +76,43 @@ namespace RimArchive
          * 3.通货膨胀了的话如何保证相对的平衡
          * 
          * 目前特征：
-         * 只看晕眩伤和EMP，换算率：1点伤害 = 30Tick晕眩 （游戏内定义）
+         * 柱子只看晕眩伤和EMP，Boss看所有(同时模拟Groggy Gauge)
+         * 换算率：1点伤害 = 30Tick晕眩(游戏内定义)
          * 晕眩时条不涨，触发晕眩的那一瞬间条已经清空
-         * 
          */
         [HarmonyPrefix]
-        [HarmonyPatch(typeof(StunHandler), nameof(StunHandler.Notify_DamageApplied))]
+        [HarmonyPatch(typeof(ThingWithComps), nameof(ThingWithComps.PreApplyDamage))]
         [HarmonyPriority(Priority.First)]
-        public static bool Prefix_StunHandler(StunHandler __instance, DamageInfo dinfo)
+        public static bool Prefix_StunHandler(ThingWithComps __instance, ref DamageInfo dinfo, out bool absorbed)
         {
-            if (__instance.parent is Pawn pawn && (dinfo.Def == DamageDefOf.EMP || dinfo.Def == DamageDefOf.Stun) && pawn.def.HasComp(typeof(CompStunHandler)))
+            absorbed = false;
+            float duration = 0f;
+            switch (__instance)
             {
-                if (!pawn.stances.stunner.Stunned && !pawn.def.GetCompProperties<CompProperties_StunHandler>().TryAddStunDuration(pawn, GenTicks.TicksToSeconds((int)(dinfo.Amount * StunHandler.StunDurationTicksPerDamage)), out float duration))
-                {
-                    __instance.StunFor(GenTicks.SecondsToTicks(duration), dinfo.Instigator);
-                    return false;
-                }
-                else
-                {
-                    return false;
-                }
-
+                case Pawn pawn:
+                    if (pawn.def.HasComp(typeof(CompStunHandler)))
+                    {
+                        if (!pawn.stances.stunner.Stunned && !pawn.GetComp<CompStunHandler>().TryAddStunDuration(GenTicks.TicksToSeconds((int)(dinfo.Amount * StunHandler.StunDurationTicksPerDamage)), out duration))
+                        {
+                            pawn.stances.stunner.StunFor(GenTicks.SecondsToTicks(duration), dinfo.Instigator);
+                        }
+                        else
+                        {
+                            absorbed = true;
+                            dinfo.SetAmount(0f);
+                        }
+                    }
+                    break;
+                case Building building:
+                    if (building.def.HasComp(typeof(CompStunHandler)) && (dinfo.Def == DamageDefOf.EMP || dinfo.Def == DamageDefOf.Stun) && !building.GetComp<CompStunHandler>().TryAddStunDuration(GenTicks.TicksToSeconds((int)(dinfo.Amount * StunHandler.StunDurationTicksPerDamage)), out duration))
+                    {
+                        building.TakeDamage(new DamageInfo(DamageDefOf.Bomb, 50));
+                    }
+                    break;
             }
             return true;
         }
+
         #region Armor Reduction
         public static IEnumerable<CodeInstruction> ApplyArmorTranspiler(IEnumerable<CodeInstruction> instructions, ILGenerator generator)
         {
@@ -116,7 +129,7 @@ namespace RimArchive
         //CE
         public static void PartialStatPostfix_CE(ref float __result, Apparel apparel)
         {
-            Pawn pawn = apparel.ParentHolder as Pawn;
+            Pawn pawn = apparel.Wearer;
             __result *= pawn.health.hediffSet.hediffs.Exists(x => x.def == HediffDefOf.BA_ArmorReduction) ? (1 - pawn.health.hediffSet.hediffs.Find(x => x.def == HediffDefOf.BA_ArmorReduction).TryGetComp<HediffComp_ArmorReduction>().armorReduction) : 1;
         }
 

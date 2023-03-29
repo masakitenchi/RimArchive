@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ThingDef ParentName="MoteBase">
+        <defName>BA_HOD_PillarRadius</defName>
+        <mote>
+            <fadeInTime>0.1</fadeInTime>
+            <solidTime>999999999</solidTime>
+            <fadeOutTime>0.5</fadeOutTime>
+            <needsMaintenance>True</needsMaintenance>
+        </mote>
+        <drawOffscreen>true</drawOffscreen>
+        <graphicData>
+            <texPath>Things/Mote/ActivatorProximityRadius</texPath>
+            <shaderType>MoteProximityScannerRadius</shaderType>
+            <color>(1, 0.1, 0.1, 0.35)</color>
+            <drawSize>26</drawSize>
+            <shaderParameters>
+                <_smokeScrollSpeed>0.1</_smokeScrollSpeed>
+                <_rotationSpeed>0.1</_rotationSpeed>
+                <_smokeAmount>0.5</_smokeAmount>
+                <_MainTex>/Things/Mote/ActivatorProximityRadius</_MainTex>
+                <_ScanTex>/Things/Mote/ActivatorProximityScanning</_ScanTex>
+                <_SmokeTex>/Things/Mote/SmokeTiled</_SmokeTex>
+            </shaderParameters>
+        </graphicData>
+    </ThingDef>
+
+</Defs>

@@ -9,7 +9,7 @@ namespace RimArchive;
 public static class HediffDefOf
 {
     public static HediffDef BA_ArmorReduction;
-
+    public static HediffDef BA_PillarSuppression;
     static HediffDefOf()
     {
         DefOfHelper.EnsureInitializedInCtor(typeof(HediffDefOf));
