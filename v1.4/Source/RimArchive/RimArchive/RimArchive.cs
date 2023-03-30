@@ -16,7 +16,7 @@ namespace RimArchive
     /// Loads all assets before GC.
     /// </summary>
     [StaticConstructorOnStartup]
-    public class RimArchive
+    public class RimArchiveMain
     {
         /// <summary>
         /// Will add settings later.
@@ -60,7 +60,7 @@ namespace RimArchive
 
 #nullable disable
 
-        static RimArchive()
+        static RimArchiveMain()
         {
             //Should be of use sometime
             //But what if some other mod also add this extension? Meh

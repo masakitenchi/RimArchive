@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 using AlienRace;
-using static RimArchive.RimArchive;
+using static RimArchive.RimArchiveMain;
 using static RimArchive.Debug;
 using static Verse.Widgets;
 using System.Text;
@@ -421,21 +421,21 @@ namespace RimArchive.Window
             if (ButtonImageFitted(recruitBtn, SSR))
             {
                 //存活
-                if (RimArchive.StudentDocument.IsAlive(_currentStudent))
+                if (RimArchiveMain.StudentDocument.IsAlive(_currentStudent))
                 {
                     Messages.Message("StudentAlreadyRecruited".Translate(_cachedStudent.NameFullColored), MessageTypeDefOf.NeutralEvent);
                 }
                 else
                 {
                     //未存活但招募过
-                    if (RimArchive.StudentDocument.IsRecruited(_currentStudent))
+                    if (RimArchiveMain.StudentDocument.IsRecruited(_currentStudent))
                     {
-                        RimArchive.StudentDocument.DocumentedStudent(_currentStudent, ref _cachedStudent);
+                        RimArchiveMain.StudentDocument.DocumentedStudent(_currentStudent, ref _cachedStudent);
                         Debug.DbgMsg("Re-recruiting");
                         DbgMsg($"Pawn name:{_cachedStudent.Name.ToStringFull}, Gender:{_cachedStudent.gender}");
                     }
                     _inStudentProfile = false;
-                    RimArchive.StudentDocument.Notify_StudentRecruited(_currentStudent);
+                    RimArchiveMain.StudentDocument.Notify_StudentRecruited(_currentStudent);
                     this.Close();
                     Map currentmap = Find.CurrentMap;
                     IntVec3 intVec3 = DropCellFinder.TradeDropSpot(currentmap);

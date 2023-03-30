@@ -40,14 +40,16 @@
   <ItemGroup>
     <Compile Include="Abilities\Comps\CompAbilityEffect_PowerBeam.cs" />
     <Compile Include="Abilities\Verb_StraightBeam.cs" />
-    <Compile Include="BossGroupWorker.cs" />
-    <Compile Include="Components\StudentDocument.cs" />
+    <Compile Include="Boss\BossgroupDef.cs" />
+    <Compile Include="Boss\BossGroupWorker.cs" />
     <Compile Include="Components\RimArchiveWorldComponent.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="Defs\DefOfs\HediffDefOf.cs" />
     <Compile Include="Defs\IconDef.cs" />
     <Compile Include="Defs\StudentDef.cs" />
     <Compile Include="Framework\BiDirectionDic.cs" />
+    <Compile Include="GameComponents\RaidManager.cs" />
+    <Compile Include="GameComponents\StudentDocument.cs" />
     <Compile Include="Hediff\Comps\HediffComp_ArmorReduction.cs" />
     <Compile Include="Hediff\HediffCompProperties_ArmorReduction.cs" />
     <Compile Include="HotSwap.cs" />

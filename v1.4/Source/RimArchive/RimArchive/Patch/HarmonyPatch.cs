@@ -8,6 +8,7 @@ using Verse;
 using CombatExtended;
 using System.Linq;
 using System.IO;
+using RimArchive.WorldComponents;
 #pragma warning disable CS1591
 
 namespace RimArchive
@@ -18,7 +19,7 @@ namespace RimArchive
     {
         static HarmonyPatches()
         {
-            Harmony rimarchive = new Harmony("com.regex.RimArchive");
+            Harmony rimarchive = new Harmony("com.regex.RimArchiveMain");
             rimarchive.PatchAll(Assembly.GetExecutingAssembly());
             MethodInfo ce = AccessTools.Method("CombatExtended.CE_Utility:PartialStat", new System.Type[] { typeof(Apparel), typeof(StatDef), typeof(BodyPartRecord) });
             MethodInfo vanilla = AccessTools.Method(typeof(ArmorUtility), "ApplyArmor");
@@ -27,7 +28,7 @@ namespace RimArchive
             {
                 //Debug.DbgErr("CE had changed ArmorUtilityCE.PartialStat. Please Contact mod Author");
                 rimarchive.Patch(ce, postfix: new HarmonyMethod(typeof(Harmony_CE), "PartialStatPostfix_CE"));
-                Debug.DbgMsg("RimArchive successfully patched CombatExtended.CE_Utility:PartialStat(this Apparel apparel, StatDef stat, BodyPartRecord part)");
+                Debug.DbgMsg("RimArchiveMain successfully patched CombatExtended.CE_Utility:PartialStat(this Apparel apparel, StatDef stat, BodyPartRecord part)");
                 //Debug.DbgMsg("Currently Armor Reduction is not patched for CE");
             }
             else if (vanilla != null)
@@ -57,7 +58,7 @@ namespace RimArchive
         {
             if (__instance.kindDef is StudentDef)
             {
-                if (RimArchive.StudentDocument.Notify_StudentKilled(__instance))
+                if (RimArchiveMain.StudentDocument.Notify_StudentKilled(__instance))
                 {
                     //Debug.DbgMsg($"Successfully documented student\nDead? {__instance.health.Dead}");
                     __instance.apparel.WornApparel.Select(x => x.HitPoints = x.MaxHitPoints);

@@ -6,15 +6,15 @@ namespace RimArchive
     {
         internal static void DbgMsg(string message)
         {
-            Log.Message("[RimArchive]" + message);
+            Log.Message("[RimArchiveMain]" + message);
         }
         internal static void DbgWrn(string message)
         { 
-            Log.Warning("[RimArchive]" + message);
+            Log.Warning("[RimArchiveMain]" + message);
         }
         internal static void DbgErr(string message) 
         {
-            Log.Error("[RimArchive]" + message);
+            Log.Error("[RimArchiveMain]" + message);
         }
     }
 }

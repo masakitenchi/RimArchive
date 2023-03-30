@@ -23,7 +23,7 @@
         <thingCategories>
             <li>ItemsMisc</li>
         </thingCategories>
-        <drawGUIOverlay>false</drawGUIOverlay>
+        <drawGUIOverlay>true</drawGUIOverlay>
         <techLevel>Spacer</techLevel>
         <tradeTags/>
         <comps>
