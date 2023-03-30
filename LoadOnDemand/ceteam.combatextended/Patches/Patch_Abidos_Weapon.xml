@@ -215,7 +215,6 @@
 					<aiAimMode>SuppressFire</aiAimMode>
 					<aimedBurstShotCount>150</aimedBurstShotCount>
 				</FireModes>
-				<researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
 				<weaponTags>
 					<li>CE_AI_AssaultWeapon</li>
 				</weaponTags>
