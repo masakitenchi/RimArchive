@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+    <!-- <Operation Class = "PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="CommsConsole"]/comps</xpath>
+        <value>
+            <li Class="CompProperties_Useable_CallBossgroup">
+                <bossgroupDef>BA_BossGroup_HOD</bossgroupDef>
+                <spawnLetterLabelKey>LetterLabelCommsConsoleSpawned</spawnLetterLabelKey>
+                <spawnLetterTextKey>LetterCommsConsoleSpawned</spawnLetterTextKey>
+                <effecterDef>CommsConsoleBossgroupSummoned</effecterDef>
+                <delayTicks>120</delayTicks>
+            </li>
+        </value>
+    </Operation> -->
+</Patch>

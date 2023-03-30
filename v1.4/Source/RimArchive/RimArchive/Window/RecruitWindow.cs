@@ -11,7 +11,7 @@ using static Verse.Widgets;
 using System.Text;
 using UnityEngine.Profiling;
 using UnityEngine.UI;
-using RimArchive.Components;
+using RimArchive.GameComponents;
 
 namespace RimArchive.Window
 {
@@ -421,21 +421,21 @@ namespace RimArchive.Window
             if (ButtonImageFitted(recruitBtn, SSR))
             {
                 //存活
-                if (StudentDocument.IsAlive(_currentStudent))
+                if (RimArchive.StudentDocument.IsAlive(_currentStudent))
                 {
                     Messages.Message("StudentAlreadyRecruited".Translate(_cachedStudent.NameFullColored), MessageTypeDefOf.NeutralEvent);
                 }
                 else
                 {
                     //未存活但招募过
-                    if (StudentDocument.IsRecruited(_currentStudent))
+                    if (RimArchive.StudentDocument.IsRecruited(_currentStudent))
                     {
-                        StudentDocument.DocumentedStudent(_currentStudent, ref _cachedStudent);
+                        RimArchive.StudentDocument.DocumentedStudent(_currentStudent, ref _cachedStudent);
                         Debug.DbgMsg("Re-recruiting");
                         DbgMsg($"Pawn name:{_cachedStudent.Name.ToStringFull}, Gender:{_cachedStudent.gender}");
                     }
                     _inStudentProfile = false;
-                    StudentDocument.Notify_StudentRecruited(_currentStudent);
+                    RimArchive.StudentDocument.Notify_StudentRecruited(_currentStudent);
                     this.Close();
                     Map currentmap = Find.CurrentMap;
                     IntVec3 intVec3 = DropCellFinder.TradeDropSpot(currentmap);

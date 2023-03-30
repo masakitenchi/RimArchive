@@ -1,4 +1,4 @@
-﻿using RimArchive.Components;
+﻿using RimArchive.GameComponents;
 using RimArchive.Window;
 using RimWorld;
 using System;
@@ -44,9 +44,10 @@ namespace RimArchive
         /// <summary>
         /// Used to access the Document system in current game
         /// </summary>
-        public static RimArchiveGameComponent StudentDocument => Current.Game.GetComponent<RimArchiveGameComponent>();
+        public static StudentDocument StudentDocument => Current.Game.GetComponent<StudentDocument>();
+        public static RaidManager RaidManager => Current.Game.GetComponent<RaidManager>();
         //
-        internal static readonly string packageId = "auxia.weaponpack.bluearchive";
+        internal static readonly string packageId;
 #nullable enable
         //Each student belongs to a different PawnKindDef, but should share the same race
         internal static readonly List<StudentDef> AllStudents = new List<StudentDef>();
@@ -63,7 +64,7 @@ namespace RimArchive
         {
             //Should be of use sometime
             //But what if some other mod also add this extension? Meh
-            packageId = DefDatabase<StudentDef>.AllDefs.First().modContentPack.PackageId;
+            packageId ??= DefDatabase<StudentDef>.AllDefs.First().modContentPack.PackageId;
             foreach (StudentDef student in DefDatabase<StudentDef>.AllDefs)
             {
                 AllStudents.Add(student);

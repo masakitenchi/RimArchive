@@ -1,5 +1,5 @@
 ﻿using HarmonyLib;
-using RimArchive.Components;
+using RimArchive.GameComponents;
 using RimWorld;
 using System.Collections.Generic;
 using System.Reflection;

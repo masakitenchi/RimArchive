@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>BA_Ticket_Raid</defName>
+        <label>Raid Ticket</label>
+        <description>Use this ticket to summon a raid boss.</description>
+        <graphicData>
+            <texPath>Things/Misc/RaidTicket</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <resourceReadoutPriority>Middle</resourceReadoutPriority>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <stackLimit>5</stackLimit>
+        <useHitPoints>true</useHitPoints>
+        <statBases>
+            <MarketValue>350</MarketValue>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>0.01</Mass>
+            <Flammability>1</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>ItemsMisc</li>
+        </thingCategories>
+        <drawGUIOverlay>false</drawGUIOverlay>
+        <techLevel>Spacer</techLevel>
+        <tradeTags/>
+        <comps>
+            <li></li>
+        </comps>
+    </ThingDef>
+
+</Defs>

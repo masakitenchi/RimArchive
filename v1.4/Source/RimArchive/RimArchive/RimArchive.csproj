@@ -40,7 +40,8 @@
   <ItemGroup>
     <Compile Include="Abilities\Comps\CompAbilityEffect_PowerBeam.cs" />
     <Compile Include="Abilities\Verb_StraightBeam.cs" />
-    <Compile Include="Components\RimArchiveGameComponent.cs" />
+    <Compile Include="BossGroupWorker.cs" />
+    <Compile Include="Components\StudentDocument.cs" />
     <Compile Include="Components\RimArchiveWorldComponent.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="Defs\DefOfs\HediffDefOf.cs" />

@@ -16,13 +16,16 @@ public class CompStunHandler : ThingComp
     //60Tick/s, 250Tick/TickRare, 2000Tick/TickLong
     public override void CompTick()
     {
-        this.groggyGauge ??= EffecterDefOf.ProgressBar.SpawnAttached(this.parent, this.parent.Map);
-        this.groggyGauge.EffectTick((TargetInfo)(Thing)this.parent, TargetInfo.Invalid);
-        MoteProgressBar GaugeBar = ((SubEffecter_ProgressBar)this.groggyGauge.children[0]).mote;
-        GaugeBar.progress = currentDuration / BaseStunThreshold;
-        GaugeBar.offsetZ = -0.8f;
-        if (parent.IsHashIntervalTick(600))
-            Props.currentDuration -= 30f;
+        if(parent.Map != null)
+        {
+            this.groggyGauge ??= EffecterDefOf.ProgressBar.SpawnAttached(this.parent, this.parent.Map);
+            this.groggyGauge.EffectTick((TargetInfo)(Thing)this.parent, TargetInfo.Invalid);
+            MoteProgressBar GaugeBar = ((SubEffecter_ProgressBar)this.groggyGauge.children[0]).mote;
+            GaugeBar.progress = currentDuration / BaseStunThreshold;
+            GaugeBar.offsetZ = -0.8f;
+            if (parent.IsHashIntervalTick(600))
+                Props.currentDuration -= 30f;
+        }
     }
 
     public override void PostDeSpawn(Map map)
