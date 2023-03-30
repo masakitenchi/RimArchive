@@ -7,7 +7,7 @@ namespace RimArchive;
 public class BossGroupWorker : BossgroupWorker
 {
     new public const int TimeBetweenAllBossgroups = 420000;
-    new BossgroupDef def;
+    new RaidDef def;
     public override AcceptanceReport CanResolve(Pawn caller)
     {
         int num = Find.TickManager.TicksGame - RimArchiveMain.RaidManager.lastBossgroupCalled;
@@ -23,7 +23,7 @@ public class BossGroupWorker : BossgroupWorker
     {
         RimArchiveMain.RaidManager.Notify_BossgroupCalled(this.def);
         Slate vars = new Slate();
-        vars.Set<BossgroupDef>("bossgroup", this.def);
+        vars.Set<RaidDef>("bossgroup", this.def);
         vars.Set<Map>(nameof(map), map);
         vars.Set<ThingDef>("reward", this.def.rewardDef);
         vars.Set<int>(nameof(wave), wave);
