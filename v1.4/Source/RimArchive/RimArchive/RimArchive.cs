@@ -59,7 +59,11 @@ namespace RimArchive
         /// </summary>
         public static readonly Dictionary<IconDef, List<StudentDef>> cachedAllStudentsBySchool = new Dictionary<IconDef, List<StudentDef>>();
 
+<<<<<<< HEAD
         public static readonly HashSet<RaidDef> cachedAllBosses = new HashSet<RaidDef>();
+=======
+        public static readonly HashSet<BossgroupDef> cachedAllBosses = new HashSet<BossgroupDef>();
+>>>>>>> 7f32f15 (BossGroup GameComponent)
 
 #nullable disable
 
@@ -68,8 +72,13 @@ namespace RimArchive
             //Should be of use sometime
             //But what if some other mod also add this extension? Meh
             packageId ??= DefDatabase<StudentDef>.AllDefs.First().modContentPack.PackageId;
+<<<<<<< HEAD
             cachedAllBosses = DefDatabase<RaidDef>.AllDefs.ToHashSet();
             DefDatabase<RaidDef>.AllDefs.Do(delegate (RaidDef def) { def.Init(); });
+=======
+            cachedAllBosses = DefDatabase<BossgroupDef>.AllDefs.ToHashSet();
+            DefDatabase<BossgroupDef>.AllDefs.Do(delegate (BossgroupDef def) { def.Init(); });
+>>>>>>> 7f32f15 (BossGroup GameComponent)
             foreach (StudentDef student in DefDatabase<StudentDef>.AllDefs)
             {
                 AllStudents.Add(student);
