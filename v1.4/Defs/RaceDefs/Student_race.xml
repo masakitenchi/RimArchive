@@ -2,7 +2,7 @@
 <Defs>
 
 
-	<AlienRace.ThingDef_AlienRace ParentName="BasePawn" Name="StudentThingBase">
+	<AlienRace.ThingDef_AlienRace ParentName="BasePawn" Name="StudentThingBase" Abstract="True">
 		<defName>BA_Student</defName>
 		<label>学生</label>
 		<alienRace>
@@ -204,6 +204,13 @@
 			<li>Euthanize</li>
 			<li>Anesthetize</li>
 		</recipes>
+
+		<comps>
+			<li MayRequire="ceteam.combatextended">
+				<compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li Class="CombatExtended.CompProperties_Suppressable" MayRequire="ceteam.combatextended"/>
+		</comps>
 	</AlienRace.ThingDef_AlienRace>
 
 
