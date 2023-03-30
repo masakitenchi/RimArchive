@@ -187,7 +187,7 @@
 			<ImmunityGainSpeed>1.30</ImmunityGainSpeed>
 			<CarryingCapacity>60</CarryingCapacity>
 			<PainShockThreshold>0.55</PainShockThreshold>
-			<ToxicEnvironmentResistance>1.0</ToxicEnvironmentResistance>
+			<ToxicResistance>1.0</ToxicResistance>
 			<MeatAmount>150</MeatAmount>
 			<LeatherAmount>45</LeatherAmount>
 			<AimingDelayFactor>0.9</AimingDelayFactor>
