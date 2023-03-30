@@ -161,6 +161,15 @@ namespace RimArchive.Window
             //outRect.width -= 1050f;
             //outRect.height -= 70f;
             GUI.DrawTexture(outRect, BaseContent.GreyTex);
+            BeginGroup(outRect.ContractedBy(_Margin.x));
+            Rect inRect = outRect.ContractedBy(_Margin.x).AtZero();
+            float width = inRect.width / 3;
+            for (int i = 0; i <= cachedAllBosses.Count - 1 && i < 3; i++)
+            {
+                Rect bossPic = new Rect(inRect.x + width * i, inRect.y, width, inRect.height);
+                DrawTextureFitted(bossPic, cachedAllBosses.RandomElement().icon, 1f);
+            }
+            EndGroup();
             Widgets.LabelScrollable(outRect, "吃了吗您内今天也是好天气你是一个个什么啊漂亮得很呐人生路漫漫而修远兮吾将上下而求索关关雎鸠在河之洲窈窕淑女君子好逑".Translate(), ref _dlgscrbr);
         }
 

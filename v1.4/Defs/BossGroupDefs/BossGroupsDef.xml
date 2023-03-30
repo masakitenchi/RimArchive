@@ -16,6 +16,7 @@
     <RimArchive.BossgroupDef ParentName = "BA_BossGroupBase">
         <defName>BA_BossGroup_HOD</defName>
         <boss>BA_HOD</boss>
+        <iconPath>Things/Raid/HOD</iconPath>
         <waves> <!-- 下标从0开始 -->
             <li>
                 <bossCount>1</bossCount>

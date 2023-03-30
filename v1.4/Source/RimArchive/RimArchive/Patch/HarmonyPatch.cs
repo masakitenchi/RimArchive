@@ -28,7 +28,7 @@ namespace RimArchive
             {
                 //Debug.DbgErr("CE had changed ArmorUtilityCE.PartialStat. Please Contact mod Author");
                 rimarchive.Patch(ce, postfix: new HarmonyMethod(typeof(Harmony_CE), "PartialStatPostfix_CE"));
-                Debug.DbgMsg("RimArchiveMain successfully patched CombatExtended.CE_Utility:PartialStat(this Apparel apparel, StatDef stat, BodyPartRecord part)");
+                Debug.DbgMsg(" successfully patched CombatExtended.CE_Utility:PartialStat(this Apparel apparel, StatDef stat, BodyPartRecord part)");
                 //Debug.DbgMsg("Currently Armor Reduction is not patched for CE");
             }
             else if (vanilla != null)
