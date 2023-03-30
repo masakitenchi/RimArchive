@@ -7,7 +7,7 @@ using Verse;
 
 namespace RimArchive;
 
-public class BossgroupDef : RimWorld.BossgroupDef
+public class RaidDef : RimWorld.BossgroupDef
 {
     private string iconPath;
     public Texture2D icon;

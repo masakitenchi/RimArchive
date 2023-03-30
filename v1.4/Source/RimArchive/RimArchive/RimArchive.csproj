@@ -40,7 +40,7 @@
   <ItemGroup>
     <Compile Include="Abilities\Comps\CompAbilityEffect_PowerBeam.cs" />
     <Compile Include="Abilities\Verb_StraightBeam.cs" />
-    <Compile Include="Boss\BossgroupDef.cs" />
+    <Compile Include="Boss\RaidDef.cs" />
     <Compile Include="Boss\BossGroupWorker.cs" />
     <Compile Include="Components\RimArchiveWorldComponent.cs" />
     <Compile Include="Debug.cs" />

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
     
-    <RimArchive.BossgroupDef Name = "BA_BossGroupBase" Abstract = "True">
+    <RimArchive.RaidDef Name = "BA_BossGroupBase" Abstract = "True">
         <quest>BA_Raid</quest>
         <repeatWaveStartIndex>0</repeatWaveStartIndex>
-    </RimArchive.BossgroupDef>
+    </RimArchive.RaidDef>
 
     <!-- HOD -->
     <BossDef>
@@ -13,7 +13,7 @@
         <!-- appearAfterTicks默认为2^32-1 -->
     </BossDef>
 
-    <RimArchive.BossgroupDef ParentName = "BA_BossGroupBase">
+    <RimArchive.RaidDef ParentName = "BA_BossGroupBase">
         <defName>BA_BossGroup_HOD</defName>
         <boss>BA_HOD</boss>
         <iconPath>Things/Raid/HOD</iconPath>
@@ -51,6 +51,6 @@
             Both {LEADERKIND_label} and its pillars are vulnerable to EMP and stun attacks. {LEADERKIND_label} will be stunned for a period of time, and the pillars will receive extra damage.
         </leaderDescription>
         <rewardDef>BA_Chip_HOD</rewardDef>
-    </RimArchive.BossgroupDef>
+    </RimArchive.RaidDef>
 
 </Defs>

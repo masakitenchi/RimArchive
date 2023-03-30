@@ -27,7 +27,22 @@
         <techLevel>Spacer</techLevel>
         <tradeTags/>
         <comps>
-            <li></li>
+            <li Class="CompProperties_Usable">
+                <useJob>TriggerObject</useJob>
+                <useLabel>Start HOD Raid</useLabel>
+                <useDuration>120</useDuration>
+                <floatMenuOptionPriority>SummonThreat</floatMenuOptionPriority>
+                <floatMenuFactionIcon>Mechanoid</floatMenuFactionIcon>
+                <ignoreOtherReservations>true</ignoreOtherReservations>
+              </li>
+              <li Class="CompProperties_Useable_CallBossgroup">
+                <bossgroupDef>BA_BossGroup_HOD</bossgroupDef>
+                <spawnLetterLabelKey>LetterLabelCommsConsoleSpawned</spawnLetterLabelKey>
+                <spawnLetterTextKey>LetterCommsConsoleSpawned</spawnLetterTextKey>
+                <effecterDef>CommsConsoleBossgroupSummoned</effecterDef>
+                <delayTicks>120</delayTicks>
+              </li>
+              <li Class="CompProperties_UseEffectDestroySelf"/>
         </comps>
     </ThingDef>
 
