@@ -62,7 +62,7 @@
     <Compile Include="Thing\CompProperties_MoteEmitterIncreasingSize.cs" />
     <Compile Include="Thing\CompProperties_StunHandler.cs" />
     <Compile Include="Thing\Comps\CompInvadePillar.cs" />
-    <Compile Include="Thing\Comps\CompMoteEmitterProximityScan.cs" />
+    <Compile Include="Thing\Comps\CompMoteEmitterIncreasingSize.cs" />
     <Compile Include="Thing\Comps\CompStunHandler.cs" />
     <Compile Include="Thing\Pillar.cs" />
     <Compile Include="Thought\ThoughtWorker\ThoughtWorker_OpinionOfMates.cs" />

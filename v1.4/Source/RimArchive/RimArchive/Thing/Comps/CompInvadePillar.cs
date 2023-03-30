@@ -27,16 +27,23 @@ public class CompInvadePillar : ThingComp
         base.CompTick();
         ++_ticks;
         (from pawn in parent.Map.mapPawns.AllPawnsSpawned
-         where pawn.Position.InHorDistOf(parent.Position, _currentRadius)   
-         select pawn).Do(delegate(Pawn x)
+         where pawn.Position.InHorDistOf(parent.Position, _currentRadius)
+         select pawn).Do(delegate (Pawn x)
          {
-             foreach(HediffDef hediff in Props.applyHediffs)
+             foreach (HediffDef hediff in Props.applyHediffs)
              {
-                 x.health.AddHediff(hediff);
+                 if (x.health.hediffSet.HasHediff(hediff) && x.health.hediffSet.GetFirstHediffOfDef(hediff).ageTicks % 600 == 0)
+                 {
+                     ++x.health.hediffSet.GetFirstHediffOfDef(hediff).Severity;
+                 }
+                 else
+                 {
+                     x.health.AddHediff(hediff);
+                 }
              }
          });
         //emmm...虽说IsHashIntervalTick挺好用但貌似没有“重置Tick数”的功能
-        if(_ticks % _interval == 0)
+        if (_ticks % _interval == 0)
         {
             _ticks = 0;
             _currentRadius += _radiusAdd;

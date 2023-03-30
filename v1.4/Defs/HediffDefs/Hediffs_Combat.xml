@@ -33,8 +33,15 @@
         </comps>
         <stages>
             <li>
+                <minSeverity>1.0</minSeverity>
                 <statOffsets>
                     <MoveSpeed>-0.1</MoveSpeed>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>2.0</minSeverity>
+                <statOffsets>
+                    <MoveSpeed>-0.15</MoveSpeed>
                 </statOffsets>
             </li>
         </stages>

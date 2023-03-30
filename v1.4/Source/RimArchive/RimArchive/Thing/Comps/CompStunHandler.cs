@@ -11,13 +11,25 @@ public class CompStunHandler : ThingComp
     private float BreakStunDuration;
     public CompProperties_StunHandler Props => (CompProperties_StunHandler)props;
 
+    private Effecter groggyGauge;
+
     //60Tick/s, 250Tick/TickRare, 2000Tick/TickLong
     public override void CompTick()
     {
+        this.groggyGauge ??= EffecterDefOf.ProgressBar.SpawnAttached(this.parent, this.parent.Map);
+        this.groggyGauge.EffectTick((TargetInfo)(Thing)this.parent, TargetInfo.Invalid);
+        MoteProgressBar GaugeBar = ((SubEffecter_ProgressBar)this.groggyGauge.children[0]).mote;
+        GaugeBar.progress = currentDuration / BaseStunThreshold;
+        GaugeBar.offsetZ = -0.8f;
         if (parent.IsHashIntervalTick(600))
             Props.currentDuration -= 30f;
     }
 
+    public override void PostDeSpawn(Map map)
+    {
+        base.PostDeSpawn(map);
+        groggyGauge.Cleanup();
+    }
     //构造函数被调用的时候还没有props
     public override void Initialize(CompProperties props)
     {
@@ -38,13 +50,13 @@ public class CompStunHandler : ThingComp
         BreakStunDuration = 0f;
         if (currentDuration + stunDuration > BaseStunThreshold)
         {
-            MoteMaker.ThrowText(new Vector3((float)parent.Position.x + 1f, parent.Position.y, (float)parent.Position.z + 1f), parent.Map, "ThresholdBroken".Translate(currentDuration, BaseStunThreshold), Color.white);
+            //MoteMaker.ThrowText(new Vector3((float)parent.Position.x + 1f, parent.Position.y, (float)parent.Position.z + 1f), parent.Map, "ThresholdBroken".Translate(currentDuration, BaseStunThreshold), Color.white);
             currentDuration = 0f;
             BreakStunDuration = this.BreakStunDuration;
             return false;
         }
         currentDuration += stunDuration;
-        MoteMaker.ThrowText(new Vector3((float)parent.Position.x + 1f, parent.Position.y, (float)parent.Position.z + 1f), parent.Map, "CurrentTotal".Translate(currentDuration, BaseStunThreshold), Color.white);
+        //MoteMaker.ThrowText(new Vector3((float)parent.Position.x + 1f, parent.Position.y, (float)parent.Position.z + 1f), parent.Map, "CurrentTotal".Translate(currentDuration, BaseStunThreshold), Color.white);
         return true;
     }
 }
