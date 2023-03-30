@@ -26,7 +26,7 @@ namespace RimArchive
             if (ce != null)
             {
                 //Debug.DbgErr("CE had changed ArmorUtilityCE.PartialStat. Please Contact mod Author");
-                rimarchive.Patch(ce, postfix: new HarmonyMethod(typeof(HarmonyPatches), "PartialStatPostfix_CE"));
+                rimarchive.Patch(ce, postfix: new HarmonyMethod(typeof(Harmony_CE), "PartialStatPostfix_CE"));
                 Debug.DbgMsg("RimArchive successfully patched CombatExtended.CE_Utility:PartialStat(this Apparel apparel, StatDef stat, BodyPartRecord part)");
                 //Debug.DbgMsg("Currently Armor Reduction is not patched for CE");
             }
@@ -106,6 +106,7 @@ namespace RimArchive
                 case Building building:
                     if (building.def.HasComp(typeof(CompStunHandler)) && (dinfo.Def == DamageDefOf.EMP || dinfo.Def == DamageDefOf.Stun) && !building.GetComp<CompStunHandler>().TryAddStunDuration(GenTicks.TicksToSeconds((int)(dinfo.Amount * StunHandler.StunDurationTicksPerDamage)), out duration))
                     {
+                        building.GetComp<CompInvadePillar>();
                         building.TakeDamage(new DamageInfo(DamageDefOf.Bomb, 50));
                     }
                     break;
@@ -125,12 +126,6 @@ namespace RimArchive
             {
                 yield return instruction;
             }
-        }
-        //CE
-        public static void PartialStatPostfix_CE(ref float __result, Apparel apparel)
-        {
-            Pawn pawn = apparel.Wearer;
-            __result *= pawn.health.hediffSet.hediffs.Exists(x => x.def == HediffDefOf.BA_ArmorReduction) ? (1 - pawn.health.hediffSet.hediffs.Find(x => x.def == HediffDefOf.BA_ArmorReduction).TryGetComp<HediffComp_ArmorReduction>().armorReduction) : 1;
         }
 
         public static float AdjustArmorRating(Pawn p, float armorRating)

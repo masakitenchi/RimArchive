@@ -51,6 +51,7 @@
     <Compile Include="Hediff\HediffCompProperties_ArmorReduction.cs" />
     <Compile Include="HotSwap.cs" />
     <Compile Include="Patch\HarmonyPatch.cs" />
+    <Compile Include="Patch\Harmony_CE.cs" />
     <Compile Include="PawnRelation\PawnRelationWorker_SameClub.cs" />
     <Compile Include="PawnRelation\PawnRelationWorker_Sibling.cs" />
     <Compile Include="RimArchive.cs" />
