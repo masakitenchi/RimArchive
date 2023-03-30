@@ -1,4 +1,5 @@
-﻿using RimArchive.GameComponents;
+﻿using HarmonyLib;
+using RimArchive.GameComponents;
 using RimArchive.Window;
 using RimWorld;
 using System;
@@ -58,6 +59,8 @@ namespace RimArchive
         /// </summary>
         public static readonly Dictionary<IconDef, List<StudentDef>> cachedAllStudentsBySchool = new Dictionary<IconDef, List<StudentDef>>();
 
+        public static readonly HashSet<BossgroupDef> cachedAllBosses = new HashSet<BossgroupDef>();
+
 #nullable disable
 
         static RimArchiveMain()
@@ -65,6 +68,8 @@ namespace RimArchive
             //Should be of use sometime
             //But what if some other mod also add this extension? Meh
             packageId ??= DefDatabase<StudentDef>.AllDefs.First().modContentPack.PackageId;
+            cachedAllBosses = DefDatabase<BossgroupDef>.AllDefs.ToHashSet();
+            DefDatabase<BossgroupDef>.AllDefs.Do(delegate (BossgroupDef def) { def.Init(); });
             foreach (StudentDef student in DefDatabase<StudentDef>.AllDefs)
             {
                 AllStudents.Add(student);
