@@ -19,7 +19,7 @@
 			<li>ShortShots</li>
 		</weaponClasses>
 		<recipeMaker>
-			<researchPrerequisite>ReserchAbydos</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Abydos</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -90,7 +90,7 @@
 			<li>RangedHeavy</li>
 		</weaponClasses>
 		<recipeMaker>
-			<researchPrerequisite>ReserchAbydos</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Abydos</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -160,7 +160,7 @@
 			<li>RangedHeavy</li>
 		</weaponClasses>
 		<recipeMaker>
-			<researchPrerequisite>ReserchAbydos</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Abydos</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>6</Crafting>
 			</skillRequirements>
@@ -242,7 +242,7 @@
 			<ComponentIndustrial>14</ComponentIndustrial>
 		</costList>
 		<recipeMaker>
-			<researchPrerequisite>ReserchAbydos</researchPrerequisite>
+			<researchPrerequisite>BA_Weapon_Abydos</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>7</Crafting>
 			</skillRequirements>

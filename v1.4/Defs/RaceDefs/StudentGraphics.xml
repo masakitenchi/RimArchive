@@ -18,9 +18,10 @@
 				<alienPartGenerator>
 					<customDrawSize>(1, 1)</customDrawSize>					<!--小人整体大小-->
 					<bodyAddons>
-						<li>							<!--光环-->
+						<!--光环-->
+						<li>
 							<path>Pawns/General/Invisible/Inv</path>
-							<bodyPart>halo</bodyPart>
+							<bodyPart>Halo</bodyPart>
 							<drawnInBed>false</drawnInBed>							<!--睡觉不显示光环-->
 							<drawnDesiccated>false</drawnDesiccated>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
@@ -46,7 +47,8 @@
 								<Backstory_Haruka>Pawns/Gehenna/Haruka/Halo/Haruka</Backstory_Haruka>
 							</backstoryGraphics>
 						</li>
-						<li>							<!--头-->
+						<!--头-->
+						<li>
 							<path>Pawns/General/Invisible/Inv</path>
 							<inFrontOfBody>true</inFrontOfBody>
 							<drawnDesiccated>false</drawnDesiccated>
@@ -74,7 +76,8 @@
 
 							</backstoryGraphics>
 						</li>
-						<li>							<!--头发前-->
+						<!--头发前-->
+						<li>							
 							<path>Pawns/General/Invisible/Inv</path>
 							<inFrontOfBody>true</inFrontOfBody>
 							<drawnDesiccated>false</drawnDesiccated>
@@ -102,7 +105,8 @@
 
 							</backstoryGraphics>
 						</li>
-						<li>							<!--头发后-->
+						<!--头发后-->
+						<li>							
 							<path>Pawns/General/Invisible/Inv</path>
 							<drawnDesiccated>false</drawnDesiccated>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
@@ -129,6 +133,27 @@
 								<Backstory_Haruka>Pawns/Gehenna/Haruka/Hair/Haruka</Backstory_Haruka>
 							</backstoryGraphics>
 						</li>
+						<!-- 此处开始为装备hediff部分，暂时由于总图数过多的原因废除 -->
+						<!-- <li>
+							<path>Things/Equipment/Badge_Tier1</path>
+							<drawnInBed>false</drawnInBed>
+							<drawnDesiccated>false</drawnDesiccated>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<inFrontOfBody>true</inFrontOfBody>
+							<hediffGraphics>
+								<BA_Hediff_Badge>
+									<path>Things/Equipment/Badge_Tier1</path>
+									<severity>
+										<a2.0>Things/Equipment/Badge_Tier2</a2.0>
+										<a3.0>Things/Equipment/Badge_Tier3</a3.0>
+										<a4.0>Things/Equipment/Badge_Tier4</a4.0>
+										<a5.0>Things/Equipment/Badge_Tier5</a5.0>
+										<a6.0>Things/Equipment/Badge_Tier6</a6.0>
+										<a7.0>Things/Equipment/Badge_Tier7</a7.0>
+									</severity>
+								</BA_Hediff_Badge>
+							</hediffGraphics>
+						</li> -->
 					</bodyAddons>
 				</alienPartGenerator>
 			</generalSettings>

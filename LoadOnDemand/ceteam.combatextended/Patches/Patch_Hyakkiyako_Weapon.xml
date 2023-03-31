@@ -4,7 +4,7 @@
 		<Operation Class="PatchOperationConditional">
 			<xpath>Defs/ThingDef[
 					defName="BAW_Izuna"
-				  ]/recipeMaker/researchPrerequisite[text()="ReserchHyakkiyako"]
+				  ]/recipeMaker/researchPrerequisite[text()="BA_Weapon_Hyakkiyako"]
 			</xpath>
 			<nomatch Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[
@@ -12,7 +12,7 @@
 				  ]/recipeMaker/researchPrerequisite
 				</xpath>
 				<value>
-					<researchPrerequisite>ReserchHyakkiyako</researchPrerequisite>
+					<researchPrerequisite>BA_Weapon_Hyakkiyako</researchPrerequisite>
 				</value>
 			</nomatch>
 		</Operation>

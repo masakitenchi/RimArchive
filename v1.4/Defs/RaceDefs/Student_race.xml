@@ -2,7 +2,7 @@
 <Defs>
 
 
-	<AlienRace.ThingDef_AlienRace ParentName="BasePawn" Name="StudentThingBase">
+	<AlienRace.ThingDef_AlienRace ParentName="BasePawn" Name="StudentThingBase" Abstract="True">
 		<defName>BA_Student</defName>
 		<label>学生</label>
 		<alienRace>
@@ -187,7 +187,7 @@
 			<ImmunityGainSpeed>1.30</ImmunityGainSpeed>
 			<CarryingCapacity>60</CarryingCapacity>
 			<PainShockThreshold>0.55</PainShockThreshold>
-			<ToxicEnvironmentResistance>1.0</ToxicEnvironmentResistance>
+			<ToxicResistance>1.0</ToxicResistance>
 			<MeatAmount>150</MeatAmount>
 			<LeatherAmount>45</LeatherAmount>
 			<AimingDelayFactor>0.9</AimingDelayFactor>
@@ -204,6 +204,13 @@
 			<li>Euthanize</li>
 			<li>Anesthetize</li>
 		</recipes>
+
+		<comps>
+			<li MayRequire="ceteam.combatextended">
+				<compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li Class="CombatExtended.CompProperties_Suppressable" MayRequire="ceteam.combatextended"/>
+		</comps>
 	</AlienRace.ThingDef_AlienRace>
 
 

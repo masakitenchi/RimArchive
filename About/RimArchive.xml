@@ -127,6 +127,13 @@
             <param name="faction"></param>
             <param name="root"></param>
         </member>
+        <member name="M:RimArchive.CompProperties_StunHandler.TryAddStunDuration(Verse.Pawn,System.Single,System.Single@)">
+            <summary>
+            Tries to nullify current stun and add it to the stun meter.
+            </summary>
+            <param name="stunDuration">the duration of current stun if not nullified</param>
+            <returns>True if successfully nullified; False otherwise</returns>
+        </member>
         <member name="T:RimArchive.BA_RaceProperties">
             <summary>
             Not what I had done. Maybe will be of use sometime later?

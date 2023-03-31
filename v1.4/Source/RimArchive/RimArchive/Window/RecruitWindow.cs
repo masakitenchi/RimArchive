@@ -5,13 +5,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 using AlienRace;
-using static RimArchive.RimArchive;
+using static RimArchive.RimArchiveMain;
 using static RimArchive.Debug;
 using static Verse.Widgets;
 using System.Text;
 using UnityEngine.Profiling;
 using UnityEngine.UI;
-using RimArchive.Components;
+using RimArchive.GameComponents;
 
 namespace RimArchive.Window
 {
@@ -161,6 +161,15 @@ namespace RimArchive.Window
             //outRect.width -= 1050f;
             //outRect.height -= 70f;
             GUI.DrawTexture(outRect, BaseContent.GreyTex);
+            BeginGroup(outRect.ContractedBy(_Margin.x));
+            Rect inRect = outRect.ContractedBy(_Margin.x).AtZero();
+            float width = inRect.width / 3;
+            for (int i = 0; i <= cachedAllBosses.Count - 1 && i < 3; i++)
+            {
+                Rect bossPic = new Rect(inRect.x + width * i, inRect.y, width, inRect.height);
+                DrawTextureFitted(bossPic, cachedAllBosses.RandomElement().icon, 1f);
+            }
+            EndGroup();
             Widgets.LabelScrollable(outRect, "吃了吗您内今天也是好天气你是一个个什么啊漂亮得很呐人生路漫漫而修远兮吾将上下而求索关关雎鸠在河之洲窈窕淑女君子好逑".Translate(), ref _dlgscrbr);
         }
 
@@ -421,21 +430,21 @@ namespace RimArchive.Window
             if (ButtonImageFitted(recruitBtn, SSR))
             {
                 //存活
-                if (StudentDocument.IsAlive(_currentStudent))
+                if (RimArchiveMain.StudentDocument.IsAlive(_currentStudent))
                 {
                     Messages.Message("StudentAlreadyRecruited".Translate(_cachedStudent.NameFullColored), MessageTypeDefOf.NeutralEvent);
                 }
                 else
                 {
                     //未存活但招募过
-                    if (StudentDocument.IsRecruited(_currentStudent))
+                    if (RimArchiveMain.StudentDocument.IsRecruited(_currentStudent))
                     {
-                        StudentDocument.DocumentedStudent(_currentStudent, ref _cachedStudent);
+                        RimArchiveMain.StudentDocument.DocumentedStudent(_currentStudent, ref _cachedStudent);
                         Debug.DbgMsg("Re-recruiting");
                         DbgMsg($"Pawn name:{_cachedStudent.Name.ToStringFull}, Gender:{_cachedStudent.gender}");
                     }
                     _inStudentProfile = false;
-                    StudentDocument.Notify_StudentRecruited(_currentStudent);
+                    RimArchiveMain.StudentDocument.Notify_StudentRecruited(_currentStudent);
                     this.Close();
                     Map currentmap = Find.CurrentMap;
                     IntVec3 intVec3 = DropCellFinder.TradeDropSpot(currentmap);

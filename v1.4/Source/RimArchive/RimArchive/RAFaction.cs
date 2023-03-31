@@ -3,7 +3,7 @@ using Verse;
 using System.Linq;
 using System.Collections.Generic;
 using static RimWorld.TradeUtility;
-using static RimArchive.RimArchive;
+using static RimArchive.RimArchiveMain;
 using RimArchive.Window;
 
 namespace RimArchive

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Saki</defName>
+		<label>RABBIT-26 type Machine Gun</label>
+		<description>Regulation machine gun issued to Saki by the SRT Special Academy.\n\nRequires arduous maintenance due to its construction, this gun boasts significant firepower as long as it is maintained properly.</description>
+		<graphicData>
+			<texPath>Weapon/SRT/Saki</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.13</drawSize>
+		</graphicData>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags>
+			<li>BAW_Saki</li>
+		</weaponTags>
+		<recipeMaker>
+			<researchPrerequisite>BA_Weapon_SRT</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>440</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>24000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.69</AccuracyShort>
+			<AccuracyMedium>0.87</AccuracyMedium>
+			<AccuracyLong>0.82</AccuracyLong>
+			<RangedWeapon_Cooldown>1.30</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>65</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Saki</defaultProjectile>
+				<warmupTime>1.45</warmupTime>
+				<range>40</range>
+				<burstShotCount>7</burstShotCount>
+				<ticksBetweenBurstShots>17</ticksBetweenBurstShots>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Saki</defName>
+		<label>Bullet for RABBIT-26 type Machine Gun</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_yellow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>17</damageAmountBase>
+			<speed>80</speed>
+			<armorPenetrationBase>0.2</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Miyako</defName>
+		<label>RABBIT-31 type Submachine Gun</label>
+		<description>Regulation submachine gun issued to Miyako by the SRT Special Academy.\n\nIt is a highly reliable gun and can effectively repel the enemy even under extreme circumstances.</description>
+		<graphicData>
+			<texPath>Weapon/SRT/Miyako</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.2</drawSize>
+		</graphicData>
+		<soundInteract>Interact_SMG</soundInteract>
+		<weaponTags>
+			<li>BAW_SRT</li>
+		</weaponTags>
+		<recipeMaker>
+			<researchPrerequisite>BA_Weapon_SRT</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>430</displayPriority>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>24000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.58</AccuracyTouch>
+			<AccuracyShort>0.62</AccuracyShort>
+			<AccuracyMedium>0.19</AccuracyMedium>
+			<AccuracyLong>0.15</AccuracyLong>
+			<RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>65</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Miyako</defaultProjectile>
+				<warmupTime>0.75</warmupTime>
+				<range>21</range>
+				<burstShotCount>6</burstShotCount>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<soundCast>Shot_HeavySMG</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Miyako</defName>
+		<label>Bullet of RABBIT-31 type submachine gun</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_cyan</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>13</damageAmountBase>
+			<speed>60</speed>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+    <defName>BAW_Miyu</defName>
+    <label>RABBIT-39 type Rifle</label>
+    <description>Regulation sniper rifle issued to Miyu by the SRT Special Academy.\n\nFinely made and boasts an amazing accuracy.</description>
+    <graphicData>
+      <texPath>Weapon/SRT/Miyu</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.05</drawSize>
+    </graphicData>
+		<weaponTags>
+			<li>BAW_SRT</li>
+		</weaponTags>
+	<equippedAngleOffset>45</equippedAngleOffset>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.41</AccuracyTouch>
+      <AccuracyShort>0.68</AccuracyShort>
+      <AccuracyMedium>0.96</AccuracyMedium>
+      <AccuracyLong>0.99</AccuracyLong>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+    </statBases>
+		<equippedStatOffsets>
+			<SocialImpact>-0.35</SocialImpact>
+		</equippedStatOffsets>
+    <costList>
+      <Steel>95</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+	  <Cloth>40</Cloth>
+    </costList>
+    <recipeMaker>
+		<researchPrerequisite>BA_Weapon_SRT</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>440</displayPriority>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_BA_Miyu</defaultProjectile>
+        <warmupTime>1.8</warmupTime>
+        <range>49</range>
+        <soundCast>Shot_BoltActionRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_BA_Miyu</defName>
+    <label>Bullet of RABBIT-39 type Rifle</label>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>29</damageAmountBase>
+      <stoppingPower>2</stoppingPower>
+		<armorPenetrationBase>0.3</armorPenetrationBase>
+      <speed>80</speed>
+    </projectile>
+    <graphicData>
+      <texPath>Projectile/Bullet_yellow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+
+
+	
+
+	<ThingDef ParentName="BAW_BaseMakeableGunWithNoQuality">
+		<defName>BAW_Moe</defName>
+		<label>萌绘的通讯装置与望远镜</label>
+		<description>!该武器机制尚未完善！\n\n萌绘的战斗鹰直升机正在外围待机。用望远镜指示器与通讯器来为萌绘提供攻击坐标，她会立刻发射大量的火箭弹把目标地点炸翻天！\n\n这会需要很长的时间来引导射击，你需要清楚的视野、足够的时间且你不应该朝自己开火。</description>
+		<graphicData>
+			<texPath>Weapon/Special/Miyusbinocle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<weaponTags>
+			<li>BAW_MoeBomb</li>
+		</weaponTags>
+		<soundInteract>Moe_Fire</soundInteract>
+		<recipeMaker>
+				<researchPrerequisites>
+					<li>MultiAnalyzer</li>
+					<li>BA_Weapon_SRT</li>
+				</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<statBases>
+			<MarketValue>6800</MarketValue>
+			<RangedWeapon_Cooldown>10</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>30</Mass>
+			<Flammability>0</Flammability>
+			<AccuracyTouch>1</AccuracyTouch>
+			<AccuracyShort>1</AccuracyShort>
+			<AccuracyMedium>1</AccuracyMedium>
+			<AccuracyLong>1</AccuracyLong>
+			<WorkToMake>14000</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>250</Steel>
+			<ComponentIndustrial>12</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>RimArchive.Verb_Bombardment</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<warmupTime>10</warmupTime>
+				<range>90</range>
+				<ai_AvoidFriendlyFireRadius>23</ai_AvoidFriendlyFireRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>OrbitalTargeter_Fire</soundCast>
+				<onlyManualCast>true</onlyManualCast>
+				<targetParams>
+				  <canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
+				<aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
+				<aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
+				<beamTargetsGround>true</beamTargetsGround>
+				<soundAiming>HellsphereCannon_Aiming</soundAiming>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li Class="RimArchive.Textures">
+				<projectiletexpath>
+					<li>Projectile/Hikari</li>
+					<li>Projectile/Bullet_cyan</li>
+					<li>Projectile/Bullet_yellow</li>
+				</projectiletexpath>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="OrbitalStrikeBase">
+		<defName>Bombardment_beacon</defName>
+		<label>Target Beacon</label>
+		<!-- <graphicData>
+			<texPath>Projectile/Hikari</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData> -->
+		<thingClass>RimArchive.Bombardment</thingClass>
+		<!-- <projectile>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>80</damageAmountBase>
+			<explosionRadius>1.5</explosionRadius >
+			<preExplosionSpawnThingDef>Fire</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.45</preExplosionSpawnChance>
+			<stoppingPower>6</stoppingPower>
+			<speed>40</speed>
+		</projectile> -->
+		<comps>
+			<li Class="CompProperties_OrbitalBeam">
+				<width>0.5</width>
+				<color>(20, 20, 232, 242)</color>
+			</li>
+		</comps>
+		
+	</ThingDef>
+
+	<!--萌绘（手枪）-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_MoeHG</defName>
+		<label>Rabbit-224 type pistol</label>
+		<description>A standard pistol that Moe received from SRT Special Academy.\n\nIn spite of being a pistol, it has a high rate of fire and can empty its magazine in a blink.</description>
+		<graphicData>
+			<texPath>Weapon/SRT/Moe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.72</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Revolver</soundInteract>
+		<weaponTags>
+			<li>BAW_Moe</li>
+		</weaponTags>
+		<recipeMaker>
+			<researchPrerequisite>BA_Weapon_SRT</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>400</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>24000</WorkToMake>
+			<Mass>2.5</Mass>
+			<AccuracyTouch>0.62</AccuracyTouch>
+			<AccuracyShort>0.71</AccuracyShort>
+			<AccuracyMedium>0.46</AccuracyMedium>
+			<AccuracyLong>0.21</AccuracyLong>
+			<RangedWeapon_Cooldown>1.4</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>40</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Moe</defaultProjectile>
+				<warmupTime>0.62</warmupTime>
+				<range>23</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<soundCast>Shot_Autopistol</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>4</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Moe</defName>
+		<label>Bullet of Rabbit-224 type pistol</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_blue</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>9</damageAmountBase>
+			<speed>43</speed>
+			<armorPenetrationBase>0.1</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+</Defs>

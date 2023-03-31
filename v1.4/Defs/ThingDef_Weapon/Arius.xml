@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!--纱织-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Saori</defName>
+		<label>Arius assault rifle</label>
+		<description>Assault rifle used by Saori.\n\nCustomized by Saori in pursuit of efficiency. \n\nOnce the prey is in sight, it never misses its shots until the target is brought down.</description>
+		<graphicData>
+			<texPath>Weapon/Arius/Saori</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.15</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags>
+			<li>BAW_Saori</li>
+		</weaponTags>
+		<recipeMaker>
+			<researchPrerequisite>BA_Weapon_Arius</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>440</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>24000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.73</AccuracyTouch>
+			<AccuracyShort>0.79</AccuracyShort>
+			<AccuracyMedium>0.90</AccuracyMedium>
+			<AccuracyLong>0.85</AccuracyLong>
+			<RangedWeapon_Cooldown>1.05</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>65</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Saori</defaultProjectile>
+				<warmupTime>1.0</warmupTime>
+				<range>36</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Saori</defName>
+		<label>Bullet for Arius assault rifle</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_blue</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<speed>80</speed>
+			<armorPenetrationBase>0.2</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+	
+	<!--秤砣子-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Atsuko</defName>
+		<label>Scorpius</label>
+		<description>A submachine gun used by Atsuko.\n\nIt has a heavy firepower for its short barrel, and is especially suited for close quarters combat.</description>
+		<graphicData>
+			<texPath>Weapon/Arius/Atsuko</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.06</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<weaponTags>
+			<li>BAW_Atsuko</li>
+		</weaponTags>
+		<recipeMaker>
+			<researchPrerequisite>BA_Weapon_Arius</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>440</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>24000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.61</AccuracyTouch>
+			<AccuracyShort>0.69</AccuracyShort>
+			<AccuracyMedium>0.77</AccuracyMedium>
+			<AccuracyLong>0.51</AccuracyLong>
+			<RangedWeapon_Cooldown>1.05</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>65</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Atsuko</defaultProjectile>
+				<warmupTime>1.0</warmupTime>
+				<range>30</range>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Atsuko</defName>
+		<label>Bullet for Scorpius</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_yellow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>11.2</damageAmountBase>
+			<speed>58</speed>
+			<armorPenetrationBase>0.18</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+	
+	<!--日和-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+    <defName>BAW_Hiyori</defName>
+    <label>Identity</label>
+    <description>Sniper rifle used by Hiyori.\n\nThe 20mm bullets strike true, asserting their presence on the gunfire-filled battlefield.</description>
+    <graphicData>
+      <texPath>Weapon/Arius/Hiyori</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.5</drawSize>
+    </graphicData>
+		<weaponTags>
+			<li>BAW_Hiyori</li>
+		</weaponTags>
+	<equippedAngleOffset>45</equippedAngleOffset>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>16000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.31</AccuracyTouch>
+      <AccuracyShort>0.36</AccuracyShort>
+      <AccuracyMedium>0.92</AccuracyMedium>
+      <AccuracyLong>0.86</AccuracyLong>
+      <RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
+    </statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.2</MoveSpeed>
+		</equippedStatOffsets>
+    <costList>
+      <Steel>75</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+		<researchPrerequisite>BA_Weapon_Arius</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <displayPriority>415</displayPriority>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_BA_Hiyori</defaultProjectile>
+        <warmupTime>2</warmupTime>
+        <range>55</range>
+		<minRange>2</minRange>
+        <soundCast>Shot_BoltActionRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_BA_Hiyori</defName>
+    <label>Bullet of Identity</label>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>41</damageAmountBase>
+      <stoppingPower>2.5</stoppingPower>
+		<armorPenetrationBase>0.35</armorPenetrationBase>
+      <speed>55</speed>
+	        <extraDamages>
+				<li>
+					<def>ArmorReduction</def>
+					<amount>1</amount>
+					<chance>100</chance>
+				</li>
+			</extraDamages>
+    </projectile>
+    <graphicData>
+      <texPath>Projectile/Bullet_cyan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+	
+	<!--美咲-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Misaki</defName>
+		<label>Saint Predator</label>
+		<description>Rocket launcher used by Misaki.\n\nAfter firing, when it reaches a certain altitude, it separates into multiple munitions and causes a widespread explosion.</description>
+		<graphicData>
+			<texPath>Weapon/Arius/Misaki</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.25</drawSize>
+		</graphicData>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		<weaponTags>
+			<li>BAW_Misaki</li>
+		</weaponTags>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>BA_Weapon_Arius</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>30</Mass>
+			<Flammability>0</Flammability>
+			<WorkToMake>14000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.15</MoveSpeed>
+		</equippedStatOffsets>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<defaultProjectile>Bullet_BA_Misaki</defaultProjectile>
+				<hasStandardCommand>true</hasStandardCommand>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+				<forcedMissRadius>2.85</forcedMissRadius>
+				<warmupTime>3.2</warmupTime>
+				<minRange>2</minRange>
+				<range>55</range>
+				<burstShotCount>7</burstShotCount>
+				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+				<soundCast>ThumpCannon_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+				<requireLineOfSight>true</requireLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Misaki</defName>
+		<label>SmallRocket</label>
+		<graphicData>
+			<texPath>Projectile/Misaki</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2.5</drawSize>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<damageAmountBase>18</damageAmountBase>
+			<explosionRadius>1</explosionRadius >
+			<preExplosionSpawnThingDef>Fire</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.99</preExplosionSpawnChance>
+			<stoppingPower>3</stoppingPower>
+			<speed>20</speed>
+		</projectile>
+	</ThingDef>
+	
+
+	
+	
+	
+  
+
+
+	
+
+	
+
+	
+</Defs>

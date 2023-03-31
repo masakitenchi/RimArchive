@@ -20,32 +20,35 @@
       <Beauty>10</Beauty>
       <SellPriceFactor>0.20</SellPriceFactor>
     </statBases>
+    <thingCategories>
+      <li>BA_Weapon</li>
+    </thingCategories>
     <comps>
-      <li Class="CompProperties_Forbiddable"/>      
+      <li Class="CompProperties_Forbiddable"/>
       <li>
         <compClass>CompEquippable</compClass>
       </li>
       <li Class="CompProperties_Styleable"/>
     </comps>
-	<tools>
-		<li>
-			<label>stock</label>
-			<capacities>
-				<li>Blunt</li>
-			</capacities>
-			<power>9</power>
-			<cooldownTime>2</cooldownTime>
-		</li>
-		<li>
-			<label>barrel</label>
-			<capacities>
-				<li>Blunt</li>
-				<li>Poke</li>
-			</capacities>
-			<power>9</power>
-			<cooldownTime>2</cooldownTime>
-		</li>
-	</tools>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
     <graphicData>
       <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
     </graphicData>
@@ -101,28 +104,28 @@
     </comps>
   </ThingDef>
 
-    <!--无质量-->
-	<ThingDef Name="BAW_BaseMakeableGunWithNoQuality" ParentName="BAW_BaseGun" Abstract="True">
-		<recipeMaker>
-			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-			<workSkill>Crafting</workSkill>
-			<effectWorking>Smith</effectWorking>
-			<soundWorking>Recipe_Smith</soundWorking>
-			<recipeUsers>
-				<li>TableMachining</li>
-			</recipeUsers>
-			<unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-			<researchPrerequisite>Gunsmithing</researchPrerequisite>
-		</recipeMaker>
-	</ThingDef>
-
-	
+  <!--无质量-->
+  <ThingDef Name="BAW_BaseMakeableGunWithNoQuality" ParentName="BAW_BaseGun" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
 
 
 
 
 
-  
+
+
+
 
 
 </Defs>

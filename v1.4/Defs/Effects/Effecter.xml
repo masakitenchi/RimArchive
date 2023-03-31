@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <EffecterDef>
+        <defName>BA_Effecter_HODPillar</defName>
+        <children>
+            <li>
+                <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+                <moteDef>Mote_MechSparkSimple</moteDef>
+                <burstCount>1~2</burstCount>
+                <chancePerTick>0.015</chancePerTick>
+                <rotation>-150~-150</rotation>
+                <spawnLocType>OnTarget</spawnLocType>
+                <scale>1.0~1.2</scale>
+                <positionRadius>0.7</positionRadius>
+                <rotateTowardsTargetCenter>true</rotateTowardsTargetCenter>
+              </li>
+              <li>
+                <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+                <moteDef>Mote_ApocritonPulse</moteDef>
+                <burstCount>1</burstCount>
+                <rotation>-150~150</rotation>
+                <ticksBetweenMotes>76</ticksBetweenMotes>
+                <positionRadius>0</positionRadius>
+                <spawnLocType>OnSource</spawnLocType>
+              </li>
+        </children>
+      </EffecterDef>
+
+      <EffecterDef>
+        <defName>BA_CCBar</defName>
+        <children>
+          <li>
+            <subEffecterClass>SubEffecter_ProgressBar</subEffecterClass>
+            <moteDef>Mote_ProgressBarAlwaysVisible</moteDef>
+          </li>
+        </children>
+      </EffecterDef>
+
+</Defs>
