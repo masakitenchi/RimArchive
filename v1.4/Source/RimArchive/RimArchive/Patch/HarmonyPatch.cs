@@ -80,6 +80,8 @@ namespace RimArchive
          * 柱子只看晕眩伤和EMP，Boss看所有(同时模拟Groggy Gauge)
          * 换算率：1点伤害 = 30Tick晕眩(游戏内定义)
          * 晕眩时条不涨，触发晕眩的那一瞬间条已经清空
+         * 
+         * 可能还是得反过来，不然太难打柱子了
          */
         [HarmonyPrefix]
         [HarmonyPatch(typeof(ThingWithComps), nameof(ThingWithComps.PreApplyDamage))]
@@ -107,7 +109,7 @@ namespace RimArchive
                 case Building building:
                     if (building.def.HasComp(typeof(CompStunHandler)) && (dinfo.Def == DamageDefOf.EMP || dinfo.Def == DamageDefOf.Stun) && !building.GetComp<CompStunHandler>().TryAddStunDuration(GenTicks.TicksToSeconds((int)(dinfo.Amount * StunHandler.StunDurationTicksPerDamage)), out duration))
                     {
-                        building.GetComp<CompInvadePillar>();
+                        building.GetComp<CompInvadePillar>().Notify_Stunned();
                         building.TakeDamage(new DamageInfo(DamageDefOf.Bomb, 50));
                     }
                     break;

@@ -5,6 +5,7 @@ using System.Linq;
 using HarmonyLib;
 using System;
 using UnityEngine;
+using System.Text;
 
 namespace RimArchive;
 
@@ -61,9 +62,9 @@ public class CompInvadePillar : ThingComp
 
     public override string CompInspectStringExtra()
     {
-        string str = base.CompInspectStringExtra();
-        str += "\n" + "Current Radius:" + _currentRadius.ToString("F2");
-        return str;
+        StringBuilder str = new StringBuilder(base.CompInspectStringExtra());
+        str.AppendLine("Current Radius:").Append(_currentRadius.ToString("F2"));
+        return str.ToString();
     }
 
     public void Notify_Stunned()

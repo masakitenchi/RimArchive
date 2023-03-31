@@ -12,21 +12,21 @@ namespace RimArchive;
 
 public class CompMoteEmitterIncreasingSize : CompMoteEmitter
 {
-    private float scale = 0f;
     public CompProperties_MoteEmitterIncreasingSize Props => (CompProperties_MoteEmitterIncreasingSize)props;
     private CompInvadePillar cachedPillar;
 
     private CompInvadePillar PillarComp => cachedPillar ??= this.parent.GetComp<CompInvadePillar>();
 
+    private float Scale => PillarComp.Radius * 2 / Props.mote.graphicData.drawSize.x;
+
     public override void Initialize(CompProperties props)
     {
         base.Initialize(props);
-        scale = PillarComp.Radius * 2 / Props.mote.graphicData.drawSize.x;
     }
 
+    //Feels that only need DeSpawn()
     public void Notify_RadiusChanged()
     {
-        scale = PillarComp.Radius * 2 / Props.mote.graphicData.drawSize.x;
         this.mote.DeSpawn();
         this.Emit();
         this.mote?.Maintain();
@@ -55,7 +55,7 @@ public class CompMoteEmitterIncreasingSize : CompMoteEmitter
             Vector3 vector3 = this.parent.DrawPos + offset;
             if (vector3.InBounds(this.parent.Map))
             {
-                this.mote = MoteMaker.MakeStaticMote(vector3, this.parent.Map, moteDef, scale, true);
+                this.mote = MoteMaker.MakeStaticMote(vector3, this.parent.Map, moteDef, Scale, true);
             }
             if (this.mote != null && this.Props.useParentRotation)
                 this.mote.exactRotation = this.parent.Rotation.AsAngle;
