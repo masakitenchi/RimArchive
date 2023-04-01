@@ -37,6 +37,14 @@
 
 				</alienPartGenerator>
 				<maxDamageForSocialfight>6</maxDamageForSocialfight>
+				<reproduction>
+					<femaleFertilityAgeFactor>
+						<points>
+						  <li>(0.01, 0)</li>
+						  <li>(80,0)</li>
+						</points>
+					  </femaleFertilityAgeFactor>
+				</reproduction>
 			</generalSettings>
 
 			<styleSettings>
