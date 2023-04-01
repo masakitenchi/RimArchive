@@ -39,6 +39,22 @@ namespace RimArchive
 
         }
 
+        #region Ideology
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(ThoughtWorker_LookChangeDesired), "CurrentStateInternal")]
+        public static void Patch_ThoughtWorker_LookChangeDesired(ref ThoughtState __result, Pawn p)
+        {
+            __result = p.kindDef is StudentDef ? ThoughtState.Inactive : __result;
+        }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(Pawn_StyleTracker), nameof(Pawn_StyleTracker.CanDesireLookChange), MethodType.Getter)]
+        public static void Patch_CanDesireLookChange_getter(ref bool __result, Pawn_StyleTracker __instance)
+        {
+            __result = __instance.pawn.kindDef is StudentDef ? false : __result;
+        }
+        #endregion
+
         [HarmonyPostfix]
         [HarmonyPatch(typeof(FactionDialogMaker))]
         [HarmonyPatch("FactionDialogFor")]

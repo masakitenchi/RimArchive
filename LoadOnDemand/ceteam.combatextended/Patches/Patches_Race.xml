@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
 
+    <!-- Melee -->
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/AlienRace.ThingDef_AlienRace[@Name="StudentThingBase"]/tools</xpath>
         <value>
@@ -56,6 +57,15 @@
                     <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
                 </li>
             </tools>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/AlienRace.ThingDef_AlienRace[@Name="StudentThingBase"]</xpath>
+        <value>
+            <li Class="CombatExtended.RacePropertiesExtensionCE">
+                <bodyShape>Humanoid</bodyShape>
+            </li>
         </value>
     </Operation>
 
