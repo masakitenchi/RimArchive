@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine.Assertions.Must;
 using Verse;
 
-namespace RimArchive.Components;
+namespace RimArchive.WorldComponents;
 
 internal class RimArchiveWorldComponent : WorldComponent
 {

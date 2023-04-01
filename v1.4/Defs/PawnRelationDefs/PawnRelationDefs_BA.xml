@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <PawnRelationDef>
+        <defName>BA_Sibling</defName>
+        <workerClass>RimArchive.PawnRelationWorker_Sibling</workerClass>
+        <label>brother</label>
+        <labelFemale>sister</labelFemale>
+        <importance>185</importance>
+        <diedThought>MyBrotherDied</diedThought>
+        <diedThoughtFemale>MySisterDied</diedThoughtFemale>
+        <killedThought>KilledMyBrother</killedThought>
+        <killedThoughtFemale>KilledMySister</killedThoughtFemale>
+        <lostThought>MyBrotherLost</lostThought>
+        <lostThoughtFemale>MySisterLost</lostThoughtFemale>
+        <soldThoughts>
+            <li>SoldMyLovedOne</li>
+        </soldThoughts>
+        <opinionOffset>50</opinionOffset>
+        <generationChanceFactor>0</generationChanceFactor>
+        <romanceChanceFactor>0.03</romanceChanceFactor>
+        <incestOpinionOffset>-15</incestOpinionOffset>
+        <reflexive>true</reflexive>
+        <implied>false</implied>
+        <familyByBloodRelation>true</familyByBloodRelation>
+    </PawnRelationDef>
+
+    <PawnRelationDef>
+        <defName>BA_SameClub</defName>
+        <workerClass>RimArchive.PawnRelationWorker_SameClub</workerClass>
+        <label>brother</label>
+        <labelFemale>sister</labelFemale>
+        <importance>186</importance>
+        <diedThought>PawnWithGoodOpinionDied</diedThought>
+        <diedThoughtFemale>PawnWithGoodOpinionDied</diedThoughtFemale>
+        <killedThought>KilledMyFriend</killedThought>
+        <killedThoughtFemale>KilledMyFriend</killedThoughtFemale>
+        <lostThought>PawnWithGoodOpinionLost</lostThought>
+        <lostThoughtFemale>PawnWithGoodOpinionLost</lostThoughtFemale>
+        <soldThoughts>
+            <li>SoldMyLovedOne</li>
+        </soldThoughts>
+        <opinionOffset>50</opinionOffset>
+        <generationChanceFactor>0</generationChanceFactor>
+        <implied>false</implied>
+        <familyByBloodRelation>false</familyByBloodRelation>
+        <reflexive>true</reflexive>
+    </PawnRelationDef>
+
+</Defs>

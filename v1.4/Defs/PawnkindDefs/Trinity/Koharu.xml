@@ -5,7 +5,11 @@
 		<defName>BA_Koharu</defName>
 		<label>小春</label>
 		<race>KivotosStudent</race>
-		<description>Empty</description>
+		<description>トリニティ総合学園所属、補習授業部の一員。
+
+			本来は正義実現委員会の所属だったが成績が落ち、留年の危機に陥ってしまい、強制的に補習授業部へと入れられてしまった。本人は自分のことをエリートだと思っているが、実際には学校の授業に全くついていけないくらい頭が悪い。密かにエッチな雑誌を集めるという趣味（？）を持っており、日常の些細なことから妄想を膨らませては、しょっちゅう一人で恥ずかしがっている。
+			
+			"&lt;i&gt;エッチなものは全部焼却よ！焼却！&lt;/i&gt;"</description>
 		<nameMaker>NamerKoharu</nameMaker>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<initialResistanceRange>10~11</initialResistanceRange>
@@ -92,6 +96,12 @@
 				<fireLevel>0</fireLevel>
 			</Social>
 		</skills>
+		<relations>
+			<BA_SameClub>
+				<li>BA_Hifumi</li>
+				<li>BA_Azusa</li>
+			</BA_SameClub>
+		</relations>
 	</RimArchive.StudentDef>
 
 </Defs>

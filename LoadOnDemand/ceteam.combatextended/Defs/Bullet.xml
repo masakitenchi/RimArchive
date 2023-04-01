@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <!-- 测试用-->
+    <ThingDef ParentName="Base556x45mmNATOBullet">
+		<defName>Bullet_556x45mmNATO_Azusa</defName>
+		<label>5.56mm NATO bullet (FMJ)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>EMP</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationSharp>6</armorPenetrationSharp>
+			<armorPenetrationBlunt>34.18</armorPenetrationBlunt>
+            <secondaryDamage>
+                <li>
+                    <def>Bullet</def>
+                    <amount>14</amount>
+                </li>
+            </secondaryDamage>
+		</projectile>
+	</ThingDef>
+    
+</Defs>

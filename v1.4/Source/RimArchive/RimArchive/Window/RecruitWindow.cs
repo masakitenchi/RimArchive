@@ -5,13 +5,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 using AlienRace;
-using static RimArchive.RimArchive;
+using static RimArchive.RimArchiveMain;
 using static RimArchive.Debug;
 using static Verse.Widgets;
 using System.Text;
 using UnityEngine.Profiling;
 using UnityEngine.UI;
-using RimArchive.Components;
+using RimArchive.GameComponents;
 
 namespace RimArchive.Window
 {
@@ -59,8 +59,8 @@ namespace RimArchive.Window
             }
             else
             {
+                _cachedStudent.Discard();
                 _currentStudent = null;
-                _cachedStudent = null;
                 _inStudentProfile = false;
             }
         }
@@ -161,6 +161,15 @@ namespace RimArchive.Window
             //outRect.width -= 1050f;
             //outRect.height -= 70f;
             GUI.DrawTexture(outRect, BaseContent.GreyTex);
+            BeginGroup(outRect.ContractedBy(_Margin.x));
+            Rect inRect = outRect.ContractedBy(_Margin.x).AtZero();
+            float width = inRect.width / 3;
+            for (int i = 0; i <= cachedAllBosses.Count - 1 && i < 3; i++)
+            {
+                Rect bossPic = new Rect(inRect.x + width * i, inRect.y, width, inRect.height);
+                DrawTextureFitted(bossPic, cachedAllBosses.RandomElement().icon, 1f);
+            }
+            EndGroup();
             Widgets.LabelScrollable(outRect, "吃了吗您内今天也是好天气你是一个个什么啊漂亮得很呐人生路漫漫而修远兮吾将上下而求索关关雎鸠在河之洲窈窕淑女君子好逑".Translate(), ref _dlgscrbr);
         }
 
@@ -259,7 +268,7 @@ namespace RimArchive.Window
                                 allowAddictions: false,
                                 fixedGender: Gender.Female
                                 ));
-                            PostGen(ref _cachedStudent);
+                            PostGen(_cachedStudent);
                             _inStudentProfile = true;
                         }
                         TooltipHandler.TipRegion(icon, students[studentNo].description);
@@ -421,21 +430,21 @@ namespace RimArchive.Window
             if (ButtonImageFitted(recruitBtn, SSR))
             {
                 //存活
-                if (StudentDocument.IsAlive(_currentStudent))
+                if (RimArchiveMain.StudentDocument.IsAlive(_currentStudent))
                 {
                     Messages.Message("StudentAlreadyRecruited".Translate(_cachedStudent.NameFullColored), MessageTypeDefOf.NeutralEvent);
                 }
                 else
                 {
                     //未存活但招募过
-                    if (StudentDocument.IsRecruited(_currentStudent))
+                    if (RimArchiveMain.StudentDocument.IsRecruited(_currentStudent))
                     {
-                        StudentDocument.DocumentedStudent(_currentStudent, ref _cachedStudent);
+                        RimArchiveMain.StudentDocument.DocumentedStudent(_currentStudent, ref _cachedStudent);
                         Debug.DbgMsg("Re-recruiting");
                         DbgMsg($"Pawn name:{_cachedStudent.Name.ToStringFull}, Gender:{_cachedStudent.gender}");
                     }
                     _inStudentProfile = false;
-                    StudentDocument.Notify_StudentRecruited(_currentStudent);
+                    RimArchiveMain.StudentDocument.Notify_StudentRecruited(_currentStudent);
                     this.Close();
                     Map currentmap = Find.CurrentMap;
                     IntVec3 intVec3 = DropCellFinder.TradeDropSpot(currentmap);
@@ -470,31 +479,67 @@ namespace RimArchive.Window
         #endregion
 
         #region Misc Methods
-        static void PostGen(ref Pawn p)
+        static void PostGen(Pawn p)
         {
-            //Adjust skills
-            foreach (SkillRecord record in p.skills.skills)
+            try
             {
-                record.Level = _currentStudent.skills.Where(x => x.skill == record.def).First().level;
-                record.passion = _currentStudent.skills.Where(x => x.skill == record.def).First().passion;
+
+                //Adjust skills
+                foreach (SkillRecord record in p.skills.skills)
+                {
+                    record.Level = _currentStudent.skills.Where(x => x.skill == record.def).First().level;
+                    record.passion = _currentStudent.skills.Where(x => x.skill == record.def).First().passion;
+                }
+                //Remove harmful hediffs or addiction
+                p.health.hediffSet.hediffs = p.health.hediffSet.hediffs.Where(x => !(x.def.isBad || x.def.IsAddiction)).ToList();
+                p.Name = _currentStudent.name;
+                PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Childhood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
+                PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Adulthood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
+                p.story.headType = _currentStudent.forcedHeadType;
+                p.story.hairDef = _currentStudent.forcedHair;
+                p.story.bodyType = BodyTypeDefOf.Thin;
+                p.story.traits.allTraits.Clear();
+                foreach (TraitRequirement trait in _currentStudent.forcedTraits)
+                {
+                    p.story.traits.GainTrait(new Trait(trait.def, trait.degree ?? 0, true));
+                }
+                p.apparel.WornApparel.RemoveAll(x => x.def.apparel.bodyPartGroups.Any(t => t == BodyPartGroupDefOf.FullHead || t == BodyPartGroupDefOf.UpperHead));
+                p.apparel.LockAll();
+                #region Relations
+                //处理人际关系
+                //逻辑有点乱，首先：
+                //这个要双向查找保证不漏，或者说保证任意顺序招募都可以确保关系
+                //那么一开始要先一对多，然后多对一
+                //还是需要简洁一点的代码，或者说数据结构
+                //在StudentDef.Init里加了双向添加的代码，试试看
+                List<Pawn> students = Find.CurrentMap.mapPawns.AllPawns.Where(x => x.kindDef is StudentDef).ToList();
+                foreach (var relation in (p.kindDef as StudentDef).relations)
+                {
+                    //Debug.DbgMsg($"relation: {relation.relation.defName}");
+                    //Debug.DbgMsg($"Pawns: {string.Join("\n", relation.others.Select(x => x.defName))}");
+                    foreach (Pawn other in students.Where(x => !p.relations.DirectRelationExists(relation.relation, x) && relation.others.Contains(x.kindDef as StudentDef)))
+                    {
+                        p.relations.AddDirectRelation(relation.relation, other);
+                    }
+                }
+                //查找地图上的每一个student看关系里是否包含要招募的学生
+                /*foreach(var student in students.Where(x => (x.kindDef as StudentDef).relations.Exists(t => t.others.Contains(p.kindDef as StudentDef))))
+                {
+                    foreach(var relation in (student.kindDef as StudentDef).relations.Where(x => x.others.Contains(p.kindDef as StudentDef)))
+                    {
+                        if(!p.relations.DirectRelationExists(relation.relation, student))
+                            p.relations.AddDirectRelation(relation.relation, student);
+                    }
+                }*/
+                #endregion
+                //Debug log for backstory. Maybe vanilla cannot recognize har's backstory? but with HAR it should inject into vanilla code, doesn't it?
+                //DbgMsg($"Pawn {p.Name}: \nrace:{p.kindDef.race}\n kindDef {p.kindDef},\n backstoryoverride: {string.Join("\n", p.kindDef.backstoryFiltersOverride.First().categories.Select(x => x + "\n"))}");
+
             }
-            //Remove harmful hediffs or addiction
-            p.health.hediffSet.hediffs = p.health.hediffSet.hediffs.Where(x => !(x.def.isBad || x.def.IsAddiction)).ToList();
-            p.Name = _currentStudent.name;
-            PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Childhood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
-            PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Adulthood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
-            p.story.headType = _currentStudent.forcedHeadType;
-            p.story.hairDef = _currentStudent.forcedHair;
-            p.story.bodyType = BodyTypeDefOf.Thin;
-            p.story.traits.allTraits.Clear();
-            foreach (TraitRequirement trait in _currentStudent.forcedTraits)
+            catch (Exception ex)
             {
-                p.story.traits.GainTrait(new Trait(trait.def, trait.degree ?? 0, true));
+                Debug.DbgErr($"{ex} with {ex.Message}");
             }
-            p.apparel.WornApparel.RemoveAll(x => x.def.apparel.bodyPartGroups.Any(t => t == BodyPartGroupDefOf.FullHead || t == BodyPartGroupDefOf.UpperHead));
-            p.apparel.LockAll();
-            //Debug log for backstory. Maybe vanilla cannot recognize har's backstory? but with HAR it should inject into vanilla code, doesn't it?
-            //DbgMsg($"Pawn {p.Name}: \nrace:{p.kindDef.race}\n kindDef {p.kindDef},\n backstoryoverride: {string.Join("\n", p.kindDef.backstoryFiltersOverride.First().categories.Select(x => x + "\n"))}");
         }
         static Texture2D IconforPassion(Passion passion) => passion switch
         {

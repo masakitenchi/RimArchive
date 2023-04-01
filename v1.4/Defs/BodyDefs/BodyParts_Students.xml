@@ -2,8 +2,8 @@
 <Defs>
 
 	<BodyPartDef>
-		<defName>halo</defName>
-		<label>halo</label>
+		<defName>Halo</defName>
+		<label>Halo</label>
 		<hitPoints>10</hitPoints>
 		<tags>
 			<li>BloodPumpingSource</li>

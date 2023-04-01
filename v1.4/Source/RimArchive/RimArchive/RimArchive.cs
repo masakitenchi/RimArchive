@@ -1,4 +1,5 @@
-﻿using RimArchive.Components;
+﻿using HarmonyLib;
+using RimArchive.GameComponents;
 using RimArchive.Window;
 using RimWorld;
 using System;
@@ -16,7 +17,7 @@ namespace RimArchive
     /// Loads all assets before GC.
     /// </summary>
     [StaticConstructorOnStartup]
-    public class RimArchive
+    public class RimArchiveMain
     {
         /// <summary>
         /// Will add settings later.
@@ -44,9 +45,10 @@ namespace RimArchive
         /// <summary>
         /// Used to access the Document system in current game
         /// </summary>
-        public static RimArchiveGameComponent StudentDocument => Current.Game.GetComponent<RimArchiveGameComponent>();
+        public static StudentDocument StudentDocument => Current.Game.GetComponent<StudentDocument>();
+        public static RaidManager RaidManager => Current.Game.GetComponent<RaidManager>();
         //
-        internal static readonly string packageId = "auxia.weaponpack.bluearchive";
+        internal static readonly string packageId;
 #nullable enable
         //Each student belongs to a different PawnKindDef, but should share the same race
         internal static readonly List<StudentDef> AllStudents = new List<StudentDef>();
@@ -57,13 +59,17 @@ namespace RimArchive
         /// </summary>
         public static readonly Dictionary<IconDef, List<StudentDef>> cachedAllStudentsBySchool = new Dictionary<IconDef, List<StudentDef>>();
 
+        public static readonly HashSet<RaidDef> cachedAllBosses = new HashSet<RaidDef>();
+
 #nullable disable
 
-        static RimArchive()
+        static RimArchiveMain()
         {
             //Should be of use sometime
             //But what if some other mod also add this extension? Meh
-            packageId = DefDatabase<StudentDef>.AllDefs.First().modContentPack.PackageId;
+            packageId ??= DefDatabase<StudentDef>.AllDefs.First().modContentPack.PackageId;
+            cachedAllBosses = DefDatabase<RaidDef>.AllDefs.ToHashSet();
+            DefDatabase<RaidDef>.AllDefs.Do(delegate (RaidDef def) { def.Init(); });
             foreach (StudentDef student in DefDatabase<StudentDef>.AllDefs)
             {
                 AllStudents.Add(student);

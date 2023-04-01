@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ThingDef ParentName = "BuildingBase">
+        <defName>BA_HOD_Pillar</defName>
+        <label>HOD Pillar</label>
+        <description>The invade pillar.</description>
+        <thingClass>Building</thingClass>
+        <category>Building</category>
+        <!-- 占位符 -->
+        <graphicData>
+            <texPath>Things/Building/Furniture/Column</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <damageData>
+                <rect>(0.2,0.2,0.6,0.6)</rect>
+            </damageData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>2000</MaxHitPoints>
+            <Flammability>0.0</Flammability>
+        </statBases>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>Impassable</passability>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>false</castEdgeShadows>
+        <fillPercent>1</fillPercent>
+        <coversFloor>true</coversFloor>
+        <placingDraggableDimensions>1</placingDraggableDimensions>
+        <tickerType>Normal</tickerType>
+        <rotatable>false</rotatable>
+        <selectable>true</selectable>
+        <neverMultiSelect>true</neverMultiSelect>
+        <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>        <!-- Best affordance needed for stone -->
+        <holdsRoof>false</holdsRoof>
+        <designationCategory>Structure</designationCategory>
+        <uiOrder>2000</uiOrder>
+        <staticSunShadowHeight>1.0</staticSunShadowHeight>
+        <blockLight>true</blockLight>
+        <canOverlapZones>false</canOverlapZones>
+        <fertility>0</fertility>
+        <building>
+            <paintable>true</paintable>
+            <isInert>true</isInert>
+            <isPlaceOverableWall>true</isPlaceOverableWall>
+            <ai_chillDestination>false</ai_chillDestination>
+            <blueprintGraphicData>
+                <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+            </blueprintGraphicData>
+            <relatedBuildCommands>
+                <li>Door</li>
+                <li>Autodoor</li>
+            </relatedBuildCommands>
+        </building>
+        <comps>
+            <li Class="RimArchive.CompProperties_InvadePillar">
+                <compClass>RimArchive.CompInvadePillar</compClass>
+                <InitialRadius>2.5</InitialRadius>
+                <applyHediffs>
+                    <li>BA_PillarSuppression</li>
+                </applyHediffs>
+                <upgradeInterval>30</upgradeInterval>                <!-- Seconds -->
+            </li>
+            <li Class="RimArchive.CompProperties_StunHandler">
+                <BaseStunThreshold>900.0</BaseStunThreshold>
+            </li>
+            <!-- <li Class="CompProperties_Effecter">
+                <effecterDef>BA_CCBar</effecterDef>
+            </li> -->
+            <li Class="RimArchive.CompProperties_MoteEmitterIncreasingSize">
+                <mote>Mote_ProximityScannerRadius</mote>
+                <InitialSize>2.5</InitialSize>
+                <emissionInterval>90</emissionInterval>
+                <maintain>True</maintain>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<!-- 需要找时间给学生身体部件.groups内加上CoveredByNaturalArmor的ce补丁 但貌似CE有自动补丁？-->
 	<BodyDef>
 		<defName>kivotos</defName>
 		<label>Body for Kivotos students</label>
@@ -14,14 +15,14 @@
 			</groups>
 			<parts>
 				<li>
-					<def>halo</def>
+					<def>Halo</def>
 					<customLabel>光环</customLabel>
 					<coverage>0</coverage>
 					<depth>Outside</depth>
 					<groups>
 						<li>FullHead</li>
 					</groups>
-					<!-- neck and above set to the subpart of halo-->
+					<!-- neck and above set to the subpart of Halo-->
 					<parts>
 						<li>
 							<def>Neck</def>
@@ -49,6 +50,17 @@
 												<li>Eyes</li>
 												<li>FullHead</li>
 											</groups>
+											<parts>
+												<li>
+													<def>Brain</def>
+													<coverage>0.8</coverage>
+													<groups>
+														<li>UpperHead</li>
+														<li>Eyes</li>
+														<li>FullHead</li>
+													</groups>
+												</li>
+											</parts>
 										</li>
 										<li>
 											<def>Eye</def>

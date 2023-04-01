@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ThingDef Name = "BA_StudieableBase" ParentName = "MechResourceBase" Abstract = "True">
+        <statBases Inherit = "False">
+            <MarketValue>500</MarketValue>
+            <Mass>1</Mass>
+        </statBases>
+    </ThingDef>
+
+    <ThingDef ParentName = "BA_StudieableBase">
+        <defName>BA_Chip_HOD</defName>
+        <label>HOD Chip</label>
+        <description>Chip dropped by HOD in this world. You can study this at a research benchi to reveal its secret.</description>
+        <!-- 占位符，画完以后改成自己的 -->
+        <graphicData>
+            <texPath>Things/Item/Resource/SignalChip</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName = "BA_StudieableBase">
+        <defName>BA_Chip_Chesed</defName>
+        <label>Chesed Chip</label>
+        <description>Chip dropped by Chesed in this world. You can study this at a research benchi to reveal its secret.</description>
+        <!-- 占位符，画完以后改成自己的 -->
+        <graphicData>
+            <texPath>Things/Item/Resource/PowerfocusChip</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <ThingDef ParentName = "BA_StudieableBase">
+        <defName>BA_Chip_Goz</defName>
+        <label>Goz Chip</label>
+        <description>Chip dropped by Goz in this world. You can study this at a research benchi to reveal its secret.</description>
+        <!-- 占位符，画完以后改成自己的 -->
+        <graphicData>
+            <texPath>Things/Item/Resource/SignalChip</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef>
+
+    <!-- <ThingDef ParentName = "BA_StudieableBase">
+        <defName>BA_Chip_Goz</defName>
+        <label>Goz Chip</label>
+        <description>Chip dropped by Goz in this world. You can study this at a research benchi to reveal its secret.</description>
+        
+        <graphicData>
+            <texPath>Things/Item/Resource/NanostructuringChip</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+    </ThingDef> -->
+
+</Defs>

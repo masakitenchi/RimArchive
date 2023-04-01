@@ -28,4 +28,7 @@
 
   <StudentHeavilyInjuredAngry>{0} 的重伤让sensei十分愤怒。他决定在接下来的 {1} 天内与你敌对。</StudentHeavilyInjuredAngry>
   <StudentHeavilyInjured>{0} 的重伤</StudentHeavilyInjured>
+
+  <CurrentTotal>已造成:{0}s/阈值:{1}s</CurrentTotal>
+  <ThresholdBroken>已打破阈值</ThresholdBroken>
 </LanguageData>

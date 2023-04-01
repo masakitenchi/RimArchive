@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <TraitDef>
+        <defName>BA_Trait_Arius</defName>
+        <label>Arius</label>
+        <description>Arius Squad</description>
+        <degreeDatas>
+            <li>
+                <label>Arius Squad</label>
+                <description>Lorum Ipsum</description>
+                <statOffsets>
+                    <MoveSpeed>0.12</MoveSpeed>
+                </statOffsets>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+</Defs>

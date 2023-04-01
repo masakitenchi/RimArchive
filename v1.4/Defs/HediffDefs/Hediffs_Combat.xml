@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+
     <HediffDef>
         <defName>BA_ArmorReduction</defName>
         <label>Armor Reduction</label>
@@ -16,8 +17,33 @@
                 <baseAmount>0.10</baseAmount>
             </li>
         </comps>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>BA_PillarSuppression</defName>
+        <label>PillarSuppression</label>
+        <description>Suppressed by HOD's pillar, movement speed reduced.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>true</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>300</disappearsAfterTicks>
+                <showRemainingTime>false</showRemainingTime>
+            </li>
+        </comps>
         <stages>
-            
+            <li>
+                <minSeverity>1.0</minSeverity>
+                <statOffsets>
+                    <MoveSpeed>-0.1</MoveSpeed>
+                </statOffsets>
+            </li>
+            <li>
+                <minSeverity>2.0</minSeverity>
+                <statOffsets>
+                    <MoveSpeed>-0.15</MoveSpeed>
+                </statOffsets>
+            </li>
         </stages>
     </HediffDef>
 </Defs>
