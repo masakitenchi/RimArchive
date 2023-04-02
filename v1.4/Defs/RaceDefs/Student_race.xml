@@ -37,6 +37,14 @@
 
 				</alienPartGenerator>
 				<maxDamageForSocialfight>6</maxDamageForSocialfight>
+				<reproduction>
+					<femaleFertilityAgeFactor>
+						<points>
+						  <li>(0.01, 0)</li>
+						  <li>(80,0)</li>
+						</points>
+					  </femaleFertilityAgeFactor>
+				</reproduction>
 			</generalSettings>
 
 			<styleSettings>
@@ -146,17 +154,23 @@
 				</li>
 				<li>
 					<def>HumanlikeChild</def>
-					<minAge>0.1</minAge>
+					<minAge>3</minAge>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">
+					<def>HumanlikePreTeenager</def>
+					<minAge>9</minAge>
 				</li>
 				<li>
 					<def>HumanlikeTeenager</def>
-					<minAge>0.2</minAge>
+					<minAge>13</minAge>
 				</li>
 				<li>
 					<def>HumanlikeAdult</def>
-					<minAge>0.3</minAge>
+					<minAge>18</minAge>
 				</li>
 			</lifeStageAges>
+
+
 			<specialShadowData>
 				<volume>(0.3, 0.8, 0.4)</volume>
 				<offset>(0,0,-0.3)</offset>
