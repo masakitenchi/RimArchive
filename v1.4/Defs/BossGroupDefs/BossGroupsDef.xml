@@ -7,11 +7,11 @@
     </RimArchive.RaidDef>
 
     <!-- HOD -->
-    <BossDef>
+    <RimArchive.BossDef>
         <defName>BA_HOD</defName>
         <kindDef>BA_BOSS_HOD</kindDef>
         <!-- appearAfterTicks默认为2^32-1 -->
-    </BossDef>
+    </RimArchive.BossDef>
 
     <RimArchive.RaidDef ParentName = "BA_BossGroupBase">
         <defName>BA_BossGroup_HOD</defName>
