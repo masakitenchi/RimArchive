@@ -6,7 +6,7 @@ using UnityEngine;
 using Verse;
 using AlienRace;
 using static RimArchive.RimArchiveMain;
-using static RimArchive.Debug;
+using static RimArchive.DebugMessage;
 using static Verse.Widgets;
 using System.Text;
 using UnityEngine.Profiling;
@@ -35,9 +35,8 @@ namespace RimArchive.Window
         private static float _levelLabelWidth = -1f;
         private static bool _inStudentProfile = false;
         private static bool _clickedSchoolIcon = false;
-        private static IconDef _currentSchool;
-        private static Pawn _cachedStudent;
-        private DiaNode parent;
+        private static IconDef _currentSchool = null;
+        private static Pawn _cachedStudent = null;
 
         private static float _cachedSchoolListHeight;
 
@@ -97,7 +96,7 @@ namespace RimArchive.Window
                 outRect.x += sensei.width;
                 outRect.height = sensei.height;
                 outRect.width = inRect.width / 3;
-                DrawDialog(outRect);
+                DrawRaidDialog(outRect);
                 Rect studentsRect = new Rect(sensei.x, sensei.yMax, inRect.width, inRect.height - sensei.height);
                 //加个if，不多画窗口了
                 if (!_inStudentProfile)
@@ -156,7 +155,7 @@ namespace RimArchive.Window
         }
 
         #region GUISCHOOL
-        static void DrawDialog(Rect outRect)
+        static void DrawRaidDialog(Rect outRect)
         {
             //outRect.width -= 1050f;
             //outRect.height -= 70f;
@@ -440,7 +439,7 @@ namespace RimArchive.Window
                     if (RimArchiveMain.StudentDocument.IsRecruited(_currentStudent))
                     {
                         RimArchiveMain.StudentDocument.DocumentedStudent(_currentStudent, ref _cachedStudent);
-                        Debug.DbgMsg("Re-recruiting");
+                        DebugMessage.DbgMsg("Re-recruiting");
                         DbgMsg($"Pawn name:{_cachedStudent.Name.ToStringFull}, Gender:{_cachedStudent.gender}");
                     }
                     _inStudentProfile = false;
@@ -483,15 +482,15 @@ namespace RimArchive.Window
         {
             try
             {
-
                 //Adjust skills
                 foreach (SkillRecord record in p.skills.skills)
                 {
-                    record.Level = _currentStudent.skills.Where(x => x.skill == record.def).First().level;
-                    record.passion = _currentStudent.skills.Where(x => x.skill == record.def).First().passion;
+                    record.Level = _currentStudent.skills.FirstOrFallback(x => x.skill == record.def).level;
+                    record.passion = _currentStudent.skills.FirstOrFallback(x => x.skill == record.def).passion;
                 }
                 //Remove harmful hediffs or addiction
-                p.health.hediffSet.hediffs = p.health.hediffSet.hediffs.Where(x => !(x.def.isBad || x.def.IsAddiction)).ToList();
+                //p.health.hediffSet.hediffs = p.health.hediffSet.hediffs.Where(x => !(x.def.isBad || x.def.IsAddiction)).ToList();
+                p.health.hediffSet.hediffs.RemoveAll(x=> x.def.isBad || x.def.IsAddiction);
                 p.Name = _currentStudent.name;
                 PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Childhood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
                 PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Adulthood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
@@ -515,8 +514,8 @@ namespace RimArchive.Window
                 List<Pawn> students = Find.CurrentMap.mapPawns.AllPawns.Where(x => x.kindDef is StudentDef).ToList();
                 foreach (var relation in (p.kindDef as StudentDef).relations)
                 {
-                    //Debug.DbgMsg($"relation: {relation.relation.defName}");
-                    //Debug.DbgMsg($"Pawns: {string.Join("\n", relation.others.Select(x => x.defName))}");
+                    //DebugMessage.DbgMsg($"relation: {relation.relation.defName}");
+                    //DebugMessage.DbgMsg($"Pawns: {string.Join("\n", relation.others.Select(x => x.defName))}");
                     foreach (Pawn other in students.Where(x => !p.relations.DirectRelationExists(relation.relation, x) && relation.others.Contains(x.kindDef as StudentDef)))
                     {
                         p.relations.AddDirectRelation(relation.relation, other);
@@ -532,13 +531,13 @@ namespace RimArchive.Window
                     }
                 }*/
                 #endregion
-                //Debug log for backstory. Maybe vanilla cannot recognize har's backstory? but with HAR it should inject into vanilla code, doesn't it?
+                //DebugMessage log for backstory. Maybe vanilla cannot recognize har's backstory? but with HAR it should inject into vanilla code, doesn't it?
                 //DbgMsg($"Pawn {p.Name}: \nrace:{p.kindDef.race}\n kindDef {p.kindDef},\n backstoryoverride: {string.Join("\n", p.kindDef.backstoryFiltersOverride.First().categories.Select(x => x + "\n"))}");
 
             }
             catch (Exception ex)
             {
-                Debug.DbgErr($"{ex} with {ex.Message}");
+                DebugMessage.DbgErr($"{ex} with {ex.Message}");
             }
         }
         static Texture2D IconforPassion(Passion passion) => passion switch

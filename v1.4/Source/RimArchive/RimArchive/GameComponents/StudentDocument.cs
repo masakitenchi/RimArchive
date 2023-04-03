@@ -54,7 +54,7 @@ public class StudentDocument : GameComponent
             inAngryHostile = true;
             if (shale == null)
             {
-                Debug.DbgErr("Cannot find Shale as faction");
+                DebugMessage.DbgErr("Cannot find Shale as faction");
                 return false;
             }
             shale.TryAffectGoodwillWith(Faction.OfPlayer, shale.GoodwillToMakeHostile(Faction.OfPlayer));
@@ -62,7 +62,7 @@ public class StudentDocument : GameComponent
         }
         catch (Exception ex)
         {
-            Debug.DbgErr($"Exception: {ex}");
+            DebugMessage.DbgErr($"Exception: {ex}");
             return false;
         }
     }

@@ -7,15 +7,38 @@ using Verse;
 
 namespace RimArchive;
 
-public class RaidDef : RimWorld.BossgroupDef
+/* BossGroupDef解说：
+ * boss：顾名思义
+ * waves：每波的具体信息（喽啰、boss数量、boss装备）
+ * repeatWaveStartIndex：循环开始的waves索引
+ * workerClass、workerInt、Worker属性：不用管
+ * leaderDescription：boss介绍
+ * quest：对应的QuestScriptDef（没错，召唤Boss会生成一个隐藏任务）
+ * rewardDef：任务奖励
+ * tmpEntries：用于召唤时的具体波次介绍
+ */
+//相较于原版的改动：
+//删除repeatWaveStartIndex，改由玩家手动选择难度
+//RaidGroupWave新添bossOverride，可以覆盖默认的bossDef
+public class RaidDef : Def
 {
     private string iconPath;
     public Texture2D icon;
-    new public Type workerClass = typeof(BossGroupWorker);
+    public Type workerClass = typeof(BossGroupWorker);
+    public BossDef boss;
+    public List<RaidGroupWave> waves = new List<RaidGroupWave>();
+    public ThingDef rewardDef;
+    public QuestScriptDef quest;
+    public string leaderDescription;
 
     private BossGroupWorker workerInt;
     private List<string> tmpEntries = new List<string>();
-    new public BossgroupWorker Worker
+
+    public string LeaderDescription => (string)this.leaderDescription.Formatted(NamedArgumentUtility.Named(this.boss.kindDef, "LEADERKIND"));
+
+    public RaidGroupWave GetWave(int index) => this.waves[this.GetWaveIndex(index)];
+
+    public BossgroupWorker Worker
     {
         get
         {
@@ -28,14 +51,18 @@ public class RaidDef : RimWorld.BossgroupDef
         }
     }
 
-    new public string GetWaveDescription(int waveIndex)
+    public int GetWaveIndex(int waveIndex)
     {
-        BossGroupWave wave = this.GetWave(this.GetWaveIndex(waveIndex));
+        return waveIndex;
+    }
+    public string GetWaveDescription(int waveIndex)
+    {
+        RaidGroupWave wave = this.GetWave(this.GetWaveIndex(waveIndex));
         this.tmpEntries.Clear();
-        string str = GenLabel.BestKindLabel(this.boss.kindDef, Gender.None).CapitalizeFirst();
+        string str = GenLabel.BestKindLabel(wave.bossOverride?.kindDef ?? this.boss.kindDef, Gender.None).CapitalizeFirst();
         if (!wave.bossApparel.NullOrEmpty<ThingDef>())
             str = (string)"BossWithApparel".Translate(str.Named("BOSS"), wave.bossApparel.Select<ThingDef, string>((Func<ThingDef, string>)(a => a.label)).ToCommaList(true).Named("APPAREL"));
-        this.tmpEntries.Add(str + " x" + (object)wave.bossCount);
+        this.tmpEntries.Add(str + "(" + "BossHPMultiplier".Translate(wave.bossHPMultiplier) + ")");
         foreach (PawnKindDefCount escort in wave.escorts)
             this.tmpEntries.Add(GenLabel.BestKindLabel(escort.kindDef, Gender.None).CapitalizeFirst() + " x" + (object)escort.count);
         return this.tmpEntries.ToLineList("  - ");
@@ -44,5 +71,15 @@ public class RaidDef : RimWorld.BossgroupDef
     public void Init()
     {
         icon = iconPath != null ? ContentFinder<Texture2D>.Get(iconPath) : null;
+    }
+
+    public override IEnumerable<string> ConfigErrors()
+    {
+        foreach (string configError in base.ConfigErrors())
+            yield return configError;
+        if (this.boss == null && this.waves.Any(x => x.bossOverride == null))
+            yield return "boss required for all bossgroups";
+        if (this.waves.NullOrEmpty())
+            yield return "no waves defined.";
     }
 }

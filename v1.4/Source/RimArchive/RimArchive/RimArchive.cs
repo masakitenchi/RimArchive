@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using Verse;
-using static RimArchive.Debug;
+using static RimArchive.DebugMessage;
 using static RimArchive.StudentDef;
 
 namespace RimArchive

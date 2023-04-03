@@ -34,7 +34,6 @@
         <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
         <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>        <!-- Best affordance needed for stone -->
         <holdsRoof>false</holdsRoof>
-        <designationCategory>Structure</designationCategory>
         <uiOrder>2000</uiOrder>
         <staticSunShadowHeight>1.0</staticSunShadowHeight>
         <blockLight>true</blockLight>

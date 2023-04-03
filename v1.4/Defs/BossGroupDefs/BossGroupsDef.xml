@@ -3,7 +3,6 @@
     
     <RimArchive.RaidDef Name = "BA_BossGroupBase" Abstract = "True">
         <quest>BA_Raid</quest>
-        <repeatWaveStartIndex>0</repeatWaveStartIndex>
     </RimArchive.RaidDef>
 
     <!-- HOD -->
@@ -19,12 +18,11 @@
         <iconPath>Things/Raid/HOD</iconPath>
         <waves> <!-- 下标从0开始 -->
             <li>
-                <bossCount>1</bossCount>
                 <!-- 喽啰 -->
                 <escorts/>
             </li>
             <li>
-                <bossCount>1</bossCount>
+                <bossHPMultiplier>1.2</bossHPMultiplier>
                 <escorts>
                     <Mech_Militor>5</Mech_Militor>
                 </escorts>
@@ -35,7 +33,7 @@
                 </bossApparel>
             </li>
             <li>
-                <bossCount>1</bossCount>
+                <bossHPMultiplier>1.4</bossHPMultiplier>
                 <escorts>
                     <Mech_Militor>7</Mech_Militor>
                     <Mech_Pikeman>2</Mech_Pikeman>
