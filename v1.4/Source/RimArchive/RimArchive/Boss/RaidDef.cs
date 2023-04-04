@@ -18,7 +18,7 @@ namespace RimArchive;
  * tmpEntries：用于召唤时的具体波次介绍
  */
 //相较于原版的改动：
-//删除repeatWaveStartIndex，改由玩家手动选择难度
+//删除repeatWaveStartIndex，改由玩家手动选择难度(WIP)
 //RaidGroupWave新添bossOverride，可以覆盖默认的bossDef
 public class RaidDef : Def
 {
@@ -36,9 +36,8 @@ public class RaidDef : Def
 
     public string LeaderDescription => (string)this.leaderDescription.Formatted(NamedArgumentUtility.Named(this.boss.kindDef, "LEADERKIND"));
 
-    public RaidGroupWave GetWave(int index) => this.waves[this.GetWaveIndex(index)];
 
-    public BossgroupWorker Worker
+    public BossGroupWorker Worker
     {
         get
         {
@@ -51,13 +50,9 @@ public class RaidDef : Def
         }
     }
 
-    public int GetWaveIndex(int waveIndex)
-    {
-        return waveIndex;
-    }
     public string GetWaveDescription(int waveIndex)
     {
-        RaidGroupWave wave = this.GetWave(this.GetWaveIndex(waveIndex));
+        RaidGroupWave wave = waves[waveIndex];
         this.tmpEntries.Clear();
         string str = GenLabel.BestKindLabel(wave.bossOverride?.kindDef ?? this.boss.kindDef, Gender.None).CapitalizeFirst();
         if (!wave.bossApparel.NullOrEmpty<ThingDef>())
@@ -68,9 +63,10 @@ public class RaidDef : Def
         return this.tmpEntries.ToLineList("  - ");
     }
 
-    public void Init()
+    public override void ResolveReferences()
     {
-        icon = iconPath != null ? ContentFinder<Texture2D>.Get(iconPath) : null;
+        base.ResolveReferences();
+        icon = iconPath != null ? ContentFinder<Texture2D>.Get(iconPath) : BaseContent.BadTex;
     }
 
     public override IEnumerable<string> ConfigErrors()
@@ -82,4 +78,11 @@ public class RaidDef : Def
         if (this.waves.NullOrEmpty())
             yield return "no waves defined.";
     }
+
+    /*
+    public void Init()
+    {
+        icon = iconPath != null ? ContentFinder<Texture2D>.Get(iconPath) : null;
+    }
+*/
 }

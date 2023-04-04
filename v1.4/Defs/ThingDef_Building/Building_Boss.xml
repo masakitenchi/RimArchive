@@ -21,8 +21,8 @@
         </statBases>
         <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
         <altitudeLayer>Building</altitudeLayer>
-        <passability>Impassable</passability>
-        <blockWind>true</blockWind>
+        <passability>PassThroughOnly</passability>
+        <blockWind>false</blockWind>
         <castEdgeShadows>false</castEdgeShadows>
         <fillPercent>1</fillPercent>
         <coversFloor>true</coversFloor>
@@ -32,11 +32,11 @@
         <selectable>true</selectable>
         <neverMultiSelect>true</neverMultiSelect>
         <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
-        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>        <!-- Best affordance needed for stone -->
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
         <holdsRoof>false</holdsRoof>
         <uiOrder>2000</uiOrder>
-        <staticSunShadowHeight>1.0</staticSunShadowHeight>
-        <blockLight>true</blockLight>
+        <staticSunShadowHeight>0</staticSunShadowHeight>
+        <blockLight>false</blockLight>
         <canOverlapZones>false</canOverlapZones>
         <fertility>0</fertility>
         <building>

@@ -99,8 +99,10 @@
 		<combatPower>1000</combatPower>
 		<abilities Inherit="False">
 			<li>FireBurst</li>
-			<li></li>
 		</abilities>
+		<weaponTags Inherit = "False">
+			<li>HellsphereCannonGun</li>
+		</weaponTags>
 	</PawnKindDef>
 
 </Defs>

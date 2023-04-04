@@ -12,6 +12,7 @@ using System.Text;
 using UnityEngine.Profiling;
 using UnityEngine.UI;
 using RimArchive.GameComponents;
+using System.Runtime.CompilerServices;
 
 namespace RimArchive.Window
 {
@@ -22,6 +23,7 @@ namespace RimArchive.Window
     //目前尚未解决esc弹出菜单的问题。只能先继续沿用DiaNodeTree了
     public class RecruitWindow : Verse.Dialog_NodeTree
     {
+        #region private field
         private static readonly float _scrollBarWidth = GenUI.ScrollBarWidth;
         private static readonly Vector2 _Margin = new Vector2(5f, 5f);
         private static readonly Vector2 _iconSize = new Vector2(120f, 120f);
@@ -33,15 +35,14 @@ namespace RimArchive.Window
         private static Vector2 _sclscrbr = Vector2.zero;
         private static int _SkillCount = DefDatabase<SkillDef>.DefCount;
         private static float _levelLabelWidth = -1f;
+        private static float _cachedSchoolListHeight;
         private static bool _inStudentProfile = false;
         private static bool _clickedSchoolIcon = false;
-        private static IconDef _currentSchool = null;
-        private static Pawn _cachedStudent = null;
+        private static IconDef _currentSchool;
+        private static Pawn _cachedStudent;
+        private static StudentDef _currentStudent;
+        #endregion
 
-        private static float _cachedSchoolListHeight;
-
-
-        internal static StudentDef _currentStudent;
         internal static void Init()
         {
             _cachedSchoolListHeight = cachedSchools.Count * _iconSize.y;
@@ -93,6 +94,7 @@ namespace RimArchive.Window
                 //最右侧列出所有学校
                 Rect schoolList = new Rect(inRect.xMax - _iconSize.x - 2 * _scrollBarWidth, inRect.y, _iconSize.x + 4 * _scrollBarWidth, inRect.height);
                 //右侧的对话……栏?
+                //暂定作为周常的boss栏
                 outRect.x += sensei.width;
                 outRect.height = sensei.height;
                 outRect.width = inRect.width / 3;

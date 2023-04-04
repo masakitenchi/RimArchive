@@ -21,10 +21,8 @@ public class RaidGroupWave
     /// The mobs coming along with boss
     /// </summary>
     public List<PawnKindDefCount> escorts = new List<PawnKindDefCount>();
-#nullable enable
     /// <summary>
     /// This overrides the setting in RaidDef
     /// </summary>
     public BossDef? bossOverride;
-#nullable disable
 }
