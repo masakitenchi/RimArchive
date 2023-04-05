@@ -4,10 +4,9 @@
     <ThingDef Name="BA_ApparelBase" ParentName="ApparelBase" Abstract="True">
         <smeltable/>
         <statBases>
+            <MarketValue>50</MarketValue>
             <Mass>1.0</Mass>
         </statBases>
-        <generateCommonality>0</generateCommonality>
-        <generateAllowChance>0</generateAllowChance>
     </ThingDef>
     
 </Defs>

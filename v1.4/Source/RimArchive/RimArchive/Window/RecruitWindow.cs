@@ -170,7 +170,7 @@ namespace RimArchive.Window
                 DrawTextureFitted(bossPic, cachedAllBosses.RandomElement().icon, 1f);
             }
             EndGroup();
-            Widgets.LabelScrollable(outRect, "吃了吗您内今天也是好天气你是一个个什么啊漂亮得很呐人生路漫漫而修远兮吾将上下而求索关关雎鸠在河之洲窈窕淑女君子好逑".Translate(), ref _dlgscrbr);
+            Widgets.LabelScrollable(outRect, "Test Region".Translate(), ref _dlgscrbr);
         }
 
         static void DrawSchoolList(Rect outRect)
@@ -211,7 +211,7 @@ namespace RimArchive.Window
                 }
                 else if (_clickedSchoolIcon)
                 {
-                    if (Mouse.IsOver(outRect))
+                    if (Mouse.IsOver(viewRect))
                         continue;
                     else
                         _clickedSchoolIcon = false;
@@ -429,8 +429,12 @@ namespace RimArchive.Window
             recruitBtn.size = _iconSize;
             if (ButtonImageFitted(recruitBtn, SSR))
             {
+                if(!TradeUtility.ColonyHasEnoughSilver(Find.CurrentMap, 1000))
+                {
+                    Messages.Message("NotEnoughMoney".Translate(_cachedStudent.NameFullColored), MessageTypeDefOf.NeutralEvent);
+                }
                 //存活
-                if (RimArchiveMain.StudentDocument.IsAlive(_currentStudent))
+                else if (RimArchiveMain.StudentDocument.IsAlive(_currentStudent))
                 {
                     Messages.Message("StudentAlreadyRecruited".Translate(_cachedStudent.NameFullColored), MessageTypeDefOf.NeutralEvent);
                 }
