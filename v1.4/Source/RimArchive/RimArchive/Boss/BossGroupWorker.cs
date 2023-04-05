@@ -6,11 +6,11 @@ namespace RimArchive;
 
 
 //全部重写
-//周期参考每次总力设为7天
+//周期参考每次总力设为5天
 //新想法：不限制每次招的CD，改为每七天更换一次boss池（暂时搁置）
 public class BossGroupWorker
 {
-    public const int TimeBetweenAllBossgroups = 420000;
+    public const int TimeBetweenAllBossgroups = 300000;
     public RaidDef def;
     public AcceptanceReport CanResolve(Pawn caller)
     {
@@ -23,14 +23,14 @@ public class BossGroupWorker
         return pendingBossgroup != null ? (AcceptanceReport)"BossgroupIncoming".Translate((NamedArgument)pendingBossgroup.label) : (AcceptanceReport)true;
     }
 
-    public AcceptanceReport ShouldSummonNow(Map map)
+    public AcceptanceReport ShouldSummonNow()
     {
-        return (AcceptanceReport)true;
+        return RimArchiveMain.RaidManager.RaidIncoming ? (AcceptanceReport)"RaidActive".Translate() : (AcceptanceReport)true;
     }
 
     public void Resolve(Map map, int wave)
     {
-        RimArchiveMain.RaidManager.Notify_RaidCalled(this.def);
+        RimArchiveMain.RaidManager.Notify_RaidCalled(this.def, wave);
         Slate vars = new Slate();
         vars.Set<RaidDef>("bossgroup", this.def);
         vars.Set<Map>(nameof(map), map);

@@ -18,6 +18,6 @@ public class BossDef : Def
         foreach (string str in base.ConfigErrors())
         yield return str;
         if (DefDatabase<BossDef>.AllDefs.Any((BossDef b) => b != this && b.kindDef == kindDef))
-            yield return bossDef.kindDef.label + " appears in two BossDefs, only one PawnKind per boss is currently supported.";
+            yield return bossDef.kindDef.label + " appears in two BossDefs, only one PawnKind per bosses is currently supported.";
     }
 }

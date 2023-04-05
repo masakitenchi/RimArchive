@@ -11,8 +11,8 @@ using static Verse.Widgets;
 using System.Text;
 using UnityEngine.Profiling;
 using UnityEngine.UI;
-using RimArchive.GameComponents;
 using System.Runtime.CompilerServices;
+using UnityEngine.UIElements;
 
 namespace RimArchive.Window
 {
@@ -21,14 +21,16 @@ namespace RimArchive.Window
     /// </summary>
     [HotSwappable]
     //目前尚未解决esc弹出菜单的问题。只能先继续沿用DiaNodeTree了
-    public class RecruitWindow : Verse.Dialog_NodeTree
+    //解决了……？
+    public class RecruitWindow : Verse.Window
     {
         #region private field
         private static readonly float _scrollBarWidth = GenUI.ScrollBarWidth;
         private static readonly Vector2 _Margin = new Vector2(5f, 5f);
         private static readonly Vector2 _iconSize = new Vector2(120f, 120f);
         private static readonly Vector2 _lblSize = new Vector2(80f, 20f);
-        private static Vector2 _dlgscrbr = Vector2.zero;
+        private static Vector2 _bossdescscrbr = Vector2.zero;
+        private static Vector2 _bossinfoscrbr = Vector2.zero;
         private static Vector2 _icnscrbr = Vector2.zero;
         private static Vector2 _stdscrbr = Vector2.zero;
         private static Vector2 _profile = Vector2.zero;
@@ -64,13 +66,15 @@ namespace RimArchive.Window
                 _inStudentProfile = false;
             }
         }
-        public RecruitWindow(DiaNode parent) : base(parent)
+        public RecruitWindow()
         {
             //openMenuOnCancel = false;
             //closeOnAccept = false;
             //closeOnCancel = false;
             //forcePause = false;
             //absorbInputAroundWindow = false;
+            this.absorbInputAroundWindow = true;
+            //this.closeOnClickedOutside = true;
         }
 
         public override Vector2 InitialSize
@@ -165,13 +169,34 @@ namespace RimArchive.Window
             BeginGroup(outRect.ContractedBy(_Margin.x));
             Rect inRect = outRect.ContractedBy(_Margin.x).AtZero();
             float width = inRect.width / 3;
-            for (int i = 0; i <= cachedAllBosses.Count - 1 && i < 3; i++)
+            Rect bossPic = new Rect(inRect.x + width, inRect.y, width , inRect.height);
+            Rect bossDesc = new Rect(bossPic);
+            bossDesc.x = inRect.x;
+            Rect raidDesc = new Rect(bossPic);
+            raidDesc.x += width;
+            //LabelWithIcon(bossPic, RimArchiveMain.RaidManager.CurrentRaid.LeaderDescription, RimArchiveMain.RaidManager.CurrentRaid.icon, 1f);
+            LabelScrollable(bossDesc, RaidManager.CurrentRaid.LeaderDescription, ref _bossdescscrbr);
+            DrawTextureFitted(bossPic, RaidManager.CurrentRaid.icon, 1f);
+            Label(raidDesc, "Daysleft".Translate(5 - GenDate.DaysPassed % 5));
+            if(ButtonInvisible(bossPic))
             {
-                Rect bossPic = new Rect(inRect.x + width * i, inRect.y, width, inRect.height);
-                DrawTextureFitted(bossPic, cachedAllBosses.RandomElement().icon, 1f);
+                FloatMenuUtility.MakeMenu(RaidManager.CurrentRaid.waves, delegate (RaidGroupWave t)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine("BossHPMultiplier".Translate(t.bossHPMultiplier.ToStringPercent()));
+                    if(!t.escorts.NullOrEmpty())
+                    {
+                        sb.AppendLine("Escortees".Translate());
+                        foreach (var escortee in t.escorts)
+                        {
+                            sb.AppendLine("-" + escortee.kindDef.LabelCap + "x" + escortee.count);
+                        }
+                    }
+                    return sb.ToString();
+                }, (RaidGroupWave t) => () => RaidManager.StartRaid(t));
             }
             EndGroup();
-            Widgets.LabelScrollable(outRect, "吃了吗您内今天也是好天气你是一个个什么啊漂亮得很呐人生路漫漫而修远兮吾将上下而求索关关雎鸠在河之洲窈窕淑女君子好逑".Translate(), ref _dlgscrbr);
+            //Widgets.LabelScrollable(outRect, "吃了吗您内今天也是好天气你是一个个什么啊漂亮得很呐人生路漫漫而修远兮吾将上下而求索关关雎鸠在河之洲窈窕淑女君子好逑".Translate(), ref _dlgscrbr);
         }
 
         static void DrawSchoolList(Rect outRect)
@@ -212,7 +237,7 @@ namespace RimArchive.Window
                 }
                 else if (_clickedSchoolIcon)
                 {
-                    if (Mouse.IsOver(outRect))
+                    if (Mouse.IsOver(viewRect))
                         continue;
                     else
                         _clickedSchoolIcon = false;
@@ -492,7 +517,7 @@ namespace RimArchive.Window
                 }
                 //Remove harmful hediffs or addiction
                 //p.health.hediffSet.hediffs = p.health.hediffSet.hediffs.Where(x => !(x.def.isBad || x.def.IsAddiction)).ToList();
-                p.health.hediffSet.hediffs.RemoveAll(x=> x.def.isBad || x.def.IsAddiction);
+                p.health.hediffSet.hediffs.RemoveAll(x => x.def.isBad || x.def.IsAddiction);
                 p.Name = _currentStudent.name;
                 PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Childhood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
                 PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Adulthood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
@@ -504,7 +529,7 @@ namespace RimArchive.Window
                 {
                     p.story.traits.GainTrait(new Trait(trait.def, trait.degree ?? 0, true));
                 }
-                p.apparel.WornApparel.RemoveAll(x => x.def.apparel.bodyPartGroups.Any(t => t == BodyPartGroupDefOf.FullHead || t == BodyPartGroupDefOf.UpperHead));
+                //p.apparel.WornApparel.RemoveAll(x => x.def.apparel.bodyPartGroups.Any(t => t == BodyPartGroupDefOf.FullHead || t == BodyPartGroupDefOf.UpperHead));
                 p.apparel.LockAll();
                 #region Relations
                 //处理人际关系

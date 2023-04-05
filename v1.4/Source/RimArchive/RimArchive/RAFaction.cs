@@ -53,13 +53,18 @@ namespace RimArchive
             TaggedString HostileFail = "HostileFail".Translate(faction.NameColored);
             return new DiaOption("RAExchangeOpenOption".Translate())
             {
+                resolveTree = true,
                 disabled = disabled,
                 disabledReason = HostileFail,
-                linkLateBind = () => ShowDiaNode()
+                action = () =>
+                {
+                    Find.TickManager.Pause();
+                    Find.WindowStack.Add(new RecruitWindow());
+                }
             };
         }
 
-        private DiaNode ShowDiaNode()
+        /*private DiaNode ShowDiaNode()
         {
             DiaNode node = new DiaNode("RAExchangeRoot".Translate());
             node.options.Add(new DiaOption("RAStudentRecruitMenu".Translate())
@@ -76,7 +81,7 @@ namespace RimArchive
                 linkLateBind = () => root
             });
             return node;
-        }
+        }*/
 
         /*private DiaNode StudentRecruitment(DiaNode parent)
         {

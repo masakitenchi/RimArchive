@@ -29,7 +29,7 @@ public class RaidDef : Def
     public List<RaidGroupWave> waves = new List<RaidGroupWave>();
     public ThingDef rewardDef;
     public QuestScriptDef quest;
-    public string leaderDescription;
+    private string leaderDescription;
 
     private BossGroupWorker workerInt;
     private List<string> tmpEntries = new List<string>();
@@ -57,16 +57,10 @@ public class RaidDef : Def
         string str = GenLabel.BestKindLabel(wave.bossOverride?.kindDef ?? this.boss.kindDef, Gender.None).CapitalizeFirst();
         if (!wave.bossApparel.NullOrEmpty<ThingDef>())
             str = (string)"BossWithApparel".Translate(str.Named("BOSS"), wave.bossApparel.Select<ThingDef, string>((Func<ThingDef, string>)(a => a.label)).ToCommaList(true).Named("APPAREL"));
-        this.tmpEntries.Add(str + "(" + "BossHPMultiplier".Translate(wave.bossHPMultiplier) + ")");
+        this.tmpEntries.Add(str + "(" + "BossHPMultiplier".Translate(wave.bossHPMultiplier.ToStringPercent()) + ")");
         foreach (PawnKindDefCount escort in wave.escorts)
             this.tmpEntries.Add(GenLabel.BestKindLabel(escort.kindDef, Gender.None).CapitalizeFirst() + " x" + (object)escort.count);
         return this.tmpEntries.ToLineList("  - ");
-    }
-
-    public override void ResolveReferences()
-    {
-        base.ResolveReferences();
-        icon = iconPath != null ? ContentFinder<Texture2D>.Get(iconPath) : BaseContent.BadTex;
     }
 
     public override IEnumerable<string> ConfigErrors()
@@ -74,15 +68,14 @@ public class RaidDef : Def
         foreach (string configError in base.ConfigErrors())
             yield return configError;
         if (this.boss == null && this.waves.Any(x => x.bossOverride == null))
-            yield return "boss required for all bossgroups";
+            yield return "bosses required for all bossgroups";
         if (this.waves.NullOrEmpty())
             yield return "no waves defined.";
     }
 
-    /*
+
     public void Init()
     {
-        icon = iconPath != null ? ContentFinder<Texture2D>.Get(iconPath) : null;
+        icon = iconPath != null ? ContentFinder<Texture2D>.Get(iconPath) : BaseContent.BadTex;
     }
-*/
 }

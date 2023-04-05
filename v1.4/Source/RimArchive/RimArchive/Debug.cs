@@ -32,7 +32,9 @@ public class DebugActionAttribute : Verse.DebugActionAttribute
 }
 public static class DebugTools
 {
-    [DebugAction("ResetRaidData", actionType = DebugActionType.ToolMap, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+    [DebugAction("ResetRaidData", actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.PlayingOnMap)]
     private static void ResetRaidData() => RimArchiveMain.RaidManager.DebugResetRaid();
+    [DebugAction("ReShuffleRaid", actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+    private static void ReShuffleRaid() => RimArchiveMain.RaidManager.DebugRandomRaid();
 
 }

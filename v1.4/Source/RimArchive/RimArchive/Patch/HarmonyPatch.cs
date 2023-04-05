@@ -115,8 +115,9 @@ namespace RimArchive
                         {
                             pawn.stances.stunner.StunFor(GenTicks.SecondsToTicks(duration), dinfo.Instigator);
                         }
-                        else
+                        else if(dinfo.Def == DamageDefOf.Stun || dinfo.Def == DamageDefOf.EMP)
                         {
+                            Log.Message("Absorbed = true");
                             absorbed = true;
                             dinfo.SetAmount(0f);
                         }

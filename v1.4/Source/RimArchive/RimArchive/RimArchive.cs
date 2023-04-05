@@ -69,16 +69,16 @@ namespace RimArchive
             //But what if some other mod also add this extension? Meh
             packageId ??= DefDatabase<StudentDef>.AllDefs.First().modContentPack.PackageId;
             cachedAllBosses = DefDatabase<RaidDef>.AllDefs.ToHashSet();
-            //DefDatabase<RaidDef>.AllDefs.Do(delegate (RaidDef def) { def.Init(); });
+            DefDatabase<RaidDef>.AllDefs.Do(delegate (RaidDef def) { def.Init(); });
             foreach (StudentDef student in DefDatabase<StudentDef>.AllDefs)
             {
                 AllStudents.Add(student);
-                //student.Init();
+                student.Init();
             }
             foreach(var school in DefDatabase<IconDef>.AllDefsListForReading)
             {
                 cachedSchools.Add(school);
-                //school.ResolveFields();
+                school.ResolveFields();
                 cachedAllStudentsBySchool.Add(school, (from x in AllStudents where x.School == school.name select x).ToList());
             }
             RecruitWindow.Init();

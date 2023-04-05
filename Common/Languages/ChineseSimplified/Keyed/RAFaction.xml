@@ -31,4 +31,9 @@
 
   <CurrentTotal>已造成:{0}s/阈值:{1}s</CurrentTotal>
   <ThresholdBroken>已打破阈值</ThresholdBroken>
+
+  <Daysleft>总力战剩余{0}天</Daysleft>
+
+  <BossHPMultiplier>BOSS血量倍数：{0}</BossHPMultiplier>
+  <Escortees>喽啰：</Escortees>
 </LanguageData>

@@ -60,6 +60,8 @@
     <Compile Include="Patch\Harmony_CE.cs" />
     <Compile Include="PawnRelation\PawnRelationWorker_SameClub.cs" />
     <Compile Include="PawnRelation\PawnRelationWorker_Sibling.cs" />
+    <Compile Include="Quest\QuestNode_Root_Raid.cs" />
+    <Compile Include="Quest\QuestPart_RaidArrives.cs" />
     <Compile Include="RimArchive.cs" />
     <Compile Include="SchoolNameModExtension.cs" />
     <Compile Include="Defs\DefOfs\StudentDefOf.cs" />

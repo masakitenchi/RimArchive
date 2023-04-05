@@ -24,7 +24,7 @@
 					<soundCall>Pawn_Mech_Diabolus_Call</soundCall>
 				</li>
 			</lifeStageAges>
-			<baseHealthScale>4.5</baseHealthScale>
+			<baseHealthScale>4.5</baseHealthScale> <!-- 150 * 4.5 = 675-->
 		</race>
 		<tools>
 			<li>
@@ -40,7 +40,7 @@
 		</tools>
 		<comps>
 			<li Class="RimArchive.CompProperties_StunHandler">
-				<BaseStunThreshold>3600.0</BaseStunThreshold>
+				<BaseStunThreshold>200.0</BaseStunThreshold>
 				<BreakStunDuration>15.0</BreakStunDuration>
 			</li>
 			<li Class="CompProperties_TargetingBeam"></li>

@@ -14,10 +14,8 @@ public class IconDef : Def
 #pragma warning restore CS0649
     public Texture2D tex;
 
-    //Currently Only for Test
-    public override void ResolveReferences()
+    public void ResolveFields()
     {
-        base.ResolveReferences();
         Match match = RimArchiveMain.fileNameRegex.Match(this.defName);
         if (!match.Success)
         {
@@ -36,25 +34,4 @@ public class IconDef : Def
             Log.Error($"Cannot find tex named {match.Groups["Name"].Value} for {this.defName}. All Matches:\n{match.Value}");
         }
     }
-
-    /*public void ResolveFields()
-    {
-        Match match = RimArchiveMain.fileNameRegex.Match(this.defName);
-        if (!match.Success)
-        {
-            Log.Error($"Error when parsing {this.defName}: Regex cannot match");
-            return;
-        }
-        //Example:
-        //RA_School_Shanhaijing => <modName>.RA , <category>.School, <Name>.Shanhaijing
-        //So resolvedTexPath will be SchoolIcon/Shanhaijing
-
-        string resolvedTexPath = this.textureFolder + "/" + match.Groups["Name"].Value;
-        this.name = match.Groups["Name"].Value;
-        this.tex = ContentFinder<Texture2D>.Get(resolvedTexPath, false);
-        if (this.tex == null)
-        {
-            Log.Error($"Cannot find tex named {match.Groups["Name"].Value} for {this.defName}. All Matches:\n{match.Value}");
-        }
-    }*/
 }

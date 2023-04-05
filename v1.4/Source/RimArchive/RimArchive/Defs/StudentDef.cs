@@ -74,54 +74,7 @@ public class StudentDef : PawnKindDef
     new public HairDef forcedHair;
 #pragma warning restore CS1591
 
-    public override void ResolveReferences()
-    {
-        base.ResolveReferences();
-        #region Graphic
-        Match match = RimArchiveMain.studentNameRegex.Match(this.defName);
-        if (!match.Success)
-        {
-            Log.Error($"Error when parsing {this.defName}: Regex cannot match");
-            return;
-        }
-        //Example:
-        //BA_Shiroko_RidingSuit => <Prefix> = BA, <FullName> = Shiroko_RidingSuit
-        Icon = ContentFinder<Texture2D>.Get("Icons/" + match.Groups["FullName"].Value);
-        Portrait = ContentFinder<Texture2D>.Get("Portraits/Resized/" + match.Groups["FullName"].Value);
-        Memorial = ContentFinder<Texture2D>.Get("Memorial/Yuuka");
-        if (Icon == null)
-        {
-            Log.Error($"Cannot find icon tex named {match.Groups["Name"].Value} for {this.defName}. All Matches:\n{match.Value}");
-        }
-        if (Portrait == null)
-        {
-            Log.Error($"Cannot find portrait tex named {match.Groups["Name"].Value} for {this.defName}. All Matches:\n{match.Value}");
-        }
-        if (Memorial == null)
-        {
-            Log.Error($"Cannot find memorial hall tex named {match.Groups["Name"].Value} for {this.defName}. All Matches:\n{match.Value}");
-        }
-        #endregion
-
-        #region resolve relations
-        foreach (var relationWith in relations)
-        {
-            foreach (StudentDef student in relationWith.others)
-            {
-                if (!student.relations.Any(x => x.relation == relationWith.relation))
-                {
-                    student.relations.Add(new DirectRelationWith() { relation = relationWith.relation, others = new List<StudentDef>() { this } });
-                }
-                else if (!student.relations.Any(x => x.others.Contains(this)))
-                {
-                    student.relations.First(x => x.relation.Equals(relationWith.relation)).others.Add(this);
-                }
-            }
-        }
-        #endregion
-    }
-
-    /*internal void Init()
+    internal void Init()
     {
         #region Graphic
         Match match = RimArchiveMain.studentNameRegex.Match(this.defName);
@@ -165,7 +118,7 @@ public class StudentDef : PawnKindDef
             }
         }
         #endregion
-    }*/
+    }
 }
 
 
