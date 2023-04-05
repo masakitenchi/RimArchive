@@ -79,7 +79,9 @@ namespace RimArchive
                     //DebugMessage.DbgMsg($"Successfully documented student\nDead? {__instance.health.Dead}");
                     __instance.apparel.WornApparel.Select(x => x.HitPoints = x.MaxHitPoints);
                     __instance.equipment.AllEquipmentListForReading.Select(x => x.HitPoints = x.MaxHitPoints);
-                    __instance.health.hediffSet.hediffs.RemoveAll(x => x.def.isBad || x.def.IsAddiction); __instance.DeSpawn();
+                    __instance.health.hediffSet.hediffs.RemoveAll(x => x.def.isBad || x.def.IsAddiction);
+                    __instance.health.Reset();
+                    __instance.DeSpawn();
                     return false;
                 }
             }

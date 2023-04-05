@@ -61,7 +61,7 @@ public class RaidManager : GameComponent
     {
         if (Find.TickManager.TicksGame % GenDate.TicksPerTwelfth == 0)
         {
-            DbgMsg("Re-shuffling by GameComponentUpdate");
+            DbgMsg("Re-shuffling by GameComponentTick");
             CurrentRaid = allRaids.RandomElement();
         }
     }
@@ -87,6 +87,7 @@ public class RaidManager : GameComponent
 
     public void Notify_PawnKilled(Pawn pawn)
     {
+        //Log.Message($"Pawn:{pawn?.def.defName}");
         BossDef bossForRaid = GetBossForRaid(pawn.kindDef);
         if (bossForRaid == null || this.killedBosses.Contains(bossForRaid))
             return;
