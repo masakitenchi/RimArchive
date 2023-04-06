@@ -51,8 +51,8 @@ namespace RimArchive
         internal static readonly string packageId;
 
         internal static HediffDef HediffGen;
-        //internal static float nextSeverity = 0;
-#nullable enable
+        internal static float nextSeverity = 0.5f;
+        internal static HashSet<HediffStage> cachedGenertedHediffStages = new HashSet<HediffStage>();
         //Each student belongs to a different PawnKindDef, but should share the same race
         internal static readonly List<StudentDef> AllStudents = new List<StudentDef>();
         //Cache school for Recruit Window
@@ -64,7 +64,6 @@ namespace RimArchive
 
         public static readonly HashSet<RaidDef> cachedAllBosses = new HashSet<RaidDef>();
 
-#nullable disable
 
         static RimArchiveMain()
         {
@@ -88,9 +87,9 @@ namespace RimArchive
             HediffGen = new HediffDef()
             {
                 generated = true,
-                defName = "RA_HediffGenerated_MaxHP",
-                label = "HPModifier",
-                description = "HPModifier",
+                defName = "RA_HediffGenerated_DamageResistance",
+                label = "DamageResistance",
+                description = "DamageResistance",
                 stages = new List<HediffStage>()
             };
             DefDatabase<HediffDef>.Add(HediffGen);

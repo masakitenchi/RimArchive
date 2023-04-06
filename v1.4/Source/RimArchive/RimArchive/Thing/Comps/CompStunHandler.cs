@@ -17,6 +17,8 @@ public class CompStunHandler : ThingComp
     //目前存在缩放导致进度条消失的问题，暂时没什么好方法
     public override void CompTick()
     {
+        if (parent.Destroyed)
+            return;
         if(parent.Map != null)
         {
             this.groggyGauge ??= EffecterDefOf.ProgressBar.SpawnAttached(this.parent, this.parent.Map);

@@ -4,6 +4,7 @@ using RimWorld.Planet;
 using RimWorld.QuestGen;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.Assertions.Must;
 using Verse;
 
 namespace RimArchive;
@@ -24,7 +25,7 @@ public class QuestNode_Root_Raid : QuestNode
         Faction mech = Faction.OfMechanoids;
         TaggedString bossLabelCap = raid.waves[difficulty].bossOverride?.kindDef.LabelCap ?? raid.boss.kindDef.LabelCap;
         string bossLabel = raid.waves[difficulty].bossOverride?.kindDef.label ?? raid.boss.kindDef.label;
-        //我想不到哪种情况下会没有这个派系。生成的时候就手动点掉了哈
+        //我想不到哪种情况下会没有这个派系。生成的时候就手动点掉了?
         if (mech == null)
         {
             List<FactionRelation> relation = new List<FactionRelation>();
@@ -45,22 +46,37 @@ public class QuestNode_Root_Raid : QuestNode
         PawnGenerationRequest bossReq = new PawnGenerationRequest(wave.bossOverride?.kindDef ?? raid.boss.kindDef, mech, forceGenerateNewPawn: true);
         //因为只有一个boss了所以这里没有循环
         Pawn boss = PawnGenerator.GeneratePawn(bossReq);
-        HediffStage hediffStage = new HediffStage() 
+        HediffStage stage = RimArchiveMain.cachedGenertedHediffStages.Where(x => x.statFactors.Exists(t => t.stat == StatDefOf.IncomingDamageFactor && t.value == 1 / wave.bossHPMultiplier)).FirstOrDefault();
+        if (stage == null)
         {
-            becomeVisible = false,
-            statFactors = new List<StatModifier>
+            HediffStage hediffStage = new HediffStage()
             {
-                new StatModifier()
+                becomeVisible = false,
+                statFactors = new List<StatModifier>
                 {
-                    stat = StatDefOf.MaxHitPoints,
-                    value = wave.bossHPMultiplier
+                    new StatModifier()
+                    {
+                        stat = StatDefOf.IncomingDamageFactor,
+                        value = 1 / wave.bossHPMultiplier
+                    }
                 }
-            }
-        };
-        HediffDef hediff = RimArchiveMain.HediffGen;
-        hediff.stages.Add(hediffStage);
-        Hediff a = HediffMaker.MakeHediff(hediff, boss);
-        boss.health.AddHediff(a);
+            };
+            hediffStage.minSeverity = RimArchiveMain.nextSeverity;
+            RimArchiveMain.cachedGenertedHediffStages.Add(hediffStage);
+            RimArchiveMain.HediffGen.stages.Add(hediffStage);
+            Hediff a = HediffMaker.MakeHediff(RimArchiveMain.HediffGen, boss);
+            a.Severity = RimArchiveMain.nextSeverity++;
+            Log.Message(a.Severity.ToString());
+            boss.health.AddHediff(a);
+            Log.Message($"{hediffStage.statFactors.FirstOrDefault().value} added");
+        }
+        else
+        {
+            Log.Message($"{stage.statFactors.FirstOrDefault().value} already exists");
+            Hediff a = HediffMaker.MakeHediff(RimArchiveMain.HediffGen, boss);
+            a.Severity = stage.minSeverity;
+            boss.health.AddHediff(a);
+        }
         //Nullable List still needs if to ensure it won't thrwo NullReferenceException
         if (!wave.bossApparel.NullOrEmpty())
         {

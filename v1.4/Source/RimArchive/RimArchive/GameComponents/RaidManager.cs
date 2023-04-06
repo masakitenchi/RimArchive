@@ -24,10 +24,10 @@ namespace RimArchive.GameComponents;
 public static class Harmony_RaidManager
 {
     [HarmonyPostfix]
-    [HarmonyPatch(typeof(GameComponent_Bossgroup), nameof(GameComponent_Bossgroup.Notify_PawnKilled))]
-    public static void Postfix(Pawn pawn)
+    [HarmonyPatch(typeof(Pawn), nameof(Pawn.Kill))]
+    public static void Postfix(Pawn __instance)
     {
-        RimArchiveMain.RaidManager.Notify_PawnKilled(pawn);
+        RimArchiveMain.RaidManager.Notify_PawnKilled(__instance);
     }
 }
 #endregion
@@ -170,7 +170,11 @@ public class RaidManager : GameComponent
 
     #region DebugAction
 
-    public void DebugResetRaid() => this.killedBosses.Clear();
+    public void DebugResetRaid()
+    {
+        this.killedBosses.Clear();
+        this.difficultyComing = null;
+    }
 
     public void DebugRandomRaid() => this.CurrentRaid = allRaids.RandomElement();
     #endregion
