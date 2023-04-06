@@ -105,6 +105,8 @@ public class RaidManager : GameComponent
     public void Notify_PawnKilled(Pawn pawn)
     {
         //Log.Message($"Pawn:{pawn?.def.defName}");
+        if (!RaidIncoming)
+            return;
         BossDef bossForRaid = GetBossForRaid(pawn.kindDef);
         //Log.Message($"BossForRaid : {bossForRaid}");
         if (bossForRaid == null)
