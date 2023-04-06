@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BAAE6D3E-4D4D-41B1-8F25-5A2BD8F707C7}</ProjectGuid>
     <OutputType>Library</OutputType>
-	  <LangVersion>10.0</LangVersion>
+    <LangVersion>10.0</LangVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RimArchive</RootNamespace>
     <AssemblyName>RimArchive</AssemblyName>
@@ -47,6 +47,7 @@
     <Compile Include="Debug.cs" />
     <Compile Include="Defs\BossDef.cs" />
     <Compile Include="Defs\DefOfs\HediffDefOf.cs" />
+    <Compile Include="Defs\DefOfs\ThingDefOf.cs" />
     <Compile Include="Defs\IconDef.cs" />
     <Compile Include="Defs\StudentDef.cs" />
     <Compile Include="Framework\BiDirectionDic.cs" />
