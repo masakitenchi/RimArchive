@@ -61,7 +61,7 @@ namespace RimArchive.Window
             }
             else
             {
-                _cachedStudent.Discard();
+                _cachedStudent = null;
                 _currentStudent = null;
                 _inStudentProfile = false;
             }
@@ -169,7 +169,7 @@ namespace RimArchive.Window
             BeginGroup(outRect.ContractedBy(_Margin.x));
             Rect inRect = outRect.ContractedBy(_Margin.x).AtZero();
             float width = inRect.width / 3;
-            Rect bossPic = new Rect(inRect.x + width, inRect.y, width , inRect.height);
+            Rect bossPic = new Rect(inRect.x + width, inRect.y, width, inRect.height);
             Rect bossDesc = new Rect(bossPic);
             bossDesc.x = inRect.x;
             Rect raidDesc = new Rect(bossPic);
@@ -178,22 +178,11 @@ namespace RimArchive.Window
             LabelScrollable(bossDesc, RaidManager.CurrentRaid.LeaderDescription, ref _bossdescscrbr);
             DrawTextureFitted(bossPic, RaidManager.CurrentRaid.icon, 1f);
             Label(raidDesc, "Daysleft".Translate(5 - GenDate.DaysPassed % 5));
-            if(ButtonInvisible(bossPic))
+            if (ButtonInvisible(bossPic))
             {
-                FloatMenuUtility.MakeMenu(RaidManager.CurrentRaid.waves, delegate (RaidGroupWave t)
-                {
-                    StringBuilder sb = new StringBuilder();
-                    sb.AppendLine("BossHPMultiplier".Translate(t.bossHPMultiplier.ToStringPercent()));
-                    if(!t.escorts.NullOrEmpty())
-                    {
-                        sb.AppendLine("Escortees".Translate());
-                        foreach (var escortee in t.escorts)
-                        {
-                            sb.AppendLine("-" + escortee.kindDef.LabelCap + "x" + escortee.count);
-                        }
-                    }
-                    return sb.ToString();
-                }, (RaidGroupWave t) => () => RaidManager.StartRaid(t));
+                List<FloatMenuOption> options = new List<FloatMenuOption>();
+                options.AddRange(RaidManager.Waves);
+                Find.WindowStack.Add(new FloatMenu(options));
             }
             EndGroup();
             //Widgets.LabelScrollable(outRect, "吃了吗您内今天也是好天气你是一个个什么啊漂亮得很呐人生路漫漫而修远兮吾将上下而求索关关雎鸠在河之洲窈窕淑女君子好逑".Translate(), ref _dlgscrbr);
@@ -574,6 +563,7 @@ namespace RimArchive.Window
             Passion.Major => SkillUI.PassionMajorIcon,
             _ => throw new NullReferenceException("No such Passion Enum")
         };
+
         #endregion
     }
 }

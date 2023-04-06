@@ -7,7 +7,6 @@ namespace RimArchive;
 
 //全部重写
 //周期参考每次总力设为5天
-//新想法：不限制每次招的CD，改为每七天更换一次boss池（暂时搁置）
 public class BossGroupWorker
 {
     public const int TimeBetweenAllBossgroups = 300000;

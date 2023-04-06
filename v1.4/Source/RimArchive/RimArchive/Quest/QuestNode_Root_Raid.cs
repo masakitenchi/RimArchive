@@ -45,25 +45,23 @@ public class QuestNode_Root_Raid : QuestNode
         PawnGenerationRequest bossReq = new PawnGenerationRequest(wave.bossOverride?.kindDef ?? raid.boss.kindDef, mech, forceGenerateNewPawn: true);
         //因为只有一个boss了所以这里没有循环
         Pawn boss = PawnGenerator.GeneratePawn(bossReq);
-        HediffDef hediff = new HediffDef()
-        {
-            label = "HPModifier",
-            description = "HPModifier",
-            stages = new List<HediffStage>()
-        };
-        hediff.stages.Add(new HediffStage()
+        HediffStage hediffStage = new HediffStage() 
         {
             becomeVisible = false,
-            statFactors = new List<StatModifier> 
-            { 
+            statFactors = new List<StatModifier>
+            {
                 new StatModifier()
                 {
                     stat = StatDefOf.MaxHitPoints,
                     value = wave.bossHPMultiplier
-                } 
+                }
             }
-        });
-        boss.health.AddHediff(hediff);
+        };
+        HediffDef hediff = RimArchiveMain.HediffGen;
+        hediff.stages.Add(hediffStage);
+        Hediff a = HediffMaker.MakeHediff(hediff, boss);
+        boss.health.AddHediff(a);
+        //Nullable List still needs if to ensure it won't thrwo NullReferenceException
         if (!wave.bossApparel.NullOrEmpty())
         {
             foreach (var apparel in wave.bossApparel)
@@ -95,6 +93,7 @@ public class QuestNode_Root_Raid : QuestNode
             inSignalEnable = QuestGen.slate.Get<string>("inSignal")
         };
         //没太搞懂AddPart和直接DropPods、Letter、Alert之类之间的区别
+        //Quest_XXX 和QuestPart_XXX的区别？
         questPart_RaidArrives.outSignalsCompleted.Add(newSignal);
         quest.AddPart(questPart_RaidArrives);
         Quest quest1 = quest;
@@ -114,6 +113,8 @@ public class QuestNode_Root_Raid : QuestNode
         };
         quest.AddPart(questPart_RaidGroup);
         quest.Alert("AlertBossgroupIncoming".Translate(bossLabelCap), "AlertBossgroupIncomingDesc".Translate(bossLabel), critical: true, inSignalDisable: newSignal);
+        //这里貌似需要和上边某个字符串对应
+        //slate.Set<Pawn>("escortees",boss); -> "escortees.KilledLeavingsLeft" 之类的
         string inSignal4 = QuestGenUtility.HardcodedSignalWithQuestID("escortees.KilledLeavingsLeft");
         quest.ThingStudied(reward, () => quest.Letter(LetterDefOf.PositiveEvent, text: "[bossDefeatedLetterText]", label: "[bossDefeatedLetterLabel]"), () => quest.Letter(LetterDefOf.PositiveEvent, text: "[bossDefeatedStudyChipLetterText]", label: "[bossDefeatedLetterLabel]"), inSignal4);
         quest.AnyPawnAlive(everyone, elseAction: () => QuestGen_End.End(quest, QuestEndOutcome.Unknown), inSignal: QuestGenUtility.HardcodedSignalWithQuestID("escortees.Killed"));

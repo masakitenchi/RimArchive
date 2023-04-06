@@ -36,6 +36,7 @@ public class RaidDef : Def
 
     public string LeaderDescription => (string)this.leaderDescription.Formatted(NamedArgumentUtility.Named(this.boss.kindDef, "LEADERKIND"));
 
+    public bool HasOverride => waves.Any(x => x.bossOverride?.kindDef != null);
 
     public BossGroupWorker Worker
     {
