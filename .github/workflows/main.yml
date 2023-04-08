@@ -16,17 +16,15 @@ jobs:
     - name: Get latest CE release
       id: latest_release
       run: |
-        LATEST_RELEASE=$(curl -s -H "Authorization: token ${{ secrets.MY_GITHUB_TOKEN }}" https://api.github.com/repos/CombatExtended-Continued/CombatExtended/releases/latest)
-        echo "::set-output name=tag_name::$(echo $LATEST_RELEASE | jq -r '.tag_name')"
-        echo "::set-output name=asset_url::$(echo $LATEST_RELEASE | jq -r '.assets[0].browser_download_url')"
+        $repo = "CombatExtended-Continued/CombatExtended" # 替换为您要下载的仓库名称
+        $json = Invoke-RestMethod -Uri "https://api.github.com/repos/$repo/releases/latest"
+        $url = $json.assets | Where-Object { $_.name -like "*.zip" } | Select-Object -ExpandProperty browser_download_url
+        Invoke-WebRequest -Uri $url -OutFile "release.zip"
     
-    - name: Download CE
+    - name: Unzip release
       run: |
-        curl -L -o release.zip -H "Authorization: token ${{ secrets.MY_GITHUB_TOKEN }}" ${{ steps.latest_release.outputs.asset_url }}
-
-    - name: Extract and copy .dll file
-      run: |
-        unzip release.zip -d release
+        Expand-Archive -Path "release.zip" -DestinationPath "./release/"
+        mkdir libs
         cp release/CombatExtended/Assemblies/CombatExtended.dll ./libs
       
       
