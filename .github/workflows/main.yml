@@ -1,0 +1,43 @@
+name: Build-Test
+
+on:
+  push:
+  workflow_dispatch:
+  
+
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+    
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Get latest CE release
+      id: latest_release
+      run: |
+        LATEST_RELEASE=$(curl -s -H "Authorization: token ${{ secrets.MY_GITHUB_TOKEN }}" https://api.github.com/repos/CombatExtended-Continued/CombatExtended/releases/latest)
+        echo "::set-output name=tag_name::$(echo $LATEST_RELEASE | jq -r '.tag_name')"
+        echo "::set-output name=asset_url::$(echo $LATEST_RELEASE | jq -r '.assets[0].browser_download_url')"
+    
+    - name: Download CE
+      run: |
+        curl -L -o release.zip -H "Authorization: token ${{ secrets.MY_GITHUB_TOKEN }}" ${{ steps.latest_release.outputs.asset_url }}
+
+    - name: Extract and copy .dll file
+      run: |
+        unzip release.zip -d release
+        cp release/CombatExtended/Assemblies/CombatExtended.dll ./libs
+      
+      
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+      
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.5
+      
+    - name: Test Run
+      run: |
+            cd Source
+            nuget restore RimArchive.csproj -SolutionDirectory ./RimArchive.sln
+            msbuild RimArchive.sln -p:Configuration=release -p:ReferencePath=../libs
