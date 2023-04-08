@@ -36,6 +36,6 @@ jobs:
       
     - name: Test Run
       run: |
-            cd Source
+            cd v1.4/Source/RimArchive
             nuget restore RimArchive.csproj -SolutionDirectory ./RimArchive.sln
-            msbuild RimArchive.sln -p:Configuration=release -p:ReferencePath=../libs
+            msbuild RimArchive.sln -p:Configuration=release -p:ReferencePath=../../../libs
