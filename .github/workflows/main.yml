@@ -48,4 +48,4 @@ jobs:
             cd v1.4/Source/RimArchive
             dir
             nuget restore RimArchive/RimArchive.csproj -SolutionDirectory ./RimArchive.sln
-            msbuild RimArchive.sln -p:Configuration=release -p:ReferencePath=../../../libs
+            msbuild RimArchive.sln -p:Configuration=release -p:ReferencePath=./libs
