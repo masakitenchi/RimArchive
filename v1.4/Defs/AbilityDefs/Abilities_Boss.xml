@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+   <!--  <AbilityDefs>
+        <defName>BA_Ability_SummonInvadePillar</defName>
+        <label>Summon Invade Pillar</label>
+        <description>Summons an invade pillar, which applies debuffs to enemies around.</description>
+        <iconPath>UI/Abilities/FireBurst</iconPath>
+        <cooldownTicksRange>3600</cooldownTicksRange>
+        <hostile>false</hostile>
+        <aiCanUse>true</aiCanUse>
+        <jobDef>CastAbilityOnThingUninterruptible</jobDef>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <label>Summon Pillar</label>
+            <violent>false</violent>
+            <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+            <warmupTime>1</warmupTime>
+            <range>10.9</range>
+            <requireLineOfSight>false</requireLineOfSight>
+            <soundCast>Longjump_Jump</soundCast>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+                <canTargetPawns>false</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+        <jobDef>Summon</jobDef>
+    </AbilityDefs> -->
+</Defs>

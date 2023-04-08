@@ -12,6 +12,8 @@ namespace RimArchive;
 //不会画渐变的扩张特效，摆了
 public class CompInvadePillar : ThingComp
 {
+    private static float _maxDist = 10f;
+    private bool _isMaxDist = false;
     private const float _radiusAdd = 2.5f;
     private float _currentRadius;
     private int _interval;
@@ -26,7 +28,21 @@ public class CompInvadePillar : ThingComp
     public override void CompTick()
     {
         base.CompTick();
-        ++_ticks;
+        //emmm...虽说IsHashIntervalTick挺好用但貌似没有“重置Tick数”的功能
+        if (!_isMaxDist && _ticks % _interval == 0)
+        {
+            _ticks = 0;
+            _currentRadius += _radiusAdd;
+            if(_currentRadius >= _maxDist)
+            {
+                _isMaxDist = true;
+            }
+            Emitter.Notify_RadiusChanged();
+        }
+        else if (!_isMaxDist)
+        {
+            ++_ticks;
+        }
         (from pawn in parent.Map.mapPawns.AllPawnsSpawned
          where pawn.Position.InHorDistOf(parent.Position, _currentRadius)
          select pawn).Do(delegate (Pawn x)
@@ -43,13 +59,6 @@ public class CompInvadePillar : ThingComp
                  }
              }
          });
-        //emmm...虽说IsHashIntervalTick挺好用但貌似没有“重置Tick数”的功能
-        if (_ticks % _interval == 0)
-        {
-            _ticks = 0;
-            _currentRadius += _radiusAdd;
-            Emitter.Notify_RadiusChanged();
-        }
     }
 
     //构造函数被调用的时候还没有props

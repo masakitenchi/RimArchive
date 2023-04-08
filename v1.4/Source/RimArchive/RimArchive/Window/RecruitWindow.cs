@@ -6,12 +6,13 @@ using UnityEngine;
 using Verse;
 using AlienRace;
 using static RimArchive.RimArchiveMain;
-using static RimArchive.Debug;
+using static RimArchive.DebugMessage;
 using static Verse.Widgets;
 using System.Text;
 using UnityEngine.Profiling;
 using UnityEngine.UI;
-using RimArchive.GameComponents;
+using System.Runtime.CompilerServices;
+using UnityEngine.UIElements;
 
 namespace RimArchive.Window
 {
@@ -20,29 +21,30 @@ namespace RimArchive.Window
     /// </summary>
     [HotSwappable]
     //目前尚未解决esc弹出菜单的问题。只能先继续沿用DiaNodeTree了
-    public class RecruitWindow : Verse.Dialog_NodeTree
+    //解决了……？
+    public class RecruitWindow : Verse.Window
     {
+        #region private field
         private static readonly float _scrollBarWidth = GenUI.ScrollBarWidth;
         private static readonly Vector2 _Margin = new Vector2(5f, 5f);
         private static readonly Vector2 _iconSize = new Vector2(120f, 120f);
         private static readonly Vector2 _lblSize = new Vector2(80f, 20f);
-        private static Vector2 _dlgscrbr = Vector2.zero;
+        private static Vector2 _bossdescscrbr = Vector2.zero;
+        private static Vector2 _bossinfoscrbr = Vector2.zero;
         private static Vector2 _icnscrbr = Vector2.zero;
         private static Vector2 _stdscrbr = Vector2.zero;
         private static Vector2 _profile = Vector2.zero;
         private static Vector2 _sclscrbr = Vector2.zero;
         private static int _SkillCount = DefDatabase<SkillDef>.DefCount;
         private static float _levelLabelWidth = -1f;
+        private static float _cachedSchoolListHeight;
         private static bool _inStudentProfile = false;
         private static bool _clickedSchoolIcon = false;
         private static IconDef _currentSchool;
         private static Pawn _cachedStudent;
-        private DiaNode parent;
+        private static StudentDef _currentStudent;
+        #endregion
 
-        private static float _cachedSchoolListHeight;
-
-
-        internal static StudentDef _currentStudent;
         internal static void Init()
         {
             _cachedSchoolListHeight = cachedSchools.Count * _iconSize.y;
@@ -64,13 +66,15 @@ namespace RimArchive.Window
                 _inStudentProfile = false;
             }
         }
-        public RecruitWindow(DiaNode parent) : base(parent)
+        public RecruitWindow()
         {
             //openMenuOnCancel = false;
             //closeOnAccept = false;
             //closeOnCancel = false;
             //forcePause = false;
             //absorbInputAroundWindow = false;
+            this.absorbInputAroundWindow = true;
+            //this.closeOnClickedOutside = true;
         }
 
         public override Vector2 InitialSize
@@ -94,10 +98,11 @@ namespace RimArchive.Window
                 //最右侧列出所有学校
                 Rect schoolList = new Rect(inRect.xMax - _iconSize.x - 2 * _scrollBarWidth, inRect.y, _iconSize.x + 4 * _scrollBarWidth, inRect.height);
                 //右侧的对话……栏?
+                //暂定作为周常的boss栏
                 outRect.x += sensei.width;
                 outRect.height = sensei.height;
                 outRect.width = inRect.width / 3;
-                DrawDialog(outRect);
+                DrawRaidDialog(outRect);
                 Rect studentsRect = new Rect(sensei.x, sensei.yMax, inRect.width, inRect.height - sensei.height);
                 //加个if，不多画窗口了
                 if (!_inStudentProfile)
@@ -156,7 +161,7 @@ namespace RimArchive.Window
         }
 
         #region GUISCHOOL
-        static void DrawDialog(Rect outRect)
+        static void DrawRaidDialog(Rect outRect)
         {
             //outRect.width -= 1050f;
             //outRect.height -= 70f;
@@ -164,13 +169,23 @@ namespace RimArchive.Window
             BeginGroup(outRect.ContractedBy(_Margin.x));
             Rect inRect = outRect.ContractedBy(_Margin.x).AtZero();
             float width = inRect.width / 3;
-            for (int i = 0; i <= cachedAllBosses.Count - 1 && i < 3; i++)
+            Rect bossPic = new Rect(inRect.x + width, inRect.y, width, inRect.height);
+            Rect bossDesc = new Rect(bossPic);
+            bossDesc.x = inRect.x;
+            Rect raidDesc = new Rect(bossPic);
+            raidDesc.x += width;
+            //LabelWithIcon(bossPic, RimArchiveMain.RaidManager.CurrentRaid.LeaderDescription, RimArchiveMain.RaidManager.CurrentRaid.icon, 1f);
+            LabelScrollable(bossDesc, RaidManager.CurrentRaid.LeaderDescription, ref _bossdescscrbr);
+            DrawTextureFitted(bossPic, RaidManager.CurrentRaid.icon, 1f);
+            Label(raidDesc, "Daysleft".Translate(5 - GenDate.DaysPassed % 5));
+            if (ButtonInvisible(bossPic))
             {
-                Rect bossPic = new Rect(inRect.x + width * i, inRect.y, width, inRect.height);
-                DrawTextureFitted(bossPic, cachedAllBosses.RandomElement().icon, 1f);
+                List<FloatMenuOption> options = new List<FloatMenuOption>();
+                options.AddRange(RaidManager.Waves);
+                Find.WindowStack.Add(new FloatMenu(options));
             }
             EndGroup();
-            Widgets.LabelScrollable(outRect, "Test Region".Translate(), ref _dlgscrbr);
+            //Widgets.LabelScrollable(outRect, "吃了吗您内今天也是好天气你是一个个什么啊漂亮得很呐人生路漫漫而修远兮吾将上下而求索关关雎鸠在河之洲窈窕淑女君子好逑".Translate(), ref _dlgscrbr);
         }
 
         static void DrawSchoolList(Rect outRect)
@@ -444,7 +459,7 @@ namespace RimArchive.Window
                     if (RimArchiveMain.StudentDocument.IsRecruited(_currentStudent))
                     {
                         RimArchiveMain.StudentDocument.DocumentedStudent(_currentStudent, ref _cachedStudent);
-                        Debug.DbgMsg("Re-recruiting");
+                        DebugMessage.DbgMsg("Re-recruiting");
                         DbgMsg($"Pawn name:{_cachedStudent.Name.ToStringFull}, Gender:{_cachedStudent.gender}");
                     }
                     _inStudentProfile = false;
@@ -487,15 +502,15 @@ namespace RimArchive.Window
         {
             try
             {
-
                 //Adjust skills
                 foreach (SkillRecord record in p.skills.skills)
                 {
-                    record.Level = _currentStudent.skills.Where(x => x.skill == record.def).First().level;
-                    record.passion = _currentStudent.skills.Where(x => x.skill == record.def).First().passion;
+                    record.Level = _currentStudent.skills.FirstOrFallback(x => x.skill == record.def).level;
+                    record.passion = _currentStudent.skills.FirstOrFallback(x => x.skill == record.def).passion;
                 }
                 //Remove harmful hediffs or addiction
-                p.health.hediffSet.hediffs = p.health.hediffSet.hediffs.Where(x => !(x.def.isBad || x.def.IsAddiction)).ToList();
+                //p.health.hediffSet.hediffs = p.health.hediffSet.hediffs.Where(x => !(x.def.isBad || x.def.IsAddiction)).ToList();
+                p.health.hediffSet.hediffs.RemoveAll(x => x.def.isBad || x.def.IsAddiction);
                 p.Name = _currentStudent.name;
                 PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Childhood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
                 PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Adulthood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
@@ -507,7 +522,7 @@ namespace RimArchive.Window
                 {
                     p.story.traits.GainTrait(new Trait(trait.def, trait.degree ?? 0, true));
                 }
-                p.apparel.WornApparel.RemoveAll(x => x.def.apparel.bodyPartGroups.Any(t => t == BodyPartGroupDefOf.FullHead || t == BodyPartGroupDefOf.UpperHead));
+                //p.apparel.WornApparel.RemoveAll(x => x.def.apparel.bodyPartGroups.Any(t => t == BodyPartGroupDefOf.FullHead || t == BodyPartGroupDefOf.UpperHead));
                 p.apparel.LockAll();
                 #region Relations
                 //处理人际关系
@@ -519,8 +534,8 @@ namespace RimArchive.Window
                 List<Pawn> students = Find.CurrentMap.mapPawns.AllPawns.Where(x => x.kindDef is StudentDef).ToList();
                 foreach (var relation in (p.kindDef as StudentDef).relations)
                 {
-                    //Debug.DbgMsg($"relation: {relation.relation.defName}");
-                    //Debug.DbgMsg($"Pawns: {string.Join("\n", relation.others.Select(x => x.defName))}");
+                    //DebugMessage.DbgMsg($"relation: {relation.relation.defName}");
+                    //DebugMessage.DbgMsg($"Pawns: {string.Join("\n", relation.others.Select(x => x.defName))}");
                     foreach (Pawn other in students.Where(x => !p.relations.DirectRelationExists(relation.relation, x) && relation.others.Contains(x.kindDef as StudentDef)))
                     {
                         p.relations.AddDirectRelation(relation.relation, other);
@@ -536,13 +551,13 @@ namespace RimArchive.Window
                     }
                 }*/
                 #endregion
-                //Debug log for backstory. Maybe vanilla cannot recognize har's backstory? but with HAR it should inject into vanilla code, doesn't it?
+                //DebugMessage log for backstory. Maybe vanilla cannot recognize har's backstory? but with HAR it should inject into vanilla code, doesn't it?
                 //DbgMsg($"Pawn {p.Name}: \nrace:{p.kindDef.race}\n kindDef {p.kindDef},\n backstoryoverride: {string.Join("\n", p.kindDef.backstoryFiltersOverride.First().categories.Select(x => x + "\n"))}");
 
             }
             catch (Exception ex)
             {
-                Debug.DbgErr($"{ex} with {ex.Message}");
+                DebugMessage.DbgErr($"{ex} with {ex.Message}");
             }
         }
         static Texture2D IconforPassion(Passion passion) => passion switch
@@ -552,6 +567,7 @@ namespace RimArchive.Window
             Passion.Major => SkillUI.PassionMajorIcon,
             _ => throw new NullReferenceException("No such Passion Enum")
         };
+
         #endregion
     }
 }

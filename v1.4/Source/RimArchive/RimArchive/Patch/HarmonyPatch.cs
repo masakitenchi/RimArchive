@@ -23,18 +23,18 @@ namespace RimArchive
             rimarchive.PatchAll(Assembly.GetExecutingAssembly());
             MethodInfo ce = AccessTools.Method("CombatExtended.CE_Utility:PartialStat", new System.Type[] { typeof(Apparel), typeof(StatDef), typeof(BodyPartRecord) });
             MethodInfo vanilla = AccessTools.Method(typeof(ArmorUtility), "ApplyArmor");
-            //Debug.DbgMsg($"ce :{ce}\n vanilla:{vanilla}");
+            //DebugMessage.DbgMsg($"ce :{ce}\n vanilla:{vanilla}");
             if (ce != null)
             {
-                //Debug.DbgErr("CE had changed ArmorUtilityCE.PartialStat. Please Contact mod Author");
+                //DebugMessage.DbgErr("CE had changed ArmorUtilityCE.PartialStat. Please Contact mod Author");
                 rimarchive.Patch(ce, postfix: new HarmonyMethod(typeof(Harmony_CE), "PartialStatPostfix_CE"));
-                Debug.DbgMsg(" successfully patched CombatExtended.CE_Utility:PartialStat(this Apparel apparel, StatDef stat, BodyPartRecord part)");
-                //Debug.DbgMsg("Currently Armor Reduction is not patched for CE");
+                DebugMessage.DbgMsg(" successfully patched CombatExtended.CE_Utility:PartialStat(this Apparel apparel, StatDef stat, BodyPartRecord part)");
+                //DebugMessage.DbgMsg("Currently Armor Reduction is not patched for CE");
             }
             else if (vanilla != null)
             {
                 rimarchive.Patch(AccessTools.Method(typeof(ArmorUtility), "ApplyArmor"), transpiler: new HarmonyMethod(typeof(HarmonyPatches), "ApplyArmorTranspiler"));
-                Debug.DbgMsg("successfully patched ArmorUtility.ApplyArmor");
+                DebugMessage.DbgMsg("successfully patched ArmorUtility.ApplyArmor");
             }
 
         }
@@ -76,10 +76,12 @@ namespace RimArchive
             {
                 if (RimArchiveMain.StudentDocument.Notify_StudentKilled(__instance))
                 {
-                    //Debug.DbgMsg($"Successfully documented student\nDead? {__instance.health.Dead}");
+                    //DebugMessage.DbgMsg($"Successfully documented student\nDead? {__instance.health.Dead}");
                     __instance.apparel.WornApparel.Select(x => x.HitPoints = x.MaxHitPoints);
                     __instance.equipment.AllEquipmentListForReading.Select(x => x.HitPoints = x.MaxHitPoints);
-                    __instance.health.hediffSet.hediffs.RemoveAll(x => x.def.isBad || x.def.IsAddiction); __instance.DeSpawn();
+                    __instance.health.hediffSet.hediffs.RemoveAll(x => x.def.isBad || x.def.IsAddiction);
+                    __instance.health.Reset();
+                    __instance.DeSpawn();
                     return false;
                 }
             }
@@ -115,8 +117,9 @@ namespace RimArchive
                         {
                             pawn.stances.stunner.StunFor(GenTicks.SecondsToTicks(duration), dinfo.Instigator);
                         }
-                        else
+                        else if(dinfo.Def == DamageDefOf.Stun || dinfo.Def == DamageDefOf.EMP)
                         {
+                            Log.Message("Absorbed = true");
                             absorbed = true;
                             dinfo.SetAmount(0f);
                         }

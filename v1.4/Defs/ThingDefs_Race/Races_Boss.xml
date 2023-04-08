@@ -1,97 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-    <ThingDef ParentName = "SuperHeavyMechanoid">
-        <defName>BA_MECH_HOD</defName>
-        <label>HOD</label>
-        <description>HOD</description>
-        <race>
-            <body>Mech_Diabolus</body>
-            <baseBodySize>4</baseBodySize>
-            <lifeStageAges>
-                <li>
-                    <def>MechanoidFullyFormed</def>
-                    <minAge>0</minAge>
-                    <soundWounded>Pawn_Mech_Diabolus_Wounded</soundWounded>
-                    <soundDeath>Pawn_Mech_Diabolus_Death</soundDeath>
-                    <soundCall>Pawn_Mech_Diabolus_Call</soundCall>
-                </li>
-                <li>
-                    <def>MechanoidFullyFormed</def>
-                    <minAge>100</minAge>
-                    <soundWounded>Pawn_Mech_Diabolus_Wounded</soundWounded>
-                    <soundDeath>Pawn_Mech_Diabolus_Death</soundDeath>
-                    <soundCall>Pawn_Mech_Diabolus_Call</soundCall>
-                </li>
-            </lifeStageAges>
-            <baseHealthScale>4.5</baseHealthScale>
-        </race>
-        <tools>
-            <li>
-                <label>head</label>
-                <capacities>
-                    <li>Blunt</li>
-                </capacities>
-                <power>18</power>
-                <cooldownTime>2.6</cooldownTime>
-                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-            </li>
-        </tools>
-        <comps>
-            <li Class="RimArchive.CompProperties_StunHandler">
-                <BaseStunThreshold>3600.0</BaseStunThreshold>
-                <BreakStunDuration>15.0</BreakStunDuration>
-            </li>
-            <li Class="CompProperties_TargetingBeam"></li>
-            <li Class="CompProperties_TurretGun">
-                <turretDef>Gun_ChargeBlasterTurret</turretDef>
-                <angleOffset>-90</angleOffset>
-            </li>
-        </comps>
-        <statBases>
-            <BandwidthCost>5</BandwidthCost>
-            <EMPResistance>0.6</EMPResistance>
-            <MoveSpeed>2.4</MoveSpeed>
-        </statBases>
-        <killedLeavingsPlayerHostile>
-            <BA_Chip_HOD>1</BA_Chip_HOD>
-        </killedLeavingsPlayerHostile>
-    </ThingDef>
+	<ThingDef ParentName = "SuperHeavyMechanoid">
+		<defName>BA_MECH_HOD</defName>
+		<label>HOD</label>
+		<description>HOD</description>
+		<race>
+			<body>Mech_Diabolus</body>
+			<baseBodySize>4</baseBodySize>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Diabolus_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Diabolus_Death</soundDeath>
+					<soundCall>Pawn_Mech_Diabolus_Call</soundCall>
+				</li>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>100</minAge>
+					<soundWounded>Pawn_Mech_Diabolus_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Diabolus_Death</soundDeath>
+					<soundCall>Pawn_Mech_Diabolus_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<baseHealthScale>4.5</baseHealthScale> <!-- 150 * 4.5 = 675-->
+		</race>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>18</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<comps>
+			<li Class="RimArchive.CompProperties_StunHandler">
+				<BaseStunThreshold>200.0</BaseStunThreshold>
+				<BreakStunDuration>15.0</BreakStunDuration>
+			</li>
+			<li Class="CompProperties_TargetingBeam"></li>
+			<li Class="CompProperties_TurretGun">
+				<turretDef>Gun_ChargeBlasterTurret</turretDef>
+				<angleOffset>-90</angleOffset>
+			</li>
+		</comps>
+		<statBases>
+			<BandwidthCost>5</BandwidthCost>
+			<EMPResistance>0.6</EMPResistance>
+			<MoveSpeed>2.4</MoveSpeed>
+		</statBases>
+		<killedLeavingsPlayerHostile>
+			<BA_Chip_HOD>1</BA_Chip_HOD>
+		</killedLeavingsPlayerHostile>
+	</ThingDef>
 
-    <PawnKindDef Name="BA_HOD" ParentName="HeavyMechanoidKind">
-        <defName>BA_BOSS_HOD</defName>
-        <label>HOD</label>
-        <race>BA_MECH_HOD</race>
-        <combatPower>500</combatPower>
-        <maxPerGroup>3</maxPerGroup>
-        <allowInMechClusters>false</allowInMechClusters>
-        <lifeStages>
-          <li>
-            <bodyGraphicData>
-              <texPath>Things/Pawn/Mechanoid/Diabolus</texPath>
-              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Diablo</maskPath>
-              <shaderType>CutoutWithOverlay</shaderType>
-                <graphicClass>Graphic_Multi</graphicClass>
-                <drawSize>3</drawSize>
-            </bodyGraphicData>
-          </li>
-          <li>
-            <bodyGraphicData>
-              <texPath>Things/Pawn/Mechanoid/DiabolusAncient</texPath>
-              <maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Diablo</maskPath>
-              <shaderType>CutoutWithOverlay</shaderType>
-                <graphicClass>Graphic_Multi</graphicClass>
-                <drawSize>3</drawSize>
-            </bodyGraphicData>
-          </li>
-        </lifeStages>      
-        <weaponTags>
-          <li>HellsphereCannonGun</li>
-        </weaponTags>
-        <abilities>
-          <li>FireBurst</li>
-        </abilities>
-      </PawnKindDef>
+	<PawnKindDef Name="BA_HOD" ParentName="HeavyMechanoidKind">
+		<defName>BA_BOSS_HOD</defName>
+		<label>HOD</label>
+		<race>BA_MECH_HOD</race>
+		<combatPower>500</combatPower>
+		<maxPerGroup>3</maxPerGroup>
+		<allowInMechClusters>false</allowInMechClusters>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/Diabolus</texPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Diablo</maskPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3</drawSize>
+				</bodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Mechanoid/DiabolusAncient</texPath>
+					<maskPath>Things/Pawn/Mechanoid/AllegianceOverlays/Mech_Diablo</maskPath>
+					<shaderType>CutoutWithOverlay</shaderType>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>HellsphereCannonGun</li>
+		</weaponTags>
+		<abilities>
+			<li>FireBurst</li>
+		</abilities>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="BA_HOD">
+		<defName>BA_BOSS_HODINSANE</defName>
+		<combatPower>1000</combatPower>
+		<abilities Inherit="False">
+			<li>FireBurst</li>
+		</abilities>
+		<weaponTags Inherit = "False">
+			<li>HellsphereCannonGun</li>
+		</weaponTags>
+	</PawnKindDef>
 
 </Defs>
