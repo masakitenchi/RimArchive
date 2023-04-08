@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<RimArchive.StudentDef ParentName="RA_BasePawn">
+		<defName>BA_Rio</defName>
+		<label>莉音</label>
+		<race>KivotosStudent</race>
+		<description>ミレニアムサイエンススクール所属、生徒会「セミナー」の議長。
+
+			ミレニアムサイエンススクールの重鎮として、リオは常に多くの事務を果敢かつ効率的に処理しており、同じ「セミナー」のメンバーであるユウカやノアとは異なり、リオの印象は独りぼっちの黒幕であることが多い。リオにとって、あらゆる代価を払って目標を達成することは彼女の処遇原則だ。</description>
+		<nameMaker>NamerRio</nameMaker>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<initialResistanceRange>10~11</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RimArchive_Adult</li>
+					<li>RimArchive_Rio</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>9999~9999</weaponMoney>
+		<minGenerationAge>17</minGenerationAge>
+		<maxGenerationAge>18</maxGenerationAge>
+		<weaponTags>
+			<li>BAW_Rio</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="RimArchive.RA_StudentModExtension">
+				<School>Millennium</School>
+			</li>
+		</modExtensions>
+		<apparelRequired Inherit="False">
+			<li>BAA_Body_Rio</li>
+		</apparelRequired>
+		<forcedHair>Bald</forcedHair>
+
+		<!-- Until here is inherited from PawnKindDef -->
+		<!-- Below is new field added in StudentDef-->
+		<name>
+			<first>Rio</first>
+			<nick>Rio</nick>
+			<last>Pawn</last>
+		</name>
+		<School>Millennium</School>
+		<forcedHeadType>Female_AverageNormal</forcedHeadType>
+		<skills>
+			<Animals>
+				<level>3</level>
+				<fireLevel>0</fireLevel>
+			</Animals>
+			<Artistic>
+				<level>5</level>
+				<fireLevel>1</fireLevel>
+			</Artistic>
+			<Construction>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
+			</Construction>
+			<Cooking>
+				<level>8</level>
+				<fireLevel>1</fireLevel>
+			</Cooking>
+			<Crafting>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Crafting>
+			<Intellectual>
+				<level>3</level>
+				<fireLevel>1</fireLevel>
+			</Intellectual>
+			<Medicine>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Medicine>
+			<Melee>
+				<level>7</level>
+				<fireLevel>0</fireLevel>
+			</Melee>
+			<Mining>
+				<level>0</level>
+				<fireLevel>1</fireLevel>
+			</Mining>
+			<Plants>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Plants>
+			<Shooting>
+				<level>8</level>
+				<fireLevel>1</fireLevel>
+			</Shooting>
+			<Social>
+				<level>8</level>
+				<fireLevel>0</fireLevel>
+			</Social>
+		</skills>
+	</RimArchive.StudentDef>
+
+</Defs>

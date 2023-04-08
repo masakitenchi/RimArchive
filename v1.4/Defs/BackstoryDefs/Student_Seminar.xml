@@ -26,6 +26,19 @@
 			<li>RimArchive_Noa</li>
 		</spawnCategories>
 	</AlienRace.AlienBackstoryDef>
+
+	<!--莉音-->
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
+		<defName>Backstory_Rio</defName>
+		<title>Rio</title>
+		<titleShort>Rio</titleShort>
+		<baseDesc>Student President of the Millennium Science School and the Chairwoman of "Seminar".</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>RimArchive_Rio</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
 	
 	
 

@@ -20,4 +20,42 @@
         </apparel>
     </ThingDef>
 
+	<ThingDef ParentName="BA_ApparelBase">
+		<defName>BAA_Body_Noa</defName>
+		<label>Noa_Body</label>
+		<description>Noa_Body</description>
+		<graphicData>
+			<texPath>Things/Apparel/Apparel_Generic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Pawns/Millennium/Noa/Body/Noa</wornGraphicPath>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="BA_ApparelBase">
+		<defName>BAA_Body_Rio</defName>
+		<label>Rio_Body</label>
+		<description>Rio_Body</description>
+		<graphicData>
+			<texPath>Things/Apparel/Apparel_Generic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Pawns/Millennium/Rio/Body/Rio</wornGraphicPath>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+		</apparel>
+	</ThingDef>
+
 </Defs>
