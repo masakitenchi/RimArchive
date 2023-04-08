@@ -21,7 +21,7 @@ jobs:
         $json = Invoke-RestMethod -Uri "https://api.github.com/repos/$repo/releases/latest"
         $url = $json.assets | Where-Object { $_.name -like "*.zip" } | Select-Object -ExpandProperty browser_download_url
         Invoke-WebRequest -Uri $url -OutFile "release.zip"
-        mkdir v1.4/Source/libs
+        mkdir v1.4/Source/RimArchive/libs
         
     - name: Get Dependency dlls
       uses: actions/checkout@v2
@@ -32,8 +32,8 @@ jobs:
     - name: Unzip release
       run: |
         Expand-Archive -Path "release.zip" -DestinationPath "./release/"
-        cp release/CombatExtended/Assemblies/CombatExtended.dll v1.4/Source/libs
-        cp AlienRaces/1.4/Assemblies/AlienRace.dll v1.4/Source/libs
+        cp release/CombatExtended/Assemblies/CombatExtended.dll v1.4/Source/RimArchive/libs
+        cp AlienRaces/1.4/Assemblies/AlienRace.dll v1.4/Source/RimArchive/libs
         dir
       
       
