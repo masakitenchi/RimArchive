@@ -59,7 +59,7 @@ namespace RimArchive.Window
             }
             else
             {
-                _cachedStudent.Discard();
+                _cachedStudent = null;
                 _currentStudent = null;
                 _inStudentProfile = false;
             }
