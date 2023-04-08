@@ -3,9 +3,12 @@
     
     <ThingDef Name="BA_ApparelBase" ParentName="ApparelBase" Abstract="True">
         <smeltable/>
+		<useHitPoints>False</useHitPoints>
         <statBases>
             <MarketValue>50</MarketValue>
             <Mass>1.0</Mass>
+			<Flammability>0</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
         </statBases>
     </ThingDef>
     
