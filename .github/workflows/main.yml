@@ -2,6 +2,7 @@ name: Build-Test
 
 on:
   push:
+    branches: main
   workflow_dispatch:
   
 
@@ -33,6 +34,7 @@ jobs:
         Expand-Archive -Path "release.zip" -DestinationPath "./release/"
         cp release/CombatExtended/Assemblies/CombatExtended.dll ./libs
         cp AlienRaces/1.4/Assemblies/AlienRace.dll libs
+        dir
       
       
     - name: Setup MSBuild
@@ -44,5 +46,6 @@ jobs:
     - name: Test Build
       run: |
             cd v1.4/Source/RimArchive
+            dir
             nuget restore RimArchive.csproj -SolutionDirectory ./RimArchive.sln
             msbuild RimArchive.sln -p:Configuration=release -p:ReferencePath=../../../libs
