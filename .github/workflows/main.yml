@@ -16,16 +16,23 @@ jobs:
     - name: Get latest CE release
       id: latest_release
       run: |
-        $repo = "CombatExtended-Continued/CombatExtended" # 替换为您要下载的仓库名称
+        $repo = "CombatExtended-Continued/CombatExtended"
         $json = Invoke-RestMethod -Uri "https://api.github.com/repos/$repo/releases/latest"
         $url = $json.assets | Where-Object { $_.name -like "*.zip" } | Select-Object -ExpandProperty browser_download_url
         Invoke-WebRequest -Uri $url -OutFile "release.zip"
+        mkdir ./libs
+        
+    - name: Get Dependency dlls
+      uses: actions/checkout@v2
+      with:
+        repository: erdelf/AlienRaces
+        path: AlienRaces
     
     - name: Unzip release
       run: |
         Expand-Archive -Path "release.zip" -DestinationPath "./release/"
-        mkdir libs
         cp release/CombatExtended/Assemblies/CombatExtended.dll ./libs
+        cp AlienRaces/1.4/Assemblies/AlienRace.dll libs
       
       
     - name: Setup MSBuild
@@ -34,7 +41,7 @@ jobs:
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.5
       
-    - name: Test Run
+    - name: Test Build
       run: |
             cd v1.4/Source/RimArchive
             nuget restore RimArchive.csproj -SolutionDirectory ./RimArchive.sln
