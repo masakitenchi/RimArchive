@@ -154,11 +154,11 @@
 		<defName>NamerHifumi</defName>
 		<rulePack>
 			<rulesStrings>
-				<li>name->[Azusa]</li>
+				<li>name->[Hifumi]</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
-					<keyword>Azusa</keyword>
+					<keyword>Hifumi</keyword>
 					<path>Names/Hifumi</path>
 				</li>
 			</rulesRaw>
@@ -169,11 +169,11 @@
 		<defName>NamerKoharu</defName>
 		<rulePack>
 			<rulesStrings>
-				<li>name->[Azusa]</li>
+				<li>name->[Koharu]</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
-					<keyword>Azusa</keyword>
+					<keyword>Koharu</keyword>
 					<path>Names/Koharu</path>
 				</li>
 			</rulesRaw>
@@ -184,12 +184,42 @@
 		<defName>NamerYuuka</defName>
 		<rulePack>
 			<rulesStrings>
-				<li>name->[Azusa]</li>
+				<li>name->[Yuuka]</li>
 			</rulesStrings>
 			<rulesRaw>
 				<li Class="Rule_File">
-					<keyword>Azusa</keyword>
+					<keyword>Yuuka</keyword>
 					<path>Names/Yuuka</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>NamerNoa</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[Noa]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>Noa</keyword>
+					<path>Names/Noa</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>NamerRio</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[Rio]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>Rio</keyword>
+					<path>Names/Rio</path>
 				</li>
 			</rulesRaw>
 		</rulePack>

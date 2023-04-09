@@ -638,6 +638,72 @@
 			<speed>55</speed>
 		</projectile>
 	</ThingDef>
+	
+	<!--莉音-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Rio</defName>
+		<label>Final Finesse</label>
+		<description>The revolver used by Rio.\n\nTo achieve her goals, all necessary means must be taken.\n\nAnd for Rio, who has always been alone, violence is an essential finesse for her.</description>
+		<graphicData>
+			<texPath>Weapon/Millennium/Rio</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.68</drawSize>
+		</graphicData>
+		<weaponTags>
+			<li>BAW_Rio</li>
+		</weaponTags>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>BA_Weapon_Millennium</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<displayPriority>420</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>40000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.85</AccuracyTouch>
+			<AccuracyShort>0.90</AccuracyShort>
+			<AccuracyMedium>0.68</AccuracyMedium>
+			<AccuracyLong>0.53</AccuracyLong>
+			<RangedWeapon_Cooldown>0.80</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Rio</defaultProjectile>
+				<warmupTime>1.12</warmupTime>
+				<range>18</range>
+				<soundCast>Shot_HeavySMG</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>3</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Rio</defName>
+		<label>Bullet of Final Finesse</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_red</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.35</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<speed>60</speed>
+		</projectile>
+	</ThingDef>
 
 
 

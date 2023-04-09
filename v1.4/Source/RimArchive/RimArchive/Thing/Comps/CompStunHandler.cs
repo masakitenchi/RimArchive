@@ -14,14 +14,24 @@ public class CompStunHandler : ThingComp
     private Effecter groggyGauge;
 
     //60Tick/s, 250Tick/TickRare, 2000Tick/TickLong
+    //目前存在缩放导致进度条消失的问题，暂时没什么好方法
     public override void CompTick()
     {
+        if (parent.Destroyed)
+            return;
         if(parent.Map != null)
         {
             this.groggyGauge ??= EffecterDefOf.ProgressBar.SpawnAttached(this.parent, this.parent.Map);
             this.groggyGauge.EffectTick((TargetInfo)(Thing)this.parent, TargetInfo.Invalid);
             MoteProgressBar GaugeBar = ((SubEffecter_ProgressBar)this.groggyGauge.children[0]).mote;
-            GaugeBar.progress = currentDuration / BaseStunThreshold;
+            if(parent is Pawn p && p.stances.stunner.Stunned)
+            {
+                GaugeBar.progress = p.stances.stunner.StunTicksLeft / (BreakStunDuration * GenTicks.TicksPerRealSecond);
+            }
+            else
+            {
+                GaugeBar.progress = currentDuration / BaseStunThreshold;
+            }
             GaugeBar.offsetZ = -0.8f;
             if (parent.IsHashIntervalTick(600))
                 Props.currentDuration -= 30f;

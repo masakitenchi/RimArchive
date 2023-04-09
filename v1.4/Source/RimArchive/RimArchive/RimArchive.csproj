@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BAAE6D3E-4D4D-41B1-8F25-5A2BD8F707C7}</ProjectGuid>
     <OutputType>Library</OutputType>
+    <LangVersion>10.0</LangVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <LangVersion>preview</LangVersion>
     <RootNamespace>RimArchive</RootNamespace>
     <AssemblyName>RimArchive</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -42,9 +42,12 @@
     <Compile Include="Abilities\Verb_StraightBeam.cs" />
     <Compile Include="Boss\RaidDef.cs" />
     <Compile Include="Boss\BossGroupWorker.cs" />
+    <Compile Include="Boss\RaidGroupWave.cs" />
     <Compile Include="Components\RimArchiveWorldComponent.cs" />
     <Compile Include="Debug.cs" />
+    <Compile Include="Defs\BossDef.cs" />
     <Compile Include="Defs\DefOfs\HediffDefOf.cs" />
+    <Compile Include="Defs\DefOfs\ThingDefOf.cs" />
     <Compile Include="Defs\IconDef.cs" />
     <Compile Include="Defs\StudentDef.cs" />
     <Compile Include="Framework\BiDirectionDic.cs" />
@@ -57,6 +60,8 @@
     <Compile Include="Patch\Harmony_CE.cs" />
     <Compile Include="PawnRelation\PawnRelationWorker_SameClub.cs" />
     <Compile Include="PawnRelation\PawnRelationWorker_Sibling.cs" />
+    <Compile Include="Quest\QuestNode_Root_Raid.cs" />
+    <Compile Include="Quest\QuestPart_RaidArrives.cs" />
     <Compile Include="RimArchive.cs" />
     <Compile Include="SchoolNameModExtension.cs" />
     <Compile Include="Defs\DefOfs\StudentDefOf.cs" />
@@ -74,6 +79,7 @@
     <Compile Include="BA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Defs\DefOfs\SchoolDefOf.cs" />
+    <Compile Include="Verbs\Verb_SummonThing.cs" />
     <Compile Include="Window\RecruitWindow.cs" />
   </ItemGroup>
   <ItemGroup>

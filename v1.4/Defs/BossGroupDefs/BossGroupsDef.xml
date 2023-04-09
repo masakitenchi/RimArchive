@@ -3,28 +3,27 @@
     
     <RimArchive.RaidDef Name = "BA_BossGroupBase" Abstract = "True">
         <quest>BA_Raid</quest>
-        <repeatWaveStartIndex>0</repeatWaveStartIndex>
     </RimArchive.RaidDef>
 
     <!-- HOD -->
-    <BossDef>
+    <RimArchive.BossDef>
         <defName>BA_HOD</defName>
         <kindDef>BA_BOSS_HOD</kindDef>
         <!-- appearAfterTicks默认为2^32-1 -->
-    </BossDef>
+    </RimArchive.BossDef>
 
     <RimArchive.RaidDef ParentName = "BA_BossGroupBase">
         <defName>BA_BossGroup_HOD</defName>
+        <label>HOD</label>
         <boss>BA_HOD</boss>
         <iconPath>Things/Raid/HOD</iconPath>
         <waves> <!-- 下标从0开始 -->
             <li>
-                <bossCount>1</bossCount>
                 <!-- 喽啰 -->
                 <escorts/>
             </li>
             <li>
-                <bossCount>1</bossCount>
+                <bossHPMultiplier>1.2</bossHPMultiplier>
                 <escorts>
                     <Mech_Militor>5</Mech_Militor>
                 </escorts>
@@ -35,7 +34,7 @@
                 </bossApparel>
             </li>
             <li>
-                <bossCount>1</bossCount>
+                <bossHPMultiplier>1.4</bossHPMultiplier>
                 <escorts>
                     <Mech_Militor>7</Mech_Militor>
                     <Mech_Pikeman>2</Mech_Pikeman>
@@ -47,9 +46,7 @@
                 </bossApparel>
             </li>
         </waves>
-        <leaderDescription>The {LEADERKIND_label} can summon several pillars that applies debuffs to people around it.
-            Both {LEADERKIND_label} and its pillars are vulnerable to EMP and stun attacks. {LEADERKIND_label} will be stunned for a period of time, and the pillars will receive extra damage.
-        </leaderDescription>
+        <leaderDescription>The {LEADERKIND_label} can summon several pillars that applies debuffs to people around it.Both {LEADERKIND_label} and its pillars are vulnerable to EMP and stun attacks. {LEADERKIND_label} will be stunned for a period of time, and the pillars will receive extra damage.</leaderDescription>
         <rewardDef>BA_Chip_HOD</rewardDef>
     </RimArchive.RaidDef>
 

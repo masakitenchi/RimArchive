@@ -1,0 +1,51 @@
+name: Build-Test
+
+on:
+  push:
+    branches: main
+  workflow_dispatch:
+  
+
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+    
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Get latest CE release
+      id: latest_release
+      run: |
+        $repo = "CombatExtended-Continued/CombatExtended"
+        $json = Invoke-RestMethod -Uri "https://api.github.com/repos/$repo/releases/latest"
+        $url = $json.assets | Where-Object { $_.name -like "*.zip" } | Select-Object -ExpandProperty browser_download_url
+        Invoke-WebRequest -Uri $url -OutFile "release.zip"
+        mkdir v1.4/Source/RimArchive/libs
+        
+    - name: Get Dependency dlls
+      uses: actions/checkout@v2
+      with:
+        repository: erdelf/AlienRaces
+        path: AlienRaces
+    
+    - name: Unzip release
+      run: |
+        Expand-Archive -Path "release.zip" -DestinationPath "./release/"
+        cp release/CombatExtended/Assemblies/CombatExtended.dll v1.4/Source/RimArchive/libs
+        cp AlienRaces/1.4/Assemblies/AlienRace.dll v1.4/Source/RimArchive/libs
+        dir
+      
+      
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+      
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.5
+      
+    - name: Test Build
+      run: |
+            cd v1.4/Source/RimArchive
+            dir
+            nuget restore RimArchive/RimArchive.csproj -SolutionDirectory ./RimArchive.sln
+            msbuild RimArchive.sln -p:Configuration=release -p:ReferencePath=../libs

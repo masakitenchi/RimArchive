@@ -17,11 +17,6 @@ namespace RimArchive
             "Things/Projectile/Bullet_Big"
         };
     }
-    [DefOf]
-    public static class ThingDefOf
-    {
-        public static ThingDef Bombardment_beacon;
-    }
 
     [StaticConstructorOnStartup]
     public class Bombardment : OrbitalStrike

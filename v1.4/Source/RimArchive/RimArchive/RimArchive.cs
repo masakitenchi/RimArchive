@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using Verse;
-using static RimArchive.Debug;
+using static RimArchive.DebugMessage;
 using static RimArchive.StudentDef;
 
 namespace RimArchive
@@ -49,7 +49,10 @@ namespace RimArchive
         public static RaidManager RaidManager => Current.Game.GetComponent<RaidManager>();
         //
         internal static readonly string packageId;
-#nullable enable
+
+        internal static HediffDef HediffGen;
+        internal static float nextSeverity = 0.5f;
+        internal static HashSet<HediffStage> cachedGenertedHediffStages = new HashSet<HediffStage>();
         //Each student belongs to a different PawnKindDef, but should share the same race
         internal static readonly List<StudentDef> AllStudents = new List<StudentDef>();
         //Cache school for Recruit Window
@@ -61,28 +64,14 @@ namespace RimArchive
 
         public static readonly HashSet<RaidDef> cachedAllBosses = new HashSet<RaidDef>();
 
-<<<<<<< HEAD
-        public static readonly HashSet<RaidDef> cachedAllBosses = new HashSet<RaidDef>();
-=======
-        public static readonly HashSet<BossgroupDef> cachedAllBosses = new HashSet<BossgroupDef>();
->>>>>>> 7f32f15 (BossGroup GameComponent)
-
-#nullable disable
 
         static RimArchiveMain()
         {
             //Should be of use sometime
             //But what if some other mod also add this extension? Meh
-            packageId ????= DefDatabase<StudentDef>.AllDefs.First().modContentPack.PackageId;
+            packageId ??= DefDatabase<StudentDef>.AllDefs.First().modContentPack.PackageId;
             cachedAllBosses = DefDatabase<RaidDef>.AllDefs.ToHashSet();
             DefDatabase<RaidDef>.AllDefs.Do(delegate (RaidDef def) { def.Init(); });
-<<<<<<< HEAD
-            cachedAllBosses = DefDatabase<RaidDef>.AllDefs.ToHashSet();
-            DefDatabase<RaidDef>.AllDefs.Do(delegate (RaidDef def) { def.Init(); });
-=======
-            cachedAllBosses = DefDatabase<BossgroupDef>.AllDefs.ToHashSet();
-            DefDatabase<BossgroupDef>.AllDefs.Do(delegate (BossgroupDef def) { def.Init(); });
->>>>>>> 7f32f15 (BossGroup GameComponent)
             foreach (StudentDef student in DefDatabase<StudentDef>.AllDefs)
             {
                 AllStudents.Add(student);
@@ -95,6 +84,15 @@ namespace RimArchive
                 cachedAllStudentsBySchool.Add(school, (from x in AllStudents where x.School == school.name select x).ToList());
             }
             RecruitWindow.Init();
+            HediffGen = new HediffDef()
+            {
+                generated = true,
+                defName = "RA_HediffGenerated_DamageResistance",
+                label = "DamageResistance",
+                description = "DamageResistance",
+                stages = new List<HediffStage>()
+            };
+            DefDatabase<HediffDef>.Add(HediffGen);
         }
     }
 }

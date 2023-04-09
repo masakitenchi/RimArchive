@@ -27,7 +27,7 @@
         <techLevel>Spacer</techLevel>
         <tradeTags/>
         <comps>
-            <li Class="CompProperties_Usable">
+            <!-- <li Class="CompProperties_Usable">
                 <useJob>TriggerObject</useJob>
                 <useLabel>Start HOD Raid</useLabel>
                 <useDuration>120</useDuration>
@@ -41,7 +41,7 @@
                 <spawnLetterTextKey>LetterCommsConsoleSpawned</spawnLetterTextKey>
                 <effecterDef>CommsConsoleBossgroupSummoned</effecterDef>
                 <delayTicks>120</delayTicks>
-              </li>
+              </li> -->
               <li Class="CompProperties_UseEffectDestroySelf"/>
         </comps>
     </ThingDef>
