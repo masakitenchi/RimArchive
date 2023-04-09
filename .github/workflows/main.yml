@@ -2,50 +2,59 @@ name: Build-Test
 
 on:
   push:
-    branches: main
+    branches: 
+      [main, Actions]
   workflow_dispatch:
-  
 
 jobs:
   build:
     runs-on: windows-2022
     steps:
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@main
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
     
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
+      with:
+        path: RimArchive
 
-    - name: Get latest CE release
+    - name: Prebuild
+      run: |
+        $temp = "${{runner.temp}}"
+        mkdir RimArchive\v1.4\Source\packages
+        
+    - name: Get latest release info
       id: latest_release
       run: |
-        $repo = "CombatExtended-Continued/CombatExtended"
-        $json = Invoke-RestMethod -Uri "https://api.github.com/repos/$repo/releases/latest"
-        $url = $json.assets | Where-Object { $_.name -like "*.zip" } | Select-Object -ExpandProperty browser_download_url
-        Invoke-WebRequest -Uri $url -OutFile "release.zip"
-        mkdir v1.4/Source/RimArchive/libs
-        
+        $LATEST_RELEASE = Invoke-RestMethod -Headers @{Authorization="token ${{ secrets.MY_GITHUB_TOKEN }}"} -Uri https://api.github.com/repos/CombatExtended-Continued/CombatExtended/releases/latest
+        "tag_name=$($LATEST_RELEASE.tag_name)" >>$env:GITHUB_OUTPUT
+        "asset_url=$($LATEST_RELEASE.assets[0].browser_download_url)" >>$env:GITHUB_OUTPUT
+
+        $outputFile = "release.zip"
+        $assetUrl = $LATEST_RELEASE.assets[0].browser_download_url
+        $headers = @{Authorization="token ${{ secrets.MY_GITHUB_TOKEN }}"}
+        Invoke-WebRequest -Uri $assetUrl -Headers $headers -OutFile $outputFile
+      shell: powershell
+
+    - name: Extract and copy .dll file
+      run: |
+        7z X release.zip -y
+        cp CombatExtended/Assemblies/CombatExtended.dll RimArchive/v1.4/Source/packages
+
     - name: Get Dependency dlls
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         repository: erdelf/AlienRaces
         path: AlienRaces
     
     - name: Unzip release
+      run: |      
+        copy AlienRaces\1.4\Assemblies\AlienRace.dll RimArchive\v1.4\Source\packages
+    
+    - name: Build
       run: |
-        Expand-Archive -Path "release.zip" -DestinationPath "./release/"
-        cp release/CombatExtended/Assemblies/CombatExtended.dll v1.4/Source/RimArchive/libs
-        cp AlienRaces/1.4/Assemblies/AlienRace.dll v1.4/Source/RimArchive/libs
-        dir
-      
-      
-    - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1
-      
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.5
-      
-    - name: Test Build
-      run: |
-            cd v1.4/Source/RimArchive
-            dir
-            nuget restore RimArchive/RimArchive.csproj -SolutionDirectory ./RimArchive.sln
-            msbuild RimArchive.sln -p:Configuration=release -p:ReferencePath=../libs
+        cd RimArchive\v1.4\Source\RimArchive
+        nuget restore RimArchive\RimArchive.csproj -SolutionDirectory .\RimArchive.sln
+        msbuild RimArchive.sln -p:Configuration=release -p:ReferencePath=..\packages

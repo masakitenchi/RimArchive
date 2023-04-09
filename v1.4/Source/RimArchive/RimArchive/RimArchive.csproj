@@ -86,20 +86,18 @@
     <PackageReference Include="Krafs.Rimworld.Ref">
       <Version>1.4.3641</Version>
     </PackageReference>
-    <PackageReference Include="krafs.RimWorld.ref" Version="1.4.3641" />
     <PackageReference Include="Lib.Harmony">
       <Version>2.2.2</Version>
       <ExcludeAssets>Runtime</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AlienRace">
-      <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\workshop\content\294100\839005762\1.4\Assemblies\AlienRace.dll</HintPath>
+      <HintPath>..\..\packages\AlienRace.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CombatExtended">
-      <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\workshop\content\294100\2890901044\Assemblies\CombatExtended.dll</HintPath>
+      <HintPath>..\..\packages\CombatExtended.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

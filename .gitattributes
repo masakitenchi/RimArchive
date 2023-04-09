@@ -1,3 +1,7 @@
 README.md export-ignore
 .gitignore export-ignore
 .gitattributes export-ignore
+Make.py export-ignore
+**/obj
+**/.vs
+**/.github
