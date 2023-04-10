@@ -3,8 +3,7 @@
 	<!-- Gehenna -->
 	<!-- Shot Sound missing -->
 	<!-- <Operation Class="PatchOperationReplace">
-			<xpath>Defs/ThingDef[
-					defName="BAW_Hina"
+			<xpath>Defs/ThingDef[ defName="BAW_Hina"
 					]/recipeMaker/researchPrerequisite
 			</xpath>
 			<value>
@@ -213,4 +212,96 @@
 		</weaponTags>
 		<researchPrerequisite>Gunsmithing</researchPrerequisite>
 	</Operation>
+
+	<!-- Iori -->
+	<!-- ========== Kar98k ========== -->
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>BAW_Iori</defName>
+		<statBases>
+			<Mass>4.10</Mass>
+			<RangedWeapon_Cooldown>1.00</RangedWeapon_Cooldown>
+			<SightsEfficiency>2.24</SightsEfficiency>
+			<ShotSpread>0.05</ShotSpread>
+			<SwayFactor>1.05</SwayFactor>
+			<Bulk>11.10</Bulk>
+			<WorkToMake>15000</WorkToMake>
+		</statBases>
+		<costList>
+			<WoodLog>15</WoodLog>
+			<Steel>50</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_792x57mmMauser_FMJ</defaultProjectile>
+			<warmupTime>0.85</warmupTime>
+			<range>86</range>
+			<soundCast>RNShot_BoltActionOldie</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+
+		<!-- <AmmoUser>
+			<magazineSize>5</magazineSize>
+			<reloadTime>4.3</reloadTime>
+			<ammoSet>AmmoSet_792x57mmMauser</ammoSet>
+		</AmmoUser> -->
+
+		<FireModes>
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<aiAimMode>AimedShot</aiAimMode>
+		</FireModes>
+
+		<weaponTags>
+			<li>CE_AI_Rifle</li>
+		</weaponTags>
+
+		<AllowWithRunAndGun>false</AllowWithRunAndGun>
+	</Operation>
+
+	<!-- Ako -->
+	<!-- ========== P08 (Luger) ========== -->
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>BAW_Ako</defName>
+		<statBases>
+			<Mass>0.87</Mass>
+			<RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
+			<SightsEfficiency>0.7</SightsEfficiency>
+			<ShotSpread>0.17</ShotSpread>
+			<SwayFactor>1.03</SwayFactor>
+			<Bulk>2.22</Bulk>
+			<WorkToMake>14000</WorkToMake>
+		</statBases>
+		<costList>
+			<Steel>40</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
+			<warmupTime>0.3</warmupTime>
+			<range>12</range>
+			<soundCast>Shot_P08</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+		<!-- <AmmoUser>
+			<magazineSize>8</magazineSize>
+			<reloadTime>4</reloadTime>
+			<ammoSet>AmmoSet_9x19mmPara</ammoSet>
+		</AmmoUser> -->
+		<FireModes>
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+		</FireModes>
+		<weaponTags>
+			<li>CE_OneHandedWeapon</li>
+			<li>IndustrialGunAdvanced</li>
+		</weaponTags>
+		<researchPrerequisite>Stage0b_RA</researchPrerequisite>
+	</Operation>
+
 </Patch>
