@@ -301,7 +301,6 @@
 			<li>CE_OneHandedWeapon</li>
 			<li>IndustrialGunAdvanced</li>
 		</weaponTags>
-		<researchPrerequisite>Stage0b_RA</researchPrerequisite>
 	</Operation>
 
 </Patch>
