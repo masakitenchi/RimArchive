@@ -165,4 +165,52 @@
 			<li>CE_AI_Rifle</li>
 		</weaponTags>
 	</Operation>
+
+	<!-- Hanako -->
+	<!-- ========== L85A2 ========== -->
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>BAW_Hanako</defName>
+		<statBases>
+			<Mass>3.82</Mass>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+			<SightsEfficiency>2.24</SightsEfficiency>
+			<ShotSpread>0.06</ShotSpread>
+			<SwayFactor>0.85</SwayFactor>
+			<Bulk>7.85</Bulk>
+			<WorkToMake>41000</WorkToMake>
+		</statBases>
+		<costList>
+			<Chemfuel>5</Chemfuel>
+			<Steel>50</Steel>
+			<ComponentIndustrial>7</ComponentIndustrial>
+		</costList>
+		<Properties>
+			<recoilAmount>1.40</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+			<warmupTime>1.3</warmupTime>
+			<range>48</range>
+			<burstShotCount>6</burstShotCount>
+			<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+			<soundCast>RNShot_GenericBullpup</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</Properties>
+
+		<!-- <AmmoUser>
+			<magazineSize>30</magazineSize>
+			<reloadTime>4.5</reloadTime>
+			<ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+		</AmmoUser> -->
+
+		<FireModes>
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<aiAimMode>AimedShot</aiAimMode>
+			<aimedBurstShotCount>6</aimedBurstShotCount>
+		</FireModes>
+
+		<!-- No additional CE weaponTags needed -->
+	</Operation>
 </Patch>
