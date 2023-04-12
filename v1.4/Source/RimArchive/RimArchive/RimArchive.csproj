@@ -66,6 +66,7 @@
     <Compile Include="SchoolNameModExtension.cs" />
     <Compile Include="Defs\DefOfs\StudentDefOf.cs" />
     <Compile Include="RAFaction.cs" />
+    <Compile Include="Thing\CompProperties_FuelableTickRare.cs" />
     <Compile Include="Thing\CompProperties_InvadePillar.cs" />
     <Compile Include="Thing\CompProperties_MoteEmitterIncreasingSize.cs" />
     <Compile Include="Thing\CompProperties_StunHandler.cs" />
@@ -83,15 +84,10 @@
     <Compile Include="Window\RecruitWindow.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.4.3641</Version>
+    <PackageReference Include="Krafs.RimWorld.Ref" Version="1.4.3682" />
+    <PackageReference Include="Lib.Harmony" Version="2.2.2">
+      <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="krafs.RimWorld.ref" Version="1.4.3641" />
-    <PackageReference Include="Lib.Harmony">
-      <Version>2.2.2</Version>
-      <ExcludeAssets>Runtime</ExcludeAssets>
-    </PackageReference>
-    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AlienRace">

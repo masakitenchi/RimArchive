@@ -85,6 +85,7 @@ public class StudentDocument : GameComponent
         Scribe_Collections.Look<StudentDef>(ref recruitedStudents, true, "RecruitedStudents", LookMode.Def);
         Scribe_Collections.Look<StudentDef, Pawn>(ref documents, "document", LookMode.Def, LookMode.Deep);
         Scribe_Values.Look<int>(ref hostileDaysAsTick, "hostileDaysAsTick");
+        Scribe_Values.Look<bool>(ref inAngryHostile, "inAngryHostile");
     }
 
     public override void GameComponentTick()
