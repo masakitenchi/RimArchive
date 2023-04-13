@@ -85,18 +85,18 @@ public class StudentDef : PawnKindDef
         //BA_Shiroko_RidingSuit => <Prefix> = BA, <FullName> = Shiroko_RidingSuit
         Icon = ContentFinder<Texture2D>.Get("Icons/" + match.Groups["FullName"].Value);
         Portrait = ContentFinder<Texture2D>.Get("Portraits/Resized/" + match.Groups["FullName"].Value);
-        Memorial = ContentFinder<Texture2D>.Get("Memorial/Yuuka");
+        Memorial = ContentFinder<Texture2D>.Get("Memorial/" + match.Groups["FullName"].Value);
         if (Icon == null)
         {
-            Log.Error($"Cannot find icon tex named {match.Groups["Name"].Value} for {this.defName}. All Matches:\n{match.Value}");
+            Log.Error($"Cannot find icon tex named {match.Groups["FullName"].Value} for {this.defName}. All Matches:\n{match.Value}");
         }
         if (Portrait == null)
         {
-            Log.Error($"Cannot find portrait tex named {match.Groups["Name"].Value} for {this.defName}. All Matches:\n{match.Value}");
+            Log.Error($"Cannot find portrait tex named {match.Groups["FullName"].Value} for {this.defName}. All Matches:\n{match.Value}");
         }
         if (Memorial == null)
         {
-            Log.Error($"Cannot find memorial hall tex named {match.Groups["Name"].Value} for {this.defName}. All Matches:\n{match.Value}");
+            Log.Error($"Cannot find memorial hall tex named {match.Groups["FullName"].Value} for {this.defName}. All Matches:\n{match.Value}");
         }
         #endregion
 

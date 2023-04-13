@@ -444,7 +444,7 @@ namespace RimArchive.Window
             recruitBtn.size = _iconSize;
             if (ButtonImageFitted(recruitBtn, SSR))
             {
-                if(!TradeUtility.ColonyHasEnoughSilver(Find.CurrentMap, 1000))
+                if(!DebugSettings.godMode && !TradeUtility.ColonyHasEnoughSilver(Find.CurrentMap, 1000))
                 {
                     Messages.Message("NotEnoughMoney".Translate(_cachedStudent.NameFullColored), MessageTypeDefOf.NeutralEvent);
                 }
