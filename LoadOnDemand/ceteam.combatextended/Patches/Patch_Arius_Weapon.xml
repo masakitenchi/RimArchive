@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+    <!-- Saori -->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>BAW_Saori</defName>
+        <statBases>
+            <Mass>3.16</Mass>
+            <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+            <SightsEfficiency>2.24</SightsEfficiency>
+            <ShotSpread>0.09</ShotSpread>
+            <SwayFactor>0.5</SwayFactor>
+            <Bulk>8.28</Bulk>
+            <WorkToMake>26000</WorkToMake>
+        </statBases>
+        <costList>
+            <Chemfuel>5</Chemfuel>
+            <Steel>50</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+            <warmupTime>0.5</warmupTime>
+            <range>59</range>
+            <soundCast>RNShot_GenericAR_IV</soundCast>
+            <soundCastTail>GunTail_Medium</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+        </Properties>
+
+        <!-- <AmmoUser>
+            <magazineSize>30</magazineSize>
+            <reloadTime>4</reloadTime>
+            <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+        </AmmoUser> -->
+
+        <FireModes>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+
+        <weaponTags>
+            <li>CE_AI_Rifle</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- Atsuko -->
+    <!-- ========== CZ Scorpion EVO 3 ========== -->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>BAW_Atsuko</defName>
+        <statBases>
+            <Mass>2.10</Mass>
+            <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+            <SightsEfficiency>1.50</SightsEfficiency>
+            <ShotSpread>0.2</ShotSpread>
+            <SwayFactor>0.2</SwayFactor>
+            <Bulk>4.00</Bulk>
+            <WorkToMake>29000</WorkToMake>
+        </statBases>
+        <costList>
+            <Chemfuel>5</Chemfuel>
+            <Steel>30</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <recoilAmount>0.70</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
+            <warmupTime>0.6</warmupTime>
+            <range>35</range>
+            <burstShotCount>6</burstShotCount>
+            <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+            <soundCast>RNShotCZ</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+        </Properties>
+
+        <!-- <AmmoUser>
+            <magazineSize>30</magazineSize>
+            <reloadTime>4</reloadTime>
+            <ammoSet>AmmoSet_9x19mmPara</ammoSet>
+        </AmmoUser> -->
+
+        <FireModes>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+            <aiAimMode>Snapshot</aiAimMode>
+            <aimedBurstShotCount>3</aimedBurstShotCount>
+        </FireModes>
+
+        <weaponTags>
+            <li>CE_AI_AssaultWeapon</li>
+            <li>CE_SMG</li>
+        </weaponTags>
+    </Operation>
+
+    <!-- Hiyori -->
+    <!-- NTW-20 -->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>BAW_Hiyori</defName>
+        <statBases>
+            <Mass>31.0</Mass>
+            <RangedWeapon_Cooldown>1.08</RangedWeapon_Cooldown>
+            <SightsEfficiency>3.0</SightsEfficiency>
+            <ShotSpread>0</ShotSpread>
+            <SwayFactor>1.5</SwayFactor>
+            <Bulk>18.95</Bulk>
+            <WorkToMake>64000</WorkToMake>
+        </statBases>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <recoilPattern>Mounted</recoilPattern>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_20x110mmHispano_AP</defaultProjectile>
+            <warmupTime>0.70</warmupTime>
+            <range>86</range>
+            <soundCast>CEC_NTW20Shot</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+        </Properties>
+        <!-- <AmmoUser>
+            <magazineSize>1</magazineSize>
+            <AmmoGenPerMagOverride>3</AmmoGenPerMagOverride>
+            <reloadTime>1</reloadTime>
+            <ammoSet>AmmoSet_20x110mmHispano</ammoSet>
+        </AmmoUser> -->
+        <FireModes>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+            <aiAimMode>AimedShot</aiAimMode>
+            <noSnapshot>false</noSnapshot>
+            <noSingleShot>false</noSingleShot>
+        </FireModes>
+        <weaponTags>
+            <li>CE_AI_Rifle</li>
+            <li>SniperRifle</li>
+            <li>Bipod_ATR</li>
+        </weaponTags>
+        <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+    </Operation>
+
+    <!-- Misaki -->
+    <!-- FIM-92 Stinger But Current CE doesn't have this-->
+    <!-- ========== FGM-148 Javelin ========== -->
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>BAW_Misaki</defName>
+        <statBases>
+            <Mass>22.30</Mass>
+            <RangedWeapon_Cooldown>1.50</RangedWeapon_Cooldown>
+            <SightsEfficiency>2.72</SightsEfficiency>
+            <ShotSpread>0.2</ShotSpread>
+            <SwayFactor>1.5</SwayFactor>
+            <Bulk>13.00</Bulk>
+            <WorkToMake>41500</WorkToMake>
+        </statBases>
+        <costList>
+            <Steel>135</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+            <FSX>15</FSX>
+        </costList>
+        <Properties>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_127mmJavelinMissile</defaultProjectile>
+            <warmupTime>1.5</warmupTime>
+            <range>156</range>
+            <soundCast>RNShotLauncher</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <onlyManualCast>true</onlyManualCast>
+            <stopBurstWithoutLos>false</stopBurstWithoutLos>
+            <muzzleFlashScale>15</muzzleFlashScale>
+            <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </Properties>
+
+        <FireModes>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+            <aiAimMode>AimedShot</aiAimMode>
+            <noSnapshot>true</noSnapshot>
+        </FireModes>
+
+        <!-- No additional CE weaponTags needed -->
+
+        <AllowWithRunAndGun>false</AllowWithRunAndGun>
+    </Operation>
+
+</Patch>

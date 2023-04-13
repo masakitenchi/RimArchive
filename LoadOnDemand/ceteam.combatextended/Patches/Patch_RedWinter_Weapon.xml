@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>BAW_Nodoka</defName>
+        <statBases>
+            <Mass>1.40</Mass>
+            <RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
+            <SightsEfficiency>1.00</SightsEfficiency>
+            <ShotSpread>0.15</ShotSpread>
+            <SwayFactor>0.70</SwayFactor>
+            <Bulk>3.40</Bulk>
+            <WorkToMake>28500</WorkToMake>
+        </statBases>
+        <costList>
+            <Chemfuel>5</Chemfuel>
+            <Steel>25</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+        </costList>
+        <Properties>
+            <recoilAmount>1.0</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
+            <warmupTime>0.4</warmupTime>
+            <range>20</range>
+            <burstShotCount>6</burstShotCount>
+            <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+            <soundCast>RNMP9Shot</soundCast>
+            <soundCastTail>GunTail_Light</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+        </Properties>
+
+        <!-- <AmmoUser>
+            <magazineSize>20</magazineSize>
+            <reloadTime>4</reloadTime>
+            <ammoSet>AmmoSet_9x19mmPara</ammoSet>
+        </AmmoUser> -->
+
+        <FireModes>
+            <aiUseBurstMode>FALSE</aiUseBurstMode>
+            <aiAimMode>Snapshot</aiAimMode>
+            <aimedBurstShotCount>3</aimedBurstShotCount>
+        </FireModes>
+
+        <!-- No additional CE weaponTags needed -->
+    </Operation>
+</Patch>
