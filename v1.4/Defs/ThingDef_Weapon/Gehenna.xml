@@ -66,7 +66,7 @@
 			<armorPenetrationBase>0.35</armorPenetrationBase>
 		</projectile>
 	</ThingDef>
-	
+
 	<!--伊织-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Iori</defName>
@@ -129,9 +129,9 @@
 			<armorPenetrationBase>0.44</armorPenetrationBase>
 			<speed>70</speed>
 		</projectile>
-		</ThingDef>
-		
-		<!--狗狗-->
+	</ThingDef>
+
+	<!--狗狗-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Ako</defName>
 		<label>Hotshot</label>
@@ -330,7 +330,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 	</ThingDef>
-	
+
 	<!--佳世子-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Kayoko</defName>
@@ -399,7 +399,7 @@
 		</projectile>
 	</ThingDef>
 
-     <!--遥香-->
+	<!--遥香-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Haruka</defName>
 		<label>Blow Away</label>

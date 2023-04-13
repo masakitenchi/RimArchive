@@ -4,15 +4,10 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
-using AlienRace;
 using static RimArchive.RimArchiveMain;
 using static RimArchive.DebugMessage;
 using static Verse.Widgets;
 using System.Text;
-using UnityEngine.Profiling;
-using UnityEngine.UI;
-using System.Runtime.CompilerServices;
-using UnityEngine.UIElements;
 
 namespace RimArchive.Window
 {
@@ -414,8 +409,6 @@ namespace RimArchive.Window
             DrawLineVertical(TraitsGroup.width / 2, 0f, TraitsGroup.height);
             Rect outtrait = TraitsGroup.AtZero().LeftHalf().ContractedBy(2f);
             Rect outstory = TraitsGroup.AtZero().RightHalf().ContractedBy(2f);
-            Rect viewtrait;
-            Rect viewstory;
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.AppendLine("Traits".Translate());
             _cachedStudent.story.traits.allTraits.Select(x => stringBuilder.AppendLine(x.LabelCap));

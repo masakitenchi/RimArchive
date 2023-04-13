@@ -251,18 +251,7 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 #.vs Folder
-.vs/
-obj/
-/v1.4/Source/RimArchive/Mod Class Dumper/
-v1.4/Source/RimArchive/.vs/RimArchive/v17/.suo
-v1.4/Source/RimArchive/RimArchive/obj/project.assets.json
-v1.4/Source/RimArchive/RimArchive/obj/project.assets.json
-v1.4/Source/RimArchive/RimArchive/obj/project.nuget.cache
-v1.4/Source/RimArchive/RimArchive/obj/RimArchive.csproj.nuget.dgspec.json
-v1.4/Source/RimArchive/RimArchive/obj/Debug/RimArchive.csproj.AssemblyReference.cache
-v1.4/Source/RimArchive/RimArchive/obj/Release/build.force
-v1.4/Source/RimArchive/RimArchive/obj/Release/DesignTimeResolveAssemblyReferencesInput.cache
-v1.4/Source/RimArchive/RimArchive/obj/Release/RimArchive.csproj.AssemblyReference.cache
-v1.4/Source/RimArchive/RimArchive/obj/Release/RimArchive.csproj.CoreCompileInputs.cache
-v1.4/Source/RimArchive/RimArchive/obj/Release/RimArchive.csproj.FileListAbsolute.txt
-**/bin
+**/.vs/
+**/bin/
+**/obj/
+**/Mod Class Dumper/
