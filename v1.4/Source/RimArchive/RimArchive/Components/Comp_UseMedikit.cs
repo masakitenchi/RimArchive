@@ -63,23 +63,26 @@ public class HealPawnWound
 //备用方法：类似陷阱的触发方式
 public class CompProperties_contackMedkit : CompProperties
 {
-    public CompProperties_contackMedkit() => compClass = typeof(contactMedikit);
+    public CompProperties_contackMedkit() => compClass = typeof(CompContackMedkit);
 }
 
-public class contactMedikit : Thing
-
+public class CompContackMedkit : ThingComp
 {
     public void DoEffect(Pawn pawn)
     {
         Log.Message("Step1");
-        TaggedString taggedString = HealPawnWound.HealWound(pawn);
+        Messages.Message(HealPawnWound.HealWound(pawn), MessageTypeDefOf.PositiveEvent);
     }
+}
+public class contactMedikit : Building
+
+{
     public void CheckSpring(Pawn p)
     {
         if (Rand.Chance(this.SpringChance(p)))
         {
             Map map = base.Map;
-            this.DoEffect(p);
+            this.TryGetComp<CompContackMedkit>().DoEffect(p);
             if (p.Faction == Faction.OfPlayer || p.HostFaction == Faction.OfPlayer)
             {
                 Messages.Message("Heal Success".Translate(), MessageTypeDefOf.PositiveEvent);
@@ -89,24 +92,7 @@ public class contactMedikit : Thing
     }
     protected float SpringChance(Pawn p)
     {
-        float num = 1f;
-        if (this.WhoContact(p))
-        {
-            if (p.Faction == null)
-            {
-                num = 0f;
-            }
-            else if (p.Faction == base.Faction)
-            {
-                num = 1f;
-            }
-            else
-            {
-                num = 0f;
-            }
-        }
-        num *= this.GetStatValue(StatDefOf.TrapSpringChance, true, -1) * p.GetStatValue(StatDefOf.PawnTrapSpringChance, true, -1);
-        return Mathf.Clamp01(num);
+        return p.Faction == Faction.OfPlayer? 1 : 0;
     }
     public bool WhoContact(Pawn p)
     {
@@ -115,9 +101,9 @@ public class contactMedikit : Thing
 
     public override void Tick()
     {
-        if (base.Spawned)
+        if (this.Spawned)
         {
-            List<Thing> thingList = base.Position.GetThingList(base.Map);
+            List<Thing> thingList = this.Position.GetThingList(this.Map);
             for (int i = 0; i < thingList.Count; i++)
             {
                 Pawn pawn = thingList[i] as Pawn;
@@ -130,7 +116,7 @@ public class contactMedikit : Thing
             for (int j = 0; j < this.touchingPawns.Count; j++)
             {
                 Pawn pawn2 = this.touchingPawns[j];
-                if (pawn2 == null || !pawn2.Spawned || pawn2.Position != base.Position)
+                if (pawn2 == null || !pawn2.Spawned || pawn2.Position != this.Position)
                 {
                     this.touchingPawns.Remove(pawn2);
                 }

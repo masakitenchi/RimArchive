@@ -5,7 +5,7 @@
 		<defName>BA_Serinabox</defName>
 		<label>First aid box</label>
 		<description>Serina's First aid box.</description>
-		<thingClass>ThingWithComps</thingClass>
+		<thingClass>RimArchive.contactMedikit</thingClass>
 		<graphicData>
 			<texPath>Things/Summon/Medikit</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
