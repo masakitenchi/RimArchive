@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>BA_Serinabox</defName>
+		<label>First aid box</label>
+		<description>Serina's First aid box.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<graphicData>
+			<texPath>Things/Summon/Medikit</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.6</drawSize>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<category>Item</category>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<tradeability>None</tradeability>
+		<selectable>true</selectable>
+		<statBases>
+			<Mass>0.1</Mass>
+			<Flammability>0</Flammability>
+			<MarketValue>5</MarketValue>
+		</statBases>
+		<stackLimit>1</stackLimit>
+		<comps>
+			<li Class="RimArchive.CompProperties_ExistedTicks">
+				<ExistedTicks>900</ExistedTicks>
+			</li>
+			<li Class="RimArchive.CompProperties_contackMedkit">
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>选择小人右键使用医箱来治疗自己！(医疗箱会在15秒内消失)</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>
