@@ -19,7 +19,6 @@ public class Comp_UseMedikit : CompUseEffect
     public override void DoEffect(Pawn usedBy)
     {
         base.DoEffect(usedBy);
-        Log.Message("Step1");
         TaggedString taggedString = HealPawnWound.HealWound(usedBy);
     }
 
@@ -31,13 +30,12 @@ public class HealPawnWound
     public static TaggedString HealWound(Pawn pawn)
     {
         StringBuilder HealWound = new StringBuilder();
-        float num = 10f;
+        float num = 6f;
         for (int i = 0; i < num; i++)
         {
             Hediff hediff = HealPawnWound.FindInjury(pawn, null);
             if (hediff != null)
             {
-                Log.Message("Step2");
                 HealWound.Append(HealthUtility.Cure(hediff));
             }
         }
@@ -70,7 +68,6 @@ public class CompContackMedkit : ThingComp
 {
     public void DoEffect(Pawn pawn)
     {
-        Log.Message("Step1");
         Messages.Message(HealPawnWound.HealWound(pawn), MessageTypeDefOf.PositiveEvent);
     }
 }
