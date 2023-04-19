@@ -6,11 +6,15 @@
 		<label>First aid box</label>
 		<description>Serina's First aid box.</description>
 		<thingClass>RimArchive.contactMedikit</thingClass>
+		<pathCost>0</pathCost>
 		<graphicData>
 			<texPath>Things/Summon/Medikit</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1.6</drawSize>
 		</graphicData>
+		<building>
+			<expandHomeArea>false</expandHomeArea>
+		</building>
 		<tickerType>Normal</tickerType>
 		<category>Item</category>
 		<thingCategories>
@@ -31,7 +35,7 @@
 			<li Class="RimArchive.CompProperties_contackMedkit">
 			</li>
 			<li Class="CompProperties_InspectString">
-				<inspectString>选择小人右键使用医箱来治疗自己！(医疗箱会在15秒内消失)</inspectString>
+				<inspectString>医疗箱会治疗第一个触碰它的殖民者！(在15秒内消失)</inspectString>
 			</li>
 		</comps>
 	</ThingDef>
