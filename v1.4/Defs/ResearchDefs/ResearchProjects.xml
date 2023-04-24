@@ -166,5 +166,18 @@
 		<researchViewY>3</researchViewY>
 	</ResearchProjectDef>
 
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
+		<defName>BA_Tech_ShittimChest</defName>
+		<label>ShittimChest</label>
+		<description>Learn to make ShittimChest, so as to establish contact with Schale.</description>
+		<baseCost>750</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>Electricity</li>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>5</researchViewY>
+	</ResearchProjectDef>
+
 
 </Defs>
