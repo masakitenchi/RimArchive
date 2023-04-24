@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Abstract="True" Name="RA_BuildingTopBase" ParentName="BuildingBase">
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <selectable>true</selectable>
+    <fillPercent>0.20</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <designationCategory>Misc</designationCategory>
+    <rotatable>true</rotatable>
+    <uiIconOffset>(0, 0)</uiIconOffset>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+  </ThingDef>
+
+
+	<ThingDef ParentName="RA_BuildingTopBase">
+		<defName>Shittim_Chest</defName>
+		<label>Shittim Chest</label>
+		<description>A pad that contained the OS--Shittim Chest.You can use it to contact with Schale and recurit students from Kivotos.\n\nThis device is powered by radioactive battery, so it can be used without external power supply.</description>
+		<thingClass>RimArchive.Building_ShittimChest</thingClass>
+		<size>(1,1)</size>
+		<pathCost>30</pathCost>
+		<minTechLevelToBuild>Spacer</minTechLevelToBuild>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,1)</interactionCellOffset>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<researchPrerequisites>
+			<li>BA_Tech_ShittimChest</li>
+		</researchPrerequisites>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
+			<WorkToBuild>300</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Mass>0.5</Mass>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>BA_Tech_ShittimChest</researchPrerequisite>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<displayPriority>999</displayPriority>
+		</recipeMaker>
+		<costList>
+			<Steel>6</Steel>
+			<Plasteel>2</Plasteel>
+			<Uranium>2</Uranium>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Small</destroySound>
+			<isEdifice>false</isEdifice>
+			<canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+		</building>
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<texPath>Building/ShittimChest/Pad</texPath>
+			<drawSize>(1.15,1.15)</drawSize>
+			<shadowData>
+				<volume>(0, 0.1, 0.1)</volume>
+				<offset>(0, 0, 0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.1,0.1,0.1,0.1)</rect>
+			</damageData>
+		</graphicData>
+	</ThingDef>
+
+</Defs>
