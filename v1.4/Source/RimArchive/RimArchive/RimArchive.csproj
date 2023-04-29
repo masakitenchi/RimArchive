@@ -43,6 +43,8 @@
     <Compile Include="Boss\RaidDef.cs" />
     <Compile Include="Boss\BossGroupWorker.cs" />
     <Compile Include="Boss\RaidGroupWave.cs" />
+    <Compile Include="Components\Comp_TimeLimitedExistence.cs" />
+    <Compile Include="Components\Comp_UseMedikit.cs" />
     <Compile Include="Components\RimArchiveWorldComponent.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="Defs\BossDef.cs" />
