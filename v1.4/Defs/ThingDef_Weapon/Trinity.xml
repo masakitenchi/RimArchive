@@ -292,7 +292,7 @@
 		<graphicData>
 			<texPath>Weapon/Trinity/Hanako</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.1</drawSize>
+			<drawSize>1</drawSize>
 		</graphicData>
 		<weaponTags>
 			<li>BAW_Hanako</li>
@@ -346,6 +346,72 @@
 		<projectile>
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>15</damageAmountBase>
+			<speed>70</speed>
+		</projectile>
+	</ThingDef>
+	
+	<!--花子-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Serina</defName>
+		<label>Tactical Therapy</label>
+		<description>Serina's assault rifle.\n\nCapable of dispensing more than one kind of shots.</description>
+		<graphicData>
+			<texPath>Weapon/Trinity/Serina</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.95</drawSize>
+		</graphicData>
+		<weaponTags>
+			<li>BAW_Serina</li>
+		</weaponTags>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>BA_Weapon_Trinity</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>420</displayPriority>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>40000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.46</AccuracyTouch>
+			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyMedium>0.62</AccuracyMedium>
+			<AccuracyLong>0.49</AccuracyLong>
+			<RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Serina</defaultProjectile>
+				<warmupTime>1.25</warmupTime>
+				<range>29.8</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Serina</defName>
+		<label>Bullet of Tactical Therapy</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_yellow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>9</damageAmountBase>
 			<speed>70</speed>
 		</projectile>
 	</ThingDef>
