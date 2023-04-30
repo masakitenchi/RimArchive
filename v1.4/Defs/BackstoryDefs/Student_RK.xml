@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--救援骑士团学生背景故事-->
+	<!--芹娜-->
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
+		<defName>Backstory_Serina</defName>
+		<title>Sumi Serina</title>
+		<titleShort>Sumi Serina</titleShort>
+		<baseDesc>A kind girl who is devoted to the Rescue Knights of Trinity.</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>RimArchive_Serina</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	
+
+	
+	
+	
+
+
+</Defs>
