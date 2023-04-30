@@ -68,6 +68,7 @@
     <Compile Include="SchoolNameModExtension.cs" />
     <Compile Include="Defs\DefOfs\StudentDefOf.cs" />
     <Compile Include="RAFaction.cs" />
+    <Compile Include="ShittimChest.cs" />
     <Compile Include="Thing\CompProperties_InvadePillar.cs" />
     <Compile Include="Thing\CompProperties_MoteEmitterIncreasingSize.cs" />
     <Compile Include="Thing\CompProperties_StunHandler.cs" />
