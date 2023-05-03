@@ -8,6 +8,23 @@
 	<BA_Weapon_Trinity.label>三一综合学园</BA_Weapon_Trinity.label>
 	<BA_Weapon_SRT.label>SRT特殊学园</BA_Weapon_SRT.label>
 	<BA_Weapon_Shanhaijing.label>山海经高级中学</BA_Weapon_Shanhaijing.label>
+	<BA_Weapon_Arius.label>阿里乌斯分校</BA_Weapon_Arius.label>
+	<BA_Weapon_Redwinter.label>赤冬联邦中学</BA_Weapon_Redwinter.label>
+	
+	
+	
+	<BA_Tech_ShittimChest.label>边缘档案：什亭之匣</BA_Tech_ShittimChest.label>
+	<BA_Tech_ShittimChest.description>学习制作什亭之匣的方法，以便在边缘世界上与夏莱建立联系。</BA_Tech_ShittimChest.description>
+
+	<BA_Weapon_Abydos.description>现在你可以制作来自阿拜多斯高等学校的武器了</BA_Weapon_Abydos.description>
+	<BA_Weapon_Gehenna.description>现在你可以制作来自格黑娜学园的武器了</BA_Weapon_Gehenna.description>
+	<BA_Weapon_Hyakkiyako.description>现在你可以制作来自百鬼夜行联合学园的武器了</BA_Weapon_Hyakkiyako.description>
+	<BA_Weapon_Millennium.description>现在你可以制作来自千年科学学园的武器了</BA_Weapon_Millennium.description>
+	<BA_Weapon_Trinity.description>现在你可以制作来自三一综合学园的武器了</BA_Weapon_Trinity.description>
+	<BA_Weapon_SRT.description>现在你可以制作来自SRT特殊学园的武器了</BA_Weapon_SRT.description>
+	<BA_Weapon_Shanhaijing.description>现在你可以制作来自山海经高级中学的武器了</BA_Weapon_Shanhaijing.description>
+	<BA_Weapon_Arius.description>现在你可以制作来自阿里乌斯分校的武器了</BA_Weapon_Arius.description>
+	<BA_Weapon_Redwinter.description>现在你可以制作来自赤冬联邦中学的武器了</BA_Weapon_Redwinter.description>
 
 
 </LanguageData>
