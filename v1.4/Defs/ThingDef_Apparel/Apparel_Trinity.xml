@@ -40,6 +40,25 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BA_ApparelBase">
+		<defName>BAA_Body_Serina</defName>
+		<label>Serina_Body</label>
+		<description>Serina_Body</description>
+		<graphicData>
+			<texPath>Things/Apparel/Apparel_Generic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Pawns/Trinity/Serina/Body/Serina</wornGraphicPath>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+		</apparel>
+	</ThingDef>
+	
+	<ThingDef ParentName="BA_ApparelBase">
 		<defName>BAA_Body_Koharu</defName>
 		<label>Koharu_Body</label>
 		<description>Koharu_Body</description>
@@ -49,6 +68,25 @@
 		</graphicData>
 		<apparel>
 			<wornGraphicPath>Pawns/Trinity/Koharu/Body/Koharu</wornGraphicPath>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+		</apparel>
+	</ThingDef>
+
+    <ThingDef ParentName="BA_ApparelBase">
+		<defName>BAA_Body_Hanako</defName>
+		<label>Hanako_Body</label>
+		<description>Hanako_Body</description>
+		<graphicData>
+			<texPath>Things/Apparel/Apparel_Generic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Pawns/Trinity/Hanako/Body/Hanako</wornGraphicPath>
 			<bodyPartGroups>
 				<li>Torso</li>
 			</bodyPartGroups>

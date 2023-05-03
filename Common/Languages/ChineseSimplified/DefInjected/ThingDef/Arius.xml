@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<!--纱织-->
+    <BAW_Saori.label>阿里乌斯制突击步枪</BAW_Saori.label>
+	<BAW_Saori.description>纱织使用的突击步枪。\n\n追求绝对效率的纱织自己特制的步枪。一旦捕捉到目标，不击倒绝不罢休。</BAW_Saori.description>
+	<BAW_Saori.tools.0.label>枪托</BAW_Saori.tools.0.label>
+	<BAW_Saori.tools.1.label>枪管</BAW_Saori.tools.1.label>
+
+	<!--墩子-->
+	<BAW_Atsuko.label>天蝎座</BAW_Atsuko.label>
+	<BAW_Atsuko.description>亚津子使用的冲锋枪。\n\n短小的枪身蕴藏着强大火力，尤其适合近距离战斗。</BAW_Atsuko.description>
+	<BAW_Atsuko.tools.0.label>枪托</BAW_Atsuko.tools.0.label>
+	<BAW_Atsuko.tools.1.label>枪管</BAW_Atsuko.tools.1.label>
+
+	<!--美咲-->
+	<BAW_Misaki.label>圣徒掠夺者</BAW_Misaki.label>
+	<BAW_Misaki.description>美咲使用的火箭发射器。\n\n火箭弹发射后达到一定高度，将分裂成多个炮弹，造成大范围爆炸。</BAW_Misaki.description>
+	<BAW_Misaki.tools.0.label>枪托</BAW_Misaki.tools.0.label>
+	<BAW_Misaki.tools.1.label>枪管</BAW_Misaki.tools.1.label>
+	
+	<!--日和-->
+	<BAW_Hiyori.label>个性</BAW_Hiyori.label>
+	<BAW_Hiyori.description>日和使用的狙击步枪。\n\n精准瞄准敌人飞行20mm的子弹，即使是在弹如雨下的战场中存在感也非常强。</BAW_Hiyori.description>
+	<BAW_Hiyori.tools.0.label>枪托</BAW_Hiyori.tools.0.label>
+	<BAW_Hiyori.tools.1.label>枪管</BAW_Hiyori.tools.1.label>
+  
+
+
+
+
+</LanguageData>

@@ -27,9 +27,6 @@
         <rect>(0.2,0.2,0.6,0.6)</rect>
       </damageData>
     </graphicData>
-    <comps>
-      <li Class="CompProperties_Flickable"/>
-    </comps>
   </ThingDef>
 
 

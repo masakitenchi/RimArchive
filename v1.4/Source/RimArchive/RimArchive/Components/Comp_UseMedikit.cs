@@ -19,6 +19,7 @@ public class Comp_UseMedikit : CompUseEffect
     public override void DoEffect(Pawn usedBy)
     {
         base.DoEffect(usedBy);
+        Log.Message("Step1");
         TaggedString taggedString = HealPawnWound.HealWound(usedBy);
     }
 
@@ -30,7 +31,7 @@ public class HealPawnWound
     public static TaggedString HealWound(Pawn pawn)
     {
         StringBuilder HealWound = new StringBuilder();
-        float num = 6f;
+        float num = 5f;
         for (int i = 0; i < num; i++)
         {
             Hediff hediff = HealPawnWound.FindInjury(pawn, null);
