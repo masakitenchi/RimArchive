@@ -3,7 +3,7 @@
 
 	<RimArchive.StudentDef ParentName="RA_BasePawn">
 		<defName>BA_Hanako</defName>
-		<label>梓</label>
+		<label>花子</label>
 		<race>KivotosStudent</race>
 		<description>トリニティ総合学園所属、補習授業部の感性豊かな女の子。\n\n一見するとお淑やかで気品のあるお嬢さん……といった感じだが、実は口を開くと性的な言葉が止まらない問題児。\n\nそれを知っている補習授業部の部員たちは、ハナコが何かを言おうとするたびに気が気でない様子。</description>
 		<nameMaker>NamerNormalStudents</nameMaker>
