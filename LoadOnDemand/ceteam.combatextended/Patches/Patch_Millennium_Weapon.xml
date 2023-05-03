@@ -313,35 +313,7 @@
 		</FireModes>
 		<AllowWithRunAndGun>false</AllowWithRunAndGun>
 	</Operation>
-
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs</xpath>
-		<value>
-			<ThingDef ParentName="BaseBullet">
-				<defName>Bullet_ChargeLanceSuperNova</defName>
-				<label>Supernova</label>
-				<graphicData>
-					<texPath>Projectile/Hikari</texPath>
-					<graphicClass>Graphic_Single</graphicClass>
-				</graphicData>
-				<projectile Class="CombatExtended.ProjectilePropertiesCE">
-					<damageAdjacentTiles>true</damageAdjacentTiles>
-					<damageDef>Bullet</damageDef>
-					<damageAmountBase>80</damageAmountBase>
-					<speed>100</speed>
-					<armorPenetrationSharp>80</armorPenetrationSharp>
-					<armorPenetrationBlunt>240</armorPenetrationBlunt>
-					<secondaryDamage>
-						<li>
-							<def>EMP</def>
-							<amount>50</amount>
-						</li>
-					</secondaryDamage>
-				</projectile>
-			</ThingDef>
-		</value>
-	</Operation>
-
+	
 	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>BAW_Noa</defName>
 		<statBases>
