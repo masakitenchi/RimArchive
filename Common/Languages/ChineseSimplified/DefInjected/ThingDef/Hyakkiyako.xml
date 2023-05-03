@@ -14,6 +14,18 @@
 	<BAW_Wakamo.tools.1.label>枪管</BAW_Wakamo.tools.1.label>
 	<BAW_Wakamo.tools.2.label>刺刀</BAW_Wakamo.tools.2.label>
 
+	<!--小满-->
+	<BAW_Michiru.label>三千留流溢流喷枪</BAW_Michiru.label>
+	<BAW_Michiru.description>三千留爱用的霰弹枪。\n\n为了能够运用她的忍术，进行了各种改造，比如能射击特殊子弹、追加弹夹等。虽然反而更难使用了，可小三千留却说“这样也很有味道呢！”。</BAW_Michiru.description>
+	<BAW_Michiru.tools.0.label>枪托</BAW_Michiru.tools.0.label>
+	<BAW_Michiru.tools.1.label>枪管</BAW_Michiru.tools.1.label>
+
+	<!--月咏-->
+	<BAW_Tsukuyo.label>月咏流冲锋枪</BAW_Tsukuyo.label>
+	<BAW_Tsukuyo.description>月咏十分重视的冲锋枪。\n\n月咏不擅长处理枪械，所以小满和泉奈帮忙添加了各种装饰，并且进行了改造。\n\n对月咏来说，它是无可替代的。每个重要的瞬间，她都更加温柔地握住枪身。</BAW_Tsukuyo.description>
+	<BAW_Tsukuyo.tools.0.label>枪托</BAW_Tsukuyo.tools.0.label>
+	<BAW_Tsukuyo.tools.1.label>枪管</BAW_Tsukuyo.tools.1.label>
+
 	
   
 

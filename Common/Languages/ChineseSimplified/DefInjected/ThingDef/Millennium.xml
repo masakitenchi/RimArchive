@@ -48,6 +48,36 @@
 	<BAW_Noa.description>诺亚使用的带有改装附件的手枪。\n\n拉开枪托就可以像冲锋枪一样连射。</BAW_Noa.description>
 	<BAW_Noa.tools.0.label>握把</BAW_Noa.tools.0.label>
 	<BAW_Noa.tools.1.label>枪管</BAW_Noa.tools.1.label>
+
+	<!--莉音-->
+	<BAW_Rio.label>最终手段</BAW_Rio.label>
+	<BAW_Rio.description>莉音所使用的左轮手枪。\n\n为了达成她的目标，必须要采取任何必要的措施。\n\n而对于孑然一身的莉音来说，暴力同样是备选的必要手段之一。</BAW_Rio.description>
+	<BAW_Rio.tools.0.label>枪托</BAW_Rio.tools.0.label>
+	<BAW_Rio.tools.1.label>枪管</BAW_Rio.tools.1.label>
+
+	<!--邮箱-->
+	<BAW_Yuuka.label>逻辑与理性</BAW_Yuuka.label>
+	<BAW_Yuuka.description>优香使用的冲锋枪。\n\n在重要的时机、以及需要适当应对的时候，它会帮助优香做出合理的判断。</BAW_Yuuka.description>
+	<BAW_Yuuka.tools.0.label>握把</BAW_Yuuka.tools.0.label>
+	<BAW_Yuuka.tools.1.label>枪管</BAW_Yuuka.tools.1.label>
+
+	<!--时-->
+	<BAW_Toki.label>秘密时间</BAW_Toki.label>
+	<BAW_Toki.description>时专用的突击步枪。\n\n拥有与外观相符的性能，将排除任务中出现的任何障碍。\n\n据说枪名不是自己取的，而是另有其人。</BAW_Toki.description>
+	<BAW_Toki.tools.0.label>握把</BAW_Toki.tools.0.label>
+	<BAW_Toki.tools.1.label>枪管</BAW_Toki.tools.1.label>
+
+	<!--明日奈-->
+	<BAW_Asuna.label>超惊喜派对</BAW_Asuna.label>
+	<BAW_Asuna.description>明日奈使用的突击步枪。\n\n为什么取这么个热闹又快乐的名字呢，明日奈好像也忘记了。</BAW_Asuna.description>
+	<BAW_Asuna.tools.0.label>握把</BAW_Asuna.tools.0.label>
+	<BAW_Asuna.tools.1.label>枪管</BAW_Asuna.tools.1.label>
+
+	<!--朱音-->
+	<BAW_Akane.label>静音方案</BAW_Akane.label>
+	<BAW_Akane.description>朱音经常携带的手枪。\n\n它的名字与平时爱用的爆炸物形成了鲜明对比。</BAW_Akane.description>
+	<BAW_Akane.tools.0.label>握把</BAW_Akane.tools.0.label>
+	<BAW_Akane.tools.1.label>枪管</BAW_Akane.tools.1.label>
   
 
 

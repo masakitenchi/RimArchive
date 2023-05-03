@@ -31,6 +31,24 @@
 	<BAW_Haruka.tools.0.label>枪托</BAW_Haruka.tools.0.label>
 	<BAW_Haruka.tools.1.label>枪管</BAW_Haruka.tools.1.label>
 
+	<!--亚子-->
+	<BAW_Ako.label>大人物</BAW_Ako.label>
+	<BAW_Ako.description>亚子携带的手枪。\n\n亚子被任命为行政官之际，为表彰她一直以来的辛勤努力，阳奈将这把枪奖励给了她。\n\n她一直随身携带，十分重视。</BAW_Ako.description>
+	<BAW_Ako.tools.0.label>枪托</BAW_Ako.tools.0.label>
+	<BAW_Ako.tools.1.label>枪管</BAW_Ako.tools.1.label>
+
+	<!--伊织-->
+	<BAW_Iori.label>爆裂一击</BAW_Iori.label>
+	<BAW_Iori.description>伊织在处理违反规则之人时使用的狙击步枪。\n\n虽然是连狙击镜都没有的简单造型，伊织却说：高手不择工具。</BAW_Iori.description>
+	<BAW_Iori.tools.0.label>枪托</BAW_Iori.tools.0.label>
+	<BAW_Iori.tools.1.label>枪管</BAW_Iori.tools.1.label>
+
+	<!--千夏-->
+	<BAW_Chinatsu.label>支援指针</BAW_Chinatsu.label>
+	<BAW_Chinatsu.description>千夏爱用的手枪。\n\n比起用来攻击谁，它在指示业务方面用得比较多，比如显示某地的位置。</BAW_Chinatsu.description>
+	<BAW_Chinatsu.tools.0.label>枪托</BAW_Chinatsu.tools.0.label>
+	<BAW_Chinatsu.tools.1.label>枪管</BAW_Chinatsu.tools.1.label>
+
 	
   
 
