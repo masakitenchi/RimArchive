@@ -86,6 +86,13 @@
 				<rect>(0.1,0.1,0.1,0.1)</rect>
 			</damageData>
 		</graphicData>
+	    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <basePowerConsumption>0</basePowerConsumption>
+      </li>
+    </comps>
 	</ThingDef>
 
 </Defs>
