@@ -10,6 +10,19 @@
 			<Flammability>0</Flammability>
 			<DeteriorationRate>0</DeteriorationRate>
         </statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+		    <layers>
+			    <li>Overhead</li>
+			    <li>Shell</li>
+		    </layers>
+		</apparel>
     </ThingDef>
     
 </Defs>

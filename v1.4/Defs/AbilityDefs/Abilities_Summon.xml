@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<AbilityDef>
+		<defName>BA_SummonSerinaBox</defName>
+		<label>Main</label>
+		<description>Intensive care set A!</description>
+		<iconPath>AbilityIcon/1001</iconPath>
+		<warmupMoteSocialSymbol>AbilityIcon/1001</warmupMoteSocialSymbol>
+		<warmupSound>MoralistAbility_Warmup</warmupSound>
+		<jobDef>CastAbilityOnThing</jobDef>
+		<stunTargetWhileCasting>True</stunTargetWhileCasting>
+		<showPsycastEffects>False</showPsycastEffects>
+		<displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+		<uiOrder>3</uiOrder>
+		<showWhenDrafted>true</showWhenDrafted>
+		<hostile>false</hostile>
+		<cooldownTicksRange>3000</cooldownTicksRange>
+		<comps>
+			<li Class="RimArchive.CompProperties_SpawnSummon">
+				<ThingToSummon>BA_Serinabox</ThingToSummon>
+			</li>
+		</comps>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>True</drawAimPie>
+			<range>16.8</range>
+			<warmupTime>0.65</warmupTime>
+			<targetParams>
+				<canTargetBuildings>False</canTargetBuildings>
+				<neverTargetHostileFaction>True</neverTargetHostileFaction>
+				<canTargetLocations>True</canTargetLocations>
+				<canTargetPawns>False</canTargetPawns>
+			</targetParams>
+		</verbProperties>
+	</AbilityDef>
+</Defs>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<RimArchive.StudentDef ParentName="RA_BasePawn">
+		<defName>BA_Hanako</defName>
+		<label>花子</label>
+		<race>KivotosStudent</race>
+		<description>トリニティ総合学園所属、補習授業部の感性豊かな女の子。\n\n一見するとお淑やかで気品のあるお嬢さん……といった感じだが、実は口を開くと性的な言葉が止まらない問題児。\n\nそれを知っている補習授業部の部員たちは、ハナコが何かを言おうとするたびに気が気でない様子。</description>
+		<nameMaker>NamerNormalStudents</nameMaker>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<initialResistanceRange>10~11</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RimArchive_Adult</li>
+					<li>RimArchive_Hanako</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>9999~9999</weaponMoney>
+		<minGenerationAge>15</minGenerationAge>
+		<maxGenerationAge>16</maxGenerationAge>
+		<weaponTags>
+			<li>BAW_Hanako</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="RimArchive.RA_StudentModExtension">
+				<School>Trinity</School>
+			</li>
+		</modExtensions>
+		<apparelRequired Inherit="False">
+			<li>BAA_Body_Hanako</li>
+		</apparelRequired>
+		<forcedHair>Bald</forcedHair>
+
+		<!-- Until here is inherited from PawnKindDef -->
+		<!-- Below is new field added in StudentDef-->
+		<name>
+			<first>Hanako</first>
+			<nick>Hanako</nick>
+			<last>Urawa</last>
+		</name>
+		<School>Trinity</School>
+		<forcedHeadType>Female_AverageNormal</forcedHeadType>
+		<skills>
+			<Animals>
+				<level>3</level>
+				<fireLevel>0</fireLevel>
+			</Animals>
+			<Artistic>
+				<level>5</level>
+				<fireLevel>1</fireLevel>
+			</Artistic>
+			<Construction>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
+			</Construction>
+			<Cooking>
+				<level>8</level>
+				<fireLevel>1</fireLevel>
+			</Cooking>
+			<Crafting>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Crafting>
+			<Intellectual>
+				<level>3</level>
+				<fireLevel>1</fireLevel>
+			</Intellectual>
+			<Medicine>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Medicine>
+			<Melee>
+				<level>7</level>
+				<fireLevel>0</fireLevel>
+			</Melee>
+			<Mining>
+				<level>0</level>
+				<fireLevel>1</fireLevel>
+			</Mining>
+			<Plants>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Plants>
+			<Shooting>
+				<level>8</level>
+				<fireLevel>1</fireLevel>
+			</Shooting>
+			<Social>
+				<level>8</level>
+				<fireLevel>0</fireLevel>
+			</Social>
+		</skills>
+	</RimArchive.StudentDef>
+
+</Defs>

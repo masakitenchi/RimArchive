@@ -47,7 +47,7 @@ public class StudentDocument : GameComponent
             aliveStudents.RemoveWhere(s => p.kindDef == s);
             //防止id重复
             new Traverse(Find.WorldPawns).Field<HashSet<Pawn>>("pawnsDead").Value.RemoveWhere(x => x.Name == p.Name);
-            float hostiledays = Rand.Range(0.1f, 0.2f);
+            float hostiledays = Rand.Range(10, 15);
             Messages.Message("StudentHeavilyInjuredAngry".Translate(p.Name, hostiledays.ToString("F1")), MessageTypeDefOf.NegativeEvent);
             hostileDaysAsTick = (int)(hostiledays * GenDate.TicksPerDay);
             Faction shale = Find.FactionManager.AllFactions.Where(x => x.def == RAFactionDefOf.Shale).First();

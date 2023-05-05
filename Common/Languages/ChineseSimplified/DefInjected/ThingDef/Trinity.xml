@@ -24,6 +24,18 @@
 	<BAW_Azusa.description>梓经常拿着的枪。\n\n枪身刻着文字“一切皆是虚空。无论行至何处，一切皆虚”。</BAW_Azusa.description>
 	<BAW_Azusa.tools.0.label>枪托</BAW_Azusa.tools.0.label>
 	<BAW_Azusa.tools.1.label>枪管</BAW_Azusa.tools.1.label>
+
+	<!--花子-->
+	<BAW_Hanako.label>真诚之愿</BAW_Hanako.label>
+	<BAW_Hanako.description>花子的狙击步枪。\n\n即便向她打听这把枪名的由来，她也不告诉。</BAW_Hanako.description>
+	<BAW_Hanako.tools.0.label>枪托</BAW_Hanako.tools.0.label>
+	<BAW_Hanako.tools.1.label>枪管</BAW_Hanako.tools.1.label>
+
+	<!--芹娜-->
+	<BAW_Serina.label>战术治愈</BAW_Serina.label>
+	<BAW_Serina.description>芹娜所持突击步枪。\n\n就使用方法来说，它应该不会沦落为注射器吧……大概。</BAW_Serina.description>
+	<BAW_Serina.tools.0.label>枪托</BAW_Serina.tools.0.label>
+	<BAW_Serina.tools.1.label>枪管</BAW_Serina.tools.1.label>
   
 
 

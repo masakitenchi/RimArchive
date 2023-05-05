@@ -11,7 +11,7 @@
 			<drawSize>1.33</drawSize>
 		</graphicData>
 		<weaponTags>
-			<li>BAW_Millennium</li>
+			<li>BAW_Hibiki</li>
 		</weaponTags>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<recipeMaker>
@@ -136,6 +136,208 @@
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>10</damageAmountBase>
 			<speed>55</speed>
+		</projectile>
+	</ThingDef>
+	
+	<!--朱音-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Akane</defName>
+		<label>Silent Solution</label>
+		<description>A pistol that Akane always carries.\n\nNamed such in contrast to the explosives she usually tends to use.</description>
+		<graphicData>
+			<texPath>Weapon/Millennium/Akane</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<weaponTags>
+			<li>BAW_Akane</li>
+		</weaponTags>
+		<soundInteract>Interact_Revolver</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>BA_Weapon_Millennium</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<displayPriority>420</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>26000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.75</AccuracyTouch>
+			<AccuracyShort>0.81</AccuracyShort>
+			<AccuracyMedium>0.74</AccuracyMedium>
+			<AccuracyLong>0.66</AccuracyLong>
+			<RangedWeapon_Cooldown>1.45</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Akane</defaultProjectile>
+				<warmupTime>0.85</warmupTime>
+				<range>22</range>
+				<soundCast>Shot_HeavySMG</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>6</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Akane</defName>
+		<label>Bullet of Silent Solution</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_cyan</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.95</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>19</damageAmountBase>
+			<speed>75</speed>
+		</projectile>
+	</ThingDef>
+	
+	<!--明日奈-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Asuna</defName>
+		<label>Surprise Party</label>
+		<description>The assault rifle used by Asuna.\n\nIt seems she has forgotten the meaning behind its fun and lively sounding name.</description>
+		<graphicData>
+			<texPath>Weapon/Millennium/Asuna</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.30</drawSize>
+		</graphicData>
+		<weaponTags>
+			<li>BAW_Asuna</li>
+		</weaponTags>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>BA_Weapon_Millennium</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>420</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>40000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.59</AccuracyTouch>
+			<AccuracyShort>0.66</AccuracyShort>
+			<AccuracyMedium>0.79</AccuracyMedium>
+			<AccuracyLong>0.68</AccuracyLong>
+			<RangedWeapon_Cooldown>0.95</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>7</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Asuna</defaultProjectile>
+				<warmupTime>1.45</warmupTime>
+				<range>29</range>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+				<soundCast>Shot_HeavySMG</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Asuna</defName>
+		<label>Bullet of Surprise Party</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_yellow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.55</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>16</damageAmountBase>
+			<speed>60</speed>
+		</projectile>
+	</ThingDef>
+	
+	<!--时-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Toki</defName>
+		<label>Secret Time</label>
+		<description>Assault rifle used by Toki./n/nIt has the performance to match its appearance, and eliminates all targets that interfere with her mission. Toki didn't choose the name, somebody else named it.</description>
+		<graphicData>
+			<texPath>Weapon/Millennium/Toki</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.35</drawSize>
+		</graphicData>
+		<weaponTags>
+			<li>BAW_Toki</li>
+		</weaponTags>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>BA_Weapon_Millennium</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>420</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>40000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.89</AccuracyTouch>
+			<AccuracyShort>0.91</AccuracyShort>
+			<AccuracyMedium>0.79</AccuracyMedium>
+			<AccuracyLong>0.71</AccuracyLong>
+			<RangedWeapon_Cooldown>1.55</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Momoi</defaultProjectile>
+				<warmupTime>1.85</warmupTime>
+				<range>34.6</range>
+				<burstShotCount>5</burstShotCount>
+				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+				<soundCast>Shot_ChargeRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Toki</defName>
+		<label>Bullet of Secret Time</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_blue</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.75</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>11</damageAmountBase>
+			<speed>85</speed>
 		</projectile>
 	</ThingDef>
 	

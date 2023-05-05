@@ -47,6 +47,8 @@
 								<Backstory_Haruka>Pawns/Gehenna/Haruka/Halo/Haruka</Backstory_Haruka>
 								<Backstory_Noa>Pawns/Millennium/Noa/Halo/Noa</Backstory_Noa>
 								<Backstory_Rio>Pawns/Millennium/Rio/Halo/Rio</Backstory_Rio>
+							    <Backstory_Hanako>Pawns/Trinity/Hanako/Halo/Hanako</Backstory_Hanako>
+						        <Backstory_Serina>Pawns/Trinity/Serina/Halo/Serina</Backstory_Serina>
 							</backstoryGraphics>
 						</li>
 						<!--头-->
@@ -77,6 +79,8 @@
 								<Backstory_Haruka>Pawns/Gehenna/Haruka/Head/Haruka</Backstory_Haruka>
 								<Backstory_Noa>Pawns/Millennium/Noa/Head/Noa</Backstory_Noa>
 								<Backstory_Rio>Pawns/Millennium/Rio/Head/Rio</Backstory_Rio>
+								<Backstory_Hanako>Pawns/Trinity/Hanako/Head/Hanako</Backstory_Hanako>
+								<Backstory_Serina>Pawns/Trinity/Serina/Head/Serina</Backstory_Serina>
 
 							</backstoryGraphics>
 						</li>
@@ -108,6 +112,8 @@
 								<Backstory_Haruka>Pawns/Gehenna/Haruka/Hair/Haruka</Backstory_Haruka>
 								<Backstory_Noa>Pawns/Millennium/Noa/Hair/Noa</Backstory_Noa>
 								<Backstory_Rio>Pawns/Millennium/Rio/Hair/Rio</Backstory_Rio>
+							    <Backstory_Hanako>Pawns/Trinity/Hanako/Hair/Hanako</Backstory_Hanako>
+								<Backstory_Serina>Pawns/Trinity/Serina/Hair/Serina</Backstory_Serina>
 
 							</backstoryGraphics>
 						</li>
@@ -139,6 +145,8 @@
 								<Backstory_Haruka>Pawns/Gehenna/Haruka/Hair/Haruka</Backstory_Haruka>
 								<Backstory_Noa>Pawns/Millennium/Noa/Hair/Noa</Backstory_Noa>
 								<Backstory_Rio>Pawns/Millennium/Rio/Hair/Rio</Backstory_Rio>
+							    <Backstory_Hanako>Pawns/Trinity/Hanako/Hair/Hanako</Backstory_Hanako>
+							    <Backstory_Serina>Pawns/Trinity/Serina/Hair/Serina</Backstory_Serina>
 							</backstoryGraphics>
 						</li>
 						<!-- 此处开始为装备hediff部分，暂时由于总图数过多的原因废除 -->

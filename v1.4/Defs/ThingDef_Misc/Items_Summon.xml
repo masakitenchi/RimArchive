@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>BA_Serinabox</defName>
+		<label>First aid box</label>
+		<description>Serina's First aid box.</description>
+		<thingClass>RimArchive.contactMedikit</thingClass>
+		<pathCost>0</pathCost>
+		<graphicData>
+			<texPath>Things/Summon/Medikit</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.6</drawSize>
+		</graphicData>
+		<building>
+			<expandHomeArea>false</expandHomeArea>
+		</building>
+		<tickerType>Normal</tickerType>
+		<category>Item</category>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<tradeability>None</tradeability>
+		<selectable>true</selectable>
+		<statBases>
+			<Mass>0.1</Mass>
+			<Flammability>0</Flammability>
+			<MarketValue>5</MarketValue>
+		</statBases>
+		<stackLimit>1</stackLimit>
+		<comps>
+			<li Class="RimArchive.CompProperties_ExistedTicks">
+				<ExistedTicks>900</ExistedTicks>
+			</li>
+			<li Class="RimArchive.CompProperties_contackMedkit">
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>医疗箱会治疗第一个触碰它的殖民者！(在15秒内消失)</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>BA_FuukaPot</defName>
+		<label>Lunch Club's Meal</label>
+		<description>Fuuka's Lunch Club's Meal.</description>
+		<thingClass>RimArchive.contactPot</thingClass>
+		<pathCost>0</pathCost>
+		<graphicData>
+			<texPath>Things/Summon/Pot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.6</drawSize>
+		</graphicData>
+		<building>
+			<expandHomeArea>false</expandHomeArea>
+		</building>
+		<tickerType>Normal</tickerType>
+		<category>Item</category>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<tradeability>None</tradeability>
+		<selectable>true</selectable>
+		<statBases>
+			<Mass>0.1</Mass>
+			<Flammability>0</Flammability>
+			<MarketValue>5</MarketValue>
+		</statBases>
+		<stackLimit>1</stackLimit>
+		<comps>
+			<li Class="RimArchive.CompProperties_ExistedTicks">
+				<ExistedTicks>900</ExistedTicks>
+			</li>
+			<li Class="RimArchive.CompProperties_contactPot">
+			</li>
+			<li Class="CompProperties_InspectString">
+				<inspectString>供给部料理会治疗伤员的两个伤口！\n使用4次后便会消失，且每个人只能接受一次治疗。(在15秒内消失)</inspectString>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

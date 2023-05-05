@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<RimArchive.StudentDef ParentName="RA_BasePawn">
+		<defName>BA_Serina</defName>
+		<label>芹娜</label>
+		<race>KivotosStudent</race>
+		<description>トリニティ総合学園所属、救護騎士団で献身する優しい少女。\n\nボランティア活動に奉仕する善良な性格の持ち主で、健康に関しては度が過ぎるほど心配性なこともあって、周りの生徒たちからは「お母さんみたい」とよく言われている。\n\n争いごとは嫌うものの、平和を脅かす敵に対しては毅然とした態度で立ち向かう。</description>
+		<nameMaker>NamerNormalStudents</nameMaker>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<initialResistanceRange>10~11</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RimArchive_Adult</li>
+					<li>RimArchive_Serina</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<weaponMoney>9999~9999</weaponMoney>
+		<minGenerationAge>15</minGenerationAge>
+		<maxGenerationAge>16</maxGenerationAge>
+		<weaponTags>
+			<li>BAW_Serina</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="RimArchive.RA_StudentModExtension">
+				<School>Trinity</School>
+			</li>
+		</modExtensions>
+		<apparelRequired Inherit="False">
+			<li>BAA_Body_Serina</li>
+		</apparelRequired>
+		<forcedHair>Bald</forcedHair>
+		<abilities>
+			<li>BA_SummonSerinaBox</li>
+		</abilities>
+
+		<!-- Until here is inherited from PawnKindDef -->
+		<!-- Below is new field added in StudentDef-->
+		<name>
+			<first>Serina</first>
+			<nick>Serina</nick>
+			<last>Sumi</last>
+		</name>
+		<School>Trinity</School>
+		<forcedHeadType>Female_AverageNormal</forcedHeadType>
+		<skills>
+			<Animals>
+				<level>3</level>
+				<fireLevel>0</fireLevel>
+			</Animals>
+			<Artistic>
+				<level>5</level>
+				<fireLevel>1</fireLevel>
+			</Artistic>
+			<Construction>
+				<level>10</level>
+				<fireLevel>2</fireLevel>
+			</Construction>
+			<Cooking>
+				<level>8</level>
+				<fireLevel>1</fireLevel>
+			</Cooking>
+			<Crafting>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Crafting>
+			<Intellectual>
+				<level>3</level>
+				<fireLevel>1</fireLevel>
+			</Intellectual>
+			<Medicine>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Medicine>
+			<Melee>
+				<level>7</level>
+				<fireLevel>0</fireLevel>
+			</Melee>
+			<Mining>
+				<level>0</level>
+				<fireLevel>1</fireLevel>
+			</Mining>
+			<Plants>
+				<level>2</level>
+				<fireLevel>0</fireLevel>
+			</Plants>
+			<Shooting>
+				<level>8</level>
+				<fireLevel>1</fireLevel>
+			</Shooting>
+			<Social>
+				<level>8</level>
+				<fireLevel>0</fireLevel>
+			</Social>
+		</skills>
+	</RimArchive.StudentDef>
+
+</Defs>

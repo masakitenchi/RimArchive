@@ -66,7 +66,7 @@
 			<armorPenetrationBase>0.35</armorPenetrationBase>
 		</projectile>
 	</ThingDef>
-
+	
 	<!--伊织-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Iori</defName>
@@ -129,8 +129,8 @@
 			<armorPenetrationBase>0.44</armorPenetrationBase>
 			<speed>70</speed>
 		</projectile>
-	</ThingDef>
-
+		</ThingDef>
+		
 	<!--狗狗-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Ako</defName>
@@ -193,6 +193,74 @@
 		<projectile>
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>9</damageAmountBase>
+			<speed>35</speed>
+			<armorPenetrationBase>0.12</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<!--千夏-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Chinatsu</defName>
+		<label>Support Pointer</label>
+		<description>Chinatsu's treasured pistol.\n\nIt seems to mostly be used for pointing at things while commanding others, rather than shooting someone.</description>
+		<graphicData>
+			<texPath>Weapon/Gehenna/Chinatsu</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+		<soundInteract>Interact_Revolver</soundInteract>
+		<weaponTags>
+			<li>BAW_Chinatsu</li>
+		</weaponTags>
+		<recipeMaker>
+			<researchPrerequisite>BA_Weapon_Gehenna</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<displayPriority>400</displayPriority>
+		</recipeMaker>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>16000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.82</AccuracyTouch>
+			<AccuracyShort>0.69</AccuracyShort>
+			<AccuracyMedium>0.55</AccuracyMedium>
+			<AccuracyLong>0.46</AccuracyLong>
+			<RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>30</Steel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Chinatsu</defaultProjectile>
+				<warmupTime>0.95</warmupTime>
+				<range>16.8</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<soundCast>Shot_Autopistol</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>6</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Chinatsu</defName>
+		<label>Bullet of Support Pointer</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_yellow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>8</damageAmountBase>
 			<speed>35</speed>
 			<armorPenetrationBase>0.12</armorPenetrationBase>
 		</projectile>
@@ -330,7 +398,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 	</ThingDef>
-
+	
 	<!--佳世子-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Kayoko</defName>
@@ -399,7 +467,7 @@
 		</projectile>
 	</ThingDef>
 
-	<!--遥香-->
+     <!--遥香-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Haruka</defName>
 		<label>Blow Away</label>
