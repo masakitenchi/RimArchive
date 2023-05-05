@@ -23,13 +23,12 @@ namespace RimArchive
             rimarchive.PatchAll(Assembly.GetExecutingAssembly());
             MethodInfo ce = AccessTools.Method("CombatExtended.CE_Utility:PartialStat", new System.Type[] { typeof(Apparel), typeof(StatDef), typeof(BodyPartRecord) });
             MethodInfo vanilla = AccessTools.Method(typeof(ArmorUtility), "ApplyArmor");
-            //DebugMessage.DbgMsg($"ce :{ce}\n vanilla:{vanilla}");
             if (ce != null)
             {
-                //DebugMessage.DbgErr("CE had changed ArmorUtilityCE.PartialStat. Please Contact mod Author");
-                rimarchive.Patch(ce, postfix: new HarmonyMethod(typeof(Harmony_CE), "PartialStatPostfix_CE"));
-                DebugMessage.DbgMsg(" successfully patched CombatExtended.CE_Utility:PartialStat(this Apparel apparel, StatDef stat, BodyPartRecord part)");
-                //DebugMessage.DbgMsg("Currently Armor Reduction is not patched for CE");
+                if (rimarchive.Patch(ce, postfix: new HarmonyMethod(typeof(Harmony_CE), "PartialStatPostfix_CE")) != null)
+                    DebugMessage.DbgMsg(" successfully patched CombatExtended.CE_Utility:PartialStat(this Apparel apparel, StatDef stat, BodyPartRecord part)");
+                else
+                    DebugMessage.DbgErr("CE had changed ArmorUtilityCE.PartialStat. Please Contact mod Author");
             }
             else if (vanilla != null)
             {
@@ -117,7 +116,7 @@ namespace RimArchive
                         {
                             pawn.stances.stunner.StunFor(GenTicks.SecondsToTicks(duration), dinfo.Instigator);
                         }
-                        else if(dinfo.Def == DamageDefOf.Stun || dinfo.Def == DamageDefOf.EMP)
+                        else if (dinfo.Def == DamageDefOf.Stun || dinfo.Def == DamageDefOf.EMP)
                         {
                             Log.Message("Absorbed = true");
                             absorbed = true;
