@@ -22,6 +22,11 @@ namespace RimArchive
     public class CompAbilityEffect_SpawnSummon : CompAbilityEffect
     {
         public List<IntVec2> One;
+
+        public static Color DustColor = new Color(0.55f, 0.85f, 0.55f, 1f);
+
+        private ThingDef thing;
+        new public CompProperties_SpawnSummon Props => this.props as CompProperties_SpawnSummon;
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
@@ -36,7 +41,7 @@ namespace RimArchive
             }
             foreach (IntVec3 intVec in this.SummonTarget(target, map))
             {
-                GenSpawn.Spawn(this.Props.ThingToSummon, intVec, map, WipeMode.Vanish);
+                GenSpawn.Spawn(this.thing, intVec, map, WipeMode.Vanish);
                 FleckMaker.ThrowDustPuffThick(intVec.ToVector3Shifted(), map, Rand.Range(1.5f, 3f), CompAbilityEffect_SpawnSummon.DustColor);
                 CompAbilityEffect_Teleport.SendSkipUsedSignal(intVec, this.parent.pawn);
             }
@@ -55,14 +60,10 @@ namespace RimArchive
 
         }
 
-        public static Color DustColor = new Color(0.55f, 0.85f, 0.55f, 1f);
-
-        private ThingDef thing;
-
         public override void Initialize(AbilityCompProperties props)
         {
             base.Initialize(props);
-            this.thing = DefDatabase<ThingDef>.AllDefsListForReading.Find(x => x.defName == CompProperties_SpawnSummon.ThingToSummon);
+            this.thing = DefDatabase<ThingDef>.AllDefsListForReading.Find(x => x.defName == this.Props.ThingToSummon);
         }
 
     }
