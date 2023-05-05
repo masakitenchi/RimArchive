@@ -5,7 +5,6 @@ using Verse;
 
 namespace RimArchive;
 
-[HarmonyPatch]
 public class Harmony_CE
 {
 

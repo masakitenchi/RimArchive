@@ -17,7 +17,13 @@
 	<BAW_Miyu.label>RABBIT-39式来福枪</BAW_Miyu.label>
 	<BAW_Miyu.description>SRT特殊学园配给美游的制式狙击枪。\n\n它精密的做工、惊人的命中率令人称道。</BAW_Miyu.description>
 	<BAW_Miyu.tools.0.label>枪托</BAW_Miyu.tools.0.label>
-		<BAW_Miyu.tools.1.label>枪管</BAW_Miyu.tools.1.label>
+	<BAW_Miyu.tools.1.label>枪管</BAW_Miyu.tools.1.label>
+
+	<!--萌绘-->
+	<BAW_MoeHG.label>Rabbit-224式手枪</BAW_MoeHG.label>
+	<BAW_MoeHG.description>SRT特殊学园配给萌绘的制式手枪。\n\n尽管是手枪但仍保有强大的连射能力，能够瞬间将弹夹内的子弹倾泻一空。</BAW_MoeHG.description>
+	<BAW_MoeHG.tools.0.label>枪托</BAW_MoeHG.tools.0.label>
+	<BAW_MoeHG.tools.1.label>枪管</BAW_MoeHG.tools.1.label>
   
 
 

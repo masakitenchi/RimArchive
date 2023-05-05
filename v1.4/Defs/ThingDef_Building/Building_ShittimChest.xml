@@ -27,9 +27,6 @@
         <rect>(0.2,0.2,0.6,0.6)</rect>
       </damageData>
     </graphicData>
-    <comps>
-      <li Class="CompProperties_Flickable"/>
-    </comps>
   </ThingDef>
 
 
@@ -89,6 +86,13 @@
 				<rect>(0.1,0.1,0.1,0.1)</rect>
 			</damageData>
 		</graphicData>
+	    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <basePowerConsumption>0</basePowerConsumption>
+      </li>
+    </comps>
 	</ThingDef>
 
 </Defs>
