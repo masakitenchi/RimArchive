@@ -2,6 +2,7 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <RuntimeIdentifiers>win;linux</RuntimeIdentifiers>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BAAE6D3E-4D4D-41B1-8F25-5A2BD8F707C7}</ProjectGuid>
@@ -83,15 +84,10 @@
     <Compile Include="Window\RecruitWindow.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.4.3641</Version>
-    </PackageReference>
-    <PackageReference Include="krafs.RimWorld.ref" Version="1.4.3641" />
-    <PackageReference Include="Lib.Harmony">
-      <Version>2.2.2</Version>
+    <PackageReference Include="krafs.RimWorld.ref" Version="1.4.3682" />
+    <PackageReference Include="Lib.Harmony" Version="2.2.2">
       <ExcludeAssets>Runtime</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AlienRace">
