@@ -9,13 +9,7 @@ public class HediffComp_ArmorReduction : HediffComp
 
     public float armorReduction = 0.1f;
 
-    public override string CompTipStringExtra
-    {
-        get
-        {
-            return base.CompTipStringExtra + "CurrentArmorReduction:".Translate() + armorReduction.ToStringPercent();
-        }
-    }
+    public override string CompTipStringExtra => base.CompTipStringExtra + "CurrentArmorReduction:".Translate() + armorReduction.ToStringPercent();
     public HediffComp_ArmorReduction()
     {
     }

@@ -414,8 +414,8 @@ namespace RimArchive.Window
             DrawLineVertical(TraitsGroup.width / 2, 0f, TraitsGroup.height);
             Rect outtrait = TraitsGroup.AtZero().LeftHalf().ContractedBy(2f);
             Rect outstory = TraitsGroup.AtZero().RightHalf().ContractedBy(2f);
-            Rect viewtrait;
-            Rect viewstory;
+            //Rect viewtrait;
+            //Rect viewstory;
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.AppendLine("Traits".Translate());
             _cachedStudent.story.traits.allTraits.Select(x => stringBuilder.AppendLine(x.LabelCap));
@@ -456,11 +456,13 @@ namespace RimArchive.Window
                 else
                 {
                     //未存活但招募过
-                    if (RimArchiveMain.StudentDocument.IsRecruited(_currentStudent))
+                    if (RimArchiveMain.StudentDocument.HasEverBeenRecruited(_currentStudent))
                     {
-                        RimArchiveMain.StudentDocument.DocumentedStudent(_currentStudent, ref _cachedStudent);
+                        _cachedStudent = RimArchiveMain.StudentDocument.GetDocumentedStudent(_currentStudent);
+                        #if DEBUG
                         DebugMessage.DbgMsg("Re-recruiting");
                         DbgMsg($"Pawn name:{_cachedStudent.Name.ToStringFull}, Gender:{_cachedStudent.gender}");
+                        #endif
                     }
                     _inStudentProfile = false;
                     RimArchiveMain.StudentDocument.Notify_StudentRecruited(_currentStudent);
