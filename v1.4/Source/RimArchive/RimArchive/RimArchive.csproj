@@ -84,7 +84,7 @@
     <Compile Include="Defs\DefOfs\SchoolDefOf.cs" />
     <Compile Include="Verbs\Verb_SummonThing.cs" />
     <Compile Include="Window\RecruitWindow.cs" />-->
-    <Compile Include="**\*.cs" Exclude="obj\**\*.*"/>
+    <Compile Include="**\*.cs" Exclude="obj\**\*.*" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.RimWorld.Ref" Version="1.4.3682" />

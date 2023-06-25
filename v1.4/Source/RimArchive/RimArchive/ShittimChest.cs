@@ -13,7 +13,7 @@ namespace RimArchive
 {
     public class Building_ShittimChest : Building_CommsConsole
     {
-        new public IEnumerable<ICommunicable> GetCommTargetSchale(Pawn myPawn) =>
+        public IEnumerable<ICommunicable> GetCommTargetSchale(Pawn myPawn) =>
 
             from x in Find.FactionManager.AllFactionsVisibleInViewOrder
             where x.def.defName == RimArchiveWorldComponent.Shale

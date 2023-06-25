@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<StorytellerDef Name="RimArchiveBaseStoryteller" ParentName="BaseStoryteller" Abstract="True" />
+
+	<StorytellerDef ParentName="RimArchiveBaseStoryteller">
+		<defName>ARONA</defName>
+		<label>アロナ</label>
+		<description>オーパーツ「シッテムの箱」のメインオペレートシステムA.R.O.N.A。
+			高性能AIで、「シッテムの箱」のシステム管理者であり、メインOS。
+			現在はシッテムの箱の所有者である先生の業務サポートなどを主に行っているようだ。</description>
+		<portraitLarge>Pawns/Schale/Arona</portraitLarge>
+		<portraitTiny>Pawns/Schale/AronaTiny</portraitTiny>
+		<comps>
+			<!-- 很多小规模袭击 -->
+			<li Class="StorytellerCompProperties_ThreatsGenerator">
+				<allowedTargetTags>
+				  <li>Map_RaidBeacon</li>
+				</allowedTargetTags>
+				<parms>
+				  <allowedThreats>Raids</allowedThreats>
+				  <onDays>1.0</onDays>
+				  <offDays>0.5</offDays>
+				  <minSpacingDays>0.04</minSpacingDays>
+				  <numIncidentsRange>1~1</numIncidentsRange>
+				  <minThreatPoints>500</minThreatPoints>
+				</parms>
+			  </li>
+		</comps>
+	</StorytellerDef>
+
+	<!-- <StorytellerDef ParentName="RimArchiveBaseStoryteller">
+		<defName>ARONA_Dark</defName>
+		<label>プラナ</label>
+		<description>もう一人のアロナ。
+			登場時の表記はA.R.O.N.Aだが、あくまでもこれはシッテムの箱のOSの名称。
+			我々のよく知る青い髪のアロナもA.R.O.N.Aであり、この黒いアロナ固有の名前ではない。</description>
+		<portraitLarge>Pawns/Schale/DarkArona</portraitLarge>
+		<portraitTiny>Pawns/Schale/DarkAronaTiny</portraitTiny>
+	</StorytellerDef> -->
+
+	<!-- <StorytellerDef ParentName="RimArchiveBaseStoryteller">
+		<defName>Momoka</defName>
+		<label>モモカ</label>
+		<description>連邦生徒会の幹部の一員。
+			本人はまともに仕事をする気はないようで、厄介事は全部シャーレに丸投げしている。
+			常に何かを食べていて、話をしている時でも明太子のお菓子は手放さない。</description>
+		<portraitLarge>Pawns/Schale/DarkArona</portraitLarge>
+		<portraitTiny>Pawns/Schale/DarkAronaTiny</portraitTiny>
+	</StorytellerDef> -->
+
+
+</Defs>

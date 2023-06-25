@@ -46,4 +46,47 @@
             </li>
         </stages>
     </HediffDef>
+
+    <!-- public virtual bool Visible => this.visible || 
+        this.CurStage == null || 
+        this.CurStage.becomeVisible;-->
+    <HediffDef>
+        <defName>BA_BossDamageReduction</defName>
+        <label>Lorem Ipsum</label>
+        <description>Lorem Ipsum</description>
+        <isBad>false</isBad>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <everCurableByItem>false</everCurableByItem>
+        <stages>
+            <li> <!-- Easy -->
+                <statFactors>
+                    <IncomingDamageFactor>1.0</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li> <!-- Normal -->
+                <minSeverity>1.0</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.8</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li> <!-- Hard -->
+                <minSeverity>2.0</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.6</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li> <!-- Insane -->
+                <minSeverity>3.0</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.4</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li> <!-- Torment -->
+                <minSeverity>4.0</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.2</IncomingDamageFactor>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
 </Defs>

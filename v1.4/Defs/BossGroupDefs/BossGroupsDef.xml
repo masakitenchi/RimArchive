@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-    
-    <RimArchive.RaidDef Name = "BA_BossGroupBase" Abstract = "True">
+
+    <RimArchive.RaidDef Name="BA_BossGroupBase" Abstract="True">
         <quest>BA_Raid</quest>
     </RimArchive.RaidDef>
 
@@ -12,18 +12,21 @@
         <!-- appearAfterTicks默认为2^32-1 -->
     </RimArchive.BossDef>
 
-    <RimArchive.RaidDef ParentName = "BA_BossGroupBase">
+    <RimArchive.RaidDef ParentName="BA_BossGroupBase">
         <defName>BA_BossGroup_HOD</defName>
         <label>HOD</label>
         <boss>BA_HOD</boss>
         <iconPath>Things/Raid/HOD</iconPath>
-        <waves> <!-- 下标从0开始 -->
+        <waves>
+            <!-- 下标从0开始 -->
             <li>
+                <label>Easy</label>
                 <!-- 喽啰 -->
-                <escorts/>
+                <escorts />
             </li>
             <li>
-                <bossHPMultiplier>1.2</bossHPMultiplier>
+                <label>Normal</label>
+                <bossDamageFactor>0.8</bossDamageFactor>
                 <escorts>
                     <Mech_Militor>5</Mech_Militor>
                 </escorts>
@@ -34,10 +37,38 @@
                 </bossApparel>
             </li>
             <li>
-                <bossHPMultiplier>1.4</bossHPMultiplier>
+                <label>Hard</label>
+                <bossDamageFactor>0.6</bossDamageFactor>
                 <escorts>
                     <Mech_Militor>7</Mech_Militor>
                     <Mech_Pikeman>2</Mech_Pikeman>
+                </escorts>
+                <bossApparel>
+                    <li>
+                        <thing>Apparel_HeavyShield</thing>
+                    </li>
+                </bossApparel>
+            </li>
+            <li>
+                <label>Insane</label>
+                <bossDamageFactor>0.4</bossDamageFactor>
+                <escorts>
+                    <Mech_Militor>9</Mech_Militor>
+                    <Mech_Pikeman>5</Mech_Pikeman>
+                    <Mech_Diabolus>1</Mech_Diabolus>
+                </escorts>
+                <bossApparel>
+                    <li>
+                        <thing>Apparel_HeavyShield</thing>
+                    </li>
+                </bossApparel>
+            </li>
+            <li>
+                <label>Torment</label>
+                <bossDamageFactor>0.2</bossDamageFactor>
+                <escorts>
+                    <Mech_Diabolus>2</Mech_Diabolus>
+                    <Mech_Apocriton>2</Mech_Apocriton>
                 </escorts>
                 <bossApparel>
                     <li>
