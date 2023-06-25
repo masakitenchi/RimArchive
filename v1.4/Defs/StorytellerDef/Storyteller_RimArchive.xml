@@ -13,19 +13,10 @@
 		<portraitTiny>Pawns/Schale/AronaTiny</portraitTiny>
 		<comps>
 			<!-- 很多小规模袭击 -->
-			<li Class="StorytellerCompProperties_ThreatsGenerator">
-				<allowedTargetTags>
-				  <li>Map_RaidBeacon</li>
-				</allowedTargetTags>
-				<parms>
-				  <allowedThreats>Raids</allowedThreats>
-				  <onDays>1.0</onDays>
-				  <offDays>0.5</offDays>
-				  <minSpacingDays>0.04</minSpacingDays>
-				  <numIncidentsRange>1~1</numIncidentsRange>
-				  <minThreatPoints>500</minThreatPoints>
-				</parms>
-			  </li>
+			<li Class="RimArchive.StorytellerCompProperties_Raid">
+				<minIntervalDays>0.5</minIntervalDays>
+				<pointFactor>0.2~0.5</pointFactor>
+			</li>
 		</comps>
 	</StorytellerDef>
 
