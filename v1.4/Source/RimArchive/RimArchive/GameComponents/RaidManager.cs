@@ -49,9 +49,10 @@ public class RaidManager : GameComponent
     {
         get
         {
-            foreach (RaidGroupWave wave in CurrentRaid.waves)
+            for (int i = 0; i < CurrentRaid.waves.Count; i++)
             {
-                FloatMenuOption option = new FloatMenuOption(wave.GetWaveDescription(), () => this.StartRaid(wave), this.CurrentRaid.icon, Color.white);
+                RaidGroupWave wave = CurrentRaid.waves[i];
+                FloatMenuOption option = new FloatMenuOption(wave.GetWaveDescription(i), () => this.StartRaid(wave), this.CurrentRaid.icon, Color.white);
                 if (RaidIncoming)
                 {
                     option.Label += "\n" + "RaidIncoming".Translate();
