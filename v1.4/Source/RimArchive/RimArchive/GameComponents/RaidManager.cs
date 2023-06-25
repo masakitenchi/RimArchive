@@ -7,6 +7,7 @@ using static RimArchive.DebugMessage;
 using System;
 using System.Text;
 using UnityEngine;
+using System.Reflection.Emit;
 
 namespace RimArchive.GameComponents;
 
@@ -20,15 +21,31 @@ namespace RimArchive.GameComponents;
  */
 
 #region Harmony
-[HarmonyPatch]
+[HarmonyPatch(typeof(Pawn), nameof(Pawn.Kill))]
 public static class Harmony_RaidManager
 {
-    [HarmonyPostfix]
-    [HarmonyPatch(typeof(Pawn), nameof(Pawn.Kill))]
+    /*[HarmonyPostfix]
     public static void Postfix(Pawn __instance)
     {
         RimArchiveMain.RaidManager.Notify_PawnKilled(__instance);
+    }*/
+    [HarmonyTranspiler]
+    public static IEnumerable<CodeInstruction> Tranpiler(IEnumerable<CodeInstruction> instructions)
+    {
+        foreach(var instruction in instructions)
+        {
+            if(instruction.OperandIs(AccessTools.Method(typeof(GameComponent_Bossgroup), "Notify_PawnKilled")))
+            {
+                yield return instruction;
+                yield return new CodeInstruction(OpCodes.Call, AccessTools.PropertyGetter(typeof(RimArchiveMain), nameof(RimArchiveMain.RaidManager)));
+                yield return new CodeInstruction(OpCodes.Ldarg_0);
+                yield return new CodeInstruction(OpCodes.Callvirt, AccessTools.Method(typeof(RaidManager), nameof(RaidManager.Notify_PawnKilled)));
+                continue;
+            }
+            yield return instruction;
+        }
     }
+
 }
 #endregion
 
@@ -160,6 +177,7 @@ public class RaidManager : GameComponent
         }
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
+            Log.Message("PostLoadInit");
             highestDifficulty ??= new Dictionary<RaidDef, int>();
             killedBosses ??= new HashSet<BossDef>();
         }
@@ -167,7 +185,8 @@ public class RaidManager : GameComponent
 
     public RaidManager(Game game)
     {
-
+        this.killedBosses = new HashSet<BossDef>();
+        this.highestDifficulty = new Dictionary<RaidDef, int>();
     }
 
 
