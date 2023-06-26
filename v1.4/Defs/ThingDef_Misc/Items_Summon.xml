@@ -16,13 +16,10 @@
 			<expandHomeArea>false</expandHomeArea>
 		</building>
 		<tickerType>Normal</tickerType>
-		<category>Item</category>
-		<thingCategories>
-			<li>ItemsMisc</li>
-		</thingCategories>
+		<category>Ethereal</category>
 		<tradeability>None</tradeability>
 		<selectable>true</selectable>
-		<statBases>
+		<statBases Inherit="False">
 			<Mass>0.1</Mass>
 			<Flammability>0</Flammability>
 			<MarketValue>5</MarketValue>
@@ -57,13 +54,10 @@
 			<expandHomeArea>false</expandHomeArea>
 		</building>
 		<tickerType>Normal</tickerType>
-		<category>Item</category>
-		<thingCategories>
-			<li>ItemsMisc</li>
-		</thingCategories>
+		<category>Ethereal</category>
 		<tradeability>None</tradeability>
 		<selectable>true</selectable>
-		<statBases>
+		<statBases Inherit="False">
 			<Mass>0.1</Mass>
 			<Flammability>0</Flammability>
 			<MarketValue>5</MarketValue>

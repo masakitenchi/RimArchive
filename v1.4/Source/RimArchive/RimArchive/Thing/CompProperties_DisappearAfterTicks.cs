@@ -22,7 +22,6 @@ public class CompDisappearAfterTicks : ThingComp
 
     public override void CompTick()
     {
-        base.CompTick();
         _ticksLeft--;
         if (_ticksLeft <= 0)
         {

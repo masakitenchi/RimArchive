@@ -43,6 +43,7 @@ public class CompHealing : ThingComp
             Messages.Message(Message, MessageTypeDefOf.PositiveEvent);
             --_healsleft;
         }
+        DebugMessage.DbgMsg($"{parent.def.defName} has {_healsleft} heals left");
         if (_healsleft <= 0)
             this.parent.Destroy(DestroyMode.Vanish);
     }

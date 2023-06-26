@@ -23,9 +23,8 @@ public class Comp_TimeLimitedExistence : ThingComp
 
     public override void CompTick()
     {
-        base.CompTick();
         _ticksLeft--;
-        if (_ticksLeft <= 0f)
+        if (_ticksLeft <= 0)
         {
             Messages.Message("Summon_disappered".Translate(this.parent.Label), MessageTypeDefOf.NeutralEvent);
             this.parent.Destroy();
@@ -36,6 +35,7 @@ public class Comp_TimeLimitedExistence : ThingComp
     {
         return GenTicks.ToStringSecondsFromTicks(this._ticksLeft);
     }
+
 }
 
 
