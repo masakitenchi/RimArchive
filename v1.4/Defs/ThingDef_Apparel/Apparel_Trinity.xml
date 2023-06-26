@@ -3,8 +3,8 @@
 
     <ThingDef ParentName="BA_ApparelBase">
         <defName>BAA_Body_Azusa</defName>
-        <label>Azusa_Body</label>
-        <description>Azusa_Body</description>
+        <label>梓</label>
+        <description>身体贴图</description>
         <graphicData>
             <texPath>Things/Apparel/Apparel_Generic</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -22,8 +22,8 @@
 
 	<ThingDef ParentName="BA_ApparelBase">
 		<defName>BAA_Body_Hifumi</defName>
-		<label>Hifumi_Body</label>
-		<description>Hifumi_Body</description>
+		<label>日富美</label>
+		<description>身体贴图</description>
 		<graphicData>
 			<texPath>Things/Apparel/Apparel_Generic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -41,8 +41,8 @@
 
 	<ThingDef ParentName="BA_ApparelBase">
 		<defName>BAA_Body_Serina</defName>
-		<label>Serina_Body</label>
-		<description>Serina_Body</description>
+		<label>芹娜</label>
+		<description>身体贴图</description>
 		<graphicData>
 			<texPath>Things/Apparel/Apparel_Generic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -60,8 +60,8 @@
 	
 	<ThingDef ParentName="BA_ApparelBase">
 		<defName>BAA_Body_Koharu</defName>
-		<label>Koharu_Body</label>
-		<description>Koharu_Body</description>
+		<label>小春</label>
+		<description>身体贴图</description>
 		<graphicData>
 			<texPath>Things/Apparel/Apparel_Generic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -79,8 +79,8 @@
 
     <ThingDef ParentName="BA_ApparelBase">
 		<defName>BAA_Body_Hanako</defName>
-		<label>Hanako_Body</label>
-		<description>Hanako_Body</description>
+		<label>花子</label>
+		<description>身体贴图</description>
 		<graphicData>
 			<texPath>Things/Apparel/Apparel_Generic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

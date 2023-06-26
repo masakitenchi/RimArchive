@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 日富美 -->
+
+  <BAW_Hifumi.label>My Necessity</BAW_Hifumi.label>
+  <BAW_Hifumi.description>The pink assault rifle carried around by Hifumi.\n\nMuch like her other favorite goods, it's a must-bring item whenever Hifumi goes out.</BAW_Hifumi.description>
+  <BAW_Hifumi.tools.0.label>stock</BAW_Hifumi.tools.0.label>
+  <BAW_Hifumi.tools.1.label>barrel</BAW_Hifumi.tools.1.label>
+
+  <Bullet_BA_Hifumi.label>Bullet of My Necessity</Bullet_BA_Hifumi.label>
+
+
+  <!-- 小春 -->
+
+  <BAW_Koharu.label>Justice Black</BAW_Koharu.label>
+  <BAW_Koharu.description>The sniper rifle used by Koharu.\n\nKoharu was still in the Justice Actualization Committee when it was given its name.</BAW_Koharu.description>
+  <BAW_Koharu.tools.0.label>stock</BAW_Koharu.tools.0.label>
+  <BAW_Koharu.tools.1.label>barrel</BAW_Koharu.tools.1.label>
+
+  <Bullet_BA_Koharu.label>Bullet of Justice Black</Bullet_BA_Koharu.label>
+
+
+  <!-- 鹤城 -->
+
+  <BAW_Tsurugi.label>Blood n Gunpowder</BAW_Tsurugi.label>
+  <BAW_Tsurugi.description>The two shotguns used by Tsurugi\n\n.Named "Blood" and "Gunpowder", they can't be told apart easily even from close range.</BAW_Tsurugi.description>
+  <BAW_Tsurugi.tools.0.label>stock</BAW_Tsurugi.tools.0.label>
+  <BAW_Tsurugi.tools.1.label>barrel</BAW_Tsurugi.tools.1.label>
+  <BAW_Tsurugi.tools.2.label>stock</BAW_Tsurugi.tools.2.label>
+
+  <Bullet_BA_Tsurugi.label>Bullet of BloodnGunpowder</Bullet_BA_Tsurugi.label>
+
+
+  <!-- 梓 -->
+
+  <BAW_Azusa.label>Et Omnia Vanitas</BAW_Azusa.label>
+  <BAW_Azusa.description>The gun that Azusa carries.\n\nThe text engraved on the gun reads "Everything is futile. No matter how far you go, it's all in vain."</BAW_Azusa.description>
+  <BAW_Azusa.tools.0.label>stock</BAW_Azusa.tools.0.label>
+  <BAW_Azusa.tools.1.label>barrel</BAW_Azusa.tools.1.label>
+
+  <Bullet_BA_Azusa.label>Bullet of Et Omnia Vanitas</Bullet_BA_Azusa.label>
+
+
+  <!-- 花子 -->
+
+  <BAW_Hanako.label>Honest Wish</BAW_Hanako.label>
+  <BAW_Hanako.description>Hanako's assault rifle.\n\nEven if you ask her where the name came from, she won't tell you.</BAW_Hanako.description>
+  <BAW_Hanako.tools.0.label>stock</BAW_Hanako.tools.0.label>
+  <BAW_Hanako.tools.1.label>barrel</BAW_Hanako.tools.1.label>
+
+  <Bullet_BA_Hanako.label>Bullet of Honest Wish</Bullet_BA_Hanako.label>
+
+
+  <!-- 芹娜 -->
+
+  <BAW_Serina.label>Tactical Therapy</BAW_Serina.label>
+  <BAW_Serina.description>Serina's assault rifle.\n\nCapable of dispensing more than one kind of shots.</BAW_Serina.description>
+  <BAW_Serina.tools.0.label>stock</BAW_Serina.tools.0.label>
+  <BAW_Serina.tools.1.label>barrel</BAW_Serina.tools.1.label>
+
+  <Bullet_BA_Serina.label>Bullet of Tactical Therapy</Bullet_BA_Serina.label>
+
+
+  <!-- 一花（暂定，因为这把武器可能还会配给三一的杂鱼酱） -->
+
+  <BAW_Ichika.label>Restraint</BAW_Ichika.label>
+  <BAW_Ichika.description>Combat Rifile used by Ichika.It is well maintained and almost brand new.\n\nThere's no need to shine when it's not necessary she said .</BAW_Ichika.description>
+  <BAW_Ichika.tools.0.label>stock</BAW_Ichika.tools.0.label>
+  <BAW_Ichika.tools.1.label>barrel</BAW_Ichika.tools.1.label>
+
+  <Bullet_BA_Ichika.label>Bullet of Restraint</Bullet_BA_Ichika.label>
+
+
+</LanguageData>

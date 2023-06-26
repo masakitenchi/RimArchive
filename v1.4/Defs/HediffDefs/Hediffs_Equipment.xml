@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-	<HediffDef>
-		<defName>BA_Hediff_Badge</defName>
-		<hediffClass>Hediff_Level</hediffClass>
+	<HediffDef Name="BadgeBase" Abstract="True">
 		<descriptionHyperlinks>
 			<ThingDef>BA_Badge_TierI</ThingDef>
 		</descriptionHyperlinks>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>BA_Hediff_Badge</defName>
+		<hediffClass>Hediff_Level</hediffClass>
 		<label>Badge</label>
 		<description>Badges</description>
 		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
@@ -65,10 +68,6 @@
 	<HediffDef>
 		<defName>BA_Hediff_Bag</defName>
 		<hediffClass>Hediff_Level</hediffClass>
-		<!-- 全部上线后记得改 -->
-		<descriptionHyperlinks>
-			<ThingDef>BA_Badge_TierI</ThingDef>
-		</descriptionHyperlinks>
 		<label>Bag</label>
 		<description>Bags</description>
 		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
@@ -139,10 +138,6 @@
 	<HediffDef>
 		<defName>BA_Hediff_Charm</defName>
 		<hediffClass>Hediff_Level</hediffClass>
-		<!-- 全部上线后记得改 -->
-		<descriptionHyperlinks>
-			<ThingDef>BA_Badge_TierI</ThingDef>
-		</descriptionHyperlinks>
 		<label>Charm</label>
 		<description>Charms</description>
 		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
@@ -214,10 +209,6 @@
 	<HediffDef>
 		<defName>BA_Hediff_Hairpin</defName>
 		<hediffClass>Hediff_Level</hediffClass>
-		<!-- 全部上线后记得改 -->
-		<descriptionHyperlinks>
-			<ThingDef>BA_Badge_TierI</ThingDef>
-		</descriptionHyperlinks>
 		<label>Hairpin</label>
 		<description>Haripins</description>
 		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
@@ -289,10 +280,6 @@
 	<HediffDef>
 		<defName>BA_Hediff_Hat</defName>
 		<hediffClass>Hediff_Level</hediffClass>
-		<!-- 全部上线后记得改 -->
-		<descriptionHyperlinks>
-			<ThingDef>BA_Badge_TierI</ThingDef>
-		</descriptionHyperlinks>
 		<label>Hat</label>
 		<description>Hats</description>
 		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
@@ -363,10 +350,6 @@
 	<HediffDef>
 		<defName>BA_Hediff_Necklace</defName>
 		<hediffClass>Hediff_Level</hediffClass>
-		<!-- 全部上线后记得改 -->
-		<descriptionHyperlinks>
-			<ThingDef>BA_Badge_TierI</ThingDef>
-		</descriptionHyperlinks>
 		<label>Necklace</label>
 		<description>Necklaces</description>
 		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
@@ -438,10 +421,6 @@
 	<HediffDef>
 		<defName>BA_Hediff_Shoe</defName>
 		<hediffClass>Hediff_Level</hediffClass>
-		<!-- 全部上线后记得改 -->
-		<descriptionHyperlinks>
-			<ThingDef>BA_Badge_TierI</ThingDef>
-		</descriptionHyperlinks>
 		<label>Shoe</label>
 		<description>Shoes</description>
 		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>

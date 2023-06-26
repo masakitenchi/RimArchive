@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>BA_root</defName>
+		<label>边缘档案</label>
+		<parent>Items</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>BA_HediffEquipment</defName>
+		<label>装备</label>
+		<parent>BA_root</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>BA_Weapon</defName>
+		<label>武器</label>
+		<parent>BA_root</parent>
+	</ThingCategoryDef>
+</Defs>

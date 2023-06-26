@@ -2,8 +2,8 @@
 <Defs>
     <XenotypeDef>
         <defName>Kivotosian</defName>
-        <label>Kivotosian</label>
-        <description>Students are mysterious. You cannot interprete where does their special abilities come from.</description>
+        <label>基沃托斯人</label>
+        <description>边缘世界没人知道这学生们的神秘力量从何而来。</description>
         <iconPath>UI/Icons/Xenotypes/Baseliner</iconPath>
         <factionlessGenerationWeight>0</factionlessGenerationWeight>
         <inheritable>true</inheritable>

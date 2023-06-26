@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <BA_Chip_HOD.label>HOD Chip</BA_Chip_HOD.label>
+  <BA_Chip_HOD.description>Chip dropped by HOD in this world. You can study this at a research benchi to reveal its secret.</BA_Chip_HOD.description>
+
+  <BA_Chip_Chesed.label>Chesed Chip</BA_Chip_Chesed.label>
+  <BA_Chip_Chesed.description>Chip dropped by Chesed in this world. You can study this at a research benchi to reveal its secret.</BA_Chip_Chesed.description>
+
+  <BA_Chip_Goz.label>Goz Chip</BA_Chip_Goz.label>
+  <BA_Chip_Goz.description>Chip dropped by Goz in this world. You can study this at a research benchi to reveal its secret.</BA_Chip_Goz.description>
+
+
+</LanguageData>
