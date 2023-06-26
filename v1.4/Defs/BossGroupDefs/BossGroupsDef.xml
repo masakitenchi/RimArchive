@@ -85,7 +85,7 @@
 				<bossOverride>BA_HOD_INSANE</bossOverride>
             </li>
         </waves>
-        <leaderDescription>The {LEADERKIND_label} can summon several pillars that applies debuffs to people around it.Both {LEADERKIND_label} and its pillars are vulnerable to EMP and stun attacks. {LEADERKIND_label} will be stunned for a period of time, and the pillars will receive extra damage.</leaderDescription>
+        <leaderDescription>{LEADERKIND_label}会召唤带有侵蚀之力的侵蚀之柱。{LEADERKIND_label}和侵蚀之柱弱EMP和晕眩攻击。当晕眩条满时，{LEADERKIND_label}会被眩晕一段时间，而侵蚀之柱则会受到额外伤害。</leaderDescription>
         <rewardDef>BA_Chip_HOD</rewardDef>
     </RimArchive.RaidDef>
 

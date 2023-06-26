@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <BA_Weapon_Abydos.label>Abydos</BA_Weapon_Abydos.label>
+  <BA_Weapon_Abydos.description>Now you can forge the weapons from Abydos.</BA_Weapon_Abydos.description>
+
+  <BA_Weapon_Gehenna.label>Gehenna</BA_Weapon_Gehenna.label>
+  <BA_Weapon_Gehenna.description>Now you can forge the weapons from Gehenna.</BA_Weapon_Gehenna.description>
+
+  <BA_Weapon_Hyakkiyako.label>Hyakkiyako</BA_Weapon_Hyakkiyako.label>
+  <BA_Weapon_Hyakkiyako.description>Now you can forge the weapons from Hyakkiyako.</BA_Weapon_Hyakkiyako.description>
+
+  <BA_Weapon_Millennium.label>Millennium</BA_Weapon_Millennium.label>
+  <BA_Weapon_Millennium.description>Now you can forge the weapons from Millennium.</BA_Weapon_Millennium.description>
+
+  <BA_Weapon_Trinity.label>Trinity</BA_Weapon_Trinity.label>
+  <BA_Weapon_Trinity.description>Now you can forge the weapons from Trinity.</BA_Weapon_Trinity.description>
+
+  <BA_Weapon_SRT.label>SRT</BA_Weapon_SRT.label>
+  <BA_Weapon_SRT.description>Now you can forge the weapons from SRT.</BA_Weapon_SRT.description>
+
+  <BA_Weapon_Shanhaijing.label>Shanhaijing</BA_Weapon_Shanhaijing.label>
+  <BA_Weapon_Shanhaijing.description>Now you can forge the weapons from Shanhaijing.</BA_Weapon_Shanhaijing.description>
+
+  <BA_Weapon_Redwinter.label>RedWinter</BA_Weapon_Redwinter.label>
+  <BA_Weapon_Redwinter.description>Now you can forge the weapons from RedWinter.</BA_Weapon_Redwinter.description>
+
+  <BA_Weapon_Arius.label>Arius</BA_Weapon_Arius.label>
+  <BA_Weapon_Arius.description>Now you can forge the weapons from Arius.</BA_Weapon_Arius.description>
+
+
+  <!-- <ResearchProjectDef ParentName = "BA_ResearchProjectBase">
+		<defName>BA_Equipments_Tier1</defName>
+		<label>Equipment (Tier 1~3)</label>
+		<description>Unlocks recipes for crafting Tier 1 ~ Tier 3 equipment.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<requiredStudied>
+			<li>BA_Chip_Chesed</li>
+		</requiredStudied>
+		<researchViewX>0</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
+		<defName>BA_Equipments_Tier2</defName>
+		<label>Equipment (Tier 4~6)</label>
+		<description>Unlocks recipes for crafting Tier 4 ~ Tier 6 equipment.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<requiredStudied>
+			<li>BA_Chip_HOD</li>
+		</requiredStudied>
+		<researchViewX>1</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName = "BA_ResearchProjectBase">
+		<defName>BA_Equipments_Tier3</defName>
+		<label>Equipment (Tier 7)</label>
+		<description>Unlocks recipes for crafting Tier 7 equipment.</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<requiredStudied>
+			<li>BA_Chip_Goz</li>
+		</requiredStudied>
+		<researchViewX>2</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef> -->
+
+  <BA_Tech_ShittimChest.label>ShittimChest</BA_Tech_ShittimChest.label>
+  <BA_Tech_ShittimChest.description>Learn to make ShittimChest, so as to establish contact with Schale.</BA_Tech_ShittimChest.description>
+
+
+</LanguageData>

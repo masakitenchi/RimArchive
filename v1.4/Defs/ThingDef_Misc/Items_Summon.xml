@@ -3,8 +3,8 @@
 
 	<ThingDef ParentName="ResourceBase">
 		<defName>BA_Serinabox</defName>
-		<label>First aid box</label>
-		<description>Serina's First aid box.</description>
+		<label>芹娜的急救箱</label>
+		<description>芹娜的急救箱，内有急救所需的一切工具。</description>
 		<thingClass>RimArchive.Medkit</thingClass>
 		<pathCost>0</pathCost>
 		<graphicData>
@@ -44,8 +44,8 @@
 
 	<ThingDef ParentName="ResourceBase">
 		<defName>BA_FuukaPot</defName>
-		<label>Lunch Club's Meal</label>
-		<description>Fuuka's Lunch Club's Meal.</description>
+		<label>枫香的大锅</label>
+		<description>枫香的大锅，大家都想尝上一口。</description>
 		<thingClass>RimArchive.ContactPot</thingClass>
 		<pathCost>0</pathCost>
 		<graphicData>

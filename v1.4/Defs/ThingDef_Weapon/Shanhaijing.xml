@@ -3,8 +3,8 @@
 	
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Kokona</defName>
-		<label>Lady's Grace</label>
-		<description>An assault rifle that is effective both in protecting the dignity of a lady and in fulfilling her duties as an instructor.</description>
+		<label>淑女的气质</label>
+		<description>无论是在展现淑女的品味的时候，还是在履行作为教官的职责的时候都非常实用的突击步枪。</description>
 		<graphicData>
 			<texPath>Weapon/Shanhaijing/Kokona</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -67,8 +67,8 @@
 	
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
     <defName>BAW_Shun</defName>
-    <label>Whip of Love</label>
-    <description>Shun's sniper rifle.\n\nNo matter how naughty a child may be, they will immediately start behaving once Shun takes out this gun. \n\nOf course, she never actually points the gun at the children.</description>
+    <label>爱之鞭</label>
+    <description>瞬使用的狙击步枪。\n\n无论是怎样的问题儿童，只要瞬拿出这把枪就立马会变成乖孩子。\n\n当然，没有对幼儿园的孩子们这样使用过。</description>
     <graphicData>
       <texPath>Weapon/Shanhaijing/Shun</texPath>
       <graphicClass>Graphic_Single</graphicClass>

@@ -3,9 +3,9 @@
 
 	<AlienRace.AlienBackstoryDef>
 		<defName>KivotosStudent</defName>
-		<title>KivotosStudent</title>
-		<titleShort>Student</titleShort>
-		<baseDesc>[PAWN_nameDef] was born in Kivotos.\n\nNow she is ready to fight</baseDesc>
+		<title>基沃托斯的学生</title>
+		<titleShort>学生</titleShort>
+		<baseDesc>[PAWN_nameDef]是基沃托斯生人。</baseDesc>
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Adulthood</slot>
 		<spawnCategories>

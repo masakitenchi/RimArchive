@@ -4,8 +4,8 @@
 	<!--日奈-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Hina</defName>
-		<label>The End: Destroyer</label>
-		<description>Hina's machine gun that she utilizes as if it were one of her own limbs.\n\nThose who violate school rules or disturb public morals will be blown away by its merciless destructive power.</description>
+		<label>终幕：毁灭者</label>
+		<description>日奈的机关枪，她视其为手足。\n\n违反校规扰乱风纪之人，都将会被其冷酷无情的破坏力所吹飞。</description>
 		<graphicData>
 			<texPath>Weapon/Gehenna/Hina</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -70,8 +70,8 @@
 	<!--伊织-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Iori</defName>
-		<label>Crack Shot</label>
-		<description>The sniper rifle used by Iori when dealing with problems caused by rulebreakers.\n\nDespite being a simple model without even a scope, according to Iori "a specialist doesn't choose their tools".</description>
+		<label>爆裂一击</label>
+		<description>伊织在处理违反规则之人时使用的狙击步枪。\n\n虽然是连狙击镜都没有的简单造型，伊织却说：高手不择工具。</description>
 		<graphicData>
 			<texPath>Weapon/Gehenna/Iori</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -134,8 +134,8 @@
 	<!--狗狗-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Ako</defName>
-		<label>Hotshot</label>
-		<description>A pistol carried by Ako.\n\nIt is a treasured object that was handed to Ako when she got appointed to the position of executive officer in recognition of her painstaking efforts. Ako carries it with her all the time and takes very good care of it.</description>
+		<label>大人物</label>
+		<description>亚子携带的手枪。\n\n亚子被任命为行政官之际，为表彰她一直以来的辛勤努力，阳奈将这把枪奖励给了她。\n\n她一直随身携带，十分重视。</description>
 		<graphicData>
 			<texPath>Weapon/Gehenna/Ako</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -201,8 +201,8 @@
 	<!--千夏-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Chinatsu</defName>
-		<label>Support Pointer</label>
-		<description>Chinatsu's treasured pistol.\n\nIt seems to mostly be used for pointing at things while commanding others, rather than shooting someone.</description>
+		<label>支援指针</label>
+		<description>千夏爱用的手枪。\n\n比起用来攻击谁，它在指示业务方面用得比较多，比如显示某地的位置。</description>
 		<graphicData>
 			<texPath>Weapon/Gehenna/Chinatsu</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -269,8 +269,8 @@
 	<!--睦月-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Mutsuki</defName>
-		<label>Trick or Trick</label>
-		<description>A machine gun that Mutsuki always carries with her.\n\nAccording to Mutsuki, firepower is an important component of fun pranks.</description>
+		<label>给糖也要捣蛋</label>
+		<description>睦月随身携带的机关枪。\n\n据睦月所说，为了更有趣的恶作剧，火力也很重要呢。</description>
 		<graphicData>
 			<texPath>Weapon/Gehenna/Mutsuki</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -338,8 +338,8 @@
 	<!--阿露-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Aru</defName>
-		<label>Wine-red Admire</label>
-		<description>Aru's antique-style sniper rifle that she always takes care of.\n\nJust by carrying it, her hard-boiledness increases...or so it seems.</description>
+		<label>酒红色冷赞</label>
+		<description>阿露平时十分重视，古风设计的狙击步枪。\n\n仅仅是拿着它，好像……冷硬的程度就提升了。</description>
 		<graphicData>
 			<texPath>Weapon/Gehenna/Aru</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -402,8 +402,8 @@
 	<!--佳世子-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Kayoko</defName>
-		<label>Demon's Roar</label>
-		<description>A handgun that Kayoko usually carries.\n\nAs the name implies, it makes a loud roaring noise every time it is fired, so Kayoko had a silencer added to it.</description>
+		<label>恶魔的咆哮</label>
+		<description>佳代子随身携带的手枪。\n\n正如其名，它每次直接开火都会发出巨大的咆哮，所以平常基本上都装着消音器。</description>
 		<graphicData>
 			<texPath>Weapon/Gehenna/Kayoko</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -470,8 +470,8 @@
      <!--遥香-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Haruka</defName>
-		<label>Blow Away</label>
-		<description>A shotgun used by Haruka to exterminate pests.\n\nThe definition of "pest" seems to be on a case-by-case basis.</description>
+		<label>吹飞</label>
+		<description>春香消灭害虫使用的霰弹枪。\n\n不过“害虫”的定义可能根据场合有所不同。</description>
 		<graphicData>
 			<texPath>Weapon/Gehenna/Haruka</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
