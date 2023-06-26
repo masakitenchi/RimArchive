@@ -350,7 +350,7 @@
 		</projectile>
 	</ThingDef>
 	
-	<!--花子-->
+	<!--芹娜-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Serina</defName>
 		<label>Tactical Therapy</label>
@@ -412,6 +412,72 @@
 		<projectile>
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>9</damageAmountBase>
+			<speed>70</speed>
+		</projectile>
+	</ThingDef>
+
+	<!--一花（暂定，因为这把武器可能还会配给三一的杂鱼酱）-->
+	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
+		<defName>BAW_Ichika</defName>
+		<label>Restraint</label>
+		<description>Combat Rifile used by Ichika.It is well maintained and almost brand new.\n\nThere's no need to shine when it's not necessary she said .</description>
+		<graphicData>
+			<texPath>Weapon/Trinity/Ichika</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.09</drawSize>
+		</graphicData>
+		<weaponTags>
+			<li>BAW_Ichika</li>
+		</weaponTags>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>BA_Weapon_Trinity</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>420</displayPriority>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>40000</WorkToMake>
+			<Mass>3.5</Mass>
+			<AccuracyTouch>0.75</AccuracyTouch>
+			<AccuracyShort>0.86</AccuracyShort>
+			<AccuracyMedium>0.92</AccuracyMedium>
+			<AccuracyLong>0.90</AccuracyLong>
+			<RangedWeapon_Cooldown>0.65</RangedWeapon_Cooldown>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<costList>
+			<Steel>75</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BA_Ichika</defaultProjectile>
+				<warmupTime>0.85</warmupTime>
+				<range>41.6</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+				<soundCast>Shot_AssaultRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BA_Ichika</defName>
+		<label>Bullet of Restraint</label>
+		<graphicData>
+			<texPath>Projectile/Bullet_blue</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>12.7</damageAmountBase>
 			<speed>70</speed>
 		</projectile>
 	</ThingDef>
