@@ -17,7 +17,7 @@ public interface ITrapLikeBuilding
 /// <summary>
 /// 所有医疗箱、饭桶、毒饭桶的基类
 /// </summary>
-public abstract class TrapLikeBuilding : Building
+public abstract class TrapLikeBuilding : ThingWithComps
 {
     /// <summary>
     /// 每踩上去一次只进行一次判定
@@ -37,6 +37,7 @@ public abstract class TrapLikeBuilding : Building
             {
                 if (pawnList[i] is Pawn p && this.touchingPawns.Add(p))
                 {
+                    DebugMessage.DbgMsg($"Checking Springs for {p.Name}");
                     this.CheckSpring(p);
                 }
             }
@@ -65,5 +66,11 @@ public abstract class TrapLikeBuilding : Building
     {
         UpdateTouchingPawns();
         base.Tick();
+    }
+
+    public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
+    {
+        base.DeSpawn(mode);
+        DebugMessage.DbgMsg($"{this} despawned");
     }
 }
