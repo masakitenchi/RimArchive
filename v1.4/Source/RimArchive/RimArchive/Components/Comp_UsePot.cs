@@ -10,10 +10,60 @@ using System.Collections;
 
 namespace RimArchive
 {
+
+    /// <summary>
+    /// 依然是类陷阱触发的方式，需要尝试用List来避免被同一个pawn重复使用
+    /// </summary>
+    public class CompProperties_ContactPot : CompProperties
+    {
+        public CompProperties_ContactPot() => compClass = typeof(CompContactPot);
+        public int HealPawnCount = 4;
+        public int WoundsToHealEach = 2;
+    }
+
+    public class CompContactPot : ThingComp
+    {
+        private int _healsleft;
+        public CompProperties_ContactPot Props => this.props as CompProperties_ContactPot;
+        public override void Initialize(CompProperties props)
+        {
+            base.Initialize(props);
+            this._healsleft = Props.HealPawnCount;
+        }
+        public void DoEffect(Pawn pawn)
+        {
+            if (HealingUtility.TryHealWounds(pawn, out var Message, Props.WoundsToHealEach))
+            {
+                Messages.Message(Message, MessageTypeDefOf.PositiveEvent);
+                _healsleft--;
+            }
+            if (_healsleft <= 0)
+            {
+                this.parent.Destroy();
+            }
+        }
+    }
+
+    public class ContactPot : TrapLikeBuilding
+    {
+        public HashSet<Pawn> PawnsAlreadyHealed = new HashSet<Pawn>();
+
+        protected override void CheckSpring(Pawn p)///这里是实现道具触发的地方
+        {
+            if (p.Faction == Faction.OfPlayer || p.HostFaction == Faction.OfPlayer)///检测
+            {
+                if (!PawnsAlreadyHealed.Add(p)) return;
+                this.TryGetComp<CompContactPot>().DoEffect(p);
+                Messages.Message("Heal Success".Translate(), MessageTypeDefOf.PositiveEvent);///治疗并将p加入列表中
+            }
+        }
+
+    }
+
     /// <summary>
     /// 汤锅一次性只治疗2次伤，与医疗箱作区别
     /// </summary>
-    public class HealPawnWound_Pot
+    /*public class HealPawnWound_Pot
     {
         public static TaggedString HealWound(Pawn pawn)
         {
@@ -44,109 +94,5 @@ namespace RimArchive
             }
             return hediff_Injury;
         }
-    }
-
-    /// <summary>
-    /// 依然是类陷阱触发的方式，需要尝试用List来避免被同一个pawn重复使用
-    /// </summary>
-    public class CompProperties_contactPot : CompProperties
-    {
-        public CompProperties_contactPot() => compClass = typeof(CompContactPot);
-        
-    }
-
-    public class CompContactPot : ThingComp
-    {
-        float times = 4f;
-        public void DoEffect(Pawn pawn)
-        {
-            Messages.Message(HealPawnWound.HealWound(pawn), MessageTypeDefOf.PositiveEvent);
-           
-            times--;
-            if (times <= 0)
-            {
-                this.parent.Destroy();
-            }
-
-        }
-    }
-
-    public class contactPot : Building
-
-    {
-        public List<Pawn> PawnsAlreadyHeal = new List<Pawn>();
-
-        public void CheckSpring(Pawn p)///这里是实现道具触发的地方
-        {
-
-            if (Rand.Chance(this.SpringChance(p)))///检测
-            {
-                if (PawnsAlreadyHeal.Contains(p))
-                {
-                    return;
-                }
-                else
-                {
-                    PawnsAlreadyHeal.Add(p);
-                    Map map = base.Map;
-                    this.TryGetComp<CompContactPot>().DoEffect(p);
-                    if (p.Faction == Faction.OfPlayer || p.HostFaction == Faction.OfPlayer)
-                    {
-                        Messages.Message("Heal Success".Translate(), MessageTypeDefOf.PositiveEvent);///治疗并将p加入列表中
-                    }
-                }
-            }
-        }
-        
-        protected float SpringChance(Pawn p)
-        {
-            return p.Faction == Faction.OfPlayer ? 1 : 0;
-        }
-        public bool WhoContact(Pawn p)
-        {
-            return (p.Faction != null && !p.Faction.HostileTo(base.Faction)) || (p.Faction == null && p.RaceProps.Animal && !p.InAggroMentalState) || (p.guest != null && p.guest.Released) || (!p.IsPrisoner && base.Faction != null && p.HostFaction == base.Faction) || (p.IsPrisoner && p.guest.ShouldWaitInsteadOfEscaping && base.Faction == p.HostFaction) || (p.Faction == null && p.RaceProps.Humanlike);
-        }
-
-        public override void Tick()
-        {
-            if (this.Spawned)
-            {
-                List<Thing> thingList = this.Position.GetThingList(this.Map);
-                for (int i = 0; i < thingList.Count; i++)
-                {
-                    Pawn pawn = thingList[i] as Pawn;
-                    if (pawn != null && !this.touchingPawns.Contains(pawn))
-                    {
-                        this.touchingPawns.Add(pawn);
-                        this.CheckSpring(pawn);
-                    }
-                }
-                for (int j = 0; j < this.touchingPawns.Count; j++)
-                {
-                    Pawn pawn2 = this.touchingPawns[j];
-                    if (pawn2 == null || !pawn2.Spawned || pawn2.Position != this.Position)
-                    {
-                        this.touchingPawns.Remove(pawn2);
-                    }
-                }
-            }
-            base.Tick();
-        }
-
-
-
-
-        private List<Pawn> touchingPawns = new List<Pawn>();
-
-        
-
-
-
-
-
-
-
-
-    }
-
+    }*/
 }

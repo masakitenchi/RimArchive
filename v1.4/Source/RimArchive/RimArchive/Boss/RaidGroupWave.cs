@@ -31,6 +31,10 @@ public class RaidGroupWave
     /// The apparel that boss carries
     /// </summary>
     public List<ThingDef> bossApparel;
+    /// <summary>
+    /// Hediffs to add to boss
+    /// </summary>
+    public List<HediffDef> hediffsToApply;
 
 
     public string GetWaveDescription(int wave)

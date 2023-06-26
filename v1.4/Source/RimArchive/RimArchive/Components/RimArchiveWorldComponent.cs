@@ -13,6 +13,5 @@ internal class RimArchiveWorldComponent : WorldComponent
     public RimArchiveWorldComponent(World world) 
         : base(world)
     {
-
     }
 }
