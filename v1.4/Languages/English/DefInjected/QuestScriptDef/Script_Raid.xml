@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <BA_Raid.questDescriptionRules.rulesStrings.0>questDescription-&gt;bossgroup</BA_Raid.questDescriptionRules.rulesStrings.0>
+  <BA_Raid.questNameRules.rulesStrings.0>questName-&gt;bossgroup</BA_Raid.questNameRules.rulesStrings.0>
+  <BA_Raid.questContentRules.rulesStrings.0>bossDefeatedLetterLabel-&gt;[escortees_label] defeated: [reward_label]</BA_Raid.questContentRules.rulesStrings.0>
+  <BA_Raid.questContentRules.rulesStrings.1>bossDefeatedStudyChipLetterText-&gt;[defeated][study][manufacture]</BA_Raid.questContentRules.rulesStrings.1>
+  <BA_Raid.questContentRules.rulesStrings.2>bossDefeatedLetterText-&gt;[defeated][manufacture]</BA_Raid.questContentRules.rulesStrings.2>
+  <BA_Raid.questContentRules.rulesStrings.3>defeated-&gt;The hostile [escortees_label] has been defeated and has dropped a [reward_label]!</BA_Raid.questContentRules.rulesStrings.3>
+  <BA_Raid.questContentRules.rulesStrings.4>manufacture-&gt;\n\nThe chip can also be used to create more advanced mechanoids.</BA_Raid.questContentRules.rulesStrings.4>
+  <BA_Raid.questContentRules.rulesStrings.5>study-&gt;\n\nYou can study the [reward_label] by selecting a mechanitor and right-clicking the chip. Studying a [reward_label] helps unlock higher tiers of mechtech research.</BA_Raid.questContentRules.rulesStrings.5>
+
+
+</LanguageData>

@@ -4,9 +4,9 @@
 	<!--日奈-->
 	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Backstory_Hina</defName>
-		<title>Sorasaki Hina</title>
-		<titleShort>Sorasaki Hina</titleShort>
-		<baseDesc>The president of the Disciplinary committee of Gehenna that is feared by everyone.</baseDesc>
+		<title>空崎 日奈</title>
+		<titleShort>日奈</titleShort>
+		<baseDesc>格黑娜学园的风纪委员长。</baseDesc>
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>
@@ -17,9 +17,9 @@
 	<!--伊织-->
 	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Backstory_Iori</defName>
-		<title>Shiromi Iori</title>
-		<titleShort>Shiromi Iori</titleShort>
-		<baseDesc>Enrolled in Gehenna Academy, Iori is a ruthless specialist of the Public Morals Committee.</baseDesc>
+		<title>银镜 伊织</title>
+		<titleShort>伊织</titleShort>
+		<baseDesc>格黑娜学园风纪委员会的残酷的专家。</baseDesc>
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>

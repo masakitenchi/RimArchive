@@ -32,8 +32,8 @@
 
 	<ThingDef ParentName="RA_BuildingTopBase">
 		<defName>Shittim_Chest</defName>
-		<label>Shittim Chest</label>
-		<description>A pad that contained the OS--Shittim Chest.You can use it to contact with Schale and recurit students from Kivotos.\n\nThis device is powered by radioactive battery, so it can be used without external power supply.</description>
+		<label>什亭之匣</label>
+		<description>一部搭载了“什亭之匣”系统的平板电脑，你可以用这个设备与夏莱建立联系并招募来自基沃托斯的学生们。\n\n这部设备由放射性电池提供能源，所以它并不需要额外的电力供应便可以使用。（该设备的安全性由千年工程部保障!）</description>
 		<thingClass>RimArchive.Building_ShittimChest</thingClass>
 		<size>(1,1)</size>
 		<pathCost>30</pathCost>

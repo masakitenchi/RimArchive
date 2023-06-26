@@ -33,6 +33,7 @@ public class CompHealing : ThingComp
     {
         base.Initialize(props);
         this._healsleft = Props.SingleUse ? 1 : Props.UseCount;
+        Log.Message($"{parent.def.defName} : {_healsleft} heals left");
     }
 
 

@@ -3,8 +3,8 @@
 
     <HediffDef>
         <defName>BA_ArmorReduction</defName>
-        <label>Armor Reduction</label>
-        <description>Armor rating is reduced, which means it will receive more damage from attacks.</description>
+        <label>降低防御</label>
+        <description>防御力被降低了。这意味着目标更容易受伤。</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>true</isBad>
         <comps>
@@ -21,8 +21,8 @@
 
     <HediffDef>
         <defName>BA_PillarSuppression</defName>
-        <label>PillarSuppression</label>
-        <description>Suppressed by HOD's pillar, movement speed reduced.</description>
+        <label>被侵蚀之柱压制</label>
+        <description>被侵蚀之柱所影响。</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>true</isBad>
         <comps>

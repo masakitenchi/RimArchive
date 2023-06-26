@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 梓 -->
+
+  <Backstory_Azusa.title>Shirasu Azusa</Backstory_Azusa.title>
+  <Backstory_Azusa.titleShort>Shirasu Azusa</Backstory_Azusa.titleShort>
+  <Backstory_Azusa.baseDesc>The ice witch of Trinity's Supplemental Lessons Club.</Backstory_Azusa.baseDesc>
+
+
+  <!-- 小春 -->
+
+  <Backstory_Koharu.title>Shimoe Koharu</Backstory_Koharu.title>
+  <Backstory_Koharu.titleShort>Shimoe Koharu</Backstory_Koharu.titleShort>
+  <Backstory_Koharu.baseDesc>Koharu is a member of the Supplemental Lessons Club of Trinity Integrated Academy.</Backstory_Koharu.baseDesc>
+
+
+  <!-- 日富美 -->
+
+  <Backstory_Hifumi.title>Ajitani Hifumi</Backstory_Hifumi.title>
+  <Backstory_Hifumi.titleShort>Ajitani Hifumi</Backstory_Hifumi.titleShort>
+  <Backstory_Hifumi.baseDesc>A sensitive girl, Hifumi is a student of Trinity Integrated Academy and a member of the Supplementary Classes Club.</Backstory_Hifumi.baseDesc>
+
+
+  <!-- 花子 -->
+
+  <Backstory_Hanako.title>Urawa Hanako</Backstory_Hanako.title>
+  <Backstory_Hanako.titleShort>Urawa Hanako</Backstory_Hanako.titleShort>
+  <Backstory_Hanako.baseDesc>Trinity's Supplemental Lessons Club's paragon of sensitivity.</Backstory_Hanako.baseDesc>
+
+
+</LanguageData>

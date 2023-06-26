@@ -3,8 +3,8 @@
 
     <ThingDef ParentName="ResourceBase">
         <defName>BA_Ticket_Raid</defName>
-        <label>Raid Ticket</label>
-        <description>Use this ticket to summon a raid boss.</description>
+        <label>总力战入场券</label>
+        <description>使用以召唤一波总力战boss</description>
         <graphicData>
             <texPath>Things/Misc/RaidTicket</texPath>
             <graphicClass>Graphic_Single</graphicClass>

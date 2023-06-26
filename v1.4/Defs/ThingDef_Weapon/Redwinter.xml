@@ -3,8 +3,8 @@
 	<!--和香-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Nodoka</defName>
-		<label>Sagittarius Night</label>
-		<description>A submachine gun that Nodoka carries with her when she goes out for astronomical observations.\n\nAttached flashlight illuminates the dark night road brightly.</description>
+		<label>射手座之夜</label>
+		<description>和香去天体观测时经常携带的冲锋枪。\n\n安装了灯，可以用来照亮黑暗的夜路。</description>
 		<graphicData>
 			<texPath>Weapon/Redwinter/Nodoka</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

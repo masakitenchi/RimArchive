@@ -3,8 +3,8 @@
 	<!--  响-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Hibiki</defName>
-		<label>Fancy Light</label>
-		<description>Hibiki's fondly used mortar.\n\nOccasionally finding use in her daily experiments, it is used to fire various other things alongside shells.</description>
+		<label>奇幻色彩</label>
+		<description>响爱用的迫击炮。\n\n经常在每天的实验中使用，除了炮弹以外也可以发射各种各样的东西。</description>
 		<graphicData>
 			<texPath>Weapon/Millennium/Hibiki</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -79,8 +79,8 @@
 	<!--尼禄-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Neru</defName>
-		<label>Twin Dragon</label>
-		<description>Neru's dual submachine guns.\n\nA beautiful golden dragon pattern is engraved upon both guns.</description>
+		<label>双龙</label>
+		<description>尼禄使用的双持冲锋枪。\n\n两把枪身都刻着黄金之龙的美丽花纹。</description>
 		<graphicData>
 			<texPath>Weapon/Millennium/Neru</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -142,8 +142,8 @@
 	<!--朱音-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Akane</defName>
-		<label>Silent Solution</label>
-		<description>A pistol that Akane always carries.\n\nNamed such in contrast to the explosives she usually tends to use.</description>
+		<label>静音方案</label>
+		<description>朱音经常携带的手枪。\n\n它的名字与平时爱用的爆炸物形成了鲜明对比。</description>
 		<graphicData>
 			<texPath>Weapon/Millennium/Akane</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -208,8 +208,8 @@
 	<!--明日奈-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Asuna</defName>
-		<label>Surprise Party</label>
-		<description>The assault rifle used by Asuna.\n\nIt seems she has forgotten the meaning behind its fun and lively sounding name.</description>
+		<label>超惊喜派对</label>
+		<description>明日奈使用的突击步枪。\n\n为什么取这么个热闹又快乐的名字呢，明日奈好像也忘记了。</description>
 		<graphicData>
 			<texPath>Weapon/Millennium/Asuna</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -276,8 +276,8 @@
 	<!--时-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Toki</defName>
-		<label>Secret Time</label>
-		<description>Assault rifle used by Toki./n/nIt has the performance to match its appearance, and eliminates all targets that interfere with her mission. Toki didn't choose the name, somebody else named it.</description>
+		<label>秘密时间</label>
+		<description>时专用的突击步枪。\n\n拥有与外观相符的性能，将排除任务中出现的任何障碍。\n\n据说枪名不是自己取的，而是另有其人。</description>
 		<graphicData>
 			<texPath>Weapon/Millennium/Toki</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -344,8 +344,8 @@
 	<!--花凛-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
     <defName>BAW_Karin</defName>
-    <label>Hawkeye</label>
-    <description>An anti-materiel rifle used exclusively by Karin.\n\nEven from far away in the sky, her shots land with unmatched accuracy.</description>
+    <label>鹰眼</label>
+    <description>花凛专用的反器材步枪。即使是空中飞行的目标，也能精准无比地击落。</description>
     <graphicData>
       <texPath>Weapon/Millennium/Karin</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -413,8 +413,8 @@
 	<!--小绿-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
     <defName>BAW_Midori</defName>
-    <label>Fresh Inspiration</label>
-    <description>Midori's sniper rifle.\n\nAttached to the rifle is an accessory given to Midori by her beloved older sister, and she always finds inspiration when needed by playing around with it.</description>
+    <label>清爽灵感</label>
+    <description>小绿使用的狙击步枪。\n\n挂着最重要的姐姐送的装饰，在困顿的时候拨弄拨弄它，灵感似乎就涌上来了。</description>
     <graphicData>
       <texPath>Weapon/Millennium/Midori</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -481,8 +481,8 @@
 	<!--桃井-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Momoi</defName>
-		<label>Unique Idea</label>
-		<description>The assault rifle used by Momoi.\n\nAttached to the rifle is an accessory given to Momoi by her beloved younger sister, and she always comes up with new ideas when needed by playing around with it.</description>
+		<label>独特点子</label>
+		<description>桃井使用的突击步枪。\n\n挂着最重要的妹妹送的装饰，在困顿的时候拨弄拨弄它，点子就闪闪发亮起来了。</description>
 		<graphicData>
 			<texPath>Weapon/Millennium/Momoi</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -550,8 +550,8 @@
 	<!--柚子-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Yuzu</defName>
-		<label>Nyan's Dash</label>
-		<description>The gun carried by Yuzu.\n\nIt has a cute image of an forever-flying cat on the side.</description>
+		<label>喵冲</label>
+		<description>柚子随身携带的掷弹筒。\n\n它的侧面一直播放着可爱的猫猫影像。</description>
 		<graphicData>
 			<texPath>Weapon/Millennium/Yuzu</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -625,8 +625,8 @@
 	<!--爱丽丝-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Aris</defName>
-		<label>Sword of Light: Supernova</label>
-		<description>The massive railgun that Arisu received from the engineering club.\n\nIts size and power output are so great that ordinary students would struggle to simply walk around with it.</description>
+		<label>光之剑：超新星</label>
+		<description>爱丽丝从工程部那里获得的巨大电磁炮。\n\n它的重量和功率输出，让普通学生仅仅是拿着走路都十分困难。</description>
 		<graphicData>
 			<texPath>Weapon/Millennium/Aris</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -710,8 +710,8 @@
 	<!--诺亚-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Noa</defName>
-		<label>Secretary's vote</label>
-		<description>Pistol with a conversion kit used by Noa.\n\nWith the stock extended, it can be fired like a submachine gun.</description>
+		<label>书记的表决</label>
+		<description>诺亚使用的带有改装附件的手枪。\n\n拉开枪托就可以像冲锋枪一样连射。</description>
 		<graphicData>
 			<texPath>Weapon/Millennium/Noa</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -778,8 +778,8 @@
 	<!--邮箱-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Yuuka</defName>
-		<label>Logic n Reason</label>
-		<description>A submachine guns used by Yuuka.\n\nIt helps Yuuka make rational and intelligent decisions even under pressure at critical times.</description>
+		<label>逻辑与理性</label>
+		<description>优香使用的冲锋枪。\n\n在重要的时机、以及需要适当应对的时候，它会帮助优香做出合理的判断。</description>
 		<graphicData>
 			<texPath>Weapon/Millennium/Yuuka</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -844,8 +844,8 @@
 	<!--莉音-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Rio</defName>
-		<label>Final Finesse</label>
-		<description>The revolver used by Rio.\n\nTo achieve her goals, all necessary means must be taken.\n\nAnd for Rio, who has always been alone, violence is an essential finesse for her.</description>
+		<label>最终手段</label>
+		<description>莉音所使用的左轮手枪。\n\n为了达成她的目标，必须要采取任何必要的措施。\n\n而对于孑然一身的莉音来说，暴力同样是备选的必要手段之一。</description>
 		<graphicData>
 			<texPath>Weapon/Millennium/Rio</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <BA_BOSS_HOD.label>HOD</BA_BOSS_HOD.label>
+  <BA_BOSS_HOD.labelPlural>HODs</BA_BOSS_HOD.labelPlural>
+  <BA_BOSS_HOD.lifeStages.0.label>HOD</BA_BOSS_HOD.lifeStages.0.label>
+  <BA_BOSS_HOD.lifeStages.0.labelPlural>HOD</BA_BOSS_HOD.lifeStages.0.labelPlural>
+  <BA_BOSS_HOD.lifeStages.0.labelMale>male HOD</BA_BOSS_HOD.lifeStages.0.labelMale>
+  <BA_BOSS_HOD.lifeStages.0.labelMalePlural>male HODs</BA_BOSS_HOD.lifeStages.0.labelMalePlural>
+  <BA_BOSS_HOD.lifeStages.0.labelFemale>female HOD</BA_BOSS_HOD.lifeStages.0.labelFemale>
+  <BA_BOSS_HOD.lifeStages.0.labelFemalePlural>female HODs</BA_BOSS_HOD.lifeStages.0.labelFemalePlural>
+  <BA_BOSS_HOD.lifeStages.1.label>HOD</BA_BOSS_HOD.lifeStages.1.label>
+  <BA_BOSS_HOD.lifeStages.1.labelPlural>HOD</BA_BOSS_HOD.lifeStages.1.labelPlural>
+  <BA_BOSS_HOD.lifeStages.1.labelMale>male HOD</BA_BOSS_HOD.lifeStages.1.labelMale>
+  <BA_BOSS_HOD.lifeStages.1.labelMalePlural>male HODs</BA_BOSS_HOD.lifeStages.1.labelMalePlural>
+  <BA_BOSS_HOD.lifeStages.1.labelFemale>female HOD</BA_BOSS_HOD.lifeStages.1.labelFemale>
+  <BA_BOSS_HOD.lifeStages.1.labelFemalePlural>female HODs</BA_BOSS_HOD.lifeStages.1.labelFemalePlural>
+  <BA_BOSS_HOD.labelMale>male HOD</BA_BOSS_HOD.labelMale>
+  <BA_BOSS_HOD.labelMalePlural>male HODs</BA_BOSS_HOD.labelMalePlural>
+  <BA_BOSS_HOD.labelFemale>female HOD</BA_BOSS_HOD.labelFemale>
+  <BA_BOSS_HOD.labelFemalePlural>female HODs</BA_BOSS_HOD.labelFemalePlural>
+
+  <BA_BOSS_HOD_INSANE.label>HOD</BA_BOSS_HOD_INSANE.label>
+  <BA_BOSS_HOD_INSANE.labelPlural>HODs</BA_BOSS_HOD_INSANE.labelPlural>
+  <BA_BOSS_HOD_INSANE.lifeStages.0.label>HOD</BA_BOSS_HOD_INSANE.lifeStages.0.label>
+  <BA_BOSS_HOD_INSANE.lifeStages.0.labelPlural>HOD</BA_BOSS_HOD_INSANE.lifeStages.0.labelPlural>
+  <BA_BOSS_HOD_INSANE.lifeStages.0.labelMale>male HOD</BA_BOSS_HOD_INSANE.lifeStages.0.labelMale>
+  <BA_BOSS_HOD_INSANE.lifeStages.0.labelMalePlural>male HODs</BA_BOSS_HOD_INSANE.lifeStages.0.labelMalePlural>
+  <BA_BOSS_HOD_INSANE.lifeStages.0.labelFemale>female HOD</BA_BOSS_HOD_INSANE.lifeStages.0.labelFemale>
+  <BA_BOSS_HOD_INSANE.lifeStages.0.labelFemalePlural>female HODs</BA_BOSS_HOD_INSANE.lifeStages.0.labelFemalePlural>
+  <BA_BOSS_HOD_INSANE.lifeStages.1.label>HOD</BA_BOSS_HOD_INSANE.lifeStages.1.label>
+  <BA_BOSS_HOD_INSANE.lifeStages.1.labelPlural>HOD</BA_BOSS_HOD_INSANE.lifeStages.1.labelPlural>
+  <BA_BOSS_HOD_INSANE.lifeStages.1.labelMale>male HOD</BA_BOSS_HOD_INSANE.lifeStages.1.labelMale>
+  <BA_BOSS_HOD_INSANE.lifeStages.1.labelMalePlural>male HODs</BA_BOSS_HOD_INSANE.lifeStages.1.labelMalePlural>
+  <BA_BOSS_HOD_INSANE.lifeStages.1.labelFemale>female HOD</BA_BOSS_HOD_INSANE.lifeStages.1.labelFemale>
+  <BA_BOSS_HOD_INSANE.lifeStages.1.labelFemalePlural>female HODs</BA_BOSS_HOD_INSANE.lifeStages.1.labelFemalePlural>
+  <BA_BOSS_HOD_INSANE.labelMale>male HOD</BA_BOSS_HOD_INSANE.labelMale>
+  <BA_BOSS_HOD_INSANE.labelMalePlural>male HODs</BA_BOSS_HOD_INSANE.labelMalePlural>
+  <BA_BOSS_HOD_INSANE.labelFemale>female HOD</BA_BOSS_HOD_INSANE.labelFemale>
+  <BA_BOSS_HOD_INSANE.labelFemalePlural>female HODs</BA_BOSS_HOD_INSANE.labelFemalePlural>
+
+
+</LanguageData>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <BAW_Kokona.label>Lady's Grace</BAW_Kokona.label>
+  <BAW_Kokona.description>An assault rifle that is effective both in protecting the dignity of a lady and in fulfilling her duties as an instructor.</BAW_Kokona.description>
+  <BAW_Kokona.tools.0.label>stock</BAW_Kokona.tools.0.label>
+  <BAW_Kokona.tools.1.label>barrel</BAW_Kokona.tools.1.label>
+
+  <Bullet_BA_Kokona.label>Bullet of Lady's Grace</Bullet_BA_Kokona.label>
+
+  <BAW_Shun.label>Whip of Love</BAW_Shun.label>
+  <BAW_Shun.description>Shun's sniper rifle.\n\nNo matter how naughty a child may be, they will immediately start behaving once Shun takes out this gun. \n\nOf course, she never actually points the gun at the children.</BAW_Shun.description>
+  <BAW_Shun.tools.0.label>stock</BAW_Shun.tools.0.label>
+  <BAW_Shun.tools.1.label>barrel</BAW_Shun.tools.1.label>
+
+  <Bullet_BA_Shun.label>Bullet of Whip of Love</Bullet_BA_Shun.label>
+
+
+</LanguageData>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 日奈 -->
+
+  <Backstory_Hina.title>Sorasaki Hina</Backstory_Hina.title>
+  <Backstory_Hina.titleShort>Sorasaki Hina</Backstory_Hina.titleShort>
+  <Backstory_Hina.baseDesc>The president of the Disciplinary committee of Gehenna that is feared by everyone.</Backstory_Hina.baseDesc>
+
+
+  <!-- 伊织 -->
+
+  <Backstory_Iori.title>Shiromi Iori</Backstory_Iori.title>
+  <Backstory_Iori.titleShort>Shiromi Iori</Backstory_Iori.titleShort>
+  <Backstory_Iori.baseDesc>Enrolled in Gehenna Academy, Iori is a ruthless specialist of the Public Morals Committee.</Backstory_Iori.baseDesc>
+
+
+</LanguageData>

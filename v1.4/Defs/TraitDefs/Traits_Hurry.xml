@@ -29,9 +29,9 @@
       <li>
         <label>Sunaookami Shiroko</label>
         <description>Lorum Ipsum</description>
-        <statOffsets>
+        <!-- <statOffsets>
           <RangeCriticalChance>0.8</RangeCriticalChance>
-        </statOffsets>
+        </statOffsets> -->
         <statFactors>
           <MoveSpeed>1.2</MoveSpeed>
         </statFactors>
@@ -68,7 +68,7 @@
         <statOffsets>
           <HuntingStealth>1.0</HuntingStealth> <!--狩猎匿踪系数-->
           <CarryingCapacity>12</CarryingCapacity> <!--携带能力-->
-          <RangeCriticalChance>0.65</RangeCriticalChance>
+          <!-- <RangeCriticalChance>0.65</RangeCriticalChance> -->
         </statOffsets>
         <statFactors>
           <MarketValue>2</MarketValue> <!--市场价值-->
@@ -132,7 +132,8 @@
         <label>Shirasu Azusa</label>
         <description>lorum ipsum</description>
         <statOffsets>
-          <RangeCriticalChance>0.4</RangeCriticalChance> <!--远程暴击-->
+          <!-- <RangeCriticalChance>0.4</RangeCriticalChance> -->
+          <!--远程暴击-->
           <ConstructSuccessChance>0.1</ConstructSuccessChance> <!--建造成功几率-->
         </statOffsets>
         <statFactors>
@@ -170,12 +171,12 @@
         <label>Ajitani Hifumi</label>
         <description>lorum ipsum</description>
         <statOffsets>
-          <marketValueFactorOffset>10.0</marketValueFactorOffset> <!--人物价值-->
           <NegotiationAbility>0.2</NegotiationAbility> <!--谈判能力系数-->
           <TradePriceImprovement>0.05</TradePriceImprovement> <!--议价能力系数-->
           <SocialImpact>0.2</SocialImpact> <!--社交效果系数-->
           <ConversionPower>1</ConversionPower> <!--教化效果系数-->
         </statOffsets>
+        <marketValueFactorOffset>10.0</marketValueFactorOffset> <!--人物价值-->
       </li>
     </degreeDatas>
   </TraitDef>
@@ -403,7 +404,8 @@
         <statOffsets>
           <PawnBeauty>1</PawnBeauty> <!--俊俏-->
           <MeleeDodgeChance>2</MeleeDodgeChance> <!--近战闪避系数-->
-          <RangeDodgeChance>0.2</RangeDodgeChance> <!--远程闪避系数-->
+          <!-- <RangeDodgeChance>0.2</RangeDodgeChance> -->
+          <!--远程闪避系数-->
         </statOffsets>
         <!--要写一个迷茫崩溃-->
       </li>
@@ -442,7 +444,8 @@
         <description>lorum ipsum</description>
         <statOffsets>
           <ResearchSpeed>0.25</ResearchSpeed> <!--研究速率-->
-          <RangeDodgeChance>0.1</RangeDodgeChance> <!--远程闪避系数-->
+          <!-- <RangeDodgeChance>0.1</RangeDodgeChance> -->
+          <!--远程闪避系数-->
           <RestRateMultiplier>0.1</RestRateMultiplier> <!--休息率系数-->
           <MentalBreakThreshold>-0.1</MentalBreakThreshold> <!--崩溃临界值系数-->
         </statOffsets>
@@ -635,7 +638,6 @@
         <statOffsets>
           <ShootingAccuracyPawn>2</ShootingAccuracyPawn> <!--射击精度-->
           <WorkSpeedGlobal>0.20</WorkSpeedGlobal>
-          >
           <!--工作效率-->
           <IncomingDamageFactor>-0.12</IncomingDamageFactor> <!--承伤系数-->
           <PawnBeauty>1</PawnBeauty> <!--俊俏-->
@@ -676,7 +678,6 @@
         <description>lorum ipsum</description>
         <statOffsets>
           <WorkSpeedGlobal>0.20</WorkSpeedGlobal>
-          >
           <!--工作效率-->
           <SocialImpact>0.05</SocialImpact> <!--社交效果系数-->
           <ConversionPower>0.2</ConversionPower> <!--教化效果系数-->
@@ -696,7 +697,6 @@
   <TraitDef>
     <defName>RA_TraitDef_Shun</defName>
     <commonality>0</commonality> <!--出现概率-->
-
     <degreeDatas>
       <li>
         <label>Sunohara Shun</label>
@@ -706,9 +706,7 @@
           <PainShockThreshold>-0.2</PainShockThreshold> <!--疼痛休克阈值系数-->
           <HuntingStealth>0.11</HuntingStealth> <!--狩猎匿踪系数-->
         </statOffsets>
-        <statFactors>
-          <hungerRateFactor>1.2</hungerRateFactor> <!--饥饿率乘数-->
-        </statFactors>
+        <hungerRateFactor>1.2</hungerRateFactor>
       </li>
     </degreeDatas>
   </TraitDef>

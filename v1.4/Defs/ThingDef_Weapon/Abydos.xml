@@ -4,8 +4,8 @@
 	<!--星野-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Hoshino</defName>
-		<label>Eye of Horus</label>
-		<description>Hoshino's beloved shotgun, sporting a simple design.\n\nWhile she may be lazy at heart, Hoshino does not slack off when it comes to maintaining her weapon.</description>
+		<label>荷鲁斯之眼</label>
+		<description>星野爱用的简洁造型的霰弹枪。\n\n基本上懒洋洋的她，但在枪的整备上绝不会懈怠。</description>
 		<graphicData>
 			<texPath>Weapon/Abydos/Hoshino</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -74,8 +74,8 @@
 	
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Shiroko</defName>
-		<label>WHITE FANG 465</label>
-		<description>Shiroko's cherished assault rifle.\n\nThanks to careful maintenance, it's always ready to use whenever the need arises.</description>
+		<label>白牙 465</label>
+		<description>白子的爱用突击步枪。\n\n一直都在好好地进行整备，所以无论何时都是没有问题的状态。</description>
 		<graphicData>
 			<texPath>Weapon/Abydos/Shiroko</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -144,8 +144,8 @@
 	<!--芹香-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Serika</defName>
-		<label>Sincerity</label>
-		<description>An assault rifle Serika carries to her part-time job.\n\nIt is always carefully maintained, thanks to Serika's meticulousness and sincerity.</description>
+		<label>诚意</label>
+		<description>芹香外出打工时携带的突击步枪。\n\n芹香一直都很仔细地整备它，从这点也可以看出她认真诚实的一面。</description>
 		<graphicData>
 			<texPath>Weapon/Abydos/Serika</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -214,8 +214,8 @@
   <!--野宫-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Nonomi</defName>
-		<label>Little Machine Gun V</label>
-		<description>Machine gun used by Nonomi.\n\nDespite the "Little" moniker, it's actually quite big.</description>
+		<label>小型机关枪Ⅴ</label>
+		<description>野宫使用的机关枪。虽然名字里有“小型”，可里面容量却很大。</description>
 		<graphicData>
 			<texPath>Weapon/Abydos/Nonomi</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -267,7 +267,7 @@
 		</verbs>
 		<tools Inherit="False">
 			<li>
-				<label>stock</label>
+				<label>枪托</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
@@ -275,7 +275,7 @@
 				<cooldownTime>2</cooldownTime>
 			</li>
 			<li>
-				<label>barrel</label>
+				<label>枪管</label>
 				<capacities>
 					<li>Blunt</li>
 					<li>Poke</li>
