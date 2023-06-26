@@ -82,7 +82,6 @@
     <Compile Include="Thing\CompProperties_InvadePillar.cs" />
     <Compile Include="Thing\CompProperties_MoteEmitterIncreasingSize.cs" />
     <Compile Include="Thing\CompProperties_StunHandler.cs" />
-    <Compile Include="Thing\Comps\CompDisappearAfterTicks.cs" />
     <Compile Include="Thing\Comps\CompInvadePillar.cs" />
     <Compile Include="Thing\Comps\CompMoteEmitterIncreasingSize.cs" />
     <Compile Include="Thing\Comps\CompStunHandler.cs" />

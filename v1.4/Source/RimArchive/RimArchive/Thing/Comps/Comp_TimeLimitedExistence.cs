@@ -11,28 +11,31 @@ public class CompProperties_ExistedTicks : CompProperties
 public class Comp_TimeLimitedExistence : ThingComp
 
 {
-    private int ExistedTicks;
+    private int _ticksLeft;
 
     CompProperties_ExistedTicks Props => (CompProperties_ExistedTicks) props;
 
     public override void Initialize(CompProperties props)
     {
         base.Initialize(props);
-        this.ExistedTicks = Props.ExistedTicks;
+        this._ticksLeft = Props.ExistedTicks;
     }
 
     public override void CompTick()
     {
         base.CompTick();
-        ExistedTicks--;
-        if (ExistedTicks <= 0f)
+        _ticksLeft--;
+        if (_ticksLeft <= 0f)
         {
             Messages.Message("Summon_disappered".Translate(this.parent.Label), MessageTypeDefOf.NeutralEvent);
             this.parent.Destroy();
         }
     }
 
-
+    public override string CompInspectStringExtra()
+    {
+        return GenTicks.ToStringSecondsFromTicks(this._ticksLeft);
+    }
 }
 
 
