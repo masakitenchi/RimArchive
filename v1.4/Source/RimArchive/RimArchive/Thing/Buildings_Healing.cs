@@ -11,7 +11,7 @@ public class Medkit : TrapLikeBuilding
         if (p.Faction == Faction.OfPlayer || p.HostFaction == Faction.OfPlayer)
         {
             this.TryGetComp<CompHealing>().DoEffect(p);
-            Messages.Message("Heal Success".Translate(), MessageTypeDefOf.PositiveEvent);
+            //Messages.Message("Heal Success".Translate(), MessageTypeDefOf.PositiveEvent);
         }
     }
 }
@@ -26,7 +26,7 @@ public class ContactPot : TrapLikeBuilding
         {
             if (!PawnsAlreadyHealed.Add(p)) return;
             this.TryGetComp<CompHealing>().DoEffect(p);
-            Messages.Message("Heal Success".Translate(), MessageTypeDefOf.PositiveEvent);///治疗并将p加入列表中
+            //Messages.Message("Heal Success".Translate(), MessageTypeDefOf.PositiveEvent);///治疗并将p加入列表中
         }
     }
 
