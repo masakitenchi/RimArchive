@@ -19,5 +19,43 @@
             </layers>
         </apparel>
     </ThingDef>
+	
+    <ThingDef ParentName="BA_ApparelBase">
+        <defName>BAA_Body_Hina</defName>
+        <label>Hina_Body</label>
+        <description>Hina_Body</description>
+        <graphicData>
+            <texPath>Things/Apparel/Apparel_Generic</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <apparel>
+            <wornGraphicPath>Pawns/Gehenna/Hina/Body/Hina</wornGraphicPath>
+            <bodyPartGroups>
+                <li>Torso</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Middle</li>
+            </layers>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="BA_ApparelBase">
+        <defName>BAA_Body_Iori</defName>
+        <label>Iori_Body</label>
+        <description>Iori_Body</description>
+        <graphicData>
+            <texPath>Things/Apparel/Apparel_Generic</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <apparel>
+            <wornGraphicPath>Pawns/Gehenna/Iori/Body/Iori</wornGraphicPath>
+            <bodyPartGroups>
+                <li>Torso</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Middle</li>
+            </layers>
+        </apparel>
+    </ThingDef>
 
 </Defs>
