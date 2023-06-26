@@ -10,8 +10,8 @@ public static class HealingUtility
     /// <summary>
     /// 尝试治疗伤口
     /// </summary>
-    /// <param name="pawn">治疗目标</param>
-    /// <param name="woundsToHeal">要治疗的伤口数量</param>
+    /// <param name="pawn">目标</param>
+    /// <param name="woundsToHeal">伤口数量</param>
     /// <param name="message">治疗信息</param>
     /// <returns>如果治疗了任意伤口，返回True</returns>
     public static bool TryHealWounds(Pawn pawn, out TaggedString message, int woundsToHeal = 1)

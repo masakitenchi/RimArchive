@@ -32,8 +32,9 @@
 			<li Class="RimArchive.CompProperties_ExistedTicks">
 				<ExistedTicks>900</ExistedTicks>
 			</li>
-			<li Class="RimArchive.CompProperties_Medkit">
-				<WoundsToHeal>5</WoundsToHeal>
+			<li Class="RimArchive.CompProperties_Healing">
+				<SingleUse>true</SingleUse>
+				<WoundsPerHeal>5</WoundsPerHeal>
 			</li>
 			<li Class="CompProperties_InspectString">
 				<inspectString>医疗箱会治疗第一个触碰它的殖民者！(在15秒内消失)</inspectString>
@@ -72,9 +73,9 @@
 			<li Class="RimArchive.CompProperties_ExistedTicks">
 				<ExistedTicks>900</ExistedTicks>
 			</li>
-			<li Class="RimArchive.CompProperties_ContactPot">
-				<HealPawnCount>4</HealPawnCount>
-				<WoundsToHealEach>2</WoundsToHealEach>
+			<li Class="RimArchive.CompProperties_Healing">
+				<UseCount>4</UseCount>
+				<WoundsPerHeal>2</WoundsPerHeal>
 			</li>
 			<li Class="CompProperties_InspectString">
 				<inspectString>供给部料理会治疗伤员的两个伤口！\n使用4次后便会消失，且每个人只能接受一次治疗。(在15秒内消失)</inspectString>

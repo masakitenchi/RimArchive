@@ -44,12 +44,13 @@
     <Compile Include="BA.cs" />
     <Compile Include="Boss\BossGroupWorker.cs" />
     <Compile Include="Boss\RaidGroupWave.cs" />
-    <Compile Include="Components\Comp_TimeLimitedExistence.cs" />
-    <Compile Include="Components\Comp_UseMedikit.cs" />
-    <Compile Include="Components\Comp_UsePot.cs" />
+    <Compile Include="Thing\Comps\Comp_TimeLimitedExistence.cs" />
+    <Compile Include="Thing\Comp_UseMedikit.cs" />
+    <Compile Include="Thing\Comp_UsePot.cs" />
+    <Compile Include="Thing\CompProperties_Healing.cs" />
+    <Compile Include="Thing\Buildings_Healing.cs" />
     <Compile Include="Utilities\HealingUtility.cs" />
     <Compile Include="Components\RimArchiveWorldComponent.cs" />
-    <Compile Include="Coroutine.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="Defs\BossDef.cs" />
     <Compile Include="Defs\DefOfs\HediffDefOf.cs" />
