@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--阿拜多斯-->
+  <TraitDef>
+    <defName>RA_TraitDef_FTF</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Foreclosure Task Force</label>
+        <description>Lorum Ipsum</description>
+        <statOffsets>
+          <MentalBreakThreshold>-0.1</MentalBreakThreshold> <!--崩溃-->
+          <ComfyTemperatureMax>10</ComfyTemperatureMax> <!--最高舒适温度-->
+          <ComfyTemperatureMin>-10</ComfyTemperatureMin> <!--最低舒适温度-->
+          <SocialImpact>0.2</SocialImpact> <!--社交效果系数-->
+          <PawnBeauty>1</PawnBeauty> <!--俊俏-->
+        </statOffsets>
+        <statFactors>
+          <CertaintyLossFactor>0.2</CertaintyLossFactor> <!--全局动摇系数-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Shiroko</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Sunaookami Shiroko</label>
+        <description>Lorum Ipsum</description>
+        <statOffsets>
+          <RangeCriticalChance>0.8</RangeCriticalChance>
+        </statOffsets>
+        <statFactors>
+          <MoveSpeed>1.2</MoveSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Hoshino</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Takanashi Hoshino</label>
+        <description>Lorum Ipsum</description>
+        <statOffsets>
+          <PainShockThreshold>0.1</PainShockThreshold> <!--疼痛休克阈值系数-->
+          <ImmunityGainSpeed>0.4</ImmunityGainSpeed> <!--免疫性获得速度系数-->
+          <MaxHitPoints>10</MaxHitPoints> <!--耐久度上限-->
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>0.5</IncomingDamageFactor> <!--受到伤害乘数-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Serika</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Kuromi Serika</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <HuntingStealth>1.0</HuntingStealth> <!--狩猎匿踪系数-->
+          <CarryingCapacity>12</CarryingCapacity> <!--携带能力-->
+          <RangeCriticalChance>0.65</RangeCriticalChance>
+        </statOffsets>
+        <statFactors>
+          <MarketValue>2</MarketValue> <!--市场价值-->
+          <NegotiationAbility>0.6</NegotiationAbility> <!--谈判能力系数-->
+          <TradePriceImprovement>0.2</TradePriceImprovement> <!--议价能力系数-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+
+  <!--奥利斯与圣三一-->
+  <TraitDef>
+    <defName>RA_TraitDef_Arius</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Arius Squad</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <MoveSpeed>0.3</MoveSpeed> <!--移速-->
+          <MentalBreakThreshold>-0.06</MentalBreakThreshold> <!--崩溃-->
+          <PainShockThreshold>0.15</PainShockThreshold> <!--疼痛休克-->
+          <ImmunityGainSpeed>0.10</ImmunityGainSpeed> <!--高效免疫-->
+          <PawnBeauty>1</PawnBeauty> <!--俊俏-->
+        </statOffsets>
+        <statFactors>
+          <PawnTrapSpringChance>0.1</PawnTrapSpringChance> <!--陷阱触发概率-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <!--阿里乌斯是基督教三位一体的否定者，在当时引起了激烈的讨论战-->
+
+  <TraitDef>
+    <defName>RA_TraitDef_Spy</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>lorum ipsum</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <MoveSpeed>0.3</MoveSpeed> <!--移速-->
+          <MentalBreakThreshold>-0.06</MentalBreakThreshold> <!--崩溃-->
+          <PainShockThreshold>0.15</PainShockThreshold> <!--疼痛休克-->
+          <ImmunityGainSpeed>0.10</ImmunityGainSpeed> <!--高效免疫-->
+          <PawnBeauty>1</PawnBeauty> <!--俊俏-->
+        </statOffsets>
+        <statFactors>
+          <PawnTrapSpringChance>0.1</PawnTrapSpringChance> <!--陷阱触发概率-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Azusa</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Shirasu Azusa</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <RangeCriticalChance>0.4</RangeCriticalChance> <!--远程暴击-->
+          <ConstructSuccessChance>0.1</ConstructSuccessChance> <!--建造成功几率-->
+        </statOffsets>
+        <statFactors>
+          <RestFallRateFactor>0.8</RestFallRateFactor> <!--疲劳率-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <!--月、天使、两面、死亡。沙立叶虽然是堕天使，但是依然作为光之子参与战争，非常有既视感，月亮和死亡元素也十分充沛。-->
+
+  <TraitDef>
+    <defName>RA_TraitDef_MUWC</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <forcedPassions>
+      <li>Artistic</li>
+    </forcedPassions>
+    <degreeDatas>
+      <li>
+        <label>Make-Up Work Club</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <GlobalLearningFactor>0.25</GlobalLearningFactor> <!--经验-->
+          <MeditationFocusGain>0.1</MeditationFocusGain> <!--冥想增益-->
+          <PawnBeauty>1</PawnBeauty> <!--俊俏-->
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Hifumi</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Ajitani Hifumi</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <marketValueFactorOffset>10.0</marketValueFactorOffset> <!--人物价值-->
+          <NegotiationAbility>0.2</NegotiationAbility> <!--谈判能力系数-->
+          <TradePriceImprovement>0.05</TradePriceImprovement> <!--议价能力系数-->
+          <SocialImpact>0.2</SocialImpact> <!--社交效果系数-->
+          <ConversionPower>1</ConversionPower> <!--教化效果系数-->
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Koharu</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Shimoe Koharu</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <MeleeDodgeChance>4</MeleeDodgeChance> <!--近战闪避，最大值50-->
+          <MedicalTendQuality>0.4</MedicalTendQuality> <!--治疗质量系数-->
+        </statOffsets>
+        <statFactors>
+          <PsychicEntropyMax>1.5</PsychicEntropyMax> <!--心灵熵阈值-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Hanako</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Urawa Hanako</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <MeleeDodgeChance>4</MeleeDodgeChance> <!--近战闪避，最大值50-->
+          <MedicalTendQuality>0.4</MedicalTendQuality> <!--治疗质量系数-->
+        </statOffsets>
+        <statFactors>
+          <PsychicEntropyMax>1.5</PsychicEntropyMax> <!--心灵熵阈值-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!--救援骑士团-->
+  <TraitDef>
+    <defName>RA_TraitDef_RK</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Remedial Knights</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <MeleeDodgeChance>5</MeleeDodgeChance> <!--近战闪避，最大值50-->
+          <MedicalTendQuality>0.2</MedicalTendQuality> <!--治疗质量系数-->
+          <MedicalSurgerySuccessChance>0.15</MedicalSurgerySuccessChance> <!--手术成功几率-->
+          <MoveSpeed>1</MoveSpeed> <!--移动速度格每秒-->
+          <PawnBeauty>1</PawnBeauty> <!--魅力-->
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.1</MeleeDamageFactor> <!--近战伤害系数-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_TS</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>The Sisterhood</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <SocialImpact>0.2</SocialImpact> <!--社交效果系数-->
+          <MeditationFocusGain>0.2</MeditationFocusGain> <!--冥想增益-->
+          <PawnBeauty>2</PawnBeauty> <!--俊俏-->
+          <MentalBreakThreshold>-0.2</MentalBreakThreshold> <!--崩溃临界值系数-->
+        </statOffsets>
+        <statFactors>
+          <PsychicEntropyMax>1.2</PsychicEntropyMax> <!--心灵熵阈值-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!--千年-->
+  <TraitDef>
+    <defName>RA_TraitDef_GDD</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Game Development Department</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <PawnBeauty>1</PawnBeauty> <!--俊俏-->
+          <ResearchSpeed>0.25</ResearchSpeed> <!--研究速率-->
+          <RoyalFavorValue>1</RoyalFavorValue> <!--荣誉点数-->
+        </statOffsets>
+        <mentalBreakInspirationGainSet>
+          <!--限制状态-->
+          <li>Inspired_Creativity</li> <!--创造灵感-->
+        </mentalBreakInspirationGainSet>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Midori</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Saiba Midori</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <ShootingAccuracyPawn>4</ShootingAccuracyPawn> <!--射击精度-->
+          <DeepDrillingSpeed>0.6</DeepDrillingSpeed> <!--钻井操作-->
+          <HackingSpeed>0.2</HackingSpeed> <!--破解速度-->
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.8</AimingDelayFactor> <!--瞄准延迟系数-->
+        </statFactors>
+        <disallowedMentalStates>
+          <!-- 不允许状态 -->
+          <li>Berserk</li> <!-- 狂暴 -->
+        </disallowedMentalStates>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Momoi</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Saiba Momoi</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <DeepDrillingSpeed>0.6</DeepDrillingSpeed> <!--钻井操作-->
+          <HackingSpeed>0.2</HackingSpeed> <!--破解速度-->
+        </statOffsets>
+        <statFactors>
+          <AimingDelayFactor>0.8</AimingDelayFactor> <!--瞄准延迟系数-->
+          <RangedCooldownFactor>0.8</RangedCooldownFactor> <!--远程冷却系数-->
+        </statFactors>
+        <disallowedMentalStates>
+          <!-- 不允许状态 -->
+          <li>Berserk</li> <!-- 狂暴 -->
+        </disallowedMentalStates>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Aris</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Tendo Aris</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <ShootingAccuracyPawn>5</ShootingAccuracyPawn> <!--射击精度-->
+          <BiosculpterOccupantSpeed>1.0</BiosculpterOccupantSpeed> <!--塑形速度-->
+          <WorkSpeedGlobalOffsetMech>1.0</WorkSpeedGlobalOffsetMech> <!--机械工作速度偏移-->
+          <MechRepairSpeed>1.0</MechRepairSpeed> <!--机械修理速度-->
+          <MechFormingSpeed>1.0</MechFormingSpeed> <!--机械培育速度-->
+        </statOffsets>
+        <statFactors>
+          <!--乘数因子-->
+          <MechBandwidth>2</MechBandwidth> <!--机械带宽-->
+          <MechRemoteShieldEnergy>2</MechRemoteShieldEnergy> <!--机械远程护盾能量-->
+          <ControlTakingTime>0.4</ControlTakingTime> <!--控制耗时-->
+        </statFactors>
+        <disallowedMentalStates>
+          <!-- 不允许状态 -->
+          <li>Berserk</li> <!-- 狂暴 -->
+        </disallowedMentalStates>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_CC</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>C&amp;C</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <PawnBeauty>1</PawnBeauty> <!--俊俏-->
+          <WorkSpeedGlobal>0.15</WorkSpeedGlobal> <!--全局工作速度系数-->
+        </statOffsets>
+        <statFactors>
+          <MeleeDamageFactor>1.3</MeleeDamageFactor> <!--近战伤害系数-->
+          <StaggerDurationFactor>0.8</StaggerDurationFactor> <!--抑止时间系数-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Neru</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Mikamo Neru</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <FoodPoisonChance>-1.0</FoodPoisonChance> <!--食物有毒几率-->
+          <CookSpeed>0.3</CookSpeed> <!--烹饪速度系数-->
+          <MoveSpeed>1</MoveSpeed> <!--移动速度格每秒-->
+          <WorkSpeedGlobal>-0.15</WorkSpeedGlobal> <!--全局工作速度系数-->
+        </statOffsets>
+        <statFactors>
+          <ArrestSuccessChance>2</ArrestSuccessChance> <!--拘捕成功率-->
+        </statFactors>
+        <!--要写一个破坏崩溃-->
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Asuna</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Ichinose Asuna</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <PawnBeauty>1</PawnBeauty> <!--俊俏-->
+          <MeleeDodgeChance>2</MeleeDodgeChance> <!--近战闪避系数-->
+          <RangeDodgeChance>0.2</RangeDodgeChance> <!--远程闪避系数-->
+        </statOffsets>
+        <!--要写一个迷茫崩溃-->
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <!--福尔图娜，时运女神，掌管人间的幸运和机遇，随着神话融合还加入了复仇女神的元素，所以明日奈既是靠脸猜密码的神秘生物，也是专业的战斗专家-->
+
+  <!--研讨会-->
+  <TraitDef>
+    <defName>RA_TraitDef_Seminar</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Seminar</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <PawnBeauty>1</PawnBeauty> <!--俊俏-->
+          <ResearchSpeed>0.25</ResearchSpeed> <!--研究速率-->
+          <RoyalFavorValue>1</RoyalFavorValue> <!--荣誉点数-->
+        </statOffsets>
+        <mentalBreakInspirationGainSet>
+          <!--限制状态-->
+          <li>Inspired_Creativity</li> <!--创造灵感-->
+        </mentalBreakInspirationGainSet>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!--优香-->
+  <TraitDef>
+    <defName>RA_TraitDef_Yuuka</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Hayase Yuuka</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <ResearchSpeed>0.25</ResearchSpeed> <!--研究速率-->
+          <RangeDodgeChance>0.1</RangeDodgeChance> <!--远程闪避系数-->
+          <RestRateMultiplier>0.1</RestRateMultiplier> <!--休息率系数-->
+          <MentalBreakThreshold>-0.1</MentalBreakThreshold> <!--崩溃临界值系数-->
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!--诺亚-->
+  <TraitDef>
+    <defName>RA_TraitDef_Noa</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Ushio Noa</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <NegotiationAbility>0.3</NegotiationAbility> <!--谈判能力系数-->
+          <!--技能遗忘速率-->
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+
+  <!--格黑那-->
+  <TraitDef>
+    <defName>RA_TraitDef_JTF</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Justice Task Force</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <MoveSpeed>0.15</MoveSpeed>
+          <RestRateMultiplier>0.20</RestRateMultiplier> <!--休息效率-->
+          <AimingDelayFactor>-0.1</AimingDelayFactor> <!--瞄准时间-->
+          <MeleeDodgeChance>15</MeleeDodgeChance> <!--近战闪避-->
+          <PawnBeauty>1</PawnBeauty> <!--俊俏-->
+        </statOffsets>
+        <statFactors>
+          <PawnTrapSpringChance>0.6</PawnTrapSpringChance> <!--陷阱触发概率-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_PS68</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Problem Solver 68</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <MoveSpeed>0.15</MoveSpeed>
+          <RestRateMultiplier>0.20</RestRateMultiplier> <!--休息效率-->
+          <AimingDelayFactor>-0.1</AimingDelayFactor> <!--瞄准时间-->
+          <MeleeDodgeChance>15</MeleeDodgeChance> <!--近战闪避-->
+          <PawnBeauty>1</PawnBeauty> <!--俊俏-->
+        </statOffsets>
+        <statFactors>
+          <PawnTrapSpringChance>0.6</PawnTrapSpringChance> <!--陷阱触发概率-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Aru</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Rikuhachima Aru</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <NegotiationAbility>-0.5</NegotiationAbility> <!--谈判能力系数-->
+          <TradePriceImprovement>-0.7</TradePriceImprovement> <!--议价能力系数-->
+          <SocialImpact>0.5</SocialImpact> <!--社交效果系数-->
+          <ConversionPower>0.5</ConversionPower> <!--教化效果系数-->
+          <ConstructSuccessChance>-0.2</ConstructSuccessChance> <!--建造成功几率-->
+          <FixBrokenDownBuildingSuccessChance>-0.4</FixBrokenDownBuildingSuccessChance> <!--修理成功几率-->
+          <HuntingStealth>-0.1</HuntingStealth> <!--狩猎匿踪系数-->
+          <MeleeDodgeChance>5</MeleeDodgeChance> <!--近战闪避，最大值50-->
+          <ShootingAccuracyPawn>7</ShootingAccuracyPawn> <!--射击精度-->
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <!--格黑那属于恶魔团体，阿露大概是第68柱魔神Belial，王阶，50个军团。拥有辨别真伪、明辨敌友的力量。希伯来语的Belial也是无赖、无价值、无意义，一切归于“恶”的意思，无价值、无意义在
+  剧情中阿露多个经营策略失败中体现的淋漓尽致，而她的思维也非常积极正面，也符合Belial的“天使内心”设定。至于辨识能力......阿露能很好的搞定传销组织和凯撒集团，虽然没多少是故意找上门
+  的（乐）-->
+
+  <TraitDef>
+    <defName>RA_TraitDef_Mutsuki</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Asagi Mutsuki</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <NegotiationAbility>0.5</NegotiationAbility> <!--谈判能力系数-->
+          <TradePriceImprovement>0.2</TradePriceImprovement> <!--议价能力系数-->
+          <SocialImpact>0.1</SocialImpact> <!--社交效果系数-->
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <!--Asmodeus，32柱魔神。传说和形象很多，在犹太教经典的《塔木德》中很喜欢调戏女性和用恶劣的恶作剧捉弄人，曾有趁所罗门不注意丢老远然后自己变所罗门当皇帝然后在那位回来又成功跑路的
+  战绩-->
+
+  <TraitDef>
+    <defName>RA_TraitDef_Kayoko</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Onikata Kayoko</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <ArrestSuccessChance>0.2</ArrestSuccessChance> <!--拘捕成功率-->
+          <SuppressionPower>0.2</SuppressionPower> <!--镇压能力乘数-->
+          <TameAnimalChance>0.05</TameAnimalChance> <!--驯服动物成功率-->
+          <TrainAnimalChance>0.05</TrainAnimalChance> <!--训练动物成功率-->
+          <AnimalsLearningFactor>0.4</AnimalsLearningFactor> <!--驯兽学习效率-->
+          <BondAnimalChanceFactor>1</BondAnimalChanceFactor> <!--动物羁绊系数-->
+        </statOffsets>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <!--Beleth，32柱魔神，力量是施加恐惧感，是一个希望回归天堂的音乐爱好者。非常了解风纪委员的战术并且与其中角色有旧，或许在加入68社之前是个风纪委员？-->
+
+  <TraitDef>
+    <defName>RA_TraitDef_Haruka</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Igusa Haruka</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <ArrestSuccessChance>0.2</ArrestSuccessChance> <!--拘捕成功率-->
+          <SuppressionPower>0.3</SuppressionPower> <!--镇压能力乘数-->
+          <MentalBreakThreshold>0.2</MentalBreakThreshold> <!--崩溃-->
+          <PlantWorkSpeed>0.2</PlantWorkSpeed> <!--种植速度-->
+        </statOffsets>
+        <statFactors>
+          <CertaintyLossFactor>2</CertaintyLossFactor> <!--全局动摇系数-->
+          <StaggerDurationFactor>0.8</StaggerDurationFactor> <!--抑止时间系数-->
+          <IncomingDamageFactor>0.5</IncomingDamageFactor> <!--受到伤害乘数-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <!--emmm-->
+
+
+  <TraitDef>
+    <defName>RA_TraitDef_GRS</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Gourmet Research Society</label>
+        <description>lorum ipsum</description>
+        <theOnlyAllowedMentalBreaks>
+          <li>Binging_Food</li>
+        </theOnlyAllowedMentalBreaks>
+        <statOffsets>
+          <MoveSpeed>0.15</MoveSpeed>
+          <MentalBreakThreshold>0.1</MentalBreakThreshold> <!--崩溃-->
+          <ImmunityGainSpeed>0.50</ImmunityGainSpeed> <!--高效免疫-->
+          <PawnBeauty>1</PawnBeauty> <!--俊俏-->
+        </statOffsets>
+        <skillGains>
+          <li>
+            <key>Cooking</key>
+            <value>4</value>
+          </li>
+        </skillGains>
+        <hungerRateFactor>1.2</hungerRateFactor>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!--SRT-->
+  <TraitDef>
+    <defName>RA_TraitDef_Rabbit</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>RABBIT Squad</label>
+        <description>Lorum Ipsum</description>
+        <statOffsets>
+          <ShootingAccuracyPawn>2</ShootingAccuracyPawn> <!--射击精度-->
+          <WorkSpeedGlobal>0.20</WorkSpeedGlobal>
+          >
+          <!--工作效率-->
+          <IncomingDamageFactor>-0.12</IncomingDamageFactor> <!--承伤系数-->
+          <PawnBeauty>1</PawnBeauty> <!--俊俏-->
+        </statOffsets>
+        <statFactors>
+          <CertaintyLossFactor>0.4</CertaintyLossFactor> <!--全局动摇系数-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Miyako</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Tsukiyuki Miyako</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <ConstructionSpeed>1.0</ConstructionSpeed> <!--建造速度-->
+          <MentalBreakThreshold>-0.2</MentalBreakThreshold> <!--崩溃-->
+          <PlantWorkSpeed>0.2</PlantWorkSpeed> <!--种植速度-->
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>0.7</IncomingDamageFactor> <!--受到伤害乘数-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!--山海经-->
+  <TraitDef>
+    <defName>RA_TraitDef_PBG</defName>
+    <commonality>0</commonality> <!--出现概率-->
+    <degreeDatas>
+      <li>
+        <label>Plum Blossom Garden</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <WorkSpeedGlobal>0.20</WorkSpeedGlobal>
+          >
+          <!--工作效率-->
+          <SocialImpact>0.05</SocialImpact> <!--社交效果系数-->
+          <ConversionPower>0.2</ConversionPower> <!--教化效果系数-->
+          <PawnBeauty>1</PawnBeauty> <!--俊俏-->
+        </statOffsets>
+        <statFactors>
+          <CertaintyLossFactor>2</CertaintyLossFactor> <!--全局动摇系数-->
+        </statFactors>
+        <disallowedMentalStates>
+          <!-- 不允许状态 -->
+          <li>Berserk</li> <!-- 狂暴 -->
+        </disallowedMentalStates>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>RA_TraitDef_Shun</defName>
+    <commonality>0</commonality> <!--出现概率-->
+
+    <degreeDatas>
+      <li>
+        <label>Sunohara Shun</label>
+        <description>lorum ipsum</description>
+        <statOffsets>
+          <ForagedNutritionPerDay>0.15</ForagedNutritionPerDay> <!--远行采集量-->
+          <PainShockThreshold>-0.2</PainShockThreshold> <!--疼痛休克阈值系数-->
+          <HuntingStealth>0.11</HuntingStealth> <!--狩猎匿踪系数-->
+        </statOffsets>
+        <statFactors>
+          <hungerRateFactor>1.2</hungerRateFactor> <!--饥饿率乘数-->
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+
+</Defs>

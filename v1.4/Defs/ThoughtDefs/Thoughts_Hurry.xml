@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>TeacherShelter</defName>
+    <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <requiredTraits>
+      <!--对应特性-->
+      <li>RA_TraitDef_MUWC</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>老师就在身边</label>
+        <description>马上又能见到老师了！</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef> <!--补课部-->
+
+  <ThoughtDef>
+    <defName>Hatred</defName>
+    <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <requiredTraits>
+      <li>RA_TraitDef_Arius</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>Vanitas</label>
+        <description>无论行至何处，一切皆是虚无。</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef> <!--奥利斯小队-->
+
+  <ThoughtDef>
+    <defName>RA_ThoughtDef_Azusa</defName>
+    <workerClass>ThoughtWorker_AlwaysActive</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <requiredTraits>
+      <li>RA_TraitDef_Azusa</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>万物皆虚，万事皆允</label>
+        <description>一切都是虚无，人生一点意义都没有。但是......我想相信......你的话语。</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef> <!--三一的间谍-->
+
+  <ThoughtDef>
+    <defName>RA_ThoughtDef_Hoshino</defName>
+    <workerClass>ThoughtWorker_IsNightForNightOwl</workerClass>
+    <requiredTraits>
+      <li>RA_TraitDef_Hoshino</li>
+    </requiredTraits>
+    <!-- <nullifyingTraits>
+      <li>PTD02sw</li>
+    </nullifyingTraits> -->
+    <stages>
+      <li>
+        <label>巡夜者</label>
+        <description>在睡觉时间也要保护好学校！</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>
