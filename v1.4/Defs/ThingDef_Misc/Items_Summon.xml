@@ -74,6 +74,7 @@
 				<ExistedTicks>900</ExistedTicks>
 			</li>
 			<li Class="RimArchive.CompProperties_Healing">
+				<SingleUse>false</SingleUse>
 				<UseCount>4</UseCount>
 				<WoundsPerHeal>2</WoundsPerHeal>
 			</li>
