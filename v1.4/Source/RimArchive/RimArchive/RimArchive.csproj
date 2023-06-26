@@ -38,19 +38,26 @@
     </DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <!--<Compile Include="Abilities\Comps\CompAbilityEffect_PowerBeam.cs" />
+    <Compile Include="Abilities\Comps\CompAbilityEffect_PowerBeam.cs" />
+    <Compile Include="Abilities\Comps\CompAbilityEffect_SpawnSummon.cs" />
     <Compile Include="Abilities\Verb_StraightBeam.cs" />
-    <Compile Include="Boss\RaidDef.cs" />
+    <Compile Include="BA.cs" />
     <Compile Include="Boss\BossGroupWorker.cs" />
     <Compile Include="Boss\RaidGroupWave.cs" />
     <Compile Include="Components\Comp_TimeLimitedExistence.cs" />
     <Compile Include="Components\Comp_UseMedikit.cs" />
+    <Compile Include="Components\Comp_UsePot.cs" />
+    <Compile Include="Utilities\HealingUtility.cs" />
     <Compile Include="Components\RimArchiveWorldComponent.cs" />
+    <Compile Include="Coroutine.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="Defs\BossDef.cs" />
     <Compile Include="Defs\DefOfs\HediffDefOf.cs" />
+    <Compile Include="Defs\DefOfs\SchoolDefOf.cs" />
+    <Compile Include="Defs\DefOfs\StudentDefOf.cs" />
     <Compile Include="Defs\DefOfs\ThingDefOf.cs" />
     <Compile Include="Defs\IconDef.cs" />
+    <Compile Include="Defs\RaidDef.cs" />
     <Compile Include="Defs\StudentDef.cs" />
     <Compile Include="Framework\BiDirectionDic.cs" />
     <Compile Include="GameComponents\RaidManager.cs" />
@@ -62,29 +69,30 @@
     <Compile Include="Patch\Harmony_CE.cs" />
     <Compile Include="PawnRelation\PawnRelationWorker_SameClub.cs" />
     <Compile Include="PawnRelation\PawnRelationWorker_Sibling.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quest\QuestNode_Root_Raid.cs" />
     <Compile Include="Quest\QuestPart_RaidArrives.cs" />
+    <Compile Include="RAFaction.cs" />
     <Compile Include="RimArchive.cs" />
     <Compile Include="SchoolNameModExtension.cs" />
-    <Compile Include="Defs\DefOfs\StudentDefOf.cs" />
-    <Compile Include="RAFaction.cs" />
     <Compile Include="ShittimChest.cs" />
+    <Compile Include="Storyteller\StorytellerCompProperties_Raid.cs" />
+    <Compile Include="Thing\CompProperties_DisappearAfterTicks.cs" />
     <Compile Include="Thing\CompProperties_InvadePillar.cs" />
     <Compile Include="Thing\CompProperties_MoteEmitterIncreasingSize.cs" />
     <Compile Include="Thing\CompProperties_StunHandler.cs" />
+    <Compile Include="Thing\Comps\CompDisappearAfterTicks.cs" />
     <Compile Include="Thing\Comps\CompInvadePillar.cs" />
     <Compile Include="Thing\Comps\CompMoteEmitterIncreasingSize.cs" />
     <Compile Include="Thing\Comps\CompStunHandler.cs" />
+    <Compile Include="Thing\iPad.cs" />
     <Compile Include="Thing\Pillar.cs" />
+    <Compile Include="Thing\TrapLikeBuilding.cs" />
     <Compile Include="Thought\ThoughtWorker\ThoughtWorker_OpinionOfMates.cs" />
     <Compile Include="Thought\ThoughtWorker\ThoughtWorker_OwnWeapon.cs" />
     <Compile Include="Verbs\moe_bombardment.cs" />
-    <Compile Include="BA.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Defs\DefOfs\SchoolDefOf.cs" />
     <Compile Include="Verbs\Verb_SummonThing.cs" />
-    <Compile Include="Window\RecruitWindow.cs" />-->
-    <Compile Include="**\*.cs" Exclude="obj\**\*.*" />
+    <Compile Include="Window\RecruitWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.RimWorld.Ref" Version="1.4.3682" />

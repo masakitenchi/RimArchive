@@ -95,10 +95,11 @@
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="BA_HOD">
-		<defName>BA_BOSS_HODINSANE</defName>
+		<defName>BA_BOSS_HOD_INSANE</defName>
 		<combatPower>1000</combatPower>
 		<abilities Inherit="False">
 			<li>FireBurst</li>
+			<li>LongjumpMech</li>
 		</abilities>
 		<weaponTags Inherit = "False">
 			<li>HellsphereCannonGun</li>
