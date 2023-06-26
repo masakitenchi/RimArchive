@@ -58,7 +58,7 @@ public class RaidDef : Def
         string str = GenLabel.BestKindLabel(wave.bossOverride?.kindDef ?? this.boss.kindDef, Gender.None).CapitalizeFirst();
         if (!wave.bossApparel.NullOrEmpty<ThingDef>())
             str = (string)"BossWithApparel".Translate(str.Named("BOSS"), wave.bossApparel.Select<ThingDef, string>((Func<ThingDef, string>)(a => a.label)).ToCommaList(true).Named("APPAREL"));
-        this.tmpEntries.Add(str + "(" + "BossHPMultiplier".Translate(wave.bossDamageFactor.ToStringPercent()) + ")");
+        this.tmpEntries.Add(str + "(" + "BossHPMultiplier".Translate(HediffDefOf.BA_BossDamageReduction.stages[waveIndex].statFactors.First().ToStringAsFactor) + ")");
         foreach (PawnKindDefCount escort in wave.escorts)
             this.tmpEntries.Add(GenLabel.BestKindLabel(escort.kindDef, Gender.None).CapitalizeFirst() + " x" + (object)escort.count);
         return this.tmpEntries.ToLineList("  - ");
