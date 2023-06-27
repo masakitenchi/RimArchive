@@ -1,6 +1,4 @@
-﻿using RimWorld;
-
-namespace RimArchive
+﻿namespace RimArchive
 {
     [DefOf]
     internal class SchoolDefOf

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>RA_PawnKindDef_Sensei</defName>
+		<race>RA_Race_Sensei</race>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<RA_XenotypeDef_Sensei>99999</RA_XenotypeDef_Sensei>
+			</xenotypeChances>
+		</xenotypeSet>
+		<initialResistanceRange>0~0.1</initialResistanceRange>
+	</PawnKindDef>
+</Defs>

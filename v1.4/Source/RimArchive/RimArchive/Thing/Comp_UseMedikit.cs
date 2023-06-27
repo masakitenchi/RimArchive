@@ -1,9 +1,4 @@
-﻿using RimWorld;
-using RimWorld.Planet;
-using System;
-using UnityEngine;
-using Verse;
-using Verse.Noise;
+﻿using System;
 
 namespace RimArchive;
 
@@ -20,7 +15,7 @@ public class CompMedkit : ThingComp
     public CompProperties_Medkit Props => this.props as CompProperties_Medkit;
     public void DoEffect(Pawn pawn)
     {
-        if(HealingUtility.TryHealWounds(pawn, out var Message, Props.WoundsToHeal))
+        if (HealingUtility.TryHealWounds(pawn, out var Message, Props.WoundsToHeal))
         {
             Messages.Message(Message, MessageTypeDefOf.PositiveEvent);
             this.parent.Destroy(DestroyMode.Vanish);

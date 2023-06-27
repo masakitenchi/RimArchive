@@ -1,13 +1,7 @@
-﻿using RimWorld;
-using System.Collections.Generic;
-using Verse;
-using HarmonyLib;
-using System.Linq;
-using static RimArchive.DebugMessage;
-using System;
-using System.Text;
-using UnityEngine;
+﻿using System;
 using System.Reflection.Emit;
+using UnityEngine;
+using static RimArchive.DebugMessage;
 
 namespace RimArchive.GameComponents;
 
@@ -32,9 +26,9 @@ public static class Harmony_RaidManager
     [HarmonyTranspiler]
     public static IEnumerable<CodeInstruction> Tranpiler(IEnumerable<CodeInstruction> instructions)
     {
-        foreach(var instruction in instructions)
+        foreach (var instruction in instructions)
         {
-            if(instruction.OperandIs(AccessTools.Method(typeof(GameComponent_Bossgroup), "Notify_PawnKilled")))
+            if (instruction.OperandIs(AccessTools.Method(typeof(GameComponent_Bossgroup), "Notify_PawnKilled")))
             {
                 yield return instruction;
                 yield return new CodeInstruction(OpCodes.Call, AccessTools.PropertyGetter(typeof(RimArchiveMain), nameof(RimArchiveMain.RaidManager)));
@@ -131,7 +125,7 @@ public class RaidManager : GameComponent
             return;
         //Log.Message($"Passed if statement : {bossForRaid == null}");
         this.killedBosses.Add(bossForRaid);
-        if(!this.highestDifficulty.TryAdd(CurrentRaid, difficultyComing.Value))
+        if (!this.highestDifficulty.TryAdd(CurrentRaid, difficultyComing.Value))
             this.highestDifficulty[CurrentRaid] = Math.Max(difficultyComing.Value, this.highestDifficulty[CurrentRaid]);
         difficultyComing = null;
     }

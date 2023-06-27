@@ -1,33 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <ThingDef Abstract="True" Name="RA_BuildingTopBase" ParentName="BuildingBase">
-    <thingClass>Building</thingClass>
-    <category>Building</category>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <altitudeLayer>BuildingOnTop</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <selectable>true</selectable>
-    <fillPercent>0.20</fillPercent>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-    <designationCategory>Misc</designationCategory>
-    <rotatable>true</rotatable>
-    <uiIconOffset>(0, 0)</uiIconOffset>
-    <thingCategories>
-      <li>BuildingsFurniture</li>
-    </thingCategories>
-    <graphicData>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <shadowData>
-        <volume>(0.3, 0.6, 0.3)</volume>
-        <offset>(0,0,-0.1)</offset>
-      </shadowData>
-      <damageData>
-        <rect>(0.2,0.2,0.6,0.6)</rect>
-      </damageData>
-    </graphicData>
-  </ThingDef>
+	<ThingDef Abstract="True" Name="RA_BuildingTopBase" ParentName="BuildingBase">
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<designationCategory>Misc</designationCategory>
+		<rotatable>true</rotatable>
+		<uiIconOffset>(0, 0)</uiIconOffset>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+	</ThingDef>
 
 
 	<ThingDef ParentName="RA_BuildingTopBase">
@@ -86,13 +86,13 @@
 				<rect>(0.1,0.1,0.1,0.1)</rect>
 			</damageData>
 		</graphicData>
-	    <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <shortCircuitInRain>false</shortCircuitInRain>
-        <basePowerConsumption>0</basePowerConsumption>
-      </li>
-    </comps>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<basePowerConsumption>0</basePowerConsumption>
+			</li>
+		</comps>
 	</ThingDef>
 
 </Defs>

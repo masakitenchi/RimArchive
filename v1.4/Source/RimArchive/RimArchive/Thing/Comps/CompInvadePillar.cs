@@ -1,11 +1,4 @@
-﻿using RimWorld;
-using Verse;
-using System.Collections.Generic;
-using System.Linq;
-using HarmonyLib;
-using System;
-using UnityEngine;
-using System.Text;
+﻿using System.Text;
 
 namespace RimArchive;
 
@@ -33,7 +26,7 @@ public class CompInvadePillar : ThingComp
         {
             _ticks = 0;
             _currentRadius += _radiusAdd;
-            if(_currentRadius >= _maxDist)
+            if (_currentRadius >= _maxDist)
             {
                 _isMaxDist = true;
             }

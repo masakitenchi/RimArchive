@@ -1,8 +1,4 @@
-﻿using RimWorld;
-using Verse;
-using System.Collections.Generic;
-
-namespace RimArchive;
+﻿namespace RimArchive;
 
 public class CompProperties_InvadePillar : CompProperties
 {

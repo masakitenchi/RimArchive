@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Verse;
+﻿using System.Text;
 
 namespace RimArchive;
 
@@ -18,7 +15,7 @@ public static class HealingUtility
     {
         bool EverHealed = false;
         StringBuilder sb = new StringBuilder();
-        foreach(var hediff in FindInjuries(pawn, woundsToHeal))
+        foreach (var hediff in FindInjuries(pawn, woundsToHeal))
         {
             sb.AppendLine(HealthUtility.Cure(hediff));
             EverHealed = true;

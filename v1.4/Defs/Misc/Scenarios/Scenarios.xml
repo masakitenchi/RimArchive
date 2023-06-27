@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ScenarioDef>
+		<defName>RA_ScenarioDef_NudeLand</defName>
+		<label>时空扭曲</label>
+		<description>最终章。你正从轨道上单人迫降。一切看起来都结束了。但真的如此吗？</description>
+		<scenario>
+			<summary>单人“迫降”时穿越到另一个世界的老师。虽然有什亭之匣的守护，但只能勉强保证你的存活。衣服？不存在的。</summary>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>PlayerColony</factionDef>
+			</playerFaction>
+			<parts>
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+					<def>ConfigurePawnsXenotypes</def>
+					<pawnChoiceCount>1</pawnChoiceCount>
+					<customSummary>带着什亭之匣的单人“迫降”体验。</customSummary>
+					<overrideKinds>
+						<li>
+							<xenotype>RA_XenotypeDef_Sensei</xenotype>
+							<pawnKind>RA_PawnKindDef_Sensei</pawnKind>
+						</li>
+					</overrideKinds>
+					<xenotypeCounts>
+						<li>
+							<xenotype>RA_XenotypeDef_Sensei</xenotype>
+							<count>1</count>
+							<description>Lorum ipsum</description>
+							<requiredAtStart>true</requiredAtStart>
+							<allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+						</li>
+					</xenotypeCounts>
+				</li>
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>DropPods</method>
+					<visible>false</visible>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Shittim_Chest</thingDef>
+					<count>1</count>
+				</li>
+				<li Class="ScenPart_Naked">
+					<def>Naked</def>
+					<context>PlayerStarter</context>
+				</li>
+				<li Class="ScenPart_NoPossessions">
+					<def>NoPossessions</def>
+				</li>
+				<li Class="RimArchive.ScenPart_ForcedRace">
+					<def>ForcedRace</def>
+					<race>RA_Race_Sensei</race>
+				</li>
+
+				<li Class="ScenPart_GameStartDialog">
+					<def>GameStartDialog</def>
+					<text>用掉最后一个名额将黑子传送回地面的你，靠着阿罗娜和普拉娜的“庇护”正在单兵再入。
+						霎时间，一股强大的吸力将你打进了超空间乱流，你发现自己来到了一个陌生的世界。
+						虽然什亭之匣靠着某种超能力还能和基沃托斯取得联络，但你觉得目前最紧要的事情应该是：活着。
+					</text>
+					<closeSound>GameStartSting</closeSound>
+				</li>
+
+			</parts>
+		</scenario>
+	</ScenarioDef>
+</Defs>
