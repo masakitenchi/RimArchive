@@ -45,6 +45,8 @@
     <Compile Include="Boss\BossGroupWorker.cs" />
     <Compile Include="Boss\RaidGroupWave.cs" />
     <Compile Include="ScenPart_ForcedRace.cs" />
+    <Compile Include="Thing\CompProperties_Commconsole.cs" />
+    <Compile Include="Thing\CompProperties_Transform.cs" />
     <Compile Include="Thing\Comps\Comp_TimeLimitedExistence.cs" />
     <Compile Include="Thing\Comp_UseMedikit.cs" />
     <Compile Include="Thing\Comp_UsePot.cs" />
@@ -77,7 +79,7 @@
     <Compile Include="RAFaction.cs" />
     <Compile Include="RimArchive.cs" />
     <Compile Include="SchoolNameModExtension.cs" />
-    <Compile Include="ShittimChest.cs" />
+    <Compile Include="Thing\ShittimChest.cs" />
     <Compile Include="Storyteller\StorytellerCompProperties_Raid.cs" />
     <Compile Include="Thing\CompProperties_DisappearAfterTicks.cs" />
     <Compile Include="Thing\CompProperties_InvadePillar.cs" />
