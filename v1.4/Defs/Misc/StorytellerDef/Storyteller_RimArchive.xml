@@ -6,9 +6,7 @@
 	<StorytellerDef ParentName="RimArchiveBaseStoryteller">
 		<defName>ARONA</defName>
 		<label>阿罗娜</label>
-		<description>オーパーツ「シッテムの箱」のメインオペレートシステムA.R.O.N.A。
-			高性能AIで、「シッテムの箱」のシステム管理者であり、メインOS。
-			現在はシッテムの箱の所有者である先生の業務サポートなどを主に行っているようだ。</description>
+		<description>「什亭之匣」的OS，正式名称：A.R.O.N.A。自称“高性能AI”。</description>
 		<portraitLarge>Pawns/Schale/Arona</portraitLarge>
 		<portraitTiny>Pawns/Schale/AronaTiny</portraitTiny>
 		<comps>
@@ -17,6 +15,89 @@
 				<minIntervalDays>0.5</minIntervalDays>
 				<pointFactor>0.2~0.5</pointFactor>
 			</li>
+			<li Class="StorytellerCompProperties_FactionInteraction">
+				<incident>RaidFriendly</incident>
+				<baseIncidentsPerYear>10</baseIncidentsPerYear>
+				<minSpacingDays>0.4</minSpacingDays>
+				<fullAlliesOnly>true</fullAlliesOnly>
+				<minDanger>High</minDanger>
+			  </li>
+			  <!-- Caravan / temp map -->
+			  <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome">
+				<category>Misc</category>
+				<allowedTargetTags>
+				  <li>Caravan</li>
+				  <li>Map_TempIncident</li>
+				</allowedTargetTags>
+			  </li>
+			  <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome">
+				<category>ThreatSmall</category>
+				<applyCaravanVisibility>true</applyCaravanVisibility>
+				<allowedTargetTags>
+				  <li>Caravan</li>
+				  <li>Map_TempIncident</li>
+				</allowedTargetTags>
+			  </li>
+			  <li Class="StorytellerCompProperties_CategoryIndividualMTBByBiome">
+				<category>ThreatBig</category>
+				<applyCaravanVisibility>true</applyCaravanVisibility>
+				<allowedTargetTags>
+				  <li>Caravan</li>
+				  <li>Map_TempIncident</li>
+				</allowedTargetTags>
+			  </li>
+			  <!-- Quests - non-Royalty -->
+			  <li Class="StorytellerCompProperties_RandomQuest">
+				<category>GiveQuest</category>
+				<allowedTargetTags>
+				  <li>World</li>
+				</allowedTargetTags>
+				<onDays>10</onDays>
+				<numIncidentsRange>1</numIncidentsRange>
+				<acceptFractionByDaysPassedCurve>
+				  <points>
+					<li>(8, 0)</li>
+					<li>(15, 1)</li>
+				  </points>
+				</acceptFractionByDaysPassedCurve>
+				<minSpacingDays>0.2</minSpacingDays>
+				<disableIfAnyModActive>
+				  <li>Ludeon.RimWorld.Royalty</li>
+				</disableIfAnyModActive>
+			  </li>
+			  <!-- Quests - Royalty -->
+			  <li Class="StorytellerCompProperties_RandomQuest">
+				<category>GiveQuest</category>
+				<allowedTargetTags>
+				  <li>World</li>
+				</allowedTargetTags>
+				<onDays>12</onDays>
+				<numIncidentsRange>1~3</numIncidentsRange>
+				<acceptFractionByDaysPassedCurve>
+				  <points>
+					<li>(8, 0)</li>
+					<li>(15, 1)</li>
+				  </points>
+				</acceptFractionByDaysPassedCurve>
+				<minSpacingDays>0.2</minSpacingDays>
+				<enableIfAnyModActive>
+				  <li>Ludeon.RimWorld.Royalty</li>
+				</enableIfAnyModActive>
+			  </li>
+			  <!-- World misc incidents-->
+			  <li Class="StorytellerCompProperties_CategoryMTB">
+				<category>Misc</category>
+				<allowedTargetTags>
+				  <li>World</li>
+				</allowedTargetTags>
+				<minDaysPassed>1</minDaysPassed>
+				<mtbDays>15</mtbDays>
+			  </li>
+			  <!-- Triggered -->
+			  <li Class="StorytellerCompProperties_Triggered">
+				<incident>StrangerInBlackJoin</incident>
+				<delayTicks>180</delayTicks>
+			  </li>
 		</comps>
 	</StorytellerDef>
 

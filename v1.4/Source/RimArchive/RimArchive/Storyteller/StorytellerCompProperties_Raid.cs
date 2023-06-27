@@ -23,7 +23,7 @@ public class StorytellerComp_Raid : StorytellerComp
         offDays = 3.0f,
         minSpacingDays = 0.5f,
         numIncidentsRange = new FloatRange(5.0f, 10.0f),
-        minThreatPoints = StorytellerUtility.GlobalPointsMin()
+        minThreatPoints = StorytellerUtility.GlobalPointsMinRangeFloor
     };
 
     public override IEnumerable<FiringIncident> MakeIntervalIncidents(IIncidentTarget target)
