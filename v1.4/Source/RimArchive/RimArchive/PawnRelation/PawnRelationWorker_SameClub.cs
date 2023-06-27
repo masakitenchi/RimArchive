@@ -1,7 +1,4 @@
-﻿using RimWorld;
-using Verse;
-
-namespace RimArchive;
+﻿namespace RimArchive;
 
 public class PawnRelationWorker_SameClub : PawnRelationWorker
 {

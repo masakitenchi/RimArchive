@@ -1,9 +1,5 @@
-﻿using RimWorld;
-using RimWorld.Planet;
-using System;
-using System.Collections.Generic;
+﻿using RimWorld.Planet;
 using UnityEngine;
-using Verse;
 using Verse.AI.Group;
 
 namespace RimArchive;
@@ -41,7 +37,7 @@ public class QuestPart_RaidArrives : QuestPartActivable
         string str1 = "";
         if (numTicks1 >= 0)
             str1 = str1 + "\nTicks until available: " + (object)numTicks1 + " (" + numTicks1.ToStringTicksToPeriodVerbose() + ")";
-        string str2 = str1 + "\nTicks until forced arrival: " + (object)numTicks2 + " (" + numTicks2.ToStringTicksToPeriodVerbose() + ")" ;
+        string str2 = str1 + "\nTicks until forced arrival: " + (object)numTicks2 + " (" + numTicks2.ToStringTicksToPeriodVerbose() + ")";
         Vector2 vector2 = Text.CalcSize(str2);
         Rect rect1 = new Rect(innerRect.x, curY, innerRect.width, vector2.y);
         Widgets.Label(rect1, str2);

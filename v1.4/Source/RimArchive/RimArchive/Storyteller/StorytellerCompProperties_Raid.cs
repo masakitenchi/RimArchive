@@ -1,8 +1,4 @@
-﻿using RimWorld;
-using System.Collections.Generic;
-using Verse;
-
-namespace RimArchive;
+﻿namespace RimArchive;
 
 public class StorytellerCompProperties_Raid : StorytellerCompProperties
 {
@@ -32,7 +28,7 @@ public class StorytellerComp_Raid : StorytellerComp
 
     public override IEnumerable<FiringIncident> MakeIntervalIncidents(IIncidentTarget target)
     {
-        if(target is Map)
+        if (target is Map)
         {
             parms.currentThreatPointsFactor = Props.pointFactor.RandomInRange;
             parms.minSpacingDays = Props.minIntervalDays;

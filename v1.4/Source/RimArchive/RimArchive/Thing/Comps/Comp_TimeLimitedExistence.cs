@@ -1,8 +1,4 @@
-﻿using RimWorld;
-using System;
-using Verse;
-
-namespace RimArchive;
+﻿namespace RimArchive;
 public class CompProperties_ExistedTicks : CompProperties
 {
     public int ExistedTicks = 500;
@@ -13,7 +9,7 @@ public class Comp_TimeLimitedExistence : ThingComp
 {
     private int _ticksLeft;
 
-    CompProperties_ExistedTicks Props => (CompProperties_ExistedTicks) props;
+    CompProperties_ExistedTicks Props => (CompProperties_ExistedTicks)props;
 
     public override void Initialize(CompProperties props)
     {

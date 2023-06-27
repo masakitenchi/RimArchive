@@ -1,15 +1,12 @@
-﻿using HarmonyLib;
+﻿global using HarmonyLib;
+global using RimWorld;
+global using System.Collections.Generic;
+global using System.Linq;
+global using Verse;
 using RimArchive.GameComponents;
 using RimArchive.Window;
-using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine;
-using Verse;
-using static RimArchive.DebugMessage;
-using static RimArchive.StudentDef;
 
 namespace RimArchive
 {
@@ -73,7 +70,7 @@ namespace RimArchive
                 AllStudents.Add(student);
                 student.Init();
             }
-            foreach(var school in DefDatabase<IconDef>.AllDefsListForReading)
+            foreach (var school in DefDatabase<IconDef>.AllDefsListForReading)
             {
                 cachedSchools.Add(school);
                 school.ResolveFields();

@@ -1,9 +1,4 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Verse;
+﻿using System;
 #pragma warning disable CS1591
 
 namespace RimArchive.GameComponents;
@@ -94,14 +89,14 @@ public class StudentDocument : GameComponent
             return;
         if (hostileDaysAsTick > 0)
             hostileDaysAsTick--;
-        if(hostileDaysAsTick == 0)
+        if (hostileDaysAsTick == 0)
         {
             Faction shale = Find.FactionManager.AllFactions.Where(x => x.def == RAFactionDefOf.Shale).First();
             shale.TryAffectGoodwillWith(Faction.OfPlayer, -shale.GoodwillWith(Faction.OfPlayer));
             inAngryHostile = false;
         }
     }
-    public StudentDocument(Game game) : base() 
+    public StudentDocument(Game game) : base()
     {
 
     }

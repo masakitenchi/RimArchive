@@ -1,14 +1,6 @@
-﻿using HarmonyLib;
-using RimArchive.GameComponents;
-using RimWorld;
-using System.Collections.Generic;
+﻿using RimArchive.WorldComponents;
 using System.Reflection;
 using System.Reflection.Emit;
-using Verse;
-using CombatExtended;
-using System.Linq;
-using System.IO;
-using RimArchive.WorldComponents;
 #pragma warning disable CS1591
 
 namespace RimArchive

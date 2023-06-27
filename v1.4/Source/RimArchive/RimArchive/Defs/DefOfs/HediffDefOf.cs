@@ -1,7 +1,4 @@
-﻿using Verse;
-using RimWorld;
-
-namespace RimArchive;
+﻿namespace RimArchive;
 
 #pragma warning disable CS1591
 [DefOf]

@@ -1,10 +1,5 @@
-﻿using RimWorld;
-using Steamworks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Text;
-using Verse;
 
 namespace RimArchive;
 
@@ -40,7 +35,7 @@ public class RaidGroupWave
     public string GetWaveDescription(int wave)
     {
         StringBuilder sb = new StringBuilder();
-        if(label is not null) sb.AppendLine(label);
+        if (label is not null) sb.AppendLine(label);
         sb.AppendLine("BossHPMultiplier".Translate(HediffDefOf.BA_BossDamageReduction.stages[wave].statFactors.First().ToStringAsFactor));
         if (!this.escorts.NullOrEmpty())
         {

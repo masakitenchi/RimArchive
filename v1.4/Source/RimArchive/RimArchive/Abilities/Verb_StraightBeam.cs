@@ -1,9 +1,4 @@
-﻿using RimWorld;
-using System.Collections.Generic;
-using UnityEngine;
-using Verse;
-
-namespace RimArchive;
+﻿namespace RimArchive;
 public class Verb_StraightBeam : Verb_CastAbility
 {
     //用OrbitStrike或者PowerBeam都会导致一个问题：放完了就是放完了

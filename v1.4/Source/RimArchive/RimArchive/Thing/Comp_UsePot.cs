@@ -1,12 +1,4 @@
-﻿using RimWorld;
-using HarmonyLib;
-using System.Collections.Generic;
-using Verse;
-using System.Linq;
-using System.Text;
-using CombatExtended;
-using System.Collections;
-using System;
+﻿using System;
 #pragma warning disable CS1591
 
 namespace RimArchive
@@ -43,6 +35,6 @@ namespace RimArchive
         }
     }
 
-    
+
 
 }

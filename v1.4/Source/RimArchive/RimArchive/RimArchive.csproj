@@ -44,6 +44,7 @@
     <Compile Include="BA.cs" />
     <Compile Include="Boss\BossGroupWorker.cs" />
     <Compile Include="Boss\RaidGroupWave.cs" />
+    <Compile Include="ScenPart_ForcedRace.cs" />
     <Compile Include="Thing\Comps\Comp_TimeLimitedExistence.cs" />
     <Compile Include="Thing\Comp_UseMedikit.cs" />
     <Compile Include="Thing\Comp_UsePot.cs" />
