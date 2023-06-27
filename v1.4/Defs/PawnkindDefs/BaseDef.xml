@@ -2,7 +2,6 @@
 <Defs>
 
 	<RimArchive.StudentDef Name = "RA_BasePawn" ParentName = "BasePlayerPawnKind" Abstract = "True">
-		<defName>KivotosStudent</defName>
 		<race>KivotosStudent</race>
 		<useFactionXenotypes>false</useFactionXenotypes>
 		<xenotypeSet>
