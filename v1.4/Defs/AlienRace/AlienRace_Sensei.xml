@@ -5,7 +5,8 @@
 		<defName>RA_Race_Sensei</defName>
 		<label>老师</label>
 		<description>Lorem Ipsum</description>
-
+		<generateCommonality>0</generateCommonality>
+		<generateAllowChance>0</generateAllowChance>
 		<alienRace>
 			<graphicPaths>
 				<head>Pawns/Sensei</head>
@@ -42,6 +43,9 @@
 				<xenotypeList>
 					<li>RA_XenotypeDef_Sensei</li>
 				</xenotypeList>
+				<apparelList>
+					<li>Shittim_Chest_Apparel</li>
+				</apparelList>
 			</raceRestriction>
 		</alienRace>
 		<!-- 手无缚鸡之力 -->
