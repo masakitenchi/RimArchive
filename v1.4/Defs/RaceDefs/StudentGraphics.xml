@@ -49,6 +49,8 @@
 								<Backstory_Rio>Pawns/Millennium/Rio/Halo/Rio</Backstory_Rio>
 							    <Backstory_Hanako>Pawns/Trinity/Hanako/Halo/Hanako</Backstory_Hanako>
 						        <Backstory_Serina>Pawns/Trinity/Serina/Halo/Serina</Backstory_Serina>
+								<Backstory_Hina>Pawns/Gehenna/Hina/Halo/Hina</Backstory_Hina>
+								<Backstory_Iori>Pawns/Gehenna/Iori/Halo/Iori</Backstory_Iori>
 							</backstoryGraphics>
 						</li>
 						<!--头-->
@@ -81,6 +83,8 @@
 								<Backstory_Rio>Pawns/Millennium/Rio/Head/Rio</Backstory_Rio>
 								<Backstory_Hanako>Pawns/Trinity/Hanako/Head/Hanako</Backstory_Hanako>
 								<Backstory_Serina>Pawns/Trinity/Serina/Head/Serina</Backstory_Serina>
+								<Backstory_Hina>Pawns/Gehenna/Hina/Head/Hina</Backstory_Hina>
+								<Backstory_Iori>Pawns/Gehenna/Iori/Head/Iori</Backstory_Iori>
 
 							</backstoryGraphics>
 						</li>
@@ -114,6 +118,8 @@
 								<Backstory_Rio>Pawns/Millennium/Rio/Hair/Rio</Backstory_Rio>
 							    <Backstory_Hanako>Pawns/Trinity/Hanako/Hair/Hanako</Backstory_Hanako>
 								<Backstory_Serina>Pawns/Trinity/Serina/Hair/Serina</Backstory_Serina>
+								<Backstory_Hina>Pawns/Gehenna/Hina/Hair/Hina</Backstory_Hina>
+								<Backstory_Iori>Pawns/Gehenna/Iori/Hair/Iori</Backstory_Iori>
 
 							</backstoryGraphics>
 						</li>
@@ -147,6 +153,8 @@
 								<Backstory_Rio>Pawns/Millennium/Rio/Hair/Rio</Backstory_Rio>
 							    <Backstory_Hanako>Pawns/Trinity/Hanako/Hair/Hanako</Backstory_Hanako>
 							    <Backstory_Serina>Pawns/Trinity/Serina/Hair/Serina</Backstory_Serina>
+								<Backstory_Hina>Pawns/Gehenna/Hina/Hair/Hina</Backstory_Hina>
+								<Backstory_Iori>Pawns/Gehenna/Iori/Hair/Iori</Backstory_Iori>
 							</backstoryGraphics>
 						</li>
 						<!-- 此处开始为装备hediff部分，暂时由于总图数过多的原因废除 -->

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--格黑娜风纪委员会背景故事-->
+	<!--日奈-->
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
+		<defName>Backstory_Hina</defName>
+		<title>Sorasaki Hina</title>
+		<titleShort>Sorasaki Hina</titleShort>
+		<baseDesc>The president of the Disciplinary committee of Gehenna that is feared by everyone.</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>RimArchive_Hina</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<!--伊织-->
+	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
+		<defName>Backstory_Iori</defName>
+		<title>Shiromi Iori</title>
+		<titleShort>Shiromi Iori</titleShort>
+		<baseDesc>Enrolled in Gehenna Academy, Iori is a ruthless specialist of the Public Morals Committee.</baseDesc>
+		<bodyTypeGlobal>Thin</bodyTypeGlobal>
+		<slot>Childhood</slot>
+		<spawnCategories>
+			<li>RimArchive_Iori</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+
+	
+	
+	
+
+
+</Defs>
