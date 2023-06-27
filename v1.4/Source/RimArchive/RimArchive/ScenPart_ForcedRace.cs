@@ -26,6 +26,9 @@ public class ScenPart_ForcedRace : ScenPart_PawnModifier
         p.story.hairDef = HairDefOf.Bald;
         p.style.beardDef = BeardDefOf.NoBeard;
         p.genes.SetXenotype((p.def as ThingDef_AlienRace).alienRace.raceRestriction.xenotypeList.First());
+        p.genes.ClearXenogenes();
+        foreach (var gene in p.genes.Xenotype.AllGenes)
+            p.genes.AddGene(gene, false);
     }
 
     private static IEnumerable<ThingDef> PossibleRaces()

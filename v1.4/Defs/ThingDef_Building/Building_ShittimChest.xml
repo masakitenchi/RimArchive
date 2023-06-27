@@ -92,7 +92,76 @@
 				<shortCircuitInRain>false</shortCircuitInRain>
 				<basePowerConsumption>0</basePowerConsumption>
 			</li>
+			<li Class="RimArchive.CompProperties_Transform">
+				<ToApparel>Shittim_Chest_Apparel</ToApparel>
+			</li>
 		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Shittim_Chest_Apparel</defName>
+		<label>什亭之匣（装备）</label>
+		<description>（&lt;b&gt;仅限老师装备&lt;/b&gt;）
+			边缘世界的火力相比于基沃托斯来说还是太孱弱了。</description>
+		<thingClass>Apparel</thingClass>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Building/ShittimChest/Pad_south</texPath>
+			<drawSize>(1.15,1.15)</drawSize>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
+			<WorkToBuild>300</WorkToBuild>
+			<Flammability>0</Flammability>
+			<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax>5</EnergyShieldEnergyMax>
+			<Mass>0.5</Mass>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>BA_Tech_ShittimChest</researchPrerequisite>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<displayPriority>999</displayPriority>
+		</recipeMaker>
+		<costList>
+			<Steel>6</Steel>
+			<Plasteel>2</Plasteel>
+			<Uranium>2</Uranium>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</costList>
+		<thingCategories>
+			<li>ApparelUtility</li>
+		</thingCategories>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+			<tags>
+				<li>BeltDefense</li>
+			</tags>
+			<developmentalStageFilter>Adult</developmentalStageFilter>
+		</apparel>
+		<comps>
+			<li Class="CompProperties_Shield" />
+			<li Class="RimArchive.CompProperties_Transform">
+				<ToBuilding>Shittim_Chest</ToBuilding>
+			</li>
+			<li Class="RimArchive.CompProperties_CommConsole"/>
+		</comps>
+		<allowedArchonexusCount>1</allowedArchonexusCount>
 	</ThingDef>
 
 </Defs>
