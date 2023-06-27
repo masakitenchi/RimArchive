@@ -51,14 +51,15 @@
 				</li>
 				<li Class="RimArchive.ScenPart_ForcedRace">
 					<def>ForcedRace</def>
+					<context>PlayerStarter</context>
 					<race>RA_Race_Sensei</race>
 				</li>
 
 				<li Class="ScenPart_GameStartDialog">
 					<def>GameStartDialog</def>
-					<text>用掉最后一个名额将黑子传送回地面的你，靠着阿罗娜和普拉娜的“庇护”正在单兵再入。
+					<text>用掉最后一个名额将黑子传送回地面的你，正在靠着阿罗娜和普拉娜的庇护“单兵再入”。
 						霎时间，一股强大的吸力将你打进了超空间乱流，你发现自己来到了一个陌生的世界。
-						虽然什亭之匣靠着某种超能力还能和基沃托斯取得联络，但你觉得目前最紧要的事情应该是：活着。
+						虽然什亭之匣靠着某种超能力还能和基沃托斯取得联络，但你觉得目前最紧要的事情应该是：活下去。
 					</text>
 					<closeSound>GameStartSting</closeSound>
 				</li>
