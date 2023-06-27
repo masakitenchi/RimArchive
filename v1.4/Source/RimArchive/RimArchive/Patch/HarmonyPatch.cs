@@ -1,14 +1,6 @@
-﻿using HarmonyLib;
-using RimArchive.GameComponents;
-using RimWorld;
-using System.Collections.Generic;
+﻿using RimArchive.WorldComponents;
 using System.Reflection;
 using System.Reflection.Emit;
-using Verse;
-using CombatExtended;
-using System.Linq;
-using System.IO;
-using RimArchive.WorldComponents;
 #pragma warning disable CS1591
 
 namespace RimArchive
@@ -21,7 +13,9 @@ namespace RimArchive
         {
             Harmony rimarchive = new Harmony("com.regex.RimArchiveMain");
             rimarchive.PatchAll(Assembly.GetExecutingAssembly());
+            //For cross-mod compatibility we must use typeColonName, since compiling with target assembly will result in TypeInitializationException if given assembly is not present
             MethodInfo ce = AccessTools.Method("CombatExtended.CE_Utility:PartialStat", new System.Type[] { typeof(Apparel), typeof(StatDef), typeof(BodyPartRecord) });
+            //For vanilla method we can just use typeof() for the type
             MethodInfo vanilla = AccessTools.Method(typeof(ArmorUtility), "ApplyArmor");
             if (ce != null)
             {
@@ -35,7 +29,10 @@ namespace RimArchive
                 rimarchive.Patch(AccessTools.Method(typeof(ArmorUtility), "ApplyArmor"), transpiler: new HarmonyMethod(typeof(HarmonyPatches), "ApplyArmorTranspiler"));
                 DebugMessage.DbgMsg("successfully patched ArmorUtility.ApplyArmor");
             }
-
+            else
+            {
+                DebugMessage.DbgErr("Cannot even patch vanilla method, please contact mod author");
+            }
         }
 
         #region Ideology

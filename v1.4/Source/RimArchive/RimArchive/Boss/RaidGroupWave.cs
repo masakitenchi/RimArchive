@@ -1,19 +1,19 @@
-﻿using RimWorld;
-using System.Collections.Generic;
+﻿using System;
 using System.Text;
-using Verse;
 
 namespace RimArchive;
 
 /// <summary>
-/// Use bossHPMultiplier instead of bossCount
+/// Use bossDamageFactor instead of bossCount
 /// </summary>
 public class RaidGroupWave
 {
+    public string label;
     /// <summary>
     /// The HP multiplier of boss
     /// </summary>
-    public float bossHPMultiplier = 1f;
+    [Obsolete]
+    public float bossDamageFactor = 1f;
     /// <summary>
     /// The mobs coming along with boss
     /// </summary>
@@ -26,12 +26,17 @@ public class RaidGroupWave
     /// The apparel that boss carries
     /// </summary>
     public List<ThingDef> bossApparel;
+    /// <summary>
+    /// Hediffs to add to boss
+    /// </summary>
+    public List<HediffDef> hediffsToApply;
 
 
-    public string GetWaveDescription()
+    public string GetWaveDescription(int wave)
     {
         StringBuilder sb = new StringBuilder();
-        sb.AppendLine("BossHPMultiplier".Translate(this.bossHPMultiplier.ToStringPercent()));
+        if (label is not null) sb.AppendLine(label);
+        sb.AppendLine("BossHPMultiplier".Translate(HediffDefOf.BA_BossDamageReduction.stages[wave].statFactors.First().ToStringAsFactor));
         if (!this.escorts.NullOrEmpty())
         {
             sb.AppendLine("Escortees".Translate());

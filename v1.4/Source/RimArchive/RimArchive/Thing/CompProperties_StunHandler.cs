@@ -1,9 +1,4 @@
-﻿using RimWorld;
-using System;
-using UnityEngine;
-using Verse;
-
-namespace RimArchive;
+﻿namespace RimArchive;
 
 public class CompProperties_StunHandler : CompProperties
 {

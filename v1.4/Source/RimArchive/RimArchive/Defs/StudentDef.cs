@@ -1,12 +1,6 @@
-﻿using RimWorld;
-using System.Text.RegularExpressions;
-using UnityEngine;
-using Verse;
+﻿using System.Text.RegularExpressions;
 using System.Xml;
-using System.Collections.Generic;
-using HarmonyLib;
-using System.Reflection;
-using System.Linq;
+using UnityEngine;
 
 namespace RimArchive;
 
@@ -105,7 +99,7 @@ public class StudentDef : PawnKindDef
         {
             foreach (StudentDef student in relationWith.others)
             {
-                if(!student.relations.Any(x => x.relation ==  relationWith.relation))
+                if (!student.relations.Any(x => x.relation == relationWith.relation))
                 {
                     student.relations.Add(new DirectRelationWith() { relation = relationWith.relation, others = new List<StudentDef>() { this } });
                 }

@@ -1,39 +1,39 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <ThingDef Abstract="True" Name="RA_BuildingTopBase" ParentName="BuildingBase">
-    <thingClass>Building</thingClass>
-    <category>Building</category>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <altitudeLayer>BuildingOnTop</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <selectable>true</selectable>
-    <fillPercent>0.20</fillPercent>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-    <designationCategory>Misc</designationCategory>
-    <rotatable>true</rotatable>
-    <uiIconOffset>(0, 0)</uiIconOffset>
-    <thingCategories>
-      <li>BuildingsFurniture</li>
-    </thingCategories>
-    <graphicData>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <shadowData>
-        <volume>(0.3, 0.6, 0.3)</volume>
-        <offset>(0,0,-0.1)</offset>
-      </shadowData>
-      <damageData>
-        <rect>(0.2,0.2,0.6,0.6)</rect>
-      </damageData>
-    </graphicData>
-  </ThingDef>
+	<ThingDef Abstract="True" Name="RA_BuildingTopBase" ParentName="BuildingBase">
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<designationCategory>Misc</designationCategory>
+		<rotatable>true</rotatable>
+		<uiIconOffset>(0, 0)</uiIconOffset>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+	</ThingDef>
 
 
 	<ThingDef ParentName="RA_BuildingTopBase">
 		<defName>Shittim_Chest</defName>
-		<label>Shittim Chest</label>
-		<description>A pad that contained the OS--Shittim Chest.You can use it to contact with Schale and recurit students from Kivotos.\n\nThis device is powered by radioactive battery, so it can be used without external power supply.</description>
+		<label>什亭之匣</label>
+		<description>一部搭载了“什亭之匣”系统的平板电脑，你可以用这个设备与夏莱建立联系并招募来自基沃托斯的学生们。\n\n这部设备由放射性电池提供能源，所以它并不需要额外的电力供应便可以使用。（该设备的安全性由千年工程部保障!）</description>
 		<thingClass>RimArchive.Building_ShittimChest</thingClass>
 		<size>(1,1)</size>
 		<pathCost>30</pathCost>
@@ -86,13 +86,13 @@
 				<rect>(0.1,0.1,0.1,0.1)</rect>
 			</damageData>
 		</graphicData>
-	    <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <shortCircuitInRain>false</shortCircuitInRain>
-        <basePowerConsumption>0</basePowerConsumption>
-      </li>
-    </comps>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<basePowerConsumption>0</basePowerConsumption>
+			</li>
+		</comps>
 	</ThingDef>
 
 </Defs>

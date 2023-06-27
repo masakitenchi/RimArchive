@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
     <ThoughtDef>
-        <defName>MyOwnWeapon</defName>
+        <defName>RA_ThoughtDef_MyOwnWeapon</defName>
         <workerClass>RimArchive.ThoughtWorker_OwnWeapon</workerClass>
         <stages>
             <li>
-                <label>HoldingOwnWeapon</label>
-                <description>I'm holding my own weapon.</description>
+                <label>携带专武</label>
+                <description>拿着我自己的武器让我感觉充满力量。
+                    "I am the storm that is approaching!"
+                </description>
                 <baseMoodEffect>5</baseMoodEffect>
             </li>
         </stages>

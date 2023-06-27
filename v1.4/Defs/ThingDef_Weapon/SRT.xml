@@ -2,8 +2,8 @@
 <Defs>
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Saki</defName>
-		<label>RABBIT-26 type Machine Gun</label>
-		<description>Regulation machine gun issued to Saki by the SRT Special Academy.\n\nRequires arduous maintenance due to its construction, this gun boasts significant firepower as long as it is maintained properly.</description>
+		<label>RABBIT-26式机关枪</label>
+		<description>SRT特殊学园配给咲的制式机关枪。\n\n因为其构造导致整备很困难，但只要好好整备就是拥有强大火力的机枪。</description>
 		<graphicData>
 			<texPath>Weapon/SRT/Saki</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -71,8 +71,8 @@
 	
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Miyako</defName>
-		<label>RABBIT-31 type Submachine Gun</label>
-		<description>Regulation submachine gun issued to Miyako by the SRT Special Academy.\n\nIt is a highly reliable gun and can effectively repel the enemy even under extreme circumstances.</description>
+		<label>RABBIT-31式短机关枪</label>
+		<description>SRT特殊学园配给宫子的制式冲锋枪。\n\n它是一支高度可靠的枪，即使在极限的情况下也能有效地击退敌人。</description>
 		<graphicData>
 			<texPath>Weapon/SRT/Miyako</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -135,8 +135,8 @@
 	
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
     <defName>BAW_Miyu</defName>
-    <label>RABBIT-39 type Rifle</label>
-    <description>Regulation sniper rifle issued to Miyu by the SRT Special Academy.\n\nFinely made and boasts an amazing accuracy.</description>
+    <label>RABBIT-39式来福枪</label>
+    <description>SRT特殊学园配给美游的制式狙击枪。\n\n它精密的做工、惊人的命中率令人称道。</description>
     <graphicData>
       <texPath>Weapon/SRT/Miyu</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -301,8 +301,8 @@
 	<!--萌绘（手枪）-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_MoeHG</defName>
-		<label>Rabbit-224 type pistol</label>
-		<description>A standard pistol that Moe received from SRT Special Academy.\n\nIn spite of being a pistol, it has a high rate of fire and can empty its magazine in a blink.</description>
+		<label>Rabbit-224式手枪</label>
+		<description>SRT特殊学园配给萌绘的制式手枪。\n\n尽管是手枪但仍保有强大的连射能力，能够瞬间将弹夹内的子弹倾泻一空。</description>
 		<graphicData>
 			<texPath>Weapon/SRT/Moe</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

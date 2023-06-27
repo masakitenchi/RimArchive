@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ScenPartDef>
+		<defName>ForcedRace</defName>
+		<label>强制种族</label>
+		<scenPartClass>RimArchive.ScenPart_ForcedRace</scenPartClass>
+		<category>Rule</category>
+		<maxUses>1</maxUses>
+	</ScenPartDef>
+</Defs>

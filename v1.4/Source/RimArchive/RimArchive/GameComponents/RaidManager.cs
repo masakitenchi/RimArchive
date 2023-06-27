@@ -1,12 +1,7 @@
-﻿using RimWorld;
-using System.Collections.Generic;
-using Verse;
-using HarmonyLib;
-using System.Linq;
-using static RimArchive.DebugMessage;
-using System;
-using System.Text;
+﻿using System;
+using System.Reflection.Emit;
 using UnityEngine;
+using static RimArchive.DebugMessage;
 
 namespace RimArchive.GameComponents;
 
@@ -20,15 +15,31 @@ namespace RimArchive.GameComponents;
  */
 
 #region Harmony
-[HarmonyPatch]
+[HarmonyPatch(typeof(Pawn), nameof(Pawn.Kill))]
 public static class Harmony_RaidManager
 {
-    [HarmonyPostfix]
-    [HarmonyPatch(typeof(Pawn), nameof(Pawn.Kill))]
+    /*[HarmonyPostfix]
     public static void Postfix(Pawn __instance)
     {
         RimArchiveMain.RaidManager.Notify_PawnKilled(__instance);
+    }*/
+    [HarmonyTranspiler]
+    public static IEnumerable<CodeInstruction> Tranpiler(IEnumerable<CodeInstruction> instructions)
+    {
+        foreach (var instruction in instructions)
+        {
+            if (instruction.OperandIs(AccessTools.Method(typeof(GameComponent_Bossgroup), "Notify_PawnKilled")))
+            {
+                yield return instruction;
+                yield return new CodeInstruction(OpCodes.Call, AccessTools.PropertyGetter(typeof(RimArchiveMain), nameof(RimArchiveMain.RaidManager)));
+                yield return new CodeInstruction(OpCodes.Ldarg_0);
+                yield return new CodeInstruction(OpCodes.Callvirt, AccessTools.Method(typeof(RaidManager), nameof(RaidManager.Notify_PawnKilled)));
+                continue;
+            }
+            yield return instruction;
+        }
     }
+
 }
 #endregion
 
@@ -49,9 +60,10 @@ public class RaidManager : GameComponent
     {
         get
         {
-            foreach (RaidGroupWave wave in CurrentRaid.waves)
+            for (int i = 0; i < CurrentRaid.waves.Count; i++)
             {
-                FloatMenuOption option = new FloatMenuOption(wave.GetWaveDescription(), () => this.StartRaid(wave), this.CurrentRaid.icon, Color.white);
+                RaidGroupWave wave = CurrentRaid.waves[i];
+                FloatMenuOption option = new FloatMenuOption(wave.GetWaveDescription(i), () => this.StartRaid(wave), this.CurrentRaid.icon, Color.white);
                 if (RaidIncoming)
                 {
                     option.Label += "\n" + "RaidIncoming".Translate();
@@ -113,7 +125,7 @@ public class RaidManager : GameComponent
             return;
         //Log.Message($"Passed if statement : {bossForRaid == null}");
         this.killedBosses.Add(bossForRaid);
-        if(!this.highestDifficulty.TryAdd(CurrentRaid, difficultyComing.Value))
+        if (!this.highestDifficulty.TryAdd(CurrentRaid, difficultyComing.Value))
             this.highestDifficulty[CurrentRaid] = Math.Max(difficultyComing.Value, this.highestDifficulty[CurrentRaid]);
         difficultyComing = null;
     }
@@ -159,6 +171,7 @@ public class RaidManager : GameComponent
         }
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
+            Log.Message("PostLoadInit");
             highestDifficulty ??= new Dictionary<RaidDef, int>();
             killedBosses ??= new HashSet<BossDef>();
         }
@@ -166,7 +179,8 @@ public class RaidManager : GameComponent
 
     public RaidManager(Game game)
     {
-
+        this.killedBosses = new HashSet<BossDef>();
+        this.highestDifficulty = new Dictionary<RaidDef, int>();
     }
 
 

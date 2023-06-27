@@ -4,8 +4,8 @@
 	<!--日富美-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Hifumi</defName>
-		<label>My Necessity</label>
-		<description>The pink assault rifle carried around by Hifumi.\n\nMuch like her other favorite goods, it's a must-bring item whenever Hifumi goes out.</description>
+		<label>我的必需品</label>
+		<description>富美随身携带的粉色突击步枪。\n\n和其他喜欢的物品一样，是她外出无论怎样都要带着的必需品。</description>
 		<graphicData>
 			<texPath>Weapon/Trinity/Hifumi</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -70,8 +70,8 @@
 	<!--小春-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Koharu</defName>
-		<label>Justice Black</label>
-		<description>The sniper rifle used by Koharu.\n\nKoharu was still in the Justice Actualization Committee when it was given its name.</description>
+		<label>正义之黑</label>
+		<description>小春使用的狙击步枪。\n\n这个名字是小春在正义实现委员会的时候取的。</description>
 		<graphicData>
 			<texPath>Weapon/Trinity/Koharu</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -137,8 +137,8 @@
 	<!--鹤城-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Tsurugi</defName>
-		<label>Blood n Gunpowder</label>
-		<description>The two shotguns used by Tsurugi\n\n.Named "Blood" and "Gunpowder", they can't be told apart easily even from close range.</description>
+		<label>血与火药</label>
+		<description>鹤城使用的双持霰弹枪。\n\n两把枪分别名叫“血（Blood）”和“火药（Gunpowder）”，从外观来看没有区别。</description>
 		<graphicData>
 			<texPath>Weapon/Trinity/Tsurugi</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -214,8 +214,8 @@
 	<!--梓-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Azusa</defName>
-		<label>Et Omnia Vanitas</label>
-		<description>The gun that Azusa carries.\n\nThe text engraved on the gun reads "Everything is futile. No matter how far you go, it's all in vain."</description>
+		<label>万事皆虚</label>
+		<description>梓经常拿着的枪。\n\n枪身刻着文字“一切皆是虚空。无论行至何处，一切皆虚”。</description>
 		<graphicData>
 			<texPath>Weapon/Trinity/Azusa</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -287,8 +287,8 @@
 	<!--花子-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Hanako</defName>
-		<label>Honest Wish</label>
-		<description>Hanako's assault rifle.\n\nEven if you ask her where the name came from, she won't tell you.</description>
+		<label>真诚之愿</label>
+		<description>花子的狙击步枪。\n\n即便向她打听这把枪名的由来，她也不告诉。</description>
 		<graphicData>
 			<texPath>Weapon/Trinity/Hanako</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -353,8 +353,8 @@
 	<!--芹娜-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Serina</defName>
-		<label>Tactical Therapy</label>
-		<description>Serina's assault rifle.\n\nCapable of dispensing more than one kind of shots.</description>
+		<label>战术治愈</label>
+		<description>芹娜所持突击步枪。\n\n就使用方法来说，它应该不会沦落为注射器吧……大概。</description>
 		<graphicData>
 			<texPath>Weapon/Trinity/Serina</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

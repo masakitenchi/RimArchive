@@ -1,13 +1,9 @@
-﻿using RimWorld;
-using System;
-using System.Linq;
-using System.Collections.Generic;
-using UnityEngine;
-using Verse;
-using static RimArchive.RimArchiveMain;
-using static RimArchive.DebugMessage;
-using static Verse.Widgets;
+﻿using System;
 using System.Text;
+using UnityEngine;
+using static RimArchive.DebugMessage;
+using static RimArchive.RimArchiveMain;
+using static Verse.Widgets;
 
 namespace RimArchive.Window
 {
@@ -437,7 +433,7 @@ namespace RimArchive.Window
             recruitBtn.size = _iconSize;
             if (ButtonImageFitted(recruitBtn, SSR))
             {
-                if(!DebugSettings.godMode && !TradeUtility.ColonyHasEnoughSilver(Find.CurrentMap, 1000))
+                if (!DebugSettings.godMode && !TradeUtility.ColonyHasEnoughSilver(Find.CurrentMap, 1000))
                 {
                     Messages.Message("NotEnoughMoney".Translate(_cachedStudent.NameFullColored), MessageTypeDefOf.NeutralEvent);
                 }

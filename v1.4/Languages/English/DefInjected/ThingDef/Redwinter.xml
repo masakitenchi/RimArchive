@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 和香 -->
+
+  <BAW_Nodoka.label>Sagittarius Night</BAW_Nodoka.label>
+  <BAW_Nodoka.description>A submachine gun that Nodoka carries with her when she goes out for astronomical observations.\n\nAttached flashlight illuminates the dark night road brightly.</BAW_Nodoka.description>
+  <BAW_Nodoka.tools.0.label>stock</BAW_Nodoka.tools.0.label>
+  <BAW_Nodoka.tools.1.label>barrel</BAW_Nodoka.tools.1.label>
+
+  <Bullet_BA_Nodoka.label>Bullet of Sagittarius Night</Bullet_BA_Nodoka.label>
+
+
+</LanguageData>

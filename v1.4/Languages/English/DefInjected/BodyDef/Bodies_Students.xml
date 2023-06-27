@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 需要找时间给学生身体部件.groups内加上CoveredByNaturalArmor的ce补丁 但貌似CE有自动补丁？ -->
+
+  <kivotos.label>Body for Kivotos students</kivotos.label>
+  <kivotos.corePart.parts.0.customLabel>光环</kivotos.corePart.parts.0.customLabel>
+  <kivotos.corePart.parts.0.parts.0.parts.0.parts.1.customLabel>left eye</kivotos.corePart.parts.0.parts.0.parts.0.parts.1.customLabel>
+  <kivotos.corePart.parts.0.parts.0.parts.0.parts.2.customLabel>right eye</kivotos.corePart.parts.0.parts.0.parts.0.parts.2.customLabel>
+  <kivotos.corePart.parts.0.parts.0.parts.0.parts.3.customLabel>left ear</kivotos.corePart.parts.0.parts.0.parts.0.parts.3.customLabel>
+  <kivotos.corePart.parts.0.parts.0.parts.0.parts.4.customLabel>right ear</kivotos.corePart.parts.0.parts.0.parts.0.parts.4.customLabel>
+  <kivotos.corePart.parts.1.customLabel>left shoulder</kivotos.corePart.parts.1.customLabel>
+  <kivotos.corePart.parts.1.parts.0.customLabel>left clavicle</kivotos.corePart.parts.1.parts.0.customLabel>
+  <kivotos.corePart.parts.1.parts.1.customLabel>left arm</kivotos.corePart.parts.1.parts.1.customLabel>
+  <kivotos.corePart.parts.1.parts.1.parts.0.customLabel>left humerus</kivotos.corePart.parts.1.parts.1.parts.0.customLabel>
+  <kivotos.corePart.parts.1.parts.1.parts.1.customLabel>left radius</kivotos.corePart.parts.1.parts.1.parts.1.customLabel>
+  <kivotos.corePart.parts.1.parts.1.parts.2.customLabel>left hand</kivotos.corePart.parts.1.parts.1.parts.2.customLabel>
+  <kivotos.corePart.parts.2.customLabel>right shoulder</kivotos.corePart.parts.2.customLabel>
+  <kivotos.corePart.parts.2.parts.0.customLabel>right clavicle</kivotos.corePart.parts.2.parts.0.customLabel>
+  <kivotos.corePart.parts.2.parts.1.customLabel>right arm</kivotos.corePart.parts.2.parts.1.customLabel>
+  <kivotos.corePart.parts.2.parts.1.parts.0.customLabel>right humerus</kivotos.corePart.parts.2.parts.1.parts.0.customLabel>
+  <kivotos.corePart.parts.2.parts.1.parts.1.customLabel>right radius</kivotos.corePart.parts.2.parts.1.parts.1.customLabel>
+  <kivotos.corePart.parts.2.parts.1.parts.2.customLabel>right hand</kivotos.corePart.parts.2.parts.1.parts.2.customLabel>
+  <kivotos.corePart.parts.4.customLabel>left leg</kivotos.corePart.parts.4.customLabel>
+  <kivotos.corePart.parts.4.parts.0.customLabel>left femur</kivotos.corePart.parts.4.parts.0.customLabel>
+  <kivotos.corePart.parts.4.parts.1.customLabel>left tibia</kivotos.corePart.parts.4.parts.1.customLabel>
+  <kivotos.corePart.parts.4.parts.2.customLabel>left foot</kivotos.corePart.parts.4.parts.2.customLabel>
+  <kivotos.corePart.parts.5.customLabel>right leg</kivotos.corePart.parts.5.customLabel>
+  <kivotos.corePart.parts.5.parts.0.customLabel>right femur</kivotos.corePart.parts.5.parts.0.customLabel>
+  <kivotos.corePart.parts.5.parts.1.customLabel>right tibia</kivotos.corePart.parts.5.parts.1.customLabel>
+  <kivotos.corePart.parts.5.parts.2.customLabel>right foot</kivotos.corePart.parts.5.parts.2.customLabel>
+  <kivotos.corePart.customLabel>躯干</kivotos.corePart.customLabel>
+
+
+</LanguageData>

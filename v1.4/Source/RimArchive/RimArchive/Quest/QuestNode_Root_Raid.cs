@@ -1,11 +1,5 @@
-﻿using HarmonyLib;
-using RimWorld;
-using RimWorld.Planet;
+﻿using RimWorld.Planet;
 using RimWorld.QuestGen;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine.Assertions.Must;
-using Verse;
 
 namespace RimArchive;
 
@@ -46,38 +40,10 @@ public class QuestNode_Root_Raid : QuestNode
         PawnGenerationRequest bossReq = new PawnGenerationRequest(wave.bossOverride?.kindDef ?? raid.boss.kindDef, mech, forceGenerateNewPawn: true);
         //因为只有一个boss了所以这里没有循环
         Pawn boss = PawnGenerator.GeneratePawn(bossReq);
-        HediffStage stage = RimArchiveMain.cachedGenertedHediffStages.Where(x => x.statFactors.Exists(t => t.stat == StatDefOf.IncomingDamageFactor && t.value == 1 / wave.bossHPMultiplier)).FirstOrDefault();
-        if (stage == null)
-        {
-            HediffStage hediffStage = new HediffStage()
-            {
-                becomeVisible = false,
-                statFactors = new List<StatModifier>
-                {
-                    new StatModifier()
-                    {
-                        stat = StatDefOf.IncomingDamageFactor,
-                        value = 1 / wave.bossHPMultiplier
-                    }
-                }
-            };
-            hediffStage.minSeverity = RimArchiveMain.nextSeverity;
-            RimArchiveMain.cachedGenertedHediffStages.Add(hediffStage);
-            RimArchiveMain.HediffGen.stages.Add(hediffStage);
-            Hediff a = HediffMaker.MakeHediff(RimArchiveMain.HediffGen, boss);
-            a.Severity = RimArchiveMain.nextSeverity++;
-            Log.Message(a.Severity.ToString());
-            boss.health.AddHediff(a);
-            Log.Message($"{hediffStage.statFactors.FirstOrDefault().value} added");
-        }
-        else
-        {
-            Log.Message($"{stage.statFactors.FirstOrDefault().value} already exists");
-            Hediff a = HediffMaker.MakeHediff(RimArchiveMain.HediffGen, boss);
-            a.Severity = stage.minSeverity;
-            boss.health.AddHediff(a);
-        }
-        //Nullable List still needs if to ensure it won't thrwo NullReferenceException
+        Hediff damageRed = HediffMaker.MakeHediff(HediffDefOf.BA_BossDamageReduction, boss);
+        damageRed.Severity = difficulty;
+        boss.health.AddHediff(damageRed);
+        //Nullable List still needs if to ensure it won't throw NullReferenceException
         if (!wave.bossApparel.NullOrEmpty())
         {
             foreach (var apparel in wave.bossApparel)

@@ -72,7 +72,7 @@
             <range>35</range>
             <burstShotCount>6</burstShotCount>
             <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-            <soundCast>Shot_CE_BattleRifle</soundCast>
+            <soundCast>Shot_CE_AssaultRifleSlow</soundCast>
             <soundCastTail>GunTail_Heavy</soundCastTail>
             <muzzleFlashScale>9</muzzleFlashScale>
         </Properties>
@@ -115,7 +115,7 @@
             <defaultProjectile>Bullet_20x110mmHispano_AP</defaultProjectile>
             <warmupTime>0.70</warmupTime>
             <range>86</range>
-            <soundCast>RF_ShotARFifty</soundCast>
+            <soundCast>50Cal_Browning</soundCast>
             <soundCastTail>GunTail_Heavy</soundCastTail>
             <muzzleFlashScale>9</muzzleFlashScale>
         </Properties>
@@ -164,7 +164,7 @@
             <defaultProjectile>Bullet_127mmJavelinMissile</defaultProjectile>
             <warmupTime>1.5</warmupTime>
             <range>156</range>
-            <soundCast>USCM_shotM5</soundCast>
+            <soundCast>AGS</soundCast>
             <soundCastTail>GunTail_Heavy</soundCastTail>
             <onlyManualCast>true</onlyManualCast>
             <stopBurstWithoutLos>false</stopBurstWithoutLos>

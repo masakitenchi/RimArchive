@@ -371,7 +371,7 @@
 			<range>20</range>
 			<burstShotCount>6</burstShotCount>
 			<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-			<soundCast>RF_ShotSkorpion</soundCast>
+			<soundCast>Shot_CE_BattleRifle</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 			<muzzleFlashScale>9</muzzleFlashScale>
 		</Properties>

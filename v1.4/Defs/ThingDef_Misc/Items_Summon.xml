@@ -3,9 +3,9 @@
 
 	<ThingDef ParentName="ResourceBase">
 		<defName>BA_Serinabox</defName>
-		<label>First aid box</label>
-		<description>Serina's First aid box.</description>
-		<thingClass>RimArchive.contactMedikit</thingClass>
+		<label>芹娜的急救箱</label>
+		<description>芹娜的急救箱，内有急救所需的一切工具。</description>
+		<thingClass>RimArchive.Medkit</thingClass>
 		<pathCost>0</pathCost>
 		<graphicData>
 			<texPath>Things/Summon/Medikit</texPath>
@@ -16,13 +16,10 @@
 			<expandHomeArea>false</expandHomeArea>
 		</building>
 		<tickerType>Normal</tickerType>
-		<category>Item</category>
-		<thingCategories>
-			<li>ItemsMisc</li>
-		</thingCategories>
+		<category>Ethereal</category>
 		<tradeability>None</tradeability>
 		<selectable>true</selectable>
-		<statBases>
+		<statBases Inherit="False">
 			<Mass>0.1</Mass>
 			<Flammability>0</Flammability>
 			<MarketValue>5</MarketValue>
@@ -32,7 +29,9 @@
 			<li Class="RimArchive.CompProperties_ExistedTicks">
 				<ExistedTicks>900</ExistedTicks>
 			</li>
-			<li Class="RimArchive.CompProperties_contackMedkit">
+			<li Class="RimArchive.CompProperties_Healing">
+				<SingleUse>true</SingleUse>
+				<WoundsPerHeal>5</WoundsPerHeal>
 			</li>
 			<li Class="CompProperties_InspectString">
 				<inspectString>医疗箱会治疗第一个触碰它的殖民者！(在15秒内消失)</inspectString>
@@ -42,9 +41,9 @@
 
 	<ThingDef ParentName="ResourceBase">
 		<defName>BA_FuukaPot</defName>
-		<label>Lunch Club's Meal</label>
-		<description>Fuuka's Lunch Club's Meal.</description>
-		<thingClass>RimArchive.contactPot</thingClass>
+		<label>枫香的大锅</label>
+		<description>枫香的大锅，大家都想尝上一口。</description>
+		<thingClass>RimArchive.ContactPot</thingClass>
 		<pathCost>0</pathCost>
 		<graphicData>
 			<texPath>Things/Summon/Pot</texPath>
@@ -55,13 +54,10 @@
 			<expandHomeArea>false</expandHomeArea>
 		</building>
 		<tickerType>Normal</tickerType>
-		<category>Item</category>
-		<thingCategories>
-			<li>ItemsMisc</li>
-		</thingCategories>
+		<category>Ethereal</category>
 		<tradeability>None</tradeability>
 		<selectable>true</selectable>
-		<statBases>
+		<statBases Inherit="False">
 			<Mass>0.1</Mass>
 			<Flammability>0</Flammability>
 			<MarketValue>5</MarketValue>
@@ -71,7 +67,10 @@
 			<li Class="RimArchive.CompProperties_ExistedTicks">
 				<ExistedTicks>900</ExistedTicks>
 			</li>
-			<li Class="RimArchive.CompProperties_contactPot">
+			<li Class="RimArchive.CompProperties_Healing">
+				<SingleUse>false</SingleUse>
+				<UseCount>4</UseCount>
+				<WoundsPerHeal>2</WoundsPerHeal>
 			</li>
 			<li Class="CompProperties_InspectString">
 				<inspectString>供给部料理会治疗伤员的两个伤口！\n使用4次后便会消失，且每个人只能接受一次治疗。(在15秒内消失)</inspectString>
