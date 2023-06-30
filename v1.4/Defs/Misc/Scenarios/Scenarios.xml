@@ -67,4 +67,29 @@
 			</parts>
 		</scenario>
 	</ScenarioDef>
+
+	<ScenarioDef>
+		<defName>RA_ScenarioDef_Test</defName>
+		<label>测试</label>
+		<description>测试</description>
+		<scenario>
+			<summary>测试</summary>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>PlayerColony</factionDef>
+			</playerFaction>
+			<parts>
+				<li Class="RimArchive.ScenPart_FixedStartingPawns">
+					<def>FixedStartingPawns</def>
+					<customSummary>测试</customSummary>
+					<pawnCount>1</pawnCount>
+					<possibleKindDefs>
+						<li>
+							<kindDef>RA_PawnKindDef_Sensei</kindDef>
+						</li>
+					</possibleKindDefs>
+				</li>
+			</parts>
+		</scenario>
+	</ScenarioDef>
 </Defs>

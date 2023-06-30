@@ -4,6 +4,8 @@
 	<PawnKindDef ParentName="BasePlayerPawnKind">
 		<defName>RA_PawnKindDef_Sensei</defName>
 		<race>RA_Race_Sensei</race>
+		<label>老师</label>
+		<description>老师</description>
 		<useFactionXenotypes>false</useFactionXenotypes>
 		<xenotypeSet>
 			<xenotypeChances>
