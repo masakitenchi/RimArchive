@@ -5,6 +5,7 @@
         <defName>BA_Trait_Arius</defName>
         <label>Arius</label>
         <description>Arius Squad</description>
+        <commonality>0</commonality>
         <degreeDatas>
             <li>
                 <label>Arius Squad</label>
