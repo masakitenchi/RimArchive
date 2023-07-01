@@ -89,6 +89,11 @@
 						</li>
 					</possibleKindDefs>
 				</li>
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>DropPods</method>
+					<visible>false</visible>
+				</li>
 			</parts>
 		</scenario>
 	</ScenarioDef>
