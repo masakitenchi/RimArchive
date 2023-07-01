@@ -265,7 +265,7 @@ namespace RimArchive.Window
                         if (ButtonInvisible(icon))
                         {
                             _currentStudent = students[studentNo];
-                            _cachedStudent = PawnGenerator.GeneratePawn(new PawnGenerationRequest(_currentStudent as PawnKindDef,
+                            _cachedStudent = PawnGenerator.GeneratePawn(new PawnGenerationRequest(_currentStudent,
                                 faction: Faction.OfPlayer,
                                 canGeneratePawnRelations: false,
                                 mustBeCapableOfViolence: true,

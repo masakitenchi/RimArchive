@@ -58,7 +58,7 @@
     <Compile Include="Defs\BossDef.cs" />
     <Compile Include="Defs\DefOfs\HediffDefOf.cs" />
     <Compile Include="Defs\DefOfs\SchoolDefOf.cs" />
-    <Compile Include="Defs\DefOfs\StudentDefOf.cs" />
+    <Compile Include="Defs\DefOfs\PawnKindDefOfLocal.cs" />
     <Compile Include="Defs\DefOfs\ThingDefOf.cs" />
     <Compile Include="Defs\IconDef.cs" />
     <Compile Include="Defs\RaidDef.cs" />
@@ -118,7 +118,8 @@
       <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\workshop\content\294100\2890901044\Assemblies\CombatExtended.dll</HintPath>
       <Private>False</Private>
     </Reference>
-	  <Publicize  Include="Assembly-CSharp:Verse.StartingPawnUtility" />
+    <Publicize Include="Assembly-CSharp:Verse.StartingPawnUtility.StartingAndOptionalPawns" />
+    <Publicize Include="Assembly-CSharp:Verse.StartingPawnUtility.GeneratePossessions" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

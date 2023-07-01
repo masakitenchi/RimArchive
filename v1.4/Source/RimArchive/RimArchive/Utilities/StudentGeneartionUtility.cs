@@ -7,6 +7,7 @@ public static class StudentGenerationUtility
 {
     public static void PostGen(Pawn p, StudentDef studentDef)
     {
+        if (p.def != studentDef.race) p.def = studentDef.race;
         try
         {
             //Adjust skills
