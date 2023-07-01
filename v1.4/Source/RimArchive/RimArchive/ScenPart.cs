@@ -45,8 +45,12 @@ public class ScenPart_ForcedRace : ScenPart_PawnModifier
 }
 
 
+//StartingPawnUtility 我干你娘
 public class ScenPart_FixedStartingPawns : ScenPart_ConfigPage_ConfigureStartingPawnsBase
 {
+    new public int pawnChoiceCount = 0;
+
+
     public int pawnCount = 3;
     [MustTranslate]
     public string customSummary;
@@ -63,16 +67,25 @@ public class ScenPart_FixedStartingPawns : ScenPart_ConfigPage_ConfigureStarting
     {
         Log.Message("Generating Starting Pawns...");
         var num = 0;
-        StartingPawnUtility.ClearAllStartingPawns();
+        StartingPawnUtility.StartingAndOptionalPawns.Clear();
         for(int i = 0; i< this.possibleKindDefs.Count; i++)
         {
             StartingPawnUtility.SetGenerationRequest(i, new PawnGenerationRequest(this.possibleKindDefs[i].kindDef));
-            Pawn p = StartingPawnUtility.NewGeneratedStartingPawn(i);
+            Pawn p = PawnGenerator.GeneratePawn(new PawnGenerationRequest(possibleKindDefs[i].kindDef,
+                                faction: Faction.OfPlayer,
+                                canGeneratePawnRelations: false,
+                                colonistRelationChanceFactor: 0f));
             if (this.possibleKindDefs[i].kindDef is StudentDef s)
             {
+                Log.Message("Postgen for students");
                 StudentGenerationUtility.PostGen(p, s);
             }
-            StartingPawnUtility.AddNewPawn(i);
+            if (this.possibleKindDefs[i].kindDef == PawnKindDefOfLocal.RA_PawnKindDef_Sensei)
+            {
+                p.apparel.Wear(ThingMaker.MakeThing(ThingDefOf.Shittim_Chest_Apparel, GenStuff.RandomStuffFor(ThingDefOf.Shittim_Chest_Apparel)) as Apparel, false, false);
+            }
+            StartingPawnUtility.StartingAndOptionalPawns.Insert(i, p);
+            StartingPawnUtility.GeneratePossessions(p);
             ++num;
             Log.Message($"Added {p} to Starting Pawn");
         }
@@ -84,12 +97,40 @@ public class ScenPart_FixedStartingPawns : ScenPart_ConfigPage_ConfigureStarting
         }
         Log.Message($"Generated {num} pawns");
     }
-
+    public override int GetHashCode()
+    {
+        int hashCode = base.GetHashCode();
+        foreach (PawnKindCount kindCount in this.possibleKindDefs)
+            hashCode ^= kindCount.GetHashCode();
+        return hashCode;
+    }
 
     public override void PostIdeoChosen()
     {
-        Find.GameInitData.startingPawnCount = TotalPawnCount;
-        base.PostIdeoChosen();
+        Find.GameInitData.startingPawnCount = this.TotalPawnCount;
+        //限制可选人数
+        Find.GameInitData.startingPawnsRequired = StartingPawnUtility.StartingAndOptionalPawns.Select(x => new PawnKindCount() { kindDef = x.kindDef }).ToList();
+        if (ModsConfig.BiotechActive)
+        {
+            Current.Game.customXenotypeDatabase.customXenotypes.Clear();
+            foreach (Ideo ideo in Find.IdeoManager.IdeosListForReading)
+            {
+                foreach (Precept precept in ideo.PreceptsListForReading)
+                {
+                    if (precept is Precept_Xenotype preceptXenotype && preceptXenotype.customXenotype != null && !Current.Game.customXenotypeDatabase.customXenotypes.Contains(preceptXenotype.customXenotype))
+                        Current.Game.customXenotypeDatabase.customXenotypes.Add(preceptXenotype.customXenotype);
+                }
+            }
+        }
+        if (ModsConfig.IdeologyActive && Faction.OfPlayerSilentFail?.ideos?.PrimaryIdeo != null)
+        {
+            foreach (Precept precept in Faction.OfPlayerSilentFail.ideos.PrimaryIdeo.PreceptsListForReading)
+            {
+                if (precept.def.defaultDrugPolicyOverride != null)
+                    Current.Game.drugPolicyDatabase.MakePolicyDefault(precept.def.defaultDrugPolicyOverride);
+            }
+        }
+        this.GenerateStartingPawns();
     }
     public override void DoEditInterface(Listing_ScenEdit listing)
     {
