@@ -120,6 +120,7 @@
     </Reference>
     <Publicize Include="Assembly-CSharp:Verse.StartingPawnUtility.StartingAndOptionalPawns" />
     <Publicize Include="Assembly-CSharp:Verse.StartingPawnUtility.GeneratePossessions" />
+	  <Publicize Include="Assembly-CSharp:Verse.StartingPawnUtility.StartingAndOptionalPawnGenerationRequests" /> 
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
