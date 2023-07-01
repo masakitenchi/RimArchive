@@ -62,15 +62,23 @@ public class ScenPart_FixedStartingPawns : ScenPart_ConfigPage_ConfigureStarting
 
     public override string Summary(Scenario scen) => this.customSummary ?? (string)"ScenPart_StartWithCertainColonists".Translate();
 
-    public IEnumerable<PawnKindDef> availableDefs => DefDatabase<PawnKindDef>.AllDefs.Where(x => x.RaceProps.Humanlike && x.defaultFactionType != null && x.defaultFactionType.isPlayer);
+    //Except或许可以用在派生类里（如果将来有把这个再抽象成一层基类的必要的话）
+    public IEnumerable<PawnKindDef> availableDefs => DefDatabase<PawnKindDef>.AllDefs.Where(x => x.RaceProps.Humanlike && x.defaultFactionType != null && x.defaultFactionType.isPlayer).Except(possibleKindDefs.Select(x => x.kindDef));
     protected override void GenerateStartingPawns()
     {
         Log.Message("Generating Starting Pawns...");
         var num = 0;
-        StartingPawnUtility.StartingAndOptionalPawns.Clear();
+        StartingPawnUtility.ClearAllStartingPawns();
         for(int i = 0; i< this.possibleKindDefs.Count; i++)
         {
-            StartingPawnUtility.SetGenerationRequest(i, new PawnGenerationRequest(this.possibleKindDefs[i].kindDef));
+            /* 凭什么？
+             * private static void EnsureGenerationRequestInRangeOf(int index)
+                {
+                  while (StartingPawnUtility.StartingAndOptionalPawnGenerationRequests.Count <= index)
+                    StartingPawnUtility.StartingAndOptionalPawnGenerationRequests.Add(StartingPawnUtility.DefaultStartingPawnRequest);
+                }
+             */
+            StartingPawnUtility.StartingAndOptionalPawnGenerationRequests.Add(new PawnGenerationRequest(this.possibleKindDefs[i].kindDef));
             Pawn p = PawnGenerator.GeneratePawn(new PawnGenerationRequest(possibleKindDefs[i].kindDef,
                                 faction: Faction.OfPlayer,
                                 canGeneratePawnRelations: false,
@@ -89,7 +97,9 @@ public class ScenPart_FixedStartingPawns : ScenPart_ConfigPage_ConfigureStarting
             ++num;
             Log.Message($"Added {p} to Starting Pawn");
         }
-        while(num < TotalPawnCount && !StartingPawnUtility.WorkTypeRequirementsSatisfied())
+        //再加上一个防止默认值被添加（StartingPawnUtility.StartingAndOptionalPawnGenerationRequests.Count <= index 而不是 < index）
+        StartingPawnUtility.StartingAndOptionalPawnGenerationRequests.Add(new PawnGenerationRequest(this.possibleKindDefs.RandomElement().kindDef));
+        while (num < TotalPawnCount && !StartingPawnUtility.WorkTypeRequirementsSatisfied())
         {
             Log.Message("Adding Extra Pawns to Starting Pawn");
             StartingPawnUtility.AddNewPawn();
@@ -134,7 +144,7 @@ public class ScenPart_FixedStartingPawns : ScenPart_ConfigPage_ConfigureStarting
     }
     public override void DoEditInterface(Listing_ScenEdit listing)
     {
-        Rect rect = listing.GetScenPartRect(this, RowHeight * 4f) with
+        Rect rect = listing.GetScenPartRect(this, RowHeight * (TotalPawnCount + 1)) with
         {
             height = RowHeight
         };
@@ -155,7 +165,7 @@ public class ScenPart_FixedStartingPawns : ScenPart_ConfigPage_ConfigureStarting
                     Find.WindowStack.Add(new FloatMenu(options));*/
                 FloatMenuUtility.MakeMenu(availableDefs, x => (string)x.LabelCap, delegate (PawnKindDef x)
                 {
-                    Log.Message($"Trying to set {kindCount.kindDef.defName}@{i} to {x.defName}");
+                    //Log.Message($"Trying to set {kindCount.kindDef.defName}@{i} to {x.defName}");
                     return () => kindCount.kindDef = x;
                 });
             }
@@ -171,11 +181,20 @@ public class ScenPart_FixedStartingPawns : ScenPart_ConfigPage_ConfigureStarting
         }
         if (Widgets.ButtonText(rect, "Add"))
         {
-            possibleKindDefs.Add(new PawnKindCount()
+            FloatMenuUtility.MakeMenu(availableDefs, x => (string)x.LabelCap, delegate (PawnKindDef x)
             {
-                kindDef = PawnKindDefOf.Colonist
+                return () => possibleKindDefs.Add(new PawnKindCount()
+                {
+                    kindDef = x
+                });
             });
         }
+    }
+
+    public override void ExposeData()
+    {
+        base.ExposeData();
+        Scribe_Collections.Look(ref possibleKindDefs, "kindCounts", LookMode.Deep);
     }
 
 }
