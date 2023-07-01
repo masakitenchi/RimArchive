@@ -24,6 +24,8 @@
         <inheritable>true</inheritable>
         <genes>
             <li>Hair_BaldOnly</li>
+            <li>Beard_NoBeardOnly</li>
+            <li>Skin_SheerWhite</li>
         </genes>
     </XenotypeDef>
 </Defs>

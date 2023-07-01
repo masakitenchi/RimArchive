@@ -8,4 +8,13 @@
 		<category>Rule</category>
 		<maxUses>1</maxUses>
 	</ScenPartDef>
+
+	<ScenPartDef>
+		<defName>FixedStartingPawns</defName>
+		<label>固定人物</label>
+		<scenPartClass>RimArchive.ScenPart_FixedStartingPawns</scenPartClass>
+		<pageClass>Page_ConfigureStartingPawns</pageClass>
+		<category>Rule</category>
+		<maxUses>1</maxUses>
+	</ScenPartDef>
 </Defs>

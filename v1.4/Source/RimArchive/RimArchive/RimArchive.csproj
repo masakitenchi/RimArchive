@@ -44,7 +44,7 @@
     <Compile Include="BA.cs" />
     <Compile Include="Boss\BossGroupWorker.cs" />
     <Compile Include="Boss\RaidGroupWave.cs" />
-    <Compile Include="ScenPart_ForcedRace.cs" />
+    <Compile Include="ScenPart.cs" />
     <Compile Include="Thing\CompProperties_Commconsole.cs" />
     <Compile Include="Thing\CompProperties_Transform.cs" />
     <Compile Include="Thing\Comps\Comp_TimeLimitedExistence.cs" />
@@ -58,7 +58,7 @@
     <Compile Include="Defs\BossDef.cs" />
     <Compile Include="Defs\DefOfs\HediffDefOf.cs" />
     <Compile Include="Defs\DefOfs\SchoolDefOf.cs" />
-    <Compile Include="Defs\DefOfs\StudentDefOf.cs" />
+    <Compile Include="Defs\DefOfs\PawnKindDefOfLocal.cs" />
     <Compile Include="Defs\DefOfs\ThingDefOf.cs" />
     <Compile Include="Defs\IconDef.cs" />
     <Compile Include="Defs\RaidDef.cs" />
@@ -93,12 +93,18 @@
     <Compile Include="Thing\TrapLikeBuilding.cs" />
     <Compile Include="Thought\ThoughtWorker\ThoughtWorker_OpinionOfMates.cs" />
     <Compile Include="Thought\ThoughtWorker\ThoughtWorker_OwnWeapon.cs" />
+    <Compile Include="Utilities\StudentGeneartionUtility.cs" />
     <Compile Include="Verbs\moe_bombardment.cs" />
     <Compile Include="Verbs\Verb_SummonThing.cs" />
     <Compile Include="Window\RecruitWindow.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Krafs.RimWorld.Ref" Version="1.4.3682" />
+    <PackageReference Include="Krafs.Publicizer">
+      <Version>2.2.1</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Krafs.RimWorld.Ref" Version="1.4.3704" />
     <PackageReference Include="Lib.Harmony" Version="2.2.2">
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
@@ -112,6 +118,8 @@
       <HintPath>..\..\..\..\..\..\..\SteamLibrary\steamapps\workshop\content\294100\2890901044\Assemblies\CombatExtended.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Publicize Include="Assembly-CSharp:Verse.StartingPawnUtility.StartingAndOptionalPawns" />
+    <Publicize Include="Assembly-CSharp:Verse.StartingPawnUtility.GeneratePossessions" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

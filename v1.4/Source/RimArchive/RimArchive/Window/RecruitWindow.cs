@@ -265,7 +265,7 @@ namespace RimArchive.Window
                         if (ButtonInvisible(icon))
                         {
                             _currentStudent = students[studentNo];
-                            _cachedStudent = PawnGenerator.GeneratePawn(new PawnGenerationRequest(_currentStudent as PawnKindDef,
+                            _cachedStudent = PawnGenerator.GeneratePawn(new PawnGenerationRequest(_currentStudent,
                                 faction: Faction.OfPlayer,
                                 canGeneratePawnRelations: false,
                                 mustBeCapableOfViolence: true,
@@ -274,7 +274,7 @@ namespace RimArchive.Window
                                 allowAddictions: false,
                                 fixedGender: Gender.Female
                                 ));
-                            PostGen(_cachedStudent);
+                            StudentGenerationUtility.PostGen(_cachedStudent, _currentStudent);
                             _inStudentProfile = true;
                         }
                         TooltipHandler.TipRegion(icon, students[studentNo].description);
@@ -487,68 +487,7 @@ namespace RimArchive.Window
         #endregion
 
         #region Misc Methods
-        static void PostGen(Pawn p)
-        {
-            try
-            {
-                //Adjust skills
-                foreach (SkillRecord record in p.skills.skills)
-                {
-                    record.Level = _currentStudent.skills.FirstOrFallback(x => x.skill == record.def).level;
-                    record.passion = _currentStudent.skills.FirstOrFallback(x => x.skill == record.def).passion;
-                }
-                //Remove harmful hediffs or addiction
-                //p.health.hediffSet.hediffs = p.health.hediffSet.hediffs.Where(x => !(x.def.isBad || x.def.IsAddiction)).ToList();
-                p.health.hediffSet.hediffs.RemoveAll(x => x.def.isBad || x.def.IsAddiction);
-                p.Name = _currentStudent.name;
-                PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Childhood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
-                PawnBioAndNameGenerator.FillBackstorySlotShuffled(p, BackstorySlot.Adulthood, _currentStudent.backstoryFiltersOverride, Faction.OfPlayer.def);
-                p.story.headType = _currentStudent.forcedHeadType;
-                p.story.hairDef = _currentStudent.forcedHair;
-                p.story.bodyType = BodyTypeDefOf.Thin;
-                p.story.traits.allTraits.Clear();
-                foreach (TraitRequirement trait in _currentStudent.forcedTraits)
-                {
-                    p.story.traits.GainTrait(new Trait(trait.def, trait.degree ?? 0, true));
-                }
-                //p.apparel.WornApparel.RemoveAll(x => x.def.apparel.bodyPartGroups.Any(t => t == BodyPartGroupDefOf.FullHead || t == BodyPartGroupDefOf.UpperHead));
-                p.apparel.LockAll();
-                #region Relations
-                //处理人际关系
-                //逻辑有点乱，首先：
-                //这个要双向查找保证不漏，或者说保证任意顺序招募都可以确保关系
-                //那么一开始要先一对多，然后多对一
-                //还是需要简洁一点的代码，或者说数据结构
-                //在StudentDef.Init里加了双向添加的代码，试试看
-                List<Pawn> students = Find.CurrentMap.mapPawns.AllPawns.Where(x => x.kindDef is StudentDef).ToList();
-                foreach (var relation in (p.kindDef as StudentDef).relations)
-                {
-                    //DebugMessage.DbgMsg($"relation: {relation.relation.defName}");
-                    //DebugMessage.DbgMsg($"Pawns: {string.Join("\n", relation.others.Select(x => x.defName))}");
-                    foreach (Pawn other in students.Where(x => !p.relations.DirectRelationExists(relation.relation, x) && relation.others.Contains(x.kindDef as StudentDef)))
-                    {
-                        p.relations.AddDirectRelation(relation.relation, other);
-                    }
-                }
-                //查找地图上的每一个student看关系里是否包含要招募的学生
-                /*foreach(var student in students.Where(x => (x.kindDef as StudentDef).relations.Exists(t => t.others.Contains(p.kindDef as StudentDef))))
-                {
-                    foreach(var relation in (student.kindDef as StudentDef).relations.Where(x => x.others.Contains(p.kindDef as StudentDef)))
-                    {
-                        if(!p.relations.DirectRelationExists(relation.relation, student))
-                            p.relations.AddDirectRelation(relation.relation, student);
-                    }
-                }*/
-                #endregion
-                //DebugMessage log for backstory. Maybe vanilla cannot recognize har's backstory? but with HAR it should inject into vanilla code, doesn't it?
-                //DbgMsg($"Pawn {p.Name}: \nrace:{p.kindDef.race}\n kindDef {p.kindDef},\n backstoryoverride: {string.Join("\n", p.kindDef.backstoryFiltersOverride.First().categories.Select(x => x + "\n"))}");
-
-            }
-            catch (Exception ex)
-            {
-                DebugMessage.DbgErr($"{ex} with {ex.Message}");
-            }
-        }
+        
         static Texture2D IconforPassion(Passion passion) => passion switch
         {
             Passion.None => BaseContent.ClearTex,
