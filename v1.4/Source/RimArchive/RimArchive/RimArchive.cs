@@ -1,15 +1,12 @@
-﻿using HarmonyLib;
+﻿global using HarmonyLib;
+global using RimWorld;
+global using System.Collections.Generic;
+global using System.Linq;
+global using Verse;
 using RimArchive.GameComponents;
 using RimArchive.Window;
-using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine;
-using Verse;
-using static RimArchive.DebugMessage;
-using static RimArchive.StudentDef;
 
 namespace RimArchive
 {
@@ -49,10 +46,6 @@ namespace RimArchive
         public static RaidManager RaidManager => Current.Game.GetComponent<RaidManager>();
         //
         internal static readonly string packageId;
-
-        internal static HediffDef HediffGen;
-        internal static float nextSeverity = 0.5f;
-        internal static HashSet<HediffStage> cachedGenertedHediffStages = new HashSet<HediffStage>();
         //Each student belongs to a different PawnKindDef, but should share the same race
         internal static readonly List<StudentDef> AllStudents = new List<StudentDef>();
         //Cache school for Recruit Window
@@ -77,22 +70,13 @@ namespace RimArchive
                 AllStudents.Add(student);
                 student.Init();
             }
-            foreach(var school in DefDatabase<IconDef>.AllDefsListForReading)
+            foreach (var school in DefDatabase<IconDef>.AllDefsListForReading)
             {
                 cachedSchools.Add(school);
                 school.ResolveFields();
                 cachedAllStudentsBySchool.Add(school, (from x in AllStudents where x.School == school.name select x).ToList());
             }
             RecruitWindow.Init();
-            HediffGen = new HediffDef()
-            {
-                generated = true,
-                defName = "RA_HediffGenerated_DamageResistance",
-                label = "DamageResistance",
-                description = "DamageResistance",
-                stages = new List<HediffStage>()
-            };
-            DefDatabase<HediffDef>.Add(HediffGen);
         }
     }
 }

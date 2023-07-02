@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <BAW_Saki.label>RABBIT-26 type Machine Gun</BAW_Saki.label>
+  <BAW_Saki.description>Regulation machine gun issued to Saki by the SRT Special Academy.\n\nRequires arduous maintenance due to its construction, this gun boasts significant firepower as long as it is maintained properly.</BAW_Saki.description>
+  <BAW_Saki.tools.0.label>stock</BAW_Saki.tools.0.label>
+  <BAW_Saki.tools.1.label>barrel</BAW_Saki.tools.1.label>
+
+  <Bullet_BA_Saki.label>Bullet for RABBIT-26 type Machine Gun</Bullet_BA_Saki.label>
+
+  <BAW_Miyako.label>RABBIT-31 type Submachine Gun</BAW_Miyako.label>
+  <BAW_Miyako.description>Regulation submachine gun issued to Miyako by the SRT Special Academy.\n\nIt is a highly reliable gun and can effectively repel the enemy even under extreme circumstances.</BAW_Miyako.description>
+  <BAW_Miyako.tools.0.label>stock</BAW_Miyako.tools.0.label>
+  <BAW_Miyako.tools.1.label>barrel</BAW_Miyako.tools.1.label>
+
+  <Bullet_BA_Miyako.label>Bullet of RABBIT-31 type submachine gun</Bullet_BA_Miyako.label>
+
+  <BAW_Miyu.label>RABBIT-39 type Rifle</BAW_Miyu.label>
+  <BAW_Miyu.description>Regulation sniper rifle issued to Miyu by the SRT Special Academy.\n\nFinely made and boasts an amazing accuracy.</BAW_Miyu.description>
+  <BAW_Miyu.tools.0.label>stock</BAW_Miyu.tools.0.label>
+  <BAW_Miyu.tools.1.label>barrel</BAW_Miyu.tools.1.label>
+
+  <Bullet_BA_Miyu.label>Bullet of RABBIT-39 type Rifle</Bullet_BA_Miyu.label>
+
+  <BAW_Moe.label>萌绘的通讯装置与望远镜</BAW_Moe.label>
+  <BAW_Moe.description>!该武器机制尚未完善！\n\n萌绘的战斗鹰直升机正在外围待机。用望远镜指示器与通讯器来为萌绘提供攻击坐标，她会立刻发射大量的火箭弹把目标地点炸翻天！\n\n这会需要很长的时间来引导射击，你需要清楚的视野、足够的时间且你不应该朝自己开火。</BAW_Moe.description>
+  <BAW_Moe.tools.0.label>stock</BAW_Moe.tools.0.label>
+  <BAW_Moe.tools.1.label>barrel</BAW_Moe.tools.1.label>
+
+  <Bombardment_beacon.label>Target Beacon</Bombardment_beacon.label>
+
+
+  <!-- 萌绘（手枪） -->
+
+  <BAW_MoeHG.label>Rabbit-224 type pistol</BAW_MoeHG.label>
+  <BAW_MoeHG.description>A standard pistol that Moe received from SRT Special Academy.\n\nIn spite of being a pistol, it has a high rate of fire and can empty its magazine in a blink.</BAW_MoeHG.description>
+  <BAW_MoeHG.tools.0.label>stock</BAW_MoeHG.tools.0.label>
+  <BAW_MoeHG.tools.1.label>barrel</BAW_MoeHG.tools.1.label>
+
+  <Bullet_BA_Moe.label>Bullet of Rabbit-224 type pistol</Bullet_BA_Moe.label>
+
+
+</LanguageData>

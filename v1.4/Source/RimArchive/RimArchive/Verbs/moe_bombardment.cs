@@ -1,9 +1,4 @@
-﻿using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
-using Verse;
+﻿using UnityEngine;
 using Verse.Sound;
 
 #pragma warning disable CS1591
@@ -181,7 +176,7 @@ namespace RimArchive
             for (int i = 0; i < list.Count; i++)
             {
                 if (!list[i].TryGetComp<CompProjectileInterceptor>().BombardmentCanStartFireAt(
-                    new RimWorld.Bombardment() { instigator = this.instigator},
+                    new RimWorld.Bombardment() { instigator = this.instigator },
                     intVec))
                 {
                     return;
@@ -197,8 +192,8 @@ namespace RimArchive
             for (int i = 0; i < list.Count; i++)
             {
                 if (list[i].TryGetComp<CompProjectileInterceptor>().CheckBombardmentIntercept(
-                    new RimWorld.Bombardment() { instigator = this.instigator}, 
-                    new RimWorld.Bombardment.BombardmentProjectile() { targetCell = proj.targetCell}
+                    new RimWorld.Bombardment() { instigator = this.instigator },
+                    new RimWorld.Bombardment.BombardmentProjectile() { targetCell = proj.targetCell }
                     ))
                 {
                     return;
@@ -225,7 +220,7 @@ namespace RimArchive
         new public int DurationTicks = 600;
         protected override bool TryCastShot()
         {
-            if(currentTarget.HasThing && currentTarget.Thing.Map != caster.Map)
+            if (currentTarget.HasThing && currentTarget.Thing.Map != caster.Map)
             {
                 return false;
             }

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- HOD -->
+
+  <BA_BossGroup_HOD.label>HOD</BA_BossGroup_HOD.label>
+  <BA_BossGroup_HOD.waves.0.label>Easy</BA_BossGroup_HOD.waves.0.label>
+  <BA_BossGroup_HOD.waves.1.label>Normal</BA_BossGroup_HOD.waves.1.label>
+  <BA_BossGroup_HOD.waves.2.label>Hard</BA_BossGroup_HOD.waves.2.label>
+  <BA_BossGroup_HOD.waves.3.label>Insane</BA_BossGroup_HOD.waves.3.label>
+  <BA_BossGroup_HOD.waves.4.label>Torment</BA_BossGroup_HOD.waves.4.label>
+
+
+</LanguageData>

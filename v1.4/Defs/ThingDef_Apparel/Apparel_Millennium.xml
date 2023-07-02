@@ -3,8 +3,8 @@
 
     <ThingDef ParentName="BA_ApparelBase">
         <defName>BAA_Body_Yuuka</defName>
-        <label>Yuuka_Body</label>
-        <description>Yuuka_Body</description>
+        <label>优香</label>
+        <description>身体贴图</description>
         <graphicData>
             <texPath>Things/Apparel/Apparel_Generic</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -22,8 +22,8 @@
 
 	<ThingDef ParentName="BA_ApparelBase">
 		<defName>BAA_Body_Noa</defName>
-		<label>Noa_Body</label>
-		<description>Noa_Body</description>
+		<label>诺亚</label>
+		<description>身体贴图</description>
 		<graphicData>
 			<texPath>Things/Apparel/Apparel_Generic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -41,8 +41,8 @@
 
 	<ThingDef ParentName="BA_ApparelBase">
 		<defName>BAA_Body_Rio</defName>
-		<label>Rio_Body</label>
-		<description>Rio_Body</description>
+		<label>Rio</label>
+		<description>身体贴图</description>
 		<graphicData>
 			<texPath>Things/Apparel/Apparel_Generic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

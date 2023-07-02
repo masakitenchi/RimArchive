@@ -3,8 +3,8 @@
 
    <!--  <AbilityDefs>
         <defName>BA_Ability_SummonInvadePillar</defName>
-        <label>Summon Invade Pillar</label>
-        <description>Summons an invade pillar, which applies debuffs to enemies around.</description>
+        <label>召唤侵蚀之柱</label>
+        <description>召唤侵蚀之柱，这种柱子会持续性的给周围的生物带来压力</description>
         <iconPath>UI/Abilities/FireBurst</iconPath>
         <cooldownTicksRange>3600</cooldownTicksRange>
         <hostile>false</hostile>

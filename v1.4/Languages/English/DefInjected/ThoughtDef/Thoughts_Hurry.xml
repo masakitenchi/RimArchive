@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <TeacherShelter.stages.0.label>老师就在身边</TeacherShelter.stages.0.label>
+  <TeacherShelter.stages.0.description>马上又能见到老师了！</TeacherShelter.stages.0.description>
+
+
+  <!-- 补课部 -->
+
+  <Hatred.stages.0.label>Vanitas</Hatred.stages.0.label>
+  <Hatred.stages.0.description>无论行至何处，一切皆是虚无。</Hatred.stages.0.description>
+
+
+  <!-- 奥利斯小队 -->
+
+  <RA_ThoughtDef_Azusa.stages.0.label>万物皆虚，万事皆允</RA_ThoughtDef_Azusa.stages.0.label>
+  <RA_ThoughtDef_Azusa.stages.0.description>一切都是虚无，人生一点意义都没有。但是......我想相信......你的话语。</RA_ThoughtDef_Azusa.stages.0.description>
+
+
+  <!-- 三一的间谍 -->
+
+  <RA_ThoughtDef_Hoshino.stages.0.label>巡夜者</RA_ThoughtDef_Hoshino.stages.0.label>
+  <RA_ThoughtDef_Hoshino.stages.0.description>在睡觉时间也要保护好学校！</RA_ThoughtDef_Hoshino.stages.0.description>
+
+
+</LanguageData>

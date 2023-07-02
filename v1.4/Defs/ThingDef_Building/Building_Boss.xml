@@ -3,8 +3,8 @@
 
     <ThingDef ParentName = "BuildingBase">
         <defName>BA_HOD_Pillar</defName>
-        <label>HOD Pillar</label>
-        <description>The invade pillar.</description>
+        <label>侵蚀之柱</label>
+        <description>侵蚀之柱。</description>
         <thingClass>Building</thingClass>
         <category>Building</category>
         <!-- 占位符 -->

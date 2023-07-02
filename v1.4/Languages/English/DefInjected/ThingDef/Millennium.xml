@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 响 -->
+
+  <BAW_Hibiki.label>Fancy Light</BAW_Hibiki.label>
+  <BAW_Hibiki.description>Hibiki's fondly used mortar.\n\nOccasionally finding use in her daily experiments, it is used to fire various other things alongside shells.</BAW_Hibiki.description>
+  <BAW_Hibiki.tools.0.label>stock</BAW_Hibiki.tools.0.label>
+  <BAW_Hibiki.tools.1.label>barrel</BAW_Hibiki.tools.1.label>
+
+  <Bullet_BA_Hibiki.label>Shell of Fancy Light</Bullet_BA_Hibiki.label>
+
+
+  <!-- 尼禄 -->
+
+  <BAW_Neru.label>Twin Dragon</BAW_Neru.label>
+  <BAW_Neru.description>Neru's dual submachine guns.\n\nA beautiful golden dragon pattern is engraved upon both guns.</BAW_Neru.description>
+  <BAW_Neru.tools.0.label>stock</BAW_Neru.tools.0.label>
+  <BAW_Neru.tools.1.label>barrel</BAW_Neru.tools.1.label>
+
+  <Bullet_BA_Neru.label>Bullet of Twin Dragon</Bullet_BA_Neru.label>
+
+
+  <!-- 朱音 -->
+
+  <BAW_Akane.label>Silent Solution</BAW_Akane.label>
+  <BAW_Akane.description>A pistol that Akane always carries.\n\nNamed such in contrast to the explosives she usually tends to use.</BAW_Akane.description>
+  <BAW_Akane.tools.0.label>stock</BAW_Akane.tools.0.label>
+  <BAW_Akane.tools.1.label>barrel</BAW_Akane.tools.1.label>
+
+  <Bullet_BA_Akane.label>Bullet of Silent Solution</Bullet_BA_Akane.label>
+
+
+  <!-- 明日奈 -->
+
+  <BAW_Asuna.label>Surprise Party</BAW_Asuna.label>
+  <BAW_Asuna.description>The assault rifle used by Asuna.\n\nIt seems she has forgotten the meaning behind its fun and lively sounding name.</BAW_Asuna.description>
+  <BAW_Asuna.tools.0.label>stock</BAW_Asuna.tools.0.label>
+  <BAW_Asuna.tools.1.label>barrel</BAW_Asuna.tools.1.label>
+
+  <Bullet_BA_Asuna.label>Bullet of Surprise Party</Bullet_BA_Asuna.label>
+
+
+  <!-- 时 -->
+
+  <BAW_Toki.label>Secret Time</BAW_Toki.label>
+  <BAW_Toki.description>Assault rifle used by Toki./n/nIt has the performance to match its appearance, and eliminates all targets that interfere with her mission. Toki didn't choose the name, somebody else named it.</BAW_Toki.description>
+  <BAW_Toki.tools.0.label>stock</BAW_Toki.tools.0.label>
+  <BAW_Toki.tools.1.label>barrel</BAW_Toki.tools.1.label>
+
+  <Bullet_BA_Toki.label>Bullet of Secret Time</Bullet_BA_Toki.label>
+
+
+  <!-- 花凛 -->
+
+  <BAW_Karin.label>Hawkeye</BAW_Karin.label>
+  <BAW_Karin.description>An anti-materiel rifle used exclusively by Karin.\n\nEven from far away in the sky, her shots land with unmatched accuracy.</BAW_Karin.description>
+  <BAW_Karin.tools.0.label>stock</BAW_Karin.tools.0.label>
+  <BAW_Karin.tools.1.label>barrel</BAW_Karin.tools.1.label>
+
+  <Bullet_BA_Karin.label>Bullet of Hawkeye</Bullet_BA_Karin.label>
+
+
+  <!-- 小绿 -->
+
+  <BAW_Midori.label>Fresh Inspiration</BAW_Midori.label>
+  <BAW_Midori.description>Midori's sniper rifle.\n\nAttached to the rifle is an accessory given to Midori by her beloved older sister, and she always finds inspiration when needed by playing around with it.</BAW_Midori.description>
+  <BAW_Midori.tools.0.label>stock</BAW_Midori.tools.0.label>
+  <BAW_Midori.tools.1.label>barrel</BAW_Midori.tools.1.label>
+
+  <Bullet_BA_Midori.label>Bullet for Fresh Inspiration</Bullet_BA_Midori.label>
+
+
+  <!-- 桃井 -->
+
+  <BAW_Momoi.label>Unique Idea</BAW_Momoi.label>
+  <BAW_Momoi.description>The assault rifle used by Momoi.\n\nAttached to the rifle is an accessory given to Momoi by her beloved younger sister, and she always comes up with new ideas when needed by playing around with it.</BAW_Momoi.description>
+  <BAW_Momoi.tools.0.label>stock</BAW_Momoi.tools.0.label>
+  <BAW_Momoi.tools.1.label>barrel</BAW_Momoi.tools.1.label>
+
+  <Bullet_BA_Momoi.label>Bullet of Unique Idea</Bullet_BA_Momoi.label>
+
+
+  <!-- 柚子 -->
+
+  <BAW_Yuzu.label>Nyan's Dash</BAW_Yuzu.label>
+  <BAW_Yuzu.description>The gun carried by Yuzu.\n\nIt has a cute image of an forever-flying cat on the side.</BAW_Yuzu.description>
+  <BAW_Yuzu.tools.0.label>stock</BAW_Yuzu.tools.0.label>
+  <BAW_Yuzu.tools.1.label>barrel</BAW_Yuzu.tools.1.label>
+
+  <Bullet_BA_Yuzu.label>Nyan's Dash</Bullet_BA_Yuzu.label>
+
+
+  <!-- 爱丽丝 -->
+
+  <BAW_Aris.label>Sword of Light: Supernova</BAW_Aris.label>
+  <BAW_Aris.description>The massive railgun that Arisu received from the engineering club.\n\nIts size and power output are so great that ordinary students would struggle to simply walk around with it.</BAW_Aris.description>
+  <BAW_Aris.tools.0.label>stock</BAW_Aris.tools.0.label>
+  <BAW_Aris.tools.1.label>barrel</BAW_Aris.tools.1.label>
+
+  <Bullet_BA_Aris.label>Hikari</Bullet_BA_Aris.label>
+
+
+  <!-- 诺亚 -->
+
+  <BAW_Noa.label>Secretary's vote</BAW_Noa.label>
+  <BAW_Noa.description>Pistol with a conversion kit used by Noa.\n\nWith the stock extended, it can be fired like a submachine gun.</BAW_Noa.description>
+  <BAW_Noa.tools.0.label>stock</BAW_Noa.tools.0.label>
+  <BAW_Noa.tools.1.label>barrel</BAW_Noa.tools.1.label>
+
+  <Bullet_BA_Noa.label>Bullet of Secretary's vote</Bullet_BA_Noa.label>
+
+
+  <!-- 邮箱 -->
+
+  <BAW_Yuuka.label>Logic n Reason</BAW_Yuuka.label>
+  <BAW_Yuuka.description>A submachine guns used by Yuuka.\n\nIt helps Yuuka make rational and intelligent decisions even under pressure at critical times.</BAW_Yuuka.description>
+  <BAW_Yuuka.tools.0.label>stock</BAW_Yuuka.tools.0.label>
+  <BAW_Yuuka.tools.1.label>barrel</BAW_Yuuka.tools.1.label>
+
+  <Bullet_BA_Yuuka.label>Bullet of Logic n Reason</Bullet_BA_Yuuka.label>
+
+
+  <!-- 莉音 -->
+
+  <BAW_Rio.label>Final Finesse</BAW_Rio.label>
+  <BAW_Rio.description>The revolver used by Rio.\n\nTo achieve her goals, all necessary means must be taken.\n\nAnd for Rio, who has always been alone, violence is an essential finesse for her.</BAW_Rio.description>
+  <BAW_Rio.tools.0.label>stock</BAW_Rio.tools.0.label>
+  <BAW_Rio.tools.1.label>barrel</BAW_Rio.tools.1.label>
+
+  <Bullet_BA_Rio.label>Bullet of Final Finesse</Bullet_BA_Rio.label>
+
+
+</LanguageData>

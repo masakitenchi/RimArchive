@@ -33,4 +33,10 @@
         <graphicPath>Pawns/Trinity/Azusa/Head/Azusa</graphicPath>
     </HeadTypeDef>
 
+    <HeadTypeDef ParentName="BA_HeadTypeBase">
+        <defName>BA_HeadTypeDef_Sensei</defName>
+        <label>Sensei Head</label>
+        <graphicPath>Pawns/Sensei</graphicPath>
+    </HeadTypeDef>
+
 </Defs>

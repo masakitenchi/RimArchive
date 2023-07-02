@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 星野 -->
+
+  <BAW_Hoshino.label>Eye of Horus</BAW_Hoshino.label>
+  <BAW_Hoshino.description>Hoshino's beloved shotgun, sporting a simple design.\n\nWhile she may be lazy at heart, Hoshino does not slack off when it comes to maintaining her weapon.</BAW_Hoshino.description>
+  <BAW_Hoshino.tools.0.label>stock</BAW_Hoshino.tools.0.label>
+  <BAW_Hoshino.tools.1.label>barrel</BAW_Hoshino.tools.1.label>
+
+  <Bullet_BA_Hoshino.label>Bullet of Eye of Horus</Bullet_BA_Hoshino.label>
+
+
+  <!-- 白子 -->
+
+  <BAW_Shiroko.label>WHITE FANG 465</BAW_Shiroko.label>
+  <BAW_Shiroko.description>Shiroko's cherished assault rifle.\n\nThanks to careful maintenance, it's always ready to use whenever the need arises.</BAW_Shiroko.description>
+  <BAW_Shiroko.tools.0.label>stock</BAW_Shiroko.tools.0.label>
+  <BAW_Shiroko.tools.1.label>barrel</BAW_Shiroko.tools.1.label>
+
+  <Bullet_BA_Shiroko.label>Bullet of WHITE FANG 465</Bullet_BA_Shiroko.label>
+
+
+  <!-- 芹香 -->
+
+  <BAW_Serika.label>Sincerity</BAW_Serika.label>
+  <BAW_Serika.description>An assault rifle Serika carries to her part-time job.\n\nIt is always carefully maintained, thanks to Serika's meticulousness and sincerity.</BAW_Serika.description>
+  <BAW_Serika.tools.0.label>stock</BAW_Serika.tools.0.label>
+  <BAW_Serika.tools.1.label>barrel</BAW_Serika.tools.1.label>
+
+  <Bullet_BA_Serika.label>Bullet of Sincerity</Bullet_BA_Serika.label>
+
+
+  <!-- 野宫 -->
+
+  <BAW_Nonomi.label>Little Machine Gun V</BAW_Nonomi.label>
+  <BAW_Nonomi.description>Machine gun used by Nonomi.\n\nDespite the "Little" moniker, it's actually quite big.</BAW_Nonomi.description>
+  <BAW_Nonomi.tools.0.label>stock</BAW_Nonomi.tools.0.label>
+  <BAW_Nonomi.tools.1.label>barrel</BAW_Nonomi.tools.1.label>
+  <BAW_Nonomi.tools.2.label>stock</BAW_Nonomi.tools.2.label>
+  <BAW_Nonomi.tools.3.label>barrel</BAW_Nonomi.tools.3.label>
+
+  <Bullet_BA_Nonomi.label>Bullet of Little Machine Gun V</Bullet_BA_Nonomi.label>
+
+
+</LanguageData>

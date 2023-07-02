@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 纱织 -->
+
+  <BAW_Saori.label>Arius assault rifle</BAW_Saori.label>
+  <BAW_Saori.description>Assault rifle used by Saori.\n\nCustomized by Saori in pursuit of efficiency. \n\nOnce the prey is in sight, it never misses its shots until the target is brought down.</BAW_Saori.description>
+  <BAW_Saori.tools.0.label>stock</BAW_Saori.tools.0.label>
+  <BAW_Saori.tools.1.label>barrel</BAW_Saori.tools.1.label>
+
+  <Bullet_BA_Saori.label>Bullet for Arius assault rifle</Bullet_BA_Saori.label>
+
+
+  <!-- 秤砣子 -->
+
+  <BAW_Atsuko.label>Scorpius</BAW_Atsuko.label>
+  <BAW_Atsuko.description>A submachine gun used by Atsuko.\n\nIt has a heavy firepower for its short barrel, and is especially suited for close quarters combat.</BAW_Atsuko.description>
+  <BAW_Atsuko.tools.0.label>stock</BAW_Atsuko.tools.0.label>
+  <BAW_Atsuko.tools.1.label>barrel</BAW_Atsuko.tools.1.label>
+
+  <Bullet_BA_Atsuko.label>Bullet for Scorpius</Bullet_BA_Atsuko.label>
+
+
+  <!-- 日和 -->
+
+  <BAW_Hiyori.label>Identity</BAW_Hiyori.label>
+  <BAW_Hiyori.description>Sniper rifle used by Hiyori.\n\nThe 20mm bullets strike true, asserting their presence on the gunfire-filled battlefield.</BAW_Hiyori.description>
+  <BAW_Hiyori.tools.0.label>stock</BAW_Hiyori.tools.0.label>
+  <BAW_Hiyori.tools.1.label>barrel</BAW_Hiyori.tools.1.label>
+
+  <Bullet_BA_Hiyori.label>Bullet of Identity</Bullet_BA_Hiyori.label>
+
+
+  <!-- 美咲 -->
+
+  <BAW_Misaki.label>Saint Predator</BAW_Misaki.label>
+  <BAW_Misaki.description>Rocket launcher used by Misaki.\n\nAfter firing, when it reaches a certain altitude, it separates into multiple munitions and causes a widespread explosion.</BAW_Misaki.description>
+  <BAW_Misaki.tools.0.label>stock</BAW_Misaki.tools.0.label>
+  <BAW_Misaki.tools.1.label>barrel</BAW_Misaki.tools.1.label>
+
+  <Bullet_BA_Misaki.label>SmallRocket</Bullet_BA_Misaki.label>
+
+
+</LanguageData>

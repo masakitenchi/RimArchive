@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!--日奈-->
+  <!--<BAW_Hina.label>终幕：毁灭者</BAW_Hina.label>-->
+  <!--<BAW_Hina.description>日奈的机关枪，她视其为手足。\n\n违反校规扰乱风纪之人，都将会被其冷酷无情的破坏力所吹飞。</BAW_Hina.description>-->
+  <!--<BAW_Hina.tools.0.label>枪托</BAW_Hina.tools.0.label>-->
+  <!--<BAW_Hina.tools.1.label>枪管</BAW_Hina.tools.1.label>-->
+
+  <!--阿露-->
+  <!--<BAW_Aru.label>酒红色冷赞</BAW_Aru.label>-->
+  <!--<BAW_Aru.description>阿露平时十分重视，古风设计的狙击步枪。\n\n仅仅是拿着它，好像……冷硬的程度就提升了。</BAW_Aru.description>-->
+  <!--<BAW_Aru.tools.0.label>枪托</BAW_Aru.tools.0.label>-->
+  <!--<BAW_Aru.tools.1.label>枪管</BAW_Aru.tools.1.label>-->
+
+  <!--睦月-->
+  <!--<BAW_Mutsuki.label>给糖也要捣蛋</BAW_Mutsuki.label>-->
+  <!--<BAW_Mutsuki.description>睦月随身携带的机关枪。\n\n据睦月所说，为了更有趣的恶作剧，火力也很重要呢。</BAW_Mutsuki.description>-->
+  <!--<BAW_Mutsuki.tools.0.label>枪托</BAW_Mutsuki.tools.0.label>-->
+  <!--<BAW_Mutsuki.tools.1.label>枪管</BAW_Mutsuki.tools.1.label>-->
+
+  <!--加代子-->
+  <!--<BAW_Kayoko.label>恶魔的咆哮</BAW_Kayoko.label>-->
+  <!--<BAW_Kayoko.description>佳代子随身携带的手枪。\n\n正如其名，它每次直接开火都会发出巨大的咆哮，所以平常基本上都装着消音器。</BAW_Kayoko.description>-->
+  <!--<BAW_Kayoko.tools.0.label>握把</BAW_Kayoko.tools.0.label>-->
+  <!--<BAW_Kayoko.tools.1.label>枪管</BAW_Kayoko.tools.1.label>-->
+
+  <!--春香-->
+  <!--<BAW_Haruka.label>吹飞</BAW_Haruka.label>-->
+  <!--<BAW_Haruka.description>春香消灭害虫使用的霰弹枪。\n\n不过“害虫”的定义可能根据场合有所不同。</BAW_Haruka.description>-->
+  <!--<BAW_Haruka.tools.0.label>枪托</BAW_Haruka.tools.0.label>-->
+  <!--<BAW_Haruka.tools.1.label>枪管</BAW_Haruka.tools.1.label>-->
+
+  <!--亚子-->
+  <!--<BAW_Ako.label>大人物</BAW_Ako.label>-->
+  <!--<BAW_Ako.description>亚子携带的手枪。\n\n亚子被任命为行政官之际，为表彰她一直以来的辛勤努力，阳奈将这把枪奖励给了她。\n\n她一直随身携带，十分重视。</BAW_Ako.description>-->
+  <!--<BAW_Ako.tools.0.label>枪托</BAW_Ako.tools.0.label>-->
+  <!--<BAW_Ako.tools.1.label>枪管</BAW_Ako.tools.1.label>-->
+
+  <!--伊织-->
+  <!--<BAW_Iori.label>爆裂一击</BAW_Iori.label>-->
+  <!--<BAW_Iori.description>伊织在处理违反规则之人时使用的狙击步枪。\n\n虽然是连狙击镜都没有的简单造型，伊织却说：高手不择工具。</BAW_Iori.description>-->
+  <!--<BAW_Iori.tools.0.label>枪托</BAW_Iori.tools.0.label>-->
+  <!--<BAW_Iori.tools.1.label>枪管</BAW_Iori.tools.1.label>-->
+
+  <!--千夏-->
+  <!--<BAW_Chinatsu.label>支援指针</BAW_Chinatsu.label>-->
+  <!--<BAW_Chinatsu.description>千夏爱用的手枪。\n\n比起用来攻击谁，它在指示业务方面用得比较多，比如显示某地的位置。</BAW_Chinatsu.description>-->
+  <!--<BAW_Chinatsu.tools.0.label>枪托</BAW_Chinatsu.tools.0.label>-->
+  <!--<BAW_Chinatsu.tools.1.label>枪管</BAW_Chinatsu.tools.1.label>-->
+
+
+
+
+
+
+
+</LanguageData>

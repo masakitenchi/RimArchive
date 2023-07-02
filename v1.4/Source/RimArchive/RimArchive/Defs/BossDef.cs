@@ -1,10 +1,4 @@
-﻿using Verse;
-using RimWorld;
-using System.Collections.Generic;
-using System;
-using System.Linq;
-
-namespace RimArchive;
+﻿namespace RimArchive;
 
 //果然还是不想和原版的混在一块
 public class BossDef : Def
@@ -16,6 +10,6 @@ public class BossDef : Def
     {
         BossDef bossDef = this;
         foreach (string str in base.ConfigErrors())
-        yield return str;
+            yield return str;
     }
 }

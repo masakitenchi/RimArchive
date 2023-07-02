@@ -4,8 +4,8 @@
 	<!--泉奈-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Izuna</defName>
-		<label>Izuna-style Super Ninja Apparatus</label>
-		<description>Izuna's beloved submachine gun.\n\nA state-of-the-art ninja implement, when combined with Izuna-style ninja arts its uses are practically limitless, such as shooting smoke grenades that have been thrown, or massaging Master's shoulders.</description>
+		<label>泉奈流的超级忍具</label>
+		<description>泉奈爱用的冲锋枪。\n\n一种最先进的忍具，和泉奈流忍法相结合使用的话，用途就无限广泛了，\n\n比如说射击投掷烟雾弹、按摩主公的肩膀等等。</description>
 		<graphicData>
 			<texPath>Weapon/Hyakkiyako/Izuna</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -75,8 +75,8 @@
 	<!--若藻-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Wakamo</defName>
-		<label>Crimson Calamity</label>
-		<description>Wakamo's favorite rifle.Despite its old-fashioned appearance, it always smells of flames and gunpowder. \n\nNowadays, it is often used against "obstacles" around the teacher.</description>
+		<label>深红灾厄</label>
+		<description>若藻爱用的来福枪。\n\n与其古朴的外观相反，它总是散发着火焰与火药的味道。\n\n如今，它经常被用来对付老师身边“碍事的东西”。</description>
 		<graphicData>
 			<texPath>Weapon/Hyakkiyako/Wakamo</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -149,8 +149,8 @@
 	<!--月咏-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Tsukuyo</defName>
-		<label>Tsukuyo-style Submachine Gun</label>
-		<description>A submachine gun that Tsukuyo cherishes.\n\nTsukuyo is not good at handling guns, so Michiru and Izuna have added various decorations and modifications for her. It's irreplaceable for Tsukuyo, and at the crucial moments she holds the barrel even more tenderly.</description>
+		<label>月咏流冲锋枪</label>
+		<description>月咏十分重视的冲锋枪。\n\n月咏不擅长处理枪械，所以小满和泉奈帮忙添加了各种装饰，并且进行了改造。\n\n对月咏来说，它是无可替代的。每个重要的瞬间，她都更加温柔地握住枪身。</description>
 		<graphicData>
 			<texPath>Weapon/Hyakkiyako/Tsukuyo</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -215,8 +215,8 @@
 	<!--三千留-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Michiru</defName>
-		<label>Michiru-style Overflow Shotgun</label>
-		<description>Michiru's beloved shotgun.\n\nNumerous modifications and additional parts are attached so that special ammo can be shot for use in her own ninjutsu.\n\nIt seems difficult to use, but Michiru says, "That's part of the style!"</description>
+		<label>三千留流溢流喷枪</label>
+		<description>三千留爱用的霰弹枪。\n\n为了能够运用她的忍术，进行了各种改造，比如能射击特殊子弹、追加弹夹等。虽然反而更难使用了，可小三千留却说“这样也很有味道呢！”。</description>
 		<graphicData>
 			<texPath>Weapon/Hyakkiyako/Michiru</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

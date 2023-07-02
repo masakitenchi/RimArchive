@@ -3,9 +3,9 @@
     <!-- 测试用 -->
     <GeneDef>
         <defName>DamageReduction</defName>
-        <label>Student</label>
-        <labelShortAdj>Student</labelShortAdj>
-        <description>Students receive less damage from attack.</description>
+        <label>学生</label>
+        <labelShortAdj>学生</labelShortAdj>
+        <description>学生的神秘力量。她们受到的伤害更低。</description>
         <iconPath>UI/Icons/Genes/Gene_FireWeakness</iconPath>
         <displayCategory>ResistanceAndWeakness</displayCategory>
         <displayOrderInCategory>90</displayOrderInCategory>
@@ -16,13 +16,13 @@
         <symbolPack>
             <prefixSymbols>
                 <li>
-                    <symbol>dry</symbol>
+                    <symbol>学</symbol>
                 </li>
                 <li>
-                    <symbol>tinder</symbol>
+                    <symbol>基沃托斯</symbol>
                 </li>
                 <li>
-                    <symbol>kindle</symbol>
+                    <symbol>神秘</symbol>
                 </li>
             </prefixSymbols>
         </symbolPack>
@@ -30,9 +30,9 @@
 
     <GeneDef>
         <defName>DamageReduction_IncomingDamageFactor</defName>
-        <label>Student</label>
-        <labelShortAdj>Student</labelShortAdj>
-        <description>Students receive less damage from attack.</description>
+        <label>学生</label>
+        <labelShortAdj>学生</labelShortAdj>
+        <description>学生的神秘力量。她们受到的伤害更低。</description>
         <iconPath>UI/Icons/Genes/Gene_FireWeakness</iconPath>
         <displayCategory>ResistanceAndWeakness</displayCategory>
         <displayOrderInCategory>90</displayOrderInCategory>
@@ -43,13 +43,13 @@
         <symbolPack>
             <prefixSymbols>
                 <li>
-                    <symbol>dry</symbol>
+                    <symbol>学</symbol>
                 </li>
                 <li>
-                    <symbol>tinder</symbol>
+                    <symbol>基沃托斯</symbol>
                 </li>
                 <li>
-                    <symbol>kindle</symbol>
+                    <symbol>神秘</symbol>
                 </li>
             </prefixSymbols>
         </symbolPack>

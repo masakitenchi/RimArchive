@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 泉奈 -->
+
+  <BAW_Izuna.label>Izuna-style Super Ninja Apparatus</BAW_Izuna.label>
+  <BAW_Izuna.description>Izuna's beloved submachine gun.\n\nA state-of-the-art ninja implement, when combined with Izuna-style ninja arts its uses are practically limitless, such as shooting smoke grenades that have been thrown, or massaging Master's shoulders.</BAW_Izuna.description>
+  <BAW_Izuna.tools.0.label>stock</BAW_Izuna.tools.0.label>
+  <BAW_Izuna.tools.1.label>barrel</BAW_Izuna.tools.1.label>
+
+  <Bullet_BA_Izuna.label>Bullet of Izuna-style Super Ninja Apparatus</Bullet_BA_Izuna.label>
+
+
+  <!-- 若藻 -->
+
+  <BAW_Wakamo.label>Crimson Calamity</BAW_Wakamo.label>
+  <BAW_Wakamo.description>Wakamo's favorite rifle.Despite its old-fashioned appearance, it always smells of flames and gunpowder. \n\nNowadays, it is often used against "obstacles" around the teacher.</BAW_Wakamo.description>
+  <BAW_Wakamo.tools.0.label>stock</BAW_Wakamo.tools.0.label>
+  <BAW_Wakamo.tools.1.label>barrel</BAW_Wakamo.tools.1.label>
+  <BAW_Wakamo.tools.2.label>Bayonet</BAW_Wakamo.tools.2.label>
+
+  <Bullet_BA_Wakamo.label>Bullet of Crimson Calamity</Bullet_BA_Wakamo.label>
+
+
+  <!-- 月咏 -->
+
+  <BAW_Tsukuyo.label>Tsukuyo-style Submachine Gun</BAW_Tsukuyo.label>
+  <BAW_Tsukuyo.description>A submachine gun that Tsukuyo cherishes.\n\nTsukuyo is not good at handling guns, so Michiru and Izuna have added various decorations and modifications for her. It's irreplaceable for Tsukuyo, and at the crucial moments she holds the barrel even more tenderly.</BAW_Tsukuyo.description>
+  <BAW_Tsukuyo.tools.0.label>stock</BAW_Tsukuyo.tools.0.label>
+  <BAW_Tsukuyo.tools.1.label>barrel</BAW_Tsukuyo.tools.1.label>
+
+  <Bullet_BA_Tsukuyo.label>Bullet of Tsukuyo-style Submachine Gun</Bullet_BA_Tsukuyo.label>
+
+
+  <!-- 三千留 -->
+
+  <BAW_Michiru.label>Michiru-style Overflow Shotgun</BAW_Michiru.label>
+  <BAW_Michiru.description>Michiru's beloved shotgun.\n\nNumerous modifications and additional parts are attached so that special ammo can be shot for use in her own ninjutsu.\n\nIt seems difficult to use, but Michiru says, "That's part of the style!"</BAW_Michiru.description>
+  <BAW_Michiru.tools.0.label>stock</BAW_Michiru.tools.0.label>
+  <BAW_Michiru.tools.1.label>barrel</BAW_Michiru.tools.1.label>
+
+  <Bullet_BA_Michiru.label>Bullet of Michiru-style Overflow Shotgun</Bullet_BA_Michiru.label>
+
+
+</LanguageData>

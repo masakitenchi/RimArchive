@@ -4,9 +4,9 @@
 	<!--春香-->
 	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Backstory_Haruka</defName>
-		<title>Igusa Haruka</title>
-		<titleShort>Igusa Haruka</titleShort>
-		<baseDesc>Rank-and-file member of Gehenna Academy's Problem Solver 68.</baseDesc>
+		<title>伊草 遥香</title>
+		<titleShort>遥香</titleShort>
+		<baseDesc>便利屋68的正式职员。</baseDesc>
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>

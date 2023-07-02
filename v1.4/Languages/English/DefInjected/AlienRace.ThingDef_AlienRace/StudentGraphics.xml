@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <KivotosStudent.label>Students From Kivotos</KivotosStudent.label>
+  <KivotosStudent.description>[PlaceHolder]</KivotosStudent.description>
+  <KivotosStudent.alienRace.generalSettings.alienPartGenerator.colorChannels.0.name>skin</KivotosStudent.alienRace.generalSettings.alienPartGenerator.colorChannels.0.name>
+  <KivotosStudent.tools.0.label>left fist</KivotosStudent.tools.0.label>
+  <KivotosStudent.tools.1.label>right fist</KivotosStudent.tools.1.label>
+
+
+</LanguageData>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!--响-->
+  <!--<BAW_Hibiki.label>奇幻色彩</BAW_Hibiki.label>-->
+  <!--<BAW_Hibiki.description>响爱用的迫击炮。\n\n经常在每天的实验中使用，除了炮弹以外也可以发射各种各样的东西。</BAW_Hibiki.description>-->
+  <!--<BAW_Hibiki.tools.0.label>枪托</BAW_Hibiki.tools.0.label>-->
+  <!--<BAW_Hibiki.tools.1.label>枪管</BAW_Hibiki.tools.1.label>-->
+
+  <!--尼禄-->
+  <!--<BAW_Neru.label>双龙</BAW_Neru.label>-->
+  <!--<BAW_Neru.description>尼禄使用的双持冲锋枪。\n\n两把枪身都刻着黄金之龙的美丽花纹。</BAW_Neru.description>-->
+  <!--<BAW_Neru.tools.0.label>枪托</BAW_Neru.tools.0.label>-->
+  <!--<BAW_Neru.tools.1.label>枪管</BAW_Neru.tools.1.label>-->
+
+  <!--花凛-->
+  <!--<BAW_Karin.label>鹰眼</BAW_Karin.label>-->
+  <!--<BAW_Karin.description>花凛专用的反器材步枪。即使是空中飞行的目标，也能精准无比地击落。</BAW_Karin.description>-->
+  <!--<BAW_Karin.tools.0.label>枪托</BAW_Karin.tools.0.label>-->
+  <!--<BAW_Karin.tools.1.label>枪管</BAW_Karin.tools.1.label>-->
+
+  <!--小绿-->
+  <!--<BAW_Midori.label>清爽灵感</BAW_Midori.label>-->
+  <!--<BAW_Midori.description>小绿使用的狙击步枪。\n\n挂着最重要的姐姐送的装饰，在困顿的时候拨弄拨弄它，灵感似乎就涌上来了。</BAW_Midori.description>-->
+  <!--<BAW_Midori.tools.0.label>枪托</BAW_Midori.tools.0.label>-->
+  <!--<BAW_Midori.tools.1.label>枪管</BAW_Midori.tools.1.label>-->
+
+  <!--桃井-->
+  <!--<BAW_Momoi.label>独特点子</BAW_Momoi.label>-->
+  <!--<BAW_Momoi.description>桃井使用的突击步枪。\n\n挂着最重要的妹妹送的装饰，在困顿的时候拨弄拨弄它，点子就闪闪发亮起来了。</BAW_Momoi.description>-->
+  <!--<BAW_Momoi.tools.0.label>枪托</BAW_Momoi.tools.0.label>-->
+  <!--<BAW_Momoi.tools.1.label>枪管</BAW_Momoi.tools.1.label>-->
+
+  <!--柚子-->
+  <!--<BAW_Yuzu.label>喵冲</BAW_Yuzu.label>-->
+  <!--<BAW_Yuzu.description>柚子随身携带的掷弹筒。\n\n它的侧面一直播放着可爱的猫猫影像。</BAW_Yuzu.description>-->
+  <!--<BAW_Yuzu.tools.0.label>枪托</BAW_Yuzu.tools.0.label>-->
+  <!--<BAW_Yuzu.tools.1.label>枪管</BAW_Yuzu.tools.1.label>-->
+
+  <!--爱丽丝-->
+  <!--<BAW_Aris.label>光之剑：超新星</BAW_Aris.label>-->
+  <!--<BAW_Aris.description>爱丽丝从工程部那里获得的巨大电磁炮。\n\n它的重量和功率输出，让普通学生仅仅是拿着走路都十分困难。</BAW_Aris.description>-->
+  <!--<BAW_Aris.tools.0.label>枪托</BAW_Aris.tools.0.label>-->
+  <!--<BAW_Aris.tools.1.label>枪管</BAW_Aris.tools.1.label>-->
+
+  <!--诺亚-->
+  <!--<BAW_Noa.label>书记的表决</BAW_Noa.label>-->
+  <!--<BAW_Noa.description>诺亚使用的带有改装附件的手枪。\n\n拉开枪托就可以像冲锋枪一样连射。</BAW_Noa.description>-->
+  <!--<BAW_Noa.tools.0.label>握把</BAW_Noa.tools.0.label>-->
+  <!--<BAW_Noa.tools.1.label>枪管</BAW_Noa.tools.1.label>-->
+
+  <!--莉音-->
+  <!--<BAW_Rio.label>最终手段</BAW_Rio.label>-->
+  <!--<BAW_Rio.description>莉音所使用的左轮手枪。\n\n为了达成她的目标，必须要采取任何必要的措施。\n\n而对于孑然一身的莉音来说，暴力同样是备选的必要手段之一。</BAW_Rio.description>-->
+  <!--<BAW_Rio.tools.0.label>枪托</BAW_Rio.tools.0.label>-->
+  <!--<BAW_Rio.tools.1.label>枪管</BAW_Rio.tools.1.label>-->
+
+  <!--邮箱-->
+  <!--<BAW_Yuuka.label>逻辑与理性</BAW_Yuuka.label>-->
+  <!--<BAW_Yuuka.description>优香使用的冲锋枪。\n\n在重要的时机、以及需要适当应对的时候，它会帮助优香做出合理的判断。</BAW_Yuuka.description>-->
+  <!--<BAW_Yuuka.tools.0.label>握把</BAW_Yuuka.tools.0.label>-->
+  <!--<BAW_Yuuka.tools.1.label>枪管</BAW_Yuuka.tools.1.label>-->
+
+  <!--时-->
+  <!--<BAW_Toki.label>秘密时间</BAW_Toki.label>-->
+  <!--<BAW_Toki.description>时专用的突击步枪。\n\n拥有与外观相符的性能，将排除任务中出现的任何障碍。\n\n据说枪名不是自己取的，而是另有其人。</BAW_Toki.description>-->
+  <!--<BAW_Toki.tools.0.label>握把</BAW_Toki.tools.0.label>-->
+  <!--<BAW_Toki.tools.1.label>枪管</BAW_Toki.tools.1.label>-->
+
+  <!--明日奈-->
+  <!--<BAW_Asuna.label>超惊喜派对</BAW_Asuna.label>-->
+  <!--<BAW_Asuna.description>明日奈使用的突击步枪。\n\n为什么取这么个热闹又快乐的名字呢，明日奈好像也忘记了。</BAW_Asuna.description>-->
+  <!--<BAW_Asuna.tools.0.label>握把</BAW_Asuna.tools.0.label>-->
+  <!--<BAW_Asuna.tools.1.label>枪管</BAW_Asuna.tools.1.label>-->
+
+  <!--朱音-->
+  <!--<BAW_Akane.label>静音方案</BAW_Akane.label>-->
+  <!--<BAW_Akane.description>朱音经常携带的手枪。\n\n它的名字与平时爱用的爆炸物形成了鲜明对比。</BAW_Akane.description>-->
+  <!--<BAW_Akane.tools.0.label>握把</BAW_Akane.tools.0.label>-->
+  <!--<BAW_Akane.tools.1.label>枪管</BAW_Akane.tools.1.label>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LanguageData>

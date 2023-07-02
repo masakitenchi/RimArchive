@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 优香 -->
+
+  <Backstory_Yuuka.title>Hayase Yuuka</Backstory_Yuuka.title>
+  <Backstory_Yuuka.titleShort>Hayase Yuuka</Backstory_Yuuka.titleShort>
+  <Backstory_Yuuka.baseDesc>Enrolled in the Millennium Science School, Yuuka is the treasurer of the student council known as "Seminar".</Backstory_Yuuka.baseDesc>
+
+
+  <!-- 诺亚 -->
+
+  <Backstory_Noa.title>Ushio Noa</Backstory_Noa.title>
+  <Backstory_Noa.titleShort>Ushio Noa</Backstory_Noa.titleShort>
+  <Backstory_Noa.baseDesc>Member of the Millennium Science School, secretary of the "Seminar" student council.</Backstory_Noa.baseDesc>
+
+
+  <!-- 莉音 -->
+
+  <Backstory_Rio.title>Rio</Backstory_Rio.title>
+  <Backstory_Rio.titleShort>Rio</Backstory_Rio.titleShort>
+  <Backstory_Rio.baseDesc>Student President of the Millennium Science School and the Chairwoman of "Seminar".</Backstory_Rio.baseDesc>
+
+
+</LanguageData>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 阿拜多斯 -->
+
+  <RA_TraitDef_FTF.degreeDatas.0.label>Foreclosure Task Force</RA_TraitDef_FTF.degreeDatas.0.label>
+  <RA_TraitDef_FTF.degreeDatas.0.description>Lorum Ipsum</RA_TraitDef_FTF.degreeDatas.0.description>
+
+  <RA_TraitDef_Shiroko.degreeDatas.0.label>Sunaookami Shiroko</RA_TraitDef_Shiroko.degreeDatas.0.label>
+  <RA_TraitDef_Shiroko.degreeDatas.0.description>Lorum Ipsum</RA_TraitDef_Shiroko.degreeDatas.0.description>
+
+  <RA_TraitDef_Hoshino.degreeDatas.0.label>Takanashi Hoshino</RA_TraitDef_Hoshino.degreeDatas.0.label>
+  <RA_TraitDef_Hoshino.degreeDatas.0.description>Lorum Ipsum</RA_TraitDef_Hoshino.degreeDatas.0.description>
+
+  <RA_TraitDef_Serika.degreeDatas.0.label>Kuromi Serika</RA_TraitDef_Serika.degreeDatas.0.label>
+  <RA_TraitDef_Serika.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Serika.degreeDatas.0.description>
+
+
+  <!-- 奥利斯与圣三一 -->
+
+  <RA_TraitDef_Arius.degreeDatas.0.label>Arius Squad</RA_TraitDef_Arius.degreeDatas.0.label>
+  <RA_TraitDef_Arius.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Arius.degreeDatas.0.description>
+
+
+  <!-- 阿里乌斯是基督教三位一体的否定者，在当时引起了激烈的讨论战 -->
+
+  <RA_TraitDef_Spy.degreeDatas.0.label>lorum ipsum</RA_TraitDef_Spy.degreeDatas.0.label>
+  <RA_TraitDef_Spy.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Spy.degreeDatas.0.description>
+
+  <RA_TraitDef_Azusa.degreeDatas.0.label>Shirasu Azusa</RA_TraitDef_Azusa.degreeDatas.0.label>
+  <RA_TraitDef_Azusa.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Azusa.degreeDatas.0.description>
+
+
+  <!-- 月、天使、两面、死亡。沙立叶虽然是堕天使，但是依然作为光之子参与战争，非常有既视感，月亮和死亡元素也十分充沛。 -->
+
+  <RA_TraitDef_MUWC.degreeDatas.0.label>Make-Up Work Club</RA_TraitDef_MUWC.degreeDatas.0.label>
+  <RA_TraitDef_MUWC.degreeDatas.0.description>lorum ipsum</RA_TraitDef_MUWC.degreeDatas.0.description>
+
+  <RA_TraitDef_Hifumi.degreeDatas.0.label>Ajitani Hifumi</RA_TraitDef_Hifumi.degreeDatas.0.label>
+  <RA_TraitDef_Hifumi.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Hifumi.degreeDatas.0.description>
+
+  <RA_TraitDef_Koharu.degreeDatas.0.label>Shimoe Koharu</RA_TraitDef_Koharu.degreeDatas.0.label>
+  <RA_TraitDef_Koharu.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Koharu.degreeDatas.0.description>
+
+  <RA_TraitDef_Hanako.degreeDatas.0.label>Urawa Hanako</RA_TraitDef_Hanako.degreeDatas.0.label>
+  <RA_TraitDef_Hanako.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Hanako.degreeDatas.0.description>
+
+
+  <!-- 救援骑士团 -->
+
+  <RA_TraitDef_RK.degreeDatas.0.label>Remedial Knights</RA_TraitDef_RK.degreeDatas.0.label>
+  <RA_TraitDef_RK.degreeDatas.0.description>lorum ipsum</RA_TraitDef_RK.degreeDatas.0.description>
+
+  <RA_TraitDef_TS.degreeDatas.0.label>The Sisterhood</RA_TraitDef_TS.degreeDatas.0.label>
+  <RA_TraitDef_TS.degreeDatas.0.description>lorum ipsum</RA_TraitDef_TS.degreeDatas.0.description>
+
+
+  <!-- 千年 -->
+
+  <RA_TraitDef_GDD.degreeDatas.0.label>Game Development Department</RA_TraitDef_GDD.degreeDatas.0.label>
+  <RA_TraitDef_GDD.degreeDatas.0.description>lorum ipsum</RA_TraitDef_GDD.degreeDatas.0.description>
+
+  <RA_TraitDef_Midori.degreeDatas.0.label>Saiba Midori</RA_TraitDef_Midori.degreeDatas.0.label>
+  <RA_TraitDef_Midori.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Midori.degreeDatas.0.description>
+
+  <RA_TraitDef_Momoi.degreeDatas.0.label>Saiba Momoi</RA_TraitDef_Momoi.degreeDatas.0.label>
+  <RA_TraitDef_Momoi.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Momoi.degreeDatas.0.description>
+
+  <RA_TraitDef_Aris.degreeDatas.0.label>Tendo Aris</RA_TraitDef_Aris.degreeDatas.0.label>
+  <RA_TraitDef_Aris.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Aris.degreeDatas.0.description>
+
+  <RA_TraitDef_CC.degreeDatas.0.label>C&amp;C</RA_TraitDef_CC.degreeDatas.0.label>
+  <RA_TraitDef_CC.degreeDatas.0.description>lorum ipsum</RA_TraitDef_CC.degreeDatas.0.description>
+
+  <RA_TraitDef_Neru.degreeDatas.0.label>Mikamo Neru</RA_TraitDef_Neru.degreeDatas.0.label>
+  <RA_TraitDef_Neru.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Neru.degreeDatas.0.description>
+
+  <RA_TraitDef_Asuna.degreeDatas.0.label>Ichinose Asuna</RA_TraitDef_Asuna.degreeDatas.0.label>
+  <RA_TraitDef_Asuna.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Asuna.degreeDatas.0.description>
+
+
+  <!-- 研讨会 -->
+
+  <RA_TraitDef_Seminar.degreeDatas.0.label>Seminar</RA_TraitDef_Seminar.degreeDatas.0.label>
+  <RA_TraitDef_Seminar.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Seminar.degreeDatas.0.description>
+
+
+  <!-- 优香 -->
+
+  <RA_TraitDef_Yuuka.degreeDatas.0.label>Hayase Yuuka</RA_TraitDef_Yuuka.degreeDatas.0.label>
+  <RA_TraitDef_Yuuka.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Yuuka.degreeDatas.0.description>
+
+
+  <!-- 诺亚 -->
+
+  <RA_TraitDef_Noa.degreeDatas.0.label>Ushio Noa</RA_TraitDef_Noa.degreeDatas.0.label>
+  <RA_TraitDef_Noa.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Noa.degreeDatas.0.description>
+
+
+  <!-- 格黑那 -->
+
+  <RA_TraitDef_JTF.degreeDatas.0.label>Justice Task Force</RA_TraitDef_JTF.degreeDatas.0.label>
+  <RA_TraitDef_JTF.degreeDatas.0.description>lorum ipsum</RA_TraitDef_JTF.degreeDatas.0.description>
+
+  <RA_TraitDef_PS68.degreeDatas.0.label>Problem Solver 68</RA_TraitDef_PS68.degreeDatas.0.label>
+  <RA_TraitDef_PS68.degreeDatas.0.description>lorum ipsum</RA_TraitDef_PS68.degreeDatas.0.description>
+
+  <RA_TraitDef_Aru.degreeDatas.0.label>Rikuhachima Aru</RA_TraitDef_Aru.degreeDatas.0.label>
+  <RA_TraitDef_Aru.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Aru.degreeDatas.0.description>
+
+
+  <!-- 格黑那属于恶魔团体，阿露大概是第68柱魔神Belial，王阶，50个军团。拥有辨别真伪、明辨敌友的力量。希伯来语的Belial也是无赖、无价值、无意义，一切归于“恶”的意思，无价值、无意义在
+  剧情中阿露多个经营策略失败中体现的淋漓尽致，而她的思维也非常积极正面，也符合Belial的“天使内心”设定。至于辨识能力......阿露能很好的搞定传销组织和凯撒集团，虽然没多少是故意找上门
+  的（乐） -->
+
+  <RA_TraitDef_Mutsuki.degreeDatas.0.label>Asagi Mutsuki</RA_TraitDef_Mutsuki.degreeDatas.0.label>
+  <RA_TraitDef_Mutsuki.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Mutsuki.degreeDatas.0.description>
+
+
+  <!-- Asmodeus，32柱魔神。传说和形象很多，在犹太教经典的《塔木德》中很喜欢调戏女性和用恶劣的恶作剧捉弄人，曾有趁所罗门不注意丢老远然后自己变所罗门当皇帝然后在那位回来又成功跑路的
+  战绩 -->
+
+  <RA_TraitDef_Kayoko.degreeDatas.0.label>Onikata Kayoko</RA_TraitDef_Kayoko.degreeDatas.0.label>
+  <RA_TraitDef_Kayoko.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Kayoko.degreeDatas.0.description>
+
+
+  <!-- Beleth，32柱魔神，力量是施加恐惧感，是一个希望回归天堂的音乐爱好者。非常了解风纪委员的战术并且与其中角色有旧，或许在加入68社之前是个风纪委员？ -->
+
+  <RA_TraitDef_Haruka.degreeDatas.0.label>Igusa Haruka</RA_TraitDef_Haruka.degreeDatas.0.label>
+  <RA_TraitDef_Haruka.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Haruka.degreeDatas.0.description>
+
+
+  <!-- emmm -->
+
+  <RA_TraitDef_GRS.degreeDatas.0.label>Gourmet Research Society</RA_TraitDef_GRS.degreeDatas.0.label>
+  <RA_TraitDef_GRS.degreeDatas.0.description>lorum ipsum</RA_TraitDef_GRS.degreeDatas.0.description>
+
+
+  <!-- SRT -->
+
+  <RA_TraitDef_Rabbit.degreeDatas.0.label>RABBIT Squad</RA_TraitDef_Rabbit.degreeDatas.0.label>
+  <RA_TraitDef_Rabbit.degreeDatas.0.description>Lorum Ipsum</RA_TraitDef_Rabbit.degreeDatas.0.description>
+
+  <RA_TraitDef_Miyako.degreeDatas.0.label>Tsukiyuki Miyako</RA_TraitDef_Miyako.degreeDatas.0.label>
+  <RA_TraitDef_Miyako.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Miyako.degreeDatas.0.description>
+
+
+  <!-- 山海经 -->
+
+  <RA_TraitDef_PBG.degreeDatas.0.label>Plum Blossom Garden</RA_TraitDef_PBG.degreeDatas.0.label>
+  <RA_TraitDef_PBG.degreeDatas.0.description>lorum ipsum</RA_TraitDef_PBG.degreeDatas.0.description>
+
+  <RA_TraitDef_Shun.degreeDatas.0.label>Sunohara Shun</RA_TraitDef_Shun.degreeDatas.0.label>
+  <RA_TraitDef_Shun.degreeDatas.0.description>lorum ipsum</RA_TraitDef_Shun.degreeDatas.0.description>
+
+
+</LanguageData>

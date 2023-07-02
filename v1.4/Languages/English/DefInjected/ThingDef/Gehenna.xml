@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 日奈 -->
+
+  <BAW_Hina.label>The End: Destroyer</BAW_Hina.label>
+  <BAW_Hina.description>Hina's machine gun that she utilizes as if it were one of her own limbs.\n\nThose who violate school rules or disturb public morals will be blown away by its merciless destructive power.</BAW_Hina.description>
+  <BAW_Hina.tools.0.label>stock</BAW_Hina.tools.0.label>
+  <BAW_Hina.tools.1.label>barrel</BAW_Hina.tools.1.label>
+
+  <Bullet_BA_Hina.label>Bullet of The End: Destroyer</Bullet_BA_Hina.label>
+
+
+  <!-- 伊织 -->
+
+  <BAW_Iori.label>Crack Shot</BAW_Iori.label>
+  <BAW_Iori.description>The sniper rifle used by Iori when dealing with problems caused by rulebreakers.\n\nDespite being a simple model without even a scope, according to Iori "a specialist doesn't choose their tools".</BAW_Iori.description>
+  <BAW_Iori.tools.0.label>stock</BAW_Iori.tools.0.label>
+  <BAW_Iori.tools.1.label>barrel</BAW_Iori.tools.1.label>
+
+  <Bullet_BA_Iori.label>Bullet of Crack Shot</Bullet_BA_Iori.label>
+
+
+  <!-- 狗狗 -->
+
+  <BAW_Ako.label>Hotshot</BAW_Ako.label>
+  <BAW_Ako.description>A pistol carried by Ako.\n\nIt is a treasured object that was handed to Ako when she got appointed to the position of executive officer in recognition of her painstaking efforts. Ako carries it with her all the time and takes very good care of it.</BAW_Ako.description>
+  <BAW_Ako.tools.0.label>stock</BAW_Ako.tools.0.label>
+  <BAW_Ako.tools.1.label>barrel</BAW_Ako.tools.1.label>
+
+  <Bullet_BA_Ako.label>Bullet of HotShot</Bullet_BA_Ako.label>
+
+
+  <!-- 千夏 -->
+
+  <BAW_Chinatsu.label>Support Pointer</BAW_Chinatsu.label>
+  <BAW_Chinatsu.description>Chinatsu's treasured pistol.\n\nIt seems to mostly be used for pointing at things while commanding others, rather than shooting someone.</BAW_Chinatsu.description>
+  <BAW_Chinatsu.tools.0.label>stock</BAW_Chinatsu.tools.0.label>
+  <BAW_Chinatsu.tools.1.label>barrel</BAW_Chinatsu.tools.1.label>
+
+  <Bullet_BA_Chinatsu.label>Bullet of Support Pointer</Bullet_BA_Chinatsu.label>
+
+
+  <!-- 睦月 -->
+
+  <BAW_Mutsuki.label>Trick or Trick</BAW_Mutsuki.label>
+  <BAW_Mutsuki.description>A machine gun that Mutsuki always carries with her.\n\nAccording to Mutsuki, firepower is an important component of fun pranks.</BAW_Mutsuki.description>
+  <BAW_Mutsuki.tools.0.label>stock</BAW_Mutsuki.tools.0.label>
+  <BAW_Mutsuki.tools.1.label>barrel</BAW_Mutsuki.tools.1.label>
+
+  <Bullet_BA_Mutsuki.label>Bullet of Trick or Trick</Bullet_BA_Mutsuki.label>
+
+
+  <!-- 阿露 -->
+
+  <BAW_Aru.label>Wine-red Admire</BAW_Aru.label>
+  <BAW_Aru.description>Aru's antique-style sniper rifle that she always takes care of.\n\nJust by carrying it, her hard-boiledness increases...or so it seems.</BAW_Aru.description>
+  <BAW_Aru.tools.0.label>stock</BAW_Aru.tools.0.label>
+  <BAW_Aru.tools.1.label>barrel</BAW_Aru.tools.1.label>
+
+  <Bullet_BA_Aru.label>Bullet of Wine-red Admire</Bullet_BA_Aru.label>
+
+
+  <!-- 佳世子 -->
+
+  <BAW_Kayoko.label>Demon's Roar</BAW_Kayoko.label>
+  <BAW_Kayoko.description>A handgun that Kayoko usually carries.\n\nAs the name implies, it makes a loud roaring noise every time it is fired, so Kayoko had a silencer added to it.</BAW_Kayoko.description>
+  <BAW_Kayoko.tools.0.label>stock</BAW_Kayoko.tools.0.label>
+  <BAW_Kayoko.tools.1.label>barrel</BAW_Kayoko.tools.1.label>
+
+  <Bullet_BA_Kayoko.label>Bullet of Demon's Roar</Bullet_BA_Kayoko.label>
+
+
+  <!-- 遥香 -->
+
+  <BAW_Haruka.label>Blow Away</BAW_Haruka.label>
+  <BAW_Haruka.description>A shotgun used by Haruka to exterminate pests.\n\nThe definition of "pest" seems to be on a case-by-case basis.</BAW_Haruka.description>
+  <BAW_Haruka.tools.0.label>stock</BAW_Haruka.tools.0.label>
+  <BAW_Haruka.tools.1.label>barrel</BAW_Haruka.tools.1.label>
+
+  <Bullet_BA_Haruka.label>Bullet of Blow Away</Bullet_BA_Haruka.label>
+
+
+</LanguageData>

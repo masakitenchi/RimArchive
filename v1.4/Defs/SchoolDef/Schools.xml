@@ -3,7 +3,7 @@
     
     <RimArchive.IconDef>
         <defName>RA_School_Gehenna</defName>
-        <label>Gehenna</label>
+        <label>格黑娜学园</label>
         <description>自由と混沌を校風にする学園で、悪魔風のファッションや容姿の生徒が多く在籍する。
             ゲヘナとはヘブライ語でヒンノムの谷(エルサレムの南にある谷)を意味する。新約聖書では地獄という意味とされているので元ネタとしてはこちらの方が近いか。
             校風にのっとり、学校にとって違法のサークルや食いしんぼう集団、ペーパー会社などかなりフリーダムな団体が多い。
@@ -16,7 +16,7 @@
 
     <RimArchive.IconDef>
         <defName>RA_School_Millennium</defName>
-        <label>Millennium</label>
+        <label>千年科学学园</label>
         <description>科学技術に力を入れており、エンジニアやプログラマーの生徒が多い学校。
             スポーツ学や特異現象捜査部、ハッカー集団、秘密組織「C&amp;C」と呼ばれるメイド達などバラエティー豊かな面々が存在する。
             校内を回るモノレールや自前の発電所やデータセンター、最新の工作機械を備えた実習センターなど先端科学のインフラが充実している。
@@ -31,7 +31,7 @@
 
     <RimArchive.IconDef>
         <defName>RA_School_Shanhaijing</defName>
-        <label>Shanhaijing</label>
+        <label>山海经高级中学</label>
         <description>中華風の学校。「山海経」は「&lt;b&gt;せんがいきょう&lt;/b&gt;」と読む。アルファベットでは「Shanhaijing」。
             中国語圏の「高級中学校」とは、日本で言う高等学校に相応する。
             元ネタの『山海経』とは古代中国の書物で、形式上は東アジア最古の地理志であるが、奇想天外な内容が多く、どちらかといえば地方神話・地方民話集という面が大きい。
@@ -41,7 +41,7 @@
 
     <RimArchive.IconDef>
         <defName>RA_School_SRT</defName>
-        <label>SRT</label>
+        <label>SRT特殊学园</label>
         <description>&lt;b&gt;S&lt;/b&gt;pecial &lt;b&gt;R&lt;/b&gt;esponse &lt;b&gt;T&lt;/b&gt;eam。
             学園間を跨いでの犯罪など、ヴァルキューレでは対応が難しい事件を解決するために生まれた学園。
             連邦生徒会長によって、犯罪が発生した際にはいつでもどこでも即時の対応が許されている。
@@ -52,7 +52,7 @@
 
     <RimArchive.IconDef>
         <defName>RA_School_Hyakkiyako</defName>
-        <label>Hyakkiyako</label>
+        <label>百鬼夜行联合学园</label>
         <description>和風の学校。学園自治区は観光業を中心に発達している。
             巫女や霊能力者や任侠者がおり、アウトローたちは天狗の面をつけている。
             連合という形を取っているため生徒会は存在せず、「陰陽部」が形式上の取りまとめを行っているようだ。
@@ -65,7 +65,7 @@
 
     <RimArchive.IconDef>
         <defName>RA_School_Abydos</defName>
-        <label>Abydos</label>
+        <label>阿拜多斯高级中学</label>
         <description>砂漠地帯に位置する高等学校。由来はオシリス神復活の地「アビュドス」から。
 モチーフはエジプトだが、日本の住宅街に砂漠が隣接しているという不思議な環境である。
 かつては最大最強の学園と言われるマンモス校だったが、砂害の影響と復興のために多額の借金を背負ったため、生徒数は激減。
@@ -80,7 +80,7 @@
 
     <RimArchive.IconDef>
         <defName>RA_School_Trinity</defName>
-        <label>Trinity</label>
+        <label>三一综合学园</label>
         <description>規律を重んじるお嬢様学園。
             真面目で善良な生徒が多く、自ら自警団や正義実現委員会を作って治安を担うほど。
             生徒には天使のモチーフがあり、救護騎士団と呼ばれる看護師の志望者もいる。
@@ -96,7 +96,7 @@
 
     <RimArchive.IconDef>
         <defName>RA_School_Valkyrie</defName>
-        <label>Valkyrie</label>
+        <label>瓦尔基里警察学校</label>
         <description>キヴォトスの様々な問題対処に携わっている学校。各学園の自治区外(例：D.U.)などで起きた犯罪は基本的にヴァルキューレの管轄となる。
             そのため各地に拠点が存在し、正義感に満ちた生徒が多く、装備も充実している。
             しかし、生徒の練度やセキュリティには甚だ問題があり、イベント『シャーレのハッピー♡バレンタインパトロール』では、ワカモが相当な実力者であることを差し引いても何度も失態を犯している。
@@ -108,7 +108,7 @@
 
     <RimArchive.IconDef>
         <defName>RA_School_Redwinter</defName>
-        <label>Redwinter</label>
+        <label>红冬联邦学园</label>
         <description>キヴォトスのはるかに遠い辺境に位置する超巨大学園。
             「途方もなく広い」学園敷地と、「途方もなく多い」生徒数で知られている。
             寒い地域のようで、夏至の時期にも雪が積もっている様子が描かれている。</description>
@@ -117,7 +117,7 @@
 
     <RimArchive.IconDef>
         <defName>RA_School_ETC</defName>
-        <label>ETC</label>
+        <label>联邦学生会</label>
         <description>学園都市キヴォトスの行政を担う統治組織。
             主な組織として、「財務室」「調停室」「防衛室」など11の区分けで構成される「行政委員会」を持ち、それとは別に七神リンが管轄する特殊な「統括室」がある。
             現在は連邦生徒会長が失踪中のためリンが代行を務めているが、手が回らず機能不全を起こしているのが実情で、各学園自治区での出来事についてはほとんど不干渉となっている。
@@ -128,7 +128,7 @@
 
     <RimArchive.IconDef>
         <defName>RA_School_Arius</defName>
-        <label>Arius</label>
+        <label>阿里乌斯分校</label>
         <description>第一回公会議前に数多く存在した分派の一つ。
             分派が連合を組むことに猛烈に反対し、その結果、連合化したトリニティに徹底的な糾弾を受けた。
             現在はトリニティのカタコンベに通じる迷宮じみた地下通路を経た先にある自治区に隠れ潜んでいる。

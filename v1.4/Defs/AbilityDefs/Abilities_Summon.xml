@@ -3,8 +3,8 @@
 
 	<AbilityDef>
 		<defName>BA_SummonSerinaBox</defName>
-		<label>Main</label>
-		<description>Intensive care set A!</description>
+		<label>集中治疗组合A</label>
+		<description>集中治疗组合A！</description>
 		<iconPath>AbilityIcon/1001</iconPath>
 		<warmupMoteSocialSymbol>AbilityIcon/1001</warmupMoteSocialSymbol>
 		<warmupSound>MoralistAbility_Warmup</warmupSound>

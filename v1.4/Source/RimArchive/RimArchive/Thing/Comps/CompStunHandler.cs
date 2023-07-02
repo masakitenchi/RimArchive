@@ -1,8 +1,4 @@
-﻿using RimWorld;
-using UnityEngine;
-using Verse;
-
-namespace RimArchive;
+﻿namespace RimArchive;
 
 public class CompStunHandler : ThingComp
 {
@@ -19,12 +15,12 @@ public class CompStunHandler : ThingComp
     {
         if (parent.Destroyed)
             return;
-        if(parent.Map != null)
+        if (parent.Map != null)
         {
             this.groggyGauge ??= EffecterDefOf.ProgressBar.SpawnAttached(this.parent, this.parent.Map);
             this.groggyGauge.EffectTick((TargetInfo)(Thing)this.parent, TargetInfo.Invalid);
             MoteProgressBar GaugeBar = ((SubEffecter_ProgressBar)this.groggyGauge.children[0]).mote;
-            if(parent is Pawn p && p.stances.stunner.Stunned)
+            if (parent is Pawn p && p.stances.stunner.Stunned)
             {
                 GaugeBar.progress = p.stances.stunner.StunTicksLeft / (BreakStunDuration * GenTicks.TicksPerRealSecond);
             }

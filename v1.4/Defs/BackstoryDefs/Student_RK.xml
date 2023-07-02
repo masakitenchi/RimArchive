@@ -4,9 +4,9 @@
 	<!--芹娜-->
 	<AlienRace.AlienBackstoryDef ParentName="BAW_Backstory">
 		<defName>Backstory_Serina</defName>
-		<title>Sumi Serina</title>
-		<titleShort>Sumi Serina</titleShort>
-		<baseDesc>A kind girl who is devoted to the Rescue Knights of Trinity.</baseDesc>
+		<title>鹫见 芹娜</title>
+		<titleShort>芹娜</titleShort>
+		<baseDesc>隶属三一救护骑士团的善良少女。</baseDesc>
 		<bodyTypeGlobal>Thin</bodyTypeGlobal>
 		<slot>Childhood</slot>
 		<spawnCategories>

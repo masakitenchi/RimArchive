@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- <ThingDef ParentName = "BA_EquipmentHediffBase" Name = "BA_BadgeBase" Abstract = "True">
+		<label>Badge</label>
+	</ThingDef>
+
+	<ThingDef ParentName = "BA_EquipmentHediffBase" Name = "BA_BagBase" Abstract = "True">
+		<label>Bag</label>
+	</ThingDef>
+
+	<ThingDef ParentName = "BA_EquipmentHediffBase" Name = "BA_CharmBase" Abstract = "True">
+		<label>Charm</label>
+	</ThingDef>
+
+	<ThingDef ParentName = "BA_EquipmentHediffBase" Name = "BA_HairpinBase" Abstract = "True">
+		<label>Hairpin</label>
+	</ThingDef>
+
+	<ThingDef ParentName = "BA_EquipmentHediffBase" Name = "BA_HatBase" Abstract = "True">
+		<label>Hat</label>
+	</ThingDef>
+
+	<ThingDef ParentName = "BA_EquipmentHediffBase" Name = "BA_NecklaceBase" Abstract = "True">
+		<label>Necklace</label>
+	</ThingDef>
+
+	<ThingDef ParentName = "BA_EquipmentHediffBase" Name = "BA_ShoeBase" Abstract = "True">
+		<label>Shoe</label>
+	</ThingDef> -->
+
+  <BA_Badge_TierI.label>Badge</BA_Badge_TierI.label>
+  <BA_Badge_TierI.description>Tier 1 Badge.</BA_Badge_TierI.description>
+  <BA_Badge_TierI.comps.0.useLabel>Implant Badge</BA_Badge_TierI.comps.0.useLabel>
+
+  <BA_Badge_TierII.label>Badge</BA_Badge_TierII.label>
+  <BA_Badge_TierII.description>Tier 2 Badge.</BA_Badge_TierII.description>
+  <BA_Badge_TierII.comps.0.useLabel>Implant Badge</BA_Badge_TierII.comps.0.useLabel>
+
+  <BA_Badge_TierIII.label>Badge</BA_Badge_TierIII.label>
+  <BA_Badge_TierIII.description>Tier 3 Badge.</BA_Badge_TierIII.description>
+  <BA_Badge_TierIII.comps.0.useLabel>Implant Badge</BA_Badge_TierIII.comps.0.useLabel>
+
+  <BA_Badge_TierIV.label>Badge</BA_Badge_TierIV.label>
+  <BA_Badge_TierIV.description>Tier 4 Badge.</BA_Badge_TierIV.description>
+  <BA_Badge_TierIV.comps.0.useLabel>Implant Badge</BA_Badge_TierIV.comps.0.useLabel>
+
+  <BA_Badge_TierV.label>Badge</BA_Badge_TierV.label>
+  <BA_Badge_TierV.description>Tier 5 Badge.</BA_Badge_TierV.description>
+  <BA_Badge_TierV.comps.0.useLabel>Implant Badge</BA_Badge_TierV.comps.0.useLabel>
+
+  <BA_Badge_TierVI.label>Badge</BA_Badge_TierVI.label>
+  <BA_Badge_TierVI.description>Tier 6 Badge.</BA_Badge_TierVI.description>
+  <BA_Badge_TierVI.comps.0.useLabel>Implant Badge</BA_Badge_TierVI.comps.0.useLabel>
+
+  <BA_Badge_TierVII.label>Badge</BA_Badge_TierVII.label>
+  <BA_Badge_TierVII.description>Tier 7 Badge.</BA_Badge_TierVII.description>
+  <BA_Badge_TierVII.comps.0.useLabel>Implant Badge</BA_Badge_TierVII.comps.0.useLabel>
+
+
+</LanguageData>

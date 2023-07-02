@@ -1,9 +1,4 @@
-﻿using CombatExtended;
-using HarmonyLib;
-using RimWorld;
-using Verse;
-
-namespace RimArchive;
+﻿namespace RimArchive;
 
 public class Harmony_CE
 {

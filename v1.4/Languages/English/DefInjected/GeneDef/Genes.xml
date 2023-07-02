@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- 测试用 -->
+
+  <DamageReduction.label>Student</DamageReduction.label>
+  <DamageReduction.description>Students receive less damage from attack.</DamageReduction.description>
+
+  <DamageReduction_IncomingDamageFactor.label>Student</DamageReduction_IncomingDamageFactor.label>
+  <DamageReduction_IncomingDamageFactor.description>Students receive less damage from attack.</DamageReduction_IncomingDamageFactor.description>
+
+
+</LanguageData>

@@ -2,7 +2,7 @@
 <Defs>
 
     <ThoughtDef>
-        <defName>BA_Hatred</defName>
+        <defName>RA_Hatred</defName>
         <workerClass>ThoughtWorker_AlwaysActive</workerClass>
         <validWhileDespawned>true</validWhileDespawned>
         <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
@@ -11,8 +11,9 @@
         </requiredTraits>
         <stages>
             <li>
-                <label>Vanity of Vanities</label>
-                <description>All is Vanity.</description>
+                <label>万物皆虚</label>
+                <description>虚空的虚空，虚空的虚空，凡事都是虚空。
+                    ----《传道书1:2》</description>
                 <baseMoodEffect>-8</baseMoodEffect>
             </li>
         </stages>

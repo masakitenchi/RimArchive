@@ -3,8 +3,8 @@
 
     <HediffDef>
         <defName>BA_ArmorReduction</defName>
-        <label>Armor Reduction</label>
-        <description>Armor rating is reduced, which means it will receive more damage from attacks.</description>
+        <label>降低防御</label>
+        <description>防御力被降低了。这意味着目标更容易受伤。</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>true</isBad>
         <comps>
@@ -21,8 +21,8 @@
 
     <HediffDef>
         <defName>BA_PillarSuppression</defName>
-        <label>PillarSuppression</label>
-        <description>Suppressed by HOD's pillar, movement speed reduced.</description>
+        <label>被侵蚀之柱压制</label>
+        <description>被侵蚀之柱所影响。</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>true</isBad>
         <comps>
@@ -43,6 +43,49 @@
                 <statOffsets>
                     <MoveSpeed>-0.15</MoveSpeed>
                 </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- public virtual bool Visible => this.visible || 
+        this.CurStage == null || 
+        this.CurStage.becomeVisible;-->
+    <HediffDef>
+        <defName>BA_BossDamageReduction</defName>
+        <label>Lorem Ipsum</label>
+        <description>Lorem Ipsum</description>
+        <isBad>false</isBad>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <everCurableByItem>false</everCurableByItem>
+        <stages>
+            <li> <!-- Easy -->
+                <statFactors>
+                    <IncomingDamageFactor>1.0</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li> <!-- Normal -->
+                <minSeverity>1.0</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.8</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li> <!-- Hard -->
+                <minSeverity>2.0</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.6</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li> <!-- Insane -->
+                <minSeverity>3.0</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.4</IncomingDamageFactor>
+                </statFactors>
+            </li>
+            <li> <!-- Torment -->
+                <minSeverity>4.0</minSeverity>
+                <statFactors>
+                    <IncomingDamageFactor>0.2</IncomingDamageFactor>
+                </statFactors>
             </li>
         </stages>
     </HediffDef>

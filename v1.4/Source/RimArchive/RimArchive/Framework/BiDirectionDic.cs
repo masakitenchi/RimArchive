@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using RimWorld;
-using Verse;
-
-namespace RimArchive;
+﻿namespace RimArchive;
 
 public class BiDirectionDic<T>
 {

@@ -1,7 +1,4 @@
-﻿using RimWorld;
-using System;
-using System.Text;
-using Verse;
+﻿using System;
 
 namespace RimArchive;
 
@@ -39,7 +36,7 @@ public static class DebugTools
     [DebugAction("ReShuffleRaid", actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.PlayingOnMap)]
     private static void ReShuffleRaid() => RimArchiveMain.RaidManager.DebugRandomRaid();
 
-    [DebugAction("OutputCurrentHediff", actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+    /*[DebugAction("OutputCurrentHediff", actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.PlayingOnMap)]
     private static void HediffOutput()
     {
         if(!RimArchiveMain.HediffGen.stages.NullOrEmpty())
@@ -57,6 +54,6 @@ public static class DebugTools
             }
             Log.Message(sb.ToString());
         }
-    }
+    }*/
 
 }

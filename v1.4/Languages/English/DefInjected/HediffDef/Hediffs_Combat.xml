@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <BA_ArmorReduction.label>Armor Reduction</BA_ArmorReduction.label>
+  <BA_ArmorReduction.description>Armor rating is reduced, which means it will receive more damage from attacks.</BA_ArmorReduction.description>
+
+  <BA_PillarSuppression.label>PillarSuppression</BA_PillarSuppression.label>
+  <BA_PillarSuppression.description>Suppressed by HOD's pillar, movement speed reduced.</BA_PillarSuppression.description>
+
+
+  <!-- public virtual bool Visible => this.visible || 
+        this.CurStage == null || 
+        this.CurStage.becomeVisible; -->
+
+  <BA_BossDamageReduction.label>Lorem Ipsum</BA_BossDamageReduction.label>
+  <BA_BossDamageReduction.description>Lorem Ipsum</BA_BossDamageReduction.description>
+
+
+</LanguageData>

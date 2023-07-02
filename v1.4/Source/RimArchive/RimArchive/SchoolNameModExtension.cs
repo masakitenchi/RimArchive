@@ -1,10 +1,4 @@
-﻿using RimWorld;
-using System.Reflection;
-using System.Text.RegularExpressions;
-using System.Xml;
-using UnityEngine;
-using Verse;
-
+﻿
 #pragma warning disable CS0169
 namespace RimArchive
 {
