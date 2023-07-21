@@ -3,6 +3,7 @@ global using RimWorld;
 global using System.Collections.Generic;
 global using System.Linq;
 global using Verse;
+using RimArchive.Abilities;
 using RimArchive.GameComponents;
 using RimArchive.Window;
 using System.Text.RegularExpressions;
@@ -14,7 +15,7 @@ namespace RimArchive
     /// Loads all assets before GC.
     /// </summary>
     [StaticConstructorOnStartup]
-    public class RimArchiveMain
+    public class RimArchive
     {
         /// <summary>
         /// Will add settings later.
@@ -57,8 +58,12 @@ namespace RimArchive
 
         public static readonly HashSet<RaidDef> cachedAllBosses = new HashSet<RaidDef>();
 
+        public static GameObject gameObject = new GameObject("Auxia.RimArchive");
 
-        static RimArchiveMain()
+        public static SplitInFrames CoroutineSingleton => gameObject.GetComponent<SplitInFrames>();
+
+
+        static RimArchive()
         {
             //Should be of use sometime
             //But what if some other mod also add this extension? Meh
@@ -77,6 +82,8 @@ namespace RimArchive
                 cachedAllStudentsBySchool.Add(school, (from x in AllStudents where x.School == school.name select x).ToList());
             }
             RecruitWindow.Init();
+            Object.DontDestroyOnLoad(gameObject);
+            gameObject.AddComponent<global::RimArchive.Abilities.SplitInFrames>();
         }
     }
 }

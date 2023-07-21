@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
 	<!--日富美-->
@@ -119,7 +119,6 @@
 			</li>
 		</verbs>
 	</ThingDef>
-
 	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_BA_Koharu</defName>
 		<label>Bullet of Justice Black</label>
@@ -193,7 +192,6 @@
 			</li>
 		</tools>
 	</ThingDef>
-
 	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_BA_Tsurugi</defName>
 		<label>Bullet of BloodnGunpowder</label>
@@ -209,7 +207,6 @@
 			<speed>55</speed>
 		</projectile>
 	</ThingDef>
-
 
 	<!--梓-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
@@ -251,7 +248,7 @@
 		<verbs>
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
+				<hasStandardCommand>True</hasStandardCommand>
 				<defaultProjectile>Bullet_BA_Azusa</defaultProjectile>
 				<warmupTime>1.55</warmupTime>
 				<range>36.6</range>
@@ -259,9 +256,21 @@
 				<ticksBetweenBurstShots>16</ticksBetweenBurstShots>
 				<soundCast>Shot_AssaultRifle</soundCast>
 				<soundCastTail>GunTail_Medium</soundCastTail>
+				<isPrimary>True</isPrimary>
 				<muzzleFlashScale>9</muzzleFlashScale>
 			</li>
 		</verbs>
+		<!-- <modExtensions>
+			<li Class="RimArchive.AbilityModExtension">
+				<Student>BA_Azusa</Student>
+				<Ability>RA_Ability_IntuitMortem</Ability>
+			</li>
+		</modExtensions> -->
+		<!-- <comps>
+			<li>
+				<compClass>RimArchive.ReportVerbs</compClass>
+			</li>
+		</comps> -->
 	</ThingDef>
 	<ThingDef ParentName="BaseBullet">
 		<defName>Bullet_BA_Azusa</defName>
@@ -349,7 +358,7 @@
 			<speed>70</speed>
 		</projectile>
 	</ThingDef>
-	
+
 	<!--芹娜-->
 	<ThingDef ParentName="BAW_BaseHumanMakeableGun">
 		<defName>BAW_Serina</defName>
@@ -481,10 +490,6 @@
 			<speed>70</speed>
 		</projectile>
 	</ThingDef>
-
-
-
-
 
 
 </Defs>

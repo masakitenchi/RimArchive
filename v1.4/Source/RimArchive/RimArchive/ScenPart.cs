@@ -66,7 +66,7 @@ public class ScenPart_FixedStartingPawns : ScenPart_ConfigPage_ConfigureStarting
     public IEnumerable<PawnKindDef> availableDefs => DefDatabase<PawnKindDef>.AllDefs.Where(x => x.RaceProps.Humanlike && x.defaultFactionType != null && x.defaultFactionType.isPlayer).Except(possibleKindDefs.Select(x => x.kindDef));
     protected override void GenerateStartingPawns()
     {
-        Log.Message("Generating Starting Pawns...");
+        //Log.Message("Generating Starting Pawns...");
         var num = 0;
         StartingPawnUtility.ClearAllStartingPawns();
         for(int i = 0; i< this.possibleKindDefs.Count; i++)
@@ -85,8 +85,8 @@ public class ScenPart_FixedStartingPawns : ScenPart_ConfigPage_ConfigureStarting
                                 colonistRelationChanceFactor: 0f));
             if (this.possibleKindDefs[i].kindDef is StudentDef s)
             {
-                Log.Message("Postgen for students");
-                StudentGenerationUtility.PostGen(p, s);
+                //Log.Message("Postgen for students");
+                StudentGenerationUtility.PostGen(p, s, PawnGenerationContext.PlayerStarter);
             }
             if (this.possibleKindDefs[i].kindDef == PawnKindDefOfLocal.RA_PawnKindDef_Sensei)
             {
@@ -95,17 +95,17 @@ public class ScenPart_FixedStartingPawns : ScenPart_ConfigPage_ConfigureStarting
             StartingPawnUtility.StartingAndOptionalPawns.Insert(i, p);
             StartingPawnUtility.GeneratePossessions(p);
             ++num;
-            Log.Message($"Added {p} to Starting Pawn");
+            //Log.Message($"Added {p} to Starting Pawn");
         }
         //再加上一个防止默认值被添加（StartingPawnUtility.StartingAndOptionalPawnGenerationRequests.Count <= index 而不是 < index）
         StartingPawnUtility.StartingAndOptionalPawnGenerationRequests.Add(new PawnGenerationRequest(this.possibleKindDefs.RandomElement().kindDef));
         while (num < TotalPawnCount && !StartingPawnUtility.WorkTypeRequirementsSatisfied())
         {
-            Log.Message("Adding Extra Pawns to Starting Pawn");
+            //Log.Message("Adding Extra Pawns to Starting Pawn");
             StartingPawnUtility.AddNewPawn();
             ++num;
         }
-        Log.Message($"Generated {num} pawns");
+        //Log.Message($"Generated {num} pawns");
     }
     public override int GetHashCode()
     {

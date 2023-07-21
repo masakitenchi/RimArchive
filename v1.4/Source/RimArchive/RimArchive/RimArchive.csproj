@@ -40,10 +40,13 @@
   <ItemGroup>
     <Compile Include="Abilities\Comps\CompAbilityEffect_PowerBeam.cs" />
     <Compile Include="Abilities\Comps\CompAbilityEffect_SpawnSummon.cs" />
+    <Compile Include="Abilities\IntuitMortem.cs" />
     <Compile Include="Abilities\Verb_StraightBeam.cs" />
-    <Compile Include="BA.cs" />
     <Compile Include="Boss\BossGroupWorker.cs" />
     <Compile Include="Boss\RaidGroupWave.cs" />
+    <Compile Include="ModExtension\AbilityModExtension.cs" />
+    <Compile Include="ModExtension\DamageOverTime.cs" />
+    <Compile Include="ModExtension\PreDefinedRelation.cs" />
     <Compile Include="ScenPart.cs" />
     <Compile Include="Thing\CompProperties_Commconsole.cs" />
     <Compile Include="Thing\CompProperties_Transform.cs" />
@@ -78,7 +81,7 @@
     <Compile Include="Quest\QuestPart_RaidArrives.cs" />
     <Compile Include="RAFaction.cs" />
     <Compile Include="RimArchive.cs" />
-    <Compile Include="SchoolNameModExtension.cs" />
+    <Compile Include="ModExtension\SchoolNameModExtension.cs" />
     <Compile Include="Thing\ShittimChest.cs" />
     <Compile Include="Storyteller\StorytellerCompProperties_Raid.cs" />
     <Compile Include="Thing\CompProperties_DisappearAfterTicks.cs" />
@@ -120,7 +123,7 @@
     </Reference>
     <Publicize Include="Assembly-CSharp:Verse.StartingPawnUtility.StartingAndOptionalPawns" />
     <Publicize Include="Assembly-CSharp:Verse.StartingPawnUtility.GeneratePossessions" />
-	  <Publicize Include="Assembly-CSharp:Verse.StartingPawnUtility.StartingAndOptionalPawnGenerationRequests" /> 
+    <Publicize Include="Assembly-CSharp:Verse.StartingPawnUtility.StartingAndOptionalPawnGenerationRequests" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

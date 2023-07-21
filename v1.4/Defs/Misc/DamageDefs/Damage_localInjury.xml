@@ -13,8 +13,30 @@
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} shocked to death.</deathMessage>
 		<defaultDamage>0</defaultDamage>
-		<defaultStoppingPower>0.5</defaultStoppingPower>
+		<defaultStoppingPower>0</defaultStoppingPower>
 		<defaultArmorPenetration>0.0</defaultArmorPenetration>
 		<buildingDamageFactor>0</buildingDamageFactor>
     </DamageDef>
+
+    <DamageDef Name="BA_DoTDamageBase" Abstract="True">
+        <workerClass>RimArchive.Abilities.DamageWorker_AddHediffWithInstigator</workerClass>
+        <!-- <hediff>RA_Hediff_IntulitMortem</hediff> -->
+        <canInterruptJobs>true</canInterruptJobs>
+		<!-- <deathMessage>{0} shocked to death.</deathMessage> -->
+		<externalViolence>true</externalViolence>
+        <armorCategory>Heat</armorCategory>
+		<defaultDamage>0.5</defaultDamage>
+		<defaultStoppingPower>0</defaultStoppingPower>
+		<defaultArmorPenetration>99999</defaultArmorPenetration>
+		<buildingDamageFactor>0</buildingDamageFactor>
+    </DamageDef>
+    
+    <DamageDef ParentName="BA_DoTDamageBase">
+        <defName>IntulitMortem</defName>
+        <hediff>RA_Hediff_IntulitMortem</hediff>
+		<deathMessage>{0} shocked to death.</deathMessage>
+		<defaultDamage>0.5</defaultDamage>
+    </DamageDef>
+
+    
 </Defs>

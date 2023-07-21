@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<AbilityCategoryDef>
+		<defName>RA_Abilities</defName>
+		<displayOrder>999</displayOrder>
+	</AbilityCategoryDef>
+	
+	<AbilityDef>
+		<defName>RA_Ability_IntulitMortem</defName>
+		<label>赐予死亡</label>
+		<description>对一名敌人造成多段伤害。</description>
+		<iconPath>UI/Abilities/COMMON_SKILLICON_TARGET</iconPath>
+		<cooldownTicksRange>60000</cooldownTicksRange>
+		<category>RA_Abilities</category>
+		<displayOrder>40</displayOrder>
+		<hostile>True</hostile>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>36.6</range>
+			<warmupTime>0.5</warmupTime>
+			<targetParams>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityLaunchProjectile">
+			  <projectileDef>Bullet_IntulitMortem</projectileDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_IntulitMortem</defName>
+		<thingClass>Bullet</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Charge_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>IntulitMortem</damageDef>
+			<!-- damageAmount need to be greater than 0 to trigger DamageWorker.Apply-->
+			<damageAmountBase>1</damageAmountBase>
+			<armorPenetrationBase>99999</armorPenetrationBase>
+			<speed>100</speed>
+		</projectile>
+	</ThingDef>
+
+</Defs>

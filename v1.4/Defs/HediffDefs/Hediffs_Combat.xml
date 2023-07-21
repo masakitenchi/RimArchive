@@ -4,7 +4,7 @@
     <HediffDef>
         <defName>BA_ArmorReduction</defName>
         <label>降低防御</label>
-        <description>防御力被降低了。这意味着目标更容易受伤。</description>
+        <description>防御力降低。目标更容易受伤。</description>
         <hediffClass>HediffWithComps</hediffClass>
         <isBad>true</isBad>
         <comps>
@@ -89,4 +89,45 @@
             </li>
         </stages>
     </HediffDef>
+
+    <HediffDef Name="BA_DoTBase" Abstract="True">
+        <label>DoT</label>
+        <description>DoT</description>
+        <isBad>True</isBad>
+        <hediffClass>RimArchive.Abilities.Hediff_DamageOverTime</hediffClass>
+        <chanceToCauseNoPain>1</chanceToCauseNoPain>
+        <comps>
+            <!-- 必须的HediffComp -->
+            <!-- 
+            <li Class="RimArchive.Abilities.HediffCompProperties_DamageOverTime">
+            </li>    
+            -->
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="BA_DoTBase">
+        <defName>RA_Hediff_IntulitMortem</defName>
+        <label>赐予死亡</label>
+        <description>Lorem Ipsum</description>
+        <!-- <comps>
+            <li Class="RimArchive.Abilities.HediffCompProperties_DamageOverTime">
+                <damageDef>Bullet</damageDef>
+                <initialDamage>0.5</initialDamage>
+                <damage>1</damage>
+                <damageInterval>0.4</damageInterval>
+                <duration>2</duration>
+            </li>
+        </comps> -->
+        <modExtensions>
+            <li Class="RimArchive.ModExtension.DamageOverTime">
+                <DamageDef>Bullet</DamageDef>
+                <InitialDamage>0.5</InitialDamage>
+                <TickDamage>1</TickDamage>
+                <DamageInterval>0.4</DamageInterval>
+                <Duration>2</Duration>
+            </li>
+        </modExtensions>
+    </HediffDef>
+
+    
 </Defs>

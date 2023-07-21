@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-   <!--  <AbilityDefs>
+   <!--  <AbilityDef>
         <defName>BA_Ability_SummonInvadePillar</defName>
         <label>召唤侵蚀之柱</label>
         <description>召唤侵蚀之柱，这种柱子会持续性的给周围的生物带来压力</description>
@@ -26,5 +26,5 @@
             </targetParams>
         </verbProperties>
         <jobDef>Summon</jobDef>
-    </AbilityDefs> -->
+    </AbilityDef> -->
 </Defs>

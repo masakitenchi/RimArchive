@@ -1,6 +1,6 @@
 ﻿namespace RimArchive;
 
-public class BiDirectionDic<T>
+public class BiDirectionDic<T>  where T : class, new()
 {
     private Dictionary<T, T> _dictionary = new Dictionary<T, T>();
 
@@ -17,8 +17,7 @@ public class BiDirectionDic<T>
 
     public void Remove(T key)
     {
-        T value;
-        if (_dictionary.TryGetValue(key, out value))
+        if (_dictionary.TryGetValue(key, out T value))
         {
             _dictionary.Remove(key);
             _dictionary.Remove(value);

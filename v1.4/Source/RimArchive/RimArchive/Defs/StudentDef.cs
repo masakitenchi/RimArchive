@@ -69,7 +69,7 @@ public class StudentDef : PawnKindDef
     internal void Init()
     {
         #region Graphic
-        Match match = RimArchiveMain.studentNameRegex.Match(this.defName);
+        Match match = RimArchive.studentNameRegex.Match(this.defName);
         if (!match.Success)
         {
             Log.Error($"Error when parsing {this.defName}: Regex cannot match");

@@ -11,7 +11,7 @@ public class BossGroupWorker
     public RaidDef def;
     public AcceptanceReport CanResolve(Pawn caller)
     {
-        int num = Find.TickManager.TicksGame - RimArchiveMain.RaidManager.lastRaidCalled;
+        int num = Find.TickManager.TicksGame - RimArchive.RaidManager.lastRaidCalled;
         if (num < TimeBetweenAllBossgroups)
         {
             return (AcceptanceReport)"BossgroupAvailableIn".Translate((NamedArgument)(TimeBetweenAllBossgroups - num).ToStringTicksToPeriod());
@@ -22,12 +22,12 @@ public class BossGroupWorker
 
     public AcceptanceReport ShouldSummonNow()
     {
-        return RimArchiveMain.RaidManager.RaidIncoming ? (AcceptanceReport)"RaidActive".Translate() : (AcceptanceReport)true;
+        return RimArchive.RaidManager.RaidIncoming ? (AcceptanceReport)"RaidActive".Translate() : (AcceptanceReport)true;
     }
 
     public void Resolve(Map map, int wave)
     {
-        RimArchiveMain.RaidManager.Notify_RaidCalled(this.def, wave);
+        RimArchive.RaidManager.Notify_RaidCalled(this.def, wave);
         Slate vars = new Slate();
         vars.Set<RaidDef>("bossgroup", this.def);
         vars.Set<Map>(nameof(map), map);

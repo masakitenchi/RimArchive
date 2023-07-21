@@ -33,7 +33,7 @@ public class Gizmo_CommConsole : Command_Action
         this.action = delegate
         {
             Find.TickManager.Pause();
-            Find.WindowStack.Add(new RimArchive.Window.RecruitWindow());
+            Find.WindowStack.Add(new global::RimArchive.Window.RecruitWindow());
         };
     }
 
