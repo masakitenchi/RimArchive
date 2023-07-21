@@ -31,7 +31,7 @@ public static class Harmony_RaidManager
             if (instruction.OperandIs(AccessTools.Method(typeof(GameComponent_Bossgroup), "Notify_PawnKilled")))
             {
                 yield return instruction;
-                yield return new CodeInstruction(OpCodes.Call, AccessTools.PropertyGetter(typeof(RimArchiveMain), nameof(RimArchiveMain.RaidManager)));
+                yield return new CodeInstruction(OpCodes.Call, AccessTools.PropertyGetter(typeof(RimArchive), nameof(RimArchive.RaidManager)));
                 yield return new CodeInstruction(OpCodes.Ldarg_0);
                 yield return new CodeInstruction(OpCodes.Callvirt, AccessTools.Method(typeof(RaidManager), nameof(RaidManager.Notify_PawnKilled)));
                 continue;

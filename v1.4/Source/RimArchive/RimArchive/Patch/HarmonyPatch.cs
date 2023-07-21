@@ -70,7 +70,7 @@ namespace RimArchive
         {
             if (__instance.kindDef is StudentDef)
             {
-                if (RimArchiveMain.StudentDocument.Notify_StudentKilled(__instance))
+                if (RimArchive.StudentDocument.Notify_StudentKilled(__instance))
                 {
                     //DebugMessage.DbgMsg($"Successfully documented student\nDead? {__instance.health.Dead}");
                     __instance.apparel.WornApparel.Select(x => x.HitPoints = x.MaxHitPoints);

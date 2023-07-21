@@ -1,13 +1,5 @@
 ﻿namespace RimArchive;
 
-public interface ITrapLikeBuilding
-{
-    void CheckPawns();
-
-    float SpringChance(Pawn p);
-
-}
-
 /// <summary>
 /// 所有医疗箱、饭桶、毒饭桶的基类
 /// </summary>
@@ -31,7 +23,7 @@ public abstract class TrapLikeBuilding : ThingWithComps
             {
                 if (pawnList[i] is Pawn p && this.touchingPawns.Add(p))
                 {
-                    DebugMessage.DbgMsg($"Checking Springs for {p.Name}");
+                    //DebugMessage.DbgMsg($"Checking Springs for {p.Name}");
                     this.CheckSpring(p);
                 }
             }
@@ -65,6 +57,6 @@ public abstract class TrapLikeBuilding : ThingWithComps
     public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
     {
         base.DeSpawn(mode);
-        DebugMessage.DbgMsg($"{this} despawned");
+        //DebugMessage.DbgMsg($"{this} despawned");
     }
 }

@@ -5,7 +5,7 @@ namespace RimArchive;
 
 public static class StudentGenerationUtility
 {
-    public static void PostGen(Pawn p, StudentDef studentDef)
+    public static void PostGen(Pawn p, StudentDef studentDef, PawnGenerationContext context = PawnGenerationContext.All)
     {
         if (p.def != studentDef.race) p.def = studentDef.race;
         try
@@ -41,7 +41,15 @@ public static class StudentGenerationUtility
             //在StudentDef.Init里加了双向添加的代码，试试看
 
             //改为通用代码后需要处理在初始界面（没有地图）时的问题了
-            List<Pawn> students = Find.CurrentMap?.mapPawns.AllPawns.Where(x => x.kindDef is StudentDef).ToList();
+            IEnumerable<Pawn> students;
+            if(context == PawnGenerationContext.PlayerStarter)
+            {
+                students = Find.GameInitData.startingAndOptionalPawns.Where(x => x.kindDef is StudentDef);
+            }
+            else
+            {
+                students = Find.CurrentMap?.mapPawns.AllPawns.Where(x => x.kindDef is StudentDef);
+            }
             if (students is null) return;
             foreach (var relation in (p.kindDef as StudentDef).relations)
             {

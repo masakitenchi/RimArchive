@@ -2,7 +2,7 @@
 using System.Text;
 using UnityEngine;
 using static RimArchive.DebugMessage;
-using static RimArchive.RimArchiveMain;
+using static RimArchive.RimArchive;
 using static Verse.Widgets;
 
 namespace RimArchive.Window
@@ -438,21 +438,21 @@ namespace RimArchive.Window
                     Messages.Message("NotEnoughMoney".Translate(_cachedStudent.NameFullColored), MessageTypeDefOf.NeutralEvent);
                 }
                 //存活
-                else if (RimArchiveMain.StudentDocument.IsAlive(_currentStudent))
+                else if (RimArchive.StudentDocument.IsAlive(_currentStudent))
                 {
                     Messages.Message("StudentAlreadyRecruited".Translate(_cachedStudent.NameFullColored), MessageTypeDefOf.NeutralEvent);
                 }
                 else
                 {
                     //未存活但招募过
-                    if (RimArchiveMain.StudentDocument.IsRecruited(_currentStudent))
+                    if (RimArchive.StudentDocument.IsRecruited(_currentStudent))
                     {
-                        RimArchiveMain.StudentDocument.DocumentedStudent(_currentStudent, ref _cachedStudent);
+                        RimArchive.StudentDocument.DocumentedStudent(_currentStudent, ref _cachedStudent);
                         DebugMessage.DbgMsg("Re-recruiting");
                         DbgMsg($"Pawn name:{_cachedStudent.Name.ToStringFull}, Gender:{_cachedStudent.gender}");
                     }
                     _inStudentProfile = false;
-                    RimArchiveMain.StudentDocument.Notify_StudentRecruited(_currentStudent);
+                    RimArchive.StudentDocument.Notify_StudentRecruited(_currentStudent);
                     this.Close();
                     Map currentmap = Find.CurrentMap;
                     IntVec3 intVec3 = DropCellFinder.TradeDropSpot(currentmap);

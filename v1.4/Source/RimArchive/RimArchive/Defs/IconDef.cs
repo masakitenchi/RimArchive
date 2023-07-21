@@ -14,7 +14,7 @@ public class IconDef : Def
 
     public void ResolveFields()
     {
-        Match match = RimArchiveMain.fileNameRegex.Match(this.defName);
+        Match match = RimArchive.fileNameRegex.Match(this.defName);
         if (!match.Success)
         {
             Log.Error($"Error when parsing {this.defName}: Regex cannot match");
