@@ -7,10 +7,7 @@
   <SRT>SRT 特殊学园</SRT>
 
 
-
-
-
-  <!-- Keyed String-->
+  <!-- Recruit Window-->
   <HostileFail>与 {0} 敌对，无法交易</HostileFail>
   <RAExchangeOpenOption>开始交易</RAExchangeOpenOption>
   <RAExchangeRoot>交易界面</RAExchangeRoot>
@@ -26,6 +23,7 @@
 
   <StudentAlreadyRecruited>{0} 已经被招募。</StudentAlreadyRecruited>
 
+  <!-- Misc -->
   <StudentHeavilyInjuredAngry>{0} 的重伤让sensei十分愤怒。他决定在接下来的 {1} 天内与你敌对。</StudentHeavilyInjuredAngry>
   <StudentHeavilyInjured>{0} 的重伤</StudentHeavilyInjured>
 
@@ -37,4 +35,8 @@
   <Escortees>喽啰：</Escortees>
   <RaidIncoming>无法召唤：BOSS战未结束</RaidIncoming>
 
+
+  <!-- Settings -->
+  <NeedSilverNearBeacon>招募需要信标</NeedSilverNearBeacon>
+  <NeedSilverNearBeaconDesc>招募时只计算在信标有效范围内的白银</NeedSilverNearBeaconDesc>
 </LanguageData>

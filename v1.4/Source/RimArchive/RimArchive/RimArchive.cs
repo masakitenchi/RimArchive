@@ -18,12 +18,6 @@ namespace RimArchive
     public class RimArchive
     {
         /// <summary>
-        /// Will add settings later.
-        /// </summary>
-        public class RASettings
-        {
-        }
-        /// <summary>
         /// Regex for StudentDef
         /// </summary>
         public static readonly Regex studentNameRegex = new Regex(@"(?<Prefix>BA)_(?<FullName>\w*)");
@@ -62,6 +56,7 @@ namespace RimArchive
 
         public static SplitInFrames CoroutineSingleton => gameObject.GetComponent<SplitInFrames>();
 
+        public static RimArchiveMod ModSingleton => RimArchiveMod.instance;
 
         static RimArchive()
         {
@@ -84,6 +79,42 @@ namespace RimArchive
             RecruitWindow.Init();
             Object.DontDestroyOnLoad(gameObject);
             gameObject.AddComponent<global::RimArchive.Abilities.SplitInFrames>();
+        }
+    }
+
+    public class RimArchiveMod : Mod
+    {
+        public static RimArchiveMod instance;
+        public static Setting settings;
+        public RimArchiveMod(ModContentPack content) : base(content)
+        {
+            if (instance == null)
+                instance = this;
+            settings = instance.GetSettings<Setting>();
+        }
+
+        public override void DoSettingsWindowContents(Rect inRect)
+        {
+            base.DoSettingsWindowContents(inRect);
+            Listing_Standard ls = new Listing_Standard();
+            ls.Begin(inRect);
+            ls.CheckboxLabeled("NeedSilverNearBeacon".Translate(), ref settings.SilverNeedToBeLaunchable, "NeedSilverNearBeaconDesc".Translate());
+            ls.End();
+        }
+
+        public override string SettingsCategory() => "RimArchive".Translate();
+
+    }
+
+    public class Setting : ModSettings
+    {
+        public bool SilverNeedToBeLaunchable = false;
+
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref SilverNeedToBeLaunchable, "NeedSilverNearBeacon");
         }
     }
 }
