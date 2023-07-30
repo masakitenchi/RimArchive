@@ -96,9 +96,9 @@
   </ThingDef>
 
   <ThingDef Name="BAW_BaseHumanMakeableGun" ParentName="BAW_BaseMakeableGun" Abstract="True">
-    <tradeTags>
-      <li>WeaponRanged</li>
-    </tradeTags>
+    <tradeTags Inherit="False"/>
+    <weaponTags Inherit="False"/>
+    <thingSetMakerTags Inherit="False"/>
     <comps>
       <li Class="CompProperties_Biocodable"/>
     </comps>
