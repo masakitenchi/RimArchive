@@ -26,11 +26,7 @@
             <range>20</range>
             <burstShotCount>6</burstShotCount>
             <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-<<<<<<< HEAD
-            <soundCast>Shot_CE_BattleRifle</soundCast>
-=======
             <soundCast>RF_ShotSkorpion</soundCast>
->>>>>>> 9427c9a (Fix missing soundCast)
             <soundCastTail>GunTail_Light</soundCastTail>
             <muzzleFlashScale>9</muzzleFlashScale>
         </Properties>

@@ -157,7 +157,7 @@
 
 	<!-- Michiru -->
 	<!-- ========== Remington 870 Magnum ========== -->
-	<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
 		<defName>BAW_Michiru</defName>
 		<statBases>
 			<Mass>3.40</Mass>
@@ -199,5 +199,5 @@
 		<weaponTags>
 			<li>CE_AI_AssaultWeapon</li>
 		</weaponTags>
-	</li>
+	</Operation>
 </Patch>
